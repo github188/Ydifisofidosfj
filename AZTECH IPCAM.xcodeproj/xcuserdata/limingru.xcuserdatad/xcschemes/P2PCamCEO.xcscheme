@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "610DB9FF169AF0BF00292CF9"
-               BuildableName = "AZTECH IPCAM.app"
+               BuildableName = "Aztech IPCam.temp_caseinsensitive_rename.app"
                BlueprintName = "P2PCamCEO"
                ReferencedContainer = "container:Aztech IPCam.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "610DB9FF169AF0BF00292CF9"
-            BuildableName = "AZTECH IPCAM.app"
+            BuildableName = "Aztech IPCam.temp_caseinsensitive_rename.app"
             BlueprintName = "P2PCamCEO"
             ReferencedContainer = "container:Aztech IPCam.xcodeproj">
          </BuildableReference>
@@ -52,7 +52,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "610DB9FF169AF0BF00292CF9"
-            BuildableName = "AZTECH IPCAM.app"
+            BuildableName = "Aztech IPCam.temp_caseinsensitive_rename.app"
             BlueprintName = "P2PCamCEO"
             ReferencedContainer = "container:Aztech IPCam.xcodeproj">
          </BuildableReference>
@@ -61,20 +61,15 @@
          <EnvironmentVariable
             key = "NSZombieEnabled"
             value = "YES"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "MallocStackLogging"
             value = "YES"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </EnvironmentVariable>
       </EnvironmentVariables>
       <AdditionalOptions>
-         <AdditionalOption
-            key = "MallocStackLogging"
-            value = ""
-            isEnabled = "YES">
-         </AdditionalOption>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
@@ -87,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "610DB9FF169AF0BF00292CF9"
-            BuildableName = "AZTECH IPCAM.app"
+            BuildableName = "Aztech IPCam.temp_caseinsensitive_rename.app"
             BlueprintName = "P2PCamCEO"
             ReferencedContainer = "container:Aztech IPCam.xcodeproj">
          </BuildableReference>
