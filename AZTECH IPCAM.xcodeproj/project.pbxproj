@@ -578,7 +578,7 @@
 		61082AF71531CEA100DDF07D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hant"; path = "zh-Hant.lproj/mainWindow.xib"; sourceTree = "<group>"; };
 		6108DB8315CB833D002966A2 /* libbz2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.1.0.dylib; path = usr/lib/libbz2.1.0.dylib; sourceTree = SDKROOT; };
 		6108DB8A15CB9EA0002966A2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		610DBA92169AF0C000292CF9 /* AZTECH IPCAM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AZTECH IPCAM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		610DBA92169AF0C000292CF9 /* Aztech IPCam.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aztech IPCam.temp_caseinsensitive_rename.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		611F4EF615C0F52D00B8D8C3 /* IOTCamera.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOTCamera.framework; path = "/Users/cloud/Library/Frameworks/IOTCamera/Release-iphonesimulator/IOTCamera.framework"; sourceTree = "<absolute>"; };
 		6122A53B169E5CF8005DFB49 /* libZXingWidget.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libZXingWidget.a; path = "lib/Release-iphonesimulator/libZXingWidget.a"; sourceTree = "<group>"; };
 		614021DC159C4F6000051C50 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = images/Default.png; sourceTree = "<group>"; };
@@ -2126,7 +2126,7 @@
 		D8F71AB4148C5342007705B6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				610DBA92169AF0C000292CF9 /* AZTECH IPCAM.app */,
+				610DBA92169AF0C000292CF9 /* Aztech IPCam.temp_caseinsensitive_rename.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2213,7 +2213,7 @@
 			);
 			name = P2PCamCEO;
 			productName = IOTCamViewer;
-			productReference = 610DBA92169AF0C000292CF9 /* AZTECH IPCAM.app */;
+			productReference = 610DBA92169AF0C000292CF9 /* Aztech IPCam.temp_caseinsensitive_rename.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -2230,7 +2230,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D8F71AAD148C5342007705B6 /* Build configuration list for PBXProject "AZTECH IPCAM" */;
+			buildConfigurationList = D8F71AAD148C5342007705B6 /* Build configuration list for PBXProject "Aztech IPCam" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -2858,7 +2858,7 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
-				PRODUCT_NAME = "AZTECH IPCAM";
+				PRODUCT_NAME = "Aztech IPCam.temp_caseinsensitive_rename";
 				PROVISIONING_PROFILE = "5dd67c88-dca3-499e-b294-d7ff1a0e60ae";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
@@ -2894,7 +2894,7 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
-				PRODUCT_NAME = "AZTECH IPCAM";
+				PRODUCT_NAME = "Aztech IPCam.temp_caseinsensitive_rename";
 				PROVISIONING_PROFILE = "5dd67c88-dca3-499e-b294-d7ff1a0e60ae";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
@@ -2930,7 +2930,7 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
-				PRODUCT_NAME = "AZTECH IPCAM";
+				PRODUCT_NAME = "Aztech IPCam.temp_caseinsensitive_rename";
 				PROVISIONING_PROFILE = "5dd67c88-dca3-499e-b294-d7ff1a0e60ae";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
@@ -2965,7 +2965,7 @@
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"-DP2PCAMLIVE",
 				);
-				PRODUCT_NAME = "AZTECH IPCAM";
+				PRODUCT_NAME = "Aztech IPCam.temp_caseinsensitive_rename";
 				PROVISIONING_PROFILE = "5dd67c88-dca3-499e-b294-d7ff1a0e60ae";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
@@ -3119,7 +3119,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D8F71AAD148C5342007705B6 /* Build configuration list for PBXProject "AZTECH IPCAM" */ = {
+		D8F71AAD148C5342007705B6 /* Build configuration list for PBXProject "Aztech IPCam" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D8F71AC9148C5343007705B6 /* Debug */,
