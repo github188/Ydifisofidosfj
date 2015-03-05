@@ -1,0 +1,39 @@
+P2PCamLive 1.2.0 feature list
+	1. Apply to IOTC_Platform_13w26p1.
+	2. Fix crash in live view with 720p camera.
+	3. Improve video decode performance.
+
+
+P2PCamLive 1.0.0 feature list
+	1. Apply to IOTC_Platform_12w51.
+	2. Fix crash while app launching without wan connection.
+	3. Add APNs debug mode.
+	4. Improve video decode performance.
+
+------------------------------------------------------------
+
+P2PCam264 v1.1.3 feature list
+	1. Fix playback supportable function in event list page.
+
+P2PCam264 v1.1.2 feature list
+	1. Support iOS6.
+	2. Fix bugs which audio in/out switchable with device which without audio in/out function. 
+	3. Remove network state detection error.
+	4. Wifi password could be empty in advanced setting page now.
+	5. Unsupported functions in advanced setting will be hidden now.
+
+P2PCam264 v1.1.1 feature list
+	1. Add network status detection on launching app.
+	2. Listening and speaking function in live view page CAN NOT turn on simultaneously now.
+	3. Fix landscape mode bugs in "English" and "Simplified Chinese" version. 
+	4. Adjust audio volume in listening mode.
+	5. Minor bugs fix.
+
+P2PCam264 v1.1.0 feature list
+	1. Add Chinese_Simplified, Chinese_Tradtional languages support 
+	2. Add 720P resolution support 
+	3. Add landscape view mode 
+	4. Add ADPCM audio codec support 
+	5. Fix audio-in suspended bug 
+	6. Fix database storage bug 
+	7. Fix minor bugs

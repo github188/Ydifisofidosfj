@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecordFileViewController">
+            <connections>
+                <outlet property="currentTimeLabel" destination="GyF-KK-TBw" id="LGZ-X0-7ue"/>
+                <outlet property="currentTimeLabel_h" destination="A3f-kY-hge" id="MSr-9U-Keu"/>
+                <outlet property="landscapeController" destination="Irh-3s-XKL" id="0eZ-uY-CCY"/>
+                <outlet property="playAndPauseBTN" destination="RXv-Ch-d5a" id="tsS-FF-5nl"/>
+                <outlet property="playAndPauseBTN_h" destination="bx4-kF-7vk" id="IHn-er-s27"/>
+                <outlet property="portraitController" destination="GQF-by-Fgv" id="FAz-La-fd1"/>
+                <outlet property="scrollView" destination="Z0z-cw-cAt" id="zZm-Iw-pJi"/>
+                <outlet property="timeSlider" destination="CMX-oA-O7D" id="rqL-sr-wMT"/>
+                <outlet property="timeSlider_h" destination="YGj-U1-3Sh" id="G3g-tw-LwB"/>
+                <outlet property="totalTimeLabel" destination="FJ6-iz-Dya" id="Gcg-du-6lt"/>
+                <outlet property="totalTimeLabel_h" destination="MLz-PU-Sr9" id="nb5-9x-eIC"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Cr7-Gf-ZsN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="all_bk.png" id="C9L-Qb-Ung">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+                <view contentMode="scaleToFill" id="GQF-by-Fgv" userLabel="View portraitController">
+                    <rect key="frame" x="0.0" y="388" width="320" height="180"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Cdr-CO-PsB" userLabel="Button playBack">
+                            <rect key="frame" x="30" y="43" width="55" height="55"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="ceo_rcplay_back.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" backgroundImage="ceo_rcplay_back_click.png"/>
+                            <state key="highlighted" backgroundImage="ceo_rcplay_back_click.png"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RXv-Ch-d5a" userLabel="Button play">
+                            <rect key="frame" x="123" y="33" width="75" height="75"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="ceo_rcplay.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" backgroundImage="ceo_rcplay_click.png"/>
+                            <connections>
+                                <action selector="playOrPause" destination="-1" eventType="touchUpInside" id="FgM-We-pdm"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PkM-UF-tfg" userLabel="Button playFoward">
+                            <rect key="frame" x="235" y="43" width="55" height="55"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="ceo_rcplay_forward.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" backgroundImage="ceo_rcplay_forward_click.png"/>
+                        </button>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" continuous="NO" id="CMX-oA-O7D">
+                            <rect key="frame" x="28" y="116" width="264" height="31"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <connections>
+                                <action selector="slide" destination="-1" eventType="touchUpInside" id="3EA-Xq-UqC"/>
+                            </connections>
+                        </slider>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GyF-KK-TBw" userLabel="Label - currentTime">
+                            <rect key="frame" x="30" y="144" width="42" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FJ6-iz-Dya" userLabel="Label - totalTime">
+                            <rect key="frame" x="258" y="144" width="42" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" id="Irh-3s-XKL" userLabel="View landscapeController">
+                    <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ceo_rcplay_title_h.png" id="aiw-no-Vuk">
+                            <rect key="frame" x="0.0" y="0.0" width="568" height="39"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ceo_rcplay_bg_h.png" id="BOI-xE-9cI">
+                            <rect key="frame" x="0.0" y="275" width="568" height="45"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" id="YGj-U1-3Sh">
+                            <rect key="frame" x="82" y="4" width="420" height="31"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <connections>
+                                <action selector="slide" destination="-1" eventType="touchUpInside" id="4Xz-FP-iYb"/>
+                            </connections>
+                        </slider>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3lu-ex-bUK" userLabel="Button back">
+                            <rect key="frame" x="0.0" y="-4" width="44" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="cam_back.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="back:" destination="-1" eventType="touchUpInside" id="8lr-ub-Qf1"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bx4-kF-7vk" userLabel="Button play">
+                            <rect key="frame" x="245" y="260" width="80" height="60"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="ceo_rcplay_h.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="ceo_rcplay_click_h.png" backgroundImage="ceo_rcplay_click_h.png"/>
+                            <connections>
+                                <action selector="playOrPause" destination="-1" eventType="touchUpInside" id="2bn-l7-VyK"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A3f-kY-hge" userLabel="Label - currentTime">
+                            <rect key="frame" x="40" y="9" width="42" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MLz-PU-Sr9" userLabel="Label - totalTime">
+                            <rect key="frame" x="518" y="9" width="42" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="Z0z-cw-cAt">
+                    <rect key="frame" x="0.0" y="66" width="568" height="240"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="all_bk.png" width="320" height="568"/>
+        <image name="cam_back.png" width="48" height="48"/>
+        <image name="ceo_rcplay.png" width="75" height="75"/>
+        <image name="ceo_rcplay_back.png" width="55" height="55"/>
+        <image name="ceo_rcplay_back_click.png" width="56" height="55"/>
+        <image name="ceo_rcplay_bg_h.png" width="568" height="45"/>
+        <image name="ceo_rcplay_click.png" width="75" height="75"/>
+        <image name="ceo_rcplay_click_h.png" width="80" height="60"/>
+        <image name="ceo_rcplay_forward.png" width="55" height="55"/>
+        <image name="ceo_rcplay_forward_click.png" width="56" height="55"/>
+        <image name="ceo_rcplay_h.png" width="80" height="60"/>
+        <image name="ceo_rcplay_title_h.png" width="568" height="39"/>
+    </resources>
+</document>

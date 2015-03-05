@@ -1,0 +1,7 @@
+
+HOW TO BUILD THIS PROJECT
+
+1. Git clone IOTCamera_iOS from bitbucket.
+2. Build IOTCamera_iOS and output IOTCamera Library.
+3. Set Xcode project library search to the IOTCamera library folder.
+4. Set Xcode project library and header search path to SDK release package.

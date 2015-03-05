@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11D50d" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Camera" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="snapshot" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="uid" attributeType="String" maxValueString="20" syncable="YES"/>
+        <attribute name="video_height" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="video_width" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="view_account" attributeType="String" syncable="YES"/>
+        <attribute name="view_password" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Snapshot" syncable="YES">
+        <attribute name="file_path" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="uid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Camera" positionX="-1071" positionY="-972" width="128" height="165"/>
+        <element name="Snapshot" positionX="-596" positionY="-954" width="128" height="90"/>
+    </elements>
+</model>
