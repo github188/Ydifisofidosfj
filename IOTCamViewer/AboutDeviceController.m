@@ -204,7 +204,8 @@
             [venderIndicator removeFromSuperview];
         } 
     
-        cell.detailTextLabel.text = vender;
+        //cell.detailTextLabel.text = vender;
+        cell.detailTextLabel.text = @"AZTECH";
     }
     else if (row == 3) {
         

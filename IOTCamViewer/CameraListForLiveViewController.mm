@@ -81,10 +81,18 @@
     for (MyCamera *camera in camera_list) {
         camera.delegate2 = nil;
     }
-
-    CheckViewController *controller = [[CheckViewController alloc] initWithNibName:@"CheckView" bundle:nil];
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setInteger:0 forKey:@"wifiSetting"];
+    [userDefaults synchronize];
+    
+    AddCameraDetailController *controller = [[AddCameraDetailController alloc] initWithNibName:@"AddCameraDetail" bundle:nil delegate:[[self.navigationController viewControllers] objectAtIndex:0]];
     [self.navigationController pushViewController:controller animated:YES];
     [controller release];
+
+    //CheckViewController *controller = [[CheckViewController alloc] initWithNibName:@"CheckView" bundle:nil];
+    //[self.navigationController pushViewController:controller animated:YES];
+    //[controller release];
 
 }
 
