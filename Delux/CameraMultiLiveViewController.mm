@@ -377,6 +377,12 @@ extern unsigned int _getTickCount() ;
 
 - (IBAction)logOut:(id)sender {
     
+    AppGuidViewController *appInfo=[[AppGuidViewController alloc]initWithNibName:@"AppGuidViewController" bundle:nil];
+    [self.navigationController pushViewController:appInfo animated:YES];
+    [appInfo release];
+    
+    return;
+    
     if ([logInOut.titleLabel.text isEqualToString:NSLocalizedString(@"Log out",@"")]) {
         NSString *msg = NSLocalizedString(@"Once you log out, the devices will no longer sync with your cloud account. You can tick “Sync with your cloud account” in the device “Settings” page after next login. Are you sure to log out?", @"");
         NSString *caution = NSLocalizedString(@"Caution!", @"");
