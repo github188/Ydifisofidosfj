@@ -691,7 +691,7 @@ extern unsigned int _getTickCount() ;
         [alert show];
         [alert release];
         
-        [logInOut setTitle:NSLocalizedString(@"Log in",@"") forState:UIControlStateNormal];
+        //[logInOut setTitle:NSLocalizedString(@"Log in",@"") forState:UIControlStateNormal];
         
         isLogOut = NO;
     
@@ -738,9 +738,9 @@ extern unsigned int _getTickCount() ;
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     if ([[userDefaults objectForKey:@"cloudUserPassword"] isEqualToString:@""]||[userDefaults objectForKey:@"cloudUserPassword"]==nil){
-        [logInOut setTitle:NSLocalizedString(@"Log in", @"") forState:UIControlStateNormal];
+        //[logInOut setTitle:NSLocalizedString(@"Log in", @"") forState:UIControlStateNormal];
     } else {
-        [logInOut setTitle:NSLocalizedString(@"Log out", @"") forState:UIControlStateNormal];
+        //[logInOut setTitle:NSLocalizedString(@"Log out", @"") forState:UIControlStateNormal];
     }
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(connectAndShow) name:@"WiFiChanged" object:nil];
@@ -882,7 +882,8 @@ extern unsigned int _getTickCount() ;
     
     [infoBTN setTitle:NSLocalizedString(@"Information", @"") forState:UIControlStateNormal];
     
-    logInOut.hidden=YES;
+    [logInOut setTitle:NSLocalizedString(@"用户手册", @"") forState:UIControlStateNormal];
+    
     
     [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(cameraStopShowCompleted:) name: @"CameraStopShowCompleted" object: nil];
 
