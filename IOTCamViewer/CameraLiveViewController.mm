@@ -837,7 +837,7 @@ extern unsigned int _getTickCount() {
 		[self removeGLView:TRUE];
         self.view = self.portraitView;
         
-        self.myPtzView.frame=CGRectMake(0, self.view.frame.size.height-self.myPtzView.frame.size.height-self.horizMenu.frame.size.height-10, self.myPtzView.frame.size.width, self.myPtzView.frame.size.height);
+        //self.myPtzView.frame=CGRectMake(0, self.horizMenu.frame.origin.y-10-self.myPtzView.frame.size.height-40, self.myPtzView.frame.size.width, self.myPtzView.frame.size.height);
         
         
 		NSLog( @"video frame {%d,%d}%dx%d", (int)self.monitorPortrait.frame.origin.x, (int)self.monitorPortrait.frame.origin.y, (int)self.monitorPortrait.frame.size.width, (int)self.monitorPortrait.frame.size.height);
