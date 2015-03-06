@@ -303,7 +303,7 @@
                     </subviews>
                 </view>
                 <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="xTV-bb-XdJ" userLabel="Scroll View EMode">
-                    <rect key="frame" x="0.0" y="326" width="320" height="196"/>
+                    <rect key="frame" x="0.0" y="400" width="320" height="136"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" id="w93-eh-Vfi" userLabel="View EMODE">
@@ -348,7 +348,7 @@
                                         <action selector="onBtnSetEMode:" destination="-1" eventType="touchUpInside" id="H7S-SI-sVm"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jlB-Ja-Gk3">
+                                <button hidden="YES" opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jlB-Ja-Gk3">
                                     <rect key="frame" x="57" y="89" width="206" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -363,7 +363,7 @@
                                         <action selector="onBtnSetEMode:" destination="-1" eventType="touchUpInside" id="K2I-X3-wuR"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1dg-7f-ipz">
+                                <button hidden="YES" opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1dg-7f-ipz">
                                     <rect key="frame" x="57" y="121" width="206" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>

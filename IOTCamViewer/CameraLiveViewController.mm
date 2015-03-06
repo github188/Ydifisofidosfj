@@ -798,6 +798,9 @@ extern unsigned int _getTickCount() {
         
 		[self removeGLView:FALSE];
         self.view = self.landscapeView;
+        
+        
+        
 		NSLog( @"video frame {%d,%d}%dx%d", (int)self.monitorLandscape.frame.origin.x, (int)self.monitorLandscape.frame.origin.y, (int)self.monitorLandscape.frame.size.width, (int)self.monitorLandscape.frame.size.height);
 		if( glView == nil ) {
 			glView = [[CameraShowGLView alloc] initWithFrame:self.monitorLandscape.frame];
@@ -838,6 +841,11 @@ extern unsigned int _getTickCount() {
         self.view = self.portraitView;
         
         //self.myPtzView.frame=CGRectMake(0, self.horizMenu.frame.origin.y-10-self.myPtzView.frame.size.height-40, self.myPtzView.frame.size.width, self.myPtzView.frame.size.height);
+        
+
+        //self.scrollViewPortrait.frame=CGRectMake(0, 0, self.scrollViewPortrait.frame.size.width, self.scrollViewPortrait.frame.size.height);
+        self.scrollViewPortrait.contentSize=self.scrollViewPortrait.frame.size;
+        self.monitorPortrait.frame=CGRectMake(0, 0, self.scrollViewPortrait.frame.size.width, self.scrollViewPortrait.frame.size.height);
         
         
 		NSLog( @"video frame {%d,%d}%dx%d", (int)self.monitorPortrait.frame.origin.x, (int)self.monitorPortrait.frame.origin.y, (int)self.monitorPortrait.frame.size.width, (int)self.monitorPortrait.frame.size.height);
@@ -1822,6 +1830,7 @@ extern unsigned int _getTickCount() {
         screenRect.size.height =screenWidth ;
         screenRect.size.width = screenHeight;
         self.scrollViewLandscape.frame = screenRect;
+        self.scrollViewLandscape.contentSize=self.scrollViewLandscape.frame.size;
         self.monitorLandscape.frame = screenRect;
         
         viewMonitor = self.scrollViewLandscape;
