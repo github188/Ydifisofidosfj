@@ -17,6 +17,7 @@
 #import "GetWiFiSSIDViewController.h"
 #import "AddCameraController.h"
 #import "CheckViewController.h"
+#import "CameraMultiLiveViewController.h"
 
 @implementation CameraListForLiveViewController
 
@@ -585,6 +586,22 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	if( [searchedData count] > 0 && row1 < [searchedData count] ) {
         
         MyCamera *tempCamera = [camera_list objectAtIndex:row1];
+        //检查是否在四画面了
+        CameraMultiLiveViewController *rootController=[self.navigationController.viewControllers objectAtIndex:0];
+        NSMutableArray *hasCameraArray=rootController.cameraArray;
+        for (MyCamera *ca in hasCameraArray) {
+            if([ca.uid isEqualToString:tempCamera.uid]){
+                
+                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"Warning", @"") message:NSLocalizedString(@"This device is already exists", @"") delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"") otherButtonTitles:nil];
+                
+                [alert show];
+                [alert release];
+                
+                return;
+            }
+        }
+        
+        
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         
         //將資料回步回手機
