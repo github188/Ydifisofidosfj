@@ -17,7 +17,7 @@
                BlueprintIdentifier = "610DB9FF169AF0BF00292CF9"
                BuildableName = "Aztech IPCam.temp_caseinsensitive_rename.app"
                BlueprintName = "P2PCamCEO"
-               ReferencedContainer = "container:Aztech IPCam.xcodeproj">
+               ReferencedContainer = "container:Aztech IP Cam.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "610DB9FF169AF0BF00292CF9"
             BuildableName = "Aztech IPCam.temp_caseinsensitive_rename.app"
             BlueprintName = "P2PCamCEO"
-            ReferencedContainer = "container:Aztech IPCam.xcodeproj">
+            ReferencedContainer = "container:Aztech IP Cam.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -54,7 +54,7 @@
             BlueprintIdentifier = "610DB9FF169AF0BF00292CF9"
             BuildableName = "Aztech IPCam.temp_caseinsensitive_rename.app"
             BlueprintName = "P2PCamCEO"
-            ReferencedContainer = "container:Aztech IPCam.xcodeproj">
+            ReferencedContainer = "container:Aztech IP Cam.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -89,7 +89,7 @@
             BlueprintIdentifier = "610DB9FF169AF0BF00292CF9"
             BuildableName = "Aztech IPCam.temp_caseinsensitive_rename.app"
             BlueprintName = "P2PCamCEO"
-            ReferencedContainer = "container:Aztech IPCam.xcodeproj">
+            ReferencedContainer = "container:Aztech IP Cam.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

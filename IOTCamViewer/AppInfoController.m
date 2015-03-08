@@ -119,7 +119,7 @@
     [appVer setBackgroundColor:[UIColor clearColor]];
     [appVer setShadowColor:[UIColor whiteColor]];
     [appVer setShadowOffset:CGSizeMake(0, 1)];
-    [appVer setText:[NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"Version", @""), [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]]];
+    [appVer setText:[NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"Version", @""), [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]]];
     [appVer setTextAlignment:UITextAlignmentCenter];
     
     UILabel *IOTCVer = [[UILabel alloc]initWithFrame:CGRectMake(0, 195, [[UIScreen mainScreen] bounds].size.width, 30)];
@@ -143,7 +143,7 @@
     [copyright setShadowColor:[UIColor whiteColor]];
     [copyright setShadowOffset:CGSizeMake(0, 1)];
     [copyright setFont:[UIFont fontWithName:@"Arial" size:14]];
-    [copyright setText:NSLocalizedString(@"Copyright © 2014. All rights reserved.", @"")];
+    [copyright setText:NSLocalizedString(@"Copyright © 2015. All rights reserved.", @"")];
     [copyright setTextAlignment:UITextAlignmentCenter];
     
     UIView *view = [[UIView alloc] init];
