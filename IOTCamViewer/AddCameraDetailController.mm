@@ -399,6 +399,7 @@
             [textFieldPassword setDelegate:self];
             [textFieldPassword addTarget:self action:@selector(textFieldDone:) forControlEvents:UIControlEventEditingDidEndOnExit];
             textFieldPassword.textColor = [UIColor whiteColor];
+            self.textFieldPassword.text=@"admin";
             [cell.contentView addSubview:textFieldPassword];
             
         } else if (row == 2) {

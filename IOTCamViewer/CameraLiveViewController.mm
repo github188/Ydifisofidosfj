@@ -992,8 +992,12 @@ extern unsigned int _getTickCount() {
     [setMedium setTitle:NSLocalizedString(@"Medium", @"") forState:UIControlStateNormal];
     [setLow setTitle:NSLocalizedString(@"Low", @"") forState:UIControlStateNormal];
     [setLowest setTitle:NSLocalizedString(@"Lowest", @"") forState:UIControlStateNormal];
+    
     [setOutDoor setTitle:NSLocalizedString(@"Outdoor Mode", @"") forState:UIControlStateNormal];
     [setNight setTitle:NSLocalizedString(@"Night Mode", @"") forState:UIControlStateNormal];
+    
+    [set50Hz setTitle:[NSString stringWithFormat:@"%@(50HZ)",NSLocalizedString(@"Night Mode", @"")] forState:UIControlStateNormal];
+    [set60Hz setTitle:[NSString stringWithFormat:@"%@(60HZ)",NSLocalizedString(@"Outdoor Mode", @"")] forState:UIControlStateNormal];
     
     [longSetHighest setTitle:NSLocalizedString(@"Highest", @"") forState:UIControlStateNormal];
     [longSetHigh setTitle:NSLocalizedString(@"High", @"") forState:UIControlStateNormal];

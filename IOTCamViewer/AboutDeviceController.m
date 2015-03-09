@@ -205,7 +205,7 @@
         } 
     
         //cell.detailTextLabel.text = vender;
-        cell.detailTextLabel.text = @"AZTECH";
+        cell.detailTextLabel.text = @"Aztech";
     }
     else if (row == 3) {
         
