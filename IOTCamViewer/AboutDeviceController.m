@@ -193,7 +193,7 @@
         }
     }
     else if (row == 2) {
-        
+        vender=@"Aztech";
         if (vender == nil || [vender length] == 0) {
             [cell addSubview:venderIndicator];
             [venderIndicator startAnimating];            
@@ -204,8 +204,8 @@
             [venderIndicator removeFromSuperview];
         } 
     
-        //cell.detailTextLabel.text = vender;
-        cell.detailTextLabel.text = @"Aztech";
+        cell.detailTextLabel.text = vender;
+        
     }
     else if (row == 3) {
         

@@ -41,9 +41,9 @@
 -(void)viewWillAppear:(BOOL)animated{
     
     //动态布局
-    self.skipBtn.frame=CGRectMake(self.skipBtn.frame.origin.x, self.view.frame.size.height-100, self.skipBtn.frame.size.width, self.skipBtn.frame.size.height);
-    self.pageControl.frame=CGRectMake(self.pageControl.frame.origin.x, self.view.frame.size.height-100, self.pageControl.frame.size.width, self.pageControl.frame.size.height);
-    self.scollerView.frame=CGRectMake(self.scollerView.frame.origin.x, self.scollerView.frame.origin.y, self.scollerView.frame.size.width, self.view.frame.size.height-110);
+    self.skipBtn.frame=CGRectMake(self.skipBtn.frame.origin.x, self.view.frame.size.height-self.skipBtn.frame.size.height-6, self.skipBtn.frame.size.width, self.skipBtn.frame.size.height);
+    self.pageControl.frame=CGRectMake(self.pageControl.frame.origin.x, self.view.frame.size.height-self.pageControl.frame.size.height, self.pageControl.frame.size.width, self.pageControl.frame.size.height);
+    self.scollerView.frame=CGRectMake(0, 0, self.scollerView.frame.size.width, self.view.frame.size.height);
     
     
     
@@ -58,7 +58,7 @@
         NSString *n=NSLocalizedString(f, @"");
         UIImageView *imgView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:n]];
         imgView.contentMode=UIViewContentModeScaleToFill;
-        imgView.frame=CGRectMake(self.scollerView.frame.size.width*i, 0, self.scollerView.frame.size.width, self.scollerView.frame.size.height);
+        imgView.frame=CGRectMake(self.scollerView.frame.size.width*i, 0, self.scollerView.frame.size.width, self.scollerView.frame.size.height-110);
         [self.scollerView addSubview:imgView];
         [imgView release];
     }
