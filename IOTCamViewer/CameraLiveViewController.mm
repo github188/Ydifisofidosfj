@@ -1856,7 +1856,7 @@ extern unsigned int _getTickCount() {
 	}
 	fRatioMonitor = viewMonitor.frame.size.width/viewMonitor.frame.size.height;
 		
-	if( fRatioMonitor < fRatioFrame ) {
+	if( fRatioMonitor > fRatioFrame ) {
 		CGFloat canvas_height = (viewMonitor.frame.size.width * viewMonitor.zoomScale) / fRatioFrame;
 		
 		if( canvas_height < viewMonitor.frame.size.height ) {
