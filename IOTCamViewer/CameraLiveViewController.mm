@@ -1899,29 +1899,55 @@ extern unsigned int _getTickCount() {
 		viewMonitor = self.scrollViewPortrait;
 		viewCanvas = self.monitorPortrait;
 	}
+    self.scrollViewPortrait.contentSize=self.scrollViewPortrait.frame.size;
 	fRatioMonitor = viewMonitor.frame.size.width/viewMonitor.frame.size.height;
 		
-    if( fRatioMonitor > fRatioFrame&&(self.interfaceOrientation == UIInterfaceOrientationLandscapeLeft ||
-                                      self.interfaceOrientation == UIInterfaceOrientationLandscapeRight)) {
-		CGFloat canvas_height = (viewMonitor.frame.size.width * viewMonitor.zoomScale) / fRatioFrame;
+    if(self.interfaceOrientation == UIInterfaceOrientationLandscapeLeft ||
+       self.interfaceOrientation == UIInterfaceOrientationLandscapeRight)
+    {
+        if( fRatioMonitor > fRatioFrame) {
+            CGFloat canvas_height = (viewMonitor.frame.size.width * viewMonitor.zoomScale) / fRatioFrame;
 		
-		if( canvas_height < viewMonitor.frame.size.height ) {
-			viewCanvas.frame = CGRectMake(0, ((viewMonitor.frame.size.height) - canvas_height)/2.0, (viewMonitor.frame.size.width * viewMonitor.zoomScale), canvas_height);
-		}
-		else {
-			viewCanvas.frame = CGRectMake(0, 0, (viewMonitor.frame.size.width * viewMonitor.zoomScale), canvas_height);
-		}
-	}
-	else {
-		CGFloat canvas_width = (viewMonitor.frame.size.height * viewMonitor.zoomScale) * fRatioFrame;
+            if( canvas_height < viewMonitor.frame.size.height ) {
+                viewCanvas.frame = CGRectMake(0, ((viewMonitor.frame.size.height) - canvas_height)/2.0, (viewMonitor.frame.size.width * viewMonitor.zoomScale), canvas_height);
+            }
+            else {
+                viewCanvas.frame = CGRectMake(0, 0, (viewMonitor.frame.size.width * viewMonitor.zoomScale), canvas_height);
+            }
+        }
+        else {
+            CGFloat canvas_width = (viewMonitor.frame.size.height * viewMonitor.zoomScale) * fRatioFrame;
 		
-		if( canvas_width < viewMonitor.frame.size.width ) {
-			viewCanvas.frame = CGRectMake(((viewMonitor.frame.size.width) - canvas_width)/2.0, 0, canvas_width, (viewMonitor.frame.size.height * viewMonitor.zoomScale));
-		}
-		else {
-			viewCanvas.frame = CGRectMake(0, 0, canvas_width, (viewMonitor.frame.size.height * viewMonitor.zoomScale));
-		}
-	}
+            if( canvas_width < viewMonitor.frame.size.width ) {
+                viewCanvas.frame = CGRectMake(((viewMonitor.frame.size.width) - canvas_width)/2.0, 0, canvas_width, (viewMonitor.frame.size.height * viewMonitor.zoomScale));
+            }
+            else {
+                viewCanvas.frame = CGRectMake(0, 0, canvas_width, (viewMonitor.frame.size.height * viewMonitor.zoomScale));
+            }
+        }
+    }
+    else{
+        if( fRatioMonitor < fRatioFrame) {
+            CGFloat canvas_height = (viewMonitor.frame.size.width * viewMonitor.zoomScale) / fRatioFrame;
+            
+            if( canvas_height < viewMonitor.frame.size.height ) {
+                viewCanvas.frame = CGRectMake(0, ((viewMonitor.frame.size.height) - canvas_height)/2.0, (viewMonitor.frame.size.width * viewMonitor.zoomScale), canvas_height);
+            }
+            else {
+                viewCanvas.frame = CGRectMake(0, 0, (viewMonitor.frame.size.width * viewMonitor.zoomScale), canvas_height);
+            }
+        }
+        else {
+            CGFloat canvas_width = (viewMonitor.frame.size.height * viewMonitor.zoomScale) * fRatioFrame;
+            
+            if( canvas_width < viewMonitor.frame.size.width ) {
+                viewCanvas.frame = CGRectMake(((viewMonitor.frame.size.width) - canvas_width)/2.0, 0, canvas_width, (viewMonitor.frame.size.height * viewMonitor.zoomScale));
+            }
+            else {
+                viewCanvas.frame = CGRectMake(0, 0, canvas_width, (viewMonitor.frame.size.height * viewMonitor.zoomScale));
+            }
+        }
+    }
 	
 	if( self.glView ) {
         self.glView.parentFrame = viewCanvas.frame;

@@ -356,7 +356,16 @@ extern unsigned int _getTickCount() ;
 
 #pragma mark Functions of buttons
 - (IBAction)goDropboxRec:(id)sender {
-    dropboxRec.tag=[camera_list count];
+    NSInteger tag=0;
+    for (NSInteger i=0; i<[cameraArray count]; i++) {
+        MyCamera *ca=[cameraArray objectAtIndex:i];
+        if(ca.uid==nil){
+            tag=i;
+            break;
+        }
+    }
+    
+    dropboxRec.tag=tag;
     [self goAddCamera:sender];
     
     return;
