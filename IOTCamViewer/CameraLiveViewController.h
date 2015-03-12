@@ -220,6 +220,8 @@ extern NSString *deviceTokenString;
 @property (retain, nonatomic) IBOutlet UIButton *landBackBtn;
 - (IBAction)landBackAction:(id)sender;
 
+@property (retain, nonatomic) IBOutlet UIButton *longBtn50HZ;
+@property (retain, nonatomic) IBOutlet UIButton *longBtn60HZ;
 
 @end
 

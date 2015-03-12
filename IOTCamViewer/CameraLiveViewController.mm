@@ -985,6 +985,8 @@ extern unsigned int _getTickCount() {
     [_myPtzLeftBtn release];
     [_myPtzRightBtn release];
     [_landBackBtn release];
+    [_longBtn50HZ release];
+    [_longBtn60HZ release];
     [super dealloc];
 }
 
@@ -1015,6 +1017,8 @@ extern unsigned int _getTickCount() {
     
     [set50Hz setTitle:[NSString stringWithFormat:@"%@(50HZ)",NSLocalizedString(@"Night Mode", @"")] forState:UIControlStateNormal];
     [set60Hz setTitle:[NSString stringWithFormat:@"%@(60HZ)",NSLocalizedString(@"Outdoor Mode", @"")] forState:UIControlStateNormal];
+    [_longBtn50HZ setTitle:[NSString stringWithFormat:@"%@(50HZ)",NSLocalizedString(@"Night Mode", @"")] forState:UIControlStateNormal];
+    [_longBtn60HZ setTitle:[NSString stringWithFormat:@"%@(60HZ)",NSLocalizedString(@"Outdoor Mode", @"")] forState:UIControlStateNormal];
     
     [longSetHighest setTitle:NSLocalizedString(@"Highest", @"") forState:UIControlStateNormal];
     [longSetHigh setTitle:NSLocalizedString(@"High", @"") forState:UIControlStateNormal];
@@ -1532,12 +1536,18 @@ extern unsigned int _getTickCount() {
 }
 -(void)initViewEmode{
     if(emode==0){
+        
         [set50Hz setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         [set60Hz setTitleColor:[UIColor colorWithRed:0 green:122/255.0 blue:255.0/255.0 alpha:1.0f] forState:UIControlStateNormal];
+        
+        [_longBtn50HZ setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [_longBtn60HZ setTitleColor:[UIColor colorWithRed:0 green:122/255.0 blue:255.0/255.0 alpha:1.0f] forState:UIControlStateNormal];
     }
     if(emode==2){
         [set60Hz setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         [set50Hz setTitleColor:[UIColor colorWithRed:0 green:122/255.0 blue:255.0/255.0 alpha:1.0f] forState:UIControlStateNormal];
+        [_longBtn60HZ setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [_longBtn50HZ setTitleColor:[UIColor colorWithRed:0 green:122/255.0 blue:255.0/255.0 alpha:1.0f] forState:UIControlStateNormal];
     }
 }
 
@@ -1891,7 +1901,8 @@ extern unsigned int _getTickCount() {
 	}
 	fRatioMonitor = viewMonitor.frame.size.width/viewMonitor.frame.size.height;
 		
-	if( fRatioMonitor > fRatioFrame ) {
+    if( fRatioMonitor > fRatioFrame&&(self.interfaceOrientation == UIInterfaceOrientationLandscapeLeft ||
+                                      self.interfaceOrientation == UIInterfaceOrientationLandscapeRight)) {
 		CGFloat canvas_height = (viewMonitor.frame.size.width * viewMonitor.zoomScale) / fRatioFrame;
 		
 		if( canvas_height < viewMonitor.frame.size.height ) {
@@ -2403,7 +2414,7 @@ extern unsigned int _getTickCount() {
     }
 }
 
-#define HIDE_TOOL_BAR_TIME_OUT	5
+#define HIDE_TOOL_BAR_TIME_OUT	2
 
 - (NSTimer *)setupHideToolBarTimer {
 	return [NSTimer scheduledTimerWithTimeInterval:HIDE_TOOL_BAR_TIME_OUT target:self selector:@selector(hideToolBar) userInfo:nil repeats:NO];

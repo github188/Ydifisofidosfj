@@ -19,6 +19,8 @@
                 <outlet property="loadingViewLandscape" destination="162" id="166"/>
                 <outlet property="loadingViewPortrait" destination="161" id="167"/>
                 <outlet property="longAudioTitle" destination="Jdx-VY-R9Q" id="NUi-ol-9bl"/>
+                <outlet property="longBtn50HZ" destination="KPG-fh-Pn0" id="HDG-pr-yp0"/>
+                <outlet property="longBtn60HZ" destination="T1p-Lf-WiM" id="EG0-tp-3CR"/>
                 <outlet property="longEModeTitle" destination="5cf-0R-E2h" id="LtI-Dk-d6f"/>
                 <outlet property="longEModeView" destination="CRY-ET-NnA" id="Fv7-JF-dDw"/>
                 <outlet property="longHorizMenu" destination="eii-SK-gbX" id="aak-ch-sQ9"/>
@@ -587,7 +589,7 @@
                                 <action selector="onBtnSetEMode:" destination="-1" eventType="touchUpInside" id="747-zc-1BL"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="T1p-Lf-WiM">
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="T1p-Lf-WiM">
                             <rect key="frame" x="57" y="57" width="206" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -602,7 +604,7 @@
                                 <action selector="onBtnSetEMode:" destination="-1" eventType="touchUpInside" id="1Q6-X8-e7h"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9t0-9B-4vs">
+                        <button hidden="YES" opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9t0-9B-4vs">
                             <rect key="frame" x="57" y="89" width="206" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -617,7 +619,7 @@
                                 <action selector="onBtnSetEMode:" destination="-1" eventType="touchUpInside" id="1U5-v5-DIA"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="h5F-kW-gBW">
+                        <button hidden="YES" opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="h5F-kW-gBW">
                             <rect key="frame" x="57" y="121" width="206" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
