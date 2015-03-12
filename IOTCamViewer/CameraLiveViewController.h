@@ -150,6 +150,8 @@ extern NSString *deviceTokenString;
     NSString *recordFileName;
     
     BOOL isMyRationed;
+    
+    char emode;
 }
 
 //for Recording

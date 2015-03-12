@@ -533,6 +533,7 @@ extern unsigned int _getTickCount() {
     
     s->channel = 0;
     s->mode = [(UIView*)sender tag]-1;
+    emode=s->mode;
     
     [camera sendIOCtrlToChannel:0
                            Type:IOTYPE_USER_IPCAM_SET_ENVIRONMENT_REQ
@@ -548,7 +549,23 @@ extern unsigned int _getTickCount() {
     [self.horizMenu reloadData];
     [self.longHorizMenu reloadData];
     
+    [self initViewEmode];
+    
     [NSThread sleepForTimeInterval:2];
+}
+//获取设备的EMode
+-(void)getEMode{
+    SMsgAVIoctrlGetEnvironmentReq *s = (SMsgAVIoctrlGetEnvironmentReq *)malloc(sizeof(SMsgAVIoctrlGetEnvironmentReq));
+    memset(s, 0, sizeof(SMsgAVIoctrlGetEnvironmentReq));
+    
+    s->channel = 0;
+    
+    [camera sendIOCtrlToChannel:0
+                           Type:IOTYPE_USER_IPCAM_GET_ENVIRONMENT_REQ
+                           Data:(char *)s
+                       DataSize:sizeof(SMsgAVIoctrlGetEnvironmentReq)];
+    
+    free(s);
 }
 
 - (void)onBtnSetCamera {
@@ -1163,6 +1180,7 @@ extern unsigned int _getTickCount() {
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
     [self changeOrientation:self.interfaceOrientation];
+    [self getEMode];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -1503,6 +1521,23 @@ extern unsigned int _getTickCount() {
             [loadingViewLandscape startAnimating];
         }
 
+    }
+    else if(type==(int)IOTYPE_USER_IPCAM_GET_ENVIRONMENT_RESP){
+        SMsgAVIoctrlGetEnvironmentResp* pResult=(SMsgAVIoctrlGetEnvironmentResp*)data;
+        if(camera_==camera){
+            emode=pResult->mode;
+            [self initViewEmode];
+        }
+    }
+}
+-(void)initViewEmode{
+    if(emode==0){
+        [set50Hz setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [set60Hz setTitleColor:[UIColor colorWithRed:0 green:122/255.0 blue:255.0/255.0 alpha:1.0f] forState:UIControlStateNormal];
+    }
+    if(emode==2){
+        [set60Hz setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [set50Hz setTitleColor:[UIColor colorWithRed:0 green:122/255.0 blue:255.0/255.0 alpha:1.0f] forState:UIControlStateNormal];
     }
 }
 
