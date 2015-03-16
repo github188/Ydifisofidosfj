@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>EasyN P.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>06F76E311AB720A100901EBA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>610DB9FF169AF0BF00292CF9</key>
 		<dict>
 			<key>primary</key>
