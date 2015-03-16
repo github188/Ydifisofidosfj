@@ -2233,9 +2233,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		610DB9FF169AF0BF00292CF9 /* P2PCamCEO */ = {
+		610DB9FF169AF0BF00292CF9 /* Aztech */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 610DBA8D169AF0C000292CF9 /* Build configuration list for PBXNativeTarget "P2PCamCEO" */;
+			buildConfigurationList = 610DBA8D169AF0C000292CF9 /* Build configuration list for PBXNativeTarget "Aztech" */;
 			buildPhases = (
 				610DBA00169AF0BF00292CF9 /* Sources */,
 				610DBA33169AF0BF00292CF9 /* Resources */,
@@ -2245,7 +2245,7 @@
 			);
 			dependencies = (
 			);
-			name = P2PCamCEO;
+			name = Aztech;
 			productName = IOTCamViewer;
 			productReference = 610DBA92169AF0C000292CF9 /* Aztech IP Cam.app */;
 			productType = "com.apple.product-type.application";
@@ -2279,7 +2279,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				610DB9FF169AF0BF00292CF9 /* P2PCamCEO */,
+				610DB9FF169AF0BF00292CF9 /* Aztech */,
 			);
 		};
 /* End PBXProject section */
@@ -3147,7 +3147,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		610DBA8D169AF0C000292CF9 /* Build configuration list for PBXNativeTarget "P2PCamCEO" */ = {
+		610DBA8D169AF0C000292CF9 /* Build configuration list for PBXNativeTarget "Aztech" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				610DBA8E169AF0C000292CF9 /* Debug */,

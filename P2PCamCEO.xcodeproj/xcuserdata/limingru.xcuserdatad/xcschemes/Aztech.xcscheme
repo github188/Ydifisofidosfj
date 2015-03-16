@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "610DB9FF169AF0BF00292CF9"
                BuildableName = "Aztech IP Cam.app"
-               BlueprintName = "P2PCamCEO"
+               BlueprintName = "Aztech"
                ReferencedContainer = "container:P2PCamCEO.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,7 +34,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "610DB9FF169AF0BF00292CF9"
             BuildableName = "Aztech IP Cam.app"
-            BlueprintName = "P2PCamCEO"
+            BlueprintName = "Aztech"
             ReferencedContainer = "container:P2PCamCEO.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -53,7 +53,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "610DB9FF169AF0BF00292CF9"
             BuildableName = "Aztech IP Cam.app"
-            BlueprintName = "P2PCamCEO"
+            BlueprintName = "Aztech"
             ReferencedContainer = "container:P2PCamCEO.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -88,7 +88,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "610DB9FF169AF0BF00292CF9"
             BuildableName = "Aztech IP Cam.app"
-            BlueprintName = "P2PCamCEO"
+            BlueprintName = "Aztech"
             ReferencedContainer = "container:P2PCamCEO.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
