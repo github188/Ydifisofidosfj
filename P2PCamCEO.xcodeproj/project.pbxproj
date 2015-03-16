@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		069EF4951AA5EE7300996D04 /* P2PCamCEO-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AFC917319FE57B700737A6B /* P2PCamCEO-info.plist */; };
-		06D6890A1AA8A2420043BD9A /* mydown1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D689021AA8A2420043BD9A /* mydown1@2x.png */; };
-		06D6890B1AA8A2420043BD9A /* mydown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D689031AA8A2420043BD9A /* mydown@2x.png */; };
-		06D6890C1AA8A2420043BD9A /* myleft1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D689041AA8A2420043BD9A /* myleft1@2x.png */; };
-		06D6890D1AA8A2420043BD9A /* myleft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D689051AA8A2420043BD9A /* myleft@2x.png */; };
-		06D6890E1AA8A2420043BD9A /* myright1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D689061AA8A2420043BD9A /* myright1@2x.png */; };
-		06D6890F1AA8A2420043BD9A /* myright@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D689071AA8A2420043BD9A /* myright@2x.png */; };
-		06D689101AA8A2420043BD9A /* myup1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D689081AA8A2420043BD9A /* myup1@2x.png */; };
-		06D689111AA8A2420043BD9A /* myup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D689091AA8A2420043BD9A /* myup@2x.png */; };
+		0632863F1AB71A800033ABD0 /* Aztech IP Cam-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0632863E1AB71A800033ABD0 /* Aztech IP Cam-info.plist */; };
+		0632864A1AB71A8C0033ABD0 /* mydown1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 063286411AB71A8C0033ABD0 /* mydown1@2x.png */; };
+		0632864B1AB71A8C0033ABD0 /* mydown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 063286421AB71A8C0033ABD0 /* mydown@2x.png */; };
+		0632864C1AB71A8C0033ABD0 /* myleft1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 063286431AB71A8C0033ABD0 /* myleft1@2x.png */; };
+		0632864D1AB71A8C0033ABD0 /* myleft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 063286441AB71A8C0033ABD0 /* myleft@2x.png */; };
+		0632864E1AB71A8C0033ABD0 /* myright1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 063286451AB71A8C0033ABD0 /* myright1@2x.png */; };
+		0632864F1AB71A8C0033ABD0 /* myright@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 063286461AB71A8C0033ABD0 /* myright@2x.png */; };
+		063286501AB71A8C0033ABD0 /* myup1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 063286471AB71A8C0033ABD0 /* myup1@2x.png */; };
+		063286511AB71A8C0033ABD0 /* myup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 063286481AB71A8C0033ABD0 /* myup@2x.png */; };
+		063286521AB71A8C0033ABD0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 063286491AB71A8C0033ABD0 /* Images.xcassets */; };
+		063286541AB71AEE0033ABD0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 063286531AB71AEE0033ABD0 /* InfoPlist.strings */; };
 		06F425F71AA9FB6500427383 /* AppGuidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F425F51AA9FB6500427383 /* AppGuidViewController.m */; };
 		06F425F81AA9FB6500427383 /* AppGuidViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F425F61AA9FB6500427383 /* AppGuidViewController.xib */; };
 		06F426011AAA008200427383 /* page1_cn.png in Resources */ = {isa = PBXBuildFile; fileRef = 06F425F91AAA008200427383 /* page1_cn.png */; };
@@ -535,7 +537,6 @@
 		7AB3828D191CA6210085B07B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB381EB191CA6200085B07B /* Icon@2x.png */; };
 		7AB3828E191CA6210085B07B /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB381EC191CA6200085B07B /* iTunesArtwork.png */; };
 		7AB3828F191CA6210085B07B /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB381ED191CA6200085B07B /* iTunesArtwork@2x.png */; };
-		7AB38327191CA6280085B07B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AB38326191CA6280085B07B /* Images.xcassets */; };
 		7ABFD0C4190F6F7F00DDF03B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABFD0C3190F6F7F00DDF03B /* SystemConfiguration.framework */; };
 		7ABFD0C7190F70B600DDF03B /* GetWiFiSSIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABFD0C6190F70B600DDF03B /* GetWiFiSSIDViewController.m */; };
 		7ABFD0CD190F7B4A00DDF03B /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABFD0CC190F7B4A00DDF03B /* StartViewController.m */; };
@@ -559,14 +560,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		06D689021AA8A2420043BD9A /* mydown1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mydown1@2x.png"; sourceTree = "<group>"; };
-		06D689031AA8A2420043BD9A /* mydown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mydown@2x.png"; sourceTree = "<group>"; };
-		06D689041AA8A2420043BD9A /* myleft1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myleft1@2x.png"; sourceTree = "<group>"; };
-		06D689051AA8A2420043BD9A /* myleft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myleft@2x.png"; sourceTree = "<group>"; };
-		06D689061AA8A2420043BD9A /* myright1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myright1@2x.png"; sourceTree = "<group>"; };
-		06D689071AA8A2420043BD9A /* myright@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myright@2x.png"; sourceTree = "<group>"; };
-		06D689081AA8A2420043BD9A /* myup1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myup1@2x.png"; sourceTree = "<group>"; };
-		06D689091AA8A2420043BD9A /* myup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myup@2x.png"; sourceTree = "<group>"; };
+		0632863E1AB71A800033ABD0 /* Aztech IP Cam-info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Aztech IP Cam-info.plist"; path = "Aztech/Aztech IP Cam-info.plist"; sourceTree = "<group>"; };
+		063286411AB71A8C0033ABD0 /* mydown1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mydown1@2x.png"; sourceTree = "<group>"; };
+		063286421AB71A8C0033ABD0 /* mydown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mydown@2x.png"; sourceTree = "<group>"; };
+		063286431AB71A8C0033ABD0 /* myleft1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myleft1@2x.png"; sourceTree = "<group>"; };
+		063286441AB71A8C0033ABD0 /* myleft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myleft@2x.png"; sourceTree = "<group>"; };
+		063286451AB71A8C0033ABD0 /* myright1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myright1@2x.png"; sourceTree = "<group>"; };
+		063286461AB71A8C0033ABD0 /* myright@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myright@2x.png"; sourceTree = "<group>"; };
+		063286471AB71A8C0033ABD0 /* myup1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myup1@2x.png"; sourceTree = "<group>"; };
+		063286481AB71A8C0033ABD0 /* myup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myup@2x.png"; sourceTree = "<group>"; };
+		063286491AB71A8C0033ABD0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Aztech/Images.xcassets; sourceTree = "<group>"; };
+		063286531AB71AEE0033ABD0 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = Aztech/InfoPlist.strings; sourceTree = "<group>"; };
 		06F425F41AA9FB6500427383 /* AppGuidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGuidViewController.h; sourceTree = "<group>"; };
 		06F425F51AA9FB6500427383 /* AppGuidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGuidViewController.m; sourceTree = "<group>"; };
 		06F425F61AA9FB6500427383 /* AppGuidViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppGuidViewController.xib; sourceTree = "<group>"; };
@@ -597,7 +601,7 @@
 		61082AF71531CEA100DDF07D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hant"; path = "zh-Hant.lproj/mainWindow.xib"; sourceTree = "<group>"; };
 		6108DB8315CB833D002966A2 /* libbz2.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.1.0.dylib; path = usr/lib/libbz2.1.0.dylib; sourceTree = SDKROOT; };
 		6108DB8A15CB9EA0002966A2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		610DBA92169AF0C000292CF9 /* Aztech IP Cam.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aztech IP Cam.temp_caseinsensitive_rename.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		610DBA92169AF0C000292CF9 /* Aztech IP Cam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aztech IP Cam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		611F4EF615C0F52D00B8D8C3 /* IOTCamera.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOTCamera.framework; path = "/Users/cloud/Library/Frameworks/IOTCamera/Release-iphonesimulator/IOTCamera.framework"; sourceTree = "<absolute>"; };
 		6122A53B169E5CF8005DFB49 /* libZXingWidget.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libZXingWidget.a; path = "lib/Release-iphonesimulator/libZXingWidget.a"; sourceTree = "<group>"; };
 		614021DC159C4F6000051C50 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = images/Default.png; sourceTree = "<group>"; };
@@ -1083,7 +1087,6 @@
 		7AB381EB191CA6200085B07B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		7AB381EC191CA6200085B07B /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		7AB381ED191CA6200085B07B /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
-		7AB38326191CA6280085B07B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = P2PCamLive/Images.xcassets; sourceTree = "<group>"; };
 		7ABFD0C3190F6F7F00DDF03B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		7ABFD0C5190F70B600DDF03B /* GetWiFiSSIDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetWiFiSSIDViewController.h; sourceTree = "<group>"; };
 		7ABFD0C6190F70B600DDF03B /* GetWiFiSSIDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetWiFiSSIDViewController.m; sourceTree = "<group>"; };
@@ -1092,7 +1095,6 @@
 		7ABFD0CE190F926400DDF03B /* StartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartView.xib; sourceTree = "<group>"; };
 		7AC9ECCE19F539CF007764B4 /* Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checkmark.png; sourceTree = "<group>"; };
 		7AC9ECCF19F539CF007764B4 /* Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checkmark@2x.png"; sourceTree = "<group>"; };
-		7AFC917319FE57B700737A6B /* P2PCamCEO-info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "P2PCamCEO-info.plist"; path = "P2PCamLive/P2PCamCEO-info.plist"; sourceTree = "<group>"; };
 		86244AB71769A09D00C2564B /* TimeZoneListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeZoneListController.xib; sourceTree = "<group>"; };
 		86244AB81769A09D00C2564B /* TimeZoneListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeZoneListController.h; sourceTree = "<group>"; };
 		86244AB91769A09D00C2564B /* TimeZoneListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeZoneListController.m; sourceTree = "<group>"; };
@@ -1286,28 +1288,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		06D689011AA8A2420043BD9A /* aztechjt */ = {
+		063286401AB71A8C0033ABD0 /* aztechjt */ = {
 			isa = PBXGroup;
 			children = (
-				06D689021AA8A2420043BD9A /* mydown1@2x.png */,
-				06D689031AA8A2420043BD9A /* mydown@2x.png */,
-				06D689041AA8A2420043BD9A /* myleft1@2x.png */,
-				06D689051AA8A2420043BD9A /* myleft@2x.png */,
-				06D689061AA8A2420043BD9A /* myright1@2x.png */,
-				06D689071AA8A2420043BD9A /* myright@2x.png */,
-				06D689081AA8A2420043BD9A /* myup1@2x.png */,
-				06D689091AA8A2420043BD9A /* myup@2x.png */,
+				063286411AB71A8C0033ABD0 /* mydown1@2x.png */,
+				063286421AB71A8C0033ABD0 /* mydown@2x.png */,
+				063286431AB71A8C0033ABD0 /* myleft1@2x.png */,
+				063286441AB71A8C0033ABD0 /* myleft@2x.png */,
+				063286451AB71A8C0033ABD0 /* myright1@2x.png */,
+				063286461AB71A8C0033ABD0 /* myright@2x.png */,
+				063286471AB71A8C0033ABD0 /* myup1@2x.png */,
+				063286481AB71A8C0033ABD0 /* myup@2x.png */,
 			);
-			path = aztechjt;
+			name = aztechjt;
+			path = Aztech/aztechjt;
 			sourceTree = "<group>";
 		};
 		610DBA95169AF0FE00292CF9 /* Aztech */ = {
 			isa = PBXGroup;
 			children = (
-				06D689011AA8A2420043BD9A /* aztechjt */,
+				063286401AB71A8C0033ABD0 /* aztechjt */,
+				063286491AB71A8C0033ABD0 /* Images.xcassets */,
 				610DBA97169AF22000292CF9 /* Supporting Files */,
-				7AFC917319FE57B700737A6B /* P2PCamCEO-info.plist */,
-				7AB38326191CA6280085B07B /* Images.xcassets */,
+				063286531AB71AEE0033ABD0 /* InfoPlist.strings */,
 			);
 			name = Aztech;
 			sourceTree = "<group>";
@@ -1315,6 +1318,7 @@
 		610DBA97169AF22000292CF9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0632863E1AB71A800033ABD0 /* Aztech IP Cam-info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -2156,7 +2160,7 @@
 		D8F71AB4148C5342007705B6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				610DBA92169AF0C000292CF9 /* Aztech IP Cam.temp_caseinsensitive_rename.app */,
+				610DBA92169AF0C000292CF9 /* Aztech IP Cam.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2243,7 +2247,7 @@
 			);
 			name = P2PCamCEO;
 			productName = IOTCamViewer;
-			productReference = 610DBA92169AF0C000292CF9 /* Aztech IP Cam.temp_caseinsensitive_rename.app */;
+			productReference = 610DBA92169AF0C000292CF9 /* Aztech IP Cam.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -2260,7 +2264,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D8F71AAD148C5342007705B6 /* Build configuration list for PBXProject "Aztech IP Cam" */;
+			buildConfigurationList = D8F71AAD148C5342007705B6 /* Build configuration list for PBXProject "P2PCamCEO" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -2315,8 +2319,8 @@
 				610DBA34169AF0BF00292CF9 /* mainWindow.xib in Resources */,
 				610DBA35169AF0BF00292CF9 /* CameraLiveView.xib in Resources */,
 				7A553D66194EB73D00F5AA11 /* leo_emode@2x.png in Resources */,
+				0632864E1AB71A8C0033ABD0 /* myright1@2x.png in Resources */,
 				610DBA36169AF0BF00292CF9 /* CameraList.xib in Resources */,
-				06D6890E1AA8A2420043BD9A /* myright1@2x.png in Resources */,
 				7A553D0C194EB73C00F5AA11 /* add_camwifibk@2x.png in Resources */,
 				610DBA37169AF0BF00292CF9 /* AddCamera.xib in Resources */,
 				7A553D3B194EB73C00F5AA11 /* add_wifi4@2x.png in Resources */,
@@ -2370,16 +2374,13 @@
 				7A553D45194EB73C00F5AA11 /* addcam_clicked.png in Resources */,
 				7A553D41194EB73C00F5AA11 /* add_wifinext_clicked.png in Resources */,
 				610DBA45169AF0BF00292CF9 /* event@2x.png in Resources */,
-				06D6890F1AA8A2420043BD9A /* myright@2x.png in Resources */,
 				7A553DD5194EB73D00F5AA11 /* add_wifi4.png in Resources */,
 				7A553DB5194EB73D00F5AA11 /* morefunction.png in Resources */,
-				06D6890B1AA8A2420043BD9A /* mydown@2x.png in Resources */,
 				7A553D69194EB73D00F5AA11 /* leo_micinfo.png in Resources */,
 				06F426041AAA008200427383 /* page2_en.png in Resources */,
 				7A0B1C7919A466950071E5CF /* leo_qvga_disable@2x.png in Resources */,
 				7A553D0A194EB73C00F5AA11 /* add_camicon@2x.png in Resources */,
 				7A553D55194EB73C00F5AA11 /* ceo_set.png in Resources */,
-				06D6890A1AA8A2420043BD9A /* mydown1@2x.png in Resources */,
 				7A553D43194EB73C00F5AA11 /* addcam.png in Resources */,
 				7A553D9E194EB73D00F5AA11 /* more_changech@2x.png in Resources */,
 				7A553D7A194EB73D00F5AA11 /* leo_snapshot_clicked@2x.png in Resources */,
@@ -2453,6 +2454,7 @@
 				7A553D09194EB73C00F5AA11 /* add_camicon.png in Resources */,
 				7A553DAE194EB73D00F5AA11 /* more_photo@2x.png in Resources */,
 				7A553D7D194EB73D00F5AA11 /* leo_speaker_off_clicked.png in Resources */,
+				0632864B1AB71A8C0033ABD0 /* mydown@2x.png in Resources */,
 				7A553D30194EB73C00F5AA11 /* add_web_clicked.png in Resources */,
 				7A553D67194EB73D00F5AA11 /* leo_emode_clicked.png in Resources */,
 				7A0B1C7419A466950071E5CF /* leo_mirror_rl_disable.png in Resources */,
@@ -2465,10 +2467,8 @@
 				7A553D1A194EB73C00F5AA11 /* add_lsearch_clicked.png in Resources */,
 				7A553D94194EB73D00F5AA11 /* login_email_bk@2x.png in Resources */,
 				7A553DC1194EB73D00F5AA11 /* moreset_list1_clicked.png in Resources */,
-				06D689111AA8A2420043BD9A /* myup@2x.png in Resources */,
 				7A553DE6194EB73D00F5AA11 /* toolinfo_bk.png in Resources */,
 				610DBA55169AF0BF00292CF9 /* popoverArrowRight@2x.png in Resources */,
-				06D6890C1AA8A2420043BD9A /* myleft1@2x.png in Resources */,
 				7A553DD8194EB73D00F5AA11 /* qualitylist.png in Resources */,
 				7A553D37194EB73C00F5AA11 /* add_wifi3@2x.png in Resources */,
 				7A553D90194EB73D00F5AA11 /* login_btn@2x.png in Resources */,
@@ -2563,7 +2563,6 @@
 				7A49913319ADFD7700B19CD4 /* ceo_rcplay_forward_h@2x.png in Resources */,
 				7A553D36194EB73C00F5AA11 /* add_wifi3.png in Resources */,
 				7AB38288191CA6210085B07B /* Icon-Small-50.png in Resources */,
-				06D6890D1AA8A2420043BD9A /* myleft@2x.png in Resources */,
 				7A553DAF194EB73D00F5AA11 /* more_photo_clicked.png in Resources */,
 				7AAF857819061DAC00A82745 /* CameraMultiLiveView.xib in Resources */,
 				7A553D1F194EB73C00F5AA11 /* add_okbtn@2x.png in Resources */,
@@ -2579,6 +2578,7 @@
 				610DBA6D169AF0BF00292CF9 /* CustomTableViewCellStyle1.xib in Resources */,
 				7AAF3AF819220D4F000D7FAF /* CheckView.xib in Resources */,
 				7A0B1C6719A466950071E5CF /* ceo_record@2x.png in Resources */,
+				0632864C1AB71A8C0033ABD0 /* myleft1@2x.png in Resources */,
 				7A0B1C6E19A466950071E5CF /* ceo_record_tab_r.png in Resources */,
 				7A553D75194EB73D00F5AA11 /* leo_qvga_clicked.png in Resources */,
 				7A553DCD194EB73D00F5AA11 /* online.png in Resources */,
@@ -2592,11 +2592,14 @@
 				7A553D2A194EB73C00F5AA11 /* add_uidpw.png in Resources */,
 				7A553D6C194EB73D00F5AA11 /* leo_mirror_rl@2x.png in Resources */,
 				7A0B1C5C19A466950071E5CF /* ceo_rcplay_click.png in Resources */,
+				0632864A1AB71A8C0033ABD0 /* mydown1@2x.png in Resources */,
 				7A553D0E194EB73C00F5AA11 /* add_devicessid@2x.png in Resources */,
 				7A553D92194EB73D00F5AA11 /* login_btn_clicked@2x.png in Resources */,
 				7A553DAC194EB73D00F5AA11 /* more_event_disable@2x.png in Resources */,
 				7A49912A19ADFD7700B19CD4 /* ceo_rcplay_back_h.png in Resources */,
+				0632864D1AB71A8C0033ABD0 /* myleft@2x.png in Resources */,
 				7A0B1C5F19A466950071E5CF /* ceo_rcplay_forward@2x.png in Resources */,
+				063286521AB71A8C0033ABD0 /* Images.xcassets in Resources */,
 				7A553DD4194EB73D00F5AA11 /* add_wifi2.png in Resources */,
 				7A553D29194EB73C00F5AA11 /* add_sync_clicked@2x.png in Resources */,
 				7A553DCE194EB73D00F5AA11 /* online@2x.png in Resources */,
@@ -2605,7 +2608,6 @@
 				7A553D1D194EB73C00F5AA11 /* add_newinfo@2x.png in Resources */,
 				7A0B1C5519A466950071E5CF /* ceo_rcplay@2x.png in Resources */,
 				7A0B1C6D19A466950071E5CF /* ceo_record_tab_l@2x.png in Resources */,
-				06D689101AA8A2420043BD9A /* myup1@2x.png in Resources */,
 				7A0B1C7719A466950071E5CF /* leo_mirror_ud_disable@2x.png in Resources */,
 				610DBA70169AF0BF00292CF9 /* thumbnailCheckMark2.png in Resources */,
 				610DBA71169AF0BF00292CF9 /* buttonRedBackground.png in Resources */,
@@ -2617,6 +2619,8 @@
 				7A553D62194EB73C00F5AA11 /* drop_unlink@2x.png in Resources */,
 				7A49913719ADFD7700B19CD4 /* ceo_rcplay_line_full_h@2x.png in Resources */,
 				57DE16E81868235C00B6682F /* more.png in Resources */,
+				0632863F1AB71A800033ABD0 /* Aztech IP Cam-info.plist in Resources */,
+				063286541AB71AEE0033ABD0 /* InfoPlist.strings in Resources */,
 				7AC9ECD019F539CF007764B4 /* Checkmark.png in Resources */,
 				7A553D82194EB73D00F5AA11 /* leo_speaker_on_clicked@2x.png in Resources */,
 				7AC9ECD119F539CF007764B4 /* Checkmark@2x.png in Resources */,
@@ -2650,13 +2654,13 @@
 				7A553DDE194EB73D00F5AA11 /* refresh_clicked.png in Resources */,
 				7A553D56194EB73C00F5AA11 /* ceo_set@2x.png in Resources */,
 				7A0B1C7E19A466950071E5CF /* pic_play_MarkMan.png in Resources */,
+				0632864F1AB71A8C0033ABD0 /* myright@2x.png in Resources */,
 				86244AC31769AD4B00C2564B /* oceania.csv in Resources */,
 				7AB3828B191CA6210085B07B /* Icon-Small@2x.png in Resources */,
 				7A553D3A194EB73C00F5AA11 /* add_wifi4.png in Resources */,
 				7A553D80194EB73D00F5AA11 /* leo_speaker_on@2x.png in Resources */,
 				7AB38286191CA6210085B07B /* Icon-72.png in Resources */,
 				7A553D7C194EB73D00F5AA11 /* leo_speaker_off@2x.png in Resources */,
-				7AB38327191CA6280085B07B /* Images.xcassets in Resources */,
 				7A553D0B194EB73C00F5AA11 /* add_camwifibk.png in Resources */,
 				7A553DCB194EB73D00F5AA11 /* offline.png in Resources */,
 				7A0B1C6119A466950071E5CF /* ceo_rcplay_forward_click@2x.png in Resources */,
@@ -2674,6 +2678,7 @@
 				7A553D11194EB73C00F5AA11 /* add_list.png in Resources */,
 				7A0B1C6819A466950071E5CF /* ceo_record_clicked.png in Resources */,
 				7A553D3F194EB73C00F5AA11 /* add_wifinext.png in Resources */,
+				063286511AB71A8C0033ABD0 /* myup@2x.png in Resources */,
 				86244AC51769AD4B00C2564B /* europe.csv in Resources */,
 				7A553DB3194EB73D00F5AA11 /* more_set_clicked.png in Resources */,
 				7A553D8C194EB73D00F5AA11 /* login@2x.png in Resources */,
@@ -2689,9 +2694,9 @@
 				86244AC61769AD4B00C2564B /* asia.csv in Resources */,
 				7A49913519ADFD7700B19CD4 /* ceo_rcplay_h@2x.png in Resources */,
 				7A49912B19ADFD7700B19CD4 /* ceo_rcplay_back_h@2x.png in Resources */,
+				063286501AB71A8C0033ABD0 /* myup1@2x.png in Resources */,
 				06F425F81AA9FB6500427383 /* AppGuidViewController.xib in Resources */,
 				7A49913619ADFD7700B19CD4 /* ceo_rcplay_line_full_h.png in Resources */,
-				069EF4951AA5EE7300996D04 /* P2PCamCEO-info.plist in Resources */,
 				869CC4CB17C715D200AFA42D /* TimeZoneCell.xib in Resources */,
 				7A553DDB194EB73D00F5AA11 /* qualitylist_clicked@2x.png in Resources */,
 				7A553DE7194EB73D00F5AA11 /* toolinfo_bk@2x.png in Resources */,
@@ -2885,7 +2890,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
-				INFOPLIST_FILE = "P2PCamLive/P2PCamCEO-Info.plist";
+				INFOPLIST_FILE = "Aztech/Aztech IP Cam-info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2896,7 +2901,7 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
-				PRODUCT_NAME = "Aztech IP Cam.temp_caseinsensitive_rename";
+				PRODUCT_NAME = "Aztech IP Cam";
 				PROVISIONING_PROFILE = "5dd67c88-dca3-499e-b294-d7ff1a0e60ae";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
@@ -2920,7 +2925,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
-				INFOPLIST_FILE = "P2PCamLive/P2PCamCEO-Info.plist";
+				INFOPLIST_FILE = "Aztech/Aztech IP Cam-info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2932,7 +2937,7 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
-				PRODUCT_NAME = "Aztech IP Cam.temp_caseinsensitive_rename";
+				PRODUCT_NAME = "Aztech IP Cam";
 				PROVISIONING_PROFILE = "5dd67c88-dca3-499e-b294-d7ff1a0e60ae";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
@@ -2956,7 +2961,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
-				INFOPLIST_FILE = "P2PCamLive/P2PCamCEO-Info.plist";
+				INFOPLIST_FILE = "Aztech/Aztech IP Cam-info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2968,7 +2973,7 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
-				PRODUCT_NAME = "Aztech IP Cam.temp_caseinsensitive_rename";
+				PRODUCT_NAME = "Aztech IP Cam";
 				PROVISIONING_PROFILE = "5dd67c88-dca3-499e-b294-d7ff1a0e60ae";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
@@ -2992,7 +2997,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
-				INFOPLIST_FILE = "P2PCamLive/P2PCamCEO-Info.plist";
+				INFOPLIST_FILE = "Aztech/Aztech IP Cam-info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3003,7 +3008,7 @@
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"-DP2PCAMLIVE",
 				);
-				PRODUCT_NAME = "Aztech IP Cam.temp_caseinsensitive_rename";
+				PRODUCT_NAME = "Aztech IP Cam";
 				PROVISIONING_PROFILE = "5dd67c88-dca3-499e-b294-d7ff1a0e60ae";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
@@ -3157,7 +3162,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D8F71AAD148C5342007705B6 /* Build configuration list for PBXProject "Aztech IP Cam" */ = {
+		D8F71AAD148C5342007705B6 /* Build configuration list for PBXProject "P2PCamCEO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D8F71AC9148C5343007705B6 /* Debug */,

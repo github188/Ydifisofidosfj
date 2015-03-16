@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "610DB9FF169AF0BF00292CF9"
-               BuildableName = "Aztech IP Cam.temp_caseinsensitive_rename.app"
+               BuildableName = "P2PCamCEO.app"
                BlueprintName = "P2PCamCEO"
-               ReferencedContainer = "container:Aztech IP Cam.xcodeproj">
+               ReferencedContainer = "container:P2PCamCEO.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "610DB9FF169AF0BF00292CF9"
-            BuildableName = "Aztech IP Cam.temp_caseinsensitive_rename.app"
+            BuildableName = "P2PCamCEO.app"
             BlueprintName = "P2PCamCEO"
-            ReferencedContainer = "container:Aztech IP Cam.xcodeproj">
+            ReferencedContainer = "container:P2PCamCEO.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "610DB9FF169AF0BF00292CF9"
-            BuildableName = "Aztech IP Cam.temp_caseinsensitive_rename.app"
+            BuildableName = "P2PCamCEO.app"
             BlueprintName = "P2PCamCEO"
-            ReferencedContainer = "container:Aztech IP Cam.xcodeproj">
+            ReferencedContainer = "container:P2PCamCEO.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -87,9 +87,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "610DB9FF169AF0BF00292CF9"
-            BuildableName = "Aztech IP Cam.temp_caseinsensitive_rename.app"
+            BuildableName = "P2PCamCEO.app"
             BlueprintName = "P2PCamCEO"
-            ReferencedContainer = "container:Aztech IP Cam.xcodeproj">
+            ReferencedContainer = "container:P2PCamCEO.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
