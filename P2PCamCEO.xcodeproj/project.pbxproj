@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0632863F1AB71A800033ABD0 /* Aztech IP Cam-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0632863E1AB71A800033ABD0 /* Aztech IP Cam-info.plist */; };
 		0632864A1AB71A8C0033ABD0 /* mydown1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 063286411AB71A8C0033ABD0 /* mydown1@2x.png */; };
 		0632864B1AB71A8C0033ABD0 /* mydown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 063286421AB71A8C0033ABD0 /* mydown@2x.png */; };
 		0632864C1AB71A8C0033ABD0 /* myleft1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 063286431AB71A8C0033ABD0 /* myleft1@2x.png */; };
@@ -18,6 +17,7 @@
 		063286511AB71A8C0033ABD0 /* myup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 063286481AB71A8C0033ABD0 /* myup@2x.png */; };
 		063286521AB71A8C0033ABD0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 063286491AB71A8C0033ABD0 /* Images.xcassets */; };
 		063286541AB71AEE0033ABD0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 063286531AB71AEE0033ABD0 /* InfoPlist.strings */; };
+		063286551AB71E7D0033ABD0 /* Aztech IP Cam-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0632863E1AB71A800033ABD0 /* Aztech IP Cam-info.plist */; };
 		06F425F71AA9FB6500427383 /* AppGuidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F425F51AA9FB6500427383 /* AppGuidViewController.m */; };
 		06F425F81AA9FB6500427383 /* AppGuidViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F425F61AA9FB6500427383 /* AppGuidViewController.xib */; };
 		06F426011AAA008200427383 /* page1_cn.png in Resources */ = {isa = PBXBuildFile; fileRef = 06F425F91AAA008200427383 /* page1_cn.png */; };
@@ -2256,7 +2256,7 @@
 		D8F71AAA148C5342007705B6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = TUTK;
 				TargetAttributes = {
 					610DB9FF169AF0BF00292CF9 = {
@@ -2547,6 +2547,7 @@
 				7A0B1C5419A466950071E5CF /* ceo_rcplay.png in Resources */,
 				7A553D5F194EB73C00F5AA11 /* drop_refresh_clicked.png in Resources */,
 				7A553D50194EB73C00F5AA11 /* call_on_clicked@2x.png in Resources */,
+				063286551AB71E7D0033ABD0 /* Aztech IP Cam-info.plist in Resources */,
 				7A553DB0194EB73D00F5AA11 /* more_photo_clicked@2x.png in Resources */,
 				7A553D6A194EB73D00F5AA11 /* leo_micinfo@2x.png in Resources */,
 				7A553D52194EB73C00F5AA11 /* cam_back@2x.png in Resources */,
@@ -2619,7 +2620,6 @@
 				7A553D62194EB73C00F5AA11 /* drop_unlink@2x.png in Resources */,
 				7A49913719ADFD7700B19CD4 /* ceo_rcplay_line_full_h@2x.png in Resources */,
 				57DE16E81868235C00B6682F /* more.png in Resources */,
-				0632863F1AB71A800033ABD0 /* Aztech IP Cam-info.plist in Resources */,
 				063286541AB71AEE0033ABD0 /* InfoPlist.strings in Resources */,
 				7AC9ECD019F539CF007764B4 /* Checkmark.png in Resources */,
 				7A553D82194EB73D00F5AA11 /* leo_speaker_on_clicked@2x.png in Resources */,
@@ -2878,7 +2878,6 @@
 		610DBA8E169AF0C000292CF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
@@ -2913,7 +2912,6 @@
 		610DBA8F169AF0C000292CF9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
@@ -2949,7 +2947,6 @@
 		610DBA90169AF0C000292CF9 /* App Store Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
@@ -2985,7 +2982,6 @@
 		610DBA91169AF0C000292CF9 /* Ad Hoc Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
