@@ -743,7 +743,7 @@ extern unsigned int _getTickCount() ;
     [self.navigationController setNavigationBarHidden:NO];
     self.navigationController.navigationBar.translucent = YES;
     
-    UIImage *navigationbarBG = [UIImage imageNamed:@"title_logo"];
+    UIImage *navigationbarBG = [UIImage imageNamed:@"title_logo.png"];
     [self.navigationController.navigationBar setBackgroundImage:navigationbarBG forBarMetrics:UIBarMetricsDefault];
     
     if (cameraArray!=nil){
