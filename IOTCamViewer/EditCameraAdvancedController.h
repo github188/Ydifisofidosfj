@@ -18,6 +18,7 @@
 #import "TimeZoneListController.h"
 #import "FMDatabase.h"
 #import "DeviceListOnCloud.h"
+#import "ChooseViewController.h"
 
 #define SECURITYCODE_SECTION_INDEX 0
 #define VIDEO_SECTION_INDEX 1
@@ -31,7 +32,7 @@ extern FMDatabase *database;
 @protocol EditCameraAdvancedDelegate;
 
 @interface EditCameraAdvancedController : UITableViewController 
-<MyCameraDelegate, RecordingModeDelegate, MotionDetectionDelegate, VideoQualityDelegate, VideoFlipDelegate, EnvironmentModeDelegate, SecurityCodeDelegate, WiFiNetworkDelegate, TimeZoneChangedDelegate, DeviceOnCloudDelegate> {
+<MyCameraDelegate, RecordingModeDelegate, MotionDetectionDelegate, VideoQualityDelegate, VideoFlipDelegate, EnvironmentModeDelegate, SecurityCodeDelegate, WiFiNetworkDelegate, TimeZoneChangedDelegate, DeviceOnCloudDelegate,ChooseDelegate> {
     
     MyCamera *camera;
     NSString *theNewPassword;
@@ -70,6 +71,10 @@ extern FMDatabase *database;
     
     BOOL bPendingWifi;
     BOOL bIsSync;
+    
+    BOOL summerTime;
+    
+    NSArray* arrTimeZoneTable;
 }
 
 @property (nonatomic, retain) NSTimer* timerListWifiApResp;

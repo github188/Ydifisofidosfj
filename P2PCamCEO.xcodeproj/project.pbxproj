@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0631097E1ABA3D5D00C6F0F1 /* ChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0631097D1ABA3D5D00C6F0F1 /* ChooseViewController.m */; };
+		0631097F1ABA3D5D00C6F0F1 /* ChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0631097D1ABA3D5D00C6F0F1 /* ChooseViewController.m */; };
 		0632864A1AB71A8C0033ABD0 /* mydown1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 063286411AB71A8C0033ABD0 /* mydown1@2x.png */; };
 		0632864B1AB71A8C0033ABD0 /* mydown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 063286421AB71A8C0033ABD0 /* mydown@2x.png */; };
 		0632864C1AB71A8C0033ABD0 /* myleft1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 063286431AB71A8C0033ABD0 /* myleft1@2x.png */; };
@@ -1110,6 +1112,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0631097C1ABA3D5D00C6F0F1 /* ChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseViewController.h; sourceTree = "<group>"; };
+		0631097D1ABA3D5D00C6F0F1 /* ChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseViewController.m; sourceTree = "<group>"; };
+		063109801ABA41B400C6F0F1 /* DefineExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineExtension.h; sourceTree = "<group>"; };
 		0632863E1AB71A800033ABD0 /* Aztech IP Cam-info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Aztech IP Cam-info.plist"; path = "Aztech/Aztech IP Cam-info.plist"; sourceTree = "<group>"; };
 		063286411AB71A8C0033ABD0 /* mydown1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mydown1@2x.png"; sourceTree = "<group>"; };
 		063286421AB71A8C0033ABD0 /* mydown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mydown@2x.png"; sourceTree = "<group>"; };
@@ -2603,6 +2608,8 @@
 		D8028D0014A8173300BE124F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0631097C1ABA3D5D00C6F0F1 /* ChooseViewController.h */,
+				0631097D1ABA3D5D00C6F0F1 /* ChooseViewController.m */,
 				55AA60E418C6FAE500338DBD /* UIDevice+Version.h */,
 				55AA60E518C6FAE500338DBD /* UIDevice+Version.m */,
 				8695E623171FC704006CC974 /* CustomPeriodEventSearchController.h */,
@@ -2874,6 +2881,7 @@
 				D8F71B29148CAF47007705B6 /* lib */,
 				D8858F6514904A47009F55E5 /* Resources */,
 				D8F71ABE148C5342007705B6 /* Supporting Files */,
+				063109801ABA41B400C6F0F1 /* DefineExtension.h */,
 			);
 			name = P2PCam264;
 			path = IOTCamViewer;
@@ -3861,6 +3869,7 @@
 				06F76E551AB720A100901EBA /* UIButton+Bootstrap.m in Sources */,
 				06F76E561AB720A100901EBA /* UIScrollView+ScrollView.m in Sources */,
 				06F76E571AB720A100901EBA /* WiFiNetworkController.m in Sources */,
+				0631097F1ABA3D5D00C6F0F1 /* ChooseViewController.m in Sources */,
 				06F76E581AB720A100901EBA /* EditWiFiPasswordController.m in Sources */,
 				06F76E591AB720A100901EBA /* CameraListForEventsController.mm in Sources */,
 				06F76E5A1AB720A100901EBA /* EventListController.mm in Sources */,
@@ -3973,6 +3982,7 @@
 				7A1C0186193339F70032A77E /* UIButton+Bootstrap.m in Sources */,
 				7A1C0194193339F70032A77E /* UIScrollView+ScrollView.m in Sources */,
 				610DBA11169AF0BF00292CF9 /* WiFiNetworkController.m in Sources */,
+				0631097E1ABA3D5D00C6F0F1 /* ChooseViewController.m in Sources */,
 				610DBA12169AF0BF00292CF9 /* EditWiFiPasswordController.m in Sources */,
 				610DBA13169AF0BF00292CF9 /* CameraListForEventsController.mm in Sources */,
 				610DBA14169AF0BF00292CF9 /* EventListController.mm in Sources */,

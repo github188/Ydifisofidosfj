@@ -304,6 +304,32 @@
     
     bPendingWifi = NO;
     
+    arrTimeZoneTable = [[NSArray alloc] initWithObjects:
+                        @"GMT-11",
+                        @"GMT-10",
+                        @"GMT-9",
+                        @"GMT-8",
+                        @"GMT-7",
+                        @"GMT-6",
+                        @"GMT-5",
+                        @"GMT-4",
+                        @"GMT-3",
+                        @"GMT-2",
+                        @"GMT-1",
+                        @"GMT 0",
+                        @"GMT+1",
+                        @"GMT+2",
+                        @"GMT+3",
+                        @"GMT+4",
+                        @"GMT+5",
+                        @"GMT+6",
+                        @"GMT+7",
+                        @"GMT+8",
+                        @"GMT+9",
+                        @"GMT+10",
+                        @"GMT+11",
+                        @"GMT+12", nil];
+    
     [super viewDidLoad];
 }
 
@@ -368,6 +394,7 @@
     [recordIndicator release];
     [camera release];
     [theNewPassword release];
+    [arrTimeZoneTable release];
     [super dealloc];
 }
 
@@ -456,6 +483,15 @@
         cell = [[[UITableViewCell alloc]
                  initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:SectionTableIdentifier]
                 autorelease];
+        if (section == [self getTimeZoneSettingSectionIndex]) {
+            if (row==0) {
+                UISwitch *switchView = [[UISwitch alloc] initWithFrame:CGRectZero];
+                switchView.tag = 7000+row;
+                cell.accessoryView = switchView;
+                [switchView addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
+                [switchView release];
+            }
+        }
     }
     
     if (section == SECURITYCODE_SECTION_INDEX) {        
@@ -637,10 +673,11 @@
             [timezoneIndicator stopAnimating];
 			[timezoneIndicator removeFromSuperview];
             
-			text = [[NSString alloc] initWithFormat:@"%@ GMT %@%d:%02d", camera.strTimeZone, (camera.nGMTDiff>=0)?@"+":@"", camera.nGMTDiff/60, abs(camera.nGMTDiff%60)];
+			text = [[NSString alloc] initWithFormat:@"GMT%@%d%@", (camera.nGMTDiff>0)?@"+":@"",camera.nGMTDiff, summerTime? NSLocalizedString(@"(DST)", @""):NSLocalizedString(@"(Standard time)", @"")];
 			
 			[cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
 			[cell setSelectionStyle:UITableViewCellSelectionStyleBlue];
+            [(UISwitch *)cell.accessoryView setOn:summerTime? YES:NO animated:YES];
         }
         
         cell.textLabel.text = [NSString stringWithString:NSLocalizedString(@"Time Zone", @"")];
@@ -889,6 +926,12 @@
     
     UISwitch *check = (UISwitch*)sender;
     
+    if (check.tag-7000==0) {
+        summerTime = check.on;
+        [self.tableView reloadData];
+    }
+    return;
+    
     if ( check.isOn ) {
         bIsSync = YES;
         
@@ -1012,11 +1055,22 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 		if( row == 0 ) {			
 			NSLog( @"Hi clicked!!!" );
 			if( !isWaitingForSetTimeZoneResp ) {
-				TimeZoneListController *viewController = [[TimeZoneListController alloc] initWithStyle:UITableViewStylePlain];
+				/*TimeZoneListController *viewController = [[TimeZoneListController alloc] initWithStyle:UITableViewStylePlain];
 				viewController.mTimeZoneChangedDelegate = self;
 				[viewController setCurrentTimeZone:camera.strTimeZone tzGMTDiff_In_Mins:camera.nGMTDiff];
 				[self.navigationController pushViewController:viewController animated:YES];
-				[viewController release];
+				[viewController release];*/
+                self.navigationItem.title = NSLocalizedString(@"Cancel", @"");
+                int nSelIndex = [self getSelIdxIn:arrTimeZoneTable compareString:camera.strTimeZone];
+                
+                if( nSelIndex == -1 ) {
+                    nSelIndex = camera.nGMTDiff + 11;
+                }
+                
+                ChooseViewController *controller = [[ChooseViewController alloc] initWithStyle:UITableViewStyleGrouped];
+                [controller init:1234 delegate:self selectedIndex:nSelIndex itemsArray:arrTimeZoneTable];
+                [self.navigationController pushViewController:controller animated:YES];
+                [controller release];
 			}
 			else {
 				[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -1110,6 +1164,35 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 	nLastSelSection = section;
 	nLastSelRow = row;
 }
+- (int)getSelIdxIn:(NSArray*)table compareString:(NSString*)strValue
+{
+    int index = 0;
+    for( NSString* see in table ) {
+        if( [see isEqualToString:strValue] ) {
+            
+            return index;
+        }
+        
+        index++;
+    }
+    
+    return -1;
+}
+#pragma mark - ChooseDelegate
+
+- (void)didSelected:(int)nTag selectedIndex:(int)nSel itemsArray:(NSArray*)arrItems
+{
+    if( nTag == 1234 ) {
+        
+        int nGMTDiff_In_Mins = (nSel - 11);
+        
+        camera.strTimeZone = [arrTimeZoneTable objectAtIndex:nSel];
+        camera.nGMTDiff = nGMTDiff_In_Mins;
+        
+        [self.tableView reloadData];
+        [self onTimeZoneChanged:[arrTimeZoneTable objectAtIndex:nSel] tzGMTDiff_In_Mins:nGMTDiff_In_Mins];
+    }
+}
 
 #pragma mark - MyCameraDelegate Methods
 - (void)camera:(MyCamera *)camera_ _didReceiveIOCtrlWithType:(NSInteger)type Data:(const char *)data DataSize:(NSInteger)size {
@@ -1121,8 +1204,28 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 				break;
 			}
 		}
+        if(type == IOTYPE_USER_IPCAM_GET_TIMEZONE_RESP_EXT) {
+            NSLog( @">>>> IOTYPE_USER_IPCAM_GET_TIMEZONE_RESP_EXT" );
+            SMsgAVIoctrlTimeZoneExt *s = (SMsgAVIoctrlTimeZoneExt *)data;
+            camera.strTimeZone = [[NSString stringWithFormat:@"%s", s->szTimeZoneString] copy];
+            camera.nGMTDiff = s->nGMTDiff;
+            summerTime  = s->dst_on;
+            
+            //utcTime = utcTime + camera.nGMTDiff*60*60 + (summerTime? 1*60*60:0);
+            
+            isWaitingForSetTimeZoneResp = FALSE;
+            [self.tableView reloadData];
+        }
+        else if( type == IOTYPE_USER_IPCAM_SET_TIMEZONE_RESP_EXT ) {
+            SMsgAVIoctrlTimeZoneExt *s = (SMsgAVIoctrlTimeZoneExt *)data;
+            NSLog(@"TIMEZONEOFFSET:%d",s->nGMTDiff);
+            
+            isWaitingForSetTimeZoneResp = FALSE;
+            [self.tableView reloadData];
+            
+        }
         
-        if (type == IOTYPE_USER_IPCAM_GETSTREAMCTRL_RESP) {
+        else if (type == IOTYPE_USER_IPCAM_GETSTREAMCTRL_RESP) {
             
             SMsgAVIoctrlGetStreamCtrlResp *s = (SMsgAVIoctrlGetStreamCtrlResp*)data;
             videoQuality = s->quality;
@@ -1143,7 +1246,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
                         
             [self.tableView reloadData];
         }
-		else if(type == (int)IOTYPE_USER_IPCAM_GET_TIMEZONE_RESP) {
+		/*else if(type == (int)IOTYPE_USER_IPCAM_GET_TIMEZONE_RESP) {
 			isWaitingForSetTimeZoneResp = FALSE;
 			[self.tableView reloadData];
 		}
@@ -1159,7 +1262,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 			[self.tableView reloadData];
 			[timerTimeZoneTimeOut invalidate];
 			[timerTimeZoneTimeOut release];
-		}
+		}*/
         else if (type == IOTYPE_USER_IPCAM_LISTWIFIAP_RESP) {
             if( bTimerListWifiApResp ) {
 				[self.timerListWifiApResp invalidate];
@@ -1282,22 +1385,27 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 #pragma mark - TimeZoneChangedDelegate Methods
 - (void) onTimeZoneChanged:(NSString*)tszTimeZone tzGMTDiff_In_Mins:(int)nGMTDiff_In_Mins {
     
-	mIoCtrlData_SetTimeZoneBefore.cbSize = sizeof(mIoCtrlData_SetTimeZoneBefore);
+	/*mIoCtrlData_SetTimeZoneBefore.cbSize = sizeof(mIoCtrlData_SetTimeZoneBefore);
 	mIoCtrlData_SetTimeZoneBefore.nIsSupportTimeZone = 1;
 	mIoCtrlData_SetTimeZoneBefore.nGMTDiff = camera.nGMTDiff;
-	strcpy( mIoCtrlData_SetTimeZoneBefore.szTimeZoneString, [camera.strTimeZone UTF8String] );
+	strcpy( mIoCtrlData_SetTimeZoneBefore.szTimeZoneString, [camera.strTimeZone UTF8String] );*/
+    
+    NSDate* now =  [NSDate date];
+    long utcTime_now = (long)[now timeIntervalSince1970];
 	
-	SMsgAVIoctrlTimeZone setTimeZone;
-	setTimeZone.cbSize = sizeof(setTimeZone);
-	setTimeZone.nIsSupportTimeZone = 1;
-	setTimeZone.nGMTDiff = nGMTDiff_In_Mins;
-	strcpy( setTimeZone.szTimeZoneString, [tszTimeZone UTF8String] );
-
-	NSLog( @"<<< recv IOTYPE_USER_IPCAM_SET_TIMEZONE_REQ\n\tnIsSupportTimeZone: %d\n\tnGMTDiff: %d\n\tszTimeZoneString: %s\n---- Rise timer ----", setTimeZone.nIsSupportTimeZone, setTimeZone.nGMTDiff, setTimeZone.szTimeZoneString );
-	[camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_SET_TIMEZONE_REQ Data:(char *)&setTimeZone DataSize:sizeof(setTimeZone)];
+    SMsgAVIoctrlTimeZoneExt setTimeZone;
+    setTimeZone.cbSize = sizeof(setTimeZone);
+    setTimeZone.nIsSupportTimeZone = 1;
+    setTimeZone.nGMTDiff = nGMTDiff_In_Mins;
+    setTimeZone.local_utc_time = utcTime_now + nGMTDiff_In_Mins*60*60;
+    strcpy( setTimeZone.szTimeZoneString, [tszTimeZone UTF8String] );
+     setTimeZone.dst_on = (summerTime)? 1 : 0;
+    
+    NSLog( @"<<< recv IOTYPE_USER_IPCAM_SET_TIMEZONE_REQ_EXT\n\tnIsSupportTimeZone: %d\n\tnGMTDiff: %d\n\tszTimeZoneString: %s\n---- Rise timer ----", setTimeZone.nIsSupportTimeZone, setTimeZone.nGMTDiff, setTimeZone.szTimeZoneString );
+    [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_SET_TIMEZONE_REQ_EXT Data:(char *)&setTimeZone DataSize:sizeof(setTimeZone)];
 	
 	isWaitingForSetTimeZoneResp = TRUE;
-	timerTimeZoneTimeOut = [[NSTimer scheduledTimerWithTimeInterval:12.0 target:self selector:@selector(timeoutSetTimeZoneResp:) userInfo:nil repeats:NO] retain];
+	//timerTimeZoneTimeOut = [[NSTimer scheduledTimerWithTimeInterval:12.0 target:self selector:@selector(timeoutSetTimeZoneResp:) userInfo:nil repeats:NO] retain];
 
     [self.tableView reloadData];
 }
@@ -1434,10 +1542,10 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     free(structEnvMode);
 	
 	// get TimeZone
-	isWaitingForSetTimeZoneResp = TRUE;
-	SMsgAVIoctrlTimeZone s3={0};
-	s3.cbSize = sizeof(s3);
-	[camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];
+    isWaitingForSetTimeZoneResp = TRUE;
+    SMsgAVIoctrlTimeZoneExt s3={0};
+    s3.cbSize = sizeof(s3);
+    [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ_EXT Data:(char *)&s3 DataSize:sizeof(s3)];
     
 
     // get MotionDetection info

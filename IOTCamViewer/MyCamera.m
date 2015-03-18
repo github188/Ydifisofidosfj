@@ -180,8 +180,8 @@ BOOL g_bDiagnostic = FALSE;
 
 - (void)start:(NSInteger)channel
 {
-	//bIsSupportTimeZone = 1;
-	//nGMTDiff = 8*60;
+	bIsSupportTimeZone = 1;
+	nGMTDiff = 8*60;
 	strTimeZone = [[NSString alloc] init];
 	
     [super start:channel viewAccount:viewAcc viewPassword:viewPwd is_playback:FALSE];
@@ -195,8 +195,8 @@ BOOL g_bDiagnostic = FALSE;
 
 - (void)start4EventPlayback:(NSInteger)channel
 {
-	//bIsSupportTimeZone = 1;
-	//nGMTDiff = 8*60;
+	bIsSupportTimeZone = 1;
+	nGMTDiff = 8*60;
 	strTimeZone = [[NSString alloc] init];
 	
     [super start:channel viewAccount:viewAcc viewPassword:viewPwd is_playback:TRUE];
