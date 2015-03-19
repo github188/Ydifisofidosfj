@@ -682,7 +682,18 @@ extern unsigned int _getTickCount() {
 #endif
 
 - (IBAction)back:(id)sender
-{    
+{
+    
+    if (self.interfaceOrientation == UIInterfaceOrientationLandscapeLeft ||
+        self.interfaceOrientation == UIInterfaceOrientationLandscapeRight) {
+        //强制竖屏
+        if([[UIDevice currentDevice]respondsToSelector:@selector(setOrientation:)]) {
+            [[UIDevice currentDevice]performSelector:@selector(setOrientation:)
+                                          withObject:(id)UIInterfaceOrientationPortrait];
+        }
+        return;
+    }
+    
     /* save last frame to local storage */
     unsigned int codec_id = mCodecId;
     NSString *imgName = [NSString stringWithFormat:@"%@.jpg", camera.uid];
@@ -2420,6 +2431,8 @@ extern unsigned int _getTickCount() {
         UIScrollView *_scrollView = (UIScrollView *)gestureRecognizer.view;
         [_scrollView setScrollEnabled:NO];
         
+
+        
         // Re-enable scroll after navigation hidden.
         double delayInSeconds = UINavigationControllerHideShowBarDuration;
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
@@ -2433,6 +2446,8 @@ extern unsigned int _getTickCount() {
         BOOL hidden = self.longHorizMenu.hidden;
         
         [self.longHorizMenu setHidden:!hidden];
+        [[UIApplication sharedApplication] setStatusBarHidden:!hidden withAnimation:UIStatusBarAnimationNone];
+        [self.navigationController setNavigationBarHidden:!hidden animated:YES];
         
         if (hidden) {
             self.hideToolBarTimer = [self setupHideToolBarTimer];
@@ -2449,6 +2464,8 @@ extern unsigned int _getTickCount() {
 - (void)hideToolBar {
 	if (self.longHorizMenu.hidden == NO && isActive == NO) {
         [self.longHorizMenu setHidden:YES];
+        [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
 	}
 }
 
