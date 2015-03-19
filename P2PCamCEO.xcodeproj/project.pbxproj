@@ -4312,7 +4312,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "Aztech IP Cam";
-				PROVISIONING_PROFILE = "5dd67c88-dca3-499e-b294-d7ff1a0e60ae";
+				PROVISIONING_PROFILE = "a836dd49-f13f-4b8e-8426-611952c0562e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s";
@@ -4347,7 +4347,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "Aztech IP Cam";
-				PROVISIONING_PROFILE = "5dd67c88-dca3-499e-b294-d7ff1a0e60ae";
+				PROVISIONING_PROFILE = "a836dd49-f13f-4b8e-8426-611952c0562e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s";
@@ -4382,7 +4382,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "Aztech IP Cam";
-				PROVISIONING_PROFILE = "5dd67c88-dca3-499e-b294-d7ff1a0e60ae";
+				PROVISIONING_PROFILE = "a836dd49-f13f-4b8e-8426-611952c0562e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s";
@@ -4416,7 +4416,7 @@
 					"-DP2PCAMLIVE",
 				);
 				PRODUCT_NAME = "Aztech IP Cam";
-				PROVISIONING_PROFILE = "5dd67c88-dca3-499e-b294-d7ff1a0e60ae";
+				PROVISIONING_PROFILE = "a836dd49-f13f-4b8e-8426-611952c0562e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s";

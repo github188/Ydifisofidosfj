@@ -152,6 +152,8 @@ extern NSString *deviceTokenString;
     BOOL isMyRationed;
     
     char emode;
+    
+    BOOL isHiddenTopNav;
 }
 
 //for Recording

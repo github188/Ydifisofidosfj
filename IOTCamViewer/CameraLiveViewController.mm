@@ -853,15 +853,18 @@ extern unsigned int _getTickCount() {
 			[self.scrollViewLandscape bringSubviewToFront:/*monitorLandscape*/self.glView];
 		}
 		
-        [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
+        [[UIApplication sharedApplication] setStatusBarHidden:isHiddenTopNav withAnimation:UIStatusBarAnimationNone];
         
         if ([self respondsToSelector:@selector(setNeedsStatusBarAppearanceUpdate)]) {
             [self setNeedsStatusBarAppearanceUpdate];
         }
         
-        [self.navigationController setNavigationBarHidden:YES animated:NO];
+        [self.navigationController setNavigationBarHidden:isHiddenTopNav animated:NO];
     }
     else {
+        
+        isHiddenTopNav=YES;
+        
         [monitorLandscape deattachCamera];
         [monitorPortrait attachCamera:camera];
         
@@ -2444,10 +2447,11 @@ extern unsigned int _getTickCount() {
         self.hideToolBarTimer = nil;
         
         BOOL hidden = self.longHorizMenu.hidden;
+        isHiddenTopNav=!hidden;
         
         [self.longHorizMenu setHidden:!hidden];
-        [[UIApplication sharedApplication] setStatusBarHidden:!hidden withAnimation:UIStatusBarAnimationNone];
-        [self.navigationController setNavigationBarHidden:!hidden animated:YES];
+        [[UIApplication sharedApplication] setStatusBarHidden:isHiddenTopNav withAnimation:UIStatusBarAnimationNone];
+        [self.navigationController setNavigationBarHidden:isHiddenTopNav animated:YES];
         
         if (hidden) {
             self.hideToolBarTimer = [self setupHideToolBarTimer];
@@ -2464,8 +2468,9 @@ extern unsigned int _getTickCount() {
 - (void)hideToolBar {
 	if (self.longHorizMenu.hidden == NO && isActive == NO) {
         [self.longHorizMenu setHidden:YES];
-        [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
-        [self.navigationController setNavigationBarHidden:YES animated:YES];
+        isHiddenTopNav=YES;
+        [[UIApplication sharedApplication] setStatusBarHidden:isHiddenTopNav withAnimation:UIStatusBarAnimationNone];
+        [self.navigationController setNavigationBarHidden:isHiddenTopNav animated:YES];
 	}
 }
 
