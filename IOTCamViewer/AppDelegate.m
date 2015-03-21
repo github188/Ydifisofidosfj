@@ -284,9 +284,17 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
     [self openDatabase];
     [self createTable];
          
-    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound];
-		 
-    application.applicationIconBadgeNumber = 0;
+    //注册推送通知
+    if([[[UIDevice currentDevice]systemVersion] floatValue]>=8.0f){
+        [[UIApplication sharedApplication]registerForRemoteNotifications];
+        UIUserNotificationSettings *setting=[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeSound|UIUserNotificationTypeBadge categories:nil];
+        [application registerUserNotificationSettings:setting];
+        application.applicationIconBadgeNumber = 0;
+    }
+    else{
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound|UIRemoteNotificationTypeBadge];
+        application.applicationIconBadgeNumber = 0;
+    }
 		 
     camera_list = [[NSMutableArray alloc] init];
 		 
@@ -792,6 +800,15 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
     }
     
     NSLog(@"didReceiveRemoteNotification:event:%d from uid:%@ at %d", eventType, uid, eventTime);
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    localNotification.soundName = UILocalNotificationDefaultSoundName;
+    localNotification.alertBody = [[userInfo objectForKey:@"aps"] objectForKey:@"alert"];;
+    localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:5];
+    localNotification.timeZone=[NSTimeZone defaultTimeZone];
+    localNotification.userInfo=userInfo;
+    localNotification.applicationIconBadgeNumber+=1;
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    [localNotification release];
 }
 
 @end
