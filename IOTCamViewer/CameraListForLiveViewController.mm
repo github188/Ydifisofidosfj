@@ -18,6 +18,9 @@
 #import "AddCameraController.h"
 #import "CheckViewController.h"
 #import "CameraMultiLiveViewController.h"
+#if defined(EasynPTarget)
+#import "AddWithApCameraController.h"
+#endif
 
 @implementation CameraListForLiveViewController
 
@@ -87,13 +90,22 @@
     [userDefaults setInteger:0 forKey:@"wifiSetting"];
     [userDefaults synchronize];
     
+    
+#if defined(EasynPTarget)
+    AddWithApCameraController *addController=[[AddWithApCameraController alloc]initWithNibName:@"AddWithApCameraController" bundle:nil];
+    [self.navigationController pushViewController:addController animated:YES];
+    [addController release];
+#else
+    
+    
     AddCameraDetailController *controller = [[AddCameraDetailController alloc] initWithNibName:@"AddCameraDetail" bundle:nil delegate:[[self.navigationController viewControllers] objectAtIndex:0]];
     [self.navigationController pushViewController:controller animated:YES];
     [controller release];
 
-    //CheckViewController *controller = [[CheckViewController alloc] initWithNibName:@"CheckView" bundle:nil];
-    //[self.navigationController pushViewController:controller animated:YES];
-    //[controller release];
+    /*CheckViewController *controller = [[CheckViewController alloc] initWithNibName:@"CheckView" bundle:nil];
+    [self.navigationController pushViewController:controller animated:YES];
+    [controller release];*/
+#endif
 
 }
 

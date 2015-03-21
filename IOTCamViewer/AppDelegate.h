@@ -63,4 +63,5 @@ typedef struct tagOpenUrlCmdStore
 
 + (NSString *) pathForDocumentsResource:(NSString *) relativePath;
 - (void) urlCommandDone;
+-(id)fetchSSIDInfo;
 @end

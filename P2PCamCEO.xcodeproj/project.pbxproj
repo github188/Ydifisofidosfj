@@ -45,6 +45,13 @@
 		0647DD321AB87C4C00F5553A /* myright@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0647DD2A1AB87C4C00F5553A /* myright@2x.png */; };
 		0647DD331AB87C4C00F5553A /* myup1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0647DD2B1AB87C4C00F5553A /* myup1@2x.png */; };
 		0647DD341AB87C4C00F5553A /* myup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0647DD2C1AB87C4C00F5553A /* myup@2x.png */; };
+		068879331ABE18B70017A41A /* AddWithApCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 068879311ABE18B70017A41A /* AddWithApCameraController.m */; };
+		068879341ABE18B70017A41A /* AddWithApCameraController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 068879321ABE18B70017A41A /* AddWithApCameraController.xib */; };
+		068879371ABE1B900017A41A /* easyn.strings in Resources */ = {isa = PBXBuildFile; fileRef = 068879391ABE1B900017A41A /* easyn.strings */; };
+		0688793F1ABE204E0017A41A /* AddWithApCamera1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0688793D1ABE204E0017A41A /* AddWithApCamera1Controller.m */; };
+		068879401ABE204E0017A41A /* AddWithApCamera1Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0688793E1ABE204E0017A41A /* AddWithApCamera1Controller.xib */; };
+		0688794E1ABE2C4D0017A41A /* AddWithApCamera2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0688794C1ABE2C4D0017A41A /* AddWithApCamera2Controller.m */; };
+		0688794F1ABE2C4D0017A41A /* AddWithApCamera2Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0688794D1ABE2C4D0017A41A /* AddWithApCamera2Controller.xib */; };
 		06F425F71AA9FB6500427383 /* AppGuidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F425F51AA9FB6500427383 /* AppGuidViewController.m */; };
 		06F425F81AA9FB6500427383 /* AppGuidViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F425F61AA9FB6500427383 /* AppGuidViewController.xib */; };
 		06F426011AAA008200427383 /* page1_cn.png in Resources */ = {isa = PBXBuildFile; fileRef = 06F425F91AAA008200427383 /* page1_cn.png */; };
@@ -1158,6 +1165,18 @@
 		0647DD2A1AB87C4C00F5553A /* myright@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myright@2x.png"; sourceTree = "<group>"; };
 		0647DD2B1AB87C4C00F5553A /* myup1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myup1@2x.png"; sourceTree = "<group>"; };
 		0647DD2C1AB87C4C00F5553A /* myup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myup@2x.png"; sourceTree = "<group>"; };
+		068879301ABE18B70017A41A /* AddWithApCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddWithApCameraController.h; sourceTree = "<group>"; };
+		068879311ABE18B70017A41A /* AddWithApCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddWithApCameraController.m; sourceTree = "<group>"; };
+		068879321ABE18B70017A41A /* AddWithApCameraController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddWithApCameraController.xib; sourceTree = "<group>"; };
+		068879381ABE1B900017A41A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/easyn.strings; sourceTree = "<group>"; };
+		0688793A1ABE1B9C0017A41A /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/easyn.strings"; sourceTree = "<group>"; };
+		0688793B1ABE1B9D0017A41A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/easyn.strings"; sourceTree = "<group>"; };
+		0688793C1ABE204E0017A41A /* AddWithApCamera1Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddWithApCamera1Controller.h; sourceTree = "<group>"; };
+		0688793D1ABE204E0017A41A /* AddWithApCamera1Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddWithApCamera1Controller.m; sourceTree = "<group>"; };
+		0688793E1ABE204E0017A41A /* AddWithApCamera1Controller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddWithApCamera1Controller.xib; sourceTree = "<group>"; };
+		0688794B1ABE2C4D0017A41A /* AddWithApCamera2Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddWithApCamera2Controller.h; sourceTree = "<group>"; };
+		0688794C1ABE2C4D0017A41A /* AddWithApCamera2Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddWithApCamera2Controller.m; sourceTree = "<group>"; };
+		0688794D1ABE2C4D0017A41A /* AddWithApCamera2Controller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddWithApCamera2Controller.xib; sourceTree = "<group>"; };
 		06F425F41AA9FB6500427383 /* AppGuidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGuidViewController.h; sourceTree = "<group>"; };
 		06F425F51AA9FB6500427383 /* AppGuidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGuidViewController.m; sourceTree = "<group>"; };
 		06F425F61AA9FB6500427383 /* AppGuidViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppGuidViewController.xib; sourceTree = "<group>"; };
@@ -1979,6 +1998,7 @@
 				06F770631AB7215F00901EBA /* EasyN P-Info.plist */,
 				06F770651AB7229300901EBA /* Images.xcassets */,
 				06F770671AB7230400901EBA /* InfoPlist.strings */,
+				068879391ABE1B900017A41A /* easyn.strings */,
 			);
 			path = EasyNP;
 			sourceTree = "<group>";
@@ -2676,6 +2696,15 @@
 				06F425F41AA9FB6500427383 /* AppGuidViewController.h */,
 				06F425F51AA9FB6500427383 /* AppGuidViewController.m */,
 				06F425F61AA9FB6500427383 /* AppGuidViewController.xib */,
+				068879301ABE18B70017A41A /* AddWithApCameraController.h */,
+				068879311ABE18B70017A41A /* AddWithApCameraController.m */,
+				068879321ABE18B70017A41A /* AddWithApCameraController.xib */,
+				0688793C1ABE204E0017A41A /* AddWithApCamera1Controller.h */,
+				0688793D1ABE204E0017A41A /* AddWithApCamera1Controller.m */,
+				0688793E1ABE204E0017A41A /* AddWithApCamera1Controller.xib */,
+				0688794B1ABE2C4D0017A41A /* AddWithApCamera2Controller.h */,
+				0688794C1ABE2C4D0017A41A /* AddWithApCamera2Controller.m */,
+				0688794D1ABE2C4D0017A41A /* AddWithApCamera2Controller.xib */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -3096,6 +3125,7 @@
 				06F76F071AB720A100901EBA /* ceo_rcplay_line_h.png in Resources */,
 				06F76F081AB720A100901EBA /* info@2x.png in Resources */,
 				06F76F091AB720A100901EBA /* add_newinfo.png in Resources */,
+				068879401ABE204E0017A41A /* AddWithApCamera1Controller.xib in Resources */,
 				06F76F0A1AB720A100901EBA /* add_newinfo.png in Resources */,
 				06F76F0B1AB720A100901EBA /* lan.png in Resources */,
 				06F76F0C1AB720A100901EBA /* drop_unlink_clicked@2x.png in Resources */,
@@ -3152,6 +3182,7 @@
 				06F76F3F1AB720A100901EBA /* add_camicon.png in Resources */,
 				06F76F401AB720A100901EBA /* more_photo@2x.png in Resources */,
 				06F76F411AB720A100901EBA /* leo_speaker_off_clicked.png in Resources */,
+				068879371ABE1B900017A41A /* easyn.strings in Resources */,
 				06F76F431AB720A100901EBA /* add_web_clicked.png in Resources */,
 				06F76F441AB720A100901EBA /* leo_emode_clicked.png in Resources */,
 				06F76F451AB720A100901EBA /* leo_mirror_rl_disable.png in Resources */,
@@ -3167,6 +3198,7 @@
 				06F76F4F1AB720A100901EBA /* toolinfo_bk.png in Resources */,
 				06F76F501AB720A100901EBA /* popoverArrowRight@2x.png in Resources */,
 				06F76F511AB720A100901EBA /* qualitylist.png in Resources */,
+				0688794F1ABE2C4D0017A41A /* AddWithApCamera2Controller.xib in Resources */,
 				06F76F521AB720A100901EBA /* add_wifi3@2x.png in Resources */,
 				06F76F531AB720A100901EBA /* login_btn@2x.png in Resources */,
 				06F76F541AB720A100901EBA /* add_wifi3_bk.png in Resources */,
@@ -3329,6 +3361,7 @@
 				06F76FF01AB720A100901EBA /* drop_refresh_clicked@2x.png in Resources */,
 				0647DD301AB87C4C00F5553A /* myleft@2x.png in Resources */,
 				06F76FF11AB720A100901EBA /* moreset_listm_clicked@2x.png in Resources */,
+				068879341ABE18B70017A41A /* AddWithApCameraController.xib in Resources */,
 				06F76FF21AB720A100901EBA /* NoPhotoAvailable.png in Resources */,
 				0647DD341AB87C4C00F5553A /* myup@2x.png in Resources */,
 				06F76FF31AB720A100901EBA /* login_btn.png in Resources */,
@@ -3843,6 +3876,7 @@
 				06F76E3B1AB720A100901EBA /* UIView+View.m in Sources */,
 				06F76E3C1AB720A100901EBA /* AddCameraDetailController.mm in Sources */,
 				06F76E3D1AB720A100901EBA /* UITableView+TableView.m in Sources */,
+				0688793F1ABE204E0017A41A /* AddWithApCamera1Controller.m in Sources */,
 				06F76E3E1AB720A100901EBA /* UIDevice+Device.m in Sources */,
 				06F76E3F1AB720A100901EBA /* LANSearchController.m in Sources */,
 				06F76E401AB720A100901EBA /* LANSearchDevice.m in Sources */,
@@ -3900,6 +3934,7 @@
 				06F76E731AB720A100901EBA /* WEPopoverContainerView.m in Sources */,
 				06F76E741AB720A100901EBA /* UIImage+Resize.m in Sources */,
 				06F76E751AB720A100901EBA /* WEPopoverController.m in Sources */,
+				0688794E1ABE2C4D0017A41A /* AddWithApCamera2Controller.m in Sources */,
 				06F76E761AB720A100901EBA /* UISearchBar+SearchBar.m in Sources */,
 				06F76E771AB720A100901EBA /* UIDevice+Version.m in Sources */,
 				06F76E781AB720A100901EBA /* UIButton+GradientColorButton.m in Sources */,
@@ -3916,6 +3951,7 @@
 				06F76E831AB720A100901EBA /* CheckNetwork.m in Sources */,
 				06F76E841AB720A100901EBA /* Reachability.m in Sources */,
 				06F76E851AB720A100901EBA /* AudioPickerContentController.m in Sources */,
+				068879331ABE18B70017A41A /* AddWithApCameraController.m in Sources */,
 				06F76E861AB720A100901EBA /* DDBadgeViewCell.m in Sources */,
 				06F76E871AB720A100901EBA /* UIBarButtonItem+BarButtonItem.m in Sources */,
 				06F76E881AB720A100901EBA /* CameraMultiLiveViewController.mm in Sources */,
@@ -4097,6 +4133,16 @@
 			name = "title_logo@2x.png";
 			sourceTree = "<group>";
 		};
+		068879391ABE1B900017A41A /* easyn.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				068879381ABE1B900017A41A /* en */,
+				0688793A1ABE1B9C0017A41A /* zh-Hant */,
+				0688793B1ABE1B9D0017A41A /* zh-Hans */,
+			);
+			name = easyn.strings;
+			sourceTree = "<group>";
+		};
 		61082AF31531CE4200DDF07D /* mainWindow.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -4161,6 +4207,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = EasynPTarget;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "EasyNP/EasyN P-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -4195,6 +4242,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = EasynPTarget;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "EasyNP/EasyN P-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -4230,6 +4278,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = EasynPTarget;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "EasyNP/EasyN P-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -4265,6 +4314,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = EasynPTarget;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "EasyNP/EasyN P-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
