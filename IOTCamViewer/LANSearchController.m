@@ -166,8 +166,8 @@
     
     NSUInteger row = [indexPath row];    
     LANSearchDevice *dev = [searchResult objectAtIndex:row];
-    [self.delegate didSelectUID:dev.uid];
     [self.navigationController popViewControllerAnimated:YES];
+    [self.delegate didSelectUID:dev.uid];
 }
 
 @end

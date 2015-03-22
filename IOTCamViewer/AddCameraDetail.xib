@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddCameraDetailController">
@@ -12,7 +12,10 @@
                 <outlet property="cancel" destination="jIP-f2-jlW" id="b0b-2i-hIe"/>
                 <outlet property="checkView" destination="sPk-6P-h8K" id="AIo-xV-7Sq"/>
                 <outlet property="lanSearch" destination="DDi-8b-Vjq" id="r9k-l5-2Ef"/>
+                <outlet property="lansBtn" destination="9HO-So-db1" id="lsi-JZ-UUa"/>
                 <outlet property="noWiFiSetting" destination="uQE-KG-4Eh" id="UGO-kX-nSX"/>
+                <outlet property="qrBtn" destination="UmA-ag-Dec" id="y8f-JI-nOi"/>
+                <outlet property="qrLbl" destination="SYw-Jm-VTJ" id="1Qf-NX-8vR"/>
                 <outlet property="syncButton" destination="dyV-vZ-bKm" id="Cyq-ww-pgq"/>
                 <outlet property="syncLabel" destination="9Fj-Jd-zOm" id="rla-0y-nHl"/>
                 <outlet property="tableView" destination="6" id="14"/>
@@ -42,7 +45,7 @@
                         <outlet property="delegate" destination="-1" id="10"/>
                     </connections>
                 </tableView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_camicon.png" id="DXb-vE-dgS">
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_camicon.png" id="DXb-vE-dgS">
                     <rect key="frame" x="20" y="41" width="61" height="61"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>

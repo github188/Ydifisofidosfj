@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LANSearchController.h"
 
-@interface AddWithApCamera2Controller : UIViewController<UIAlertViewDelegate>
+@interface AddWithApCamera2Controller : UIViewController<UIAlertViewDelegate,LANSearchDelegate>
 
 @property (retain, nonatomic) IBOutlet UILabel *ssidLbl;
 @property (retain, nonatomic) IBOutlet UILabel *psdLbl;

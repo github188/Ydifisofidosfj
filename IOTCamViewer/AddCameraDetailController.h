@@ -62,6 +62,7 @@ extern FMDatabase *database;
 @property (copy) NSString *ssid;
 @property (copy) NSString *name;
 @property (nonatomic, assign) id<AddCameraDelegate> delegate;
+@property(nonatomic) BOOL isFromAutoWifi;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil delegate:(id<AddCameraDelegate>)delegate;
 - (IBAction)cancel:(id)sender;
@@ -72,5 +73,10 @@ extern FMDatabase *database;
 - (IBAction)scanQRCode:(id)sender;
 - (void)setNameFieldBecomeFirstResponder:(BOOL)value;
 - (void)setPasswordFieldBecomeFirstResponder:(BOOL)value;
+
+@property (retain, nonatomic) IBOutlet UIButton *qrBtn;
+@property (retain, nonatomic) IBOutlet UIButton *lansBtn;
+@property (retain, nonatomic) IBOutlet UILabel *qrLbl;
+
 
 @end

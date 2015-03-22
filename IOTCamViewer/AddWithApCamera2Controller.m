@@ -9,6 +9,7 @@
 #import "AddWithApCamera2Controller.h"
 #import "AppDelegate.h"
 #import "HiSmartLink.h"
+#import "AddCameraDetailController.h"
 
 @interface AddWithApCamera2Controller ()
 
@@ -111,6 +112,21 @@
         NSLog(@"%d",result);
         //返回搜索设备界面
         
+        LANSearchController *controller = [[LANSearchController alloc] init];
+        controller.delegate = self;
+        [self.navigationController pushViewController:controller animated:YES];
+        [controller release];
+        
     }
 }
+
+#pragma mark --LANSearchControllerDelegate
+- (void) didSelectUID:(NSString *)selectedUid{
+    AddCameraDetailController *controller = [[AddCameraDetailController alloc] initWithNibName:@"AddCameraDetail" bundle:nil delegate:[[self.navigationController viewControllers] objectAtIndex:0]];
+    controller.uid=selectedUid;
+    controller.isFromAutoWifi=YES;
+    [self.navigationController pushViewController:controller animated:YES];
+    [controller release];
+}
+
 @end

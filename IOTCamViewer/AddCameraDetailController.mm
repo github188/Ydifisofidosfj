@@ -231,6 +231,10 @@
     [textFieldName release];
     [textFieldUID release];
     [textFieldPassword release];
+    [_qrBtn release];
+    [_lansBtn release];
+    [_qrLbl release];
+    [lanSearch release];
     [super dealloc];
 }
 
@@ -256,14 +260,35 @@
     } else {
         syncLabel.text = NSLocalizedString(@"Add device to your cloud account", @"");
     }
+    if(self.isFromAutoWifi){
+        noWiFiSetting.hidden=YES;
+    }
     
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
+    self.qrBtn.hidden=self.isFromAutoWifi;
+    self.qrLbl.hidden=self.isFromAutoWifi;
+    self.lansBtn.hidden=self.isFromAutoWifi;
+    lanSearch.hidden=self.isFromAutoWifi;
     if (screenBounds.size.height == 480) {
-        self.tableView.height += 80;
-        self.tableView.y -= 20;
         checkView.y -= 84;
         syncButton.y -= 60;
         syncLabel.y -= 60;
+        if(self.isFromAutoWifi){
+            self.tableView.height += 122+80;
+            self.tableView.y=0;
+            [self.view bringSubviewToFront:self.tableView];
+        }
+        else{
+            self.tableView.height += 80;
+            self.tableView.y -= 20;
+        }
+    }
+    else{
+        if(self.isFromAutoWifi){
+            self.tableView.height +=122;
+            self.tableView.y = 0;
+            [self.view bringSubviewToFront:self.tableView];
+        }
     }
     
     NSArray *array = [[NSArray alloc] initWithObjects:NSLocalizedString(@"UID", @""), NSLocalizedString(@"Password", @""), NSLocalizedString(@"Name", @""), nil];
@@ -322,6 +347,8 @@
     [textFieldPassword addTarget:self action:@selector(textFieldDone:) 
         forControlEvents:UIControlEventEditingDidEndOnExit];
     */
+    
+    
     
     [super viewDidLoad];
 }
