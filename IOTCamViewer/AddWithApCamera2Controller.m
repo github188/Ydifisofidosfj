@@ -108,25 +108,45 @@
         const char *ssid=[self.ssidInput.text UTF8String];
         const char *psd=[self.psdInput.text UTF8String];
         NSLog(@"HiStartSmartConnection:%s,%s",ssid,psd);
-        int result = HiStartSmartConnection(ssid, psd);
-        NSLog(@"%d",result);
-        //返回搜索设备界面
         
-        LANSearchController *controller = [[LANSearchController alloc] init];
-        controller.delegate = self;
-        [self.navigationController pushViewController:controller animated:YES];
-        [controller release];
+        MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+        [self.navigationController.view addSubview:hud];
+        hud.detailsLabelText = @"正在配置WIFI,请耐心等待";
+        [hud show:YES];
+        [hud release];
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            int result=HiStartSmartConnection(ssid, psd);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [hud hide:YES];
+                [hud removeFromSuperview];
+                if(result==0){
+                    //返回搜索设备界面
+                    LANSearchController *controller = [[LANSearchController alloc] init];
+                    controller.delegate = self;
+                    [self.navigationController pushViewController:controller animated:YES];
+                    [controller release];
+                }
+                else{
+                    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"提示" message:@"连接WIFI失败，可能密码错误！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                    [alert show];
+                    [alert release];
+                }
+            });
+        });
         
     }
 }
 
 #pragma mark --LANSearchControllerDelegate
 - (void) didSelectUID:(NSString *)selectedUid{
+    
     AddCameraDetailController *controller = [[AddCameraDetailController alloc] initWithNibName:@"AddCameraDetail" bundle:nil delegate:[[self.navigationController viewControllers] objectAtIndex:0]];
     controller.uid=selectedUid;
     controller.isFromAutoWifi=YES;
     [self.navigationController pushViewController:controller animated:YES];
     [controller release];
+    
 }
 
 @end

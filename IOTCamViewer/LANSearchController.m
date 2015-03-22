@@ -118,6 +118,7 @@
     
     [tableView release];
     [searchResult release];
+    self.delegate=nil;
     [super dealloc];
 }
 

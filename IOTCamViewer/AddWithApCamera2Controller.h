@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "LANSearchController.h"
+#import "MBProgressHUD.h"
 
 @interface AddWithApCamera2Controller : UIViewController<UIAlertViewDelegate,LANSearchDelegate>
 
