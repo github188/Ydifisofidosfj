@@ -131,6 +131,7 @@
                     UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"提示" message:@"连接WIFI失败，可能密码错误！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
                     [alert show];
                     [alert release];
+                    HiStopSmartConnection();
                 }
             });
         });
