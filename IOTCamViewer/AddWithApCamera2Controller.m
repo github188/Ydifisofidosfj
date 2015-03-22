@@ -120,18 +120,27 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 [hud hide:YES];
                 [hud removeFromSuperview];
+                HiStopSmartConnection();
                 if(result==0){
-                    //返回搜索设备界面
-                    LANSearchController *controller = [[LANSearchController alloc] init];
-                    controller.delegate = self;
-                    [self.navigationController pushViewController:controller animated:YES];
-                    [controller release];
+                    MBProgressHUD *hud1 = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+                    [self.navigationController.view addSubview:hud1];
+                    hud1.detailsLabelText = @"正在配置WIFI,请耐心等待";
+                    [hud1 showAnimated:YES whileExecutingBlock:^{
+                        sleep(35);
+                    } completionBlock:^{
+                        [hud1 removeFromSuperview];
+                        [hud1 release];
+                        //返回搜索设备界面
+                        LANSearchController *controller = [[LANSearchController alloc] init];
+                        controller.delegate = self;
+                        [self.navigationController pushViewController:controller animated:YES];
+                        [controller release];
+                    }];
                 }
                 else{
                     UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"提示" message:@"连接WIFI失败，可能密码错误！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
                     [alert show];
                     [alert release];
-                    HiStopSmartConnection();
                 }
             });
         });
