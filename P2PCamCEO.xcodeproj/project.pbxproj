@@ -52,6 +52,7 @@
 		068879401ABE204E0017A41A /* AddWithApCamera1Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0688793E1ABE204E0017A41A /* AddWithApCamera1Controller.xib */; };
 		0688794E1ABE2C4D0017A41A /* AddWithApCamera2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0688794C1ABE2C4D0017A41A /* AddWithApCamera2Controller.m */; };
 		0688794F1ABE2C4D0017A41A /* AddWithApCamera2Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0688794D1ABE2C4D0017A41A /* AddWithApCamera2Controller.xib */; };
+		0688795C1ABEAE230017A41A /* libHISmartWifi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0688795B1ABEAE230017A41A /* libHISmartWifi.a */; };
 		06F425F71AA9FB6500427383 /* AppGuidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F425F51AA9FB6500427383 /* AppGuidViewController.m */; };
 		06F425F81AA9FB6500427383 /* AppGuidViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F425F61AA9FB6500427383 /* AppGuidViewController.xib */; };
 		06F426011AAA008200427383 /* page1_cn.png in Resources */ = {isa = PBXBuildFile; fileRef = 06F425F91AAA008200427383 /* page1_cn.png */; };
@@ -1177,6 +1178,8 @@
 		0688794B1ABE2C4D0017A41A /* AddWithApCamera2Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddWithApCamera2Controller.h; sourceTree = "<group>"; };
 		0688794C1ABE2C4D0017A41A /* AddWithApCamera2Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddWithApCamera2Controller.m; sourceTree = "<group>"; };
 		0688794D1ABE2C4D0017A41A /* AddWithApCamera2Controller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddWithApCamera2Controller.xib; sourceTree = "<group>"; };
+		068879591ABEAE230017A41A /* HiSmartLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HiSmartLink.h; sourceTree = "<group>"; };
+		0688795B1ABEAE230017A41A /* libHISmartWifi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libHISmartWifi.a; sourceTree = "<group>"; };
 		06F425F41AA9FB6500427383 /* AppGuidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGuidViewController.h; sourceTree = "<group>"; };
 		06F425F51AA9FB6500427383 /* AppGuidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGuidViewController.m; sourceTree = "<group>"; };
 		06F425F61AA9FB6500427383 /* AppGuidViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppGuidViewController.xib; sourceTree = "<group>"; };
@@ -1882,6 +1885,7 @@
 				06F770561AB720A100901EBA /* libIOTCAPIs_ALL.a in Frameworks */,
 				06F770571AB720A100901EBA /* AVFoundation.framework in Frameworks */,
 				06F770581AB720A100901EBA /* UIKit.framework in Frameworks */,
+				0688795C1ABEAE230017A41A /* libHISmartWifi.a in Frameworks */,
 				06F770591AB720A100901EBA /* libZXingWidget.a in Frameworks */,
 				06F7705A1AB720A100901EBA /* IOTCamera.framework in Frameworks */,
 			);
@@ -1988,6 +1992,31 @@
 				0647DD2C1AB87C4C00F5553A /* myup@2x.png */,
 			);
 			path = aztechjt;
+			sourceTree = "<group>";
+		};
+		068879571ABEAE230017A41A /* HiSmartWifi */ = {
+			isa = PBXGroup;
+			children = (
+				068879581ABEAE230017A41A /* include */,
+				0688795A1ABEAE230017A41A /* lib */,
+			);
+			path = HiSmartWifi;
+			sourceTree = "<group>";
+		};
+		068879581ABEAE230017A41A /* include */ = {
+			isa = PBXGroup;
+			children = (
+				068879591ABEAE230017A41A /* HiSmartLink.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		0688795A1ABEAE230017A41A /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				0688795B1ABEAE230017A41A /* libHISmartWifi.a */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 		06F770621AB7215F00901EBA /* EasyNP */ = {
@@ -2852,6 +2881,7 @@
 		D8F71AA8148C5342007705B6 = {
 			isa = PBXGroup;
 			children = (
+				068879571ABEAE230017A41A /* HiSmartWifi */,
 				06F770621AB7215F00901EBA /* EasyNP */,
 				7AAF857419061DAB00A82745 /* Delux */,
 				D8F71ABD148C5342007705B6 /* P2PCam264 */,
@@ -4199,21 +4229,28 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IOTCamViewer/lib/Release-iphoneos",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = EasynPTarget;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				HEADER_SEARCH_PATHS = (
+					"zxing/iphone/ZXingWidget/Classes/**",
+					"$(PROJECT_DIR)/HiSmartWifi/include",
+					zxing/cpp/core/src,
+				);
 				INFOPLIST_FILE = "EasyNP/EasyN P-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/IOTCamViewer/lib/Debug-iphoneos\"",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = (
@@ -4221,7 +4258,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "e5eac230-3536-4288-9dc1-c66a447bceb9";
+				PROVISIONING_PROFILE = "34635538-5ed6-4358-b509-7087c42f2e6f";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s";
@@ -4234,21 +4271,28 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IOTCamViewer/lib/Release-iphoneos",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = EasynPTarget;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				HEADER_SEARCH_PATHS = (
+					"zxing/iphone/ZXingWidget/Classes/**",
+					"$(PROJECT_DIR)/HiSmartWifi/include",
+					zxing/cpp/core/src,
+				);
 				INFOPLIST_FILE = "EasyNP/EasyN P-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/IOTCamViewer/lib/Release-iphoneos\"",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = (
@@ -4257,7 +4301,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "e5eac230-3536-4288-9dc1-c66a447bceb9";
+				PROVISIONING_PROFILE = "34635538-5ed6-4358-b509-7087c42f2e6f";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s";
@@ -4270,21 +4314,28 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IOTCamViewer/lib/Release-iphoneos",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = EasynPTarget;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				HEADER_SEARCH_PATHS = (
+					"zxing/iphone/ZXingWidget/Classes/**",
+					"$(PROJECT_DIR)/HiSmartWifi/include",
+					zxing/cpp/core/src,
+				);
 				INFOPLIST_FILE = "EasyNP/EasyN P-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/IOTCamViewer/lib/Release-iphoneos\"",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = (
@@ -4293,7 +4344,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "e5eac230-3536-4288-9dc1-c66a447bceb9";
+				PROVISIONING_PROFILE = "34635538-5ed6-4358-b509-7087c42f2e6f";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s";
@@ -4306,21 +4357,28 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IOTCamViewer/lib/Release-iphoneos",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = EasynPTarget;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				HEADER_SEARCH_PATHS = (
+					"zxing/iphone/ZXingWidget/Classes/**",
+					"$(PROJECT_DIR)/HiSmartWifi/include",
+					zxing/cpp/core/src,
+				);
 				INFOPLIST_FILE = "EasyNP/EasyN P-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/IOTCamViewer/lib/Release-iphoneos\"",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = (
@@ -4328,7 +4386,7 @@
 					"-DP2PCAMLIVE",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "e5eac230-3536-4288-9dc1-c66a447bceb9";
+				PROVISIONING_PROFILE = "34635538-5ed6-4358-b509-7087c42f2e6f";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s";

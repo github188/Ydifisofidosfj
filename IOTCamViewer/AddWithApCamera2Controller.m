@@ -8,6 +8,7 @@
 
 #import "AddWithApCamera2Controller.h"
 #import "AppDelegate.h"
+#import "HiSmartLink.h"
 
 @interface AddWithApCamera2Controller ()
 
@@ -70,15 +71,46 @@
     [super dealloc];
 }
 - (IBAction)setting:(id)sender {
-    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"提示" message:@"是否听到摄像机叮咚提示音" delegate:self cancelButtonTitle:@"是" otherButtonTitles:@"否", nil];
-    [alert show];
-    [alert release];
+    
+    
+    NSString *ssid = self.ssidInput.text;
+    NSString *password = self.psdInput.text;
+    
+    ssid = [ssid stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    password = [password stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
+    NSLog(@"ssid:'%s', password:'%s'",[ssid UTF8String], [password UTF8String]);
+    
+    if (ssid == nil || [ssid length] == 0) {
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"SSID不能为空！" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
+    else if (password == nil || [password length] == 0) {
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"密码不能为空！" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
+    else if([ssid length] > 0 && [password length] > 0) {
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"提示" message:@"是否听到摄像机叮咚提示音" delegate:self cancelButtonTitle:@"是" otherButtonTitles:@"否", nil];
+        [alert show];
+        [alert release];
+    }
 }
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if(buttonIndex==1){
         UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"提示" message:@"请长按摄像机复位键10秒，重新设置。" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [alert show];
         [alert release];
+    }
+    else {
+        const char *ssid=[self.ssidInput.text UTF8String];
+        const char *psd=[self.psdInput.text UTF8String];
+        NSLog(@"HiStartSmartConnection:%s,%s",ssid,psd);
+        int result = HiStartSmartConnection(ssid, psd);
+        NSLog(@"%d",result);
+        //返回搜索设备界面
+        
     }
 }
 @end

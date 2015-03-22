@@ -138,12 +138,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOTCamViewer/AddCameraDetailController.mm"
-            timestampString = "448665335.336973"
+            timestampString = "448703688.64584"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "-scanQRCode:"
+            startingLineNumber = "527"
+            endingLineNumber = "527"
+            landmarkName = "-didSelectUID:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
