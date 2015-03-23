@@ -4258,7 +4258,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "34635538-5ed6-4358-b509-7087c42f2e6f";
+				PROVISIONING_PROFILE = "4d2261ca-ad5f-40e7-bcb3-007166c3ab6e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s";
@@ -4301,7 +4301,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "34635538-5ed6-4358-b509-7087c42f2e6f";
+				PROVISIONING_PROFILE = "4d2261ca-ad5f-40e7-bcb3-007166c3ab6e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s";
@@ -4344,7 +4344,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "34635538-5ed6-4358-b509-7087c42f2e6f";
+				PROVISIONING_PROFILE = "4d2261ca-ad5f-40e7-bcb3-007166c3ab6e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s";
@@ -4386,7 +4386,7 @@
 					"-DP2PCAMLIVE",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "34635538-5ed6-4358-b509-7087c42f2e6f";
+				PROVISIONING_PROFILE = "4d2261ca-ad5f-40e7-bcb3-007166c3ab6e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s";
@@ -4399,7 +4399,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4420,7 +4420,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "Aztech IP Cam";
-				PROVISIONING_PROFILE = "a836dd49-f13f-4b8e-8426-611952c0562e";
+				PROVISIONING_PROFILE = "4d2261ca-ad5f-40e7-bcb3-007166c3ab6e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s";
@@ -4433,7 +4433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4455,7 +4455,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "Aztech IP Cam";
-				PROVISIONING_PROFILE = "a836dd49-f13f-4b8e-8426-611952c0562e";
+				PROVISIONING_PROFILE = "4d2261ca-ad5f-40e7-bcb3-007166c3ab6e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s";
@@ -4468,7 +4468,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4490,7 +4490,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "Aztech IP Cam";
-				PROVISIONING_PROFILE = "a836dd49-f13f-4b8e-8426-611952c0562e";
+				PROVISIONING_PROFILE = "4d2261ca-ad5f-40e7-bcb3-007166c3ab6e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s";
@@ -4503,7 +4503,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4524,7 +4524,7 @@
 					"-DP2PCAMLIVE",
 				);
 				PRODUCT_NAME = "Aztech IP Cam";
-				PROVISIONING_PROFILE = "a836dd49-f13f-4b8e-8426-611952c0562e";
+				PROVISIONING_PROFILE = "4d2261ca-ad5f-40e7-bcb3-007166c3ab6e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s";

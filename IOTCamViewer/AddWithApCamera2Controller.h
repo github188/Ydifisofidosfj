@@ -10,7 +10,7 @@
 #import "LANSearchController.h"
 #import "MBProgressHUD.h"
 
-@interface AddWithApCamera2Controller : UIViewController<UIAlertViewDelegate,LANSearchDelegate>
+@interface AddWithApCamera2Controller : UIViewController<UIAlertViewDelegate,LANSearchDelegate,UITextFieldDelegate>
 
 @property (retain, nonatomic) IBOutlet UILabel *ssidLbl;
 @property (retain, nonatomic) IBOutlet UILabel *psdLbl;

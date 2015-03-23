@@ -37,7 +37,29 @@
     [negativeSpacer release];
     
     self.title=NSLocalizedStringFromTable(@"WIFI一键设置", @"easyn", nil);
+    
+    self.ssidInput.delegate=self;
+    self.psdInput.delegate=self;
+    
 }
+- (BOOL)textFieldShouldReturn:(UITextField *) textField
+{
+    if (textField == self.ssidInput) {
+        [self.ssidInput resignFirstResponder];
+    }
+    
+    if (textField == self.psdInput) {
+        [self.psdInput resignFirstResponder];
+    }
+    
+    return YES;
+}
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.psdInput resignFirstResponder];
+    [self.ssidInput resignFirstResponder];
+}
+
 -(void)back:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];
 }
