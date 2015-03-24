@@ -66,27 +66,27 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="z5d-d5-QyK" userLabel="Image View 1">
-                    <rect key="frame" x="0.0" y="91" width="160" height="120"/>
+                    <rect key="frame" x="0.0" y="150" width="160" height="120"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="39s-Kx-gTE" userLabel="Image View 2">
-                    <rect key="frame" x="160" y="91" width="160" height="120"/>
+                    <rect key="frame" x="160" y="150" width="160" height="120"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="gQJ-OA-Hqe" userLabel="Image View 3">
-                    <rect key="frame" x="0.0" y="234" width="160" height="120"/>
+                    <rect key="frame" x="0.0" y="286" width="160" height="120"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="OP6-I2-gpD" userLabel="Image View 4">
-                    <rect key="frame" x="160" y="234" width="160" height="120"/>
+                    <rect key="frame" x="160" y="286" width="160" height="120"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4Dp-Pv-VmD" userLabel="Button FullScreeen 1">
-                    <rect key="frame" x="0.0" y="91" width="160" height="120"/>
+                    <rect key="frame" x="0.0" y="154" width="160" height="120"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -96,7 +96,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5jc-2o-j4c" userLabel="Button FullScreeen 2">
-                    <rect key="frame" x="160" y="91" width="160" height="120"/>
+                    <rect key="frame" x="160" y="154" width="160" height="120"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -106,7 +106,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qAQ-Fm-aoj" userLabel="Button FullScreeen 3">
-                    <rect key="frame" x="0.0" y="234" width="160" height="120"/>
+                    <rect key="frame" x="0.0" y="305" width="160" height="120"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -116,7 +116,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nGx-Jp-vwZ" userLabel="Button FullScreeen 4">
-                    <rect key="frame" x="160" y="234" width="160" height="120"/>
+                    <rect key="frame" x="160" y="305" width="160" height="120"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -126,7 +126,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="o6n-c9-0FF" userLabel="Button Add 1">
-                    <rect key="frame" x="0.0" y="91" width="160" height="120"/>
+                    <rect key="frame" x="0.0" y="150" width="160" height="120"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="addcam.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -137,7 +137,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6nK-5M-sDM" userLabel="Button Add 2">
-                    <rect key="frame" x="160" y="91" width="160" height="120"/>
+                    <rect key="frame" x="160" y="150" width="160" height="120"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="addcam.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -148,7 +148,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Mz3-8h-QW4" userLabel="Button Add 3">
-                    <rect key="frame" x="0.0" y="234" width="160" height="120"/>
+                    <rect key="frame" x="0.0" y="286" width="160" height="120"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="addcam.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -159,7 +159,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6iX-wq-YmK" userLabel="Button Add 4">
-                    <rect key="frame" x="160" y="234" width="160" height="120"/>
+                    <rect key="frame" x="160" y="286" width="160" height="120"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="addcam.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -170,7 +170,7 @@
                     </connections>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tUK-An-I8F" userLabel="Button Reconnect 1">
-                    <rect key="frame" x="0.0" y="91" width="160" height="120"/>
+                    <rect key="frame" x="0.0" y="150" width="160" height="120"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="refresh.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -181,7 +181,7 @@
                     </connections>
                 </button>
                 <button hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vpH-84-gTZ" userLabel="Button Reconnect 2">
-                    <rect key="frame" x="160" y="91" width="160" height="120"/>
+                    <rect key="frame" x="160" y="150" width="160" height="120"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="refresh.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -192,7 +192,7 @@
                     </connections>
                 </button>
                 <button hidden="YES" opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EZc-Tv-kOb" userLabel="Button Reconnect 3">
-                    <rect key="frame" x="0.0" y="234" width="160" height="120"/>
+                    <rect key="frame" x="0.0" y="286" width="160" height="120"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="refresh.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -203,7 +203,7 @@
                     </connections>
                 </button>
                 <button hidden="YES" opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BI4-iZ-omH" userLabel="Button Reconnect 4">
-                    <rect key="frame" x="160" y="234" width="160" height="120"/>
+                    <rect key="frame" x="160" y="286" width="160" height="120"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="refresh.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -214,11 +214,11 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" id="BKG-36-RFQ" userLabel="StatusView 1">
-                    <rect key="frame" x="0.0" y="211" width="160" height="23"/>
+                    <rect key="frame" x="1" y="270" width="160" height="16"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onlinebar.png" id="nZ2-gB-dda" userLabel="Image View - onlinebar 1">
-                            <rect key="frame" x="0.0" y="0.0" width="160" height="23"/>
+                            <rect key="frame" x="0.0" y="0.0" width="160" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="offline.png" id="xON-hU-3fC" userLabel="Image View - online 1">
@@ -226,7 +226,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GId-2V-k65" userLabel="Label Name 1">
-                            <rect key="frame" x="20" y="3" width="70" height="16"/>
+                            <rect key="frame" x="20" y="0.0" width="70" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -243,11 +243,11 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" id="4D1-m3-Dhp" userLabel="StatusView 2">
-                    <rect key="frame" x="160" y="211" width="160" height="23"/>
+                    <rect key="frame" x="161" y="270" width="160" height="16"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onlinebar.png" id="iWy-8q-PHu" userLabel="Image View - onlinebar 2">
-                            <rect key="frame" x="0.0" y="0.0" width="160" height="23"/>
+                            <rect key="frame" x="0.0" y="0.0" width="160" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="offline.png" id="pgV-v9-DSi" userLabel="Image View - online 2">
@@ -255,7 +255,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="64n-R3-XOO" userLabel="Label Name 2">
-                            <rect key="frame" x="20" y="3" width="70" height="16"/>
+                            <rect key="frame" x="20" y="0.0" width="70" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -272,11 +272,11 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" id="CPT-TW-9um" userLabel="StatusView 3">
-                    <rect key="frame" x="0.0" y="354" width="160" height="24"/>
+                    <rect key="frame" x="0.0" y="407" width="160" height="16"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onlinebar.png" id="qhh-WQ-To3" userLabel="Image View - onlinebar 3">
-                            <rect key="frame" x="0.0" y="0.0" width="160" height="24"/>
+                            <rect key="frame" x="0.0" y="0.0" width="160" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="offline.png" id="qI5-ow-KNE" userLabel="Image View - online 3">
@@ -284,7 +284,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Nuj-oC-Lfu" userLabel="Label Name 3">
-                            <rect key="frame" x="20" y="3" width="70" height="16"/>
+                            <rect key="frame" x="20" y="0.0" width="70" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -301,19 +301,19 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" id="38z-Iz-Ze7" userLabel="StatusView 4">
-                    <rect key="frame" x="160" y="354" width="160" height="24"/>
+                    <rect key="frame" x="160" y="407" width="160" height="16"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onlinebar.png" id="rs4-NF-3Sp" userLabel="Image View - onlinebar 4">
-                            <rect key="frame" x="0.0" y="0.0" width="160" height="24"/>
+                            <rect key="frame" x="0.0" y="0.0" width="160" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="offline.png" id="cx8-LI-HpN" userLabel="Image View - online 4">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="offline.png" id="cx8-LI-HpN" userLabel="Image View - online 4">
                             <rect key="frame" x="3" y="6" width="10" height="10"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="I2d-IO-QBz" userLabel="Label Name 4">
-                            <rect key="frame" x="20" y="3" width="70" height="16"/>
+                            <rect key="frame" x="20" y="0.0" width="70" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -330,7 +330,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="PU4-rr-gN5" userLabel="Button More 1">
-                    <rect key="frame" x="108" y="91" width="52" height="49"/>
+                    <rect key="frame" x="108" y="150" width="52" height="49"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" backgroundImage="morefunction.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -341,7 +341,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0kM-ei-Gq7" userLabel="Button More 2">
-                    <rect key="frame" x="268" y="91" width="52" height="49"/>
+                    <rect key="frame" x="268" y="150" width="52" height="49"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" backgroundImage="morefunction.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -352,7 +352,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hlt-8C-x5e" userLabel="Button More 3">
-                    <rect key="frame" x="108" y="234" width="52" height="49"/>
+                    <rect key="frame" x="108" y="286" width="52" height="49"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" backgroundImage="morefunction.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -363,7 +363,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kjF-9s-QVR" userLabel="Button More 4">
-                    <rect key="frame" x="268" y="234" width="52" height="49"/>
+                    <rect key="frame" x="268" y="286" width="52" height="49"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" backgroundImage="morefunction.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -420,7 +420,7 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <view hidden="YES" tag="9999" contentMode="scaleToFill" id="AQV-8s-C8V" userLabel="View More Function">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <rect key="frame" x="0.0" y="81" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="moreset_bk.png" id="gpD-T7-4d5">
