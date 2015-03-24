@@ -403,6 +403,7 @@
         cell.opaque = NO;
         cell.backgroundColor = [UIColor clearColor];
         cell.backgroundView = nil;
+        cell.textLabel.font=[UIFont systemFontOfSize:13.0f];
         
                 
         if (row == 0) {
@@ -410,6 +411,7 @@
             textFieldUID = [[UITextField alloc] initWithFrame: CGRectMake(115, 11, 180, 25)];
             textFieldUID.placeholder = NSLocalizedString(@"Camera UID", @"");
             textFieldUID.clearsOnBeginEditing = NO;
+            textFieldUID.font=[UIFont systemFontOfSize:13.0f];
             textFieldUID.clearButtonMode = UITextFieldViewModeWhileEditing;
             [textFieldUID setDelegate:self];
             [textFieldUID addTarget:self action:@selector(textFieldDone:) forControlEvents:UIControlEventEditingDidEndOnExit];
@@ -421,6 +423,7 @@
             textFieldPassword = [[UITextField alloc] initWithFrame: CGRectMake(115, 11, 180, 25)];
             textFieldPassword.placeholder = NSLocalizedString(@"Camera Password", @"");
             textFieldPassword.clearsOnBeginEditing = NO;
+            textFieldPassword.font=[UIFont systemFontOfSize:13.0f];
             textFieldPassword.clearButtonMode = UITextFieldViewModeWhileEditing;
             textFieldPassword.secureTextEntry = YES;
             [textFieldPassword setDelegate:self];
@@ -434,6 +437,7 @@
             textFieldName = [[UITextField alloc] initWithFrame: CGRectMake(115, 11, 180, 25)];
             textFieldName.placeholder = NSLocalizedString(@"Camera Name", @"");
             textFieldName.clearsOnBeginEditing = NO;
+            textFieldName.font=[UIFont systemFontOfSize:13.0f];
             textFieldName.clearButtonMode = UITextFieldViewModeWhileEditing;
             [textFieldName setDelegate:self];
             [textFieldName addTarget:self action:@selector(textFieldDone:) forControlEvents:UIControlEventEditingDidEndOnExit];

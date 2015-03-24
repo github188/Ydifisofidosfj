@@ -2174,6 +2174,9 @@ extern unsigned int _getTickCount() {
             longTalkButton.hidden = NO;
             
             isListening = YES;
+            
+            self.myPtzView.hidden=YES;
+            
         } else if (isListening==YES && isTalking==NO){
             
             selectedAudioMode = AUDIO_MODE_OFF;
@@ -2182,6 +2185,8 @@ extern unsigned int _getTickCount() {
             
             isListening = NO;
             isActive = NO;
+            
+            self.myPtzView.hidden=NO;
         }
         
     } else if (index == RECORDING) {

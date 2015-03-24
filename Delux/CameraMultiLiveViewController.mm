@@ -760,6 +760,8 @@ extern unsigned int _getTickCount() ;
     }
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(connectAndShow) name:@"WiFiChanged" object:nil];
+    
+
 }
 
 - (void)checkStatus {

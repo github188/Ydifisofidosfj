@@ -15,6 +15,7 @@
 #import <IOTCamera/GLog.h>
 #import <IOTCamera/GLogZone.h>
 #import <SystemConfiguration/CaptiveNetwork.h>
+#import "IQKeyboardManager.h"
 
 NSMutableArray *camera_list;
 FMDatabase *database;
@@ -345,6 +346,9 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
     [tabbarViewControllers release];
     [thisIsTheViewControllerIWantToSetNow release];
 #endif
+    
+    [[IQKeyboardManager sharedManager] setEnable:YES];
+    
     return YES;
 }
 
