@@ -267,6 +267,7 @@
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
     self.qrBtn.hidden=self.isFromAutoWifi;
     self.qrLbl.hidden=self.isFromAutoWifi;
+    self.qrLbl.text=NSLocalizedString(@"QRCode", @"");
     self.lansBtn.hidden=self.isFromAutoWifi;
     lanSearch.hidden=self.isFromAutoWifi;
     if (screenBounds.size.height == 480) {

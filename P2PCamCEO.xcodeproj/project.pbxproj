@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		060AF4291AC43BD700D8828D /* libHISmartWifi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0688795B1ABEAE230017A41A /* libHISmartWifi.a */; };
 		0631097E1ABA3D5D00C6F0F1 /* ChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0631097D1ABA3D5D00C6F0F1 /* ChooseViewController.m */; };
 		0631097F1ABA3D5D00C6F0F1 /* ChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0631097D1ABA3D5D00C6F0F1 /* ChooseViewController.m */; };
 		0632864A1AB71A8C0033ABD0 /* mydown1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 063286411AB71A8C0033ABD0 /* mydown1@2x.png */; };
@@ -88,7 +89,6 @@
 		068879401ABE204E0017A41A /* AddWithApCamera1Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0688793E1ABE204E0017A41A /* AddWithApCamera1Controller.xib */; };
 		0688794E1ABE2C4D0017A41A /* AddWithApCamera2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0688794C1ABE2C4D0017A41A /* AddWithApCamera2Controller.m */; };
 		0688794F1ABE2C4D0017A41A /* AddWithApCamera2Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0688794D1ABE2C4D0017A41A /* AddWithApCamera2Controller.xib */; };
-		0688795C1ABEAE230017A41A /* libHISmartWifi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0688795B1ABEAE230017A41A /* libHISmartWifi.a */; };
 		06F425F71AA9FB6500427383 /* AppGuidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F425F51AA9FB6500427383 /* AppGuidViewController.m */; };
 		06F425F81AA9FB6500427383 /* AppGuidViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F425F61AA9FB6500427383 /* AppGuidViewController.xib */; };
 		06F76E331AB720A100901EBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AC3148C5342007705B6 /* main.m */; };
@@ -1138,6 +1138,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		060AF42A1AC43BED00D8828D /* HiSmartLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HiSmartLink.h; sourceTree = "<group>"; };
 		0631097C1ABA3D5D00C6F0F1 /* ChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseViewController.h; sourceTree = "<group>"; };
 		0631097D1ABA3D5D00C6F0F1 /* ChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseViewController.m; sourceTree = "<group>"; };
 		063109801ABA41B400C6F0F1 /* DefineExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineExtension.h; sourceTree = "<group>"; };
@@ -1234,7 +1235,6 @@
 		0688794B1ABE2C4D0017A41A /* AddWithApCamera2Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddWithApCamera2Controller.h; sourceTree = "<group>"; };
 		0688794C1ABE2C4D0017A41A /* AddWithApCamera2Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddWithApCamera2Controller.m; sourceTree = "<group>"; };
 		0688794D1ABE2C4D0017A41A /* AddWithApCamera2Controller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddWithApCamera2Controller.xib; sourceTree = "<group>"; };
-		068879591ABEAE230017A41A /* HiSmartLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HiSmartLink.h; sourceTree = "<group>"; };
 		0688795B1ABEAE230017A41A /* libHISmartWifi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libHISmartWifi.a; sourceTree = "<group>"; };
 		06F425F41AA9FB6500427383 /* AppGuidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGuidViewController.h; sourceTree = "<group>"; };
 		06F425F51AA9FB6500427383 /* AppGuidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGuidViewController.m; sourceTree = "<group>"; };
@@ -1932,7 +1932,7 @@
 				06F770561AB720A100901EBA /* libIOTCAPIs_ALL.a in Frameworks */,
 				06F770571AB720A100901EBA /* AVFoundation.framework in Frameworks */,
 				06F770581AB720A100901EBA /* UIKit.framework in Frameworks */,
-				0688795C1ABEAE230017A41A /* libHISmartWifi.a in Frameworks */,
+				060AF4291AC43BD700D8828D /* libHISmartWifi.a in Frameworks */,
 				06F770591AB720A100901EBA /* libZXingWidget.a in Frameworks */,
 				06F7705A1AB720A100901EBA /* IOTCamera.framework in Frameworks */,
 			);
@@ -2098,7 +2098,7 @@
 		068879581ABEAE230017A41A /* include */ = {
 			isa = PBXGroup;
 			children = (
-				068879591ABEAE230017A41A /* HiSmartLink.h */,
+				060AF42A1AC43BED00D8828D /* HiSmartLink.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
