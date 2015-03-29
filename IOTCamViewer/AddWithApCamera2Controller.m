@@ -138,6 +138,7 @@
         [hud release];
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            HiStopSmartConnection();
             int result=HiStartSmartConnection(ssid, psd);
             dispatch_async(dispatch_get_main_queue(), ^{
                 [hud hide:YES];
