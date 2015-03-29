@@ -142,13 +142,12 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 [hud hide:YES];
                 [hud removeFromSuperview];
-                HiStopSmartConnection();
                 if(result==0){
                     MBProgressHUD *hud1 = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
                     [self.navigationController.view addSubview:hud1];
                     hud1.detailsLabelText = @"正在配置WIFI,请耐心等待";
                     [hud1 showAnimated:YES whileExecutingBlock:^{
-                        sleep(35);
+                        sleep(60);
                     } completionBlock:^{
                         [hud1 removeFromSuperview];
                         [hud1 release];
