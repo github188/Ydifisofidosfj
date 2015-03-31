@@ -7,7 +7,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddWithApCamera1Controller">
             <connections>
-                <outlet property="image" destination="BIA-6P-X41" id="We5-p2-ab9"/>
                 <outlet property="nextBtn" destination="esf-sN-3u8" id="RcV-Aj-pJc"/>
                 <outlet property="tipsLbl" destination="atH-Fy-rsA" id="bH9-M6-Ll6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -18,10 +17,6 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoPhotoAvailable.png" id="BIA-6P-X41">
-                    <rect key="frame" x="60" y="17" width="200" height="200"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请将电源适配器接上摄像机，摄像机自检转动，发出叮咚的声音。" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="atH-Fy-rsA">
                     <rect key="frame" x="30" y="225" width="268" height="53"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -30,23 +25,32 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="esf-sN-3u8">
-                    <rect key="frame" x="214" y="286" width="46" height="30"/>
+                    <rect key="frame" x="30" y="286" width="263" height="39"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="下一步">
-                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="下一步" backgroundImage="button_bg.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="button_click.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="next:" destination="-1" eventType="touchUpInside" id="SHA-AU-QAB"/>
                     </connections>
                 </button>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="tips_elec.png" id="iZy-tM-a67">
+                    <rect key="frame" x="89" y="29" width="150" height="150"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <point key="canvasLocation" x="395" y="287"/>
         </view>
     </objects>
     <resources>
-        <image name="NoPhotoAvailable.png" width="172" height="201"/>
+        <image name="button_bg.png" width="105" height="31"/>
+        <image name="button_click.png" width="105" height="31"/>
+        <image name="tips_elec.png" width="150" height="150"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

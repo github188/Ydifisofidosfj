@@ -89,6 +89,10 @@
 		068879401ABE204E0017A41A /* AddWithApCamera1Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0688793E1ABE204E0017A41A /* AddWithApCamera1Controller.xib */; };
 		0688794E1ABE2C4D0017A41A /* AddWithApCamera2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0688794C1ABE2C4D0017A41A /* AddWithApCamera2Controller.m */; };
 		0688794F1ABE2C4D0017A41A /* AddWithApCamera2Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0688794D1ABE2C4D0017A41A /* AddWithApCamera2Controller.xib */; };
+		06BA0EA11ACACE8B00448ACB /* button_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0E9F1ACACE8B00448ACB /* button_bg@2x.png */; };
+		06BA0EA21ACACE8B00448ACB /* button_click@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0EA01ACACE8B00448ACB /* button_click@2x.png */; };
+		06BA0EA41ACACF6E00448ACB /* tips_elec@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0EA31ACACF6E00448ACB /* tips_elec@2x.png */; };
+		06BA0EA51ACAD1EE00448ACB /* tips_elec@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0EA31ACACF6E00448ACB /* tips_elec@2x.png */; };
 		06F425F71AA9FB6500427383 /* AppGuidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F425F51AA9FB6500427383 /* AppGuidViewController.m */; };
 		06F425F81AA9FB6500427383 /* AppGuidViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F425F61AA9FB6500427383 /* AppGuidViewController.xib */; };
 		06F76E331AB720A100901EBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AC3148C5342007705B6 /* main.m */; };
@@ -1236,6 +1240,9 @@
 		0688794C1ABE2C4D0017A41A /* AddWithApCamera2Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddWithApCamera2Controller.m; sourceTree = "<group>"; };
 		0688794D1ABE2C4D0017A41A /* AddWithApCamera2Controller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddWithApCamera2Controller.xib; sourceTree = "<group>"; };
 		0688795B1ABEAE230017A41A /* libHISmartWifi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libHISmartWifi.a; sourceTree = "<group>"; };
+		06BA0E9F1ACACE8B00448ACB /* button_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_bg@2x.png"; sourceTree = "<group>"; };
+		06BA0EA01ACACE8B00448ACB /* button_click@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_click@2x.png"; sourceTree = "<group>"; };
+		06BA0EA31ACACF6E00448ACB /* tips_elec@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tips_elec@2x.png"; sourceTree = "<group>"; };
 		06F425F41AA9FB6500427383 /* AppGuidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGuidViewController.h; sourceTree = "<group>"; };
 		06F425F51AA9FB6500427383 /* AppGuidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGuidViewController.m; sourceTree = "<group>"; };
 		06F425F61AA9FB6500427383 /* AppGuidViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppGuidViewController.xib; sourceTree = "<group>"; };
@@ -2051,6 +2058,9 @@
 		0647DCF21AB866D500F5553A /* images */ = {
 			isa = PBXGroup;
 			children = (
+				06BA0E9F1ACACE8B00448ACB /* button_bg@2x.png */,
+				06BA0EA31ACACF6E00448ACB /* tips_elec@2x.png */,
+				06BA0EA01ACACE8B00448ACB /* button_click@2x.png */,
 				06335BEC1AC19A91003DCD0A /* page4_en.png */,
 				06335BED1AC19A91003DCD0A /* page3_en.png */,
 				06335BEE1AC19A91003DCD0A /* page2_en.png */,
@@ -3159,6 +3169,7 @@
 				06F76EB61AB720A100901EBA /* add_okbtn.png in Resources */,
 				06F76EB71AB720A100901EBA /* add_qrcode.png in Resources */,
 				06F76EB81AB720A100901EBA /* mainWindow.xib in Resources */,
+				06BA0EA41ACACF6E00448ACB /* tips_elec@2x.png in Resources */,
 				06F76EB91AB720A100901EBA /* CameraLiveView.xib in Resources */,
 				0647DD221AB86FBE00F5553A /* addcam.png in Resources */,
 				06F76EBA1AB720A100901EBA /* leo_emode@2x.png in Resources */,
@@ -3271,6 +3282,7 @@
 				06F76F281AB720A100901EBA /* more_delete.png in Resources */,
 				06F76F291AB720A100901EBA /* moreset_clicked.png in Resources */,
 				06F76F2A1AB720A100901EBA /* ceo_rcplay_bg_h@2x.png in Resources */,
+				06BA0EA11ACACE8B00448ACB /* button_bg@2x.png in Resources */,
 				06335BF81AC19A91003DCD0A /* page4_cn.png in Resources */,
 				06F770661AB7229300901EBA /* Images.xcassets in Resources */,
 				06F76F2B1AB720A100901EBA /* add_sync.png in Resources */,
@@ -3490,6 +3502,7 @@
 				06F76FFD1AB720A100901EBA /* more_delete_clicked@2x.png in Resources */,
 				06335BF41AC19A91003DCD0A /* page4_en.png in Resources */,
 				06F76FFE1AB720A100901EBA /* add_uidpw@2x.png in Resources */,
+				06BA0EA21ACACE8B00448ACB /* button_click@2x.png in Resources */,
 				06F76FFF1AB720A100901EBA /* add_wifi_1a.png in Resources */,
 				06F770001AB720A100901EBA /* ceo_rcplay_h.png in Resources */,
 				06F770021AB720A100901EBA /* CustomPeriodEventSearchController.xib in Resources */,
@@ -3652,6 +3665,7 @@
 				7A553DC6194EB73D00F5AA11 /* moreset_list2_clicked@2x.png in Resources */,
 				7AAF3AFF1922272A000D7FAF /* CheckSSIDView.xib in Resources */,
 				06335C081AC19B2C003DCD0A /* page3_cn.png in Resources */,
+				06BA0EA51ACAD1EE00448ACB /* tips_elec@2x.png in Resources */,
 				7A553DBA194EB73D00F5AA11 /* moreset@2x.png in Resources */,
 				610DBA46169AF0BF00292CF9 /* info.png in Resources */,
 				7A553DDC194EB73D00F5AA11 /* refresh.png in Resources */,
@@ -4331,7 +4345,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4360,7 +4374,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "0999743d-19a7-45a9-b1d1-d7f9c600db0b";
+				PROVISIONING_PROFILE = "4d2261ca-ad5f-40e7-bcb3-007166c3ab6e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s";
@@ -4373,7 +4387,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4403,7 +4417,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "0999743d-19a7-45a9-b1d1-d7f9c600db0b";
+				PROVISIONING_PROFILE = "4d2261ca-ad5f-40e7-bcb3-007166c3ab6e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s";
@@ -4416,7 +4430,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4446,7 +4460,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "0999743d-19a7-45a9-b1d1-d7f9c600db0b";
+				PROVISIONING_PROFILE = "4d2261ca-ad5f-40e7-bcb3-007166c3ab6e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s";
@@ -4459,7 +4473,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4488,7 +4502,7 @@
 					"-DP2PCAMLIVE",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "0999743d-19a7-45a9-b1d1-d7f9c600db0b";
+				PROVISIONING_PROFILE = "4d2261ca-ad5f-40e7-bcb3-007166c3ab6e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s";
