@@ -18,7 +18,7 @@
 
 #import "MKHorizMenu.h"
 #define kButtonBaseTag 10000
-#define kLeftOffset 10
+#define kLeftOffset 50
 
 @implementation MKHorizMenu
 

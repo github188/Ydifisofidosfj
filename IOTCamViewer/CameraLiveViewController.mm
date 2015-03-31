@@ -598,8 +598,8 @@ extern unsigned int _getTickCount() {
         
         [UIAlertView alertViewWithTitle: NSLocalizedString(@"Warning",@"") message: NSLocalizedString(@"Camera's video type is not supported recording",@"")];
         
-        self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode", nil];
-        self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked", nil];
+        self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",nil];
+        self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click", nil];
         
         [self.horizMenu reloadData];
         [self.longHorizMenu reloadData];
@@ -618,8 +618,8 @@ extern unsigned int _getTickCount() {
         self.videoGenerator = [[VideoGenerator alloc] initWithDestinationURL: url andCamera: camera];
         [self.videoGenerator startRecordingWithDuration:180];
         
-        self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable", nil];
-        self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable", nil];
+        self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable", @"f+Btn", @"f-Btn",nil];
+        self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable",@"f+Btn_Click", @"f-Btn_Click",nil];
         
         [self.horizMenu reloadData];
         [self.longHorizMenu reloadData];
@@ -664,8 +664,8 @@ extern unsigned int _getTickCount() {
         [self.videoGenerator saveToAlbumWithCompletionHandler: ^(NSError* error) {
             if (!error) {
                 
-                self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode", nil];
-                self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked", nil];
+                self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode", @"f+Btn", @"f-Btn",nil];
+                self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click", nil];
                 
                 [self.horizMenu reloadData];
                 [self.longHorizMenu reloadData];
@@ -1052,12 +1052,9 @@ extern unsigned int _getTickCount() {
     }
     
     self.navigationController.navigationBar.translucent = NO;
-//    
-//    self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"ceo_set", @"leo_qvga", @"leo_emode", nil];
-//    self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"ceo_set_clicked",@"leo_qvga_clicked", @"leo_emode_clicked", nil];
     
-    self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode", nil];
-    self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked", nil];
+    self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",nil];
+    self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click", nil];
     
     [self.horizMenu reloadData];
     [self.longHorizMenu reloadData];
@@ -2159,7 +2156,19 @@ extern unsigned int _getTickCount() {
     
     isActive = YES;
     
-    if (index == SOUND_CONTROL && !isRecording) {
+    if(index==7){
+        isActive=NO;
+        [self myPtzAction:AVIOCTRL_LENS_ZOOM_IN];
+        [self.horizMenu setUnselectedIndex:7 animated:YES];
+        [self.longHorizMenu setUnselectedIndex:7 animated:YES];
+    }
+    else if(index==8){
+        isActive=NO;
+        [self myPtzAction:AVIOCTRL_LENS_ZOOM_OUT];
+        [self.horizMenu setUnselectedIndex:8 animated:YES];
+        [self.longHorizMenu setUnselectedIndex:8 animated:YES];
+    }
+    else if (index == SOUND_CONTROL && !isRecording) {
         
         if (isListening==NO && isTalking==NO){
 
@@ -2464,7 +2473,7 @@ extern unsigned int _getTickCount() {
     }
 }
 
-#define HIDE_TOOL_BAR_TIME_OUT	2
+#define HIDE_TOOL_BAR_TIME_OUT	5
 
 - (NSTimer *)setupHideToolBarTimer {
 	return [NSTimer scheduledTimerWithTimeInterval:HIDE_TOOL_BAR_TIME_OUT target:self selector:@selector(hideToolBar) userInfo:nil repeats:NO];
@@ -2506,6 +2515,7 @@ extern unsigned int _getTickCount() {
 }
 - (IBAction)landBackAction:(id)sender {
 }
+
 @end
 
 @implementation UINavigationController (autorotation)
