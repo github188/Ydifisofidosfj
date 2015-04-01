@@ -173,12 +173,14 @@
 #pragma mark --LANSearchControllerDelegate
 - (void) didSelectUID:(NSString *)selectedUid{
     
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
     AddCameraDetailController *controller = [[AddCameraDetailController alloc] initWithNibName:@"AddCameraDetail" bundle:nil delegate:[[self.navigationController viewControllers] objectAtIndex:0]];
     controller.uid=selectedUid;
     controller.isFromAutoWifi=YES;
     [self.navigationController pushViewController:controller animated:YES];
     [controller release];
-    
+    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
 }
 
 @end
