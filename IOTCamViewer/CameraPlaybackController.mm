@@ -6,11 +6,14 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+#import <IOTCamera/GLog.h>
+#import <IOTCamera/GLogZone.h>
 #import <IOTCamera/AVIOCTRLDEFs.h>
 #import "CameraPlaybackController.h"
 #import <IOTCamera/AVFRAMEINFO.h>
 #import <IOTCamera/ImageBuffInfo.h>
 #import "iToast.h"
+#import "AppDelegate.h"
 
 #define DEF_WAIT4STOPSHOW_TIME	250
 extern unsigned int _getTickCount();
@@ -172,11 +175,19 @@ extern unsigned int _getTickCount();
 }
 
 - (IBAction)back:(id)sender {
-    
+	
+	if(isBack) {
+		GLog( tUI, (@"================") );
+		GLog( tUI, (@" Ignore back !!") );
+		GLog( tUI, (@"================") );
+		return;
+	}
+    isBack = YES;
+	
     [monitorLandscape deattachCamera];
     [monitorPortrait deattachCamera];
     
-    if (playbackChannelIndex > 0) {
+    if (playbackChannelIndex >= 0) {
         
         SMsgAVIoctrlPlayRecord *req = (SMsgAVIoctrlPlayRecord *) malloc(sizeof(SMsgAVIoctrlPlayRecord));
         memset(req, 0, sizeof(SMsgAVIoctrlPlayRecord));
@@ -189,17 +200,26 @@ extern unsigned int _getTickCount();
         [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_RECORD_PLAYCONTROL Data:(char *)req DataSize:sizeof(SMsgAVIoctrlPlayRecord)];
         
         free(req);
-        
-        [camera stopSoundToPhone:playbackChannelIndex];
-        [camera stopShow:playbackChannelIndex];
-		[self waitStopShowCompleted:DEF_WAIT4STOPSHOW_TIME];
-        [camera stop:playbackChannelIndex];
+		
 
     }
 
-    [camera clearRemoteNotifications];
-    
-    [self.navigationController popViewControllerAnimated:YES];
+	[camera clearRemoteNotifications];
+	if (tmrRecvPlayback != nil) {
+		[tmrRecvPlayback invalidate];
+		tmrRecvPlayback = nil;
+	}
+	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+		// We have to force stopshow here, due to the IO command may not response immediately
+		//
+		[camera stopSoundToPhone:playbackChannelIndex];
+		[camera stopShow:playbackChannelIndex];
+		[self waitStopShowCompleted:DEF_WAIT4STOPSHOW_TIME];
+		[camera stop:playbackChannelIndex];
+
+		[self.navigationController popViewControllerAnimated:YES];
+	});
+	
 }
 
 - (IBAction)play:(id)sender {
@@ -405,13 +425,9 @@ extern unsigned int _getTickCount();
         if (true) {
             NSError *error = nil;
             NSString *appidString = [[NSBundle mainBundle] bundleIdentifier];
-#ifndef DEF_APNSTest
-            NSString *hostString = @"http://push.iotcplatform.com/apns/apns.php";
-#else
-            NSString *hostString = @"http://54.225.191.150/test_gcm/apns.php"; //測試Host
-#endif
-            NSString *argsString = @"%@?cmd=unreg_mapping&uid=%@&appid=%@&udid=%@&os=ios";
-            NSString *getURLString = [NSString stringWithFormat:argsString, hostString, uid, appidString, uuid];
+
+			NSString *argsString = @"%@?cmd=unreg_mapping&uid=%@&appid=%@&udid=%@&os=ios";
+            NSString *getURLString = [NSString stringWithFormat:argsString, g_tpnsHostString, uid, appidString, uuid];
 #ifdef DEF_APNSTest
             NSLog( @"==============================================");
             NSLog( @"stringWithContentsOfURL ==> %@", getURLString );
@@ -419,9 +435,11 @@ extern unsigned int _getTickCount();
 #endif
             NSString *unregisterResult = [NSString stringWithContentsOfURL:[NSURL URLWithString:getURLString] encoding:NSUTF8StringEncoding error:&error];
             
+#ifdef DEF_APNSTest
             NSLog( @"==============================================");
             NSLog( @">>> %@", unregisterResult );
             NSLog( @"==============================================");
+#endif
             if (error != NULL) {
                 NSLog(@"%@",[error localizedDescription]);
                 
@@ -507,18 +525,14 @@ extern unsigned int _getTickCount();
                                              selector:@selector(applicationDidBecomeActive:)
                                                  name:UIApplicationDidBecomeActiveNotification
                                                object:nil];
-    
+	
+	isBack = NO;
     [super viewDidLoad];
 }
 
 - (void)viewDidUnload {
     
-    if (tmrRecvPlayback != nil) {
-        
-        [tmrRecvPlayback invalidate];
-        tmrRecvPlayback = nil;
-    }
-    
+	
     self.camera = nil;
     self.playButton = nil;
     self.pauseButton = nil;
@@ -575,12 +589,16 @@ extern unsigned int _getTickCount();
 
 - (void)viewWillDisappear:(BOOL)animated 
 {    
-    [tmrRecvPlayback invalidate];
     [super viewWillDisappear:animated];
+
+	if (tmrRecvPlayback != nil) {
+		[tmrRecvPlayback invalidate];
+		tmrRecvPlayback = nil;
+	}
 }
 
 - (void)dealloc
-{    
+{
     [camera release];
     [playButton release];
     [pauseButton release];
@@ -640,18 +658,23 @@ extern unsigned int _getTickCount();
             }
             case AVIOCTRL_RECORD_PLAY_STOP:
             {
-                [camera stopSoundToPhone:playbackChannelIndex];
-                [camera stopShow:playbackChannelIndex];
-				[self waitStopShowCompleted:DEF_WAIT4STOPSHOW_TIME];
-                [camera stop:playbackChannelIndex];
-
-                isPaused = false;
-                
-                [self showPlayButton];
-                
-                playbackChannelIndex = -1;
-                
-                break;
+//                if (!isBack) {
+				GLog( tUI, (@"=========================================== ") );
+				GLog( tUI, (@"======== AVIOCTRL_RECORD_PLAY_STOP ======== ") );
+				
+                    [camera stopSoundToPhone:playbackChannelIndex];
+                    [camera stopShow:playbackChannelIndex];
+                    [self waitStopShowCompleted:DEF_WAIT4STOPSHOW_TIME];
+                    [camera stop:playbackChannelIndex];
+                    
+                    isPaused = false;
+                    
+                    [self showPlayButton];
+                    
+                    playbackChannelIndex = -1;
+				
+                    break;
+//                }
             }
                 
             case AVIOCTRL_RECORD_PLAY_END:
@@ -695,7 +718,7 @@ extern unsigned int _getTickCount();
     }
 }
 
-- (void)camera:(MyCamera *)camera_ _didReceiveFrameInfoWithVideoWidth:(NSInteger)videoWidth VideoHeight:(NSInteger)videoHeight VideoFPS:(NSInteger)fps VideoBPS:(NSInteger)videoBps AudioBPS:(NSInteger)audioBps OnlineNm:(NSInteger)onlineNm FrameCount:(unsigned long)frameCount IncompleteFrameCount:(unsigned long)incompleteFrameCount {
+- (void)camera:(MyCamera *)camera_ _didReceiveFrameInfoWithVideoWidth:(NSInteger)videoWidth VideoHeight:(NSInteger)videoHeight VideoFPS:(NSInteger)fps VideoBPS:(NSInteger)videoBps AudioBPS:(NSInteger)audioBps OnlineNm:(NSInteger)onlineNm FrameCount:(unsigned int)frameCount IncompleteFrameCount:(unsigned int)incompleteFrameCount {
     
     if (camera_ == camera) {
 		if( videoWidth > 1920 || videoHeight > 1080 ) {
@@ -722,11 +745,11 @@ extern unsigned int _getTickCount();
 		}
 		
 		if( g_bDiagnostic ) {
-			self.videoInfoLabel.text = [NSString stringWithFormat:@"%dx%d / FPS: %d / BPS: %d Kbps", videoWidth, videoHeight, fps, (videoBps + audioBps) / 1024];
+			self.videoInfoLabel.text = [NSString stringWithFormat:@"%dx%d / FPS: %d / BPS: %d Kbps", (int)videoWidth, (int)videoHeight, (int)fps, (int)(videoBps + audioBps) / 1024];
 			self.frameInfoLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Online Nm: %d / Frame ratio: %d / %d", @"Used for display channel information"), onlineNm, incompleteFrameCount, frameCount];
 		}
 		else {
-			self.videoInfoLabel.text = [NSString stringWithFormat:@"%dx%d", videoWidth, videoHeight ];
+			self.videoInfoLabel.text = [NSString stringWithFormat:@"%dx%d", (int)videoWidth, (int)videoHeight ];
 			self.frameInfoLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Online Nm: %d", @""), onlineNm];
 		}
     }
@@ -771,10 +794,10 @@ extern unsigned int _getTickCount();
 
 - (void)scrollViewDidEndZooming:(UIScrollView *)scrollView 
                        withView:(UIView *)view 
-                        atScale:(float)scale {
+                        atScale:(CGFloat)scale {
 	if( glView ) {
 		glView.frame = CGRectMake( 0, 0, scrollView.frame.size.width*scale, scrollView.frame.size.height*scale );
-		NSLog( @"{0,0,%d,%d}", (int)(scrollView.frame.size.width*scale), (int)(scrollView.frame.size.height*scale) );
+		GLog( tPinchZoom|tUI, ( @"scrollViewDidEndZooming {0,0,%d,%d}", (int)(scrollView.frame.size.width*scale), (int)(scrollView.frame.size.height*scale) ));
 	}
 }
 
@@ -818,41 +841,15 @@ extern unsigned int _getTickCount();
 - (void)updateToScreen:(NSValue*)pointer
 {
 	LPSIMAGEBUFFINFO pScreenBmpStore = (LPSIMAGEBUFFINFO)[pointer pointerValue];
-	if( mPixelBuffer == nil ||
-	    mSizePixelBuffer.width != pScreenBmpStore->nWidth ||
-	    mSizePixelBuffer.height != pScreenBmpStore->nHeight ) {
-		
-		if(mPixelBuffer) {
-			CVPixelBufferRelease(mPixelBuffer);
-			CVPixelBufferPoolRelease(mPixelBufferPool);
-		}
-		
-		NSMutableDictionary* attributes;
-		attributes = [NSMutableDictionary dictionary];
-		[attributes setObject:[NSNumber numberWithInt:kCVPixelFormatType_32BGRA] forKey:(NSString*)kCVPixelBufferPixelFormatTypeKey];
-		[attributes setObject:[NSNumber numberWithInt:pScreenBmpStore->nWidth] forKey: (NSString*)kCVPixelBufferWidthKey];
-		[attributes setObject:[NSNumber numberWithInt:pScreenBmpStore->nHeight] forKey: (NSString*)kCVPixelBufferHeightKey];
-		
-		CVReturn err = CVPixelBufferPoolCreate(kCFAllocatorDefault, NULL, (CFDictionaryRef) attributes, &mPixelBufferPool);
-		if( err != kCVReturnSuccess ) {
-			NSLog( @"mPixelBufferPool create failed!" );
-		}
-		err = CVPixelBufferPoolCreatePixelBuffer (NULL, mPixelBufferPool, &mPixelBuffer);
-		if( err != kCVReturnSuccess ) {
-			NSLog( @"mPixelBuffer create failed!" );
-		}
-		mSizePixelBuffer = CGSizeMake(pScreenBmpStore->nWidth, pScreenBmpStore->nHeight);
-		NSLog( @"CameraLiveViewController - mPixelBuffer created %dx%d nBytes_per_Row:%d", pScreenBmpStore->nWidth, pScreenBmpStore->nHeight, pScreenBmpStore->nBytes_per_Row );
- 	}
-	CVPixelBufferLockBaseAddress(mPixelBuffer,0);
+	[glView renderVideo:pScreenBmpStore->pixelBuff];
 	
-	UInt8* baseAddress = (UInt8*)CVPixelBufferGetBaseAddress(mPixelBuffer);
-	
-	memcpy(baseAddress, pScreenBmpStore->pData_buff, pScreenBmpStore->nBytes_per_Row * pScreenBmpStore->nHeight);
-	
-	CVPixelBufferUnlockBaseAddress(mPixelBuffer,0);
-	
-	[glView renderVideo:mPixelBuffer];
+//	int width = (int)CVPixelBufferGetWidth(pScreenBmpStore->pixelBuff);
+//	int height = (int)CVPixelBufferGetHeight(pScreenBmpStore->pixelBuff);
+//	mSizePixelBuffer = CGSizeMake( width, height );
+//
+//	glView.preferredRotation = -1 * atan2(0, -1);
+//	glView.presentationSize = mSizePixelBuffer;
+//	[glView renderVideoYUV:pScreenBmpStore->pixelBuff];
 }
 
 - (void)recalcMonitorRect:(CGSize)videoframe
@@ -895,6 +892,7 @@ extern unsigned int _getTickCount();
 	}
 	
 	if( self.glView ) {
+		GLog( tUI|tPinchZoom, (@"glView.frame ==> %dx%d", (int)viewCanvas.frame.size.width, (int)viewCanvas.frame.size.height ) );
 		self.glView.frame = viewCanvas.frame;
 	}
 }
@@ -909,7 +907,11 @@ extern unsigned int _getTickCount();
 	[self recalcMonitorRect:*pglFrameSize_Original];
 	self.glView.maxZoom = CGSizeMake( (pglFrameSize_Original->width*2.0 > 1920)?1920:pglFrameSize_Original->width*2.0, (pglFrameSize_Original->height*2.0 > 1080)?1080:pglFrameSize_Original->height*2.0 );
 	
-	*pglFrameSize_Scaling = self.glView.frame.size;
+	CGSize sizeRetina = CGSizeMake( self.glView.frame.size.width, self.glView.frame.size.height );
+	CGFloat fScale  = [[UIScreen mainScreen] scale];
+	sizeRetina.height *= fScale;
+	sizeRetina.width *= fScale;
+	*pglFrameSize_Scaling = sizeRetina ;
 }
 
 - (void)reportCodecId:(NSValue*)pointer

@@ -17,6 +17,8 @@
 #import <SystemConfiguration/CaptiveNetwork.h>
 #import "IQKeyboardManager.h"
 
+NSString *g_tpnsHostString = @"http://push.iotcplatform.com/apns/apns.php";
+
 NSMutableArray *camera_list;
 FMDatabase *database;
 NSString *deviceTokenString;

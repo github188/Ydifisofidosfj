@@ -15,7 +15,8 @@
 @interface VideoGenerator : NSObject
 
 @property (nonatomic) CGSize size;
-@property (nonatomic) NSURL* url;
+@property (nonatomic, assign) NSURL* url;
+@property (nonatomic) NSInteger targetChannel;
 @property (nonatomic) CMAudioFormatDescriptionRef audioFormatDescription;
 
 @property (readonly) MyCamera* camera;
@@ -28,7 +29,7 @@
 -(void)saveToAlbumWithCompletionHandler: (void (^)(NSError*)) handler;
 
 -(id)initWithDestinationURL:(NSURL*)url andCamera:(MyCamera*)camera;
--(void)startRecordingWithDuration:(NSTimeInterval)duration;
+-(void)startRecordingForChannel:(NSInteger) channel withDuration:(NSTimeInterval)duration;
 -(void)stopRecordingWithCompletionHandler:(void (^)(NSError* error)) handler;
 
 @end

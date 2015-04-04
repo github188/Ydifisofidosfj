@@ -25,9 +25,6 @@ extern NSString *deviceTokenString;
     
 	unsigned short mCodecId;
 	CameraShowGLView *glView;
-	CVPixelBufferPoolRef mPixelBufferPool;
-	CVPixelBufferRef mPixelBuffer;
-	CGSize mSizePixelBuffer;
 	
     UIView *portraitView;
     UIView *landscapeView;
@@ -51,6 +48,8 @@ extern NSString *deviceTokenString;
     
     NSTimer *tmrRecvPlayback;
 	BOOL bStopShowCompletedLock;
+    
+    BOOL isBack;
 }
 
 @property (nonatomic, assign) BOOL bStopShowCompletedLock;

@@ -32,6 +32,8 @@ extern NSString *const kApplicationDidEnterBackground;
 extern NSString *const kApplicationWillEnterForeground;
 extern NSString *const kApplicationDidEnterForeground;
 
+extern NSString *g_tpnsHostString;
+
 enum open_url_cmd{
 	emNoCmd = 0,
 	emShowTabIndexPage = 1,
