@@ -121,6 +121,8 @@ extern NSString *deviceTokenString;
     BOOL isWaitWiFiResp;
     BOOL isWaitReConnect;
     MyCamera *camNeedReconnect;
+    
+    BOOL isGoPlayEvent; //是否去了观看录像的界面
 }
 
 @property (nonatomic, assign) BOOL bStopShowCompletedLock;

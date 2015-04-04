@@ -233,7 +233,11 @@ extern unsigned int _getTickCount() ;
             NSNumber *tempChannel = [channelArray objectAtIndex:i];
             
             if (testCamera.sessionState == CONNECTION_STATE_CONNECTED && [testCamera getConnectionStateOfChannel:0] == CONNECTION_STATE_CONNECTED) {
+                testCamera.isShowInMultiView = NO;
                 [testCamera stopShow:[tempChannel integerValue]];
+                //[self waitStopShowCompleted:DEF_WAIT4STOPSHOW_TIME];
+                //[testCamera stopSoundToDevice:0];
+                //[testCamera stopSoundToPhone:0];
             }
         }
     }
@@ -257,8 +261,10 @@ extern unsigned int _getTickCount() ;
             NSNumber *tempChannel = [channelArray objectAtIndex:i];
             
             if (tempCamera.sessionState == CONNECTION_STATE_CONNECTED && [tempCamera getConnectionStateOfChannel:0] == CONNECTION_STATE_CONNECTED) {
-                tempCamera.isShowInMultiView = YES;
-                [tempCamera startShow:[tempChannel integerValue] ScreenObject:self];
+                if(!isGoPlayEvent){
+                    tempCamera.isShowInMultiView = YES;
+                    [tempCamera startShow:[tempChannel integerValue] ScreenObject:self];
+                }
             }
         }
     }
@@ -277,9 +283,10 @@ extern unsigned int _getTickCount() ;
                 [tempCamera connect:tempCamera.uid];
                 [tempCamera start:[tempChannel integerValue]];
             }
-            
-            tempCamera.isShowInMultiView = YES;
-            [tempCamera startShow:[tempChannel integerValue] ScreenObject:self];
+            if(!isGoPlayEvent){
+                tempCamera.isShowInMultiView = YES;
+                [tempCamera startShow:[tempChannel integerValue] ScreenObject:self];
+            }
             tempCamera.delegate2 = self;
         }
     }
@@ -442,8 +449,9 @@ extern unsigned int _getTickCount() ;
     [tempCamera disconnect];
     [tempCamera connect:tempCamera.uid];
     [tempCamera start:[tempChannel integerValue]];
-    
-    [tempCamera startShow:[tempChannel integerValue] ScreenObject:self];
+    if(!isGoPlayEvent){
+        [tempCamera startShow:[tempChannel integerValue] ScreenObject:self];
+    }
     tempCamera.delegate2 = self;
 }
 
@@ -559,6 +567,8 @@ extern unsigned int _getTickCount() ;
 }
 
 - (IBAction)goEventList:(id)sender {
+    
+    isGoPlayEvent=YES;
     
     [self camStopShow];
     
@@ -734,6 +744,9 @@ extern unsigned int _getTickCount() ;
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    if(isGoPlayEvent){
+        isGoPlayEvent=NO;
+    }
     
     if (isCamStopShow) {
         [self reStartShow];
@@ -882,7 +895,6 @@ extern unsigned int _getTickCount() ;
 }
 
 - (void)viewDidLoad {
-    
     isMoreSetOpen = NO;
 
     [self loadDeviceFromDatabase];
@@ -1170,7 +1182,9 @@ extern unsigned int _getTickCount() ;
             NSNumber *chNum = [channelArray objectAtIndex:i];
 			int ch = [chNum integerValue];
             GLog( tUI|tReStartShow, (@"\t{applicationDidBecomeActive}\tch:%d", ch) );
-			[testCamera startShow:ch ScreenObject:self];
+            if(!isGoPlayEvent){
+                [testCamera startShow:ch ScreenObject:self];
+            }
             if (selectedAudioMode == AUDIO_MODE_MICROPHONE)
 				[testCamera startSoundToDevice:ch];
             if (selectedAudioMode == AUDIO_MODE_SPEAKER)
@@ -1265,7 +1279,7 @@ extern unsigned int _getTickCount() ;
 - (void)waitStopShowCompleted:(unsigned int)uTimeOutInMs
 {
 	unsigned int uStart = _getTickCount();
-	while( self.bStopShowCompletedLock == FALSE ) {
+	while( true) {
 		usleep(1000);
 		unsigned int now = _getTickCount();
 		if( now - uStart >= uTimeOutInMs ) {
@@ -1419,7 +1433,9 @@ extern unsigned int _getTickCount() ;
             [camNeedReconnect disconnect];
             [camNeedReconnect connect:camNeedReconnect.uid];
             [camNeedReconnect start:camNeedReconnect.lastChannel];
-            [camNeedReconnect startShow:camNeedReconnect.lastChannel ScreenObject:self];
+            if(!isGoPlayEvent){
+                [camNeedReconnect startShow:camNeedReconnect.lastChannel ScreenObject:self];
+            }
             camNeedReconnect.delegate2 = self;
         }
     }
@@ -1584,7 +1600,9 @@ extern unsigned int _getTickCount() ;
             
             [tempCamera connect:tempCamera.uid];
             [tempCamera start:[tempChannel integerValue]];
-            [tempCamera startShow:[tempChannel integerValue] ScreenObject:self];
+            if(!isGoPlayEvent){
+                [tempCamera startShow:[tempChannel integerValue] ScreenObject:self];
+            }
             tempCamera.delegate2 = self;
         }
     }
@@ -1596,8 +1614,9 @@ extern unsigned int _getTickCount() ;
     NSNumber *tempChannel = 0;
     
     [self checkStatus];
-    
-    [tempCamera startShow:[tempChannel integerValue] ScreenObject:self];
+    if(!isGoPlayEvent){
+        [tempCamera startShow:[tempChannel integerValue] ScreenObject:self];
+    }
     
     tempCamera.delegate2 = self;
     
@@ -1923,7 +1942,9 @@ extern unsigned int _getTickCount() ;
         [changedCamera connect:changedCamera.uid];
         [changedCamera start:[tempChannel integerValue]];
     }
-    [changedCamera startShow:[tempChannel integerValue] ScreenObject:self];
+    if(!isGoPlayEvent){
+        [changedCamera startShow:[tempChannel integerValue] ScreenObject:self];
+    }
     changedCamera.delegate2 = self;
     
     SMsgAVIoctrlGetAudioOutFormatReq *s = (SMsgAVIoctrlGetAudioOutFormatReq *)malloc(sizeof(SMsgAVIoctrlGetAudioOutFormatReq));
