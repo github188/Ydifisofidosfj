@@ -2099,7 +2099,11 @@ extern unsigned int _getTickCount() {
 
 - (int) numberOfItemsForMenu:(MKHorizMenu *)tabView
 {
+#if defined(EasynPTarget)
     return [self.items count];
+#else
+    return [self.items count]-2;
+#endif
 }
 
 - (NSString*) horizMenu:(MKHorizMenu *)horizMenu titleForItemAtIndex:(NSUInteger)index
