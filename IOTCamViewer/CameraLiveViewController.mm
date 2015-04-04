@@ -616,7 +616,7 @@ extern unsigned int _getTickCount() {
         camera.isShowInLiveView = YES;
         
         self.videoGenerator = [[VideoGenerator alloc] initWithDestinationURL: url andCamera: camera];
-        [self.videoGenerator startRecordingWithDuration:180];
+        [self.videoGenerator startRecordingForChannel:selectedChannel withDuration:180];
         
         self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable", @"f+Btn", @"f-Btn",nil];
         self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable",@"f+Btn_Click", @"f-Btn_Click",nil];
