@@ -396,6 +396,9 @@ extern unsigned int _getTickCount() {
     } else {
         imgName = [NSString stringWithFormat:@"CH%d_%f.jpg", selectedChannel, [[NSDate date] timeIntervalSince1970]];
     }
+#else
+    [[iToast makeText:NSLocalizedString(@"Snapshot saved", @"")]show];
+    return;
 #endif
     UIImage *img = NULL;
     
@@ -821,6 +824,10 @@ extern unsigned int _getTickCount() {
     if (orientation == UIInterfaceOrientationLandscapeLeft ||
         orientation == UIInterfaceOrientationLandscapeRight) {
         
+        if(isActive&&isHiddenTopNav){
+            isHiddenTopNav=NO;
+        }
+        
         [monitorPortrait deattachCamera];
         [monitorLandscape attachCamera:camera];
         
@@ -830,6 +837,13 @@ extern unsigned int _getTickCount() {
         
         
 		NSLog( @"video frame {%d,%d}%dx%d", (int)self.monitorLandscape.frame.origin.x, (int)self.monitorLandscape.frame.origin.y, (int)self.monitorLandscape.frame.size.width, (int)self.monitorLandscape.frame.size.height);
+        
+        longQVGAView.frame=CGRectMake(longQVGAView.frame.origin.x, self.view.frame.size.height/2-longQVGAView.frame.size.height/2-33, longQVGAView.frame.size.width, longQVGAView.frame.size.height);
+        
+        //修复语音按钮的位置问题
+        longTalkButton.frame=CGRectMake(longTalkButton.frame.origin.x, self.view.frame.size.height-self.longHorizMenu.frame.size.height-longTalkButton.frame.size.height, longTalkButton.frame.size.width, longTalkButton.frame.size.height);
+        
+        
 		if( glView == nil ) {
 			glView = [[CameraShowGLView alloc] initWithFrame:self.monitorLandscape.frame];
             self.glView.parentFrame = self.monitorLandscape.frame;
@@ -1148,6 +1162,8 @@ extern unsigned int _getTickCount() {
                                                object:nil];
 
 	camera.delegate2 = self;
+    
+    
     
     [super viewDidLoad];
 }
