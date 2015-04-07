@@ -180,6 +180,7 @@
     controller.isFromAutoWifi=YES;
     [self.navigationController pushViewController:controller animated:YES];
     [controller release];
+    sleep(1);
     [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
 }
 
