@@ -35,6 +35,8 @@
     [negativeSpacer release];
     
     self.title=NSLocalizedStringFromTable(@"WIFI一键设置", @"easyn", nil);
+    [self.nextBtn setTitle:NSLocalizedStringFromTable(@"AddApWifiNextStep", @"easyn", nil) forState:UIControlStateNormal];
+    self.tipsLbl.text=NSLocalizedStringFromTable(@"AddApWifiStep2Tips", @"easyn", nil);
 }
 -(void)back:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];
@@ -66,7 +68,7 @@
 }
 -(BOOL)noWifiTips{
     if(!isConnectionWIFI){
-        [[iToast makeText:@"请让手机先连接wifi."]show];
+        [[iToast makeText:NSLocalizedStringFromTable(@"AddApWifiStep2NeedWifiTips", @"easyn", nil)]show];
         return YES;
     }
     return NO;

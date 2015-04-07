@@ -37,6 +37,8 @@
     [negativeSpacer release];
     
     self.title=NSLocalizedStringFromTable(@"WIFI一键设置", @"easyn", nil);
+    self.psdLbl.text=NSLocalizedString(@"Password", @"");
+    [self.settingBnr setTitle:NSLocalizedStringFromTable(@"AddApWifiStep3SettingBtnTitle", @"easyn", nil) forState:UIControlStateNormal];
     
     self.ssidInput.delegate=self;
     self.psdInput.delegate=self;
@@ -106,23 +108,23 @@
     
     if (ssid == nil || [ssid length] == 0) {
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"SSID不能为空！" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Warning", @"") message:NSLocalizedStringFromTable(@"AddApWifiSSIDTips", @"easyn", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", @"") otherButtonTitles:nil];
         [alert show];
     }
     else if (password == nil || [password length] == 0) {
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"密码不能为空！" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Warning", @"") message:NSLocalizedStringFromTable(@"AddApWifiPsdTips", @"easyn", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", @"") otherButtonTitles:nil];
         [alert show];
     }
     else if([ssid length] > 0 && [password length] > 0) {
-        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"提示" message:@"是否听到摄像机叮咚提示音" delegate:self cancelButtonTitle:@"是" otherButtonTitles:@"否", nil];
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"Warning", @"") message:NSLocalizedStringFromTable(@"AddApWifiAudioTips", @"easyn", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"YES", @"") otherButtonTitles:NSLocalizedString(@"NO", @""), nil];
         [alert show];
         [alert release];
     }
 }
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if(buttonIndex==1){
-        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"提示" message:@"请长按摄像机复位键10秒，重新设置。" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"Warning", @"") message:NSLocalizedStringFromTable(@"AddApWifiResetTips", @"easyn", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", @"") otherButtonTitles:nil, nil];
         [alert show];
         [alert release];
     }
@@ -133,7 +135,7 @@
         
         MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
         [self.navigationController.view addSubview:hud];
-        hud.detailsLabelText = @"正在配置WIFI,请耐心等待";
+        hud.detailsLabelText = NSLocalizedStringFromTable(@"AddApWifiWaitingTips", @"easyn", nil);
         [hud show:YES];
         [hud release];
         
@@ -146,7 +148,7 @@
                 if(result==0){
                     MBProgressHUD *hud1 = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
                     [self.navigationController.view addSubview:hud1];
-                    hud1.detailsLabelText = @"正在配置WIFI,请耐心等待";
+                    hud1.detailsLabelText = NSLocalizedStringFromTable(@"AddApWifiWaitingTips", @"easyn", nil);
                     [hud1 showAnimated:YES whileExecutingBlock:^{
                         sleep(60);
                     } completionBlock:^{
@@ -160,7 +162,7 @@
                     }];
                 }
                 else{
-                    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"提示" message:@"连接WIFI失败，可能密码错误！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"Warning", @"") message:NSLocalizedStringFromTable(@"AddApWifiErrorTips", @"easyn", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"Warning", @"") otherButtonTitles:nil, nil];
                     [alert show];
                     [alert release];
                 }

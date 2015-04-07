@@ -36,6 +36,11 @@
     [negativeSpacer release];
     
     self.title=NSLocalizedStringFromTable(@"WIFI一键设置", @"easyn", nil);
+    self.wifiTips.text=NSLocalizedStringFromTable(@"AddApWifiTips", @"easyn", nil);
+    self.wifitips2.text=NSLocalizedStringFromTable(@"AddApWifiTips2", @"easyn", nil);
+    self.otherTips.text=NSLocalizedStringFromTable(@"AddApWifiOtherTips", @"easyn", nil);
+    [self.wifiNextBtn setTitle:NSLocalizedStringFromTable(@"AddApWifiNextStep", @"easyn", nil) forState:UIControlStateNormal];
+    [self.otherNextBtn setTitle:NSLocalizedStringFromTable(@"AddApWifiNextStep", @"easyn", nil) forState:UIControlStateNormal];
     
 }
 -(void)back:(id)sender{
