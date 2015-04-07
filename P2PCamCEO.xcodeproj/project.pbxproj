@@ -1148,6 +1148,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0609569D1AD4208E00F00FE0 /* ko */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ko; path = ko.lproj/title_logo.png; sourceTree = "<group>"; };
+		0609569E1AD4208E00F00FE0 /* ko */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ko; path = "ko.lproj/title_logo@2x.png"; sourceTree = "<group>"; };
+		0609569F1AD4208F00F00FE0 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/easyn.strings; sourceTree = "<group>"; };
+		060956A11AD4208F00F00FE0 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/zxingLangString.strings; sourceTree = "<group>"; };
+		060956A21AD4209000F00FE0 /* ko */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ko; path = ko.lproj/AddCamera.xib; sourceTree = "<group>"; };
+		060956A31AD4209000F00FE0 /* ko */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ko; path = ko.lproj/mainWindow.xib; sourceTree = "<group>"; };
+		060956A41AD4209000F00FE0 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		060956A51AD4209000F00FE0 /* ko */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ko; path = ko.lproj/title_logo.png; sourceTree = "<group>"; };
+		060956A61AD4209000F00FE0 /* ko */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ko; path = "ko.lproj/title_logo@2x.png"; sourceTree = "<group>"; };
+		060956A81AD421F800F00FE0 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		060AF42A1AC43BED00D8828D /* HiSmartLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HiSmartLink.h; sourceTree = "<group>"; };
 		0631097C1ABA3D5D00C6F0F1 /* ChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseViewController.h; sourceTree = "<group>"; };
 		0631097D1ABA3D5D00C6F0F1 /* ChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseViewController.m; sourceTree = "<group>"; };
@@ -3141,6 +3151,7 @@
 				"zh-Hant",
 				"zh-Hans",
 				ja,
+				ko,
 			);
 			mainGroup = D8F71AA8148C5342007705B6;
 			productRefGroup = D8F71AB4148C5342007705B6 /* Products */;
@@ -4267,6 +4278,7 @@
 				0647DD001AB8674100F5553A /* en */,
 				0647DD021AB8674600F5553A /* zh-Hant */,
 				0647DD031AB8674A00F5553A /* zh-Hans */,
+				0609569D1AD4208E00F00FE0 /* ko */,
 			);
 			name = title_logo.png;
 			sourceTree = "<group>";
@@ -4277,6 +4289,7 @@
 				0647DD051AB8675200F5553A /* en */,
 				0647DD071AB8675300F5553A /* zh-Hant */,
 				0647DD081AB8675400F5553A /* zh-Hans */,
+				0609569E1AD4208E00F00FE0 /* ko */,
 			);
 			name = "title_logo@2x.png";
 			sourceTree = "<group>";
@@ -4287,6 +4300,7 @@
 				0647DD0B1AB86C2F00F5553A /* en */,
 				0647DD0D1AB86C3200F5553A /* zh-Hant */,
 				0647DD0E1AB86C3300F5553A /* zh-Hans */,
+				060956A51AD4209000F00FE0 /* ko */,
 			);
 			name = title_logo.png;
 			sourceTree = "<group>";
@@ -4297,6 +4311,7 @@
 				0647DD101AB86C3C00F5553A /* en */,
 				0647DD121AB86C3E00F5553A /* zh-Hant */,
 				0647DD131AB86C3F00F5553A /* zh-Hans */,
+				060956A61AD4209000F00FE0 /* ko */,
 			);
 			name = "title_logo@2x.png";
 			sourceTree = "<group>";
@@ -4307,6 +4322,7 @@
 				068879381ABE1B900017A41A /* en */,
 				0688793A1ABE1B9C0017A41A /* zh-Hant */,
 				0688793B1ABE1B9D0017A41A /* zh-Hans */,
+				0609569F1AD4208F00F00FE0 /* ko */,
 			);
 			name = easyn.strings;
 			sourceTree = "<group>";
@@ -4317,6 +4333,7 @@
 				61082AF21531CE4200DDF07D /* en */,
 				61082AF71531CEA100DDF07D /* zh-Hant */,
 				619274DC157EF65D00E6B5A2 /* zh-Hans */,
+				060956A31AD4209000F00FE0 /* ko */,
 			);
 			name = mainWindow.xib;
 			sourceTree = "<group>";
@@ -4327,6 +4344,7 @@
 				61890F2C1533CCA00031B4EC /* en */,
 				61890F2E1533CCAB0031B4EC /* zh-Hant */,
 				619274DD157EF70500E6B5A2 /* zh-Hans */,
+				060956A21AD4209000F00FE0 /* ko */,
 			);
 			name = AddCamera.xib;
 			sourceTree = "<group>";
@@ -4337,6 +4355,7 @@
 				61890F341533D13B0031B4EC /* en */,
 				61890F361533D1430031B4EC /* zh-Hant */,
 				619274DB157EF65600E6B5A2 /* zh-Hans */,
+				060956A81AD421F800F00FE0 /* ko */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -4347,6 +4366,7 @@
 				86418B081996781E00A25BB8 /* en */,
 				86418B0A1996782C00A25BB8 /* zh-Hans */,
 				86418B0B1996783A00A25BB8 /* zh-Hant */,
+				060956A11AD4208F00F00FE0 /* ko */,
 			);
 			name = zxingLangString.strings;
 			sourceTree = "<group>";
@@ -4355,6 +4375,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D8F71AC1148C5342007705B6 /* en */,
+				060956A41AD4209000F00FE0 /* ko */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
