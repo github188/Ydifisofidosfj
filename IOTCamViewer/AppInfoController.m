@@ -107,7 +107,7 @@
     [appIconView setContentMode:UIViewContentModeScaleAspectFit];
     [appIconView setBackgroundColor:[UIColor clearColor]];	    
     
-    UILabel *appName = [[UILabel alloc]initWithFrame:CGRectMake(0, 140, [[UIScreen mainScreen] bounds].size.width, 30)];
+    UILabel *appName = [[UILabel alloc]initWithFrame:CGRectMake(0, 160, [[UIScreen mainScreen] bounds].size.width, 30)];
     [appName setBackgroundColor:[UIColor clearColor]];
     [appName setShadowColor:[UIColor whiteColor]];
     [appName setShadowOffset:CGSizeMake(0, 1)];
@@ -115,28 +115,12 @@
     [appName setText:prodName];
     [appName setTextAlignment:UITextAlignmentCenter];
     
-    UILabel *appVer = [[UILabel alloc]initWithFrame:CGRectMake(0, 165, [[UIScreen mainScreen] bounds].size.width, 30)];
+    UILabel *appVer = [[UILabel alloc]initWithFrame:CGRectMake(0, 180, [[UIScreen mainScreen] bounds].size.width, 30)];
     [appVer setBackgroundColor:[UIColor clearColor]];
     [appVer setShadowColor:[UIColor whiteColor]];
     [appVer setShadowOffset:CGSizeMake(0, 1)];
     [appVer setText:[NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"Version", @""), [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]]];
     [appVer setTextAlignment:UITextAlignmentCenter];
-    
-    UILabel *IOTCVer = [[UILabel alloc]initWithFrame:CGRectMake(0, 195, [[UIScreen mainScreen] bounds].size.width, 30)];
-    [IOTCVer setBackgroundColor:[UIColor clearColor]];
-    [IOTCVer setShadowColor:[UIColor whiteColor]];
-    [IOTCVer setShadowOffset:CGSizeMake(0, 1)];
-    [IOTCVer setText:[NSString stringWithFormat:@"IOTCAPIs %@", [Camera getIOTCAPIsVerion]]];
-    [IOTCVer setFont:[UIFont fontWithName:@"Arial" size:14]];
-    [IOTCVer setTextAlignment:UITextAlignmentCenter];
-   
-    UILabel *AVAPIVer = [[UILabel alloc]initWithFrame:CGRectMake(0, 215, [[UIScreen mainScreen] bounds].size.width, 30)];
-    [AVAPIVer setBackgroundColor:[UIColor clearColor]];
-    [AVAPIVer setShadowColor:[UIColor whiteColor]];
-    [AVAPIVer setShadowOffset:CGSizeMake(0, 1)];
-    [AVAPIVer setText:[NSString stringWithFormat:@"AVAPIs %@", [Camera getAVAPIsVersion]]];
-    [AVAPIVer setFont:[UIFont fontWithName:@"Arial" size:14]];
-    [AVAPIVer setTextAlignment:UITextAlignmentCenter];
     
     UILabel *copyright = [[UILabel alloc] initWithFrame:CGRectMake(0, 235, [[UIScreen mainScreen] bounds].size.width, 30)];
     [copyright setBackgroundColor:[UIColor clearColor]];
@@ -151,15 +135,11 @@
     [view addSubview:appIconView];
     [view addSubview:appName];
     [view addSubview:appVer];
-    //[view addSubview:IOTCVer];
-    //[view addSubview:AVAPIVer];
     [view addSubview:copyright];
     
     [appIconView release];
     [appName release];
     [appVer release];
-    [IOTCVer release];
-    [AVAPIVer release];
     [copyright release];
     
     return [view autorelease];

@@ -18,7 +18,7 @@
 
 #import "MKHorizMenu.h"
 #define kButtonBaseTag 10000
-#define kLeftOffset 50
+#define kLeftOffset 5
 
 @implementation MKHorizMenu
 
@@ -56,7 +56,7 @@
     //self.selectedImage = [dataSource selectedItemImageForMenu:self];
 
     UIFont *buttonFont = [UIFont boldSystemFontOfSize:15];
-    int buttonPadding = 25;
+    int buttonPadding = 5;
     
     int tag = kButtonBaseTag;    
     int xPos = kLeftOffset;
@@ -68,27 +68,23 @@
         [customButton setTitle:title forState:UIControlStateNormal];
         customButton.titleLabel.font = buttonFont;
         
-        [customButton setBackgroundImage:[UIImage imageNamed:[dataSource horizMenu:self titleForItemAtIndex:i]] forState:UIControlStateNormal];
+        UIImage *bgImg=[UIImage imageNamed:[dataSource horizMenu:self titleForItemAtIndex:i]];
+        
+        [customButton setBackgroundImage:bgImg forState:UIControlStateNormal];
         [customButton setBackgroundImage:[UIImage imageNamed:[dataSource selectedItemImageForMenu:self itemAtIndex:i]] forState:UIControlStateSelected];
         
         customButton.tag = tag++;
         [customButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
         
-//        int buttonWidth = [title sizeWithFont:customButton.titleLabel.font
-//                            constrainedToSize:CGSizeMake(150, 28)
-//                                lineBreakMode:UILineBreakModeClip].width;
-        
-//        customButton.frame = CGRectMake(xPos, 7, buttonWidth + buttonPadding, 38);
-        customButton.frame = CGRectMake(xPos, 3, 47, 38);
-        xPos += 47;
+        customButton.frame = CGRectMake(xPos, 3, bgImg.size.width, 38);
+        xPos += bgImg.size.width;
         xPos += buttonPadding;
         [self addSubview:customButton];        
     }
     
-    // bretdabaker: added right padding to contentSize
     xPos += kLeftOffset;
-    
-    self.contentSize = CGSizeMake(xPos, 41);    
+    if(xPos<self.frame.size.width) xPos=self.frame.size.width;
+    self.contentSize = CGSizeMake(xPos, self.frame.size.height);
     [self layoutSubviews];  
 }
 

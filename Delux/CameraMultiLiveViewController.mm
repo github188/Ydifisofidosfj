@@ -744,6 +744,10 @@ extern unsigned int _getTickCount() ;
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    //设置功能键位置
+    //居中
+    moreFunctionView.frame=CGRectMake(self.view.frame.size.width/2-moreFunctionView.frame.size.width/2, self.view.frame.size.height/2-moreFunctionView.frame.size.height/2, moreFunctionView.frame.size.width, moreFunctionView.frame.size.height);
+    
     if(isGoPlayEvent){
         isGoPlayEvent=NO;
     }
