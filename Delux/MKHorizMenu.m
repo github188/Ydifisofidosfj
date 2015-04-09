@@ -100,7 +100,7 @@
 - (void)setUnselectedIndex:(int)index animated:(BOOL)animated {
     UIButton *thisButton = (UIButton*) [self viewWithTag:index + kButtonBaseTag];
     thisButton.selected = NO;
-    [self setContentOffset:CGPointMake(thisButton.frame.origin.x - kLeftOffset, 0) animated:animated];
+    //[self setContentOffset:CGPointMake(thisButton.frame.origin.x - kLeftOffset, 0) animated:animated];
 }
 
 -(void) buttonTapped:(id) sender
