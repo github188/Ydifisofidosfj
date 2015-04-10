@@ -60,10 +60,23 @@
     
     int tag = kButtonBaseTag;    
     int xPos = kLeftOffset;
+    
+    CGFloat btnTotalWidth=0.0f;
+    for(int i = 0 ; i < self.itemCount; i ++){
+        UIImage *bgImg=[UIImage imageNamed:[dataSource horizMenu:self titleForItemAtIndex:i]];
+        btnTotalWidth+=bgImg.size.width;
+    }
+    
+    //计算左右变距
+    CGFloat totalLen=(self.itemCount-1)*buttonPadding+btnTotalWidth;
+    CGFloat leftX=(self.frame.size.width-totalLen)/2;
+    if(leftX<0) leftX=xPos;
+    xPos=leftX;
+    
 
     for(int i = 0 ; i < self.itemCount; i ++)
     {
-        NSString *title = @"";//[dataSource horizMenu:self titleForItemAtIndex:i];
+        NSString *title = @"";
         UIButton *customButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [customButton setTitle:title forState:UIControlStateNormal];
         customButton.titleLabel.font = buttonFont;
@@ -82,17 +95,10 @@
         [self addSubview:customButton];        
     }
     
-    xPos += kLeftOffset;
-#if defined(EasynPTarget)
+    //xPos += kLeftOffset;
+
     if(xPos<self.frame.size.width) xPos=self.frame.size.width;
     self.contentSize = CGSizeMake(xPos, self.frame.size.height);
-#else
-    //self居中显示
-    if(xPos<self.frame.size.width&&self.itemCount>0){
-        self.frame=CGRectMake(self.superview.frame.size.width/2-xPos/2, self.frame.origin.y, xPos, self.frame.size.height);
-    }
-    self.contentSize = CGSizeMake(xPos, self.frame.size.height);
-#endif
     
     [self layoutSubviews];  
 }
