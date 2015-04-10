@@ -69,7 +69,7 @@
     
     //计算左右变距
     CGFloat totalLen=(self.itemCount-1)*buttonPadding+btnTotalWidth;
-    CGFloat leftX=(self.frame.size.width-totalLen)/2;
+    CGFloat leftX=(self.superview.frame.size.width-totalLen)/2;
     if(leftX<0) leftX=xPos;
     xPos=leftX;
     
@@ -91,11 +91,13 @@
         
         customButton.frame = CGRectMake(xPos, 3, bgImg.size.width, 38);
         xPos += bgImg.size.width;
-        xPos += buttonPadding;
-        [self addSubview:customButton];        
+        if(i+1<self.itemCount){
+            xPos += buttonPadding;
+        }
+        [self addSubview:customButton];
     }
     
-    //xPos += kLeftOffset;
+    xPos += leftX;
 
     if(xPos<self.frame.size.width) xPos=self.frame.size.width;
     self.contentSize = CGSizeMake(xPos, self.frame.size.height);
