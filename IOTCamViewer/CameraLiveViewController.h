@@ -192,6 +192,7 @@ extern NSString *deviceTokenString;
 
 @property (nonatomic, retain) IBOutlet MKHorizMenu *horizMenu;
 @property (nonatomic, retain) IBOutlet MKHorizMenu *longHorizMenu;
+
 @property (nonatomic, retain) NSMutableArray *items;
 @property (nonatomic, retain) NSMutableArray *selectItems;
 @property (nonatomic, retain)NSTimer *hideToolBarTimer;

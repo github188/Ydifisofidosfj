@@ -834,6 +834,8 @@ extern unsigned int _getTickCount() {
 		[self removeGLView:FALSE];
         self.view = self.landscapeView;
         
+        [self.longHorizMenu reloadData];
+        
         
         
 		NSLog( @"video frame {%d,%d}%dx%d", (int)self.monitorLandscape.frame.origin.x, (int)self.monitorLandscape.frame.origin.y, (int)self.monitorLandscape.frame.size.width, (int)self.monitorLandscape.frame.size.height);
@@ -884,6 +886,9 @@ extern unsigned int _getTickCount() {
         
 		[self removeGLView:TRUE];
         self.view = self.portraitView;
+        
+        [self.horizMenu reloadData];
+        
         
         //self.myPtzView.frame=CGRectMake(0, self.horizMenu.frame.origin.y-10-self.myPtzView.frame.size.height-40, self.myPtzView.frame.size.width, self.myPtzView.frame.size.height);
         
@@ -1070,9 +1075,6 @@ extern unsigned int _getTickCount() {
     self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",nil];
     self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click", nil];
     
-    [self.horizMenu reloadData];
-    [self.longHorizMenu reloadData];
-    
     [scrollQVGAView setContentSize:qvgaView.frame.size];
     [scrollQVGAView setClipsToBounds:YES];
     scrollQVGAView.delegate = self;
@@ -1212,6 +1214,8 @@ extern unsigned int _getTickCount() {
     self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
     [self changeOrientation:self.interfaceOrientation];
     [self getEMode];
+    
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -2233,7 +2237,7 @@ extern unsigned int _getTickCount() {
             memset(s, 0, sizeof(SMsgAVIoctrlSetVideoModeReq));
             
             s->channel = 0;
-            s->mode = 1;
+            s->mode = isHorizontalFlip?3:1;
             
             [camera sendIOCtrlToChannel:0
                                    Type:IOTYPE_USER_IPCAM_SET_VIDEOMODE_REQ
@@ -2243,7 +2247,7 @@ extern unsigned int _getTickCount() {
             free(s);
             
             isVerticalFlip = YES;
-            isHorizontalFlip = NO;
+            //isHorizontalFlip = NO;
             
         } else {
             
@@ -2251,7 +2255,7 @@ extern unsigned int _getTickCount() {
             memset(s, 0, sizeof(SMsgAVIoctrlSetVideoModeReq));
             
             s->channel = 0;
-            s->mode = 0;
+            s->mode = isHorizontalFlip?2:0;
             
             [camera sendIOCtrlToChannel:0
                                    Type:IOTYPE_USER_IPCAM_SET_VIDEOMODE_REQ
@@ -2283,7 +2287,7 @@ extern unsigned int _getTickCount() {
             memset(s, 0, sizeof(SMsgAVIoctrlSetVideoModeReq));
             
             s->channel = 0;
-            s->mode = 2;
+            s->mode = isVerticalFlip?3:2;
             
             [camera sendIOCtrlToChannel:0
                                    Type:IOTYPE_USER_IPCAM_SET_VIDEOMODE_REQ
@@ -2293,7 +2297,7 @@ extern unsigned int _getTickCount() {
             free(s);
             
             isHorizontalFlip = YES;
-            isVerticalFlip = NO;
+            //isVerticalFlip = NO;
             
         } else {
             
@@ -2301,7 +2305,7 @@ extern unsigned int _getTickCount() {
             memset(s, 0, sizeof(SMsgAVIoctrlSetVideoModeReq));
             
             s->channel = 0;
-            s->mode = 0;
+            s->mode = isVerticalFlip?1:0;
             
             [camera sendIOCtrlToChannel:0
                                    Type:IOTYPE_USER_IPCAM_SET_VIDEOMODE_REQ
@@ -2450,6 +2454,7 @@ extern unsigned int _getTickCount() {
         isHiddenTopNav=!hidden;
         
         [self.longHorizMenu setHidden:!hidden];
+        
         [[UIApplication sharedApplication] setStatusBarHidden:isHiddenTopNav withAnimation:UIStatusBarAnimationNone];
         [self.navigationController setNavigationBarHidden:isHiddenTopNav animated:YES];
         

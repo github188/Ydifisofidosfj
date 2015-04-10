@@ -83,8 +83,17 @@
     }
     
     xPos += kLeftOffset;
+#if defined(EasynPTarget)
     if(xPos<self.frame.size.width) xPos=self.frame.size.width;
     self.contentSize = CGSizeMake(xPos, self.frame.size.height);
+#else
+    //self居中显示
+    if(xPos<self.frame.size.width&&self.itemCount>0){
+        self.frame=CGRectMake(self.superview.frame.size.width/2-xPos/2, self.frame.origin.y, xPos, self.frame.size.height);
+    }
+    self.contentSize = CGSizeMake(xPos, self.frame.size.height);
+#endif
+    
     [self layoutSubviews];  
 }
 

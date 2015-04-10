@@ -170,7 +170,10 @@
         makeSureAlertView.tag = DELETE_PHOTO_ALERT_VIEW_TAG;
         [makeSureAlertView show];
     }else {
-        UIAlertView *makeSureAlertView = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Please select photos to delete.", nil) message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:NSLocalizedString(@"OK", nil), nil] autorelease];
+        
+        NSString *tips=isRecordFileView?@"Please select records to delete.":@"Please select photos to delete.";
+        
+        UIAlertView *makeSureAlertView = [[[UIAlertView alloc] initWithTitle:NSLocalizedString(tips, nil) message:nil delegate:self cancelButtonTitle:nil otherButtonTitles:NSLocalizedString(@"OK", nil), nil] autorelease];
         makeSureAlertView.tag = NO_PHOTO_TO_DELETE_ALERT_VIEW_TAG;
         [makeSureAlertView show];
     }
