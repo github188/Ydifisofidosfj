@@ -43,6 +43,9 @@
     self.ssidInput.delegate=self;
     self.psdInput.delegate=self;
     
+    self.viewPsdLbl.text=NSLocalizedStringFromTable(@"ViewPsdLbl", @"easyn", nil);
+    self.psdInput.secureTextEntry=NO;
+    
 }
 - (BOOL)textFieldShouldReturn:(UITextField *) textField
 {
@@ -93,6 +96,8 @@
     [_ssidInput release];
     [_psdInput release];
     [_settingBnr release];
+    [_viewPsdBtn release];
+    [_viewPsdLbl release];
     [super dealloc];
 }
 - (IBAction)setting:(id)sender {
@@ -157,6 +162,7 @@
                         //返回搜索设备界面
                         LANSearchController *controller = [[LANSearchController alloc] init];
                         controller.delegate = self;
+                        controller.isFromAutoWifi=YES;
                         [self.navigationController pushViewController:controller animated:YES];
                         [controller release];
                     }];
@@ -175,7 +181,7 @@
 #pragma mark --LANSearchControllerDelegate
 - (void) didSelectUID:(NSString *)selectedUid{
     
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    /*[MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     AddCameraDetailController *controller = [[AddCameraDetailController alloc] initWithNibName:@"AddCameraDetail" bundle:nil delegate:[[self.navigationController viewControllers] objectAtIndex:0]];
     controller.uid=selectedUid;
@@ -183,7 +189,17 @@
     [self.navigationController pushViewController:controller animated:YES];
     [controller release];
     sleep(1);
-    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];*/
 }
 
+- (IBAction)viewPsdAction:(id)sender {
+    if(self.psdInput.secureTextEntry){
+        self.psdInput.secureTextEntry=NO;
+        [self.viewPsdBtn setBackgroundImage:[UIImage imageNamed:@"remeberpsd1.png"] forState:UIControlStateNormal];
+    }
+    else{
+        self.psdInput.secureTextEntry=YES;
+        [self.viewPsdBtn setBackgroundImage:[UIImage imageNamed:@"remeberpsd2.png"] forState:UIControlStateNormal];
+    }
+}
 @end

@@ -19,5 +19,9 @@
 @property (retain, nonatomic) IBOutlet UIButton *settingBnr;
 - (IBAction)setting:(id)sender;
 
+@property (retain, nonatomic) IBOutlet UIButton *viewPsdBtn;
+- (IBAction)viewPsdAction:(id)sender;
+@property (retain, nonatomic) IBOutlet UILabel *viewPsdLbl;
+
 
 @end

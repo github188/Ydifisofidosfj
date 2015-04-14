@@ -10,6 +10,7 @@
 #import <IOTCamera/Camera.h>
 #import "LANSearchController.h"
 #import "LANSearchDevice.h"
+#import "AddCameraDetailController.h"
 
 @class LANSearchDevice;
 
@@ -167,8 +168,17 @@
     
     NSUInteger row = [indexPath row];    
     LANSearchDevice *dev = [searchResult objectAtIndex:row];
-    [self.navigationController popViewControllerAnimated:YES];
-    [self.delegate didSelectUID:dev.uid];
+    if(self.isFromAutoWifi){
+        AddCameraDetailController *controller = [[AddCameraDetailController alloc] initWithNibName:@"AddCameraDetail" bundle:nil delegate:[[self.navigationController viewControllers] objectAtIndex:0]];
+        controller.uid=dev.uid;
+        controller.isFromAutoWifi=self.isFromAutoWifi;
+        [self.navigationController pushViewController:controller animated:YES];
+        [controller release];
+    }
+    else{
+        [self.navigationController popViewControllerAnimated:YES];
+        [self.delegate didSelectUID:dev.uid];
+    }
 }
 
 @end

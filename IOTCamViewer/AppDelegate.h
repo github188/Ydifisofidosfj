@@ -15,7 +15,7 @@
 #import "FMDatabaseQueue.h"
 #import "MyCamera.h"
 
-#define MAX_CAMERA_LIMIT 4
+#define MAX_CAMERA_LIMIT 99
 
 #define SQLCMD_CREATE_TABLE_DEVICE @"CREATE TABLE IF NOT EXISTS device(id INTEGER PRIMARY KEY AUTOINCREMENT, dev_uid TEXT, dev_nickname TEXT, dev_name TEXT, dev_pwd TEXT, view_acc TEXT, view_pwd TEXT, ask_format_sdcard INTEGER, channel INTEGER, sync INTEGER, isFromCloud INTEGER)"
 

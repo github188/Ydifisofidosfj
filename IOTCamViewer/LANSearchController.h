@@ -20,6 +20,7 @@
 
 @property (nonatomic, retain) id<LANSearchDelegate> delegate;
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
+@property(nonatomic) BOOL isFromAutoWifi;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil delegate:(id<LANSearchDelegate>)delegate;
 - (IBAction)refresh:(id)sender;

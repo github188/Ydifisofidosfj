@@ -821,6 +821,9 @@ extern unsigned int _getTickCount() ;
     }
     
     for (int i=0;i<4;i++) {
+        if([cameraArray count]<i+1){
+            break;
+        }
         MyCamera *tempCamera = [cameraArray objectAtIndex:i];
         
         if([[channelArray objectAtIndex:i] intValue]!=-1){

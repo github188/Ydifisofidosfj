@@ -13,3 +13,4 @@
 "AddApWifiResetTips"="请长按摄像机复位键10秒，重新设置。";
 "AddApWifiWaitingTips"="正在配置WIFI,请耐心等待";
 "AddApWifiErrorTips"="连接WIFI失败，可能密码错误！";
+"ViewPsdLbl"="显示密码";
