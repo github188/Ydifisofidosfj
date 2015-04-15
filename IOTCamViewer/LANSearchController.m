@@ -171,7 +171,7 @@
     if(self.isFromAutoWifi){
         AddCameraDetailController *controller = [[AddCameraDetailController alloc] initWithNibName:@"AddCameraDetail" bundle:nil delegate:[[self.navigationController viewControllers] objectAtIndex:0]];
         controller.uid=dev.uid;
-        controller.isFromAutoWifi=self.isFromAutoWifi;
+        //controller.isFromAutoWifi=self.isFromAutoWifi;
         [self.navigationController pushViewController:controller animated:YES];
         [controller release];
     }

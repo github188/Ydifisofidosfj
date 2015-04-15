@@ -69,6 +69,9 @@
 - (void)setCloud:(NSInteger)isFromCloud;
 
 + (NSString*)getConnModeString:(NSInteger)connMode;
++(NSString *)cameraQVGAKey:(NSString *)uid;
++(void)setCameraQVGA:(NSInteger)v ca:(MyCamera *)camera;
++(void)loadCameraQVGA:(MyCamera *)ca;
 
 @end
 

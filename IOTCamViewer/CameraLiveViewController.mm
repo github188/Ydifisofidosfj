@@ -512,6 +512,8 @@ extern unsigned int _getTickCount() {
     s->channel = 0;
     s->quality = [(UIView*)sender tag];
     
+    [MyCamera setCameraQVGA:[(UIView*)sender tag] ca:self.camera];
+    
     [camera sendIOCtrlToChannel:0
                            Type:IOTYPE_USER_IPCAM_SETSTREAMCTRL_REQ
                            Data:(char *)s
@@ -1286,7 +1288,7 @@ extern unsigned int _getTickCount() {
 			SMsgAVIoctrlTimeZone s3={0};
 			s3.cbSize = sizeof(s3);
 			[camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];
-			
+            
         }
         
         if ( selectedChannel != 0 && [camera getConnectionStateOfChannel:selectedChannel] != CONNECTION_STATE_CONNECTED) {
@@ -1294,6 +1296,8 @@ extern unsigned int _getTickCount() {
         }
         
         [camera startShow:selectedChannel ScreenObject:self];
+        
+        
         
         [loadingViewLandscape setHidden:NO];
         [loadingViewPortrait setHidden:NO];
@@ -1525,7 +1529,6 @@ extern unsigned int _getTickCount() {
         SMsgAVIoctrlSetStreamCtrlResp* pResult=(SMsgAVIoctrlSetStreamCtrlResp*)data;
         NSLog(@"IOTYPE_USER_IPCAM_SETSTREAMCTRL_RESP result=%d",pResult->result);
         if (camera_==camera) {
-			
 			[camera reStartShow:selectedChannel withCompleteBlock:^(void){
 				
 				// UI need to forbiden User invoke reStartShow again before program runs to here!

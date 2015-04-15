@@ -211,6 +211,8 @@ extern unsigned int _getTickCount() ;
 			SMsgAVIoctrlTimeZone s3={0};
 			s3.cbSize = sizeof(s3);
 			[tempCamera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];
+            
+            [MyCamera loadCameraQVGA:tempCamera];
 			
             [camera_list addObject:tempCamera];
             [tempCamera release];

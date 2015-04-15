@@ -434,4 +434,35 @@ BOOL g_bDiagnostic = FALSE;
 //    return;
 //}
 
+
++(NSString *)cameraQVGAKey:(NSString *)uid{
+    return [NSString stringWithFormat:@"%@QVGA",uid];
+}
+
++(void)setCameraQVGA:(NSInteger)v ca:(MyCamera *)camera{
+    NSUserDefaults *userDefault=[NSUserDefaults standardUserDefaults];
+    NSString *key=[MyCamera cameraQVGAKey:camera.uid];
+    [userDefault setInteger:v forKey:key];
+}
++(void)loadCameraQVGA:(MyCamera *)ca{
+    NSUserDefaults *userDefault=[NSUserDefaults standardUserDefaults];
+    NSString *key=[MyCamera cameraQVGAKey:ca.uid];
+    NSInteger v=[userDefault integerForKey:key];
+    v=v==0?5:v;
+    
+    SMsgAVIoctrlSetStreamCtrlReq *quality = (SMsgAVIoctrlSetStreamCtrlReq *)malloc(sizeof(SMsgAVIoctrlSetStreamCtrlReq));
+    memset(quality, 0, sizeof(SMsgAVIoctrlSetStreamCtrlReq));
+    
+    quality->channel = 0;
+    quality->quality = v;
+    
+    [ca sendIOCtrlToChannel:0
+                       Type:IOTYPE_USER_IPCAM_SETSTREAMCTRL_REQ
+                       Data:(char *)quality
+                   DataSize:sizeof(SMsgAVIoctrlSetStreamCtrlReq)];
+    
+    free(quality);
+}
+
+
 @end
