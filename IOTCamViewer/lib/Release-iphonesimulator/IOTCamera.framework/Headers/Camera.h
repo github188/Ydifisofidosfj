@@ -37,10 +37,21 @@ struct SUB_STREAM
 };
 typedef struct SUB_STREAM SubStream_t;
 
+typedef struct tagJB_FRAME_HEADER
+{
+    unsigned int wFrameIndex;
+    unsigned short codec_id;
+    unsigned int nFrameSize;
+    unsigned int nTimeTick;
+    char flag;
+    char reserved;
+}JB_FRAME_HEADER,*PJB_FRAME_HEADER;
+
 #import <Foundation/Foundation.h>
 #import <AudioToolbox/AudioToolbox.h>
 
 @protocol CameraDelegate;
+@protocol CameraPlaybackDelegate;
 
 @class Camera;
 
@@ -59,22 +70,10 @@ typedef struct SUB_STREAM SubStream_t;
 @interface Camera : NSObject {
     BOOL isShowInLiveView;
     BOOL isShowInMultiView;
-    BOOL isRecordForAlex;
-    BOOL isRecording;
-	
-	BOOL isChangeChannel;
-	BOOL isCommonTypePFrame;
-	BOOL isBufferFromIFrame;
 }
-
-@property (nonatomic, assign) BOOL isChangeChannel;
-@property (nonatomic, assign) BOOL isCommonTypePFrame;
-@property (nonatomic, assign) BOOL isBufferFromIFrame;
 
 @property (nonatomic, assign) BOOL isShowInLiveView;
 @property (nonatomic, assign) BOOL isShowInMultiView;
-@property (nonatomic, assign) BOOL isRecordForAlex;
-@property (nonatomic, assign) BOOL isRecording;
 @property (copy) NSString *name;
 @property (copy, readonly) NSString *uid;
 @property (readonly) NSInteger sessionID;
@@ -90,6 +89,7 @@ typedef struct SUB_STREAM SubStream_t;
 
 @property (nonatomic, assign) NSMutableDictionary* mobScreenDict;
 @property (nonatomic, assign) id<CameraDelegate> delegate;
+@property (nonatomic, assign) id<CameraPlaybackDelegate> delegateForLocalPlayback;
 
 @property (nonatomic, assign) id<VideoRecorderDelegate> videoRecorderDelegate;
 
@@ -116,11 +116,11 @@ typedef struct SUB_STREAM SubStream_t;
 - (void)startSoundToDevice:(NSInteger)channel;
 - (void)stopSoundToDevice:(NSInteger)channel;
 - (void)sendIOCtrlToChannel:(NSInteger)channel Type:(NSInteger)type Data:(char *)buff DataSize:(NSInteger)size;
-- (unsigned int)getChannel:(NSInteger)channel Snapshot:(char *)imgData dataSize:(unsigned int)size WithImageWidth:(unsigned int *)width ImageHeight:(unsigned int *)height;
-- (unsigned int)getChannel:(NSInteger)channel Snapshot:(char *)imgData DataSize:(unsigned int)size ImageType:(unsigned int*)codec_id WithImageWidth:(unsigned int *)width ImageHeight:(unsigned int *)height;
+- (unsigned int)getChannel:(NSInteger)channel Snapshot:(char *)imgData dataSize:(unsigned long)size WithImageWidth:(unsigned int *)width ImageHeight:(unsigned int *)height;
+- (unsigned int)getChannel:(NSInteger)channel Snapshot:(char *)imgData DataSize:(unsigned long)size ImageType:(unsigned int*)codec_id WithImageWidth:(unsigned int *)width ImageHeight:(unsigned int *)height;
 - (NSString *)getViewAccountOfChannel:(NSInteger)channel;
 - (NSString *)getViewPasswordOfChannel:(NSInteger)channel;
-- (unsigned int)getServiceTypeOfChannel:(NSInteger)channel;
+- (unsigned long)getServiceTypeOfChannel:(NSInteger)channel;
 - (int)getConnectionStateOfChannel:(NSInteger)channel;
 
 -(void)ipcamStart:(NSInteger)channel;
@@ -128,17 +128,14 @@ typedef struct SUB_STREAM SubStream_t;
 
 - (void)resetReportCodecId:(int)channel;
 
-- (BOOL)isHWDecoding:(int)channel;
-
-//檢查某個channel是否是播放狀態
-- (BOOL)isAVChannelStartShow:(int)channel;
-
-//縮圖
-- (UIImage*)getThumbnail:(unsigned int)channel;
-
-//刪除某個channel縮圖
-- (void)deleteThumbnail:(unsigned int)channel;
-
+-(void)startRecording:(NSInteger)channel FileName:(NSString*)fileName;
+-(void)stopRecording:(NSInteger)channel;
+-(Boolean) isRecording:(NSInteger)channel;
+-(int)startFilePlayback:(NSString*)fileName ScreenObject:(NSObject*)obScreen;
+-(void)doLocalPlaybackVideo:(NSDictionary*)dict;
+-(void)doLocalPlaybackAudio:(NSDictionary *)dict;
+-(void)stopPlayback;
+-(void)pausePlayback;
 // The version identify
 //
 // Ex.
@@ -159,10 +156,15 @@ typedef struct SUB_STREAM SubStream_t;
 - (void)camera:(Camera *)camera didReceiveRawDataFrame:(const char *)imgData VideoWidth:(NSInteger)width VideoHeight:(NSInteger)height;
 - (void)camera:(Camera *)camera didReceiveJPEGDataFrame:(const char *)imgData DataSize:(NSInteger)size;
 - (void)camera:(Camera *)camera didReceiveJPEGDataFrame2:(NSData *)imgData;
-- (void)camera:(Camera *)camera didReceiveFrameInfoWithVideoWidth:(NSInteger)videoWidth VideoHeight:(NSInteger)videoHeight VideoFPS:(NSInteger)fps VideoBPS:(NSInteger)videoBps AudioBPS:(NSInteger)audioBps OnlineNm:(NSInteger)onlineNm FrameCount:(unsigned int)frameCount IncompleteFrameCount:(unsigned int)incompleteFrameCount;
+- (void)camera:(Camera *)camera didReceiveFrameInfoWithVideoWidth:(NSInteger)videoWidth VideoHeight:(NSInteger)videoHeight VideoFPS:(NSInteger)fps VideoBPS:(NSInteger)videoBps AudioBPS:(NSInteger)audioBps OnlineNm:(NSInteger)onlineNm FrameCount:(unsigned long)frameCount IncompleteFrameCount:(unsigned long)incompleteFrameCount;
 - (void)camera:(Camera *)camera didChangeSessionStatus:(NSInteger)status;   
 - (void)camera:(Camera *)camera didChangeChannelStatus:(NSInteger)channel ChannelStatus:(NSInteger)status;
 - (void)camera:(Camera *)camera didReceiveIOCtrlWithType:(NSInteger)type Data:(const char*)data DataSize:(NSInteger)size;
+@end
+
+@protocol CameraPlaybackDelegate <NSObject>
+@required
+- (void)camera:(Camera *)camera didPlaybackLocalFile:(NSInteger)channel;
 @end
 
 

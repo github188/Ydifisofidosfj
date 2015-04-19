@@ -4654,6 +4654,7 @@
 				PROVISIONING_PROFILE = "348fe6f6-3266-4d4f-8f67-e5a73e86e884";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
@@ -4689,6 +4690,7 @@
 				PROVISIONING_PROFILE = "348fe6f6-3266-4d4f-8f67-e5a73e86e884";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
@@ -4724,6 +4726,7 @@
 				PROVISIONING_PROFILE = "348fe6f6-3266-4d4f-8f67-e5a73e86e884";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
@@ -4758,6 +4761,7 @@
 				PROVISIONING_PROFILE = "348fe6f6-3266-4d4f-8f67-e5a73e86e884";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};

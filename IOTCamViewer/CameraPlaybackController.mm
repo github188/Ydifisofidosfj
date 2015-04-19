@@ -840,16 +840,42 @@ extern unsigned int _getTickCount();
 
 - (void)updateToScreen:(NSValue*)pointer
 {
-	LPSIMAGEBUFFINFO pScreenBmpStore = (LPSIMAGEBUFFINFO)[pointer pointerValue];
-	[glView renderVideo:pScreenBmpStore->pixelBuff];
-	
-//	int width = (int)CVPixelBufferGetWidth(pScreenBmpStore->pixelBuff);
-//	int height = (int)CVPixelBufferGetHeight(pScreenBmpStore->pixelBuff);
-//	mSizePixelBuffer = CGSizeMake( width, height );
-//
-//	glView.preferredRotation = -1 * atan2(0, -1);
-//	glView.presentationSize = mSizePixelBuffer;
-//	[glView renderVideoYUV:pScreenBmpStore->pixelBuff];
+    LPSIMAGEBUFFINFO pScreenBmpStore = (LPSIMAGEBUFFINFO)[pointer pointerValue];
+    if( mPixelBuffer == nil ||
+       mSizePixelBuffer.width != pScreenBmpStore->nWidth ||
+       mSizePixelBuffer.height != pScreenBmpStore->nHeight ) {
+        
+        if(mPixelBuffer) {
+            CVPixelBufferRelease(mPixelBuffer);
+            CVPixelBufferPoolRelease(mPixelBufferPool);
+        }
+        
+        NSMutableDictionary* attributes;
+        attributes = [NSMutableDictionary dictionary];
+        [attributes setObject:[NSNumber numberWithInt:kCVPixelFormatType_32BGRA] forKey:(NSString*)kCVPixelBufferPixelFormatTypeKey];
+        [attributes setObject:[NSNumber numberWithInt:pScreenBmpStore->nWidth] forKey: (NSString*)kCVPixelBufferWidthKey];
+        [attributes setObject:[NSNumber numberWithInt:pScreenBmpStore->nHeight] forKey: (NSString*)kCVPixelBufferHeightKey];
+        
+        CVReturn err = CVPixelBufferPoolCreate(kCFAllocatorDefault, NULL, (CFDictionaryRef) attributes, &mPixelBufferPool);
+        if( err != kCVReturnSuccess ) {
+            NSLog( @"mPixelBufferPool create failed!" );
+        }
+        err = CVPixelBufferPoolCreatePixelBuffer (NULL, mPixelBufferPool, &mPixelBuffer);
+        if( err != kCVReturnSuccess ) {
+            NSLog( @"mPixelBuffer create failed!" );
+        }
+        mSizePixelBuffer = CGSizeMake(pScreenBmpStore->nWidth, pScreenBmpStore->nHeight);
+        NSLog( @"CameraLiveViewController - mPixelBuffer created %dx%d nBytes_per_Row:%d", pScreenBmpStore->nWidth, pScreenBmpStore->nHeight, pScreenBmpStore->nBytes_per_Row );
+    }
+    CVPixelBufferLockBaseAddress(mPixelBuffer,0);
+    
+    UInt8* baseAddress = (UInt8*)CVPixelBufferGetBaseAddress(mPixelBuffer);
+    
+    memcpy(baseAddress, pScreenBmpStore->pData_buff, pScreenBmpStore->nBytes_per_Row * pScreenBmpStore->nHeight);
+    
+    CVPixelBufferUnlockBaseAddress(mPixelBuffer,0);
+    
+    [glView renderVideo:mPixelBuffer];
 }
 
 - (void)recalcMonitorRect:(CGSize)videoframe
