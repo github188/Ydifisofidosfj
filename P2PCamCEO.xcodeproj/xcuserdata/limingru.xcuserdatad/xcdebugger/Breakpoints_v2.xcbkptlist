@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Delux/CameraMultiLiveViewController.mm"
-            timestampString = "450799744.621367"
+            timestampString = "451132801.085362"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1449"
-            endingLineNumber = "1449"
+            startingLineNumber = "1478"
+            endingLineNumber = "1478"
             landmarkName = "-camera:_didChangeSessionStatus:"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Delux/CameraMultiLiveViewController.mm"
-            timestampString = "450799744.621367"
+            timestampString = "451132801.085362"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1958"
-            endingLineNumber = "1958"
+            startingLineNumber = "1987"
+            endingLineNumber = "1987"
             landmarkName = "-didChangeSetting:"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Delux/CameraMultiLiveViewController.mm"
-            timestampString = "450799744.621367"
+            timestampString = "451132801.085362"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1685"
-            endingLineNumber = "1685"
+            startingLineNumber = "1714"
+            endingLineNumber = "1714"
             landmarkName = "-camera:didAddwithName:password:syncOnCloud:addToCloud:addFromCloud:"
             landmarkType = "5">
          </BreakpointContent>
