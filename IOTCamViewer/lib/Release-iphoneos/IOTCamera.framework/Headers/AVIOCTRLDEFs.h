@@ -96,9 +96,22 @@ typedef enum
 	IOTYPE_USER_IPCAM_AUDIOSTART 				= 0x0300,
 	IOTYPE_USER_IPCAM_AUDIOSTOP 				= 0x0301,
 
-	IOTYPE_USER_IPCAM_SPEAKERSTART 				= 0x0350,
-	IOTYPE_USER_IPCAM_SPEAKERSTOP 				= 0x0351,
-
+	IOTYPE_USER_IPCAM_SETRECORD_REQ				= 0x0310,
+	IOTYPE_USER_IPCAM_SETRECORD_RESP			= 0x0311,
+	IOTYPE_USER_IPCAM_GETRECORD_REQ				= 0x0312,
+	IOTYPE_USER_IPCAM_GETRECORD_RESP			= 0x0313,
+	
+	IOTYPE_USER_IPCAM_SETRCD_DURATION_REQ		= 0x0314,
+	IOTYPE_USER_IPCAM_SETRCD_DURATION_RESP  	= 0x0315,
+	IOTYPE_USER_IPCAM_GETRCD_DURATION_REQ		= 0x0316,
+	IOTYPE_USER_IPCAM_GETRCD_DURATION_RESP  	= 0x0317,
+	
+	IOTYPE_USER_IPCAM_LISTEVENT_REQ				= 0x0318,
+	IOTYPE_USER_IPCAM_LISTEVENT_RESP			= 0x0319,
+	
+	IOTYPE_USER_IPCAM_RECORD_PLAYCONTROL 		= 0x031A,
+	IOTYPE_USER_IPCAM_RECORD_PLAYCONTROL_RESP 	= 0x031B,
+	
 	IOTYPE_USER_IPCAM_SETSTREAMCTRL_REQ			= 0x0320,
 	IOTYPE_USER_IPCAM_SETSTREAMCTRL_RESP		= 0x0321,
 	IOTYPE_USER_IPCAM_GETSTREAMCTRL_REQ			= 0x0322,
@@ -112,6 +125,9 @@ typedef enum
 	IOTYPE_USER_IPCAM_GETSUPPORTSTREAM_REQ		= 0x0328,	// Get Support Stream
 	IOTYPE_USER_IPCAM_GETSUPPORTSTREAM_RESP		= 0x0329,	
 
+	IOTYPE_USER_IPCAM_GETAUDIOOUTFORMAT_REQ		= 0x032A,
+	IOTYPE_USER_IPCAM_GETAUDIOOUTFORMAT_RESP	= 0x032B,
+	
 	IOTYPE_USER_IPCAM_DEVINFO_REQ				= 0x0330,
 	IOTYPE_USER_IPCAM_DEVINFO_RESP				= 0x0331,
 
@@ -127,30 +143,9 @@ typedef enum
 	IOTYPE_USER_IPCAM_SETWIFI_REQ_2				= 0x0346,
 	IOTYPE_USER_IPCAM_GETWIFI_RESP_2			= 0x0347,
 
-	IOTYPE_USER_IPCAM_SETRECORD_REQ				= 0x0310,
-	IOTYPE_USER_IPCAM_SETRECORD_RESP			= 0x0311,
-	IOTYPE_USER_IPCAM_GETRECORD_REQ				= 0x0312,
-	IOTYPE_USER_IPCAM_GETRECORD_RESP			= 0x0313,
-
-	IOTYPE_USER_IPCAM_SETRCD_DURATION_REQ		= 0x0314,
-	IOTYPE_USER_IPCAM_SETRCD_DURATION_RESP  	= 0x0315,
-	IOTYPE_USER_IPCAM_GETRCD_DURATION_REQ		= 0x0316,
-	IOTYPE_USER_IPCAM_GETRCD_DURATION_RESP  	= 0x0317,
-
-	IOTYPE_USER_IPCAM_LISTEVENT_REQ				= 0x0318,
-	IOTYPE_USER_IPCAM_LISTEVENT_RESP			= 0x0319,
+	IOTYPE_USER_IPCAM_SPEAKERSTART 				= 0x0350,
+	IOTYPE_USER_IPCAM_SPEAKERSTOP 				= 0x0351,
 	
-	IOTYPE_USER_IPCAM_RECORD_PLAYCONTROL 		= 0x031A,
-	IOTYPE_USER_IPCAM_RECORD_PLAYCONTROL_RESP 	= 0x031B,
-	
-	IOTYPE_USER_IPCAM_GETAUDIOOUTFORMAT_REQ		= 0x032A,
-	IOTYPE_USER_IPCAM_GETAUDIOOUTFORMAT_RESP	= 0x032B,
-
-	IOTYPE_USER_IPCAM_GET_EVENTCONFIG_REQ		= 0x0400,	// Get Event Config Msg Request
-	IOTYPE_USER_IPCAM_GET_EVENTCONFIG_RESP		= 0x0401,	// Get Event Config Msg Response
-	IOTYPE_USER_IPCAM_SET_EVENTCONFIG_REQ		= 0x0402,	// Set Event Config Msg req
-	IOTYPE_USER_IPCAM_SET_EVENTCONFIG_RESP		= 0x0403,	// Set Event Config Msg resp
-
 	IOTYPE_USER_IPCAM_SET_ENVIRONMENT_REQ		= 0x0360,
 	IOTYPE_USER_IPCAM_SET_ENVIRONMENT_RESP		= 0x0361,
 	IOTYPE_USER_IPCAM_GET_ENVIRONMENT_REQ		= 0x0362,
@@ -163,13 +158,7 @@ typedef enum
 	
 	IOTYPE_USER_IPCAM_FORMATEXTSTORAGE_REQ		= 0x0380,	// Format external storage
 	IOTYPE_USER_IPCAM_FORMATEXTSTORAGE_RESP		= 0x0381,	
-	
-	IOTYPE_USER_IPCAM_PTZ_COMMAND				= 0x1001,	// P2P PTZ Command Msg
 
-	IOTYPE_USER_IPCAM_EVENT_REPORT				= 0x1FFF,	// Device Event Report Msg
-	IOTYPE_USER_IPCAM_RECEIVE_FIRST_IFRAME		= 0x1002,	// Send from client, used to talk to device that
-															// client had received the first I frame
-	
 	IOTYPE_USER_IPCAM_GET_FLOWINFO_REQ			= 0x0390,
 	IOTYPE_USER_IPCAM_GET_FLOWINFO_RESP			= 0x0391,
 	IOTYPE_USER_IPCAM_CURRENT_FLOWINFO			= 0x0392,
@@ -178,7 +167,12 @@ typedef enum
 	IOTYPE_USER_IPCAM_GET_TIMEZONE_RESP         = 0x3A1,
 	IOTYPE_USER_IPCAM_SET_TIMEZONE_REQ          = 0x3B0,
 	IOTYPE_USER_IPCAM_SET_TIMEZONE_RESP         = 0x3B1,
-    
+	
+	IOTYPE_USER_IPCAM_GET_EVENTCONFIG_REQ		= 0x0400,	// Get Event Config Msg Request
+	IOTYPE_USER_IPCAM_GET_EVENTCONFIG_RESP		= 0x0401,	// Get Event Config Msg Response
+	IOTYPE_USER_IPCAM_SET_EVENTCONFIG_REQ		= 0x0402,	// Set Event Config Msg req
+	IOTYPE_USER_IPCAM_SET_EVENTCONFIG_RESP		= 0x0403,	// Set Event Config Msg resp
+	
     // dropbox support
     IOTYPE_USER_IPCAM_GET_SAVE_DROPBOX_REQ      = 0x500,
     IOTYPE_USER_IPCAM_GET_SAVE_DROPBOX_RESP     = 0x501,
@@ -193,45 +187,15 @@ typedef enum
     IOTYPE_USER_IPCAM_SET_EZWIFI_REQ            = 0x512,
     IOTYPE_USER_IPCAM_SET_EZWIFI_RESP           = 0x513,
     
-    
-    //for普顺达//////////////////////////////////
-    //自动巡航
-    IOTYPE_HICHIP_CRUISE_START                  =0x600,
-    IOTYPE_HICHIP_CRUISE_STOP                   =0x601,
-    //亮度调节
-    IOTYPE_HICHIP_GETBRIGHT_REQ                 =0x602,
-    IOTYPE_HICHIP_GETBRIGHT_RESP                =0x603,
-    IOTYPE_HICHIP_SETBRIGHT_REQ                 =0x604,
-    IOTYPE_HICHIP_SETBRIGHT_RESP                =0x605,
-    //对比度调节
-    IOTYPE_HICHIP_GETCONTRAST_REQ               =0x606,
-    IOTYPE_HICHIP_GETCONTRAST_RESP              =0x607,
-    IOTYPE_HICHIP_SETCONTRAST_REQ               =0x608,
-    IOTYPE_HICHIP_SETCONTRAST_RESP              =0x609,
-    //预置位
-	IOTYPE_USER_IPCAM_SETPRESET_REQ             = 0x440,
-	IOTYPE_USER_IPCAM_SETPRESET_RESP            = 0x441,
-	IOTYPE_USER_IPCAM_GETPRESET_REQ             = 0x442,
-	IOTYPE_USER_IPCAM_GETPRESET_RESP            = 0x443,
-    //报警布防撤防开关
-    //报警图片上传FTP开关
-    //报警邮件通知开关
-	IOTYPE_USER_IPCAM_GETGUARD_REQ				= 0x420,
-	IOTYPE_USER_IPCAM_GETGUARD_RESP				= 0x421,
-	IOTYPE_USER_IPCAM_SETGUARD_REQ				= 0x422,
-	IOTYPE_USER_IPCAM_SETGUARD_RESP				= 0x423,
-    //FTP设置
-    IOTYPE_USER_IPCAM_SET_FTP_REQ				= 0x055A,
-    IOTYPE_USER_IPCAM_SET_FTP_RESP				= 0x055B,
-    IOTYPE_USER_IPCAM_GET_FTP_REQ				= 0x055C,
-    IOTYPE_USER_IPCAM_GET_FTP_RESP				= 0x055D,
-    //mail设置
-	IOTYPE_USEREX_IPCAM_GET_SMTP_REQ            =0x4005,
- 	IOTYPE_USEREX_IPCAM_GET_SMTP_RESP           =0x4006,
- 	IOTYPE_USEREX_IPCAM_SET_SMTP_REQ            =0x4007,
- 	IOTYPE_USEREX_IPCAM_SET_SMTP_RESP           =0x4008,
-    
-    IOTYPE_USER_CMD_MAX
+
+	IOTYPE_USER_IPCAM_PTZ_COMMAND				= 0x1001,	// P2P PTZ Command Msg
+	
+	IOTYPE_USER_IPCAM_RECEIVE_FIRST_IFRAME		= 0x1002,	// Send from client, used to talk to device that
+															// client had received the first I frame
+	IOTYPE_USER_IPCAM_EVENT_REPORT				= 0x1FFF,	// Device Event Report Msg
+	
+
+	IOTYPE_USER_CMD_MAX
 }ENUM_AVIOCTRL_MSGTYPE;
 
 
@@ -260,7 +224,7 @@ typedef enum
 }ENUM_AVIOCTRL_ERROR; //APP don't use it now
 
 
-// ServType, unsigned long, 32 bits, is a bit mask for function declareation
+// ServType, unsigned int, 32 bits, is a bit mask for function declareation
 // bit value "0" means function is valid or enabled
 // in contract, bit value "1" means function is invalid or disabled.
 // ** for more details, see "ServiceType Definitation for AVAPIs"
@@ -860,7 +824,7 @@ IOTYPE_USER_IPCAM_EVENT_REPORT	= 0x1FFF,	// Device Event Report Msg
 typedef struct
 {
 	STimeDay stTime;
-	unsigned long time; 	// UTC Time
+	unsigned int time; 	// UTC Time
 	unsigned int  channel; 	// Camera Index
 	unsigned int  event; 	// Event Type
 	unsigned char reserved[4];
@@ -1170,210 +1134,4 @@ typedef struct
     char szLocalIP[32];                         // device local ip
 }SMsgAVIoctrlGetLocalIPResp;
 
-
-
-//for 普顺达
-//自动巡航 ///////////////////////////////////////////////////////////
-typedef enum
-{
-	AVIOCTRL_CRUISEMODE_VERTICAL   =0x00,//上下巡航
-	AVIOCTRL_CRUISEMODE_HORIZONTAL =0x01,//左右巡航
-}ENUM_CRUISE_MODE;
-/*IOTYPE_HICHIP_CRUISE_START=0x600
- */
-typedef struct
-{
-    unsigned int channel;      // Camera Index
-    unsigned char mode;        // refer to ENUM_CRUISE_MODE
-    unsigned char reserved[3];
-}SMsgAVIoctrlCruiseStart;
-/*IOTYPE_HICHIP_CRUISE_STOP=0x601
- */
-typedef struct
-{
-	unsigned int channel; // Camera Index
-	unsigned char reserved[4];
-} SMsgAVIoctrlCruiseStop;
-
-
-//亮度调节////////////////////////////////////////////////////////////
-/*IOTYPE_HICHIP_GETBRIGHT_REQ=0x602
- */
-typedef struct
-{
-	unsigned int channel; // Camera Index
-	unsigned char reserved[4];
-} SMsgAVIoctrlGetBrightReq;
-/*IOTYPE_HICHIP_GETBRIGHT_RESP=0x603
- IOTYPE_HICHIP_SETBRIGHT_REQ=0x604
- */
-typedef struct
-{
-    unsigned int channel; // Camera Index
-    unsigned char bright; // refer to ENUM_BRIGHT_LEVEL
-    unsigned char reserved[3];
-} SMsgAVIoctrlSetBrightReq, SMgAVIoctrlGetBrightResp;
-/* AVIOCTRL BRIGHT Type */
-typedef enum
-{
-    AVIOCTRL_BRIGHT_MAX            = 0x01,
-    AVIOCTRL_BRIGHT_HIGH           = 0x02,
-    AVIOCTRL_BRIGHT_MIDDLE         = 0x03,
-    AVIOCTRL_BRIGHT_LOW            = 0x04,
-    AVIOCTRL_BRIGHT_MIN            = 0x05,
-}ENUM_BRIGHT_LEVEL;
-/*IOTYPE_HICHIP_SETBRIGHT_RESP=0x605
- */
-typedef struct
-{
-    unsigned int result; // 0: success; otherwise: failed.
-    unsigned char reserved[4];
-} SMsgAVIoctrSeltBrightResp;
-
-//对比度调节////////////////////////////////////////////////////////////
-/*IOTYPE_HICHIP_GETCONTRAST_REQ=0x606
- */
-typedef struct
-{
-	unsigned int channel; // Camera Index
-	unsigned char reserved[4];
-} SMsgAVIoctrlGetContrastReq;
-/*IOTYPE_HICHIP_GETCONTRAST_RESP=0x607
- IOTYPE_HICHIP_SETCONTRAST_REQ=0x608
- */
-typedef struct
-{
-    unsigned int channel; // Camera Index
-    unsigned char contrast; // refer to ENUM_CONTRAST_LEVEL
-    unsigned char reserved[3];
-} SMsgAVIoctrlSetContrastReq, SMgAVIoctrlGetContrastResp;
-/* AVIOCTRL CONTRAST Type */
-typedef enum
-{
-    AVIOCTRL_CONTRAST_MAX            = 0x01,
-    AVIOCTRL_CONTRAST_HIGH           = 0x02,
-    AVIOCTRL_CONTRAST_MIDDLE         = 0x03,
-    AVIOCTRL_CONTRAST_LOW            = 0x04,
-    AVIOCTRL_CONTRAST_MIN            = 0x05,
-}ENUM_CONTRAST_LEVEL;
-/*IOTYPE_HICHIP_SETCONTRAST_RESP=0x609
- */
-typedef struct
-{
-    unsigned int result; // 0: success; otherwise: failed.
-    unsigned char reserved[4];
-} SMsgAVIoctrSeltContrastResp;
-
-//预置位////////////////////////////////////////////////////////////
-typedef struct
-{
-	unsigned int channel;	// AvServer Index
-	unsigned int nPresetIdx;	// 設定至預置點index	數值範圍 0~3(表示預置點1~4)
-    
-}
-SMsgAVIoctrlSetPresetReq,SMsgAVIoctrlGetPresetResp;
-
-/* IOTYPE_USER_IPCAM_SETPRESET_RESP				= 0x441
- */
-typedef struct
-{
-	int result;	// 回傳值	0: success; otherwise: failed
-	unsigned char reserved[4];
-}SMsgAVIoctrlSetPresetResp;
-
-/* IOTYPE_USER_IPCAM_GETPRESET_REQ				= 0x442
- */
-typedef struct
-{
-	unsigned int channel;	// AvServer Index
-	unsigned int nPresetIdx;	// 載入預置點index	數值範圍 0~3(表示預置點1~4)
-}SMsgAVIoctrlGetPresetReq;
-
-
-
-
-//报警布防撤防开关////////////////////////////////////////////////////////////
-//报警图片上传FTP开关////////////////////////////////////////////////////////////
-//报警邮件通知开关////////////////////////////////////////////////////////////
-/* IOTYPE_USER_IPCAM_GETGUARD_REQ				= 0x420
- */
-typedef struct
-{
-	unsigned int channel;       // AvServer Index
-	unsigned char reserved[4];
-} SMsgAVIoctrlGetGuardReq;
-
-/* IOTYPE_USER_IPCAM_GETGUARD_RESP				= 0x421
- * IOTYPE_USER_IPCAM_SETGUARD_REQ				= 0x422
- */
-
-typedef struct
-{
-	unsigned int channel;       // AvServer Index
-	unsigned char alarm_motion_armed;        // 移动侦测开关	ON=1, OFF=0
-	unsigned char alarm_motion_sensitivity; // 1(MIN) ~ 100(MAX)   参考TUTK的SMsgAVIoctrlSetMotionDetectReq的sensitivity 值定义做。
-	unsigned char alarm_preset;  /*报警联动预置位 0：关闭，1～4：选择联动预值位*/
-	unsigned char alarm_mail;   /*报警时邮件通知 0：禁止；1：允许                   */
-    
-	unsigned int alarm_upload_interval;   /*报警时上传图片的间隔（秒），0：禁止              */
-} SMsgAVIoctrlGetGuardResp, SMsgAVIoctrlSetGuardReq;
-
-/* IOTYPE_USER_IPCAM_SETGUARD_RESP				= 0x423
- */
-typedef struct
-{
-	int result;	// 回傳值	0: success; otherwise: failed.
-	unsigned char reserved[4];
-    
-} SMsgAVIoctrlSetGuardResp;
-
-
-
-//FTP设置/////////////////////////////////////////////////////////
-typedef struct
-{
-	unsigned int channel;       // Camera Index
-	unsigned char ftpServer[68] ; // 10.1.1.1
-	int ftpPort;                   // 21
-	unsigned char userName[20];
-	unsigned char password[20];
-	unsigned char path[68];
-	int  passiveMode;// 0 - off, 1 - on
-}SMsgAVIoctrlSetFtpReq, SMsgAVIoctrlGetFtpResp;
-
-typedef struct
-{
-    unsigned int channel; 		// Camera Index
-  	int result; //0: ok ; 1: failed
-}SMsgAVIoctrlSetFtpResp;
-
-typedef struct
-{
-	unsigned int channel; 		// Camera Index
-	unsigned char reserved[4];
-}SMsgAVIoctrlGetFtpReq;
-
-
-//mail设置////////////////////////////////////////////////////////
-typedef struct {
- 	unsigned int channel; 		// Camera Index
-	unsigned char reserved[4];
-} SMsgAVIoctrlExGetSmtpReq;
-
-typedef struct {
-	unsigned int channel;       // Camera Index
-	char sender[64];        /*邮件的发送者                                      */
-	char receiver1[64];   /*邮件的接收者                                    */
-	char server[64];          /*邮件服务器地址                                    */
-	unsigned int port;  /*邮件服务端口                                      */
-	unsigned int mail_tls;			/*是否使用  tls  传输协议, 0：不；1：TLS；2：STARTLS*/
-	char user[32];     /*邮件服务器登录用户                                */
-	char pwd[32];      /*邮件服务器登录密码                                */
-} SMsgAVIoctrlExSetSmtpReq, SMsgAVIoctrlExGetSmtpResp;
-
-typedef struct
-{
-  	int result; //0: ok ; 1: failed
-	unsigned char reserved[4];
-} SMsgAVIoctrlExSetSmtpResp;
 #endif

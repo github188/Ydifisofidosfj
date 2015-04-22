@@ -22,12 +22,33 @@
 #import "AppInfoController.h"
 #import "StartViewController.h"
 #import "cCustomNavigationController.h"
+#import "AppGuidViewController.h"
 
 #ifndef P2PCAMLIVE
 #define SHOW_SESSION_MODE
 #endif
 #define DEF_WAIT4STOPSHOW_TIME	250
+#define DEF_SplitViewNum		4
+#define DEF_ReTryConnectInterval 25*1000
+#define DEF_ReTryTimes			10
+
 extern unsigned int _getTickCount() ;
+
+@interface CameraMultiLiveViewController() {
+	MyCamera* mDummyCam;
+	
+	NSMutableArray* marrBtn_Default;
+	NSMutableArray* marrImg_Vdo;
+	NSMutableArray* marrBtn_ReConnt;
+	NSMutableArray* marrImg_Connt;
+	NSMutableArray* marrLabel_Status;
+	NSMutableArray* marrBtn_MoreFunc;
+	NSMutableArray* marrLabel_Name;
+	int mnReTryTimesArray[DEF_SplitViewNum];
+	unsigned int mnLastReTryTickArray[DEF_SplitViewNum];
+}
+
+@end
 
 @implementation CameraMultiLiveViewController
 
@@ -83,7 +104,7 @@ extern unsigned int _getTickCount() ;
 	return props;	
 }
 
-- (CGRect)zoomRectForScrollView:(UIScrollView *)_scrollView withScale:(float)scale withCenter:(CGPoint)center {
+- (CGRect)zoomRectForScrollView:(UIScrollView *)_scrollView withScale:(CGFloat)scale withCenter:(CGPoint)center {
     
     CGRect zoomRect;
     
@@ -168,6 +189,15 @@ extern unsigned int _getTickCount() ;
     return self.navigationController.navigationBarHidden;
 }
 
+- (NSUInteger)supportedInterfaceOrientations
+{
+	return UIInterfaceOrientationMaskPortrait;
+}
+
+- (BOOL)shouldAutorotate
+{
+	return YES;
+}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -190,7 +220,7 @@ extern unsigned int _getTickCount() ;
             NSInteger channel = [rs intForColumn:@"channel"];
             NSInteger isSync = [rs intForColumn:@"sync"];
             NSInteger isFromCloud = [rs intForColumn:@"isFromCloud"];
-            NSLog(@"Load Camera(%@, %@, %@, %@, %d)", name, uid, view_acc, view_pwd, isFromCloud);
+            NSLog(@"Load Camera(%@, %@, %@, %@, %d, ch:%d)", name, uid, view_acc, view_pwd, (int)isFromCloud, (int)channel);
             
             MyCamera *tempCamera = [[MyCamera alloc] initWithName:name viewAccount:view_acc viewPassword:view_pwd];
             [tempCamera setLastChannel:channel];
@@ -222,43 +252,46 @@ extern unsigned int _getTickCount() ;
     }
 }
 
-- (void)camStopShow {
+- (void)camStopShow:(int)aIgnoreIdx {
     
     isCamStopShow = YES;
     
-    for (int i=0;i<4;i++){
-        
+    for (int i=0;i<DEF_SplitViewNum;i++){
+		
+		if(i == aIgnoreIdx) {
+			GLog( tUI, (@"---------------------"));
+			GLog( tUI, (@"-- Ignore index:%02d --", i) );
+			GLog( tUI, (@"---------------------"));
+			continue;
+		}
+		
         MyCamera *testCamera = [cameraArray objectAtIndex:i];
         
-        if (testCamera.uid!=nil){
+        if (testCamera.uid != nil && ![testCamera.uid isEqualToString:@"(null)"]){
             
             NSNumber *tempChannel = [channelArray objectAtIndex:i];
             
             if (testCamera.sessionState == CONNECTION_STATE_CONNECTED && [testCamera getConnectionStateOfChannel:0] == CONNECTION_STATE_CONNECTED) {
-                testCamera.isShowInMultiView = NO;
-                [testCamera stopShow:[tempChannel integerValue]];
-                //[self waitStopShowCompleted:DEF_WAIT4STOPSHOW_TIME];
-                //[testCamera stopSoundToDevice:0];
-                //[testCamera stopSoundToPhone:0];
+                testCamera.isShowInMultiView=NO;
+                [testCamera stopShow:[tempChannel intValue]];
             }
         }
     }
-    
-    self.vdo1.image = nil;
-    self.vdo2.image = nil;
-    self.vdo3.image = nil;
-    self.vdo4.image = nil;
+	
+	for( UIImageView* img in marrImg_Vdo ) {
+		img.image = nil;
+	}
 }
 
 - (void)reStartShow {
     
     isCamStopShow = NO;
     
-    for (int i=0;i<4;i++){
+    for (int i=0;i<DEF_SplitViewNum;i++){
         
         MyCamera *tempCamera = [cameraArray objectAtIndex:i];
         
-        if (tempCamera.uid!=nil){
+        if (tempCamera.uid != nil && ![tempCamera.uid isEqualToString:@"(null)"]){
             
             NSNumber *tempChannel = [channelArray objectAtIndex:i];
             
@@ -272,23 +305,25 @@ extern unsigned int _getTickCount() ;
     }
 }
 
-- (void)connectAndShow {
-    for (int i=0;i<4;i++){
+- (void)reConnectAndShow {
+    for (int i=0;i<DEF_SplitViewNum;i++){
         
         MyCamera *tempCamera = [cameraArray objectAtIndex:i];
         
-        if (tempCamera.uid!=nil){
+        if (tempCamera.uid != nil && ![tempCamera.uid isEqualToString:@"(null)"]){
             
-            NSNumber *tempChannel = [channelArray objectAtIndex:i];
+            [channelArray objectAtIndex:i];
             
-            if (tempCamera.sessionState != CONNECTION_STATE_CONNECTED && [tempCamera getConnectionStateOfChannel:0] != CONNECTION_STATE_CONNECTED) {
-                [tempCamera connect:tempCamera.uid];
-                [tempCamera start:[tempChannel integerValue]];
-            }
-            if(!isGoPlayEvent){
-                tempCamera.isShowInMultiView = YES;
-                [tempCamera startShow:[tempChannel integerValue] ScreenObject:self];
-            }
+            [self disconnectCamera:tempCamera.uid];
+			[tempCamera disconnect];
+            
+            [tempCamera connect:tempCamera.uid];
+            [tempCamera start:0];
+            
+	if(!isGoPlayEvent){
+            tempCamera.isShowInMultiView = YES;
+            [tempCamera startShow:0 ScreenObject:self];
+	}
             tempCamera.delegate2 = self;
         }
     }
@@ -375,6 +410,7 @@ extern unsigned int _getTickCount() ;
     }
     
     dropboxRec.tag=tag;
+    [self camStopShow:-1];
     [self goAddCamera:sender];
     
     return;
@@ -387,14 +423,16 @@ extern unsigned int _getTickCount() ;
 
 - (IBAction)goInfo:(id)sender {
     
-    [self camStopShow];
-    
+	[self camStopShow:-1];
+	
     AppInfoController *controller = [[AppInfoController alloc]  initWithNibName:nil bundle:nil];
     [self.navigationController pushViewController:controller animated:YES];
     [controller release];
 }
 
 - (IBAction)logOut:(id)sender {
+    
+    [self hideMoreSet];
     
     AppGuidViewController *appInfo=[[AppGuidViewController alloc]initWithNibName:@"AppGuidViewController" bundle:nil];
     [self.navigationController pushViewController:appInfo animated:YES];
@@ -429,37 +467,52 @@ extern unsigned int _getTickCount() ;
 }
 
 - (IBAction)goAddCamera:(id)sender {
-    
-    [self camStopShow];
-    
+
+	mnViewTag = (int)[(UIView*)sender tag];
+	
+	GLog( tUI, (@"+++CameraMultiLiveViewController - goLiveView: [%d]", mnViewTag));
+	
+	[self camStopShow:-1];
+	
     CameraListForLiveViewController *controller = [[CameraListForLiveViewController alloc] initWithNibName:@"CameraList" bundle:nil];
     
-    viewTag = [(UIView*)sender tag];
-    
-    controller.viewTag = [[NSNumber alloc] initWithInteger:[(UIView*)sender tag]];
+	controller.viewTag = [NSNumber numberWithInt:mnViewTag];
     controller.delegate = self;
     [self.navigationController pushViewController:controller animated:YES];
     [controller release];
+}
+
+- (void)disconnectCamera:(NSString*)strUID {
+	for( int i=0 ; i<DEF_SplitViewNum ; i++ ) {
+		MyCamera *cam = [cameraArray objectAtIndex:i];
+		NSNumber *numChannel = [channelArray objectAtIndex:i];
+		
+		if( [cam.uid isEqualToString:strUID] ) {
+			[cam stop:[numChannel intValue]];
+		}
+	}
 }
 
 - (IBAction)reConnect:(id)sender {
     
     MyCamera *tempCamera = [cameraArray objectAtIndex:[(UIView*)sender tag]];
     NSNumber *tempChannel = [channelArray objectAtIndex:[(UIView*)sender tag]];
-    
-    [tempCamera stop:[tempChannel integerValue]];
-    [tempCamera disconnect];
-    [tempCamera connect:tempCamera.uid];
-    [tempCamera start:[tempChannel integerValue]];
-    if(!isGoPlayEvent){
-        [tempCamera startShow:[tempChannel integerValue] ScreenObject:self];
-    }
-    tempCamera.delegate2 = self;
+
+	if( tempCamera.uid != nil && ![tempCamera.uid isEqualToString:@"(null)"] ) {
+		[self disconnectCamera:tempCamera.uid];
+		[tempCamera disconnect];
+		
+		[tempCamera connect:tempCamera.uid];
+		[tempCamera start:[tempChannel intValue]];
+		
+		//[tempCamera startShow:[tempChannel intValue] ScreenObject:self];
+		tempCamera.delegate2 = self;
+	}
 }
 
 - (IBAction)moreFunction:(id)sender {
     
-    moreFunctionTag = [[NSNumber alloc] initWithInt:[(UIView*)sender tag]];
+    moreFunctionTag = [NSNumber numberWithInt:(int)[(UIView*)sender tag]];
     [moreFunctionView setHidden:NO];
     
     CGAffineTransform newTransform = CGAffineTransformScale(moreFunctionView.transform, 0.1, 0.1);
@@ -520,44 +573,45 @@ extern unsigned int _getTickCount() ;
 
 
 - (IBAction)goLiveView:(id)sender {
-    
-    [self camStopShow];
-    
-    MyCamera *tempCamera = [cameraArray objectAtIndex:[(UIView*)sender tag]];
-    int channel = [[channelArray objectAtIndex:[(UIView*)sender tag]] integerValue];
-    
-    switch ([(UIView*)sender tag]) {
-        case 0:
-            self.vdo1.image = nil;
-            break;
-        case 1:
-            self.vdo2.image = nil;
-            break;
-        case 2:
-            self.vdo3.image = nil;
-            break;
-        case 3:
-            self.vdo4.image = nil;
-            break;
-    }
-    
-    CameraLiveViewController *controller = [[CameraLiveViewController alloc] initWithNibName:@"CameraLiveView" bundle:nil];
-    controller.camera = tempCamera;
-    controller.viewTag = [NSNumber numberWithInteger:[(UIView*)sender tag]];
-    controller.delegate = self;
-    controller.selectedChannel = channel;
-    
-    UINavigationController *customNavController = [[cCustomNavigationController alloc] init];
-    [self presentViewController:customNavController animated:YES completion:nil];
-    [customNavController pushViewController:controller animated:YES];
-    
-    [controller release];
+
+	int nIdx = (int)[(UIView*)sender tag];
+
+	MyCamera *tempCamera = [cameraArray objectAtIndex:nIdx];
+	if( tempCamera.uid != nil && ![tempCamera.uid isEqualToString:@"(null)"]) {
+		int channel = (int)[[channelArray objectAtIndex:nIdx] intValue];
+		
+		GLog( tUI, (@"+++CameraMultiLiveViewController - goLiveView [%d] UID:%@ ch:%d", nIdx, tempCamera.uid, channel) );
+		
+		[self camStopShow:nIdx];
+		
+		UIImageView* vdoXX = [marrImg_Vdo objectAtIndex:nIdx];
+		if( vdoXX ) {
+			vdoXX.image = nil;
+		}
+		
+		CameraLiveViewController *controller = [[CameraLiveViewController alloc] initWithNibName:@"CameraLiveView" bundle:nil];
+		controller.camera = tempCamera;
+		controller.viewTag = [NSNumber numberWithInt:(int)[(UIView*)sender tag]];
+		controller.delegate = self;
+		controller.selectedChannel = channel;
+		
+		UINavigationController *customNavController = [[cCustomNavigationController alloc] init];
+		[self presentViewController:customNavController animated:YES completion:nil];
+		[customNavController pushViewController:controller animated:YES];
+		
+		[controller release];
+		[customNavController release];
+		
+	}
+	else {
+		GLog( tUI, (@"+++CameraMultiLiveViewController - goLiveView [%d] !!!Ignore!!!", nIdx) );
+	}
 }
 
 - (IBAction)changeViewSetting:(id)sender {
-    
-    [self camStopShow];
-    
+	GLog( tUI, (@"+++CameraMultiLiveViewController - changeViewSetting: [%d]", [moreFunctionTag intValue]));
+	[self camStopShow:-1];
+	
     CameraListForLiveViewController *controller = [[CameraListForLiveViewController alloc] initWithNibName:@"CameraList" bundle:nil];
     controller.viewTag = moreFunctionTag;
     controller.delegate = self;
@@ -569,14 +623,13 @@ extern unsigned int _getTickCount() ;
 }
 
 - (IBAction)goEventList:(id)sender {
-    
-    isGoPlayEvent=YES;
-    
-    [self camStopShow];
-    
+	GLog( tUI, (@"+++CameraMultiLiveViewController - goEventList: [%d]", [moreFunctionTag intValue]));
+	isGoPlayEvent=YES;
+	[self camStopShow:-1];
+	
     EventListController *controller = [[EventListController alloc] initWithStyle:UITableViewStylePlain];
     NSLog(@"TAG:%@",moreFunctionTag);
-    MyCamera *cameraIdx = [cameraArray objectAtIndex:[moreFunctionTag integerValue]];
+    MyCamera *cameraIdx = [cameraArray objectAtIndex:[moreFunctionTag intValue]];
     controller.camera = cameraIdx;
     [self.navigationController pushViewController:controller animated:YES];
     [controller release];
@@ -585,11 +638,11 @@ extern unsigned int _getTickCount() ;
 }
 
 - (IBAction)goSnapshot:(id)sender {
-    
-    [self camStopShow];
-    
-    MyCamera *cameraIdx = [cameraArray objectAtIndex:[moreFunctionTag integerValue]];
-    int channel = [[channelArray objectAtIndex:[moreFunctionTag integerValue]] integerValue];
+	GLog( tUI, (@"+++CameraMultiLiveViewController - goSnapshot: [%d]", [moreFunctionTag intValue]));
+	[self camStopShow:-1];
+	
+    MyCamera *cameraIdx = [cameraArray objectAtIndex:[moreFunctionTag intValue]];
+    int channel = [[channelArray objectAtIndex:[moreFunctionTag intValue]] intValue];
     
     PhotoTableViewController *photoTable = [[PhotoTableViewController alloc] init];
     photoTable.title = NSLocalizedString(@"Snapshot", @"");
@@ -602,15 +655,16 @@ extern unsigned int _getTickCount() ;
     [self presentViewController:customNavController animated:YES completion:nil];
     [customNavController pushViewController:photoTable animated:YES];
     [photoTable release];
+	[customNavController release];
 }
 
 - (IBAction)goSetting:(id)sender {
-    
-    [self camStopShow];
-    
+	GLog( tUI, (@"+++CameraMultiLiveViewController - goSetting: [%d]", [moreFunctionTag intValue]));
+	[self camStopShow:-1];
+	
     [self hideMoreFunctionView:nil];
     
-    MyCamera *cameraIdx = [cameraArray objectAtIndex:[moreFunctionTag integerValue]];
+    MyCamera *cameraIdx = [cameraArray objectAtIndex:[moreFunctionTag intValue]];
     
     EditCameraDefaultController *controller = [[EditCameraDefaultController alloc] initWithStyle:UITableViewStyleGrouped];
     controller.camera = cameraIdx;
@@ -620,7 +674,7 @@ extern unsigned int _getTickCount() ;
 }
 
 - (IBAction)deleteViewSetting:(id)sender {
-    
+	GLog( tUI, (@"+++CameraMultiLiveViewController - deleteViewSetting: [%d]", [moreFunctionTag intValue]));
     isDelete = YES;
     
     NSString *msg = NSLocalizedString(@"Sure to remove this view?", @"");
@@ -634,62 +688,62 @@ extern unsigned int _getTickCount() ;
 
 #pragma mark - UIAlertViewDelegate implementation
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex == 0) {
+	
+	GLog( tUI, (@"+++CameraMultiLiveViewController - {UIAlertViewDelegate}alertView:@%p clickedButtonAtIndex:%d [%d]", alertView, (int)buttonIndex, [moreFunctionTag intValue]));
+
+	if (buttonIndex == 0) {
         isDelete = NO;
         isLogOut = NO;
     } else if (buttonIndex == 1 && isDelete) {
         
         isDelete = NO;
         
-        MyCamera *cameraIdx = [cameraArray objectAtIndex:[moreFunctionTag integerValue]];
+        MyCamera *cameraIdx = [cameraArray objectAtIndex:[moreFunctionTag intValue]];
         
         int checkRepeat = 0;
         
-        for (int i=0;i<4;i++) {
+        for (int i=0;i<DEF_SplitViewNum;i++) {
             
             MyCamera *tempCamera = [cameraArray objectAtIndex:i];
             
-            if (tempCamera.uid!=nil && [cameraIdx.uid isEqualToString:tempCamera.uid] && [channelArray objectAtIndex:[moreFunctionTag integerValue]]==[channelArray objectAtIndex:i]) {
+            if (tempCamera.uid != nil && [cameraIdx.uid isEqualToString:tempCamera.uid] && [channelArray objectAtIndex:[moreFunctionTag intValue]]==[channelArray objectAtIndex:i]) {
                 checkRepeat++;
             }
         }
         
-        MyCamera *defaultCamera = [[MyCamera alloc] init];
+		if( mDummyCam == nil ) {
+			mDummyCam = [[MyCamera alloc] init];
+		}
+        MyCamera *defaultCamera = mDummyCam;
         NSNumber *defaultChannel = [NSNumber numberWithInt:-1];
         
         if (checkRepeat==1){
-            [cameraIdx stopShow:[[channelArray objectAtIndex:[moreFunctionTag integerValue]] integerValue]];
-            [cameraIdx ipcamStop:[[channelArray objectAtIndex:[moreFunctionTag integerValue]] integerValue]];
+            [cameraIdx stopShow:[[channelArray objectAtIndex:[moreFunctionTag intValue]] intValue]];
+            [cameraIdx ipcamStop:[[channelArray objectAtIndex:[moreFunctionTag intValue]] intValue]];
         }
         
-        [cameraArray replaceObjectAtIndex:[moreFunctionTag integerValue] withObject:defaultCamera];
-        [channelArray replaceObjectAtIndex:[moreFunctionTag integerValue] withObject:defaultChannel];
+        [cameraArray replaceObjectAtIndex:[moreFunctionTag intValue] withObject:defaultCamera];
+        [channelArray replaceObjectAtIndex:[moreFunctionTag intValue] withObject:defaultChannel];
         
-        switch ([moreFunctionTag integerValue]) {
-            case 0:
-                self.vdo1.image = nil;
-                reConnectBTN1.hidden = YES;
-                break;
-            case 1:
-                self.vdo2.image = nil;
-                reConnectBTN2.hidden = YES;
-                break;
-            case 2:
-                self.vdo3.image = nil;
-                reConnectBTN3.hidden = YES;
-                break;
-            case 3:
-                self.vdo4.image = nil;
-                reConnectBTN4.hidden = YES;
-                break;
-        }
-        
+		UIImageView* vdoXX = [marrImg_Vdo objectAtIndex:[moreFunctionTag intValue]];
+		if( vdoXX ) {
+			vdoXX.image = nil;
+		}
+		UIButton* reConnectBTNXX = [marrBtn_ReConnt objectAtIndex:[moreFunctionTag intValue]];
+		if( reConnectBTNXX ) {
+			reConnectBTNXX.hidden = YES;
+		}
+		
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         
         //將資料回步回手機
-        [userDefaults setObject:nil forKey:[[NSString alloc] initWithFormat:@"CameraMultiSetting_%@",moreFunctionTag]];
-        [userDefaults setInteger:-1 forKey:[[NSString alloc] initWithFormat:@"ChannelMultiSetting_%@",moreFunctionTag]];
-        [userDefaults synchronize];
+		GLog( tUI|tUserDefaults, (@"\"CameraMultiSetting_%d\" <== %@", [moreFunctionTag intValue], mDummyCam.uid ) );
+		[userDefaults setObject:((mDummyCam.uid != nil)?mDummyCam.uid:@"(null)") forKey:[NSString stringWithFormat:@"CameraMultiSetting_%d",[moreFunctionTag intValue]]];
+		
+		GLog( tUI|tUserDefaults, (@"\"ChannelMultiSetting_%d\" <== -1", [moreFunctionTag intValue] ) );
+        [userDefaults setInteger:-1 forKey:[NSString stringWithFormat:@"ChannelMultiSetting_%d",[moreFunctionTag intValue]]];
+		
+		[userDefaults synchronize];
         
         [self checkStatus];
         
@@ -710,7 +764,7 @@ extern unsigned int _getTickCount() ;
         }
         
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        [userDefaults setObject:@"" forKey:[[NSString alloc] initWithString:@"cloudUserPassword"]];
+        [userDefaults setObject:@"" forKey:@"cloudUserPassword"];
         [userDefaults synchronize];
         
         NSString *msg = NSLocalizedString(@"Log out success!", @"");
@@ -719,7 +773,7 @@ extern unsigned int _getTickCount() ;
         [alert show];
         [alert release];
         
-        //[logInOut setTitle:NSLocalizedString(@"Log in",@"") forState:UIControlStateNormal];
+        [logInOut setTitle:NSLocalizedString(@"用户手册",@"") forState:UIControlStateNormal];
         
         isLogOut = NO;
     
@@ -728,32 +782,56 @@ extern unsigned int _getTickCount() ;
         StartViewController *controller = [[StartViewController alloc] initWithNibName:@"StartView" bundle:nil];
         controller->isFromMCV = YES;
         [self.navigationController pushViewController:controller animated:YES];
+		[controller release];
     }
 }
 
 #pragma mark - View lifecycle
 - (void)dealloc
 {
+	[marrBtn_Default release];
+	[marrImg_Vdo release];
+	[marrBtn_ReConnt release];
+	[marrImg_Connt release];
+	[marrLabel_Status release];
+	[marrBtn_MoreFunc release];
+	[marrLabel_Name release];
+
+	[mDummyCam release];
     [connModeImageView release];
     [directoryPath release];
-    
-    [_vdo1 release];
-    [_vdo2 release];
-    [_vdo3 release];
-    [_vdo4 release];
-    [super dealloc];
+	
+	for(UIImageView* img in marrImg_Vdo) {
+		[img release];
+	}
+
+	[super dealloc];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    //设置功能键位置
+//设置功能键位置
     //居中
     moreFunctionView.frame=CGRectMake(self.view.frame.size.width/2-moreFunctionView.frame.size.width/2, self.view.frame.size.height/2-moreFunctionView.frame.size.height/2, moreFunctionView.frame.size.width, moreFunctionView.frame.size.height);
-    
+
+	GLog( tUI, (@"MultiView: +viewWillAppear") );
+	
+	if( 0<= mnViewTag && mnViewTag < DEF_SplitViewNum) {
+		MyCamera* tempCamera = [cameraArray objectAtIndex:mnViewTag];
+		NSNumber* tempChannel = [channelArray objectAtIndex:mnViewTag];
+		if( tempCamera.sessionState == CONNECTION_STATE_CONNECTED && [tempCamera getConnectionStateOfChannel:0] == CONNECTION_STATE_CONNECTED ) {
+			//[tempCamera connect:tempCamera.uid];
+			//[tempCamera start:[tempChannel intValue]];
+			[tempCamera startShow:[tempChannel intValue] ScreenObject:self];
+			tempCamera.delegate2 = self;
+			
+			[self camera:tempCamera _didChangeSessionStatus:CONNECTION_STATE_CONNECTED];
+		}
+	}
+	
     if(isGoPlayEvent){
         isGoPlayEvent=NO;
     }
-    
     if (isCamStopShow) {
         [self reStartShow];
     }
@@ -762,7 +840,7 @@ extern unsigned int _getTickCount() ;
     [self.navigationController setNavigationBarHidden:NO];
     self.navigationController.navigationBar.translucent = YES;
     
-    UIImage *navigationbarBG = [UIImage imageNamed:@"title_logo.png"];
+    UIImage *navigationbarBG = [UIImage imageNamed:@"title_logo"];
     [self.navigationController.navigationBar setBackgroundImage:navigationbarBG forBarMetrics:UIBarMetricsDefault];
     
     if (cameraArray!=nil){
@@ -773,138 +851,159 @@ extern unsigned int _getTickCount() ;
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     if ([[userDefaults objectForKey:@"cloudUserPassword"] isEqualToString:@""]||[userDefaults objectForKey:@"cloudUserPassword"]==nil){
-        //[logInOut setTitle:NSLocalizedString(@"Log in", @"") forState:UIControlStateNormal];
+        [logInOut setTitle:NSLocalizedString(@"用户手册", @"") forState:UIControlStateNormal];
     } else {
-        //[logInOut setTitle:NSLocalizedString(@"Log out", @"") forState:UIControlStateNormal];
+        [logInOut setTitle:NSLocalizedString(@"Log out", @"") forState:UIControlStateNormal];
     }
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(connectAndShow) name:@"WiFiChanged" object:nil];
-    
-
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reConnectAndShow) name:@"WiFiChanged" object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEnterBackground:) name:kApplicationDidEnterBackground object:nil];
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// Re try connection mechanism
+	//
+	memset( mnLastReTryTickArray, 0, sizeof(mnLastReTryTickArray) );
+	memset( mnReTryTimesArray, 0, sizeof(mnReTryTimesArray) );
+	mTimerStartShowRevoke = [NSTimer scheduledTimerWithTimeInterval:3.6 target:self selector:@selector(onTimerStartShowRevoke:) userInfo:nil repeats:YES];
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	GLog( tUI, (@"MultiView: -viewWillAppear") );
 }
 
 - (void)checkStatus {
     
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    
-    MyCamera *defaultCam = [[MyCamera alloc] init];
+	GLog( tUI, (@"+++CameraMultiLiveViewController - checkStatus"));
+	NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+	
+	if( mDummyCam == nil ) {
+		mDummyCam = [[MyCamera alloc] init];
+	}
+	MyCamera *defaultCam = mDummyCam;
     NSNumber *defaultChannel = [NSNumber numberWithInt:-1];
+	
+	if( cameraArray ) {
+		[cameraArray release];
+	}
+	if( channelArray ) {
+		[channelArray release];
+	}
     cameraArray = [[NSMutableArray alloc] init];
     channelArray = [[NSMutableArray alloc] init];
     
-    for (int i=0;i<4;i++) {
-        if ([userDefaults objectForKey:[[NSString alloc] initWithFormat:@"CameraMultiSetting_%d",i]]) {
+    for (int i=0;i<DEF_SplitViewNum;i++) {
+		NSString* strUid = (NSString*)[userDefaults objectForKey:[NSString stringWithFormat:@"CameraMultiSetting_%d",i]];
+		GLog( tUI|tUserDefaults, (@"\"CameraMultiSetting_%d\" ==> %@", i, strUid ) );
+        if (strUid != nil && ![strUid isEqualToString:@"(null)"]) {
             
-            int cameraChecked = 0;
-            
+			BOOL bHasAdd = FALSE;
+			
             for (MyCamera *tempCamera in camera_list) {
-                if ([tempCamera.uid isEqualToString:[userDefaults objectForKey:[[NSString alloc] initWithFormat:@"CameraMultiSetting_%d",i]]]){
+				
+                if ([tempCamera.uid isEqualToString:strUid]){
                     [cameraArray addObject:tempCamera];
-                    NSLog(@"UID:%@",tempCamera.uid);
+					
+					bHasAdd = TRUE;
                     break;
                 }
-                
-                cameraChecked++;
             }
             
-            if (cameraChecked==4) {
+            if (!bHasAdd) {
                 [cameraArray addObject:defaultCam];
             }
         } else {
             [cameraArray addObject:defaultCam];
         }
-        
-        if ([userDefaults objectForKey:[[NSString alloc] initWithFormat:@"ChannelMultiSetting_%d",i]]) {
-            
-            [channelArray addObject:[userDefaults objectForKey:[[NSString alloc] initWithFormat:@"ChannelMultiSetting_%d",i]]];
+		
+		NSNumber* numSelChannel = [userDefaults objectForKey:[NSString stringWithFormat:@"ChannelMultiSetting_%d",i]];
+		GLog( tUI|tUserDefaults, (@"\"ChannelMultiSetting_%d\" ==> %d", i, [numSelChannel intValue] ) );
+        if ( numSelChannel ) {
+			GLog( tUI, (@"Load [%d] selChannel:%d", i, [numSelChannel intValue]) );
+            [channelArray addObject:numSelChannel];
         } else {
             [channelArray addObject:defaultChannel];
         }
+		GLog( tUI|tUserDefaults, (@"----------------------------------") );
     }
     
-    for (int i=0;i<4;i++) {
-        if([cameraArray count]<i+1){
-            break;
-        }
+    for (int i=0;i<DEF_SplitViewNum;i++) {
         MyCamera *tempCamera = [cameraArray objectAtIndex:i];
         
-        if([[channelArray objectAtIndex:i] intValue]!=-1){
-            switch (i) {
-                case 0:
-                    [defaultButton1 setHidden:YES];
-                    [statusBar1 setHidden:NO];
-                    [moreFunction1 setHidden:NO];
-                    cameraName1.text = tempCamera.name;
-                    cameraName1.font = [UIFont systemFontOfSize:12.0f];
-                    cameraName1.textColor = [UIColor whiteColor];
-                    break;
-                case 1:
-                    [defaultButton2 setHidden:YES];
-                    [statusBar2 setHidden:NO];
-                    [moreFunction2 setHidden:NO];
-                    cameraName2.text = tempCamera.name;
-                    cameraName2.font = [UIFont systemFontOfSize:12.0f];
-                    cameraName2.textColor = [UIColor whiteColor];
-                    break;
-                case 2:
-                    [defaultButton3 setHidden:YES];
-                    [statusBar3 setHidden:NO];
-                    [moreFunction3 setHidden:NO];
-                    cameraName3.text = tempCamera.name;
-                    cameraName3.font = [UIFont systemFontOfSize:12.0f];
-                    cameraName3.textColor = [UIColor whiteColor];
-                    break;
-                case 3:
-                    [defaultButton4 setHidden:YES];
-                    [statusBar4 setHidden:NO];
-                    [moreFunction4 setHidden:NO];
-                    cameraName4.text = tempCamera.name;
-                    cameraName4.font = [UIFont systemFontOfSize:12.0f];
-                    cameraName4.textColor = [UIColor whiteColor];
-                    break;
-            }
-            
+        if(tempCamera.uid != nil && ![tempCamera.uid isEqualToString:@"(null)"] && [[channelArray objectAtIndex:i] intValue]!=-1){
+			
+			UIButton* defaultButtonXX = [marrBtn_Default objectAtIndex:i];
+			if( defaultButtonXX ) {
+				[defaultButtonXX setHidden:YES];
+			}
+			UILabel* statusBarXX = [marrLabel_Status objectAtIndex:i];
+			if( statusBarXX ) {
+				[statusBarXX setHidden:NO];
+			}
+			UIButton* moreFunctionXX = [marrBtn_MoreFunc objectAtIndex:i];
+			if( moreFunctionXX ) {
+				[moreFunctionXX setHidden:NO];
+			}
+			UILabel* cameraNameXX = [marrLabel_Name objectAtIndex:i];
+			if( cameraNameXX ) {
+				GLog( tUI, (@"view[%d] --> name:%@", i, tempCamera.name) );
+				cameraNameXX.text = tempCamera.name;
+				cameraNameXX.font = [UIFont systemFontOfSize:12.0f];
+				cameraNameXX.textColor = [UIColor whiteColor];
+			}
+			
+			[self camera:tempCamera _didChangeChannelStatus:[(NSNumber*)[channelArray objectAtIndex:i] intValue] ChannelStatus:tempCamera.sessionState];
+
         } else {
-            switch (i) {
-                case 0:
-                    [defaultButton1 setHidden:NO];
-                    [statusBar1 setHidden:YES];
-                    [moreFunction1 setHidden:YES];
-                    break;
-                case 1:
-                    [defaultButton2 setHidden:NO];
-                    [statusBar2 setHidden:YES];
-                    [moreFunction2 setHidden:YES];
-                    break;
-                case 2:
-                    [defaultButton3 setHidden:NO];
-                    [statusBar3 setHidden:YES];
-                    [moreFunction3 setHidden:YES];
-                    break;
-                case 3:
-                    [defaultButton4 setHidden:NO];
-                    [statusBar4 setHidden:YES];
-                    [moreFunction4 setHidden:YES];
-                    break;
-            }
+			UIButton* defaultButtonXX = [marrBtn_Default objectAtIndex:i];
+			if( defaultButtonXX ) {
+				[defaultButtonXX setHidden:NO];
+			}
+			UILabel* statusBarXX = [marrLabel_Status objectAtIndex:i];
+			if( statusBarXX ) {
+				[statusBarXX setHidden:YES];
+			}
+			UIButton* moreFunctionXX = [marrBtn_MoreFunc objectAtIndex:i];
+			if( moreFunctionXX ) {
+				[moreFunctionXX setHidden:YES];
+			}
+			UILabel* cameraNameXX = [marrLabel_Name objectAtIndex:i];
+			if( cameraNameXX ) {
+				GLog( tUI, (@"view[%d] X --> name:(empty)", i) );
+				cameraNameXX.text = @"";
+			}
+			UIImageView* cameraConnectXX = [marrImg_Connt objectAtIndex:i];
+			if( cameraConnectXX ) {
+				cameraConnectXX.image = [UIImage imageNamed:@"offline"];
+			}
         }
     }
 }
 
 - (void)loadCamList {
 
+	GLog( tUI, (@"+++CameraMultiLiveViewController - loadCamList") );
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     DeviceListOnCloud *dloc = [[DeviceListOnCloud alloc] init];
     dloc.delegate = self;
     
-    NSString *userID = [[NSString alloc] initWithString:[userDefaults objectForKey:@"cloudUserID"]];
-    NSString *userPWD = [[NSString alloc] initWithString:[userDefaults objectForKey:@"cloudUserPassword"]];
+    NSString *userID = [NSString stringWithString:[userDefaults objectForKey:@"cloudUserID"]];
+    NSString *userPWD = [NSString stringWithString:[userDefaults objectForKey:@"cloudUserPassword"]];
     [dloc downloadDeviceListID:userID PWD:userPWD];
-
+	[dloc release];
+	
+	GLog( tUI, (@"---CameraMultiLiveViewController - loadCamList, userID@%p ==> %@, userPWD@%p ==> %@", userID, userID, userPWD, userPWD) );
 }
 
 - (void)viewDidLoad {
-    isMoreSetOpen = NO;
+    GLog( tUI, (@"MultiView: +viewDidLoad") );
+	
+	marrBtn_Default = [[NSMutableArray alloc] initWithObjects:defaultButton1, defaultButton2, defaultButton3, defaultButton4, nil];
+	marrImg_Vdo = [[NSMutableArray alloc] initWithObjects:self.vdo1, self.vdo2, self.vdo3, self.vdo4, nil];
+	marrBtn_ReConnt = [[NSMutableArray alloc] initWithObjects:reConnectBTN1, reConnectBTN2, reConnectBTN3, reConnectBTN4, nil];
+	marrImg_Connt = [[NSMutableArray alloc] initWithObjects:cameraConnect1, cameraConnect2, cameraConnect3, cameraConnect4, nil];
+	marrLabel_Status = [[NSMutableArray alloc] initWithObjects:cameraStatus1, cameraStatus2, cameraStatus3, cameraStatus4, nil];
+	marrBtn_MoreFunc = [[NSMutableArray alloc] initWithObjects:moreFunction1, moreFunction2, moreFunction3, moreFunction4, nil];
+	marrLabel_Name = [[NSMutableArray alloc] initWithObjects:cameraName1, cameraName2, cameraName3, cameraName4, nil];
+	
+	
+	isMoreSetOpen = NO;
 
     [self loadDeviceFromDatabase];
     
@@ -915,7 +1014,7 @@ extern unsigned int _getTickCount() ;
     
     [self checkStatus];
     
-    [self connectAndShow];
+    //[self connectAndShow];
     
     [dropboxRec setTitle:NSLocalizedString(@"Camera List", @"") forState:UIControlStateNormal];
     
@@ -926,14 +1025,6 @@ extern unsigned int _getTickCount() ;
     
     [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(cameraStopShowCompleted:) name: @"CameraStopShowCompleted" object: nil];
 
-	
-#ifndef MacGulp
-    //self.navigationItem.title = NSLocalizedString(@"Live View", @"");
-    //self.navigationItem.title = NSLocalizedString(@"P2PCamCEO", @"");
-#else
-    self.title = camera.name;
-#endif
-    
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setBackgroundImage:[UIImage imageNamed:@"moreset"] forState:UIControlStateNormal];
@@ -952,19 +1043,7 @@ extern unsigned int _getTickCount() ;
     
     [moreSetButton release];
     
-    
-#ifdef MacGulp
-    
-    UIBarButtonItem *reloadButton = [[UIBarButtonItem alloc]
-                                   initWithTitle:NSLocalizedString(@"Reload", nil)
-                                   style:UIBarButtonItemStylePlain
-                                   target:self
-                                   action:@selector(reload:)];
-    self.navigationItem.rightBarButtonItem = reloadButton;
-    [reloadButton release];
-    
-#endif
-        
+            
     wrongPwdRetryTime = 0;
     
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -980,6 +1059,7 @@ extern unsigned int _getTickCount() ;
     
     [super viewDidLoad];
 
+	GLog( tUI, (@"MultiView: -viewDidLoad") );
 }
 
 - (void)viewDidUnload
@@ -1008,12 +1088,26 @@ extern unsigned int _getTickCount() ;
 
 - (void)viewWillDisappear:(BOOL)animated
 {
+	GLog( tUI, (@"MultiView: +viewWillDisappear") );
+	[[NSNotificationCenter defaultCenter] removeObserver:self name:kApplicationDidEnterBackground
+												  object:nil];
+	[[NSNotificationCenter defaultCenter] removeObserver:self name:kApplicationWillEnterForeground
+												  object:nil];
+	
+	[mTimerStartShowRevoke invalidate];
+	mTimerStartShowRevoke = nil;
+	
     [super viewWillDisappear:animated];
     
     UIImage *navigationbarBG = [UIImage imageNamed:@"title_bk"];
     [self.navigationController.navigationBar setBackgroundImage:navigationbarBG forBarMetrics:UIBarMetricsDefault];
     
     [self.navigationItem setPrompt:nil];
+	
+	if( isMoreSetOpen ) {
+		[self hideMoreSet];
+	}
+	GLog( tUI, (@"MultiView: -viewWillDisappear") );
 }
 
 #pragma mark - Application's Documents directory
@@ -1157,15 +1251,15 @@ extern unsigned int _getTickCount() ;
 {
 	GLog( tUI|tReStartShow, (@"++++++++++++++++++++++++++++++++++++++++++++++++++++") );
 	GLog( tUI|tReStartShow, (@"+++applicationWillResignActive") );
-    for (int i=0;i<4;i++){
+    for (int i=0;i<DEF_SplitViewNum;i++){
         
         MyCamera *testCamera = [cameraArray objectAtIndex:i];
-        GLog( tUI|tReStartShow, (@"\t{applicationWillResignActive} [%d]@%p uid:%@", i, testCamera, (testCamera.uid != nil)?testCamera.uid : @"(nil)") );
+        GLog( tUI|tReStartShow, (@"\t{applicationWillResignActive} [%d]@%p uid:%@", i, testCamera, (testCamera.uid != nil)?testCamera.uid : @"(null)") );
         
-        if (testCamera.uid!=nil){
+        if (testCamera.uid != nil && ![testCamera.uid isEqualToString:@"(null)"]){
             
             NSNumber *chNum = [channelArray objectAtIndex:i];
-			int ch = [chNum integerValue];
+			int ch = [chNum intValue];
             GLog( tUI|tReStartShow, (@"\t{applicationWillResignActive}\tch:%d", ch) );
 			[testCamera stopShow_block:ch];
 			//[self waitStopShowCompleted:DEF_WAIT4STOPSHOW_TIME];
@@ -1182,14 +1276,14 @@ extern unsigned int _getTickCount() ;
 {
 	GLog( tUI|tReStartShow, (@"++++++++++++++++++++++++++++++++++++++++++++++++++++") );
 	GLog( tUI|tReStartShow, (@"+++applicationDidBecomeActive") );
-    for (int i=0;i<4;i++){
+    for (int i=0;i<DEF_SplitViewNum;i++){
         
         MyCamera *testCamera = [cameraArray objectAtIndex:i];
-        GLog( tUI|tReStartShow, (@"\t{applicationDidBecomeActive} [%d]@%p uid:%@", i, testCamera, (testCamera.uid != nil)?testCamera.uid : @"(nil)") );
-        if (testCamera.uid!=nil){
+        GLog( tUI|tReStartShow, (@"\t{applicationDidBecomeActive} [%d]@%p uid:%@", i, testCamera, (testCamera.uid != nil)?testCamera.uid : @"(null)") );
+        if (testCamera.uid != nil && ![testCamera.uid isEqualToString:@"(null)"]){
             
             NSNumber *chNum = [channelArray objectAtIndex:i];
-			int ch = [chNum integerValue];
+			int ch = [chNum intValue];
             GLog( tUI|tReStartShow, (@"\t{applicationDidBecomeActive}\tch:%d", ch) );
             if(!isGoPlayEvent){
                 [testCamera startShow:ch ScreenObject:self];
@@ -1207,6 +1301,7 @@ extern unsigned int _getTickCount() ;
 
 - (void)updateToScreen2:(NSArray*)arrs {
 
+	static BOOL bDbg = FALSE;
     @autoreleasepool
     {
         CIImage *ciImage = [arrs objectAtIndex:0];
@@ -1215,71 +1310,69 @@ extern unsigned int _getTickCount() ;
         
         //UIImageOrientationLeft UIImageOrientationUp UIImageOrientationRight
         UIImage *img = [UIImage imageWithCIImage:ciImage scale:0.8 orientation:UIImageOrientationUp];
-        //[ciImage release];
-
-        for (int i=0;i<4;i++) {
+		
+        for (int i=0;i<DEF_SplitViewNum;i++) {
             MyCamera *cameraIdx = [cameraArray objectAtIndex:i];
             NSNumber *channelIdx = [channelArray objectAtIndex:i];
-            if ([cameraIdx.uid isEqualToString:uid] && channelIdx == channel){
-                switch(i){
-                    case 0:
-                        self.vdo1.image = img ;
-                        break;
-                    case 1:
-                        self.vdo2.image = img ;
-                        break;
-                    case 2:
-                        self.vdo3.image = img ;
-                        break;
-                    case 3:
-                        self.vdo4.image = img ;
-                        break;
-                }
+			GLogREL( bDbg, (@"%@, %d => [%d] uid:%@ channel:%d", uid, [channel intValue], i, cameraIdx.uid, (int)[channelIdx intValue]) );
+            if ([cameraIdx.uid isEqualToString:uid] && [channelIdx intValue] == [channel intValue]){
+				UIImageView* vdoXX = [marrImg_Vdo objectAtIndex:i];
+				if( vdoXX ) {
+					vdoXX.image = img ;
+				}
             }
+			else {
+				
+			}
         }
     }
 }
 
-- (void)updateToScreen:(NSValue*)pointer
-{
-    LPSIMAGEBUFFINFO pScreenBmpStore = (LPSIMAGEBUFFINFO)[pointer pointerValue];
-    
-    if( mPixelBuffer == nil ||
-       mSizePixelBuffer.width != pScreenBmpStore->nWidth ||
-       mSizePixelBuffer.height != pScreenBmpStore->nHeight ) {
-        
-        if(mPixelBuffer) {
-            CVPixelBufferRelease(mPixelBuffer);
-            CVPixelBufferPoolRelease(mPixelBufferPool);
-        }
-        
-        NSMutableDictionary* attributes;
-        attributes = [NSMutableDictionary dictionary];
-        [attributes setObject:[NSNumber numberWithInt:kCVPixelFormatType_32BGRA] forKey:(NSString*)kCVPixelBufferPixelFormatTypeKey];
-        [attributes setObject:[NSNumber numberWithInt:pScreenBmpStore->nWidth] forKey: (NSString*)kCVPixelBufferWidthKey];
-        [attributes setObject:[NSNumber numberWithInt:pScreenBmpStore->nHeight] forKey: (NSString*)kCVPixelBufferHeightKey];
-        
-        CVReturn err = CVPixelBufferPoolCreate(kCFAllocatorDefault, NULL, (CFDictionaryRef) attributes, &mPixelBufferPool);
-        if( err != kCVReturnSuccess ) {
-            NSLog( @"mPixelBufferPool create failed!" );
-        }
-        err = CVPixelBufferPoolCreatePixelBuffer (NULL, mPixelBufferPool, &mPixelBuffer);
-        if( err != kCVReturnSuccess ) {
-            NSLog( @"mPixelBuffer create failed!" );
-        }
-        mSizePixelBuffer = CGSizeMake(pScreenBmpStore->nWidth, pScreenBmpStore->nHeight);
-        NSLog( @"CameraMultiLiveViewController - mPixelBuffer created %dx%d nBytes_per_Row:%d", pScreenBmpStore->nWidth, pScreenBmpStore->nHeight, pScreenBmpStore->nBytes_per_Row );
-    }
-    CVPixelBufferLockBaseAddress(mPixelBuffer,0);
-    
-    UInt8* baseAddress = (UInt8*)CVPixelBufferGetBaseAddress(mPixelBuffer);
-    
-    memcpy(baseAddress, pScreenBmpStore->pData_buff, pScreenBmpStore->nBytes_per_Row * pScreenBmpStore->nHeight );
-    
-    CVPixelBufferUnlockBaseAddress(mPixelBuffer,0);
-    
-    [glView renderVideo:mPixelBuffer];
-}
+//- (void)updateToScreen:(NSValue*)pointer
+//{
+//
+//	LPSIMAGEBUFFINFO pScreenBmpStore = (LPSIMAGEBUFFINFO)[pointer pointerValue];
+//    
+//	if( mPixelBuffer == nil ||
+//	    mSizePixelBuffer.width != pScreenBmpStore->nWidth ||
+//	    mSizePixelBuffer.height != pScreenBmpStore->nHeight ) {
+//		
+//		if(mPixelBuffer) {
+//			CVPixelBufferRelease(mPixelBuffer);
+//			CVPixelBufferPoolRelease(mPixelBufferPool);			
+//		}
+//		
+//		NSMutableDictionary* attributes;
+//		attributes = [NSMutableDictionary dictionary];
+//		[attributes setObject:[NSNumber numberWithInt:kCVPixelFormatType_32BGRA] forKey:(NSString*)kCVPixelBufferPixelFormatTypeKey];
+//		[attributes setObject:[NSNumber numberWithInt:pScreenBmpStore->nWidth] forKey: (NSString*)kCVPixelBufferWidthKey];
+//		[attributes setObject:[NSNumber numberWithInt:pScreenBmpStore->nHeight] forKey: (NSString*)kCVPixelBufferHeightKey];
+//		
+//		CVReturn err = CVPixelBufferPoolCreate(kCFAllocatorDefault, NULL, (CFDictionaryRef) attributes, &mPixelBufferPool);
+//		if( err != kCVReturnSuccess ) {
+//			NSLog( @"mPixelBufferPool create failed!" );
+//		}
+//		err = CVPixelBufferPoolCreatePixelBuffer (NULL, mPixelBufferPool, &mPixelBuffer);
+//		if( err != kCVReturnSuccess ) {
+//			NSLog( @"mPixelBuffer create failed!" );
+//		}
+//		mSizePixelBuffer = CGSizeMake(pScreenBmpStore->nWidth, pScreenBmpStore->nHeight);
+//		NSLog( @"CameraMultiLiveViewController - mPixelBuffer created %dx%d nBytes_per_Row:%d", pScreenBmpStore->nWidth, pScreenBmpStore->nHeight, pScreenBmpStore->nBytes_per_Row );
+//	}
+//	CVPixelBufferLockBaseAddress(mPixelBuffer,0);
+//	CVPixelBufferLockBaseAddress(pScreenBmpStore->pixelBuff,0);
+//	
+//	UInt8* baseAddress = (UInt8*)CVPixelBufferGetBaseAddress(mPixelBuffer);
+//	UInt8* srcAddress = (UInt8*)CVPixelBufferGetBaseAddress(pScreenBmpStore->pixelBuff);
+//	
+//	memcpy(baseAddress, srcAddress, CVPixelBufferGetBytesPerRow(pScreenBmpStore->pixelBuff) * CVPixelBufferGetHeight(pScreenBmpStore->pixelBuff) );
+//	
+//	CVPixelBufferUnlockBaseAddress(pScreenBmpStore->pixelBuff,0);
+//	CVPixelBufferUnlockBaseAddress(mPixelBuffer,0);
+//    
+//	[glView renderVideo:mPixelBuffer];
+//
+//}
 
 
 // If you want to set the final frame size, just implement this delegation to given the wish frame size
@@ -1298,12 +1391,12 @@ extern unsigned int _getTickCount() ;
 	self.glView.maxZoom = CGSizeMake( (pglFrameSize_Original->width*2.0 > 1920)?1920:pglFrameSize_Original->width*2.0, (pglFrameSize_Original->height*2.0 > 1080)?1080:pglFrameSize_Original->height*2.0 );
 	   
     CGSize size = self.glView.frame.size;
-    float fScale  = [[UIScreen mainScreen] scale];
+    CGFloat fScale  = [[UIScreen mainScreen] scale];
     size.height *= fScale;
     size.width *= fScale;
     *pglFrameSize_Scaling = size ;
     
-    
+	
     if (self.interfaceOrientation == UIInterfaceOrientationLandscapeLeft ||
         self.interfaceOrientation == UIInterfaceOrientationLandscapeRight) {
         [self.scrollViewLandscape setContentSize:self.glView.frame.size];
@@ -1317,7 +1410,7 @@ extern unsigned int _getTickCount() ;
 - (void)waitStopShowCompleted:(unsigned int)uTimeOutInMs
 {
 	unsigned int uStart = _getTickCount();
-	while( true) {
+	while( self.bStopShowCompletedLock == FALSE ) {
 		usleep(1000);
 		unsigned int now = _getTickCount();
 		if( now - uStart >= uTimeOutInMs ) {
@@ -1330,6 +1423,109 @@ extern unsigned int _getTickCount() ;
 - (void)cameraStopShowCompleted:(NSNotification *)notification
 {
 	bStopShowCompletedLock = TRUE;
+}
+
+- (void)didEnterBackground:(NSNotification*)notif {
+	
+	GLog( tUI|tForeBackground, (@"=======================================================") );
+	GLog( tUI|tForeBackground, (@"+++CameraMultiLiveViewController - didEnterBackground") );
+	GLog( tUI|tForeBackground, (@"=======================================================") );
+	
+	if( mTimerStartShowRevoke != nil ) {
+		[mTimerStartShowRevoke invalidate];
+		mTimerStartShowRevoke = nil;
+	}
+
+	[[NSNotificationCenter defaultCenter] removeObserver:self name:kApplicationDidEnterBackground
+												  object:nil];
+
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEnterForeground:) name:kApplicationWillEnterForeground object:nil];
+	
+	for( int i=0 ; i<DEF_SplitViewNum ; i++ ) {
+		MyCamera* theCamera = [cameraArray objectAtIndex:i];
+		NSNumber* numChannel = [channelArray objectAtIndex:i];
+		
+		if( theCamera.uid != nil && ![theCamera.uid isEqualToString:@"(null)"] && [numChannel intValue] >= 0 ) {
+			[theCamera stopShow:[numChannel intValue]];
+			GLog( tUI|tForeBackground, (@"  [%d]theCamera:{uid:%@}@%p stopShow:%d ...", i, theCamera.uid, theCamera, [numChannel intValue]) );
+		}
+		else {
+			GLog( tUI|tForeBackground, (@"  [%d]theCamera:@(null) IGNORE!", i) );
+		}
+	}
+	
+	GLog( tUI|tForeBackground, (@"=======================================================") );
+	GLog( tUI|tForeBackground, (@"---CameraMultiLiveViewController - didEnterBackground") );
+	GLog( tUI|tForeBackground, (@"=======================================================") );
+}
+
+- (void)didEnterForeground:(NSNotification*)notif {
+
+	GLog( tUI|tForeBackground, (@"=======================================================") );
+	GLog( tUI|tForeBackground, (@"+++CameraMultiLiveViewController - didEnterForeground") );
+	GLog( tUI|tForeBackground, (@"=======================================================") );
+
+	if( mTimerStartShowRevoke ) {
+		[mTimerStartShowRevoke invalidate];
+		mTimerStartShowRevoke = nil;
+	}
+	
+	[[NSNotificationCenter defaultCenter] removeObserver:self name:kApplicationWillEnterForeground
+												  object:nil];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEnterBackground:) name:kApplicationDidEnterBackground object:nil];
+
+	for( int i=0 ; i<DEF_SplitViewNum ; i++ ) {
+		MyCamera* theCamera = [cameraArray objectAtIndex:i];
+		NSNumber* numChannel = [channelArray objectAtIndex:i];
+		
+		if( theCamera.uid != nil && ![theCamera.uid isEqualToString:@"(null)"] && [numChannel intValue] >= 0 ) {
+			[theCamera startShow:[numChannel intValue] ScreenObject:self];
+			GLog( tUI|tForeBackground, (@"  [%d]theCamera:{uid:%@}@%p startShow:%d ...", i, theCamera.uid, theCamera, [numChannel intValue]) );
+		}
+		else {
+			GLog( tUI|tForeBackground, (@"  [%d]theCamera:@(null) IGNORE!", i) );
+		}
+	}
+
+	GLog( tUI|tForeBackground, (@"=======================================================") );
+	GLog( tUI|tForeBackground, (@"---CameraMultiLiveViewController - didEnterForeground") );
+	GLog( tUI|tForeBackground, (@"=======================================================") );
+}
+
+- (void)onTimerStartShowRevoke:(NSTimer*)aTimer {
+	GLog( tStartShow|tUI, (@"+++CameraMultiLiveViewController - onTimerStartShowRevoke:@%p", aTimer) );
+	
+	int idx = 0;
+	for( MyCamera* theCamera in cameraArray ) {
+		int nChannel = [(NSNumber*)[channelArray objectAtIndex:idx] intValue];
+		
+		if( theCamera.sessionState == CONNECTION_STATE_CONNECTED &&
+		    [theCamera getConnectionStateOfChannel:0] == CONNECTION_STATE_CONNECTED &&
+		    ![theCamera isAVChannelStartShow:nChannel] ) {
+
+			[theCamera startShow:nChannel ScreenObject:self];
+			theCamera.delegate2 = self;
+			
+		}
+		else if( theCamera.sessionState != CONNECTION_STATE_CONNECTING &&
+				 theCamera.sessionState != CONNECTION_STATE_WRONG_PASSWORD ) {
+			
+			unsigned int now = _getTickCount();
+			if( now - mnLastReTryTickArray[idx] > DEF_ReTryConnectInterval &&
+			    mnReTryTimesArray[idx] <= DEF_ReTryTimes ) {
+			
+				[theCamera connect:theCamera.uid];
+				[theCamera start:0];
+				
+				mnLastReTryTickArray[idx] = _getTickCount();
+				mnReTryTimesArray[idx] += 1;
+				
+			}
+		}
+		
+		idx++;
+	}
 }
 
 #pragma mark - CameraDelegate
@@ -1433,217 +1629,206 @@ extern unsigned int _getTickCount() ;
             isWaitReConnect = NO;
         }
         
-        for (int i=0;i<4;i++) {
+        for (int i=0;i<DEF_SplitViewNum;i++) {
             MyCamera *tempCamera  = [cameraArray objectAtIndex:i];
             
             if ([tempCamera.uid isEqualToString:camera_.uid]) {
                 
-                switch (i) {
-                    case 0:
-                        cameraConnect1.image = [UIImage imageNamed:@"online"];
-                        cameraStatus1.text = @"";
-                        reConnectBTN1.hidden = YES;
-                        break;
-                    case 1:
-                        cameraConnect2.image = [UIImage imageNamed:@"online"];
-                        cameraStatus2.text = @"";
-                        reConnectBTN2.hidden = YES;
-                        break;
-                    case 2:
-                        cameraConnect3.image = [UIImage imageNamed:@"online"];
-                        cameraStatus3.text = @"";
-                        reConnectBTN3.hidden = YES;
-                        break;
-                    case 3:
-                        cameraConnect4.image = [UIImage imageNamed:@"online"];
-                        cameraStatus4.text = @"";
-                        reConnectBTN4.hidden = YES;
-                        break;
-                    default:
-                        break;
-                }
+				UIImageView* cameraConnectXX = [marrImg_Connt objectAtIndex:i];
+				if( cameraConnectXX ) {
+					cameraConnectXX.image = [UIImage imageNamed:@"online"];
+				}
+				UILabel* cameraStatusXX = [marrLabel_Status objectAtIndex:i];
+				if( cameraStatusXX ) {
+					cameraStatusXX.text = @"";
+				}
+				UIButton* reConnectBTNXX = [marrBtn_ReConnt objectAtIndex:i];
+				if( reConnectBTNXX ) {
+					reConnectBTNXX.hidden = YES;
+				}
             }
         }
-    } else if (status == CONNECTION_STATE_TIMEOUT && isWaitReConnect) {
+    }
+	else if (status == CONNECTION_STATE_TIMEOUT && isWaitReConnect) {
         
         if (camNeedReconnect == camera_) {
             [camNeedReconnect stop:camNeedReconnect.lastChannel];
-            [camNeedReconnect disconnect];
-            [camNeedReconnect connect:camNeedReconnect.uid];
+            //[camNeedReconnect disconnect];
+            //[camNeedReconnect connect:camNeedReconnect.uid];
             [camNeedReconnect start:camNeedReconnect.lastChannel];
-            if(!isGoPlayEvent){
-                [camNeedReconnect startShow:camNeedReconnect.lastChannel ScreenObject:self];
-            }
+            //[camNeedReconnect startShow:camNeedReconnect.lastChannel ScreenObject:self];
             camNeedReconnect.delegate2 = self;
         }
     }
 }
 
+- (void)invokeShartShow:(NSArray*)aParam
+{
+	MyCamera* theCamera = (MyCamera*)[aParam objectAtIndex:0];
+	NSNumber* channelNum = (NSNumber*)[aParam objectAtIndex:1];
+
+	GLogREL( tUI, (@"[invoke startShow]--------------> UID:%@ ch:%d", theCamera.uid, [channelNum intValue] ) );
+	
+	[theCamera startShow:[channelNum intValue] ScreenObject:self];
+}
+
 - (void)camera:(MyCamera *)camera_ _didChangeChannelStatus:(NSInteger)channel ChannelStatus:(NSInteger)status {
-    
-    if (status == CONNECTION_STATE_TIMEOUT) {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+	
+	if( channel == 0 ) {
+		
+		switch(status) {
+			case CONNECTION_STATE_CONNECTED: {
+				GLogREL( tUI|tStartShow, (@"Connected! UID:%@", camera_.uid) );
+//				for( int i=0 ; i<DEF_SplitViewNum ; i++ ) {
+//					MyCamera* cam = [cameraArray objectAtIndex:i];
+//					NSNumber* numChannel = [channelArray objectAtIndex:i];
+//					
+//					if( [cam.uid isEqualToString:camera_.uid] ) {
+//						GLogREL( tUI, (@"--> invoke camera start: ch:%d", [numChannel intValue]) );
+//						[cam start:[numChannel intValue]];
+//					}
+//				}
+				
+			}
+//			case CONNECTION_STATE_TIMEOUT: {
+//				dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+//					
+//					[camera_ stop:channel];
+//					
+//					usleep(500 * 1000);
+//					
+//					[camera_ disconnect];
+//				});
+//			}	break;
+			default: {
+				
+			}	break;
+		}
+		
+		return;
+	}
+	
+	
+		if (status == CONNECTION_STATE_CONNECTED){
             
-            [camera_ stop:channel];
-            
-            usleep(500 * 1000);
-            
-            [camera_ disconnect];
-        });
-    } else {
-        
-        if (status == CONNECTION_STATE_CONNECTED){
-            
-            for (int i=0;i<4;i++) {
-                MyCamera *tempCamera  = [cameraArray objectAtIndex:i];
-                
-                if ([tempCamera.uid isEqualToString:camera_.uid]) {
-                    
-                    switch (i) {
-                        case 0:
-                            cameraConnect1.image = [UIImage imageNamed:@"online"];
-                            cameraStatus1.text = @"";
-                            reConnectBTN1.hidden = YES;
-                            break;
-                        case 1:
-                            cameraConnect2.image = [UIImage imageNamed:@"online"];
-                            cameraStatus2.text = @"";
-                            reConnectBTN2.hidden = YES;
-                            break;
-                        case 2:
-                            cameraConnect3.image = [UIImage imageNamed:@"online"];
-                            cameraStatus3.text = @"";
-                            reConnectBTN3.hidden = YES;
-                            break;
-                        case 3:
-                            cameraConnect4.image = [UIImage imageNamed:@"online"];
-                            cameraStatus4.text = @"";
-                            reConnectBTN4.hidden = YES;
-                            break;
-                        default:
-                            break;
-                    }
-                }
-            }
+			for (int i=0;i<DEF_SplitViewNum;i++) {
+				MyCamera *tempCamera  = [cameraArray objectAtIndex:i];
+				
+				if ([tempCamera.uid isEqualToString:camera_.uid]) {
+					
+					UIImageView* cameraConnectXX = [marrImg_Connt objectAtIndex:i];
+					if( cameraConnectXX ) {
+						cameraConnectXX.image = [UIImage imageNamed:@"online"];
+					}
+					UILabel* cameraStatusXX = [marrLabel_Status objectAtIndex:i];
+					if( cameraStatusXX ) {
+						cameraStatusXX.text = @"";
+					}
+					UIButton* reConnectBTNXX = [marrBtn_ReConnt objectAtIndex:i];
+					if( reConnectBTNXX ) {
+						reConnectBTNXX.hidden = YES;
+					}
+					
+					int nSelChannel = [[channelArray objectAtIndex:i] intValue];
+					if( nSelChannel == channel ) {
+						GLog( tUI|tStartShow, (@"UID:%@ channel<%d> connected. invoke startShow after 2sec...", tempCamera.uid, nSelChannel) );
+						dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+							[self invokeShartShow:[NSArray arrayWithObjects:tempCamera, [channelArray objectAtIndex:i], nil]];
+						});
+					}
+					
+				}
+			}
+			
         } else {
         
-        
-        for (int i=0;i<4;i++) {
-            MyCamera *tempCamera = [cameraArray objectAtIndex:i];
-            if ([tempCamera.uid isEqualToString:camera_.uid]){
-                switch (i) {
-                    case 0:
-                        cameraConnect1.image = [UIImage imageNamed:@"offline"];
-                        self.vdo1.image = nil;
-                        if (status==CONNECTION_STATE_CONNECTING){
-                            cameraStatus1.text = NSLocalizedString(@"Wait for connecting...", @"");
-                        } else {
-                            reConnectBTN1.hidden = NO;
-
-                            if (status==CONNECTION_STATE_UNKNOWN_DEVICE){
-                                cameraStatus1.text = NSLocalizedString(@"Unknown Device", @"");
-                            } else if (status==CONNECTION_STATE_WRONG_PASSWORD){
-                                cameraStatus1.text = NSLocalizedString(@"Wrong Password", @"");
-                            } else if (status==CONNECTION_STATE_TIMEOUT){
-                                cameraStatus1.text = NSLocalizedString(@"Timeout", @"");
-                            } else if (status==CONNECTION_STATE_UNSUPPORTED){
-                                cameraStatus1.text = NSLocalizedString(@"Not Supported", @"");
-                            } else if (status==CONNECTION_STATE_CONNECT_FAILED){
-                                cameraStatus1.text = NSLocalizedString(@"Connect Failed", @"");
-                            }
-                        }
-                        break;
-                    case 1:
-                        cameraConnect2.image = [UIImage imageNamed:@"offline"];
-                        self.vdo2.image = nil;
-                        if (status==CONNECTION_STATE_CONNECTING){
-                            cameraStatus2.text = NSLocalizedString(@"Wait for connecting...", @"");
-                        } else {
-                            reConnectBTN2.hidden = NO;
-                            
-                            if (status==CONNECTION_STATE_UNKNOWN_DEVICE){
-                                cameraStatus2.text = NSLocalizedString(@"Unknown Device", @"");
-                            } else if (status==CONNECTION_STATE_WRONG_PASSWORD){
-                                cameraStatus2.text = NSLocalizedString(@"Wrong Password", @"");
-                            } else if (status==CONNECTION_STATE_TIMEOUT){
-                                cameraStatus2.text = NSLocalizedString(@"Timeout", @"");
-                            } else if (status==CONNECTION_STATE_UNSUPPORTED){
-                                cameraStatus2.text = NSLocalizedString(@"Not Supported", @"");
-                            } else if (status==CONNECTION_STATE_CONNECT_FAILED){
-                                cameraStatus2.text = NSLocalizedString(@"Connect Failed", @"");
-                            }
-                        }
-                        break;
-                    case 2:
-                        cameraConnect3.image = [UIImage imageNamed:@"offline"];
-                        self.vdo3.image = nil;
-                        if (status==CONNECTION_STATE_CONNECTING){
-                            cameraStatus3.text = NSLocalizedString(@"Wait for connecting...", @"");
-                        } else {
-                            reConnectBTN3.hidden = NO;
-                            
-                            if (status==CONNECTION_STATE_UNKNOWN_DEVICE){
-                                cameraStatus3.text = NSLocalizedString(@"Unknown Device", @"");
-                            } else if (status==CONNECTION_STATE_WRONG_PASSWORD){
-                                cameraStatus3.text = NSLocalizedString(@"Wrong Password", @"");
-                            } else if (status==CONNECTION_STATE_TIMEOUT){
-                                cameraStatus3.text = NSLocalizedString(@"Timeout", @"");
-                            } else if (status==CONNECTION_STATE_UNSUPPORTED){
-                                cameraStatus3.text = NSLocalizedString(@"Not Supported", @"");
-                            } else if (status==CONNECTION_STATE_CONNECT_FAILED){
-                                cameraStatus3.text = NSLocalizedString(@"Connect Failed", @"");
-                            }
-                        }
-                        break;
-                    case 3:
-                        cameraConnect4.image = [UIImage imageNamed:@"offline"];
-                        self.vdo4.image = nil;
-                        if (status==CONNECTION_STATE_CONNECTING){
-                            cameraStatus4.text = NSLocalizedString(@"Wait for connecting...", @"");
-                        } else {
-                            reConnectBTN4.hidden = NO;
-                            
-                            if (status==CONNECTION_STATE_UNKNOWN_DEVICE){
-                                cameraStatus4.text = NSLocalizedString(@"Unknown Device", @"");
-                            } else if (status==CONNECTION_STATE_WRONG_PASSWORD){
-                                cameraStatus4.text = NSLocalizedString(@"Wrong Password", @"");
-                            } else if (status==CONNECTION_STATE_TIMEOUT){
-                                cameraStatus4.text = NSLocalizedString(@"Timeout", @"");
-                            } else if (status==CONNECTION_STATE_UNSUPPORTED){
-                                cameraStatus4.text = NSLocalizedString(@"Not Supported", @"");
-                            } else if (status==CONNECTION_STATE_CONNECT_FAILED){
-                                cameraStatus4.text = NSLocalizedString(@"Connect Failed", @"");
-                            }
-                        }
-                        break;
-                }
-            }
-        }
-        }
-    }
+			if( status == CONNECTION_STATE_CONNECTING ) {
+				GLogREL( tUI, (@"connecting... UID:%@ ch:%d", camera_.uid, (int)channel) );
+			}
+			
+			for (int i=0;i<DEF_SplitViewNum;i++) {
+				MyCamera *tempCamera = [cameraArray objectAtIndex:i];
+				NSNumber* numChannel = [channelArray objectAtIndex:i];
+				if ([tempCamera.uid isEqualToString:camera_.uid] &&
+					[numChannel intValue] == (int)channel ){
+					
+					UIImageView* cameraConnectXX = [marrImg_Connt objectAtIndex:i];
+					if( cameraConnectXX ) {
+						cameraConnectXX.image = [UIImage imageNamed:@"offline"];
+					}
+					UIImageView* vdoXX = [marrImg_Vdo objectAtIndex:i];
+					if( vdoXX ) {
+						vdoXX.image = nil;
+					}
+					UILabel* cameraStatusXX = [marrLabel_Status objectAtIndex:i];
+					if (status==CONNECTION_STATE_CONNECTING){
+						cameraStatusXX.text = NSLocalizedString(@"Wait for connecting...", @"");
+					} else {
+						
+						UIButton* reConnectBTNXX = [marrBtn_ReConnt objectAtIndex:i];
+						if( reConnectBTNXX ) {
+							reConnectBTNXX.hidden = NO;
+						}
+						
+						if (status==CONNECTION_STATE_UNKNOWN_DEVICE){
+							cameraStatusXX.text = NSLocalizedString(@"Unknown Device", @"");
+						} else if (status==CONNECTION_STATE_WRONG_PASSWORD){
+							cameraStatusXX.text = NSLocalizedString(@"Wrong Password", @"");
+						} else if (status==CONNECTION_STATE_TIMEOUT){
+							cameraStatusXX.text = NSLocalizedString(@"Timeout", @"");
+						} else if (status==CONNECTION_STATE_UNSUPPORTED){
+							cameraStatusXX.text = NSLocalizedString(@"Not Supported", @"");
+						} else if (status==CONNECTION_STATE_CONNECT_FAILED){
+							cameraStatusXX.text = NSLocalizedString(@"Connect Failed", @"");
+						}
+					}
+					
+				}
+			}
+		}
+	
 }
 
 #pragma mark - CameraLive Delegate
 - (void)didReStartCamera:(MyCamera *)tempCamera_ cameraChannel:(NSNumber *)channel withView:(NSNumber *)tag{
+	
+	int nLastIdx = [tag intValue];
+	GLog( tUI, (@"+++CameraMultiLiveViewController - didReStartCamera:@%p cameraChannel:%d withView:[index:%d]", tempCamera_, [channel intValue], nLastIdx) );
     
-    [channelArray replaceObjectAtIndex:[tag integerValue] withObject:channel];
+	NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+	//將資料回步回手機
+	GLog( tUI|tUserDefaults, (@"\"CameraMultiSetting_%d\" <== %@", nLastIdx, tempCamera_.uid ) );
+	[userDefaults setObject:((tempCamera_.uid != nil)?tempCamera_.uid:@"(null)") forKey:[NSString stringWithFormat:@"CameraMultiSetting_%d",nLastIdx]];
+	
+	GLog( tUI|tUserDefaults, (@"\"ChannelMultiSetting_%d\" <== %d", nLastIdx, [channel intValue] ) );
+	[userDefaults setInteger:[channel intValue] forKey:[NSString stringWithFormat:@"ChannelMultiSetting_%d",nLastIdx]];
+	
+	[userDefaults synchronize];
 
-    for (int i=0;i<4;i++){
+	[channelArray replaceObjectAtIndex:nLastIdx withObject:channel];
+
+	
+        MyCamera *tempCamera = [cameraArray objectAtIndex:nLastIdx];
         
-        MyCamera *tempCamera = [cameraArray objectAtIndex:i];
-        
-        if (tempCamera.uid!=nil && [tempCamera.uid isEqualToString:tempCamera_.uid]){
-            
-            NSNumber *tempChannel = [channelArray objectAtIndex:i];
-            
-            [tempCamera connect:tempCamera.uid];
-            [tempCamera start:[tempChannel integerValue]];
-            if(!isGoPlayEvent){
-                [tempCamera startShow:[tempChannel integerValue] ScreenObject:self];
-            }
-            tempCamera.delegate2 = self;
+        if (tempCamera.uid != nil && [tempCamera.uid isEqualToString:tempCamera_.uid]){
+			NSNumber *tempChannel = [channelArray objectAtIndex:nLastIdx];
+            GLog( tUI, (@"---+CameraMultiLiveViewController - index:%d UID:%@ ch:%d re-startShow...", nLastIdx, tempCamera_.uid, [tempChannel intValue]) );
+			
+			if( tempCamera.sessionState == CONNECTION_STATE_CONNECTED && [tempCamera getConnectionStateOfChannel:0] == CONNECTION_STATE_CONNECTED ) {
+				//[tempCamera connect:tempCamera.uid];
+				//[tempCamera start:[tempChannel intValue]];
+if(!isGoPlayEvent){
+				[tempCamera startShow:[tempChannel intValue] ScreenObject:self];
+}
+				tempCamera.delegate2 = self;
+				
+				[self camera:tempCamera _didChangeSessionStatus:CONNECTION_STATE_CONNECTED];
+			}
         }
-    }
+		else {
+			GLog( tUI, (@"---+CameraMultiLiveViewController - !!! Something wrong !!!") );
+		}
+
 }
 
 #pragma mark - CameraList Delegate
@@ -1653,36 +1838,26 @@ extern unsigned int _getTickCount() ;
     
     [self checkStatus];
     if(!isGoPlayEvent){
-        [tempCamera startShow:[tempChannel integerValue] ScreenObject:self];
+    	[tempCamera startShow:[tempChannel intValue] ScreenObject:self];
     }
     
     tempCamera.delegate2 = self;
     
     if (tempCamera.sessionState == CONNECTION_STATE_CONNECTED && [tempCamera getConnectionStateOfChannel:0] == CONNECTION_STATE_CONNECTED) {
-        switch ([tag integerValue]) {
-            case 0:
-                cameraConnect1.image = [UIImage imageNamed:@"online"];
-                cameraStatus1.text = @"";
-                reConnectBTN1.hidden = YES;
-                break;
-            case 1:
-                cameraConnect2.image = [UIImage imageNamed:@"online"];
-                cameraStatus2.text = @"";
-                reConnectBTN2.hidden = YES;
-                break;
-            case 2:
-                cameraConnect3.image = [UIImage imageNamed:@"online"];
-                cameraStatus3.text = @"";
-                reConnectBTN3.hidden = YES;
-                break;
-            case 3:
-                cameraConnect4.image = [UIImage imageNamed:@"online"];
-                cameraStatus4.text = @"";
-                reConnectBTN4.hidden = YES;
-                break;
-            default:
-                break;
-        }
+		
+		UIImageView* cameraConnectXX = [marrImg_Connt objectAtIndex:[tag intValue]];
+		if( cameraConnectXX ) {
+			cameraConnectXX.image = [UIImage imageNamed:@"online"];
+		}
+		UILabel* cameraStatusXX = [marrLabel_Status objectAtIndex:[tag intValue]];
+		if( cameraStatusXX ) {
+			cameraStatusXX.text = @"";
+		}
+		UIButton* reConnectBTNXX = [marrBtn_ReConnt objectAtIndex:[tag intValue]];
+		if( reConnectBTNXX ) {
+			reConnectBTNXX.hidden = YES;
+		}
+		
     }
 }
 
@@ -1743,8 +1918,8 @@ extern unsigned int _getTickCount() ;
         
         isWaitWiFiResp = YES;
     }
-    [camera_ setSync:[[NSNumber numberWithBool:isSync] integerValue]];
-    [camera_ setCloud:[[NSNumber numberWithBool:isFromCloud] integerValue]];
+    [camera_ setSync:[[NSNumber numberWithBool:isSync] intValue]];
+    [camera_ setCloud:[[NSNumber numberWithBool:isFromCloud] intValue]];
     [camera_list addObject:camera_];
     
     if (database != NULL) {
@@ -1760,19 +1935,15 @@ extern unsigned int _getTickCount() ;
         if (deviceTokenString != nil) {
             NSError *error = nil;
             NSString *appidString = [[NSBundle mainBundle] bundleIdentifier];
-#ifndef DEF_APNSTest
-            NSString *hostString = @"http://push.iotcplatform.com/apns/apns.php";
-#else
-			NSString *hostString = @"http://54.225.191.150/test_gcm/apns.php"; //測試Host
-#endif
-            NSString *argsString = @"%@?cmd=reg_mapping&token=%@&uid=%@&appid=%@&udid=%@&os=ios";
-            NSString *getURLString = [NSString stringWithFormat:argsString, hostString, deviceTokenString, UID, appidString , uuid];
+
+			NSString *argsString = @"%@?cmd=reg_mapping&token=%@&uid=%@&appid=%@&udid=%@&os=ios";
+            NSString *getURLString = [NSString stringWithFormat:argsString, g_tpnsHostString, deviceTokenString, UID, appidString , uuid];
 #ifdef DEF_APNSTest
 			NSLog( @"==============================================");
 			NSLog( @"stringWithContentsOfURL ==> %@", getURLString );
 			NSLog( @"==============================================");
 #endif
-            [NSString stringWithContentsOfURL:[NSURL URLWithString:getURLString] encoding:NSUTF8StringEncoding error:&error];
+            NSString* registerResult = [NSString stringWithContentsOfURL:[NSURL URLWithString:getURLString] encoding:NSUTF8StringEncoding error:&error];
 #ifdef DEF_APNSTest
 			NSLog( @"==============================================");
             NSLog( @">>> %@", registerResult);
@@ -1782,11 +1953,15 @@ extern unsigned int _getTickCount() ;
     });
     
     //將資料回步回手機
-    [userDefaults setObject:camera_.uid forKey:[[NSString alloc] initWithFormat:@"CameraMultiSetting_%d",viewTag]];
-    [userDefaults setInteger:0 forKey:[[NSString alloc] initWithFormat:@"ChannelMultiSetting_%d",viewTag]];
-    [userDefaults synchronize];
+	GLog( tUI|tUserDefaults, (@"\"CameraMultiSetting_%d\" <== %@", mnViewTag, camera_.uid ) );
+	[userDefaults setObject:((camera_.uid != nil)?camera_.uid:@"(null)") forKey:[NSString stringWithFormat:@"CameraMultiSetting_%d", mnViewTag]];
+	
+	GLog( tUI|tUserDefaults, (@"\"ChannelMultiSetting_%d\" <== 0", mnViewTag ) );
+    [userDefaults setInteger:0 forKey:[NSString stringWithFormat:@"ChannelMultiSetting_%d", mnViewTag]];
+	
+	[userDefaults synchronize];
     
-    [self didAddCamera:camera_ cameraChannel:0 withView:[NSNumber numberWithInt:viewTag]];
+    [self didAddCamera:camera_ cameraChannel:0 withView:[NSNumber numberWithInt:mnViewTag]];
     
     [camera_ release];
 }
@@ -1829,44 +2004,41 @@ extern unsigned int _getTickCount() ;
 
 - (void)deleteSameUIDView:(NSString *)uid {
     
-    MyCamera *defaultCamera = [[MyCamera alloc] init];
+	if( mDummyCam == nil ) {
+		mDummyCam = [[MyCamera alloc] init];
+	}
+    MyCamera *defaultCamera = mDummyCam;
     NSNumber *defaultChannel = [NSNumber numberWithInt:-1];
     
-    for (int i=0;i<4;i++) {
+    for (int i=0;i<DEF_SplitViewNum;i++) {
         
         MyCamera *tempCamera = [cameraArray objectAtIndex:i];
         
-        if (tempCamera.uid!=nil && [uid isEqualToString:tempCamera.uid]) {
-            [tempCamera stopShow:[[channelArray objectAtIndex:i] integerValue]];
-            [tempCamera ipcamStop:[[channelArray objectAtIndex:i] integerValue]];
+        if (tempCamera.uid != nil && [uid isEqualToString:tempCamera.uid]) {
+            [tempCamera stopShow:[[channelArray objectAtIndex:i] intValue]];
+            [tempCamera ipcamStop:[[channelArray objectAtIndex:i] intValue]];
             [cameraArray replaceObjectAtIndex:i withObject:defaultCamera];
             [channelArray replaceObjectAtIndex:i withObject:defaultChannel];
             
             NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
             
             //將資料回步回手機
-            [userDefaults setObject:nil forKey:[[NSString alloc] initWithFormat:@"CameraMultiSetting_%d",i]];
-            [userDefaults setInteger:-1 forKey:[[NSString alloc] initWithFormat:@"ChannelMultiSetting_%d", i]];
-            [userDefaults synchronize];
+			GLog( tUI|tUserDefaults, (@"\"CameraMultiSetting_%d\" <== %@", i, defaultCamera.uid ) );
+			[userDefaults setObject:((defaultCamera.uid != nil)?defaultCamera.uid:@"(null)") forKey:[NSString stringWithFormat:@"CameraMultiSetting_%d",i]];
+			
+			GLog( tUI|tUserDefaults, (@"\"ChannelMultiSetting_%d\" <== 0", mnViewTag ) );
+            [userDefaults setInteger:-1 forKey:[NSString stringWithFormat:@"ChannelMultiSetting_%d", i]];
+			
+			[userDefaults synchronize];
             
-            switch (i) {
-                case 0:
-                    self.vdo1.image = nil;
-                    reConnectBTN1.hidden = YES;
-                    break;
-                case 1:
-                    self.vdo2.image = nil;
-                    reConnectBTN2.hidden = YES;
-                    break;
-                case 2:
-                    self.vdo3.image = nil;
-                    reConnectBTN3.hidden = YES;
-                    break;
-                case 3:
-                    self.vdo4.image = nil;
-                    reConnectBTN4.hidden = YES;
-                    break;
-            }
+			UIImageView* vdoXX = [marrImg_Vdo objectAtIndex:i];
+			if( vdoXX ) {
+				vdoXX.image = nil;
+			}
+			UIButton* reConnectBTNXX = [marrBtn_ReConnt objectAtIndex:i];
+			if( reConnectBTNXX ) {
+				reConnectBTNXX.hidden = YES;
+			}
         }
     }
     
@@ -1880,6 +2052,7 @@ extern unsigned int _getTickCount() ;
 {
     if (HUD) {
         [HUD hide:NO];
+		[HUD release];
         HUD=nil;
     }
     HUD=[[MBProgressHUD alloc] initWithView:self.view];
@@ -1906,7 +2079,7 @@ extern unsigned int _getTickCount() ;
     
     [self deleteSameUIDView:uid];
     
-    if (uid != nil) {
+    if (uid != nil && ![uid isEqualToString:@"(null)"]) {
         
         NSString *uuid = [[[ UIDevice currentDevice] identifierForVendor] UUIDString];
         
@@ -1920,13 +2093,9 @@ extern unsigned int _getTickCount() ;
             if (true) {
                 NSError *error = nil;
                 NSString *appidString = [[NSBundle mainBundle] bundleIdentifier];
-#ifndef DEF_APNSTest
-                NSString *hostString = @"http://push.iotcplatform.com/apns/apns.php";
-#else
-				NSString *hostString = @"http://54.225.191.150/test_gcm/apns.php"; //測試Host
-#endif
-                NSString *argsString = @"%@?cmd=unreg_mapping&uid=%@&appid=%@&udid=%@&os=ios";
-                NSString *getURLString = [NSString stringWithFormat:argsString, hostString, uid, appidString, uuid];
+
+				NSString *argsString = @"%@?cmd=unreg_mapping&uid=%@&appid=%@&udid=%@&os=ios";
+                NSString *getURLString = [NSString stringWithFormat:argsString, g_tpnsHostString, uid, appidString, uuid];
 #ifdef DEF_APNSTest
 				NSLog( @"==============================================");
 				NSLog( @"stringWithContentsOfURL ==> %@", getURLString );
@@ -1934,9 +2103,11 @@ extern unsigned int _getTickCount() ;
 #endif
                 NSString *unregisterResult = [NSString stringWithContentsOfURL:[NSURL URLWithString:getURLString] encoding:NSUTF8StringEncoding error:&error];
                 
+#ifdef DEF_APNSTest
                 NSLog( @"==============================================");
 				NSLog( @">>> %@", unregisterResult );
 				NSLog( @"==============================================");
+#endif
                 if (error != NULL) {
                     NSLog(@"%@",[error localizedDescription]);
                     
@@ -1972,17 +2143,17 @@ extern unsigned int _getTickCount() ;
         [dloc release];
     }
     
-	NSNumber *tempChannel = [channelArray objectAtIndex:[moreFunctionTag integerValue]];
+	NSNumber *tempChannel = [channelArray objectAtIndex:[moreFunctionTag intValue]];
 	if( changedCamera.sessionState == CONNECTION_STATE_DISCONNECTED ) {
         [changedCamera stop:0];
         [changedCamera disconnect];
 
         [changedCamera connect:changedCamera.uid];
-        [changedCamera start:[tempChannel integerValue]];
+        [changedCamera start:0];
     }
-    if(!isGoPlayEvent){
-        [changedCamera startShow:[tempChannel integerValue] ScreenObject:self];
-    }
+if(!isGoPlayEvent){
+    [changedCamera startShow:[tempChannel intValue] ScreenObject:self];
+}
     changedCamera.delegate2 = self;
     
     SMsgAVIoctrlGetAudioOutFormatReq *s = (SMsgAVIoctrlGetAudioOutFormatReq *)malloc(sizeof(SMsgAVIoctrlGetAudioOutFormatReq));
@@ -2002,7 +2173,7 @@ extern unsigned int _getTickCount() ;
 }
 
 -   (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)theData{
-//    NSLog(@"String sent from server %@",[[NSString alloc] initWithData:theData encoding:NSUTF8StringEncoding]);
+//    NSLog(@"String sent from server %@",[NSString stringWithData:theData encoding:NSUTF8StringEncoding]);
     NSError *error;
     NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:theData options:NSJSONWritingPrettyPrinted error:&error];
     

@@ -17,7 +17,7 @@ typedef struct tagImageBuffInfo {
 	
 	int nData_total_length;
 	int nData_filled_length;
-	unsigned char* pData_buff;
+	CVPixelBufferRef pixelBuff;
 } SIMAGEBUFFINFO, *LPSIMAGEBUFFINFO;
 
 typedef struct tagFrameDecodeParam {

@@ -31,7 +31,6 @@
 #import "EditCameraDefaultController.h"
 #import "DeviceListOnCloud.h"
 #import "MBProgressHUD.h"
-#import "AppGuidViewController.h"
 
 extern NSMutableArray *camera_list;
 extern FMDatabase *database;
@@ -108,6 +107,7 @@ extern NSString *deviceTokenString;
     BOOL isMoreSetOpen;
     IBOutlet UIView *moreSet;
     
+    int mnViewTag;
     int viewTag;
     IBOutlet UIButton *dropboxRec;
     IBOutlet UIButton *infoBTN;
@@ -121,8 +121,10 @@ extern NSString *deviceTokenString;
     BOOL isWaitWiFiResp;
     BOOL isWaitReConnect;
     MyCamera *camNeedReconnect;
-    
+	
+	NSTimer* mTimerStartShowRevoke;
     BOOL isGoPlayEvent; //是否去了观看录像的界面
+	
 }
 
 @property (nonatomic, assign) BOOL bStopShowCompletedLock;
