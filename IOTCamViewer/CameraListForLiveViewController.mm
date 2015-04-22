@@ -389,12 +389,12 @@
     return [searchedData count];
 }
 
-- (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 74;
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView 
+- (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CameraListCellIdentifier = @"CameraListCellIdentifier";
@@ -423,7 +423,7 @@
 
 		if (camera.sessionState == CONNECTION_STATE_CONNECTING) {
 			if( g_bDiagnostic ) {
-				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ A.%d(%dL)", NSLocalizedString(@"Connecting...", @""), camera.connTimes, camera.connFailErrCode];
+				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ A.%ld(%ldL)", NSLocalizedString(@"Connecting...", @""), (long)camera.connTimes, (long)camera.connFailErrCode];
 			}
 			else {
 				cameraStatusLabel.text = NSLocalizedString(@"Connecting...", @"");
@@ -432,7 +432,7 @@
 		}
 		else if (camera.sessionState == CONNECTION_STATE_DISCONNECTED) {
 			if( g_bDiagnostic ) {
-				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ A.%d(%dL)", NSLocalizedString(@"Off line", @""), camera.connTimes, camera.connFailErrCode];
+				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ A.%ld(%ldL)", NSLocalizedString(@"Off line", @""), (long)camera.connTimes, (long)camera.connFailErrCode];
 			}
 			else {
 				cameraStatusLabel.text = NSLocalizedString(@"Off line", @"");
@@ -441,7 +441,7 @@
 		}
 		else if (camera.sessionState == CONNECTION_STATE_UNKNOWN_DEVICE) {
 			if( g_bDiagnostic ) {
-				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ A.%d(%dL)", NSLocalizedString(@"Unknown Device", @""), camera.connTimes, camera.connFailErrCode];
+				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ A.%ld(%ldL)", NSLocalizedString(@"Unknown Device", @""), (long)camera.connTimes, (long)camera.connFailErrCode];
 			}
 			else {
 				cameraStatusLabel.text = NSLocalizedString(@"Unknown Device", @"");
@@ -450,7 +450,7 @@
 		}
 		else if (camera.sessionState == CONNECTION_STATE_TIMEOUT) {
 			if( g_bDiagnostic ) {
-				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ A.%d(%dL)", NSLocalizedString(@"Timeout", @""), camera.connTimes, camera.connFailErrCode];
+				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ A.%ld(%ldL)", NSLocalizedString(@"Timeout", @""), (long)camera.connTimes, (long)camera.connFailErrCode];
 			}
 			else {
 				cameraStatusLabel.text = NSLocalizedString(@"Timeout", @"");
@@ -459,7 +459,7 @@
 		}
 		else if (camera.sessionState == CONNECTION_STATE_UNSUPPORTED) {
 			if( g_bDiagnostic ) {
-				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ A.%d(%dL)", NSLocalizedString(@"Unsupported", @""), camera.connTimes, camera.connFailErrCode];
+				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ A.%ld(%ldL)", NSLocalizedString(@"Unsupported", @""), (long)camera.connTimes, (long)camera.connFailErrCode];
 			}
 			else {
 				cameraStatusLabel.text = NSLocalizedString(@"Unsupported", @"");
@@ -468,7 +468,7 @@
 		}
 		else if (camera.sessionState == CONNECTION_STATE_CONNECT_FAILED) {
 			if( g_bDiagnostic ) {
-				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ A.%d(%dL)", NSLocalizedString(@"Connect Failed", @""), camera.connTimes, camera.connFailErrCode];
+				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ A.%ld(%ldL)", NSLocalizedString(@"Connect Failed", @""), (long)camera.connTimes, (long)camera.connFailErrCode];
 			}
 			else {
 				cameraStatusLabel.text = NSLocalizedString(@"Connect Failed", @"");
@@ -479,7 +479,7 @@
 		else if (camera.sessionState == CONNECTION_STATE_CONNECTED && [camera getConnectionStateOfChannel:0] == CONNECTION_STATE_CONNECTED) {
 			if( g_bDiagnostic ) {
 				
-				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ [%@]%d,C:%d,D:%d,r%d", NSLocalizedString(@"Online", @""), [MyCamera getConnModeString:camera.sessionMode], camera.connTimes, camera.natC, camera.natD, camera.nAvResend ];
+				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ [%@]%ld,C:%ld,D:%ld,r%d", NSLocalizedString(@"Online", @""), [MyCamera getConnModeString:camera.sessionMode], (long)camera.connTimes, (long)camera.natC, (long)camera.natD, camera.nAvResend ];
 			}
 			else {
 				cameraStatusLabel.text = NSLocalizedString(@"Online", @"");
@@ -495,7 +495,7 @@
 		}
 		else if (camera.sessionState == CONNECTION_STATE_CONNECTED && [camera getConnectionStateOfChannel:0] == CONNECTION_STATE_CONNECTING) {
 			if( g_bDiagnostic ) {
-				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ B.%d(CONNECTION_STATE_CONNECTING)", NSLocalizedString(@"Connecting...", @""), camera.connTimes];				
+				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ B.%ld(CONNECTION_STATE_CONNECTING)", NSLocalizedString(@"Connecting...", @""), (long)camera.connTimes];				
 			}
 			else {
 				cameraStatusLabel.text = NSLocalizedString(@"Connecting...", @"");
@@ -505,7 +505,7 @@
 		else if (camera.sessionState == CONNECTION_STATE_CONNECTED && [camera getConnectionStateOfChannel:0] == CONNECTION_STATE_DISCONNECTED)
 		{
 			if( g_bDiagnostic ) {
-				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ B.%d(CONNECTION_STATE_DISCONNECTED)", NSLocalizedString(@"Off line", @""), camera.connTimes];
+				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ B.%ld(CONNECTION_STATE_DISCONNECTED)", NSLocalizedString(@"Off line", @""), (long)camera.connTimes];
 			}
 			else {
 				cameraStatusLabel.text = NSLocalizedString(@"Off line", @"");
@@ -514,7 +514,7 @@
 		}
 		else if (camera.sessionState == CONNECTION_STATE_CONNECTED && [camera getConnectionStateOfChannel:0] == CONNECTION_STATE_UNKNOWN_DEVICE) {
 			if( g_bDiagnostic ) {
-				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ B.%d(CONNECTION_STATE_UNKNOWN_DEVICE)", NSLocalizedString(@"Unknown Device", @""), camera.connTimes];
+				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ B.%ld(CONNECTION_STATE_UNKNOWN_DEVICE)", NSLocalizedString(@"Unknown Device", @""), (long)camera.connTimes];
 			}
 			else {
 				cameraStatusLabel.text = NSLocalizedString(@"Unknown Device", @"");
@@ -523,7 +523,7 @@
 		}
 		else if (camera.sessionState == CONNECTION_STATE_CONNECTED && [camera getConnectionStateOfChannel:0] == CONNECTION_STATE_WRONG_PASSWORD) {
 			if( g_bDiagnostic ) {
-				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ B.%d(CONNECTION_STATE_WRONG_PASSWORD)", NSLocalizedString(@"Wrong Password", @""), camera.connTimes];
+				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ B.%ld(CONNECTION_STATE_WRONG_PASSWORD)", NSLocalizedString(@"Wrong Password", @""), (long)camera.connTimes];
 			}
 			else {
 				cameraStatusLabel.text = NSLocalizedString(@"Wrong Password", @"");
@@ -535,7 +535,7 @@
 		}
 		else if (camera.sessionState == CONNECTION_STATE_CONNECTED && [camera getConnectionStateOfChannel:0] == CONNECTION_STATE_TIMEOUT) {
 			if( g_bDiagnostic ) {
-				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ B.%d(CONNECTION_STATE_TIMEOUT)", NSLocalizedString(@"Timeout", @""), camera.connTimes];
+				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ B.%ld(CONNECTION_STATE_TIMEOUT)", NSLocalizedString(@"Timeout", @""), (long)camera.connTimes];
 			}
 			else {
 				cameraStatusLabel.text = NSLocalizedString(@"Timeout", @"");
@@ -544,7 +544,7 @@
 		}
 		else if (camera.sessionState == CONNECTION_STATE_CONNECTED && [camera getConnectionStateOfChannel:0] == CONNECTION_STATE_UNSUPPORTED) {
 			if( g_bDiagnostic ) {
-				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ B.%d(CONNECTION_STATE_UNSUPPORTED)", NSLocalizedString(@"Unsupported", @""), camera.connTimes];
+				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ B.%ld(CONNECTION_STATE_UNSUPPORTED)", NSLocalizedString(@"Unsupported", @""), (long)camera.connTimes];
 			}
 			else {
 				cameraStatusLabel.text = NSLocalizedString(@"Unsupported", @"");
@@ -553,7 +553,7 @@
 		}
 		else if (camera.sessionState == CONNECTION_STATE_CONNECTED && [camera getConnectionStateOfChannel:0] == CONNECTION_STATE_NONE) {
 			if( g_bDiagnostic ) {
-				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ B.%d(CONNECTION_STATE_NONE)", NSLocalizedString(@"Connecting...", @""), camera.connTimes];
+				cameraStatusLabel.text = [NSString stringWithFormat:@"%@ B.%ld(CONNECTION_STATE_NONE)", NSLocalizedString(@"Connecting...", @""), (long)camera.connTimes];
 			}
 			else {
 				cameraStatusLabel.text = NSLocalizedString(@"Connecting...", @"");
