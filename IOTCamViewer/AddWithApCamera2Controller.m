@@ -44,7 +44,7 @@
     self.psdInput.delegate=self;
     
     self.viewPsdLbl.text=NSLocalizedStringFromTable(@"ViewPsdLbl", @"easyn", nil);
-    self.psdInput.secureTextEntry=NO;
+    self.psdInput.secureTextEntry=YES;
     
 }
 - (BOOL)textFieldShouldReturn:(UITextField *) textField

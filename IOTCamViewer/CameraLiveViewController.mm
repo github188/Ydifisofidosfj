@@ -1047,12 +1047,21 @@ extern unsigned int _getTickCount() {
     [setLow setTitle:NSLocalizedString(@"Low", @"") forState:UIControlStateNormal];
     [setLowest setTitle:NSLocalizedString(@"Lowest", @"") forState:UIControlStateNormal];
     
+    
+    
     [setOutDoor setTitle:NSLocalizedString(@"Outdoor Mode", @"") forState:UIControlStateNormal];
     [setNight setTitle:NSLocalizedString(@"Night Mode", @"") forState:UIControlStateNormal];
     
+#if defined(EasynPTarget)
+    [set50Hz setTitle:NSLocalizedString(@"Indoor Mode(50Hz)", @"") forState:UIControlStateNormal];
+    [_longBtn50HZ setTitle:NSLocalizedString(@"Indoor Mode(50Hz)", @"") forState:UIControlStateNormal];
+#else
     [set50Hz setTitle:[NSString stringWithFormat:@"%@(50HZ)",NSLocalizedString(@"Night Mode", @"")] forState:UIControlStateNormal];
-    [set60Hz setTitle:[NSString stringWithFormat:@"%@(60HZ)",NSLocalizedString(@"Outdoor Mode", @"")] forState:UIControlStateNormal];
     [_longBtn50HZ setTitle:[NSString stringWithFormat:@"%@(50HZ)",NSLocalizedString(@"Night Mode", @"")] forState:UIControlStateNormal];
+#endif
+    
+    
+    [set60Hz setTitle:[NSString stringWithFormat:@"%@(60HZ)",NSLocalizedString(@"Outdoor Mode", @"")] forState:UIControlStateNormal];
     [_longBtn60HZ setTitle:[NSString stringWithFormat:@"%@(60HZ)",NSLocalizedString(@"Outdoor Mode", @"")] forState:UIControlStateNormal];
     
     [longSetHighest setTitle:NSLocalizedString(@"Highest", @"") forState:UIControlStateNormal];

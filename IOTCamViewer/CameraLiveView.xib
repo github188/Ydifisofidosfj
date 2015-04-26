@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraLiveViewController">
@@ -277,11 +277,11 @@
                     </connections>
                 </scrollView>
                 <view hidden="YES" contentMode="scaleToFill" id="SQa-vd-w9P" userLabel="View AUDIO">
-                    <rect key="frame" x="90" y="320" width="250" height="120"/>
+                    <rect key="frame" x="60" y="320" width="280" height="120"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Zve-yX-R2n">
-                            <rect key="frame" x="120" y="20" width="94" height="94"/>
+                            <rect key="frame" x="150" y="20" width="94" height="94"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="call_on.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -294,7 +294,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mx5-iK-RJD">
-                            <rect key="frame" x="0.0" y="85" width="128" height="21"/>
+                            <rect key="frame" x="0.0" y="85" width="158" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <state key="normal" title="按住進行通話" backgroundImage="leo_micinfo.png">
@@ -445,11 +445,11 @@
                     </connections>
                 </button>
                 <view hidden="YES" contentMode="scaleToFill" id="eRd-I6-bHc">
-                    <rect key="frame" x="260" y="160" width="250" height="120"/>
+                    <rect key="frame" x="230" y="160" width="280" height="120"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xct-Zv-OqR">
-                            <rect key="frame" x="120" y="20" width="94" height="94"/>
+                            <rect key="frame" x="150" y="20" width="94" height="94"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="call_on.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -462,7 +462,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Jdx-VY-R9Q">
-                            <rect key="frame" x="0.0" y="85" width="128" height="21"/>
+                            <rect key="frame" x="0.0" y="85" width="158" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <state key="normal" title="按住進行通話" backgroundImage="leo_micinfo.png">
