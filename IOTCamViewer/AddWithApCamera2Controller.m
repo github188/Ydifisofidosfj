@@ -145,7 +145,6 @@
         [hud release];
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            HiStopSmartConnection();
             int result=HiStartSmartConnection(ssid, psd);
             dispatch_async(dispatch_get_main_queue(), ^{
                 [hud hide:YES];
@@ -165,12 +164,14 @@
                         controller.isFromAutoWifi=YES;
                         [self.navigationController pushViewController:controller animated:YES];
                         [controller release];
+                        HiStopSmartConnection();
                     }];
                 }
                 else{
                     UIAlertView *alert=[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"Warning", @"") message:NSLocalizedStringFromTable(@"AddApWifiErrorTips", @"easyn", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"Warning", @"") otherButtonTitles:nil, nil];
                     [alert show];
                     [alert release];
+                    HiStopSmartConnection();
                 }
             });
         });

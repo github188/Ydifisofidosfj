@@ -83,10 +83,10 @@
 #pragma mark - View lifecycle
 - (void)viewDidLoad {
     
-    self.navigationItem.title = @"LAN Search";
+    self.navigationItem.title = NSLocalizedString(@"LAN Search","");
     
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc]
-                                     initWithTitle:@"Cancel"
+                                     initWithTitle:NSLocalizedString(@"Cancel","")
                                      style:UIBarButtonItemStylePlain
                                      target:self
                                      action:@selector(cancel:)];
