@@ -16,6 +16,8 @@
     UITableView *tableView;
     
     NSMutableArray *searchResult;
+    
+    BOOL isEasyNPLoaded;
 }
 
 @property (nonatomic, retain) id<LANSearchDelegate> delegate;
@@ -26,6 +28,8 @@
 - (IBAction)refresh:(id)sender;
 - (IBAction)cancel:(id)sender;
 - (void)search;
+@property (retain, nonatomic) IBOutlet UIToolbar *toolBar;
+
 
 @end
 

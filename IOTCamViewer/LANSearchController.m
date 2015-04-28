@@ -79,6 +79,47 @@
 {
     return interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown;
 }
+-(void)easynpToolBar{
+    self.toolBar.hidden=YES;
+    if(isEasyNPLoaded) return;
+    //动态构建界面
+    NSInteger tipsH=38;
+    UIButton *tipsBtn=[[UIButton alloc]initWithFrame:CGRectMake(10, 0, 38, 38)];
+    [tipsBtn setImage:[UIImage imageNamed:@"info_27_03.png"] forState:UIControlStateNormal];
+    tipsBtn.contentMode=UIViewContentModeScaleToFill;
+    [self.view addSubview:tipsBtn];
+    
+    UILabel *tipsLbl=[[UILabel alloc]initWithFrame:CGRectMake(58, 0, self.view.frame.size.width-68, tipsH)];
+    tipsLbl.text=NSLocalizedString(@"LanSearchTips1","");
+    tipsLbl.font=[UIFont systemFontOfSize:14.0f];
+    tipsLbl.lineBreakMode=NSLineBreakByWordWrapping;
+    tipsLbl.numberOfLines=0;
+    tipsLbl.textAlignment=NSTextAlignmentLeft;
+    [self.view addSubview:tipsLbl];
+    [tipsLbl release];
+    [tipsBtn release];
+    
+    self.tableView.frame=CGRectMake(0, tipsH, self.view.frame.size.width, self.view.frame.size.height-tipsH*2-10);
+    
+    
+    UIButton *refreshBtn=[[UIButton alloc]initWithFrame:CGRectMake(10, self.tableView.frame.origin.y+self.tableView.frame.size.height, 38, 38)];
+    [refreshBtn setImage:[UIImage imageNamed:@"refresh_27_07.png"] forState:UIControlStateNormal];
+    refreshBtn.contentMode=UIViewContentModeScaleToFill;
+    [refreshBtn addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:refreshBtn];
+    
+    UILabel *refreshLbl=[[UILabel alloc]initWithFrame:CGRectMake(58, self.tableView.frame.origin.y+self.tableView.frame.size.height, self.view.frame.size.width-68, tipsH)];
+    refreshLbl.text=NSLocalizedString(@"LanSearchTips2","");
+    refreshLbl.textAlignment=NSTextAlignmentLeft;
+    refreshLbl.lineBreakMode=NSLineBreakByWordWrapping;
+    refreshLbl.numberOfLines=0;
+    refreshLbl.font=[UIFont systemFontOfSize:14.0f];
+    [self.view addSubview:refreshLbl];
+    [refreshLbl release];
+    [refreshBtn release];
+    
+    isEasyNPLoaded=YES;
+}
 
 #pragma mark - View lifecycle
 - (void)viewDidLoad {
@@ -97,6 +138,10 @@
     
     searchResult = [[NSMutableArray alloc] init];
     
+    
+
+    
+    
     [super viewDidLoad];
 }
 
@@ -110,6 +155,10 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     
+#if defined(EasynPTarget)
+    [self easynpToolBar];
+#endif
+    
     [self search];
     [self.tableView reloadData];
     [super viewWillAppear:animated];
@@ -120,6 +169,7 @@
     [tableView release];
     [searchResult release];
     self.delegate=nil;
+    [_toolBar release];
     [super dealloc];
 }
 

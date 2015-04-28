@@ -107,6 +107,10 @@
 		068879401ABE204E0017A41A /* AddWithApCamera1Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0688793E1ABE204E0017A41A /* AddWithApCamera1Controller.xib */; };
 		0688794E1ABE2C4D0017A41A /* AddWithApCamera2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0688794C1ABE2C4D0017A41A /* AddWithApCamera2Controller.m */; };
 		0688794F1ABE2C4D0017A41A /* AddWithApCamera2Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0688794D1ABE2C4D0017A41A /* AddWithApCamera2Controller.xib */; };
+		06AAE5DB1AEFCAC90064CE78 /* info_27_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 06AAE5D91AEFCAC90064CE78 /* info_27_03.png */; };
+		06AAE5DC1AEFCAC90064CE78 /* info_27_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 06AAE5D91AEFCAC90064CE78 /* info_27_03.png */; };
+		06AAE5DD1AEFCAC90064CE78 /* refresh_27_07.png in Resources */ = {isa = PBXBuildFile; fileRef = 06AAE5DA1AEFCAC90064CE78 /* refresh_27_07.png */; };
+		06AAE5DE1AEFCAC90064CE78 /* refresh_27_07.png in Resources */ = {isa = PBXBuildFile; fileRef = 06AAE5DA1AEFCAC90064CE78 /* refresh_27_07.png */; };
 		06B219831ADD4D51005E3A2B /* remeberpsd1.png in Resources */ = {isa = PBXBuildFile; fileRef = 06B219811ADD4D51005E3A2B /* remeberpsd1.png */; };
 		06B219841ADD4D51005E3A2B /* remeberpsd2.png in Resources */ = {isa = PBXBuildFile; fileRef = 06B219821ADD4D51005E3A2B /* remeberpsd2.png */; };
 		06BA0EA11ACACE8B00448ACB /* button_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0E9F1ACACE8B00448ACB /* button_bg@2x.png */; };
@@ -1291,6 +1295,8 @@
 		0688794C1ABE2C4D0017A41A /* AddWithApCamera2Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddWithApCamera2Controller.m; sourceTree = "<group>"; };
 		0688794D1ABE2C4D0017A41A /* AddWithApCamera2Controller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddWithApCamera2Controller.xib; sourceTree = "<group>"; };
 		0688795B1ABEAE230017A41A /* libHISmartWifi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libHISmartWifi.a; sourceTree = "<group>"; };
+		06AAE5D91AEFCAC90064CE78 /* info_27_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_27_03.png; sourceTree = "<group>"; };
+		06AAE5DA1AEFCAC90064CE78 /* refresh_27_07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh_27_07.png; sourceTree = "<group>"; };
 		06B219811ADD4D51005E3A2B /* remeberpsd1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = remeberpsd1.png; sourceTree = "<group>"; };
 		06B219821ADD4D51005E3A2B /* remeberpsd2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = remeberpsd2.png; sourceTree = "<group>"; };
 		06BA0E9F1ACACE8B00448ACB /* button_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_bg@2x.png"; sourceTree = "<group>"; };
@@ -2961,6 +2967,8 @@
 		D8C4DBC414E2171D007CBFAE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				06AAE5D91AEFCAC90064CE78 /* info_27_03.png */,
+				06AAE5DA1AEFCAC90064CE78 /* refresh_27_07.png */,
 				57DE16E61868235C00B6682F /* more.png */,
 				57DE16E71868235C00B6682F /* more@2x.png */,
 				6198551615D4B0E500A1F4EF /* buttonRedBackground.png */,
@@ -3274,6 +3282,7 @@
 				06F76EC81AB720A100901EBA /* beep-beep.aiff in Resources */,
 				06F76EC91AB720A100901EBA /* AddCameraDetail.xib in Resources */,
 				06F76ECA1AB720A100901EBA /* leo_qvga_clicked@2x.png in Resources */,
+				06AAE5DC1AEFCAC90064CE78 /* info_27_03.png in Resources */,
 				06F76ECB1AB720A100901EBA /* leo_snapshot_clicked.png in Resources */,
 				06F76ECC1AB720A100901EBA /* 6chlist_bk@2x.png in Resources */,
 				06F76ECD1AB720A100901EBA /* leo_speaker_off.png in Resources */,
@@ -3638,6 +3647,7 @@
 				06F770241AB720A100901EBA /* more_set_clicked.png in Resources */,
 				06F770251AB720A100901EBA /* login@2x.png in Resources */,
 				06F770261AB720A100901EBA /* more_cancel.png in Resources */,
+				06AAE5DE1AEFCAC90064CE78 /* refresh_27_07.png in Resources */,
 				06F770271AB720A100901EBA /* leo_mirror_rl.png in Resources */,
 				06F770281AB720A100901EBA /* add_wifinext_clicked@2x.png in Resources */,
 				06F770291AB720A100901EBA /* add_infobk.png in Resources */,
@@ -3736,6 +3746,7 @@
 				7A49912519ADFD7700B19CD4 /* ceo_pause_click_h@2x.png in Resources */,
 				610DBA41169AF0BF00292CF9 /* addCamera@2x.png in Resources */,
 				7A553D27194EB73C00F5AA11 /* add_sync@2x.png in Resources */,
+				06AAE5DB1AEFCAC90064CE78 /* info_27_03.png in Resources */,
 				7A553D98194EB73D00F5AA11 /* login_pw_bk@2x.png in Resources */,
 				7A0B1C7319A466950071E5CF /* leo_emode_disable@2x.png in Resources */,
 				7A553DDF194EB73D00F5AA11 /* refresh_clicked@2x.png in Resources */,
@@ -3805,6 +3816,7 @@
 				7A553D95194EB73D00F5AA11 /* login_icon.png in Resources */,
 				610DBA4D169AF0BF00292CF9 /* popoverArrowRightSimple.png in Resources */,
 				7A553DA3194EB73D00F5AA11 /* more_delete.png in Resources */,
+				06AAE5DD1AEFCAC90064CE78 /* refresh_27_07.png in Resources */,
 				7A553DBD194EB73D00F5AA11 /* moreset_clicked.png in Resources */,
 				0684EF0B1ADE98C2006BD75A /* page2_cn.jpg in Resources */,
 				7A49912D19ADFD7700B19CD4 /* ceo_rcplay_bg_h@2x.png in Resources */,
@@ -4460,7 +4472,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4489,7 +4501,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "0999743d-19a7-45a9-b1d1-d7f9c600db0b";
+				PROVISIONING_PROFILE = "4d2261ca-ad5f-40e7-bcb3-007166c3ab6e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s";
@@ -4502,7 +4514,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4532,7 +4544,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "0999743d-19a7-45a9-b1d1-d7f9c600db0b";
+				PROVISIONING_PROFILE = "4d2261ca-ad5f-40e7-bcb3-007166c3ab6e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s";
@@ -4545,7 +4557,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4575,7 +4587,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "0999743d-19a7-45a9-b1d1-d7f9c600db0b";
+				PROVISIONING_PROFILE = "4d2261ca-ad5f-40e7-bcb3-007166c3ab6e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s";
@@ -4588,7 +4600,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4617,7 +4629,7 @@
 					"-DP2PCAMLIVE",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "0999743d-19a7-45a9-b1d1-d7f9c600db0b";
+				PROVISIONING_PROFILE = "4d2261ca-ad5f-40e7-bcb3-007166c3ab6e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s";
