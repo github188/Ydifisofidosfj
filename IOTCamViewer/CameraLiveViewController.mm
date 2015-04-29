@@ -837,6 +837,7 @@ extern unsigned int _getTickCount() {
         self.view = self.landscapeView;
         
         [self.longHorizMenu reloadData];
+        [self checkLongBTN];
         
         
         
@@ -890,6 +891,7 @@ extern unsigned int _getTickCount() {
         self.view = self.portraitView;
         
         [self.horizMenu reloadData];
+        [self checkBTN];
         
         
         //self.myPtzView.frame=CGRectMake(0, self.horizMenu.frame.origin.y-10-self.myPtzView.frame.size.height-40, self.myPtzView.frame.size.width, self.myPtzView.frame.size.height);

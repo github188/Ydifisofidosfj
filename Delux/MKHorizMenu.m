@@ -110,7 +110,7 @@
 {
     UIButton *thisButton = (UIButton*) [self viewWithTag:index + kButtonBaseTag];    
     thisButton.selected = YES;
-    [self setContentOffset:CGPointMake(thisButton.frame.origin.x - kLeftOffset, 0) animated:animated];
+    //[self setContentOffset:CGPointMake(thisButton.frame.origin.x - kLeftOffset, 0) animated:animated];
     //[self.itemSelectedDelegate horizMenu:self itemSelectedAtIndex:index];
 }
 
