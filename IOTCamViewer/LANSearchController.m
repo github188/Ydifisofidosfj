@@ -84,12 +84,12 @@
     if(isEasyNPLoaded) return;
     //动态构建界面
     NSInteger tipsH=38;
-    UIButton *tipsBtn=[[UIButton alloc]initWithFrame:CGRectMake(10, 0, 38, 38)];
+    UIButton *tipsBtn=[[UIButton alloc]initWithFrame:CGRectMake(10, 10, 38, 38)];
     [tipsBtn setImage:[UIImage imageNamed:@"info_27_03.png"] forState:UIControlStateNormal];
     tipsBtn.contentMode=UIViewContentModeScaleToFill;
     [self.view addSubview:tipsBtn];
     
-    UILabel *tipsLbl=[[UILabel alloc]initWithFrame:CGRectMake(58, 0, self.view.frame.size.width-68, tipsH)];
+    UILabel *tipsLbl=[[UILabel alloc]initWithFrame:CGRectMake(58, 10, self.view.frame.size.width-68, tipsH)];
     tipsLbl.text=NSLocalizedString(@"LanSearchTips1","");
     tipsLbl.font=[UIFont systemFontOfSize:14.0f];
     tipsLbl.lineBreakMode=NSLineBreakByWordWrapping;
@@ -99,7 +99,7 @@
     [tipsLbl release];
     [tipsBtn release];
     
-    self.tableView.frame=CGRectMake(0, tipsH, self.view.frame.size.width, self.view.frame.size.height-tipsH*2-10);
+    self.tableView.frame=CGRectMake(0, tipsH+10, self.view.frame.size.width, self.view.frame.size.height-tipsH*2-20);
     
     
     UIButton *refreshBtn=[[UIButton alloc]initWithFrame:CGRectMake(10, self.tableView.frame.origin.y+self.tableView.frame.size.height, 38, 38)];
@@ -178,7 +178,13 @@
  numberOfRowsInSection:(NSInteger)section {
  
     //return 1;
-    return [searchResult count];
+    return [searchResult count]+1;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if([indexPath row]==0){
+        return 10.0f;
+    }
+    return 44.0f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView 
@@ -194,16 +200,17 @@
     
     // Configure the cell
     NSUInteger row = [indexPath row];
-    
-    LANSearchDevice *dev = [searchResult objectAtIndex:row];
-    
-    cell.textLabel.text = dev.uid;
-    cell.textLabel.backgroundColor = [UIColor clearColor];
-    cell.detailTextLabel.text = dev.ip;
-    cell.detailTextLabel.backgroundColor = [UIColor clearColor];
-    cell.imageView.image = nil;
-    cell.backgroundColor = [UIColor clearColor];
-    cell.opaque = NO;
+    if(row>0){
+        LANSearchDevice *dev = [searchResult objectAtIndex:row-1];
+        
+        cell.textLabel.text = dev.uid;
+        cell.textLabel.backgroundColor = [UIColor clearColor];
+        cell.detailTextLabel.text = dev.ip;
+        cell.detailTextLabel.backgroundColor = [UIColor clearColor];
+        cell.imageView.image = nil;
+        cell.backgroundColor = [UIColor clearColor];
+        cell.opaque = NO;
+    }
     
     UIImageView *bg =[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bkg_articalList.png"]];
     cell.backgroundView = bg ;
