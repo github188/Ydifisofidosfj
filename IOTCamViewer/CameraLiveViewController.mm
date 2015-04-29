@@ -528,6 +528,8 @@ extern unsigned int _getTickCount() {
     [self.horizMenu reloadData];
     [self.longHorizMenu reloadData];
     
+    [self initQVGAMode:(UIButton *)sender];
+    
     [NSThread sleepForTimeInterval:2];
 }
 
@@ -1593,6 +1595,24 @@ extern unsigned int _getTickCount() {
         [set50Hz setTitleColor:[UIColor colorWithRed:0 green:122/255.0 blue:255.0/255.0 alpha:1.0f] forState:UIControlStateNormal];
         [_longBtn60HZ setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         [_longBtn50HZ setTitleColor:[UIColor colorWithRed:0 green:122/255.0 blue:255.0/255.0 alpha:1.0f] forState:UIControlStateNormal];
+    }
+}
+-(void)initQVGAMode:(UIButton *)btn{
+    for (UIButton *b in [longQVGAView subviews]) {
+        if(b.tag==btn.tag){
+            [b setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        }
+        else{
+            [b setTitleColor:[UIColor colorWithRed:0 green:122/255.0 blue:255.0/255.0 alpha:1.0f] forState:UIControlStateNormal];
+        }
+    }
+    for (UIButton *b in [qvgaView subviews]) {
+        if(b.tag==btn.tag){
+            [b setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        }
+        else{
+            [b setTitleColor:[UIColor colorWithRed:0 green:122/255.0 blue:255.0/255.0 alpha:1.0f] forState:UIControlStateNormal];
+        }
     }
 }
 
