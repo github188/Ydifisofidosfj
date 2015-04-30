@@ -176,9 +176,9 @@
 #pragma mark - Table DataSource Methods
 - (NSInteger)tableView:(UITableView *)tableView 
  numberOfRowsInSection:(NSInteger)section {
- 
-    //return 1;
-    return [searchResult count]+1;
+    NSInteger cnt=[searchResult count];
+    if(cnt==0) return cnt;
+    return cnt+1;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if([indexPath row]==0){
@@ -223,8 +223,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSUInteger row = [indexPath row];    
-    LANSearchDevice *dev = [searchResult objectAtIndex:row];
+    NSUInteger row = [indexPath row];
+    if(row==0) return;
+    LANSearchDevice *dev = [searchResult objectAtIndex:row-1];
     if(self.isFromAutoWifi){
         AddCameraDetailController *controller = [[AddCameraDetailController alloc] initWithNibName:@"AddCameraDetail" bundle:nil delegate:[[self.navigationController viewControllers] objectAtIndex:0]];
         controller.uid=dev.uid;
