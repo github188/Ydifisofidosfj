@@ -692,6 +692,7 @@
 				dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
 					// NSString *acc = [camera getViewAccountOfChannel:0];
 					NSString *pwd = textFieldPassword.text;
+                    [database executeUpdate:@"update device set view_pwd=? where dev_uid=?",pwd,self.camera.uid];
 					
 					[self.camera disconnect];
 					
@@ -712,10 +713,7 @@
 					s3.cbSize = sizeof(s3);
 					[camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];
                     
-                    CameraMultiLiveViewController *nav=[self.navigationController.viewControllers objectAtIndex:0];
-                    [nav camStopShow:-1];
-                    
-                    [database executeUpdate:@"update device set view_pwd=? where dev_uid=?",pwd,self.camera.uid];
+
                     
 				});
 							   
