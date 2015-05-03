@@ -124,6 +124,8 @@ extern NSString *deviceTokenString;
 	
 	NSTimer* mTimerStartShowRevoke;
     BOOL isGoPlayEvent; //是否去了观看录像的界面
+    
+    BOOL moreFunCViewIsOpen;
 	
 }
 

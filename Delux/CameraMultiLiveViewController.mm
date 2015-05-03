@@ -467,9 +467,9 @@ extern unsigned int _getTickCount() ;
 }
 
 - (IBAction)goAddCamera:(id)sender {
+    if(moreFunCViewIsOpen) return;
 
 	mnViewTag = (int)[(UIView*)sender tag];
-	
 	GLog( tUI, (@"+++CameraMultiLiveViewController - goLiveView: [%d]", mnViewTag));
 	
 	[self camStopShow:-1];
@@ -480,6 +480,7 @@ extern unsigned int _getTickCount() ;
     controller.delegate = self;
     [self.navigationController pushViewController:controller animated:YES];
     [controller release];
+    [self hideMoreFunctionView:nil];
 }
 
 - (void)disconnectCamera:(NSString*)strUID {
@@ -511,6 +512,8 @@ extern unsigned int _getTickCount() ;
 }
 
 - (IBAction)moreFunction:(id)sender {
+    
+    moreFunCViewIsOpen=YES;
     
     moreFunctionTag = [NSNumber numberWithInt:(int)[(UIView*)sender tag]];
     [moreFunctionView setHidden:NO];
@@ -555,7 +558,7 @@ extern unsigned int _getTickCount() ;
 }
 
 - (IBAction)hideMoreFunctionView:(id)sender {
-    
+    moreFunCViewIsOpen=NO;
     [UIView beginAnimations:@"imageViewSmall" context:nil];
     [UIView setAnimationDuration:0.2];
     [moreFunctionView setAlpha:0.0];
@@ -573,6 +576,7 @@ extern unsigned int _getTickCount() ;
 
 
 - (IBAction)goLiveView:(id)sender {
+    if(moreFunCViewIsOpen) return;
 
 	int nIdx = (int)[(UIView*)sender tag];
 
