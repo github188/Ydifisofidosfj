@@ -11,6 +11,7 @@
 #import "EditCameraAdvancedController.h"
 #import "AppDelegate.h"
 #import "iToast.h"
+#import "CameraMultiLiveViewController.h"
 
 @implementation EditCameraDefaultController
 
@@ -710,6 +711,12 @@
 					SMsgAVIoctrlTimeZone s3={0};
 					s3.cbSize = sizeof(s3);
 					[camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];
+                    
+                    CameraMultiLiveViewController *nav=[self.navigationController.viewControllers objectAtIndex:0];
+                    [nav camStopShow:-1];
+                    
+                    [database executeUpdate:@"update device set view_pwd=? where dev_uid=?",pwd,self.camera.uid];
+                    
 				});
 							   
 				[tableView cellForRowAtIndexPath:indexPath].detailTextLabel.text = NSLocalizedString(@"Connecting...", @"");

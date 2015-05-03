@@ -149,6 +149,8 @@ extern NSString *deviceTokenString;
 @property (retain, nonatomic) IBOutlet UIImageView *vdo3;
 @property (retain, nonatomic) IBOutlet UIImageView *vdo4;
 
+- (void)camStopShow:(int)aIgnoreIdx;
+
 - (IBAction)goSetting:(id)sender;
 - (IBAction)goAddCamera:(id)sender;
 - (IBAction)moreFunction:(id)sender;
