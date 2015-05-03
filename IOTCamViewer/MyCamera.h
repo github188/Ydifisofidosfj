@@ -72,6 +72,7 @@
 +(NSString *)cameraQVGAKey:(NSString *)uid;
 +(void)setCameraQVGA:(NSInteger)v ca:(MyCamera *)camera;
 +(void)loadCameraQVGA:(MyCamera *)ca;
++(NSInteger)getCameraQVGA:(MyCamera *)camera;
 
 @end
 

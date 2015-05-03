@@ -528,7 +528,7 @@ extern unsigned int _getTickCount() {
     [self.horizMenu reloadData];
     [self.longHorizMenu reloadData];
     
-    [self initQVGAMode:(UIButton *)sender];
+    [self initQVGAMode:[(UIView*)sender tag]];
     
     [NSThread sleepForTimeInterval:2];
 }
@@ -1180,6 +1180,7 @@ extern unsigned int _getTickCount() {
 
 	camera.delegate2 = self;
     
+    [self initQVGAMode:[MyCamera getCameraQVGA:self.camera]];
     
     
     [super viewDidLoad];
@@ -1597,9 +1598,10 @@ extern unsigned int _getTickCount() {
         [_longBtn50HZ setTitleColor:[UIColor colorWithRed:0 green:122/255.0 blue:255.0/255.0 alpha:1.0f] forState:UIControlStateNormal];
     }
 }
--(void)initQVGAMode:(UIButton *)btn{
+-(void)initQVGAMode:(NSInteger)tg{
     for (UIButton *b in [longQVGAView subviews]) {
-        if(b.tag==btn.tag){
+        if(b.tag==0) continue;
+        if(b.tag==tg){
             [b setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         }
         else{
@@ -1607,7 +1609,8 @@ extern unsigned int _getTickCount() {
         }
     }
     for (UIButton *b in [qvgaView subviews]) {
-        if(b.tag==btn.tag){
+        if(b.tag==0) continue;
+        if(b.tag==tg){
             [b setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         }
         else{

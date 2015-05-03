@@ -444,11 +444,15 @@ BOOL g_bDiagnostic = FALSE;
     NSString *key=[MyCamera cameraQVGAKey:camera.uid];
     [userDefault setInteger:v forKey:key];
 }
-+(void)loadCameraQVGA:(MyCamera *)ca{
++(NSInteger)getCameraQVGA:(MyCamera *)camera{
     NSUserDefaults *userDefault=[NSUserDefaults standardUserDefaults];
-    NSString *key=[MyCamera cameraQVGAKey:ca.uid];
+    NSString *key=[MyCamera cameraQVGAKey:camera.uid];
     NSInteger v=[userDefault integerForKey:key];
     v=v==0?5:v;
+    return v;
+}
++(void)loadCameraQVGA:(MyCamera *)ca{
+    NSInteger v=[MyCamera getCameraQVGA:ca];
     
     SMsgAVIoctrlSetStreamCtrlReq *quality = (SMsgAVIoctrlSetStreamCtrlReq *)malloc(sizeof(SMsgAVIoctrlSetStreamCtrlReq));
     memset(quality, 0, sizeof(SMsgAVIoctrlSetStreamCtrlReq));
