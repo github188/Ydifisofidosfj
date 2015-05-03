@@ -136,8 +136,12 @@
     return 1;    
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {    
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+#if defined(EasynPTarget)
+    return (section == 0) ? [self.labelItems count]-1 : 0;//去掉型号
+#else
     return (section == 0) ? [self.labelItems count] : 0;
+#endif
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -154,7 +158,13 @@
                 autorelease];
     }
     
-    cell.textLabel.text = [labelItems objectAtIndex:row]; 
+    NSInteger index=row;
+#if defined(EasynPTarget)
+    index=row+1;
+    row++;
+#endif
+    
+    cell.textLabel.text = [labelItems objectAtIndex:index];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
     if (row == 0) {
@@ -193,7 +203,11 @@
         }
     }
     else if (row == 2) {
+#if defined(EasynPTarget)
+        vender=@"Easyn";
+#else
         vender=@"Aztech";
+#endif
         if (vender == nil || [vender length] == 0) {
             [cell addSubview:venderIndicator];
             [venderIndicator startAnimating];            
