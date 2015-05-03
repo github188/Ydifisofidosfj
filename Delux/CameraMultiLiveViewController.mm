@@ -606,6 +606,7 @@ extern unsigned int _getTickCount() ;
 	else {
 		GLog( tUI, (@"+++CameraMultiLiveViewController - goLiveView [%d] !!!Ignore!!!", nIdx) );
 	}
+    [self hideMoreFunctionView:nil];
 }
 
 - (IBAction)changeViewSetting:(id)sender {
@@ -656,6 +657,8 @@ extern unsigned int _getTickCount() ;
     [customNavController pushViewController:photoTable animated:YES];
     [photoTable release];
 	[customNavController release];
+    
+    [self hideMoreFunctionView:nil];
 }
 
 - (IBAction)goSetting:(id)sender {
