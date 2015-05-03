@@ -121,6 +121,8 @@
 		06BA0EA91ACAD6F300448ACB /* f+Btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0EA71ACAD6F300448ACB /* f+Btn@2x.png */; };
 		06BA0EAC1ACAD71400448ACB /* f-Btn_Click@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0EAA1ACAD71400448ACB /* f-Btn_Click@2x.png */; };
 		06BA0EAD1ACAD71400448ACB /* f-Btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0EAB1ACAD71400448ACB /* f-Btn@2x.png */; };
+		06E1BC6C1AF5DB5100755606 /* refresh_27_07_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E1BC6B1AF5DB5100755606 /* refresh_27_07_1.png */; };
+		06E1BC6D1AF5DB5100755606 /* refresh_27_07_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E1BC6B1AF5DB5100755606 /* refresh_27_07_1.png */; };
 		06F425F71AA9FB6500427383 /* AppGuidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F425F51AA9FB6500427383 /* AppGuidViewController.m */; };
 		06F425F81AA9FB6500427383 /* AppGuidViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F425F61AA9FB6500427383 /* AppGuidViewController.xib */; };
 		06F76E331AB720A100901EBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AC3148C5342007705B6 /* main.m */; };
@@ -1306,6 +1308,7 @@
 		06BA0EA71ACAD6F300448ACB /* f+Btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "f+Btn@2x.png"; sourceTree = "<group>"; };
 		06BA0EAA1ACAD71400448ACB /* f-Btn_Click@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "f-Btn_Click@2x.png"; sourceTree = "<group>"; };
 		06BA0EAB1ACAD71400448ACB /* f-Btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "f-Btn@2x.png"; sourceTree = "<group>"; };
+		06E1BC6B1AF5DB5100755606 /* refresh_27_07_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh_27_07_1.png; sourceTree = "<group>"; };
 		06F425F41AA9FB6500427383 /* AppGuidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGuidViewController.h; sourceTree = "<group>"; };
 		06F425F51AA9FB6500427383 /* AppGuidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGuidViewController.m; sourceTree = "<group>"; };
 		06F425F61AA9FB6500427383 /* AppGuidViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppGuidViewController.xib; sourceTree = "<group>"; };
@@ -2967,6 +2970,7 @@
 		D8C4DBC414E2171D007CBFAE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				06E1BC6B1AF5DB5100755606 /* refresh_27_07_1.png */,
 				06AAE5D91AEFCAC90064CE78 /* info_27_03.png */,
 				06AAE5DA1AEFCAC90064CE78 /* refresh_27_07.png */,
 				57DE16E61868235C00B6682F /* more.png */,
@@ -3628,6 +3632,7 @@
 				06F770121AB720A100901EBA /* offline.png in Resources */,
 				06F770131AB720A100901EBA /* ceo_rcplay_forward_click@2x.png in Resources */,
 				06F770141AB720A100901EBA /* Icon@2x.png in Resources */,
+				06E1BC6D1AF5DB5100755606 /* refresh_27_07_1.png in Resources */,
 				06F770151AB720A100901EBA /* toolbar_bk@2x.png in Resources */,
 				06F770161AB720A100901EBA /* moreset_bk.png in Resources */,
 				06F770171AB720A100901EBA /* america.csv in Resources */,
@@ -3814,6 +3819,7 @@
 				7A553DBE194EB73D00F5AA11 /* moreset_clicked@2x.png in Resources */,
 				610DBA4C169AF0BF00292CF9 /* popoverArrowLeftSimple.png in Resources */,
 				7A553D95194EB73D00F5AA11 /* login_icon.png in Resources */,
+				06E1BC6C1AF5DB5100755606 /* refresh_27_07_1.png in Resources */,
 				610DBA4D169AF0BF00292CF9 /* popoverArrowRightSimple.png in Resources */,
 				7A553DA3194EB73D00F5AA11 /* more_delete.png in Resources */,
 				06AAE5DD1AEFCAC90064CE78 /* refresh_27_07.png in Resources */,
@@ -4472,7 +4478,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4501,7 +4507,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "0999743d-19a7-45a9-b1d1-d7f9c600db0b";
+				PROVISIONING_PROFILE = "4d2261ca-ad5f-40e7-bcb3-007166c3ab6e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -4514,7 +4520,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4544,7 +4550,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "0999743d-19a7-45a9-b1d1-d7f9c600db0b";
+				PROVISIONING_PROFILE = "4d2261ca-ad5f-40e7-bcb3-007166c3ab6e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -4557,7 +4563,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4587,7 +4593,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "0999743d-19a7-45a9-b1d1-d7f9c600db0b";
+				PROVISIONING_PROFILE = "4d2261ca-ad5f-40e7-bcb3-007166c3ab6e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -4600,7 +4606,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4629,7 +4635,7 @@
 					"-DP2PCAMLIVE",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "0999743d-19a7-45a9-b1d1-d7f9c600db0b";
+				PROVISIONING_PROFILE = "4d2261ca-ad5f-40e7-bcb3-007166c3ab6e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
