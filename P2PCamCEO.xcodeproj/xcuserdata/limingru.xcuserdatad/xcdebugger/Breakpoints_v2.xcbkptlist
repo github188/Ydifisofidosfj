@@ -9,38 +9,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "IOTCamViewer/CameraLiveViewController.mm"
-            timestampString = "452351357.807546"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1571"
-            endingLineNumber = "1571"
-            landmarkName = "-camera:_didReceiveIOCtrlWithType:Data:DataSize:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "IOTCamViewer/CameraLiveViewController.mm"
-            timestampString = "452351357.807546"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1573"
-            endingLineNumber = "1573"
-            landmarkName = "-camera:_didReceiveIOCtrlWithType:Data:DataSize:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Delux/CameraMultiLiveViewController.mm"
             timestampString = "452354075.154794"
             startingColumnNumber = "9223372036854775807"
@@ -102,7 +70,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOTCamViewer/EditCameraDefaultController.m"

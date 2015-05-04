@@ -504,16 +504,14 @@ extern unsigned int _getTickCount() {
     [self.multiStreamPopoverController presentPopoverFromRect:CGRectMake(240, -140, 80, 120) inView:statusBar permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
 }
 
-
-- (IBAction)onBtnSetQVGA:(id)sender {
-    
+-(void)onBtnSetQVGA1:(NSInteger)tg{
     SMsgAVIoctrlSetStreamCtrlReq *s = (SMsgAVIoctrlSetStreamCtrlReq *)malloc(sizeof(SMsgAVIoctrlSetStreamCtrlReq));
     memset(s, 0, sizeof(SMsgAVIoctrlSetStreamCtrlReq));
     
     s->channel = 0;
-    s->quality = [(UIView*)sender tag];
+    s->quality = tg;
     
-    [MyCamera setCameraQVGA:[(UIView*)sender tag] ca:self.camera];
+    [MyCamera setCameraQVGA:tg ca:self.camera];
     
     [camera sendIOCtrlToChannel:0
                            Type:IOTYPE_USER_IPCAM_SETSTREAMCTRL_REQ
@@ -529,9 +527,16 @@ extern unsigned int _getTickCount() {
     [self.horizMenu reloadData];
     [self.longHorizMenu reloadData];
     
-    [self initQVGAMode:[(UIView*)sender tag]];
+    [self initQVGAMode:tg];
     
     [NSThread sleepForTimeInterval:2];
+}
+
+
+- (IBAction)onBtnSetQVGA:(id)sender {
+    
+    NSInteger tag=[(UIView*)sender tag];
+    [self onBtnSetQVGA1:tag];
 }
 
 - (IBAction)onBtnSetEMode:(id)sender {
@@ -1304,6 +1309,7 @@ extern unsigned int _getTickCount() {
 			s3.cbSize = sizeof(s3);
 			[camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];
             
+            [MyCamera loadCameraQVGA:camera];
         }
         
         if ( selectedChannel != 0 && [camera getConnectionStateOfChannel:selectedChannel] != CONNECTION_STATE_CONNECTED) {
@@ -1311,7 +1317,6 @@ extern unsigned int _getTickCount() {
         }
         
         [camera startShow:selectedChannel ScreenObject:self];
-        
         
         
         [loadingViewLandscape setHidden:NO];
