@@ -1309,7 +1309,7 @@ extern unsigned int _getTickCount() {
 			s3.cbSize = sizeof(s3);
 			[camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];
             
-            [MyCamera loadCameraQVGA:camera];
+            
         }
         
         if ( selectedChannel != 0 && [camera getConnectionStateOfChannel:selectedChannel] != CONNECTION_STATE_CONNECTED) {
@@ -1317,6 +1317,8 @@ extern unsigned int _getTickCount() {
         }
         
         [camera startShow:selectedChannel ScreenObject:self];
+        
+        [MyCamera loadCameraQVGA:camera];
         
         
         [loadingViewLandscape setHidden:NO];
