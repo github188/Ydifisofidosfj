@@ -16,8 +16,11 @@
 #import <IOTCamera/GLogZone.h>
 #import <SystemConfiguration/CaptiveNetwork.h>
 #import "IQKeyboardManager.h"
-
+#if defined(EasynPTarget)
+NSString *g_tpnsHostString = @"http://push1.ipcam.hk/apns/apns.php";
+#else
 NSString *g_tpnsHostString = @"http://push.iotcplatform.com/apns/apns.php";
+#endif
 
 NSMutableArray *camera_list;
 FMDatabase *database;
@@ -588,7 +591,7 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
     NSLog(@"%@",mapArr);
     
     NSString *appidString = [[NSBundle mainBundle] bundleIdentifier];
-    NSString *hostString = @"http://push.iotcplatform.com/apns/apns.php";
+    NSString *hostString = g_tpnsHostString;
     
     NSMutableURLRequest *request = [NSMutableURLRequest
                                     requestWithURL:[NSURL URLWithString:hostString]];
@@ -640,9 +643,9 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
                 NSError *error = nil;
                 NSString *appidString = [[NSBundle mainBundle] bundleIdentifier];
 #ifndef DEF_APNSTest
-                NSString *hostString = @"http://push.iotcplatform.com/apns/apns.php";
+                NSString *hostString = g_tpnsHostString;
 #else
-                NSString *hostString = @"http://54.225.191.150/test_gcm/apns.php"; //測試Host
+                NSString *hostString = g_tpnsHostString; //測試Host
 #endif
                 NSString *argsString = @"%@?cmd=unreg_mapping&uid=%@&appid=%@&udid=%@&os=ios";
                 NSString *getURLString = [NSString stringWithFormat:argsString, hostString, uid, appidString, uuid];
@@ -699,9 +702,9 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
         
         NSError *error = nil;
 #ifndef DEF_APNSTest
-        NSString *hostString = @"http://push.iotcplatform.com/apns/apns.php";
+        NSString *hostString = g_tpnsHostString;
 #else
-		NSString *hostString = @"http://54.225.191.150/test_gcm/apns.php"; //測試Host
+		NSString *hostString = g_tpnsHostString; //測試Host
 #endif
 #if DEBUG
         NSString *argsString = @"%@?cmd=reg_client&token=%@&appid=%@&dev=1&lang=%@&udid=%@&os=ios&osver=%@&appver=%@&model=%@";
@@ -737,9 +740,9 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 					NSError *error = nil;
 					NSString *appidString = [[NSBundle mainBundle] bundleIdentifier];
 #ifndef DEF_APNSTest
-					NSString *hostString = @"http://push.iotcplatform.com/apns/apns.php";
+					NSString *hostString = g_tpnsHostString;
 #else
-					NSString *hostString = @"http://54.225.191.150/test_gcm/apns.php"; //測試Host
+					NSString *hostString = g_tpnsHostString; //測試Host
 #endif
                     NSString *argsString = @"%@?cmd=reg_mapping&token=%@&uid=%@&appid=%@&udid=%@&os=ios";
                     NSString *getURLString = [NSString stringWithFormat:argsString, hostString, deviceTokenString, uid, appidString , uuid];

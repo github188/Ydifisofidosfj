@@ -182,9 +182,9 @@
             NSError *error = nil;
             NSString *appidString = [[NSBundle mainBundle] bundleIdentifier];
 #ifndef DEF_APNSTest
-            NSString *hostString = @"http://push.iotcplatform.com/apns/apns.php";
+            NSString *hostString = g_tpnsHostString;
 #else
-            NSString *hostString = @"http://54.225.191.150/test_gcm/apns.php"; //測試Host
+            NSString *hostString = g_tpnsHostString; //測試Host
 #endif
             NSString *argsString = @"%@?cmd=unreg_mapping&uid=%@&appid=%@&udid=%@&os=ios";
             NSString *getURLString = [NSString stringWithFormat:argsString, hostString, uid, appidString, uuid];
@@ -219,9 +219,9 @@
             NSError *error = nil;
             NSString *appidString = [[NSBundle mainBundle] bundleIdentifier];
 #ifndef DEF_APNSTest
-            NSString *hostString = @"http://push.iotcplatform.com/apns/apns.php";
+            NSString *hostString = g_tpnsHostString;
 #else
-            NSString *hostString = @"http://54.225.191.150/test_gcm/apns.php"; //測試Host
+            NSString *hostString = g_tpnsHostString; //測試Host
 #endif
             NSString *argsString = @"%@?cmd=reg_mapping&token=%@&uid=%@&appid=%@&udid=%@&os=ios";
             NSString *getURLString = [NSString stringWithFormat:argsString, hostString, deviceTokenString, uid, appidString , uuid];
