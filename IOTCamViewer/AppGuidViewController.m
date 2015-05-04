@@ -71,8 +71,8 @@
     self.pageControl.currentPage=p;
     if(p+1>self.pageControl.numberOfPages)
     {
-        self.scollerView.delegate=nil;
-        [self back:self.skipBtn];
+        //self.scollerView.delegate=nil;
+        //[self back:self.skipBtn];
     }
 }
 - (void)back:(id)sender {

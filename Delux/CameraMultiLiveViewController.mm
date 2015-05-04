@@ -2175,7 +2175,7 @@ if(!isGoPlayEvent){
     SMsgAVIoctrlTimeZone s3={0};
     s3.cbSize = sizeof(s3);
     [changedCamera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];
-    
+    [MyCamera loadCameraQVGA:changedCamera];
     [self checkStatus];
 }
 

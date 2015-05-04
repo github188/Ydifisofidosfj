@@ -204,7 +204,7 @@
     }
     else if (row == 2) {
 #if defined(EasynPTarget)
-        vender=@"Easyn";
+        vender=@"EasyN";
 #else
         vender=@"Aztech";
 #endif
