@@ -1186,7 +1186,7 @@ extern unsigned int _getTickCount() {
 
 	camera.delegate2 = self;
     
-    [self initQVGAMode:[MyCamera getCameraQVGA:self.camera]];
+    //[self initQVGAMode:[MyCamera getCameraQVGA:self.camera]];
     
     
     [super viewDidLoad];
@@ -1308,8 +1308,6 @@ extern unsigned int _getTickCount() {
 			SMsgAVIoctrlTimeZone s3={0};
 			s3.cbSize = sizeof(s3);
 			[camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];
-            
-            
         }
         
         if ( selectedChannel != 0 && [camera getConnectionStateOfChannel:selectedChannel] != CONNECTION_STATE_CONNECTED) {
@@ -1318,16 +1316,29 @@ extern unsigned int _getTickCount() {
         
         [camera startShow:selectedChannel ScreenObject:self];
         
-        [MyCamera loadCameraQVGA:camera];
-        
         
         [loadingViewLandscape setHidden:NO];
         [loadingViewPortrait setHidden:NO];
         [loadingViewPortrait startAnimating];
         [loadingViewLandscape startAnimating];
         
+        [self loadCameraQVGAStatus];
+        
         [self activeAudioSession];
     }
+}
+-(void)loadCameraQVGAStatus{
+    SMsgAVIoctrlGetStreamCtrlReq *quality = (SMsgAVIoctrlGetStreamCtrlReq *)malloc(sizeof(SMsgAVIoctrlGetStreamCtrlReq));
+    memset(quality, 0, sizeof(SMsgAVIoctrlGetStreamCtrlReq));
+    
+    quality->channel=0;
+    
+    [camera sendIOCtrlToChannel:0
+                       Type:IOTYPE_USER_IPCAM_GETSTREAMCTRL_REQ
+                       Data:(char *)quality
+                   DataSize:sizeof(SMsgAVIoctrlGetStreamCtrlReq)];
+    
+    free(quality);
 }
 
 #pragma mark - MyCamera Delegate Methods
@@ -1546,6 +1557,12 @@ extern unsigned int _getTickCount() {
 
 - (void)camera:(MyCamera *)camera_ _didReceiveIOCtrlWithType:(NSInteger)type Data:(const char*)data DataSize:(NSInteger)size
 {
+    if(type==(int)IOTYPE_USER_IPCAM_GETSTREAMCTRL_RESP){
+        SMsgAVIoctrlGetStreamCtrlResp* pResult=(SMsgAVIoctrlGetStreamCtrlResp*)data;
+        [MyCamera setCameraQVGA:pResult->quality ca:camera];
+        [self initQVGAMode:pResult->quality];
+    }
+    
     if (type == (int)IOTYPE_USER_IPCAM_SETSTREAMCTRL_RESP) {
     
         SMsgAVIoctrlSetStreamCtrlResp* pResult=(SMsgAVIoctrlSetStreamCtrlResp*)data;

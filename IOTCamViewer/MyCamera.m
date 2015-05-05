@@ -448,7 +448,7 @@ BOOL g_bDiagnostic = FALSE;
     NSUserDefaults *userDefault=[NSUserDefaults standardUserDefaults];
     NSString *key=[MyCamera cameraQVGAKey:camera.uid];
     NSInteger v=[userDefault integerForKey:key];
-    v=v==0?5:v;
+    v=v==0?2:v;
     return v;
 }
 +(void)loadCameraQVGA:(MyCamera *)ca{

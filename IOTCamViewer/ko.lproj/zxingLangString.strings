@@ -7,7 +7,7 @@
 */
 
 /* No comment provided by engineer. */
-"Place a barcode inside the viewfinder rectangle to scan it." = "请将二维码对准于方框内";
+"Place a barcode inside the viewfinder rectangle to scan it." = "QR코드를 제대로 맞춰서 인식 시켜주세요";
 
 "Cancel" = "취소";
 

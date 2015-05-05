@@ -229,6 +229,9 @@ extern unsigned int _getTickCount() ;
             [tempCamera setCloud:isFromCloud];
             [tempCamera start:0];
             
+            
+            //[tempCamera startShow:channel ScreenObject:self];
+            
             SMsgAVIoctrlGetAudioOutFormatReq *s = (SMsgAVIoctrlGetAudioOutFormatReq *)malloc(sizeof(SMsgAVIoctrlGetAudioOutFormatReq));
             s->channel = 0;
             [tempCamera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GETAUDIOOUTFORMAT_REQ Data:(char *)s DataSize:sizeof(SMsgAVIoctrlGetAudioOutFormatReq)];
@@ -242,7 +245,7 @@ extern unsigned int _getTickCount() ;
 			s3.cbSize = sizeof(s3);
 			[tempCamera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];
             
-            //[MyCamera loadCameraQVGA:tempCamera];
+            [MyCamera loadCameraQVGA:tempCamera];
 			
             [camera_list addObject:tempCamera];
             [tempCamera release];
@@ -2175,7 +2178,7 @@ if(!isGoPlayEvent){
     SMsgAVIoctrlTimeZone s3={0};
     s3.cbSize = sizeof(s3);
     [changedCamera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];
-    //[MyCamera loadCameraQVGA:changedCamera];
+    [MyCamera loadCameraQVGA:changedCamera];
     [self checkStatus];
 }
 
