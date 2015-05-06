@@ -184,7 +184,7 @@
             }
         }
         
-        [self.navigationController popToViewController:[[self.navigationController viewControllers] objectAtIndex:1] animated:YES];
+        [self.navigationController popToViewController:[[self.navigationController viewControllers] objectAtIndex:0] animated:YES];
         
         [self.delegate camera:uid_ didAddwithName:name_ password:password syncOnCloud:isSyncOnCloud addToCloud:isAddToCloud addFromCloud:isFromDOC];
         
