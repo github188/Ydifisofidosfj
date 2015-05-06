@@ -1559,14 +1559,16 @@ extern unsigned int _getTickCount() {
 {
     if(type==(int)IOTYPE_USER_IPCAM_GETSTREAMCTRL_RESP){
         SMsgAVIoctrlGetStreamCtrlResp* pResult=(SMsgAVIoctrlGetStreamCtrlResp*)data;
-        [MyCamera setCameraQVGA:pResult->quality ca:camera];
-        [self initQVGAMode:pResult->quality];
+        if(pResult->quality!=[MyCamera getCameraQVGA:camera]){
+            [MyCamera loadCameraQVGA:camera];
+        }
     }
     
     if (type == (int)IOTYPE_USER_IPCAM_SETSTREAMCTRL_RESP) {
     
         SMsgAVIoctrlSetStreamCtrlResp* pResult=(SMsgAVIoctrlSetStreamCtrlResp*)data;
         NSLog(@"IOTYPE_USER_IPCAM_SETSTREAMCTRL_RESP result=%d",pResult->result);
+        [self initQVGAMode:[MyCamera getCameraQVGA:camera]];
         if (camera_==camera) {
 			[camera reStartShow:selectedChannel withCompleteBlock:^(void){
 				
@@ -1574,6 +1576,7 @@ extern unsigned int _getTickCount() {
 				//
 				[loadingViewPortrait stopAnimating];
 				[loadingViewLandscape stopAnimating];
+                
 				
 			}];
 
