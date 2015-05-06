@@ -285,17 +285,6 @@
     self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:negativeSpacer, backButton, nil];
     [backButton release];
     
-    CGRect screenBounds = [[UIScreen mainScreen] bounds];
-    if (screenBounds.size.height == 480) {
-        addBTNView.y -= 88;
-        self.tableView.height -= 88;
-    }
-    
-    if ([camera_list count] < MAX_CAMERA_LIMIT) {
-        [UIView animateWithDuration:0.5 animations:^{
-            addBTNView.center = CGPointMake(addBTNView.center.x, addBTNView.center.y - 203 );
-        }];
-    }
     
     addBTNView.hidden = isFromChange;
     
@@ -315,6 +304,21 @@
 - (void)viewDidAppear:(BOOL)animated 
 {
     [super viewDidAppear:animated];
+    
+    
+    
+    addBTNView.frame=CGRectMake(0, self.view.frame.size.height, self.view.frame.size.width, addBTNView.frame.size.height);
+    
+    if ([camera_list count] < MAX_CAMERA_LIMIT) {
+        self.tableView.height = self.view.frame.size.height-addBTNView.frame.size.height;
+        [UIView animateWithDuration:0.5 animations:^{
+            addBTNView.frame = CGRectMake(0, self.view.frame.size.height-addBTNView.frame.size.height, self.view.frame.size.width, addBTNView.frame.size.height);
+        }];
+    }
+    else{
+        self.tableView.height = self.view.frame.size.height;
+    }
+    
     
     [searchedData removeAllObjects];
     [searchedData addObjectsFromArray:camera_list];    

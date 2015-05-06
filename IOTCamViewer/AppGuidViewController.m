@@ -33,6 +33,7 @@
     [backButton release];
     
     self.navigationItem.title = NSLocalizedString(@"用户手册", @"");
+    [self.skipBtn setTitle:NSLocalizedString(@"GuidSkip", @"") forState:UIControlStateNormal];
     
     
 
