@@ -565,7 +565,7 @@ extern unsigned int _getTickCount() ;
     [UIView beginAnimations:@"imageViewSmall" context:nil];
     [UIView setAnimationDuration:0.2];
     [moreFunctionView setAlpha:0.0];
-    CGAffineTransform newTransform =  CGAffineTransformScale(moreFunctionView.transform, 0.1, 0.1);
+    CGAffineTransform newTransform =  CGAffineTransformScale(moreFunctionView.transform, 1.0, 1.0);
     [moreFunctionView setTransform:newTransform];
     [UIView commitAnimations];
     
