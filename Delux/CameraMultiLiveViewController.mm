@@ -1002,6 +1002,9 @@ extern unsigned int _getTickCount() ;
 }
 
 - (void)viewDidLoad {
+    
+    [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationPortrait];
+    
     GLog( tUI, (@"MultiView: +viewDidLoad") );
 	
 	marrBtn_Default = [[NSMutableArray alloc] initWithObjects:defaultButton1, defaultButton2, defaultButton3, defaultButton4, nil];
