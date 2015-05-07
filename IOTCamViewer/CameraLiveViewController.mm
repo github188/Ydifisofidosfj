@@ -1581,8 +1581,8 @@ extern unsigned int _getTickCount() {
 				
 			}];
 
-            [loadingViewPortrait startAnimating];
-            [loadingViewLandscape startAnimating];
+            //[loadingViewPortrait startAnimating];
+            //[loadingViewLandscape startAnimating];
         }
     } else if (type == (int)IOTYPE_USER_IPCAM_SET_ENVIRONMENT_RESP) {
         SMsgAVIoctrlSetEnvironmentResp* pResult=(SMsgAVIoctrlSetEnvironmentResp*)data;
@@ -1598,8 +1598,8 @@ extern unsigned int _getTickCount() {
 				
 			}];
             
-            [loadingViewPortrait startAnimating];
-            [loadingViewLandscape startAnimating];
+            //[loadingViewPortrait startAnimating];
+            //[loadingViewLandscape startAnimating];
         }
 
     }
