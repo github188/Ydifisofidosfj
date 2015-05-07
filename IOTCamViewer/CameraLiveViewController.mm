@@ -1186,7 +1186,7 @@ extern unsigned int _getTickCount() {
 
 	camera.delegate2 = self;
     
-    //[self initQVGAMode:[MyCamera getCameraQVGA:self.camera]];
+    [self initQVGAMode:[MyCamera getCameraQVGA:self.camera]];
     
     
     [super viewDidLoad];
@@ -1559,6 +1559,7 @@ extern unsigned int _getTickCount() {
 {
     if(type==(int)IOTYPE_USER_IPCAM_GETSTREAMCTRL_RESP){
         SMsgAVIoctrlGetStreamCtrlResp* pResult=(SMsgAVIoctrlGetStreamCtrlResp*)data;
+        [self initQVGAMode:pResult->quality];
         if(pResult->quality!=[MyCamera getCameraQVGA:camera]){
             [MyCamera loadCameraQVGA:camera];
         }
