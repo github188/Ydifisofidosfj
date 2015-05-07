@@ -1620,7 +1620,7 @@ extern unsigned int _getTickCount() {
         [_longBtn50HZ setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         [_longBtn60HZ setTitleColor:[UIColor colorWithRed:0 green:122/255.0 blue:255.0/255.0 alpha:1.0f] forState:UIControlStateNormal];
     }
-    if(emode==2){
+    if(emode==1){
         [set60Hz setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         [set50Hz setTitleColor:[UIColor colorWithRed:0 green:122/255.0 blue:255.0/255.0 alpha:1.0f] forState:UIControlStateNormal];
         [_longBtn60HZ setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
