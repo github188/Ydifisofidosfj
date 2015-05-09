@@ -67,6 +67,9 @@ extern unsigned int _getTickCount() {
 @synthesize videoGenerator;
 #endif
 
+-(AppDelegate *)getAppDelegate{
+    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
 
 
 #pragma mark Methods
@@ -1237,13 +1240,14 @@ extern unsigned int _getTickCount() {
     [self changeOrientation:self.interfaceOrientation];
     [self getEMode];
     
-    
+    [self getAppDelegate].allowRotation=YES;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     
     //camera.isSupportMultiRecording = NO;
+    [self getAppDelegate].allowRotation=NO;
     
     [super viewWillDisappear:animated];
 }

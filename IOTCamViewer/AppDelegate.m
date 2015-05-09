@@ -48,6 +48,28 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
 @synthesize window = _window;
 @synthesize ssid;
 
+
+-(NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
+
+{
+    if (self.allowRotation) {
+        return UIInterfaceOrientationMaskPortrait |UIInterfaceOrientationMaskLandscapeLeft |UIInterfaceOrientationMaskLandscapeRight;
+    }
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait |UIInterfaceOrientationMaskLandscapeLeft |UIInterfaceOrientationMaskLandscapeRight;
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
+
+{
+    return UIInterfaceOrientationPortrait;
+}
+
+
 -(void)sessionDidReceiveAuthorizationFailure:(DBSession *)session userId:(NSString *)userId {}
 -(void)networkRequestStarted{}
 -(void)networkRequestStopped{}
