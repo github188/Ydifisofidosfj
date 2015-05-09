@@ -710,6 +710,8 @@ extern unsigned int _getTickCount() {
         return;
     }
     
+    [self getAppDelegate].allowRotation=NO;
+    
     /* save last frame to local storage */
     unsigned int codec_id = mCodecId;
     NSString *imgName = [NSString stringWithFormat:@"%@.jpg", camera.uid];
