@@ -325,7 +325,7 @@ extern unsigned int _getTickCount() ;
             
 	if(!isGoPlayEvent){
             tempCamera.isShowInMultiView = YES;
-            [tempCamera startShow:0 ScreenObject:self];
+            //[tempCamera startShow:0 ScreenObject:self];
 	}
             tempCamera.delegate2 = self;
         }
