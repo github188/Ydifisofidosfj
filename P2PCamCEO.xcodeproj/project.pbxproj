@@ -4517,7 +4517,7 @@
 				PROVISIONING_PROFILE = "0999743d-19a7-45a9-b1d1-d7f9c600db0b";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
-				VALID_ARCHS = "armv7 armv7s arm64";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -4561,7 +4561,7 @@
 				PROVISIONING_PROFILE = "0999743d-19a7-45a9-b1d1-d7f9c600db0b";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
-				VALID_ARCHS = "armv7 armv7s arm64";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -4605,7 +4605,7 @@
 				PROVISIONING_PROFILE = "0999743d-19a7-45a9-b1d1-d7f9c600db0b";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
-				VALID_ARCHS = "armv7 armv7s arm64";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = "App Store Distribution";
@@ -4648,7 +4648,7 @@
 				PROVISIONING_PROFILE = "0999743d-19a7-45a9-b1d1-d7f9c600db0b";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
-				VALID_ARCHS = "armv7 armv7s arm64";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = "Ad Hoc Distribution";
