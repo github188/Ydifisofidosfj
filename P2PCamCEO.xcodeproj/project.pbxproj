@@ -4514,7 +4514,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "0999743d-19a7-45a9-b1d1-d7f9c600db0b";
+				PROVISIONING_PROFILE = "4d2261ca-ad5f-40e7-bcb3-007166c3ab6e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -4558,7 +4558,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "0999743d-19a7-45a9-b1d1-d7f9c600db0b";
+				PROVISIONING_PROFILE = "4d2261ca-ad5f-40e7-bcb3-007166c3ab6e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -4602,7 +4602,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "0999743d-19a7-45a9-b1d1-d7f9c600db0b";
+				PROVISIONING_PROFILE = "4d2261ca-ad5f-40e7-bcb3-007166c3ab6e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -4645,7 +4645,7 @@
 					"-DP2PCAMLIVE",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "0999743d-19a7-45a9-b1d1-d7f9c600db0b";
+				PROVISIONING_PROFILE = "4d2261ca-ad5f-40e7-bcb3-007166c3ab6e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -4683,7 +4683,7 @@
 				PROVISIONING_PROFILE = "ce3ee02b-26fb-4a27-be22-30e6d550eb97";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -4720,7 +4720,7 @@
 				PROVISIONING_PROFILE = "ce3ee02b-26fb-4a27-be22-30e6d550eb97";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -4757,7 +4757,7 @@
 				PROVISIONING_PROFILE = "ce3ee02b-26fb-4a27-be22-30e6d550eb97";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -4793,7 +4793,7 @@
 				PROVISIONING_PROFILE = "ce3ee02b-26fb-4a27-be22-30e6d550eb97";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
