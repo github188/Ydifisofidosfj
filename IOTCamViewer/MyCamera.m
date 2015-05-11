@@ -180,11 +180,7 @@ BOOL g_bDiagnostic = FALSE;
 
 - (void)start:(NSInteger)channel
 {
-#if defined(EasynPTarget)
-	bIsSupportTimeZone = 1;
-#else
     bIsSupportTimeZone = 0;
-#endif
 	nGMTDiff = 8*60;
 	strTimeZone = [[NSString alloc] init];
 	
@@ -199,11 +195,7 @@ BOOL g_bDiagnostic = FALSE;
 
 - (void)start4EventPlayback:(NSInteger)channel
 {
-#if defined(EasynPTarget)
-    bIsSupportTimeZone = 1;
-#else
     bIsSupportTimeZone = 0;
-#endif
 	nGMTDiff = 8*60;
 	strTimeZone = [[NSString alloc] init];
 	
