@@ -180,7 +180,7 @@ BOOL g_bDiagnostic = FALSE;
 
 - (void)start:(NSInteger)channel
 {
-    bIsSupportTimeZone = 0;
+    bIsSupportTimeZone = NO;
 	nGMTDiff = 8*60;
 	strTimeZone = [[NSString alloc] init];
 	
@@ -195,7 +195,7 @@ BOOL g_bDiagnostic = FALSE;
 
 - (void)start4EventPlayback:(NSInteger)channel
 {
-    bIsSupportTimeZone = 0;
+    bIsSupportTimeZone = NO;
 	nGMTDiff = 8*60;
 	strTimeZone = [[NSString alloc] init];
 	
@@ -384,6 +384,7 @@ BOOL g_bDiagnostic = FALSE;
 		if( p->cbSize == sizeof(SMsgAVIoctrlTimeZone) ) {
 			NSLog( @">>>> IOTYPE_USER_IPCAM_GET_TIMEZONE_RESP <OK>\n\tbIsSupportTimeZone:%d\n\tnGMTDiff:%d\n\tstrTimeZone:%@", p->nIsSupportTimeZone, p->nGMTDiff, ( strlen(p->szTimeZoneString) > 0 ) ? [NSString stringWithUTF8String:p->szTimeZoneString]:@"(null)" );
 			bIsSupportTimeZone = p->nIsSupportTimeZone;
+            bIsSupportTimeZone=NO;
 			nGMTDiff = p->nGMTDiff;
 			NSString* pTimeZoneStringFromDevice = nil;
 			if( strlen(p->szTimeZoneString) > 0 )

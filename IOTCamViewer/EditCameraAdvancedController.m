@@ -408,7 +408,7 @@
         [camera getEnvironmentModeSupportOfChannel:0])
         row++;
     
-	if( camera.bIsSupportTimeZone && 1==2 )
+	if( camera.bIsSupportTimeZone )
 		row++;
 	
     if ([camera getWiFiSettingSupportOfChannel:0])
