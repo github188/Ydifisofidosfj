@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Bayit Cam.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>EasyN P.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -17,6 +22,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>066D9E3B1B037E7C00408AF2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>06F76E311AB720A100901EBA</key>
 		<dict>
 			<key>primary</key>
