@@ -3933,6 +3933,9 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = TUTK;
 				TargetAttributes = {
+					066D9E3B1B037E7C00408AF2 = {
+						DevelopmentTeam = Q2PV74KQN7;
+					};
 					06F76E311AB720A100901EBA = {
 						DevelopmentTeam = Q2PV74KQN7;
 					};
@@ -5799,7 +5802,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "Bayit Cam";
-				PROVISIONING_PROFILE = "ce3ee02b-26fb-4a27-be22-30e6d550eb97";
+				PROVISIONING_PROFILE = "16e9896e-d918-4039-b2af-ae3bea1ee7e9";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -5836,7 +5839,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "Bayit Cam";
-				PROVISIONING_PROFILE = "ce3ee02b-26fb-4a27-be22-30e6d550eb97";
+				PROVISIONING_PROFILE = "16e9896e-d918-4039-b2af-ae3bea1ee7e9";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -5873,7 +5876,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "Bayit Cam";
-				PROVISIONING_PROFILE = "ce3ee02b-26fb-4a27-be22-30e6d550eb97";
+				PROVISIONING_PROFILE = "16e9896e-d918-4039-b2af-ae3bea1ee7e9";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -5909,7 +5912,7 @@
 					"-DP2PCAMLIVE",
 				);
 				PRODUCT_NAME = "Bayit Cam";
-				PROVISIONING_PROFILE = "ce3ee02b-26fb-4a27-be22-30e6d550eb97";
+				PROVISIONING_PROFILE = "16e9896e-d918-4039-b2af-ae3bea1ee7e9";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
