@@ -859,7 +859,7 @@ extern unsigned int _getTickCount() {
         longQVGAView.frame=CGRectMake(longQVGAView.frame.origin.x, self.view.frame.size.height/2-longQVGAView.frame.size.height/2-33, longQVGAView.frame.size.width, longQVGAView.frame.size.height);
         
         //修复语音按钮的位置问题
-        longTalkButton.frame=CGRectMake(longTalkButton.frame.origin.x, self.view.frame.size.height-self.longHorizMenu.frame.size.height-longTalkButton.frame.size.height, longTalkButton.frame.size.width, longTalkButton.frame.size.height);
+        longTalkButton.frame=CGRectMake(self.view.frame.size.width-longTalkButton.frame.size.width+15, self.view.frame.size.height-self.longHorizMenu.frame.size.height-longTalkButton.frame.size.height-10, longTalkButton.frame.size.width, longTalkButton.frame.size.height);
         
         
 		if( glView == nil ) {
