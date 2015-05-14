@@ -1224,6 +1224,11 @@
 		06F7705A1AB720A100901EBA /* IOTCamera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611F4EF615C0F52D00B8D8C3 /* IOTCamera.framework */; };
 		06F770661AB7229300901EBA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06F770651AB7229300901EBA /* Images.xcassets */; };
 		06F770681AB7230400901EBA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06F770671AB7230400901EBA /* InfoPlist.strings */; };
+		06FF924E1B04E18900DD5803 /* add_camwifibk.png in Resources */ = {isa = PBXBuildFile; fileRef = 06FF924C1B04E18900DD5803 /* add_camwifibk.png */; };
+		06FF924F1B04E18900DD5803 /* add_camwifibk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06FF924D1B04E18900DD5803 /* add_camwifibk@2x.png */; };
+		06FF92531B04F42B00DD5803 /* BayitCamAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FF92511B04F42B00DD5803 /* BayitCamAddViewController.m */; };
+		06FF92541B04F42B00DD5803 /* BayitCamAddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06FF92521B04F42B00DD5803 /* BayitCamAddViewController.xib */; };
+		06FF92571B055ABE00DD5803 /* bayitcam.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06FF92591B055ABE00DD5803 /* bayitcam.strings */; };
 		55AA60E618C6FAE500338DBD /* UIDevice+Version.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AA60E518C6FAE500338DBD /* UIDevice+Version.m */; };
 		572B926C18EA4BFA0041B732 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572B926B18EA4BFA0041B732 /* CoreImage.framework */; };
 		573267EF185FF0B200BBE793 /* MoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 573267ED185FF0B200BBE793 /* MoreVC.m */; };
@@ -1930,6 +1935,12 @@
 		06F770631AB7215F00901EBA /* EasyN P-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EasyN P-Info.plist"; sourceTree = "<group>"; };
 		06F770651AB7229300901EBA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		06F770671AB7230400901EBA /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		06FF924C1B04E18900DD5803 /* add_camwifibk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = add_camwifibk.png; path = "Bayit Cam/images/add_camwifibk.png"; sourceTree = "<group>"; };
+		06FF924D1B04E18900DD5803 /* add_camwifibk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "add_camwifibk@2x.png"; path = "Bayit Cam/images/add_camwifibk@2x.png"; sourceTree = "<group>"; };
+		06FF92501B04F42B00DD5803 /* BayitCamAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BayitCamAddViewController.h; sourceTree = "<group>"; };
+		06FF92511B04F42B00DD5803 /* BayitCamAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BayitCamAddViewController.m; sourceTree = "<group>"; };
+		06FF92521B04F42B00DD5803 /* BayitCamAddViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BayitCamAddViewController.xib; sourceTree = "<group>"; };
+		06FF92581B055ABE00DD5803 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/bayitcam.strings; sourceTree = "<group>"; };
 		3E923CA415DDD7DA00B95C86 /* NoPhotoAvailable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NoPhotoAvailable.png; path = images/NoPhotoAvailable.png; sourceTree = "<group>"; };
 		55AA60E418C6FAE500338DBD /* UIDevice+Version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Version.h"; sourceTree = "<group>"; };
 		55AA60E518C6FAE500338DBD /* UIDevice+Version.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Version.m"; sourceTree = "<group>"; };
@@ -2850,6 +2861,10 @@
 				066DA08C1B03872900408AF2 /* InfoPlist.strings */,
 				066DA08E1B03872900408AF2 /* Images.xcassets */,
 				066DA0891B0385CD00408AF2 /* Bayit Cam-Info.plist */,
+				06FF92501B04F42B00DD5803 /* BayitCamAddViewController.h */,
+				06FF92511B04F42B00DD5803 /* BayitCamAddViewController.m */,
+				06FF92521B04F42B00DD5803 /* BayitCamAddViewController.xib */,
+				06FF92591B055ABE00DD5803 /* bayitcam.strings */,
 			);
 			name = "Bayit Cam";
 			sourceTree = "<group>";
@@ -2872,6 +2887,8 @@
 		066DA0A41B03879400408AF2 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				06FF924C1B04E18900DD5803 /* add_camwifibk.png */,
+				06FF924D1B04E18900DD5803 /* add_camwifibk@2x.png */,
 				066DA1051B03882F00408AF2 /* title_logo.png */,
 				066DA0D91B0387DE00408AF2 /* page1_cn.jpg */,
 				066DA0DA1B0387DE00408AF2 /* page1_zt.jpg */,
@@ -3987,6 +4004,8 @@
 				066D9EBD1B037E7C00408AF2 /* autologin_choose.png in Resources */,
 				066D9EBE1B037E7C00408AF2 /* moreset_listm_clicked.png in Resources */,
 				066D9EBF1B037E7C00408AF2 /* add_btnbk.png in Resources */,
+				06FF924E1B04E18900DD5803 /* add_camwifibk.png in Resources */,
+				06FF924F1B04E18900DD5803 /* add_camwifibk@2x.png in Resources */,
 				066D9EC01B037E7C00408AF2 /* ceo_rcplay_title_h@2x.png in Resources */,
 				066D9EC11B037E7C00408AF2 /* leo_snapshot_disable@2x.png in Resources */,
 				066DA0F91B0387DE00408AF2 /* page3_en.jpg in Resources */,
@@ -4028,6 +4047,7 @@
 				066DA0A21B03878300408AF2 /* myup@2x.png in Resources */,
 				066D9EE71B037E7C00408AF2 /* add_infobk@2x.png in Resources */,
 				066D9EE81B037E7C00408AF2 /* ceo_recordstop.png in Resources */,
+				06FF92571B055ABE00DD5803 /* bayitcam.strings in Resources */,
 				066D9EE91B037E7C00408AF2 /* ceo_pause_h@2x.png in Resources */,
 				066D9EEA1B037E7C00408AF2 /* onlinebar@2x.png in Resources */,
 				066D9EEB1B037E7C00408AF2 /* LANSearch.xib in Resources */,
@@ -4226,6 +4246,7 @@
 				066DA0FC1B0387DE00408AF2 /* page4_zt.jpg in Resources */,
 				066D9FA81B037E7C00408AF2 /* Icon-Small.png in Resources */,
 				066DA0901B03872900408AF2 /* InfoPlist.strings in Resources */,
+				06FF92541B04F42B00DD5803 /* BayitCamAddViewController.xib in Resources */,
 				066D9FA91B037E7C00408AF2 /* ceo_pause_click.png in Resources */,
 				066D9FAA1B037E7C00408AF2 /* gallery@2x.png in Resources */,
 				066D9FAB1B037E7C00408AF2 /* ceo_rcplay_click_h@2x.png in Resources */,
@@ -5389,6 +5410,7 @@
 				066D9EA21B037E7C00408AF2 /* CheckViewController.m in Sources */,
 				066D9EA31B037E7C00408AF2 /* PhotoViewerViewController.m in Sources */,
 				066D9EA41B037E7C00408AF2 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
+				06FF92531B04F42B00DD5803 /* BayitCamAddViewController.m in Sources */,
 				066D9EA51B037E7C00408AF2 /* StartViewController.m in Sources */,
 				066D9EA61B037E7C00408AF2 /* UIDevice+Version.m in Sources */,
 				066D9EA71B037E7C00408AF2 /* CustomPeriodEventSearchController.m in Sources */,
@@ -5719,6 +5741,15 @@
 			name = easyn.strings;
 			sourceTree = "<group>";
 		};
+		06FF92591B055ABE00DD5803 /* bayitcam.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06FF92581B055ABE00DD5803 /* en */,
+			);
+			name = bayitcam.strings;
+			path = "Bayit Cam";
+			sourceTree = "<group>";
+		};
 		61082AF31531CE4200DDF07D /* mainWindow.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -5789,6 +5820,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = BayitCam;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Bayit Cam/Bayit Cam-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -5825,6 +5857,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = BayitCam;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Bayit Cam/Bayit Cam-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -5862,6 +5895,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = BayitCam;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Bayit Cam/Bayit Cam-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
@@ -5899,6 +5933,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = BayitCam;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Bayit Cam/Bayit Cam-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;

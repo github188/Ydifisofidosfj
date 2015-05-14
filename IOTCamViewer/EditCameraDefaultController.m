@@ -725,7 +725,12 @@
     else if (section == DELETE_SECTION_INDEX) {
         
         if (row == DELETE_ROW_INDEX) {
+#if defined(BayitCam)
+            NSString *msg = NSLocalizedStringFromTable(@"Are you sure you want to delete this camera?",@"bayitcam", @"");
+#else
             NSString *msg = NSLocalizedString(@"Sure to remove?", @"");
+#endif
+            
             NSString *no = NSLocalizedString(@"NO", @"");
             NSString *yes = NSLocalizedString(@"YES", @"");
             NSString *caution = NSLocalizedString(@"Caution!", @"");

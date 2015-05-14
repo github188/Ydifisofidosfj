@@ -152,7 +152,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     
-#if defined(EasynPTarget)
+#if defined(EasynPTarget) || defined(BayitCam)
     [self easynpToolBar];
 #endif
     
@@ -173,7 +173,7 @@
 - (NSInteger)tableView:(UITableView *)tableView 
  numberOfRowsInSection:(NSInteger)section {
     NSInteger cnt=[searchResult count];
-#if defined(EasynPTarget)
+#if defined(EasynPTarget) || defined(BayitCam)
     return cnt+1;
 #else
     return cnt;
@@ -196,7 +196,7 @@
     
     // Configure the cell
     NSUInteger row = [indexPath row];
-#if defined(EasynPTarget)
+#if defined(EasynPTarget) || defined(BayitCam)
     if(row>0){
         LANSearchDevice *dev = [searchResult objectAtIndex:row-1];
         
@@ -257,7 +257,7 @@
     
     NSUInteger row = [indexPath row];
     NSInteger index=row;
-#if defined(EasynPTarget)
+#if defined(EasynPTarget) || defined(BayitCam)
     index=row-1;
     if(row==0)
     {

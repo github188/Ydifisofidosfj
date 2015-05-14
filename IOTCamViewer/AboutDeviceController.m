@@ -208,6 +208,10 @@
 #else
         vender=@"Aztech";
 #endif
+#if defined(BayitCam)
+           vender=@"EN";
+#endif
+        
         if (vender == nil || [vender length] == 0) {
             [cell addSubview:venderIndicator];
             [venderIndicator startAnimating];            

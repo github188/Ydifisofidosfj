@@ -1049,10 +1049,16 @@ extern unsigned int _getTickCount() {
     camera.isShowInMultiView = NO;
     isChangeChannel = NO;
     
+#if defined(BayitCam)
+    [AudioTitle setTitle:NSLocalizedStringFromTable(@"Push to talk", @"bayitcam", nil) forState:UIControlStateNormal];
+    [longAudioTitle setTitle:NSLocalizedStringFromTable(@"Push to talk", @"bayitcam", nil) forState:UIControlStateNormal];
+#else
     [AudioTitle setTitle:NSLocalizedString(@"Press to talk", @"") forState:UIControlStateNormal];
+    [longAudioTitle setTitle:NSLocalizedString(@"Press to talk", @"") forState:UIControlStateNormal];
+#endif
+    
     [QVGATitle setTitle:NSLocalizedString(@"Video Quality", @"") forState:UIControlStateNormal];
     [EModeTitle setTitle:NSLocalizedString(@"Environment Mode", @"") forState:UIControlStateNormal];
-    [longAudioTitle setTitle:NSLocalizedString(@"Press to talk", @"") forState:UIControlStateNormal];
     [longQVGATitle setTitle:NSLocalizedString(@"Video Quality", @"") forState:UIControlStateNormal];
     [longEModeTitle setTitle:NSLocalizedString(@"Environment Mode", @"") forState:UIControlStateNormal];
     

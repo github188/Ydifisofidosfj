@@ -21,6 +21,9 @@
 #if defined(EasynPTarget)
 #import "AddWithApCameraController.h"
 #endif
+#if defined(BayitCam)
+#import "BayitCamAddViewController.h"
+#endif
 
 @implementation CameraListForLiveViewController
 
@@ -89,6 +92,15 @@
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setInteger:0 forKey:@"wifiSetting"];
     [userDefaults synchronize];
+    
+    
+#if defined(BayitCam)
+    BayitCamAddViewController *bayitAdd=[[BayitCamAddViewController alloc]initWithNibName:@"BayitCamAddViewController" bundle:nil];
+    [self.navigationController pushViewController:bayitAdd animated:YES];
+    [bayitAdd release];
+    return;
+#endif
+    
     
     
 #if defined(EasynPTarget)

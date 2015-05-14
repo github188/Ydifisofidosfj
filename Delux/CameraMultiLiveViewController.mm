@@ -687,7 +687,11 @@ extern unsigned int _getTickCount() ;
 	GLog( tUI, (@"+++CameraMultiLiveViewController - deleteViewSetting: [%d]", [moreFunctionTag intValue]));
     isDelete = YES;
     
+#if defined(BayitCam)
+    NSString *msg = NSLocalizedStringFromTable(@"Are you sure you want to remove this camera?",@"bayitcam", @"");
+#else
     NSString *msg = NSLocalizedString(@"Sure to remove this view?", @"");
+#endif
     NSString *no = NSLocalizedString(@"NO", @"");
     NSString *yes = NSLocalizedString(@"YES", @"");
     NSString *caution = NSLocalizedString(@"Caution!", @"");
