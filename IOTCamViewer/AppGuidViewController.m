@@ -58,7 +58,7 @@
         NSString *f=[NSString stringWithFormat:@"page%d",i+1];
         NSString *n=NSLocalizedString(f, @"");
         UIImageView *imgView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:n]];
-        imgView.contentMode=UIViewContentModeScaleToFill;
+        imgView.contentMode=UIViewContentModeScaleAspectFit;
         imgView.frame=CGRectMake(self.scollerView.frame.size.width*i, 0, self.scollerView.frame.size.width, self.scollerView.frame.size.height-110);
         [self.scollerView addSubview:imgView];
         [imgView release];
