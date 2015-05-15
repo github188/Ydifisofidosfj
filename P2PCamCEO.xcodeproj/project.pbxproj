@@ -212,7 +212,6 @@
 		066D9ECE1B037E7C00408AF2 /* CameraLiveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8C2A98E1490BF8B001B84F0 /* CameraLiveView.xib */; };
 		066D9ECF1B037E7C00408AF2 /* leo_emode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C80194EB73B00F5AA11 /* leo_emode@2x.png */; };
 		066D9ED11B037E7C00408AF2 /* CameraList.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87E3D7E149848800030B2EF /* CameraList.xib */; };
-		066D9ED21B037E7C00408AF2 /* add_camwifibk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C26194EB73A00F5AA11 /* add_camwifibk@2x.png */; };
 		066D9ED31B037E7C00408AF2 /* AddCamera.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61890F2D1533CCA00031B4EC /* AddCamera.xib */; };
 		066D9ED41B037E7C00408AF2 /* add_wifi4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C55194EB73A00F5AA11 /* add_wifi4@2x.png */; };
 		066D9ED51B037E7C00408AF2 /* more_event_clicked.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CC3194EB73C00F5AA11 /* more_event_clicked.png */; };
@@ -532,7 +531,6 @@
 		066DA02B1B037E7C00408AF2 /* leo_speaker_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C9A194EB73B00F5AA11 /* leo_speaker_on@2x.png */; };
 		066DA02C1B037E7C00408AF2 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB381E4191CA6200085B07B /* Icon-72.png */; };
 		066DA02D1B037E7C00408AF2 /* leo_speaker_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C96194EB73B00F5AA11 /* leo_speaker_off@2x.png */; };
-		066DA02E1B037E7C00408AF2 /* add_camwifibk.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C25194EB73A00F5AA11 /* add_camwifibk.png */; };
 		066DA0301B037E7C00408AF2 /* offline.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CE5194EB73C00F5AA11 /* offline.png */; };
 		066DA0311B037E7C00408AF2 /* ceo_rcplay_forward_click@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0B1C3619A466950071E5CF /* ceo_rcplay_forward_click@2x.png */; };
 		066DA0321B037E7C00408AF2 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB381EB191CA6200085B07B /* Icon@2x.png */; };
@@ -4024,7 +4022,6 @@
 				066D9ECE1B037E7C00408AF2 /* CameraLiveView.xib in Resources */,
 				066D9ECF1B037E7C00408AF2 /* leo_emode@2x.png in Resources */,
 				066D9ED11B037E7C00408AF2 /* CameraList.xib in Resources */,
-				066D9ED21B037E7C00408AF2 /* add_camwifibk@2x.png in Resources */,
 				066D9ED31B037E7C00408AF2 /* AddCamera.xib in Resources */,
 				066D9ED41B037E7C00408AF2 /* add_wifi4@2x.png in Resources */,
 				066D9ED51B037E7C00408AF2 /* more_event_clicked.png in Resources */,
@@ -4374,7 +4371,6 @@
 				066DA1021B0387DE00408AF2 /* addcam_clicked@2x.png in Resources */,
 				066DA02C1B037E7C00408AF2 /* Icon-72.png in Resources */,
 				066DA02D1B037E7C00408AF2 /* leo_speaker_off@2x.png in Resources */,
-				066DA02E1B037E7C00408AF2 /* add_camwifibk.png in Resources */,
 				066DA0301B037E7C00408AF2 /* offline.png in Resources */,
 				066DA0311B037E7C00408AF2 /* ceo_rcplay_forward_click@2x.png in Resources */,
 				066DA1011B0387DE00408AF2 /* addcam_clicked.png in Resources */,
