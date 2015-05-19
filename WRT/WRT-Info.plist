@@ -29,19 +29,11 @@
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>db-zo6kr8w12onxr8c</string>
-			</array>
-		</dict>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.tutk.p2pcamlive</string>
+			<string></string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>p2pcamlive</string>
+				<string>wrtmpsipci</string>
 			</array>
 		</dict>
 	</array>
