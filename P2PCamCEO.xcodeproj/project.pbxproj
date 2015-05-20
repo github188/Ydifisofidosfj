@@ -8671,6 +8671,8 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					WRT,
 					NewSearchLanDevice,
+					RemoveVendor,
+					RemoveModel,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/WRT/WRT-Info.plist";
@@ -8711,6 +8713,8 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					WRT,
 					NewSearchLanDevice,
+					RemoveVendor,
+					RemoveModel,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/WRT/WRT-Info.plist";
@@ -8752,6 +8756,8 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					WRT,
 					NewSearchLanDevice,
+					RemoveVendor,
+					RemoveModel,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/WRT/WRT-Info.plist";
@@ -8793,6 +8799,8 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					WRT,
 					NewSearchLanDevice,
+					RemoveVendor,
+					RemoveModel,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/WRT/WRT-Info.plist";
@@ -8833,6 +8841,8 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					Maccam,
 					NewSearchLanDevice,
+					RemoveModel,
+					RemoveVendor,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Maccam/Maccam-Info.plist";
@@ -8873,6 +8883,8 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					Maccam,
 					NewSearchLanDevice,
+					RemoveModel,
+					RemoveVendor,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Maccam/Maccam-Info.plist";
@@ -8914,6 +8926,8 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					Maccam,
 					NewSearchLanDevice,
+					RemoveModel,
+					RemoveVendor,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Maccam/Maccam-Info.plist";
@@ -8955,6 +8969,8 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					Maccam,
 					NewSearchLanDevice,
+					RemoveModel,
+					RemoveVendor,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Maccam/Maccam-Info.plist";

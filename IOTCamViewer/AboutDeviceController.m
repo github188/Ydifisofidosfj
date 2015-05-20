@@ -137,11 +137,15 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#if defined(EasynPTarget)
-    return (section == 0) ? [self.labelItems count]-1 : 0;//去掉型号
-#else
-    return (section == 0) ? [self.labelItems count] : 0;
+    NSInteger i=0;
+#if defined(RemoveVendor)
+    i++;
 #endif
+#if defined(RemoveModel) || defined(EasynPTarget)
+    i++;
+#endif
+    
+    return (section == 0) ? [self.labelItems count]-i : 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -159,9 +163,17 @@
     }
     
     NSInteger index=row;
-#if defined(EasynPTarget)
-    index=row+1;
-    row++;
+#if defined(EasynPTarget) || defined(RemoveModel)
+    if(index==0){
+        index=row+1;
+        row++;
+    }
+#endif
+#if defined(RemoveVendor)
+    if(index==2){
+        index=row+1;
+        row++;
+    }
 #endif
     
     cell.textLabel.text = [labelItems objectAtIndex:index];
