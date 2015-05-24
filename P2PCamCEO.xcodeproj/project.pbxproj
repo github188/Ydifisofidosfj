@@ -1572,7 +1572,6 @@
 		069EFA551B1207D00024CB5A /* ceo_rcplay_time_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A49912119ADFD7700B19CD4 /* ceo_rcplay_time_h@2x.png */; };
 		069EFA561B1207D00024CB5A /* popoverBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8ECB20215294E5B00598466 /* popoverBg@2x.png */; };
 		069EFA571B1207D00024CB5A /* MoreVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 573267EE185FF0B200BBE793 /* MoreVC.xib */; };
-		069EFA581B1207D00024CB5A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61890F351533D13B0031B4EC /* Localizable.strings */; };
 		069EFA591B1207D00024CB5A /* more_delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CBE194EB73C00F5AA11 /* more_delete@2x.png */; };
 		069EFA5B1B1207D00024CB5A /* moreset_list2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CDE194EB73C00F5AA11 /* moreset_list2@2x.png */; };
 		069EFA5D1B1207D00024CB5A /* leo_emode_clicked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C82194EB73B00F5AA11 /* leo_emode_clicked@2x.png */; };
@@ -1838,6 +1837,7 @@
 		069EFB9E1B120A190024CB5A /* title_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 069EFB9C1B120A190024CB5A /* title_logo.png */; };
 		069EFBA41B120A550024CB5A /* title_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 069EFBA21B120A550024CB5A /* title_logo@2x.png */; };
 		069EFBA91B120A760024CB5A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 069EFBA81B120A760024CB5A /* Images.xcassets */; };
+		069EFBAC1B121A7B0024CB5A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 069EFBAE1B121A7B0024CB5A /* Localizable.strings */; };
 		06AAE5DB1AEFCAC90064CE78 /* info_27_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 06AAE5D91AEFCAC90064CE78 /* info_27_03.png */; };
 		06AAE5DC1AEFCAC90064CE78 /* info_27_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 06AAE5D91AEFCAC90064CE78 /* info_27_03.png */; };
 		06AAE5DD1AEFCAC90064CE78 /* refresh_27_07.png in Resources */ = {isa = PBXBuildFile; fileRef = 06AAE5DA1AEFCAC90064CE78 /* refresh_27_07.png */; };
@@ -3728,6 +3728,10 @@
 		069EFBA61B120A610024CB5A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zh-Hans"; path = "IPCAM P/images/zh-Hans.lproj/title_logo@2x.png"; sourceTree = "<group>"; };
 		069EFBA71B120A630024CB5A /* ko */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ko; path = "IPCAM P/images/ko.lproj/title_logo@2x.png"; sourceTree = "<group>"; };
 		069EFBA81B120A760024CB5A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "IPCAM P/Images.xcassets"; sourceTree = "<group>"; };
+		069EFBAD1B121A7B0024CB5A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		069EFBAF1B121A7F0024CB5A /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		069EFBB01B121A800024CB5A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		069EFBB11B121A810024CB5A /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		06AAE5D91AEFCAC90064CE78 /* info_27_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_27_03.png; sourceTree = "<group>"; };
 		06AAE5DA1AEFCAC90064CE78 /* refresh_27_07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh_27_07.png; sourceTree = "<group>"; };
 		06B219811ADD4D51005E3A2B /* remeberpsd1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = remeberpsd1.png; sourceTree = "<group>"; };
@@ -5020,6 +5024,7 @@
 		069EFB511B1208360024CB5A /* IPCAM P */ = {
 			isa = PBXGroup;
 			children = (
+				069EFBAE1B121A7B0024CB5A /* Localizable.strings */,
 				069EFBA81B120A760024CB5A /* Images.xcassets */,
 				069EFB671B12093E0024CB5A /* images */,
 				069EFB561B12091A0024CB5A /* aztechjt */,
@@ -7219,6 +7224,7 @@
 				069EF9D41B1207D00024CB5A /* camera.png in Resources */,
 				069EF9D51B1207D00024CB5A /* moreset_list1@2x.png in Resources */,
 				069EF9D61B1207D00024CB5A /* onlinebar.png in Resources */,
+				069EFBAC1B121A7B0024CB5A /* Localizable.strings in Resources */,
 				069EF9D71B1207D00024CB5A /* leo_speaker_off_disable.png in Resources */,
 				069EF9D81B1207D00024CB5A /* camera@2x.png in Resources */,
 				069EF9D91B1207D00024CB5A /* leo_emode_disable.png in Resources */,
@@ -7345,7 +7351,6 @@
 				069EFA551B1207D00024CB5A /* ceo_rcplay_time_h@2x.png in Resources */,
 				069EFA561B1207D00024CB5A /* popoverBg@2x.png in Resources */,
 				069EFA571B1207D00024CB5A /* MoreVC.xib in Resources */,
-				069EFA581B1207D00024CB5A /* Localizable.strings in Resources */,
 				069EFA591B1207D00024CB5A /* more_delete@2x.png in Resources */,
 				069EFA5B1B1207D00024CB5A /* moreset_list2@2x.png in Resources */,
 				069EFA5D1B1207D00024CB5A /* leo_emode_clicked@2x.png in Resources */,
@@ -9720,6 +9725,18 @@
 			name = "title_logo@2x.png";
 			sourceTree = "<group>";
 		};
+		069EFBAE1B121A7B0024CB5A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				069EFBAD1B121A7B0024CB5A /* en */,
+				069EFBAF1B121A7F0024CB5A /* zh-Hant */,
+				069EFBB01B121A800024CB5A /* zh-Hans */,
+				069EFBB11B121A810024CB5A /* ko */,
+			);
+			name = Localizable.strings;
+			path = "IPCAM P";
+			sourceTree = "<group>";
+		};
 		06B8CB351B0A2356006ED6EE /* title_logo.png */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -10143,7 +10160,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -10171,7 +10188,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "IPCAM P";
-				PROVISIONING_PROFILE = "59f81538-cbd7-425a-aa11-eeb0a91e4a16";
+				PROVISIONING_PROFILE = "1d702629-2733-45e5-919e-e66254b256c6";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -10185,7 +10202,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -10214,7 +10231,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "IPCAM P";
-				PROVISIONING_PROFILE = "59f81538-cbd7-425a-aa11-eeb0a91e4a16";
+				PROVISIONING_PROFILE = "1d702629-2733-45e5-919e-e66254b256c6";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -10228,7 +10245,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -10257,7 +10274,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "IPCAM P";
-				PROVISIONING_PROFILE = "59f81538-cbd7-425a-aa11-eeb0a91e4a16";
+				PROVISIONING_PROFILE = "1d702629-2733-45e5-919e-e66254b256c6";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -10271,7 +10288,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -10299,7 +10316,7 @@
 					"-DP2PCAMLIVE",
 				);
 				PRODUCT_NAME = "IPCAM P";
-				PROVISIONING_PROFILE = "59f81538-cbd7-425a-aa11-eeb0a91e4a16";
+				PROVISIONING_PROFILE = "1d702629-2733-45e5-919e-e66254b256c6";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
