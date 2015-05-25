@@ -6206,6 +6206,9 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = TUTK;
 				TargetAttributes = {
+					066D9E3B1B037E7C00408AF2 = {
+						DevelopmentTeam = Y93RM4F8S2;
+					};
 					0682DE0D1B08CCF30019BD70 = {
 						DevelopmentTeam = Q2PV74KQN7;
 					};
