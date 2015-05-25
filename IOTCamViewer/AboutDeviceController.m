@@ -163,18 +163,32 @@
     }
     
     NSInteger index=row;
+    /*labelItems = [[NSArray alloc] initWithObjects:
+                  NSLocalizedString(@"Model", @""),
+                  NSLocalizedString(@"Version", @""),
+                  NSLocalizedString(@"Vender", @""),
+                  NSLocalizedString(@"Total Size", @""),
+                  NSLocalizedString(@"Free Size", @""), nil];*/
+    
+    
+    if(row==0){
 #if defined(EasynPTarget) || defined(RemoveModel)
-    if(index==0){
         index=row+1;
         row++;
-    }
 #endif
-#if defined(RemoveVendor)
-    if(index==2){
-        index=row+1;
-        row++;
     }
+    else if(row==1){
+#if defined(RemoveVendor) && (defined(EasynPTarget) || defined(RemoveModel))
+        index=row+2;
+        row=index;
 #endif
+    }
+    else if(row==2){
+#if defined(RemoveVendor) && (defined(EasynPTarget) || defined(RemoveModel))
+        index=row+2;
+        row=index;
+#endif
+    }
     
     cell.textLabel.text = [labelItems objectAtIndex:index];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
