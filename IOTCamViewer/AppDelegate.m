@@ -18,10 +18,11 @@
 #import "IQKeyboardManager.h"
 #if defined(EasynPTarget)
 #import <FIR/FIR.h>
-NSString *g_tpnsHostString = @"http://push1.ipcam.hk/apns/apns.php";
+//NSString *g_tpnsHostString = @"http://push1.ipcam.hk/apns/apns.php";
 #else
-NSString *g_tpnsHostString = @"http://push.iotcplatform.com/apns/apns.php";
+//NSString *g_tpnsHostString = @"http://push.iotcplatform.com/apns/apns.php";
 #endif
+NSString *g_tpnsHostString = @"http://push1.ipcam.hk/apns/apns.php";
 
 NSMutableArray *camera_list;
 FMDatabase *database;
