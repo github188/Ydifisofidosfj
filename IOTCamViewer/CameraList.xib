@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraListForLiveViewController">
             <connections>
                 <outlet property="addBTNView" destination="g8N-3U-bub" id="On5-5e-8mQ"/>
+                <outlet property="localBtn" destination="BS3-k3-vh7" id="FOw-cy-Tal"/>
                 <outlet property="localLabel" destination="WS3-uU-sny" id="B05-PB-hFl"/>
                 <outlet property="remoteLabel" destination="t9a-Fo-HpN" id="FHu-zB-PBZ"/>
                 <outlet property="searchBar" destination="105" id="125"/>
@@ -20,7 +21,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="all_bk.png" id="BtP-Ur-aYl">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="all_bk.png" id="BtP-Ur-aYl">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
@@ -49,7 +50,7 @@
                     <rect key="frame" x="0.0" y="568" width="320" height="150"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="add_list_bk.png" id="bdL-pc-J8P">
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="add_list_bk.png" id="bdL-pc-J8P">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="203"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </imageView>

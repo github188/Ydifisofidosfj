@@ -301,8 +301,6 @@
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.backgroundView  = nil;
     self.tableView.separatorColor = [UIColor whiteColor];
-//    self.tableView.layer.borderWidth = 1.0f;
-//    self.tableView.layer.borderColor = [UIColor lightGrayColor].CGColor;
     
     self.navigationItem.title = NSLocalizedString(@"Add Camera", @"");
     
@@ -330,24 +328,6 @@
 	}
     
     SSID.text = ssid;
-    /*
-    textFieldName.frame = CGRectMake(115, 9, 180, 25);
-    textFieldName.placeholder = NSLocalizedString(@"Camera Name", @"");
-    [textFieldName addTarget:self action:@selector(textFieldDone:) 
-        forControlEvents:UIControlEventEditingDidEndOnExit];
-
-    textFieldUID.frame = CGRectMake(115, 9, 180, 25);
-    textFieldUID.autocapitalizationType = UITextAutocapitalizationTypeAllCharacters;
-    textFieldUID.placeholder = NSLocalizedString(@"Camera UID", @"");
-    [textFieldUID addTarget:self action:@selector(textFieldDone:) 
-        forControlEvents:UIControlEventEditingDidEndOnExit];
-
-    textFieldPassword.frame = CGRectMake(115, 9, 180, 25);
-    textFieldPassword.placeholder = NSLocalizedString(@"Camera Password", @"");
-    textFieldPassword.secureTextEntry = YES;
-    [textFieldPassword addTarget:self action:@selector(textFieldDone:) 
-        forControlEvents:UIControlEventEditingDidEndOnExit];
-    */
     
     
     

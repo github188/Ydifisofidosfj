@@ -44,7 +44,7 @@
     //动态布局
     self.skipBtn.frame=CGRectMake(self.skipBtn.frame.origin.x, self.view.frame.size.height-self.skipBtn.frame.size.height-6, self.skipBtn.frame.size.width, self.skipBtn.frame.size.height);
     self.pageControl.frame=CGRectMake(self.pageControl.frame.origin.x, self.view.frame.size.height-self.pageControl.frame.size.height, self.pageControl.frame.size.width, self.pageControl.frame.size.height);
-    self.scollerView.frame=CGRectMake(0, 0, self.scollerView.frame.size.width, self.view.frame.size.height);
+    self.scollerView.frame=CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     
     
     
@@ -55,7 +55,7 @@
     self.scollerView.contentSize=CGSizeMake(self.scollerView.frame.size.width*self.pageControl.numberOfPages, 0);
     
     for (NSInteger i=0; i<self.pageControl.numberOfPages; i++) {
-        NSString *f=[NSString stringWithFormat:@"page%d",i+1];
+        NSString *f=[NSString stringWithFormat:@"page%ld",i+1];
         NSString *n=NSLocalizedString(f, @"");
         UIImageView *imgView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:n]];
         imgView.contentMode=UIViewContentModeScaleAspectFit;

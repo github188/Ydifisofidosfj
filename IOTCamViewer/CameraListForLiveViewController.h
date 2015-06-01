@@ -40,6 +40,7 @@ extern NSString *deviceTokenString;
     IBOutlet UIView *addBTNView;
     IBOutlet UILabel *remoteLabel;
     IBOutlet UILabel *localLabel;
+        IBOutlet UIButton *localBtn;
     
     @public
     BOOL isFromChange;

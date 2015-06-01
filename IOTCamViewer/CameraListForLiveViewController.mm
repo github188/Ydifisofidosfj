@@ -313,6 +313,14 @@
     [super viewDidUnload];
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    addBTNView.frame=CGRectMake(0, self.view.frame.size.height, self.view.frame.size.width, addBTNView.frame.size.height);
+    //自动布局
+    localBtn.frame=CGRectMake(addBTNView.frame.size.width/2-localBtn.frame.size.width/2, localBtn.frame.origin.y, localBtn.frame.size.width, localBtn.frame.size.height);
+    localLabel.frame=CGRectMake(addBTNView.frame.size.width/2-localLabel.frame.size.width/2, localLabel.frame.origin.y, localLabel.frame.size.width, localLabel.frame.size.height);
+}
+
 - (void)viewDidAppear:(BOOL)animated 
 {
     [super viewDidAppear:animated];
@@ -379,6 +387,7 @@
     [searchBar release];
     [tableView release];
     [tableViewCell release];
+    [localBtn release];
     [super dealloc];
 }
 
