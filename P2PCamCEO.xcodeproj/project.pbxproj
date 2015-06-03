@@ -6213,7 +6213,7 @@
 						DevelopmentTeam = 28M9L5HYL8;
 					};
 					069EF90C1B1207D00024CB5A = {
-						DevelopmentTeam = Q2PV74KQN7;
+						DevelopmentTeam = G795A5K2W9;
 					};
 					06B8C8B81B0A21BB006ED6EE = {
 						DevelopmentTeam = G795A5K2W9;
@@ -10160,7 +10160,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -10188,7 +10188,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "IPCAM P";
-				PROVISIONING_PROFILE = "1d702629-2733-45e5-919e-e66254b256c6";
+				PROVISIONING_PROFILE = "da115d26-1864-4805-b4f0-220d6c0d97d5";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -10202,7 +10202,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -10231,7 +10231,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "IPCAM P";
-				PROVISIONING_PROFILE = "1d702629-2733-45e5-919e-e66254b256c6";
+				PROVISIONING_PROFILE = "da115d26-1864-4805-b4f0-220d6c0d97d5";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -10245,7 +10245,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -10274,7 +10274,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "IPCAM P";
-				PROVISIONING_PROFILE = "1d702629-2733-45e5-919e-e66254b256c6";
+				PROVISIONING_PROFILE = "da115d26-1864-4805-b4f0-220d6c0d97d5";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -10288,7 +10288,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -10316,7 +10316,7 @@
 					"-DP2PCAMLIVE",
 				);
 				PRODUCT_NAME = "IPCAM P";
-				PROVISIONING_PROFILE = "1d702629-2733-45e5-919e-e66254b256c6";
+				PROVISIONING_PROFILE = "da115d26-1864-4805-b4f0-220d6c0d97d5";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
