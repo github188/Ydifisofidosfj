@@ -91,6 +91,10 @@
 		06335C341AC19E7F003DCD0A /* UIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 06335C201AC19E7F003DCD0A /* UIView+IQKeyboardToolbar.m */; };
 		06335C351AC19E7F003DCD0A /* UIWindow+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06335C221AC19E7F003DCD0A /* UIWindow+Hierarchy.m */; };
 		06335C361AC19E7F003DCD0A /* UIWindow+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06335C221AC19E7F003DCD0A /* UIWindow+Hierarchy.m */; };
+		0635F35E1B1F55EA0042576E /* f-Btn_Click@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0EAA1ACAD71400448ACB /* f-Btn_Click@2x.png */; };
+		0635F35F1B1F55EA0042576E /* f-Btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0EAB1ACAD71400448ACB /* f-Btn@2x.png */; };
+		0635F3601B1F55EA0042576E /* f+Btn_Click@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0EA61ACAD6F300448ACB /* f+Btn_Click@2x.png */; };
+		0635F3611B1F55EA0042576E /* f+Btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0EA71ACAD6F300448ACB /* f+Btn@2x.png */; };
 		0647DCEE1AB8666100F5553A /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 0647DCEA1AB8666100F5553A /* iTunesArtwork.png */; };
 		0647DCEF1AB8666100F5553A /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0647DCEB1AB8666100F5553A /* iTunesArtwork@2x.png */; };
 		0647DCFB1AB866E200F5553A /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 0647DCF31AB866D500F5553A /* iTunesArtwork.png */; };
@@ -7249,6 +7253,7 @@
 				069EF9EE1B1207D00024CB5A /* refresh.png in Resources */,
 				069EF9EF1B1207D00024CB5A /* ceo_pause_h.png in Resources */,
 				069EF9F01B1207D00024CB5A /* drop_link_clicked@2x.png in Resources */,
+				0635F3601B1F55EA0042576E /* f+Btn_Click@2x.png in Resources */,
 				069EF9F11B1207D00024CB5A /* ceo_rcplay_line_h.png in Resources */,
 				069EF9F21B1207D00024CB5A /* info@2x.png in Resources */,
 				069EFB5F1B12092A0024CB5A /* mydown@2x.png in Resources */,
@@ -7320,6 +7325,7 @@
 				069EFA341B1207D00024CB5A /* popoverArrowLeft@2x.png in Resources */,
 				069EFA351B1207D00024CB5A /* popoverArrowRight.png in Resources */,
 				069EFA361B1207D00024CB5A /* add_lsearch_clicked.png in Resources */,
+				0635F3611B1F55EA0042576E /* f+Btn@2x.png in Resources */,
 				069EFA381B1207D00024CB5A /* login_email_bk@2x.png in Resources */,
 				069EFA391B1207D00024CB5A /* moreset_list1_clicked.png in Resources */,
 				069EFA3A1B1207D00024CB5A /* toolinfo_bk.png in Resources */,
@@ -7391,6 +7397,7 @@
 				069EFA7E1B1207D00024CB5A /* Icon-Small.png in Resources */,
 				069EFA7F1B1207D00024CB5A /* ceo_pause_click.png in Resources */,
 				069EFA801B1207D00024CB5A /* gallery@2x.png in Resources */,
+				0635F35F1B1F55EA0042576E /* f-Btn@2x.png in Resources */,
 				069EFA811B1207D00024CB5A /* ceo_rcplay_click_h@2x.png in Resources */,
 				069EFA821B1207D00024CB5A /* more_cancel_clicked@2x.png in Resources */,
 				069EFA831B1207D00024CB5A /* zxingLangString.strings in Resources */,
@@ -7453,6 +7460,7 @@
 				069EFB631B12092A0024CB5A /* myright@2x.png in Resources */,
 				069EFABA1B1207D00024CB5A /* ceo_rcplay_click.png in Resources */,
 				069EFABB1B1207D00024CB5A /* add_devicessid@2x.png in Resources */,
+				0635F35E1B1F55EA0042576E /* f-Btn_Click@2x.png in Resources */,
 				069EFABC1B1207D00024CB5A /* login_btn_clicked@2x.png in Resources */,
 				069EFABD1B1207D00024CB5A /* more_event_disable@2x.png in Resources */,
 				069EFABE1B1207D00024CB5A /* ceo_rcplay_back_h.png in Resources */,
