@@ -6216,7 +6216,7 @@
 						DevelopmentTeam = Q2PV74KQN7;
 					};
 					06B8C8B81B0A21BB006ED6EE = {
-						DevelopmentTeam = Q2PV74KQN7;
+						DevelopmentTeam = G795A5K2W9;
 					};
 					06F76E311AB720A100901EBA = {
 						DevelopmentTeam = Q2PV74KQN7;
@@ -10330,7 +10330,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -10358,7 +10358,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = Maccam;
-				PROVISIONING_PROFILE = "59f81538-cbd7-425a-aa11-eeb0a91e4a16";
+				PROVISIONING_PROFILE = "6c1e6be8-7c32-482f-a02d-ecb949f54220";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -10372,7 +10372,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -10401,7 +10401,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = Maccam;
-				PROVISIONING_PROFILE = "59f81538-cbd7-425a-aa11-eeb0a91e4a16";
+				PROVISIONING_PROFILE = "6c1e6be8-7c32-482f-a02d-ecb949f54220";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -10415,7 +10415,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -10444,7 +10444,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = Maccam;
-				PROVISIONING_PROFILE = "59f81538-cbd7-425a-aa11-eeb0a91e4a16";
+				PROVISIONING_PROFILE = "6c1e6be8-7c32-482f-a02d-ecb949f54220";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -10458,7 +10458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -10486,7 +10486,7 @@
 					"-DP2PCAMLIVE",
 				);
 				PRODUCT_NAME = Maccam;
-				PROVISIONING_PROFILE = "59f81538-cbd7-425a-aa11-eeb0a91e4a16";
+				PROVISIONING_PROFILE = "6c1e6be8-7c32-482f-a02d-ecb949f54220";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
