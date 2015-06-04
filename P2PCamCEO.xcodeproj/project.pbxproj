@@ -1210,7 +1210,6 @@
 		0682E0601B08CCF30019BD70 /* libZXingWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6122A53B169E5CF8005DFB49 /* libZXingWidget.a */; };
 		0682E0611B08CCF30019BD70 /* IOTCamera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611F4EF615C0F52D00B8D8C3 /* IOTCamera.framework */; };
 		0682E06B1B08CE660019BD70 /* WRT-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0682E06A1B08CE660019BD70 /* WRT-Info.plist */; };
-		0682E06E1B08CF190019BD70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0682E06C1B08CF190019BD70 /* InfoPlist.strings */; };
 		0682E07D1B08D0580019BD70 /* mydown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0682E0751B08D0580019BD70 /* mydown@2x.png */; };
 		0682E07E1B08D0580019BD70 /* mydown1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0682E0761B08D0580019BD70 /* mydown1@2x.png */; };
 		0682E07F1B08D0580019BD70 /* myleft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0682E0771B08D0580019BD70 /* myleft@2x.png */; };
@@ -1266,6 +1265,7 @@
 		068879401ABE204E0017A41A /* AddWithApCamera1Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0688793E1ABE204E0017A41A /* AddWithApCamera1Controller.xib */; };
 		0688794E1ABE2C4D0017A41A /* AddWithApCamera2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0688794C1ABE2C4D0017A41A /* AddWithApCamera2Controller.m */; };
 		0688794F1ABE2C4D0017A41A /* AddWithApCamera2Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0688794D1ABE2C4D0017A41A /* AddWithApCamera2Controller.xib */; };
+		069C72F21B2075B500D02130 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 069C72F41B2075B500D02130 /* InfoPlist.strings */; };
 		069EF9081B1203020024CB5A /* moreset.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CD3194EB73C00F5AA11 /* moreset.png */; };
 		069EF9091B1203020024CB5A /* moreset@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CD4194EB73C00F5AA11 /* moreset@2x.png */; };
 		069EF90A1B1203090024CB5A /* moreset_clicked.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CD7194EB73C00F5AA11 /* moreset_clicked.png */; };
@@ -3622,7 +3622,6 @@
 		06728E3D1ACFE1590087029A /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		0682E0671B08CCF30019BD70 /* WRT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WRT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0682E06A1B08CE660019BD70 /* WRT-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "WRT-Info.plist"; path = "WRT/WRT-Info.plist"; sourceTree = "<group>"; };
-		0682E06C1B08CF190019BD70 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = WRT/InfoPlist.strings; sourceTree = "<group>"; };
 		0682E0751B08D0580019BD70 /* mydown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mydown@2x.png"; path = "WRT/aztechjt/mydown@2x.png"; sourceTree = "<group>"; };
 		0682E0761B08D0580019BD70 /* mydown1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mydown1@2x.png"; path = "WRT/aztechjt/mydown1@2x.png"; sourceTree = "<group>"; };
 		0682E0771B08D0580019BD70 /* myleft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "myleft@2x.png"; path = "WRT/aztechjt/myleft@2x.png"; sourceTree = "<group>"; };
@@ -3690,6 +3689,10 @@
 		0688794C1ABE2C4D0017A41A /* AddWithApCamera2Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddWithApCamera2Controller.m; sourceTree = "<group>"; };
 		0688794D1ABE2C4D0017A41A /* AddWithApCamera2Controller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddWithApCamera2Controller.xib; sourceTree = "<group>"; };
 		0688795B1ABEAE230017A41A /* libHISmartWifi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libHISmartWifi.a; sourceTree = "<group>"; };
+		069C72F31B2075B500D02130 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		069C72F51B2075BA00D02130 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		069C72F61B2075BC00D02130 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		069C72F71B2075BE00D02130 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		069EFB4F1B1207D00024CB5A /* IPCAM P.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IPCAM P.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		069EFB521B1208D10024CB5A /* IPCAM P-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "IPCAM P-Info.plist"; path = "IPCAM P/IPCAM P-Info.plist"; sourceTree = "<group>"; };
 		069EFB531B1208D10024CB5A /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = "IPCAM P/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -4946,7 +4949,7 @@
 				06118EA61B08DE0800BB45FB /* Images.xcassets */,
 				0682E0851B08D06E0019BD70 /* images */,
 				0682E0741B08D0470019BD70 /* aztechjt */,
-				0682E06C1B08CF190019BD70 /* InfoPlist.strings */,
+				069C72F41B2075B500D02130 /* InfoPlist.strings */,
 				0682E06A1B08CE660019BD70 /* WRT-Info.plist */,
 			);
 			name = WRT;
@@ -6851,7 +6854,7 @@
 				0682DF101B08CCF30019BD70 /* ceo_rcplay_line_h@2x.png in Resources */,
 				0682DF111B08CCF30019BD70 /* IQKeyboardManager.bundle in Resources */,
 				0682DF131B08CCF30019BD70 /* popoverArrowLeftSimple.png in Resources */,
-				0682E06E1B08CF190019BD70 /* InfoPlist.strings in Resources */,
+				069C72F21B2075B500D02130 /* InfoPlist.strings in Resources */,
 				0682DF151B08CCF30019BD70 /* login_icon.png in Resources */,
 				0682DF161B08CCF30019BD70 /* refresh_27_07_1.png in Resources */,
 				06118EF41B08E11900BB45FB /* page3_zt.jpg in Resources */,
@@ -9709,6 +9712,18 @@
 				0609569F1AD4208F00F00FE0 /* ko */,
 			);
 			name = easyn.strings;
+			sourceTree = "<group>";
+		};
+		069C72F41B2075B500D02130 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				069C72F31B2075B500D02130 /* en */,
+				069C72F51B2075BA00D02130 /* zh-Hant */,
+				069C72F61B2075BC00D02130 /* zh-Hans */,
+				069C72F71B2075BE00D02130 /* ko */,
+			);
+			name = InfoPlist.strings;
+			path = WRT;
 			sourceTree = "<group>";
 		};
 		069EFB9C1B120A190024CB5A /* title_logo.png */ = {
