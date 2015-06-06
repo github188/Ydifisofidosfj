@@ -1835,6 +1835,10 @@
 		068879401ABE204E0017A41A /* AddWithApCamera1Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0688793E1ABE204E0017A41A /* AddWithApCamera1Controller.xib */; };
 		0688794E1ABE2C4D0017A41A /* AddWithApCamera2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0688794C1ABE2C4D0017A41A /* AddWithApCamera2Controller.m */; };
 		0688794F1ABE2C4D0017A41A /* AddWithApCamera2Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0688794D1ABE2C4D0017A41A /* AddWithApCamera2Controller.xib */; };
+		069963CD1B2339A100F88461 /* f-Btn_Click@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0EAA1ACAD71400448ACB /* f-Btn_Click@2x.png */; };
+		069963CE1B2339A100F88461 /* f-Btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0EAB1ACAD71400448ACB /* f-Btn@2x.png */; };
+		069963CF1B2339A100F88461 /* f+Btn_Click@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0EA61ACAD6F300448ACB /* f+Btn_Click@2x.png */; };
+		069963D01B2339A100F88461 /* f+Btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0EA71ACAD6F300448ACB /* f+Btn@2x.png */; };
 		069C72F21B2075B500D02130 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 069C72F41B2075B500D02130 /* InfoPlist.strings */; };
 		069EF9081B1203020024CB5A /* moreset.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CD3194EB73C00F5AA11 /* moreset.png */; };
 		069EF9091B1203020024CB5A /* moreset@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CD4194EB73C00F5AA11 /* moreset@2x.png */; };
@@ -7043,6 +7047,7 @@
 				06603FF51B23133300FB6F32 /* leo_snapshot@2x.png in Resources */,
 				06603FF61B23133300FB6F32 /* ceo_rcplay_line_full.png in Resources */,
 				06603FF71B23133300FB6F32 /* DropboxSettingVC.xib in Resources */,
+				069963CF1B2339A100F88461 /* f+Btn_Click@2x.png in Resources */,
 				06603FF81B23133300FB6F32 /* bkg_articalList.png in Resources */,
 				06603FF91B23133300FB6F32 /* live_chicon_clicke.png in Resources */,
 				06603FFB1B23133300FB6F32 /* bkg_articalList@2x.png in Resources */,
@@ -7124,6 +7129,7 @@
 				066040421B23133300FB6F32 /* Icon-72@2x.png in Resources */,
 				066040431B23133300FB6F32 /* call_on.png in Resources */,
 				066041F61B23161700FB6F32 /* InfoPlist.strings in Resources */,
+				069963CE1B2339A100F88461 /* f-Btn@2x.png in Resources */,
 				066040441B23133300FB6F32 /* all_bk.png in Resources */,
 				066040451B23133300FB6F32 /* add_btnbk_clicked@2x.png in Resources */,
 				066040461B23133300FB6F32 /* ceo_record_play.png in Resources */,
@@ -7286,6 +7292,7 @@
 				066040E81B23133300FB6F32 /* more_photo_clicked.png in Resources */,
 				066040E91B23133300FB6F32 /* CameraMultiLiveView.xib in Resources */,
 				066040EA1B23133300FB6F32 /* add_okbtn@2x.png in Resources */,
+				069963D01B2339A100F88461 /* f+Btn@2x.png in Resources */,
 				066040EB1B23133300FB6F32 /* add_web_clicked@2x.png in Resources */,
 				066040EC1B23133300FB6F32 /* autologin.png in Resources */,
 				066040ED1B23133300FB6F32 /* more_changech_disable.png in Resources */,
@@ -7426,6 +7433,7 @@
 				066041711B23133300FB6F32 /* ceo_set_clicked@2x.png in Resources */,
 				066041721B23133300FB6F32 /* leo_mirror_rl_clicked.png in Resources */,
 				066041741B23133300FB6F32 /* leo_speaker_on.png in Resources */,
+				069963CD1B2339A100F88461 /* f-Btn_Click@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -11188,7 +11196,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -11216,7 +11225,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = QTAIDT;
-				PROVISIONING_PROFILE = "ed10750f-ef28-440a-a0f2-f4f06589176d";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -11230,7 +11239,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -11259,7 +11269,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = QTAIDT;
-				PROVISIONING_PROFILE = "ed10750f-ef28-440a-a0f2-f4f06589176d";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -11273,7 +11283,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -11302,7 +11313,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = QTAIDT;
-				PROVISIONING_PROFILE = "ed10750f-ef28-440a-a0f2-f4f06589176d";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -11316,7 +11327,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -11344,7 +11356,7 @@
 					"-DP2PCAMLIVE",
 				);
 				PRODUCT_NAME = QTAIDT;
-				PROVISIONING_PROFILE = "ed10750f-ef28-440a-a0f2-f4f06589176d";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
