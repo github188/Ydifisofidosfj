@@ -29,6 +29,11 @@
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
+		<key>QTAIDT.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>WRT.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -37,6 +42,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>06603F571B23133300FB6F32</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>066D9E3B1B037E7C00408AF2</key>
 		<dict>
 			<key>primary</key>
