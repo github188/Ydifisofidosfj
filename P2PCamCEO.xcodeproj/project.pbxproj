@@ -120,6 +120,7 @@
 		0647DD321AB87C4C00F5553A /* myright@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0647DD2A1AB87C4C00F5553A /* myright@2x.png */; };
 		0647DD331AB87C4C00F5553A /* myup1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0647DD2B1AB87C4C00F5553A /* myup1@2x.png */; };
 		0647DD341AB87C4C00F5553A /* myup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0647DD2C1AB87C4C00F5553A /* myup@2x.png */; };
+		065E1A911B25C6E400FB22CE /* libHISmartWifi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0688795B1ABEAE230017A41A /* libHISmartWifi.a */; };
 		06603F591B23133300FB6F32 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AC3148C5342007705B6 /* main.m */; };
 		06603F5A1B23133300FB6F32 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AC7148C5343007705B6 /* AppDelegate.m */; };
 		06603F5B1B23133300FB6F32 /* CameraListForLiveViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AE3148C657B007705B6 /* CameraListForLiveViewController.mm */; };
@@ -5129,6 +5130,7 @@
 				066041841B23133300FB6F32 /* AudioToolbox.framework in Frameworks */,
 				066041851B23133300FB6F32 /* libsqlite3.dylib in Frameworks */,
 				066041861B23133300FB6F32 /* VideoToolbox.framework in Frameworks */,
+				065E1A911B25C6E400FB22CE /* libHISmartWifi.a in Frameworks */,
 				066041871B23133300FB6F32 /* CoreFoundation.framework in Frameworks */,
 				066041881B23133300FB6F32 /* OpenGLES.framework in Frameworks */,
 				066041891B23133300FB6F32 /* QuartzCore.framework in Frameworks */,
@@ -11218,6 +11220,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/IOTCamViewer/lib/Debug-iphoneos\"",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = (
@@ -11261,6 +11264,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/IOTCamViewer/lib/Release-iphoneos\"",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = (
@@ -11305,6 +11309,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/IOTCamViewer/lib/Release-iphoneos\"",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = (
@@ -11349,6 +11354,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/IOTCamViewer/lib/Release-iphoneos\"",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = (
