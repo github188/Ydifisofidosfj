@@ -58,6 +58,12 @@
 		06118EF61B08E11900BB45FB /* page4_en.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06118EE61B08E11900BB45FB /* page4_en.jpg */; };
 		06118EF71B08E11900BB45FB /* page4_ko.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06118EE71B08E11900BB45FB /* page4_ko.jpg */; };
 		06118EF81B08E11900BB45FB /* page4_zt.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06118EE81B08E11900BB45FB /* page4_zt.jpg */; };
+		061AA76A1B25D5B000DD34D0 /* AddWithApCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 068879311ABE18B70017A41A /* AddWithApCameraController.m */; };
+		061AA76B1B25D5B000DD34D0 /* AddWithApCameraController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 068879321ABE18B70017A41A /* AddWithApCameraController.xib */; };
+		061AA76C1B25D5B000DD34D0 /* AddWithApCamera1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0688793D1ABE204E0017A41A /* AddWithApCamera1Controller.m */; };
+		061AA76D1B25D5B000DD34D0 /* AddWithApCamera1Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0688793E1ABE204E0017A41A /* AddWithApCamera1Controller.xib */; };
+		061AA76E1B25D5B000DD34D0 /* AddWithApCamera2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0688794C1ABE2C4D0017A41A /* AddWithApCamera2Controller.m */; };
+		061AA76F1B25D5B000DD34D0 /* AddWithApCamera2Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0688794D1ABE2C4D0017A41A /* AddWithApCamera2Controller.xib */; };
 		0631097E1ABA3D5D00C6F0F1 /* ChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0631097D1ABA3D5D00C6F0F1 /* ChooseViewController.m */; };
 		0631097F1ABA3D5D00C6F0F1 /* ChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0631097D1ABA3D5D00C6F0F1 /* ChooseViewController.m */; };
 		0632864A1AB71A8C0033ABD0 /* mydown1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 063286411AB71A8C0033ABD0 /* mydown1@2x.png */; };
@@ -7269,6 +7275,7 @@
 				066040D11B23133300FB6F32 /* add_sync_clicked.png in Resources */,
 				066040D21B23133300FB6F32 /* DeviceListOnCloudView.xib in Resources */,
 				066040D31B23133300FB6F32 /* leo_mirror_ud_clicked@2x.png in Resources */,
+				061AA76F1B25D5B000DD34D0 /* AddWithApCamera2Controller.xib in Resources */,
 				066040D41B23133300FB6F32 /* more@2x.png in Resources */,
 				066040D51B23133300FB6F32 /* ceo_rcplay.png in Resources */,
 				066040D61B23133300FB6F32 /* drop_refresh_clicked.png in Resources */,
@@ -7305,6 +7312,7 @@
 				066040F31B23133300FB6F32 /* CustomGridTableViewCellStyle2.xib in Resources */,
 				066040F51B23133300FB6F32 /* leo_mirror_ud.png in Resources */,
 				066040F61B23133300FB6F32 /* CustomTableViewCellStyle1.xib in Resources */,
+				061AA76D1B25D5B000DD34D0 /* AddWithApCamera1Controller.xib in Resources */,
 				066040F71B23133300FB6F32 /* CheckView.xib in Resources */,
 				066041D21B2314FF00FB6F32 /* iTunesArtwork.png in Resources */,
 				066040F81B23133300FB6F32 /* ceo_record@2x.png in Resources */,
@@ -7312,6 +7320,7 @@
 				066040FB1B23133300FB6F32 /* leo_qvga_clicked.png in Resources */,
 				066040FC1B23133300FB6F32 /* online.png in Resources */,
 				066040FD1B23133300FB6F32 /* call_on_clicked.png in Resources */,
+				061AA76B1B25D5B000DD34D0 /* AddWithApCameraController.xib in Resources */,
 				066040FE1B23133300FB6F32 /* drop_link_clicked.png in Resources */,
 				066040FF1B23133300FB6F32 /* login_icon@2x.png in Resources */,
 				066041001B23133300FB6F32 /* leo_mirror_ud_clicked.png in Resources */,
@@ -10080,6 +10089,7 @@
 				06603F601B23133300FB6F32 /* UITabBarController+TabBar.m in Sources */,
 				06603F611B23133300FB6F32 /* UIView+View.m in Sources */,
 				06603F621B23133300FB6F32 /* AddCameraDetailController.mm in Sources */,
+				061AA76E1B25D5B000DD34D0 /* AddWithApCamera2Controller.m in Sources */,
 				06603F631B23133300FB6F32 /* UITableView+TableView.m in Sources */,
 				06603F641B23133300FB6F32 /* UIDevice+Device.m in Sources */,
 				06603F651B23133300FB6F32 /* LANSearchController.m in Sources */,
@@ -10119,12 +10129,14 @@
 				06603F871B23133300FB6F32 /* UIView+Hierarchy.m in Sources */,
 				06603F881B23133300FB6F32 /* IQKeyboardManager.m in Sources */,
 				06603F891B23133300FB6F32 /* IQToolbar.m in Sources */,
+				061AA76A1B25D5B000DD34D0 /* AddWithApCameraController.m in Sources */,
 				06603F8A1B23133300FB6F32 /* MoreVC.m in Sources */,
 				06603F8B1B23133300FB6F32 /* CameraPlaybackController.mm in Sources */,
 				06603F8C1B23133300FB6F32 /* VideoFlipController.m in Sources */,
 				06603F8D1B23133300FB6F32 /* EnvironmentModeController.m in Sources */,
 				06603F8E1B23133300FB6F32 /* AppGuidViewController.m in Sources */,
 				06603F8F1B23133300FB6F32 /* NSNumber+Mathematica.m in Sources */,
+				061AA76C1B25D5B000DD34D0 /* AddWithApCamera1Controller.m in Sources */,
 				06603F901B23133300FB6F32 /* UIAlertView+MKBlockAdditions.m in Sources */,
 				06603F911B23133300FB6F32 /* UINavigationController+Navigation.m in Sources */,
 				06603F921B23133300FB6F32 /* UIColor+Colors.m in Sources */,
@@ -11205,6 +11217,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/IOTCamViewer/lib/Release-iphoneos",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
@@ -11215,6 +11228,11 @@
 					RemoveModel,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				HEADER_SEARCH_PATHS = (
+					"zxing/iphone/ZXingWidget/Classes/**",
+					zxing/cpp/core/src,
+					HiSmartWifi/include,
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/QTAIDT/QTAIDT-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -11249,6 +11267,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/IOTCamViewer/lib/Release-iphoneos",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
@@ -11259,6 +11278,11 @@
 					RemoveModel,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				HEADER_SEARCH_PATHS = (
+					"zxing/iphone/ZXingWidget/Classes/**",
+					zxing/cpp/core/src,
+					HiSmartWifi/include,
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/QTAIDT/QTAIDT-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -11294,6 +11318,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/IOTCamViewer/lib/Release-iphoneos",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
@@ -11304,6 +11329,11 @@
 					RemoveModel,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				HEADER_SEARCH_PATHS = (
+					"zxing/iphone/ZXingWidget/Classes/**",
+					zxing/cpp/core/src,
+					HiSmartWifi/include,
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/QTAIDT/QTAIDT-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -11339,6 +11369,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/IOTCamViewer/lib/Release-iphoneos",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
@@ -11349,6 +11380,11 @@
 					RemoveModel,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				HEADER_SEARCH_PATHS = (
+					"zxing/iphone/ZXingWidget/Classes/**",
+					zxing/cpp/core/src,
+					HiSmartWifi/include,
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/QTAIDT/QTAIDT-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -12369,7 +12405,7 @@
 					"zxing/iphone/ZXingWidget/Classes/**",
 					zxing/cpp/core/src,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "IOTCamViewer/lib/${CONFIGURATION}-${PLATFORM_NAME}";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (
@@ -12401,7 +12437,7 @@
 					"zxing/iphone/ZXingWidget/Classes/**",
 					zxing/cpp/core/src,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "IOTCamViewer/lib/${CONFIGURATION}-${PLATFORM_NAME}";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (
@@ -12437,7 +12473,7 @@
 					"zxing/iphone/ZXingWidget/Classes/**",
 					zxing/cpp/core/src,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "IOTCamViewer/lib/${CONFIGURATION}-${PLATFORM_NAME}";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
@@ -12469,7 +12505,7 @@
 					"zxing/iphone/ZXingWidget/Classes/**",
 					zxing/cpp/core/src,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "IOTCamViewer/lib/${CONFIGURATION}-${PLATFORM_NAME}";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (
