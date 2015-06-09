@@ -2427,6 +2427,11 @@
 		06AAE5DC1AEFCAC90064CE78 /* info_27_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 06AAE5D91AEFCAC90064CE78 /* info_27_03.png */; };
 		06AAE5DD1AEFCAC90064CE78 /* refresh_27_07.png in Resources */ = {isa = PBXBuildFile; fileRef = 06AAE5DA1AEFCAC90064CE78 /* refresh_27_07.png */; };
 		06AAE5DE1AEFCAC90064CE78 /* refresh_27_07.png in Resources */ = {isa = PBXBuildFile; fileRef = 06AAE5DA1AEFCAC90064CE78 /* refresh_27_07.png */; };
+		06AF78F01B27119B00D5499F /* easyn.strings in Resources */ = {isa = PBXBuildFile; fileRef = 068879391ABE1B900017A41A /* easyn.strings */; };
+		06AF78F11B2711B600D5499F /* remeberpsd1.png in Resources */ = {isa = PBXBuildFile; fileRef = 06B219811ADD4D51005E3A2B /* remeberpsd1.png */; };
+		06AF78F21B2711B600D5499F /* remeberpsd2.png in Resources */ = {isa = PBXBuildFile; fileRef = 06B219821ADD4D51005E3A2B /* remeberpsd2.png */; };
+		06AF78F31B2711BF00D5499F /* button_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0E9F1ACACE8B00448ACB /* button_bg@2x.png */; };
+		06AF78F41B2711C700D5499F /* button_click@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0EA01ACACE8B00448ACB /* button_click@2x.png */; };
 		06B219831ADD4D51005E3A2B /* remeberpsd1.png in Resources */ = {isa = PBXBuildFile; fileRef = 06B219811ADD4D51005E3A2B /* remeberpsd1.png */; };
 		06B219841ADD4D51005E3A2B /* remeberpsd2.png in Resources */ = {isa = PBXBuildFile; fileRef = 06B219821ADD4D51005E3A2B /* remeberpsd2.png */; };
 		06B8C8BA1B0A21BB006ED6EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AC3148C5342007705B6 /* main.m */; };
@@ -7239,6 +7244,7 @@
 				066040A91B23133300FB6F32 /* microphone.png in Resources */,
 				066040AA1B23133300FB6F32 /* leo_mirror_ud_disable.png in Resources */,
 				066040AB1B23133300FB6F32 /* autologin_choose@2x.png in Resources */,
+				06AF78F01B27119B00D5499F /* easyn.strings in Resources */,
 				066040AC1B23133300FB6F32 /* add_wifi1_bk.png in Resources */,
 				066040AD1B23133300FB6F32 /* add_devicessid.png in Resources */,
 				066040AE1B23133300FB6F32 /* leo_speaker_on_clicked.png in Resources */,
@@ -7329,6 +7335,7 @@
 				066041031B23133300FB6F32 /* thumbnailCheckMark.png in Resources */,
 				066041041B23133300FB6F32 /* add_uidpw.png in Resources */,
 				066041051B23133300FB6F32 /* leo_mirror_rl@2x.png in Resources */,
+				06AF78F31B2711BF00D5499F /* button_bg@2x.png in Resources */,
 				066041061B23133300FB6F32 /* ceo_rcplay_click.png in Resources */,
 				066041071B23133300FB6F32 /* add_devicessid@2x.png in Resources */,
 				066041081B23133300FB6F32 /* login_btn_clicked@2x.png in Resources */,
@@ -7347,6 +7354,7 @@
 				066041151B23133300FB6F32 /* thumbnailCheckMark2.png in Resources */,
 				066041161B23133300FB6F32 /* buttonRedBackground.png in Resources */,
 				066041181B23133300FB6F32 /* add_okbtn_clicked.png in Resources */,
+				06AF78F41B2711C700D5499F /* button_click@2x.png in Resources */,
 				066041191B23133300FB6F32 /* moreset_listm.png in Resources */,
 				066041A31B23143200FB6F32 /* QTAIDT-Info.plist in Resources */,
 				0660411A1B23133300FB6F32 /* drop_unlink.png in Resources */,
@@ -7424,6 +7432,7 @@
 				0660415E1B23133300FB6F32 /* leo_mirror_rl.png in Resources */,
 				0660415F1B23133300FB6F32 /* add_wifinext_clicked@2x.png in Resources */,
 				066041611B23133300FB6F32 /* add_infobk.png in Resources */,
+				06AF78F11B2711B600D5499F /* remeberpsd1.png in Resources */,
 				066041D41B2314FF00FB6F32 /* moreset_clicked.png in Resources */,
 				066041621B23133300FB6F32 /* leo_snapshot.png in Resources */,
 				066041631B23133300FB6F32 /* moreset_list1.png in Resources */,
@@ -7443,6 +7452,7 @@
 				066041701B23133300FB6F32 /* toolinfo_bk@2x.png in Resources */,
 				066041711B23133300FB6F32 /* ceo_set_clicked@2x.png in Resources */,
 				066041721B23133300FB6F32 /* leo_mirror_rl_clicked.png in Resources */,
+				06AF78F21B2711B600D5499F /* remeberpsd2.png in Resources */,
 				066041741B23133300FB6F32 /* leo_speaker_on.png in Resources */,
 				069963CD1B2339A100F88461 /* f-Btn_Click@2x.png in Resources */,
 			);
@@ -11210,7 +11220,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ling jin (Q2PV74KQN7)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -11260,7 +11270,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ling jin (Q2PV74KQN7)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -11311,7 +11321,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ling jin (Q2PV74KQN7)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -11362,7 +11372,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ling jin (Q2PV74KQN7)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
