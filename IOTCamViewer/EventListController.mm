@@ -249,10 +249,14 @@
         
             Event *evt = [event_list objectAtIndex:row];
             
+#if defined(Aztech)
+                cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+#else
             if ([camera getPlaybackSupportOfChannel:0] && evt.eventStatus != EVENT_NORECORD)
                 cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             else
                 cell.accessoryType = UITableViewCellAccessoryNone;
+#endif
             
             if (evt.eventStatus == EVENT_UNREADED) 
                 cell.textLabel.textColor = [UIColor blackColor];
@@ -294,11 +298,14 @@
     
     Event *evt = [event_list objectAtIndex:row];   
     
+#if defined(Aztech)
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+#else
     if ([camera getPlaybackSupportOfChannel:0] && evt.eventStatus != EVENT_NORECORD)
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     else
         cell.accessoryType = UITableViewCellAccessoryNone;
-    
+#endif
     if (evt.eventStatus == EVENT_UNREADED) {
         cell.badgeText = [NSString stringWithFormat:@" "];   
         cell.badgeColor = [UIColor redColor];
@@ -333,7 +340,11 @@
     Event *evt = [event_list objectAtIndex:[indexPath row]];
     
     if (![camera getPlaybackSupportOfChannel:0] || evt.eventStatus == EVENT_NORECORD)
+#if defined(Aztech)
+        evt.eventStatus = EVENT_READED;
+#else
         return;
+#endif
     else
         evt.eventStatus = EVENT_READED;
     
