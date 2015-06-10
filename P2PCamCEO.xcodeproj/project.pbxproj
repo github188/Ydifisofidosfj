@@ -6973,7 +6973,7 @@
 						DevelopmentTeam = Y93RM4F8S2;
 					};
 					0682DE0D1B08CCF30019BD70 = {
-						DevelopmentTeam = 28M9L5HYL8;
+						DevelopmentTeam = Q2PV74KQN7;
 					};
 					069EF90C1B1207D00024CB5A = {
 						DevelopmentTeam = G795A5K2W9;
@@ -11572,7 +11572,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: WRT Intelligent Technology Co., Ltd. (28M9L5HYL8)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -11600,7 +11600,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = WRT;
-				PROVISIONING_PROFILE = "ed10750f-ef28-440a-a0f2-f4f06589176d";
+				PROVISIONING_PROFILE = "8155b8dc-a55d-472c-9900-dc2c8b9144e8";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -11614,7 +11614,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: WRT Intelligent Technology Co., Ltd. (28M9L5HYL8)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -11643,7 +11643,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = WRT;
-				PROVISIONING_PROFILE = "ed10750f-ef28-440a-a0f2-f4f06589176d";
+				PROVISIONING_PROFILE = "8155b8dc-a55d-472c-9900-dc2c8b9144e8";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -11657,7 +11657,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: WRT Intelligent Technology Co., Ltd. (28M9L5HYL8)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -11686,7 +11686,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = WRT;
-				PROVISIONING_PROFILE = "ed10750f-ef28-440a-a0f2-f4f06589176d";
+				PROVISIONING_PROFILE = "8155b8dc-a55d-472c-9900-dc2c8b9144e8";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -11700,7 +11700,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: WRT Intelligent Technology Co., Ltd. (28M9L5HYL8)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -11728,7 +11728,7 @@
 					"-DP2PCAMLIVE",
 				);
 				PRODUCT_NAME = WRT;
-				PROVISIONING_PROFILE = "ed10750f-ef28-440a-a0f2-f4f06589176d";
+				PROVISIONING_PROFILE = "8155b8dc-a55d-472c-9900-dc2c8b9144e8";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
