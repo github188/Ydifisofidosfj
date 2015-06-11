@@ -6967,7 +6967,7 @@
 				ORGANIZATIONNAME = TUTK;
 				TargetAttributes = {
 					06603F571B23133300FB6F32 = {
-						DevelopmentTeam = Q2PV74KQN7;
+						DevelopmentTeam = G795A5K2W9;
 					};
 					066D9E3B1B037E7C00408AF2 = {
 						DevelopmentTeam = Y93RM4F8S2;
@@ -11220,8 +11220,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -11256,7 +11256,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = QTAIDT;
-				PROVISIONING_PROFILE = "785d8228-fe27-400b-90e9-8cf62e680270";
+				PROVISIONING_PROFILE = "641a39a9-dce7-4c8c-8b69-4799dc174848";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -11270,8 +11270,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -11307,7 +11307,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = QTAIDT;
-				PROVISIONING_PROFILE = "785d8228-fe27-400b-90e9-8cf62e680270";
+				PROVISIONING_PROFILE = "641a39a9-dce7-4c8c-8b69-4799dc174848";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -11321,8 +11321,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -11358,7 +11358,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = QTAIDT;
-				PROVISIONING_PROFILE = "785d8228-fe27-400b-90e9-8cf62e680270";
+				PROVISIONING_PROFILE = "641a39a9-dce7-4c8c-8b69-4799dc174848";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -11372,8 +11372,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -11408,7 +11408,7 @@
 					"-DP2PCAMLIVE",
 				);
 				PRODUCT_NAME = QTAIDT;
-				PROVISIONING_PROFILE = "785d8228-fe27-400b-90e9-8cf62e680270";
+				PROVISIONING_PROFILE = "641a39a9-dce7-4c8c-8b69-4799dc174848";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
