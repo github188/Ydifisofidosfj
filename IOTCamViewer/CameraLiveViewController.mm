@@ -2586,7 +2586,9 @@ extern unsigned int _getTickCount() {
     [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_PTZ_COMMAND Data:(char *)request DataSize:sizeof(SMsgAVIoctrlPtzCmd)];
     
     free(request);
+    [self performSelector:@selector(stopPT) withObject:nil afterDelay:PT_DELAY];
 }
+
 - (IBAction)landBackAction:(id)sender {
 }
 
