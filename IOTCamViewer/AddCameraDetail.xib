@@ -26,7 +26,7 @@
             <subviews>
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="all_bk.png" id="bxH-qa-89K">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <autoresizingMask key="autoresizingMask"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="6">
                     <rect key="frame" x="0.0" y="122" width="320" height="260"/>
@@ -43,12 +43,12 @@
                     </connections>
                 </tableView>
                 <view contentMode="scaleToFill" id="sPk-6P-h8K" userLabel="View Check">
-                    <rect key="frame" x="0.0" y="405" width="320" height="203"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <rect key="frame" x="0.0" y="405" width="320" height="100"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="add_list_bk.png" id="mGT-uP-oZL">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="203"/>
-                            <autoresizingMask key="autoresizingMask"/>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="add_list_bk.png" id="mGT-uP-oZL">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fwW-SL-ph1">
                             <rect key="frame" x="20" y="25" width="120" height="45"/>
@@ -77,7 +77,7 @@
                 </view>
                 <view hidden="YES" contentMode="scaleToFill" id="uQE-KG-4Eh" userLabel="View fromLocal">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="122"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UmA-ag-Dec" userLabel="Button QRCode">
                             <rect key="frame" x="35" y="10" width="90" height="90"/>

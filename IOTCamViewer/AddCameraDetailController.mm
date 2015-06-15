@@ -344,6 +344,26 @@
     [super viewDidUnload];
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    /****上方坐标设置***/
+    CGFloat marginW=100.f;
+    CGFloat marginLRW=(self.view.frame.size.width-self.qrBtn.frame.size.width-self.lansBtn.frame.size.width-marginW)/2;
+    self.qrBtn.frame=CGRectMake(marginLRW, self.qrBtn.frame.origin.y, self.qrBtn.frame.size.width, self.qrBtn.frame.size.height);
+    self.qrLbl.frame=CGRectMake(marginLRW+(self.qrBtn.frame.size.width/2-self.qrLbl.frame.size.width/2), self.qrLbl.frame.origin.y, self.qrLbl.frame.size.width, self.qrLbl.frame.size.height);
+    
+    self.lansBtn.frame=CGRectMake(self.qrBtn.frame.size.width+self.qrBtn.frame.origin.x+marginW, self.lansBtn.frame.origin.y, self.lansBtn.frame.size.width, self.lansBtn.frame.size.height);
+    lanSearch.frame=CGRectMake(self.lansBtn.frame.origin.x+(self.lansBtn.frame.size.width/2-lanSearch.frame.size.width/2), lanSearch.frame.origin.y, lanSearch.frame.size.width, lanSearch.frame.size.height);
+    
+    self.tableView.frame=CGRectMake(0, noWiFiSetting.frame.size.height, self.view.frame.size.width, self.view.frame.size.height-noWiFiSetting.frame.size.height-checkView.frame.size.height);
+    checkView.frame=CGRectMake(0, self.view.frame.size.height-checkView.frame.size.height, self.view.frame.size.width, checkView.frame.size.height);
+    
+    marginLRW=(self.view.frame.size.width-add.frame.size.width-cancel.frame.size.width-marginW)/2;
+    add.frame=CGRectMake(marginLRW, add.frame.origin.y, add.frame.size.width, add.frame.size.height);
+    cancel.frame=CGRectMake(add.frame.origin.x+add.frame.size.width+marginW, cancel.frame.origin.y, cancel.frame.size.width, cancel.frame.size.height);
+    
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     
     if (isNameFieldBecomeisFirstResponder) {
