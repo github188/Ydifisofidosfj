@@ -226,6 +226,8 @@ extern NSString *deviceTokenString;
 @property (retain, nonatomic) IBOutlet UIButton *longBtn50HZ;
 @property (retain, nonatomic) IBOutlet UIButton *longBtn60HZ;
 
+@property (retain, nonatomic) IBOutlet UIButton *talkButtonBtn;
+
 @end
 
 @protocol CameraLiveViewDelegate <NSObject>

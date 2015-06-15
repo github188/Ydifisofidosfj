@@ -906,14 +906,21 @@ extern unsigned int _getTickCount() {
         [self.horizMenu reloadData];
         [self checkBTN];
         
-        
-        //self.myPtzView.frame=CGRectMake(0, self.horizMenu.frame.origin.y-10-self.myPtzView.frame.size.height-40, self.myPtzView.frame.size.width, self.myPtzView.frame.size.height);
-        
-
-        //self.scrollViewPortrait.frame=CGRectMake(0, 0, self.scrollViewPortrait.frame.size.width, self.scrollViewPortrait.frame.size.height);
+        //动态布局
+        self.scrollViewPortrait.frame=CGRectMake(0, self.scrollViewPortrait.frame.origin.y, self.view.frame.size.width, self.view.frame.size.width/4*3);
         self.scrollViewPortrait.contentSize=self.scrollViewPortrait.frame.size;
         self.monitorPortrait.frame=CGRectMake(0, 0, self.scrollViewPortrait.frame.size.width, self.scrollViewPortrait.frame.size.height);
+        statusBar.frame=CGRectMake(0, 0, self.view.frame.size.width, statusBar.frame.size.height);
         
+        NSString *audioTitleStr=AudioTitle.titleLabel.text;
+        CGSize audioTitleStrSize=[audioTitleStr sizeWithFont:AudioTitle.titleLabel.font];
+        talkButton.frame=CGRectMake(self.view.frame.size.width-audioTitleStrSize.width-self.talkButtonBtn.frame.size.width-15, self.view.frame.size.height-self.horizMenu.frame.size.height-talkButton.frame.size.height, audioTitleStrSize.width+self.talkButtonBtn.frame.size.width, talkButton.frame.size.height);
+        AudioTitle.frame=CGRectMake(0, talkButton.frame.size.height-audioTitleStrSize.height, audioTitleStrSize.width+15, audioTitleStrSize.height);
+        self.talkButtonBtn.frame=CGRectMake(AudioTitle.frame.origin.x+AudioTitle.frame.size.width, talkButton.frame.size.height-self.talkButtonBtn.frame.size.height, self.talkButtonBtn.frame.size.width, self.talkButtonBtn.frame.size.height);
+        
+        scrollQVGAView.frame=CGRectMake(self.view.frame.size.width/2-scrollQVGAView.frame.size.width/2, self.view.frame.size.height-self.horizMenu.frame.size.height-scrollQVGAView.frame.size.height, scrollQVGAView.frame.size.width, scrollQVGAView.frame.size.height);
+        
+        scrollEModeView.frame=CGRectMake(self.view.frame.size.width/2-scrollEModeView.frame.size.width/2, self.view.frame.size.height-self.horizMenu.frame.size.height-scrollEModeView.frame.size.height, scrollEModeView.frame.size.width, scrollEModeView.frame.size.height);
         
 		NSLog( @"video frame {%d,%d}%dx%d", (int)self.monitorPortrait.frame.origin.x, (int)self.monitorPortrait.frame.origin.y, (int)self.monitorPortrait.frame.size.width, (int)self.monitorPortrait.frame.size.height);
 		if( glView == nil ) {
@@ -940,10 +947,6 @@ extern unsigned int _getTickCount() {
 		}
 
         [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
-        
-//        if ([self respondsToSelector:@selector(setNeedsStatusBarAppearanceUpdate)]) {
-//            [self setNeedsStatusBarAppearanceUpdate];
-//        }
         
         [self.navigationController setNavigationBarHidden:NO animated:NO];
     }
@@ -1037,6 +1040,7 @@ extern unsigned int _getTickCount() {
     [_landBackBtn release];
     [_longBtn50HZ release];
     [_longBtn60HZ release];
+    [_talkButtonBtn release];
     [super dealloc];
 }
 
