@@ -380,6 +380,11 @@ extern unsigned int _getTickCount();
         
 		[self removeGLView:TRUE];
         self.view = self.portraitView;
+        
+        self.scrollViewPortrait.frame=CGRectMake(0, self.view.frame.size.height-self.toolBar.frame.size.height-self.view.frame.size.width/4*3, self.view.frame.size.width, self.view.frame.size.width/4*3);
+        self.scrollViewPortrait.contentSize=self.scrollViewPortrait.frame.size;
+        self.monitorPortrait.frame=CGRectMake(0, 0, self.scrollViewPortrait.frame.size.width, self.scrollViewPortrait.frame.size.height);
+        
 		NSLog( @"video frame {%d,%d}%dx%d", (int)self.monitorPortrait.frame.origin.x, (int)self.monitorPortrait.frame.origin.y, (int)self.monitorPortrait.frame.size.width, (int)self.monitorPortrait.frame.size.height);
 		if( glView == nil ) {
 			glView = [[CameraShowGLView alloc] initWithFrame:self.monitorPortrait.frame];
@@ -514,7 +519,7 @@ extern unsigned int _getTickCount();
     self.scrollViewLandscape.contentMode = UIViewContentModeScaleToFill;
     self.scrollViewLandscape.contentSize = self.scrollViewLandscape.frame.size;
     
-    [self changeOrientation:self.interfaceOrientation];
+    
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(applicationWillResignActive:)
@@ -559,6 +564,10 @@ extern unsigned int _getTickCount();
 	CVPixelBufferRelease(mPixelBuffer);
 	CVPixelBufferPoolRelease(mPixelBufferPool);
     [super viewDidUnload];
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self changeOrientation:self.interfaceOrientation];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
