@@ -856,10 +856,17 @@ extern unsigned int _getTickCount() {
         
 		NSLog( @"video frame {%d,%d}%dx%d", (int)self.monitorLandscape.frame.origin.x, (int)self.monitorLandscape.frame.origin.y, (int)self.monitorLandscape.frame.size.width, (int)self.monitorLandscape.frame.size.height);
         
-        longQVGAView.frame=CGRectMake(longQVGAView.frame.origin.x, self.view.frame.size.height/2-longQVGAView.frame.size.height/2-33, longQVGAView.frame.size.width, longQVGAView.frame.size.height);
+        //动态布局
+        NSString *audioTitleStr=longAudioTitle.titleLabel.text;
+        CGSize audioTitleStrSize=[audioTitleStr sizeWithFont:longAudioTitle.titleLabel.font];
+        longTalkButton.frame=CGRectMake(self.view.frame.size.width-audioTitleStrSize.width-self.longTalkButtonBtn.frame.size.width-15, self.view.frame.size.height-self.longHorizMenu.frame.size.height-longTalkButton.frame.size.height, audioTitleStrSize.width+self.longTalkButtonBtn.frame.size.width, longTalkButton.frame.size.height);
+        longAudioTitle.frame=CGRectMake(0, longTalkButton.frame.size.height-audioTitleStrSize.height, audioTitleStrSize.width+15, audioTitleStrSize.height);
+        self.longTalkButtonBtn.frame=CGRectMake(longAudioTitle.frame.origin.x+longAudioTitle.frame.size.width, longTalkButton.frame.size.height-self.longTalkButtonBtn.frame.size.height, self.longTalkButtonBtn.frame.size.width, self.longTalkButtonBtn.frame.size.height);
         
-        //修复语音按钮的位置问题
-        longTalkButton.frame=CGRectMake(self.view.frame.size.width-longTalkButton.frame.size.width+15, self.view.frame.size.height-self.longHorizMenu.frame.size.height-longTalkButton.frame.size.height-10, longTalkButton.frame.size.width, longTalkButton.frame.size.height);
+        longQVGAView.frame=CGRectMake(self.view.frame.size.width/2-longQVGAView.frame.size.width/2, self.view.frame.size.height-self.longHorizMenu.frame.size.height-longQVGAView.frame.size.height-15, longQVGAView.frame.size.width, longQVGAView.frame.size.height);
+        
+        longEModeView.frame=CGRectMake(self.view.frame.size.width/2-longEModeView.frame.size.width/2, self.view.frame.size.height-self.longHorizMenu.frame.size.height-longEModeView.frame.size.height, longEModeView.frame.size.width, longEModeView.frame.size.height);
+        self.loadingViewLandscape.frame=CGRectMake(self.view.frame.size.width/2-self.loadingViewLandscape.frame.size.width/2, self.view.frame.size.height/2-self.loadingViewLandscape.frame.size.height/2, self.loadingViewLandscape.frame.size.width, self.loadingViewLandscape.frame.size.height);
         
         
 		if( glView == nil ) {
@@ -921,6 +928,8 @@ extern unsigned int _getTickCount() {
         scrollQVGAView.frame=CGRectMake(self.view.frame.size.width/2-scrollQVGAView.frame.size.width/2, self.view.frame.size.height-self.horizMenu.frame.size.height-scrollQVGAView.frame.size.height, scrollQVGAView.frame.size.width, scrollQVGAView.frame.size.height);
         
         scrollEModeView.frame=CGRectMake(self.view.frame.size.width/2-scrollEModeView.frame.size.width/2, self.view.frame.size.height-self.horizMenu.frame.size.height-scrollEModeView.frame.size.height, scrollEModeView.frame.size.width, scrollEModeView.frame.size.height);
+        
+        self.loadingViewPortrait.frame=CGRectMake(self.scrollViewPortrait.frame.size.width/2-self.loadingViewPortrait.frame.size.width/2, self.scrollViewPortrait.frame.origin.y+self.scrollViewPortrait.frame.size.height/2-self.loadingViewPortrait.frame.size.height/2, self.loadingViewPortrait.frame.size.width, self.loadingViewPortrait.frame.size.height);
         
 		NSLog( @"video frame {%d,%d}%dx%d", (int)self.monitorPortrait.frame.origin.x, (int)self.monitorPortrait.frame.origin.y, (int)self.monitorPortrait.frame.size.width, (int)self.monitorPortrait.frame.size.height);
 		if( glView == nil ) {
@@ -1041,6 +1050,7 @@ extern unsigned int _getTickCount() {
     [_longBtn50HZ release];
     [_longBtn60HZ release];
     [_talkButtonBtn release];
+    [_longTalkButtonBtn release];
     [super dealloc];
 }
 

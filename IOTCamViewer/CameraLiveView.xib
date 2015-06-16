@@ -34,6 +34,7 @@
                 <outlet property="longSetNight" destination="h5F-kW-gBW" id="O5b-Pv-oIj"/>
                 <outlet property="longSetOutDoor" destination="9t0-9B-4vs" id="Edf-Iu-k4P"/>
                 <outlet property="longTalkButton" destination="eRd-I6-bHc" id="Nfa-PO-g3F"/>
+                <outlet property="longTalkButtonBtn" destination="xct-Zv-OqR" id="jAB-xf-0kY"/>
                 <outlet property="monitorLandscape" destination="153" id="154"/>
                 <outlet property="monitorPortrait" destination="149" id="155"/>
                 <outlet property="myPTZDownBtn" destination="upP-rw-fcn" id="Ft8-Z4-71M"/>

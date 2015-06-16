@@ -227,6 +227,7 @@ extern NSString *deviceTokenString;
 @property (retain, nonatomic) IBOutlet UIButton *longBtn60HZ;
 
 @property (retain, nonatomic) IBOutlet UIButton *talkButtonBtn;
+@property (retain, nonatomic) IBOutlet UIButton *longTalkButtonBtn;
 
 @end
 
