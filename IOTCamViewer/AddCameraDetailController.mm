@@ -358,6 +358,7 @@
     self.tableView.frame=CGRectMake(0, noWiFiSetting.frame.size.height, self.view.frame.size.width, self.view.frame.size.height-noWiFiSetting.frame.size.height-checkView.frame.size.height);
     checkView.frame=CGRectMake(0, self.view.frame.size.height-checkView.frame.size.height, self.view.frame.size.width, checkView.frame.size.height);
     
+    marginW=50;
     marginLRW=(self.view.frame.size.width-add.frame.size.width-cancel.frame.size.width-marginW)/2;
     add.frame=CGRectMake(marginLRW, add.frame.origin.y, add.frame.size.width, add.frame.size.height);
     cancel.frame=CGRectMake(add.frame.origin.x+add.frame.size.width+marginW, cancel.frame.origin.y, cancel.frame.size.width, cancel.frame.size.height);
