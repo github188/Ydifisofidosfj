@@ -698,7 +698,7 @@ enum {
 				
 				free(request);
             }
-            [self performSelector:@selector(stopPT) withObject:nil afterDelay:PT_DELAY];
+            [self performSelector:@selector(stopPT) withObject:nil afterDelay:0.1];
         }
     }
 }
