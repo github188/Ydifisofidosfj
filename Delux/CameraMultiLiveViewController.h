@@ -166,4 +166,9 @@ extern NSString *deviceTokenString;
 - (IBAction)goDropboxRec:(id)sender;
 - (IBAction)reConnect:(id)sender;
 
+@property (retain, nonatomic) IBOutlet UIImageView *itemBgImgView1;
+@property (retain, nonatomic) IBOutlet UIImageView *itemBgImgView2;
+@property (retain, nonatomic) IBOutlet UIImageView *itemBgImgView3;
+@property (retain, nonatomic) IBOutlet UIImageView *itemBgImgView4;
+
 @end

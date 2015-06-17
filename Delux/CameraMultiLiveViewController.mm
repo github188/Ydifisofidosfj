@@ -819,6 +819,10 @@ extern unsigned int _getTickCount() ;
 		[img release];
 	}
 
+    [_itemBgImgView1 release];
+    [_itemBgImgView2 release];
+    [_itemBgImgView3 release];
+    [_itemBgImgView4 release];
 	[super dealloc];
 }
 
@@ -827,6 +831,45 @@ extern unsigned int _getTickCount() ;
 //设置功能键位置
     //居中
     moreFunctionView.frame=CGRectMake(self.view.frame.size.width/2-moreFunctionView.frame.size.width/2, self.view.frame.size.height/2-moreFunctionView.frame.size.height/2, moreFunctionView.frame.size.width, moreFunctionView.frame.size.height);
+    /******动态布局B******/
+    CGFloat itemMarginW=2;
+    CGFloat itemW=(self.view.frame.size.width-itemMarginW)/2;
+    CGFloat itemH=itemW/4*3;
+    CGFloat itemStatusH=20;
+    CGFloat itemAllShowW=self.view.frame.size.width;
+    CGFloat itemAllShowH=(itemH+itemStatusH)*2;
+    
+    self.vdo1.frame=CGRectMake(0, self.view.frame.size.height/2-itemAllShowH/2, itemW, itemH);
+    statusBar1.frame=CGRectMake(0, self.vdo1.frame.origin.y+self.vdo1.frame.size.height, itemW, itemStatusH);
+    self.vdo2.frame=CGRectMake(self.vdo1.frame.origin.x+itemMarginW+itemW, self.vdo1.frame.origin.y, itemW, itemH);
+    statusBar2.frame=CGRectMake(statusBar1.frame.origin.x+itemW+itemMarginW, statusBar1.frame.origin.y, itemW, itemStatusH);
+    self.vdo3.frame=CGRectMake(0, statusBar1.frame.origin.y+itemStatusH, itemW, itemH);
+    statusBar3.frame=CGRectMake(0, self.vdo3.frame.origin.y+itemH, itemW, itemStatusH);
+    self.vdo4.frame=CGRectMake(self.vdo3.frame.origin.x+itemW+itemMarginW, self.vdo3.frame.origin.y, itemW, itemH);
+    statusBar4.frame=CGRectMake(statusBar3.frame.origin.x+itemW+itemMarginW, statusBar3.frame.origin.y, itemW, itemStatusH);
+    fullScreenButton1.frame=self.vdo1.frame;
+    fullScreenButton2.frame=self.vdo2.frame;
+    fullScreenButton3.frame=self.vdo3.frame;
+    fullScreenButton4.frame=self.vdo4.frame;
+    defaultButton1.frame=self.vdo1.frame;
+    defaultButton2.frame=self.vdo2.frame;
+    defaultButton3.frame=self.vdo3.frame;
+    defaultButton4.frame=self.vdo4.frame;
+    reConnectBTN1.frame=self.vdo1.frame;
+    reConnectBTN2.frame=self.vdo2.frame;
+    reConnectBTN3.frame=self.vdo3.frame;
+    reConnectBTN4.frame=self.vdo4.frame;
+    
+    moreFunction1.frame=CGRectMake(self.vdo1.frame.origin.x+self.vdo1.frame.size.width-moreFunction1.frame.size.width, self.vdo1.frame.origin.y+10, moreFunction1.frame.size.width, moreFunction1.frame.size.height);
+    moreFunction2.frame=CGRectMake(self.vdo2.frame.origin.x+self.vdo2.frame.size.width-moreFunction2.frame.size.width, self.vdo2.frame.origin.y+10, moreFunction2.frame.size.width, moreFunction2.frame.size.height);
+    moreFunction3.frame=CGRectMake(self.vdo3.frame.origin.x+self.vdo3.frame.size.width-moreFunction3.frame.size.width, self.vdo3.frame.origin.y+10, moreFunction3.frame.size.width, moreFunction3.frame.size.height);
+    moreFunction4.frame=CGRectMake(self.vdo4.frame.origin.x+self.vdo4.frame.size.width-moreFunction4.frame.size.width, self.vdo4.frame.origin.y+10, moreFunction4.frame.size.width, moreFunction4.frame.size.height);
+    self.itemBgImgView1.frame=self.vdo1.frame;
+    self.itemBgImgView2.frame=self.vdo2.frame;
+    self.itemBgImgView3.frame=self.vdo3.frame;
+    self.itemBgImgView4.frame=self.vdo4.frame;
+    /******动态布局N******/
+    
 
 	GLog( tUI, (@"MultiView: +viewWillAppear") );
 	

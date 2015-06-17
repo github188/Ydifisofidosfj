@@ -697,6 +697,13 @@
 		066041EC1B23153500FB6F32 /* title_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 066041E81B23153500FB6F32 /* title_logo.png */; };
 		066041ED1B23153500FB6F32 /* title_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 066041EA1B23153500FB6F32 /* title_logo@2x.png */; };
 		066041F61B23161700FB6F32 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 066041F81B23161700FB6F32 /* InfoPlist.strings */; };
+		06642F661B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06642F651B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg */; };
+		06642F671B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06642F651B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg */; };
+		06642F681B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06642F651B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg */; };
+		06642F691B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06642F651B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg */; };
+		06642F6A1B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06642F651B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg */; };
+		06642F6B1B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06642F651B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg */; };
+		06642F6C1B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06642F651B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg */; };
 		066D9E3D1B037E7C00408AF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AC3148C5342007705B6 /* main.m */; };
 		066D9E3E1B037E7C00408AF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AC7148C5343007705B6 /* AppDelegate.m */; };
 		066D9E3F1B037E7C00408AF2 /* CameraListForLiveViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AE3148C657B007705B6 /* CameraListForLiveViewController.mm */; };
@@ -4214,6 +4221,7 @@
 		066041F91B23161900FB6F32 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		066041FA1B23161A00FB6F32 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		066041FB1B23161B00FB6F32 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		06642F651B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "6chlist_bk_bg@2x.jpg"; sourceTree = "<group>"; };
 		066DA0821B037E7C00408AF2 /* Bayit Cam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bayit Cam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		066DA0891B0385CD00408AF2 /* Bayit Cam-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Bayit Cam-Info.plist"; path = "Bayit Cam/Bayit Cam-Info.plist"; sourceTree = "<group>"; };
 		066DA08C1B03872900408AF2 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = "Bayit Cam/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -6641,6 +6649,7 @@
 		D8C4DBC414E2171D007CBFAE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				06642F651B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg */,
 				06E1BC6B1AF5DB5100755606 /* refresh_27_07_1.png */,
 				06AAE5D91AEFCAC90064CE78 /* info_27_03.png */,
 				06AAE5DA1AEFCAC90064CE78 /* refresh_27_07.png */,
@@ -7154,6 +7163,7 @@
 				066041DF1B2314FF00FB6F32 /* page3_en.jpg in Resources */,
 				0660404B1B23133300FB6F32 /* leo_snapshot_disable.png in Resources */,
 				066041E41B2314FF00FB6F32 /* page4_ko.jpg in Resources */,
+				06642F6C1B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg in Resources */,
 				0660404C1B23133300FB6F32 /* ChannelPicker.xib in Resources */,
 				066041ED1B23153500FB6F32 /* title_logo@2x.png in Resources */,
 				0660404D1B23133300FB6F32 /* ceo_rcplay_back.png in Resources */,
@@ -7805,6 +7815,7 @@
 				066D9FF51B037E7C00408AF2 /* leo_mirror_ud_disable@2x.png in Resources */,
 				066D9FF71B037E7C00408AF2 /* thumbnailCheckMark2.png in Resources */,
 				066D9FF81B037E7C00408AF2 /* buttonRedBackground.png in Resources */,
+				06642F681B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg in Resources */,
 				06118ED41B08E0B500BB45FB /* page3_ko.jpg in Resources */,
 				066DA0A31B03878300408AF2 /* myup1@2x.png in Resources */,
 				066D9FF91B037E7C00408AF2 /* add_okbtn_clicked.png in Resources */,
@@ -8171,6 +8182,7 @@
 				0682DF8F1B08CCF30019BD70 /* ceo_pause_click.png in Resources */,
 				0682DF901B08CCF30019BD70 /* gallery@2x.png in Resources */,
 				0682DF911B08CCF30019BD70 /* ceo_rcplay_click_h@2x.png in Resources */,
+				06642F691B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg in Resources */,
 				0682DF921B08CCF30019BD70 /* more_cancel_clicked@2x.png in Resources */,
 				0682DF931B08CCF30019BD70 /* zxingLangString.strings in Resources */,
 				0682DF941B08CCF30019BD70 /* add_sync_clicked.png in Resources */,
@@ -8642,6 +8654,7 @@
 				069EFAA61B1207D00024CB5A /* CustomGridTableViewCellStyle2.xib in Resources */,
 				069EFAA71B1207D00024CB5A /* leo_mirror_ud.png in Resources */,
 				069EFB651B12092A0024CB5A /* myup@2x.png in Resources */,
+				06642F6B1B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg in Resources */,
 				069EFAA81B1207D00024CB5A /* CustomTableViewCellStyle1.xib in Resources */,
 				069EFAA91B1207D00024CB5A /* CheckView.xib in Resources */,
 				069EFAAA1B1207D00024CB5A /* ceo_record@2x.png in Resources */,
@@ -9005,6 +9018,7 @@
 				06B8CA0A1B0A21BB006ED6EE /* leo_mirror_ud_disable.png in Resources */,
 				06B8CA0B1B0A21BB006ED6EE /* autologin_choose@2x.png in Resources */,
 				06B8CA0C1B0A21BB006ED6EE /* add_wifi1_bk.png in Resources */,
+				06642F6A1B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg in Resources */,
 				06B8CA0D1B0A21BB006ED6EE /* add_devicessid.png in Resources */,
 				06B8CA0E1B0A21BB006ED6EE /* leo_speaker_on_clicked.png in Resources */,
 				06B8CA0F1B0A21BB006ED6EE /* more_delete_clicked.png in Resources */,
@@ -9318,6 +9332,7 @@
 				06F76EFE1AB720A100901EBA /* moreset@2x.png in Resources */,
 				06F76EFF1AB720A100901EBA /* info.png in Resources */,
 				06F76F001AB720A100901EBA /* refresh.png in Resources */,
+				06642F671B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg in Resources */,
 				06F76F011AB720A100901EBA /* ceo_pause_h.png in Resources */,
 				06F76F021AB720A100901EBA /* drop_link_clicked@2x.png in Resources */,
 				06F76F071AB720A100901EBA /* ceo_rcplay_line_h.png in Resources */,
@@ -9685,6 +9700,7 @@
 				610DBA35169AF0BF00292CF9 /* CameraLiveView.xib in Resources */,
 				7A553D66194EB73D00F5AA11 /* leo_emode@2x.png in Resources */,
 				0632864E1AB71A8C0033ABD0 /* myright1@2x.png in Resources */,
+				06642F661B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg in Resources */,
 				610DBA36169AF0BF00292CF9 /* CameraList.xib in Resources */,
 				7A553D0C194EB73C00F5AA11 /* add_camwifibk@2x.png in Resources */,
 				610DBA37169AF0BF00292CF9 /* AddCamera.xib in Resources */,
@@ -12282,7 +12298,7 @@
 				PROVISIONING_PROFILE = "348df631-a77c-40d6-b948-1ca8741dc7f5";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -12320,7 +12336,7 @@
 				PROVISIONING_PROFILE = "348df631-a77c-40d6-b948-1ca8741dc7f5";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -12358,7 +12374,7 @@
 				PROVISIONING_PROFILE = "348df631-a77c-40d6-b948-1ca8741dc7f5";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -12395,7 +12411,7 @@
 				PROVISIONING_PROFILE = "348df631-a77c-40d6-b948-1ca8741dc7f5";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
