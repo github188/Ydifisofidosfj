@@ -1854,6 +1854,10 @@
 		069963CF1B2339A100F88461 /* f+Btn_Click@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0EA61ACAD6F300448ACB /* f+Btn_Click@2x.png */; };
 		069963D01B2339A100F88461 /* f+Btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0EA71ACAD6F300448ACB /* f+Btn@2x.png */; };
 		069C72F21B2075B500D02130 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 069C72F41B2075B500D02130 /* InfoPlist.strings */; };
+		069D501D1B33891000B2E083 /* page1_en~ipad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 069D50191B33891000B2E083 /* page1_en~ipad.jpg */; };
+		069D501E1B33891000B2E083 /* page2_en~ipad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 069D501A1B33891000B2E083 /* page2_en~ipad.jpg */; };
+		069D501F1B33891000B2E083 /* page3_en~ipad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 069D501B1B33891000B2E083 /* page3_en~ipad.jpg */; };
+		069D50201B33891000B2E083 /* page4_en~ipad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 069D501C1B33891000B2E083 /* page4_en~ipad.jpg */; };
 		069EF9081B1203020024CB5A /* moreset.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CD3194EB73C00F5AA11 /* moreset.png */; };
 		069EF9091B1203020024CB5A /* moreset@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CD4194EB73C00F5AA11 /* moreset@2x.png */; };
 		069EF90A1B1203090024CB5A /* moreset_clicked.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CD7194EB73C00F5AA11 /* moreset_clicked.png */; };
@@ -4334,6 +4338,10 @@
 		069C72F51B2075BA00D02130 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		069C72F61B2075BC00D02130 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		069C72F71B2075BE00D02130 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		069D50191B33891000B2E083 /* page1_en~ipad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "page1_en~ipad.jpg"; sourceTree = "<group>"; };
+		069D501A1B33891000B2E083 /* page2_en~ipad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "page2_en~ipad.jpg"; sourceTree = "<group>"; };
+		069D501B1B33891000B2E083 /* page3_en~ipad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "page3_en~ipad.jpg"; sourceTree = "<group>"; };
+		069D501C1B33891000B2E083 /* page4_en~ipad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "page4_en~ipad.jpg"; sourceTree = "<group>"; };
 		069EFB4F1B1207D00024CB5A /* IPCAM P.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IPCAM P.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		069EFB521B1208D10024CB5A /* IPCAM P-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "IPCAM P-Info.plist"; path = "IPCAM P/IPCAM P-Info.plist"; sourceTree = "<group>"; };
 		069EFB531B1208D10024CB5A /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = "IPCAM P/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -5461,6 +5469,10 @@
 		0647DCE91AB8666100F5553A /* images */ = {
 			isa = PBXGroup;
 			children = (
+				069D50191B33891000B2E083 /* page1_en~ipad.jpg */,
+				069D501A1B33891000B2E083 /* page2_en~ipad.jpg */,
+				069D501B1B33891000B2E083 /* page3_en~ipad.jpg */,
+				069D501C1B33891000B2E083 /* page4_en~ipad.jpg */,
 				0684EEF71ADE98C2006BD75A /* page1_cn.jpg */,
 				0684EEF81ADE98C2006BD75A /* page1_zt.jpg */,
 				0684EEF91ADE98C2006BD75A /* page1_en.jpg */,
@@ -9722,6 +9734,7 @@
 				0647DD181AB86F9800F5553A /* addcam_clicked.png in Resources */,
 				7A553D33194EB73C00F5AA11 /* add_wifi1_bk@2x.png in Resources */,
 				610DBA3C169AF0BF00292CF9 /* WiFiPassword.xib in Resources */,
+				069D501E1B33891000B2E083 /* page2_en~ipad.jpg in Resources */,
 				7A553D70194EB73D00F5AA11 /* leo_mirror_ud@2x.png in Resources */,
 				7A553D10194EB73C00F5AA11 /* add_infobk@2x.png in Resources */,
 				7A0B1C7019A466950071E5CF /* ceo_recordstop.png in Resources */,
@@ -9746,6 +9759,7 @@
 				7A553DDF194EB73D00F5AA11 /* refresh_clicked@2x.png in Resources */,
 				610DBA42169AF0BF00292CF9 /* camera.png in Resources */,
 				7A553DC0194EB73D00F5AA11 /* moreset_list1@2x.png in Resources */,
+				069D50201B33891000B2E083 /* page4_en~ipad.jpg in Resources */,
 				7A553DCF194EB73D00F5AA11 /* onlinebar.png in Resources */,
 				7A0B1C7A19A466950071E5CF /* leo_speaker_off_disable.png in Resources */,
 				610DBA43169AF0BF00292CF9 /* camera@2x.png in Resources */,
@@ -9791,6 +9805,7 @@
 				610DBA49169AF0BF00292CF9 /* videoClip.png in Resources */,
 				7A553DD1194EB73D00F5AA11 /* add_list.png in Resources */,
 				7A0B1C7B19A466950071E5CF /* leo_speaker_off_disable@2x.png in Resources */,
+				069D501F1B33891000B2E083 /* page3_en~ipad.jpg in Resources */,
 				7A0B1C6F19A466950071E5CF /* ceo_record_tab_r@2x.png in Resources */,
 				7A0B1C9319A5DF710071E5CF /* leo_snapshot_disable.png in Resources */,
 				610DBA4A169AF0BF00292CF9 /* ChannelPicker.xib in Resources */,
@@ -9864,6 +9879,7 @@
 				7A553D88194EB73D00F5AA11 /* liveview@2x.png in Resources */,
 				7A553DE0194EB73D00F5AA11 /* title_bk.png in Resources */,
 				7A553D5E194EB73C00F5AA11 /* drop_refresh@2x.png in Resources */,
+				069D501D1B33891000B2E083 /* page1_en~ipad.jpg in Resources */,
 				7A49913019ADFD7700B19CD4 /* ceo_rcplay_forward_click_h.png in Resources */,
 				7A0B1C7519A466950071E5CF /* leo_mirror_rl_disable@2x.png in Resources */,
 				7A553DD3194EB73D00F5AA11 /* add_uidpw.png in Resources */,
