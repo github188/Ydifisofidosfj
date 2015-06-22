@@ -210,14 +210,12 @@
         } else if(screenBounds.size.height == 480) {
             self.editModeToolBar.frame = CGRectMake(0, 320-20-24, 480, 44);
         }
-        // self.editModeToolBar.frame = CGRectMake(0, 320-20-24-49, 480, 44);
     }else {
         if (screenBounds.size.height == 568) {
             self.editModeToolBar.frame = CGRectMake(0, 568-20-24, 320, 44);
         } else if(screenBounds.size.height == 480) {
             self.editModeToolBar.frame = CGRectMake(0, 480-20-24, 320, 44);
         }
-        // self.editModeToolBar.frame = CGRectMake(0, 320-20-24, 480, 44);
     }
 
 }
