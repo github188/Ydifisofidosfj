@@ -45,6 +45,7 @@
                 <outlet property="moreFunction4" destination="kjF-9s-QVR" id="ZPe-R1-a1e"/>
                 <outlet property="moreFunctionView" destination="AQV-8s-C8V" id="4Q6-ou-Drk"/>
                 <outlet property="moreSet" destination="BuI-ko-gGg" id="xEr-rG-AM2"/>
+                <outlet property="morecancel" destination="5gc-m9-VtC" id="8UC-j0-45u"/>
                 <outlet property="reConnectBTN1" destination="tUK-An-I8F" id="bAG-QX-jNv"/>
                 <outlet property="reConnectBTN2" destination="vpH-84-gTZ" id="A0N-cE-vnx"/>
                 <outlet property="reConnectBTN3" destination="EZc-Tv-kOb" id="fBZ-3e-Mnr"/>
@@ -443,9 +444,9 @@
                     <rect key="frame" x="0.0" y="81" width="320" height="110"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="moreset_bk.png" id="gpD-T7-4d5">
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="moreset_bk.png" id="gpD-T7-4d5">
                             <rect key="frame" x="11" y="6" width="306" height="98"/>
-                            <autoresizingMask key="autoresizingMask"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1bo-qO-WJ2" userLabel="Button Change">
                             <rect key="frame" x="19" y="30" width="50" height="50"/>

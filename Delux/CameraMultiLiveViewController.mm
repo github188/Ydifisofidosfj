@@ -823,6 +823,7 @@ extern unsigned int _getTickCount() ;
     [_itemBgImgView2 release];
     [_itemBgImgView3 release];
     [_itemBgImgView4 release];
+    [_morecancel release];
 	[super dealloc];
 }
 
@@ -830,7 +831,20 @@ extern unsigned int _getTickCount() ;
 {
 //设置功能键位置
     //居中
+    moreFunctionView.size=CGSizeMake(self.view.frame.size.width, self.view.frame.size.width*110/320);
     moreFunctionView.frame=CGRectMake(self.view.frame.size.width/2-moreFunctionView.frame.size.width/2, self.view.frame.size.height/2-moreFunctionView.frame.size.height/2, moreFunctionView.frame.size.width, moreFunctionView.frame.size.height);
+    self.morecancel.origin=CGPointMake(moreFunctionView.size.width-self.morecancel.size.width, self.morecancel.size.height/3);
+    CGFloat moreBtnW,moreBtnH;
+    moreBtnH=moreBtnW=moreFunctionView.size.height/2;
+    if(moreBtnW>100){
+        moreBtnW=moreBtnH=100;
+    }
+    CGFloat marginW=(moreFunctionView.size.width-moreBtnW*5)/6;
+    changeView.frame=CGRectMake(marginW, moreFunctionView.frame.size.height/2-moreBtnH/2, moreBtnW, moreBtnH);
+    cameraEvent.frame=CGRectMake(changeView.frame.origin.x+moreBtnW+marginW, changeView.frame.origin.y, moreBtnW, moreBtnH);
+    cameraSnapshot.frame=CGRectMake(cameraEvent.frame.origin.x+moreBtnW+marginW, cameraEvent.frame.origin.y, moreBtnW, moreBtnH);
+    cameraSetting.frame=CGRectMake(cameraSnapshot.frame.origin.x+moreBtnW+marginW, cameraSnapshot.frame.origin.y, moreBtnW, moreBtnH);
+    deleteView.frame=CGRectMake(cameraSetting.frame.origin.x+moreBtnW+marginW, cameraSetting.frame.origin.y, moreBtnW, moreBtnH);
     /******动态布局B******/
     CGFloat itemMarginW=2;
     CGFloat itemW=(self.view.frame.size.width-itemMarginW)/2;

@@ -148,6 +148,8 @@ extern NSString *deviceTokenString;
 @property (retain, nonatomic) IBOutlet UIImageView *vdo2;
 @property (retain, nonatomic) IBOutlet UIImageView *vdo3;
 @property (retain, nonatomic) IBOutlet UIImageView *vdo4;
+@property (retain, nonatomic) IBOutlet UIButton *morecancel;
+
 
 - (void)camStopShow:(int)aIgnoreIdx;
 
