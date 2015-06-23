@@ -205,18 +205,27 @@
 	}
     
     if (UIInterfaceOrientationLandscapeLeft == orientation||UIInterfaceOrientationLandscapeRight == orientation) {
+        
+        
+        
         if (screenBounds.size.height == 568) {
             self.editModeToolBar.frame = CGRectMake(0, 320-20-24, 568, 44);
         } else if(screenBounds.size.height == 480) {
             self.editModeToolBar.frame = CGRectMake(0, 320-20-24, 480, 44);
         }
+        
+        
+        
     }else {
+        
         if (screenBounds.size.height == 568) {
             self.editModeToolBar.frame = CGRectMake(0, 568-20-24, 320, 44);
         } else if(screenBounds.size.height == 480) {
             self.editModeToolBar.frame = CGRectMake(0, 480-20-24, 320, 44);
         }
+        
     }
+    self.editModeToolBar.frame = CGRectMake(0, screenBounds.size.height-44, screenBounds.size.width, 44);
 
 }
 - (void)showEditModeToolBar {
@@ -242,6 +251,7 @@
             self.editModeToolBar = [[[UIToolbar alloc] initWithFrame:CGRectMake(0, 480-20-24, 320, 44)] autorelease];
         }
     }
+    self.editModeToolBar.frame = CGRectMake(0, screenBounds.size.height-44, screenBounds.size.width, 44);
     
     self.editModeToolBar.barStyle = UIBarStyleDefault;
 	self.editModeToolBar.translucent = NO;
