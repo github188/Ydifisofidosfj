@@ -165,16 +165,8 @@
     //進入播放介面
     moviePlayerController = [[MPMoviePlayerController alloc] initWithContentURL:[NSURL fileURLWithPath:urlStr]];
     
-    //動態改變播放器view大小
-//    CGSize size = [[[urlAsset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0] naturalSize];
-//    if (size.width>320) {
-//        //[moviePlayerController.view setFrame:CGRectMake(0,44+(44*(320/size.width)),320,size.height*(320/size.width))];
-//        [moviePlayerController.view setFrame:CGRectMake(0,66,320,240)];
-//    } else {
-//        [moviePlayerController.view setFrame:CGRectMake(0,44,size.width,size.height)];
-//    }
     
-    [moviePlayerController.view setFrame:CGRectMake(0,66,320,240)];
+    [moviePlayerController.view setFrame:CGRectMake(0,66,self.view.frame.size.width,self.view.frame.size.width*3/4)];
     
     [self.view addSubview:moviePlayerController.view];
     
@@ -270,6 +262,15 @@
         [self reSetPlayer];
     }
 }
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [moviePlayerController.view setFrame:CGRectMake(0,66,self.view.frame.size.width,self.view.frame.size.width*3/4)];
+    portraitController.frame=CGRectMake(0, self.view.frame.size.height-20-portraitController.frame.size.height, portraitController.frame.size.width, portraitController.frame.size.height);
+    playAndPauseBTN.frame=CGRectMake(portraitController.frame.size.width/2-playAndPauseBTN.frame.size.width/2, playAndPauseBTN.frame.origin.y, playAndPauseBTN.frame.size.width, playAndPauseBTN.frame.size.height);
+    timeSlider.frame=CGRectMake(15, timeSlider.frame.origin.y, portraitController.frame.size.width-30, timeSlider.frame.size.height);
+    currentTimeLabel.frame=CGRectMake(timeSlider.frame.origin.x, currentTimeLabel.frame.origin.y, currentTimeLabel.frame.size.width, currentTimeLabel.frame.size.height);
+    totalTimeLabel.frame=CGRectMake(timeSlider.frame.origin.x+timeSlider.frame.size.width-totalTimeLabel.frame.size.width, totalTimeLabel.frame.origin.y, totalTimeLabel.frame.size.width, totalTimeLabel.frame.size.height);
+}
 
 - (void)viewWillDisappear:(BOOL)animated
 {
@@ -319,11 +320,7 @@
         [totalTimeLabel setText:[NSString stringWithFormat:@"%d:0%d",totalMinute,totalSecond]];
         [totalTimeLabel_h setText:[NSString stringWithFormat:@"%d:0%d",totalMinute,totalSecond]];
     }
-    
-    CGRect screenBounds = [[UIScreen mainScreen] bounds];
-    if (screenBounds.size.height == 480) {
-        portraitController.y -= 82;
-    }
+
 }
 
 - (void)handleSingleTap:(UIGestureRecognizer *)gestureRecognizer
@@ -335,7 +332,7 @@
 }
 
 #pragma mark Rotate Delegate
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+/*- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
 
     if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation)) {
         //畫面傾置
@@ -367,6 +364,6 @@
             [UIApplication sharedApplication].statusBarHidden = NO;
         }
     }
-}
+}*/
 
 @end
