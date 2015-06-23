@@ -833,9 +833,9 @@ extern unsigned int _getTickCount() ;
     //居中
     moreFunctionView.size=CGSizeMake(self.view.frame.size.width, self.view.frame.size.width*110/320);
     moreFunctionView.frame=CGRectMake(self.view.frame.size.width/2-moreFunctionView.frame.size.width/2, self.view.frame.size.height/2-moreFunctionView.frame.size.height/2, moreFunctionView.frame.size.width, moreFunctionView.frame.size.height);
-    self.morecancel.origin=CGPointMake(moreFunctionView.size.width-self.morecancel.size.width, self.morecancel.size.height/3);
+    self.morecancel.origin=CGPointMake(moreFunctionView.size.width-self.morecancel.size.width, 0);
     CGFloat moreBtnW,moreBtnH;
-    moreBtnH=moreBtnW=moreFunctionView.size.height/2;
+    moreBtnH=moreBtnW=moreFunctionView.size.height/2.5;
     if(moreBtnW>100){
         moreBtnW=moreBtnH=100;
     }
@@ -874,10 +874,10 @@ extern unsigned int _getTickCount() ;
     reConnectBTN3.frame=self.vdo3.frame;
     reConnectBTN4.frame=self.vdo4.frame;
     
-    moreFunction1.frame=CGRectMake(self.vdo1.frame.origin.x+self.vdo1.frame.size.width-moreFunction1.frame.size.width, self.vdo1.frame.origin.y+10, moreFunction1.frame.size.width, moreFunction1.frame.size.height);
-    moreFunction2.frame=CGRectMake(self.vdo2.frame.origin.x+self.vdo2.frame.size.width-moreFunction2.frame.size.width, self.vdo2.frame.origin.y+10, moreFunction2.frame.size.width, moreFunction2.frame.size.height);
-    moreFunction3.frame=CGRectMake(self.vdo3.frame.origin.x+self.vdo3.frame.size.width-moreFunction3.frame.size.width, self.vdo3.frame.origin.y+10, moreFunction3.frame.size.width, moreFunction3.frame.size.height);
-    moreFunction4.frame=CGRectMake(self.vdo4.frame.origin.x+self.vdo4.frame.size.width-moreFunction4.frame.size.width, self.vdo4.frame.origin.y+10, moreFunction4.frame.size.width, moreFunction4.frame.size.height);
+    moreFunction1.frame=CGRectMake(self.vdo1.frame.origin.x+self.vdo1.frame.size.width-moreFunction1.frame.size.width, self.vdo1.frame.origin.y+5, moreFunction1.frame.size.width, moreFunction1.frame.size.height);
+    moreFunction2.frame=CGRectMake(self.vdo2.frame.origin.x+self.vdo2.frame.size.width-moreFunction2.frame.size.width, self.vdo2.frame.origin.y+5, moreFunction2.frame.size.width, moreFunction2.frame.size.height);
+    moreFunction3.frame=CGRectMake(self.vdo3.frame.origin.x+self.vdo3.frame.size.width-moreFunction3.frame.size.width, self.vdo3.frame.origin.y+5, moreFunction3.frame.size.width, moreFunction3.frame.size.height);
+    moreFunction4.frame=CGRectMake(self.vdo4.frame.origin.x+self.vdo4.frame.size.width-moreFunction4.frame.size.width, self.vdo4.frame.origin.y+5, moreFunction4.frame.size.width, moreFunction4.frame.size.height);
     self.itemBgImgView1.frame=self.vdo1.frame;
     self.itemBgImgView2.frame=self.vdo2.frame;
     self.itemBgImgView3.frame=self.vdo3.frame;
