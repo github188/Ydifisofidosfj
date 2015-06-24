@@ -265,7 +265,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [moviePlayerController.view setFrame:CGRectMake(0,66,self.view.frame.size.width,self.view.frame.size.width*3/4)];
-    portraitController.frame=CGRectMake(0, self.view.frame.size.height-20-portraitController.frame.size.height, portraitController.frame.size.width, portraitController.frame.size.height);
+    portraitController.frame=CGRectMake(0, self.view.frame.size.height-20-portraitController.frame.size.height, self.view.frame.size.width, portraitController.frame.size.height);
     playAndPauseBTN.frame=CGRectMake(portraitController.frame.size.width/2-playAndPauseBTN.frame.size.width/2, playAndPauseBTN.frame.origin.y, playAndPauseBTN.frame.size.width, playAndPauseBTN.frame.size.height);
     timeSlider.frame=CGRectMake(15, timeSlider.frame.origin.y, portraitController.frame.size.width-30, timeSlider.frame.size.height);
     currentTimeLabel.frame=CGRectMake(timeSlider.frame.origin.x, currentTimeLabel.frame.origin.y, currentTimeLabel.frame.size.width, currentTimeLabel.frame.size.height);
