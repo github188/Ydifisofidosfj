@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MyCamera.h"
 #import "DDBadgeViewCell.h"
+#import "AppDelegate.h"
 
 extern NSMutableArray *camera_list;
 

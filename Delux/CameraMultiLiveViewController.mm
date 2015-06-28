@@ -158,7 +158,7 @@ extern unsigned int _getTickCount() ;
     if (nil == documentsPath) {
         
         NSArray* dirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        documentsPath = [[dirs objectAtIndex:0] retain];
+        documentsPath = [[[dirs objectAtIndex:0] stringByAppendingPathComponent:NOTBACKUPDIR] retain];
     }
     
     return [documentsPath stringByAppendingPathComponent:relativePath];
@@ -181,7 +181,7 @@ extern unsigned int _getTickCount() ;
         directoryPath = [[dirs objectAtIndex:0] retain];
     }
     
-	return directoryPath;
+	return [directoryPath stringByAppendingPathComponent:NOTBACKUPDIR];
 }
 
 - (BOOL)prefersStatusBarHidden

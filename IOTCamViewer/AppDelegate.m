@@ -83,7 +83,7 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
     if (nil == documentsPath) {
         
         NSArray* dirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        documentsPath = [[dirs objectAtIndex:0] retain];
+        documentsPath = [[[dirs objectAtIndex:0]stringByAppendingPathComponent:NOTBACKUPDIR] retain];
     }
     
     return [documentsPath stringByAppendingPathComponent:relativePath];
@@ -317,7 +317,24 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
          
     [self openDatabase];
     [self createTable];
-         
+    
+    //迁移图片／录像Statrt
+    FMResultSet *rs = [database executeQuery:@"SELECT * FROM snapshot"];
+    NSFileManager *fileManager=[NSFileManager defaultManager];
+    NSArray *documentsPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *rootDocPath=[documentsPaths objectAtIndex:0];
+    while([rs next]) {
+        NSString *filePath = [rs stringForColumn:@"file_path"];
+        NSLog(@"%@", filePath);
+        NSString *newFullPath=[AppDelegate pathForDocumentsResource:filePath];
+        NSString *oldFullPath=[rootDocPath stringByAppendingPathComponent:filePath];
+        if([fileManager fileExistsAtPath:oldFullPath]){
+            [fileManager moveItemAtPath:oldFullPath toPath:newFullPath error:nil];
+        }
+    }
+    [rs close];
+    //迁移图片／录像END
+    
     //注册推送通知
     if([[[UIDevice currentDevice]systemVersion] floatValue]>=8.0f){
         [[UIApplication sharedApplication]registerForRemoteNotifications];
@@ -512,12 +529,45 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
 {
 }
 
+#pragma mark - 设置文件夹不被备份
+- (BOOL)addSkipBackupAttributeToItemAtPath:(NSString *)filePathString
+{
+    NSURL* URL= [NSURL fileURLWithPath: filePathString];
+    assert([[NSFileManager defaultManager] fileExistsAtPath: [URL path]]);
+    
+    NSError *error = nil;
+    BOOL success = [URL setResourceValue: [NSNumber numberWithBool: YES]
+                                  forKey: NSURLIsExcludedFromBackupKey error: &error];
+    if(!success){
+        NSLog(@"Error excluding %@ from backup %@", [URL lastPathComponent], error);
+    }
+    return success;
+}
+
 #pragma mark - SQLite Methods
 
 - (void)openDatabase 
 {    
     NSArray *documentsPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *databaseFilePath = [[documentsPaths objectAtIndex:0] stringByAppendingPathComponent:@"database.sqlite"];
+    
+    //设置子目录，这些目录标记为不备份
+    NSString *path=[documentsPaths objectAtIndex:0];
+    NSString *dbPath=[path stringByAppendingPathComponent:NOTBACKUPDIR];
+    //检查目录是否存在
+    NSFileManager *fileManager=[NSFileManager defaultManager];
+    if(![fileManager fileExistsAtPath:dbPath])
+    {
+        [fileManager createDirectoryAtPath:dbPath withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+    [self addSkipBackupAttributeToItemAtPath:dbPath];
+    
+    NSString *oldDatabaseFilePath=[path stringByAppendingPathComponent:@"database.sqlite"];
+    NSString *databaseFilePath = [dbPath stringByAppendingPathComponent:@"database.sqlite"];
+    
+    //迁移数据库
+    if([fileManager fileExistsAtPath:oldDatabaseFilePath]){
+        [fileManager moveItemAtPath:oldDatabaseFilePath toPath:databaseFilePath error:nil];
+    }
     
     database = [[FMDatabase alloc] initWithPath:databaseFilePath];
     

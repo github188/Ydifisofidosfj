@@ -14,6 +14,7 @@
 #import "FMDatabasePool.h"
 #import "FMDatabaseQueue.h"
 #import "MyCamera.h"
+#define NOTBACKUPDIR  @"dotbackupdir"
 
 #define MAX_CAMERA_LIMIT 100
 

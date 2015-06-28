@@ -8,6 +8,7 @@
 
 #import "PhotoViewerViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "AppDelegate.h"
 
 
 #define SHARE_ACTION_SHEET_TAG  1
@@ -407,7 +408,7 @@
     if (nil == documentsPath) {
         
         NSArray* dirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        documentsPath = [[dirs objectAtIndex:0] retain];
+        documentsPath = [[[dirs objectAtIndex:0] stringByAppendingPathComponent:NOTBACKUPDIR] retain];
     }
     
     return [documentsPath stringByAppendingPathComponent:relativePath];

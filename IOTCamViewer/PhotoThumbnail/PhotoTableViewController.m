@@ -13,6 +13,7 @@
 #import "PhotoViewerViewController.h"
 #import "RecordFileViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "AppDelegate.h"
 
 
 @interface PhotoTableViewController()
@@ -98,7 +99,7 @@
     if (nil == documentsPath) {
         
         NSArray* dirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        documentsPath = [[dirs objectAtIndex:0] retain];
+        documentsPath = [[[dirs objectAtIndex:0] stringByAppendingPathComponent:NOTBACKUPDIR] retain];
     }
     
     return [documentsPath stringByAppendingPathComponent:relativePath];

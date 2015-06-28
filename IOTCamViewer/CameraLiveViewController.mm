@@ -338,7 +338,7 @@ extern unsigned int _getTickCount() {
     if (nil == documentsPath) {
         
         NSArray* dirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        documentsPath = [[dirs objectAtIndex:0] retain];
+        documentsPath = [[[dirs objectAtIndex:0] stringByAppendingPathComponent:NOTBACKUPDIR] retain];
     }
     
     return [documentsPath stringByAppendingPathComponent:relativePath];
@@ -359,7 +359,7 @@ extern unsigned int _getTickCount() {
 	if (!directoryPath) {
         
         NSArray* dirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        directoryPath = [[dirs objectAtIndex:0] retain];
+        directoryPath = [[[dirs objectAtIndex:0] stringByAppendingPathComponent:NOTBACKUPDIR] retain];
     }
 	return directoryPath;
 }
