@@ -1866,6 +1866,18 @@
 		069963CE1B2339A100F88461 /* f-Btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0EAB1ACAD71400448ACB /* f-Btn@2x.png */; };
 		069963CF1B2339A100F88461 /* f+Btn_Click@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0EA61ACAD6F300448ACB /* f+Btn_Click@2x.png */; };
 		069963D01B2339A100F88461 /* f+Btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0EA71ACAD6F300448ACB /* f+Btn@2x.png */; };
+		069B73121B3FAF12007CDA60 /* AddWithApCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 068879311ABE18B70017A41A /* AddWithApCameraController.m */; };
+		069B73131B3FAF2E007CDA60 /* AddWithApCameraController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 068879321ABE18B70017A41A /* AddWithApCameraController.xib */; };
+		069B73141B3FAF44007CDA60 /* AddWithApCamera1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0688793D1ABE204E0017A41A /* AddWithApCamera1Controller.m */; };
+		069B73151B3FAF44007CDA60 /* AddWithApCamera1Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0688793E1ABE204E0017A41A /* AddWithApCamera1Controller.xib */; };
+		069B73161B3FAF54007CDA60 /* libHISmartWifi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0688795B1ABEAE230017A41A /* libHISmartWifi.a */; };
+		069B73171B3FAF70007CDA60 /* easyn.strings in Resources */ = {isa = PBXBuildFile; fileRef = 068879391ABE1B900017A41A /* easyn.strings */; };
+		069B73181B3FAF92007CDA60 /* remeberpsd1.png in Resources */ = {isa = PBXBuildFile; fileRef = 06B219811ADD4D51005E3A2B /* remeberpsd1.png */; };
+		069B73191B3FAF92007CDA60 /* remeberpsd2.png in Resources */ = {isa = PBXBuildFile; fileRef = 06B219821ADD4D51005E3A2B /* remeberpsd2.png */; };
+		069B731A1B3FAF9C007CDA60 /* button_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0E9F1ACACE8B00448ACB /* button_bg@2x.png */; };
+		069B731B1B3FAFA4007CDA60 /* button_click@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0EA01ACACE8B00448ACB /* button_click@2x.png */; };
+		069B731C1B3FB088007CDA60 /* AddWithApCamera2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0688794C1ABE2C4D0017A41A /* AddWithApCamera2Controller.m */; };
+		069B731D1B3FB099007CDA60 /* AddWithApCamera2Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0688794D1ABE2C4D0017A41A /* AddWithApCamera2Controller.xib */; };
 		069C72F21B2075B500D02130 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 069C72F41B2075B500D02130 /* InfoPlist.strings */; };
 		069D501D1B33891000B2E083 /* page1_en~ipad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 069D50191B33891000B2E083 /* page1_en~ipad.jpg */; };
 		069D501E1B33891000B2E083 /* page2_en~ipad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 069D501A1B33891000B2E083 /* page2_en~ipad.jpg */; };
@@ -5368,6 +5380,7 @@
 				069EFB371B1207D00024CB5A /* AudioToolbox.framework in Frameworks */,
 				069EFB381B1207D00024CB5A /* libsqlite3.dylib in Frameworks */,
 				069EFB391B1207D00024CB5A /* VideoToolbox.framework in Frameworks */,
+				069B73161B3FAF54007CDA60 /* libHISmartWifi.a in Frameworks */,
 				069EFB3A1B1207D00024CB5A /* CoreFoundation.framework in Frameworks */,
 				069EFB3B1B1207D00024CB5A /* OpenGLES.framework in Frameworks */,
 				069EFB3C1B1207D00024CB5A /* QuartzCore.framework in Frameworks */,
@@ -8571,6 +8584,7 @@
 				069EF9C61B1207D00024CB5A /* CameraListCell.xib in Resources */,
 				069EF9C81B1207D00024CB5A /* ceo_record.png in Resources */,
 				069EF9C91B1207D00024CB5A /* add_wifi2@2x.png in Resources */,
+				069B731A1B3FAF9C007CDA60 /* button_bg@2x.png in Resources */,
 				069EFB981B1209940024CB5A /* moreset.png in Resources */,
 				069EF9CA1B1207D00024CB5A /* ceo_rcplay_click_h.png in Resources */,
 				069D504E1B3845AC00B2E083 /* more_event~ipad.png in Resources */,
@@ -8587,6 +8601,7 @@
 				069EF9D41B1207D00024CB5A /* camera.png in Resources */,
 				069EF9D51B1207D00024CB5A /* moreset_list1@2x.png in Resources */,
 				069EF9D61B1207D00024CB5A /* onlinebar.png in Resources */,
+				069B73171B3FAF70007CDA60 /* easyn.strings in Resources */,
 				069EFBAC1B121A7B0024CB5A /* Localizable.strings in Resources */,
 				069EF9D71B1207D00024CB5A /* leo_speaker_off_disable.png in Resources */,
 				069EF9D81B1207D00024CB5A /* camera@2x.png in Resources */,
@@ -8657,6 +8672,8 @@
 				069EFA181B1207D00024CB5A /* add_wifinext@2x.png in Resources */,
 				069EFA191B1207D00024CB5A /* popoverArrowUpSimple.png in Resources */,
 				069EFA1A1B1207D00024CB5A /* leo_qvga@2x.png in Resources */,
+				069B73151B3FAF44007CDA60 /* AddWithApCamera1Controller.xib in Resources */,
+				069B73191B3FAF92007CDA60 /* remeberpsd2.png in Resources */,
 				069EFA1B1B1207D00024CB5A /* cam_back.png in Resources */,
 				069EFA1C1B1207D00024CB5A /* popoverBgSimple.png in Resources */,
 				069EFA1E1B1207D00024CB5A /* popoverArrowDown.png in Resources */,
@@ -8693,6 +8710,7 @@
 				069EFA3A1B1207D00024CB5A /* toolinfo_bk.png in Resources */,
 				069EFA3B1B1207D00024CB5A /* popoverArrowRight@2x.png in Resources */,
 				069EFA3C1B1207D00024CB5A /* qualitylist.png in Resources */,
+				069B73131B3FAF2E007CDA60 /* AddWithApCameraController.xib in Resources */,
 				069EFA3D1B1207D00024CB5A /* add_wifi3@2x.png in Resources */,
 				069EFA3E1B1207D00024CB5A /* login_btn@2x.png in Resources */,
 				069EFA401B1207D00024CB5A /* add_wifi3_bk.png in Resources */,
@@ -8769,6 +8787,7 @@
 				069EFA861B1207D00024CB5A /* leo_mirror_ud_clicked@2x.png in Resources */,
 				069EFA881B1207D00024CB5A /* more@2x.png in Resources */,
 				069EFA891B1207D00024CB5A /* ceo_rcplay.png in Resources */,
+				069B731B1B3FAFA4007CDA60 /* button_click@2x.png in Resources */,
 				069EFA8A1B1207D00024CB5A /* drop_refresh_clicked.png in Resources */,
 				069EFA8B1B1207D00024CB5A /* call_on_clicked@2x.png in Resources */,
 				069EFA8C1B1207D00024CB5A /* more_photo_clicked@2x.png in Resources */,
@@ -8885,6 +8904,7 @@
 				069EFAF51B1207D00024CB5A /* africa.csv in Resources */,
 				069EFAF61B1207D00024CB5A /* refresh_clicked.png in Resources */,
 				069EFAF71B1207D00024CB5A /* ceo_set@2x.png in Resources */,
+				069B73181B3FAF92007CDA60 /* remeberpsd1.png in Resources */,
 				069EFAF81B1207D00024CB5A /* pic_play_MarkMan.png in Resources */,
 				069EFAF91B1207D00024CB5A /* oceania.csv in Resources */,
 				069EFAFA1B1207D00024CB5A /* Icon-Small@2x.png in Resources */,
@@ -8917,6 +8937,7 @@
 				069EFB141B1207D00024CB5A /* leo_mirror_rl.png in Resources */,
 				069EFB151B1207D00024CB5A /* add_wifinext_clicked@2x.png in Resources */,
 				069EFB161B1207D00024CB5A /* add_infobk.png in Resources */,
+				069B731D1B3FB099007CDA60 /* AddWithApCamera2Controller.xib in Resources */,
 				069EFB171B1207D00024CB5A /* leo_snapshot.png in Resources */,
 				069EFB181B1207D00024CB5A /* moreset_list1.png in Resources */,
 				069EFB191B1207D00024CB5A /* leo_qvga_disable.png in Resources */,
@@ -10675,6 +10696,7 @@
 				069EF9151B1207D00024CB5A /* UITabBarController+TabBar.m in Sources */,
 				069EF9161B1207D00024CB5A /* UIView+View.m in Sources */,
 				069EF9171B1207D00024CB5A /* AddCameraDetailController.mm in Sources */,
+				069B731C1B3FB088007CDA60 /* AddWithApCamera2Controller.m in Sources */,
 				069EF9181B1207D00024CB5A /* UITableView+TableView.m in Sources */,
 				069EF9191B1207D00024CB5A /* UIDevice+Device.m in Sources */,
 				069EF91A1B1207D00024CB5A /* LANSearchController.m in Sources */,
@@ -10714,12 +10736,14 @@
 				069EF93C1B1207D00024CB5A /* UIView+Hierarchy.m in Sources */,
 				069EF93D1B1207D00024CB5A /* IQKeyboardManager.m in Sources */,
 				069EF93E1B1207D00024CB5A /* IQToolbar.m in Sources */,
+				069B73121B3FAF12007CDA60 /* AddWithApCameraController.m in Sources */,
 				069EF93F1B1207D00024CB5A /* MoreVC.m in Sources */,
 				069EF9401B1207D00024CB5A /* CameraPlaybackController.mm in Sources */,
 				069EF9411B1207D00024CB5A /* VideoFlipController.m in Sources */,
 				069EF9421B1207D00024CB5A /* EnvironmentModeController.m in Sources */,
 				069EF9431B1207D00024CB5A /* AppGuidViewController.m in Sources */,
 				069EF9441B1207D00024CB5A /* NSNumber+Mathematica.m in Sources */,
+				069B73141B3FAF44007CDA60 /* AddWithApCamera1Controller.m in Sources */,
 				069EF9451B1207D00024CB5A /* UIAlertView+MKBlockAdditions.m in Sources */,
 				069EF9461B1207D00024CB5A /* UINavigationController+Navigation.m in Sources */,
 				069EF9471B1207D00024CB5A /* UIColor+Colors.m in Sources */,
@@ -11970,7 +11994,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Guanwen Chen (VW3274J3M3)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -11991,6 +12015,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/IOTCamViewer/lib/Debug-iphoneos\"",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = (
@@ -11998,7 +12023,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "IPCAM P";
-				PROVISIONING_PROFILE = "da115d26-1864-4805-b4f0-220d6c0d97d5";
+				PROVISIONING_PROFILE = "95436221-f204-422b-a822-cbd3e86cdc52";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -12012,7 +12037,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Guanwen Chen (VW3274J3M3)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -12033,6 +12058,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/IOTCamViewer/lib/Release-iphoneos\"",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = (
@@ -12041,7 +12067,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "IPCAM P";
-				PROVISIONING_PROFILE = "da115d26-1864-4805-b4f0-220d6c0d97d5";
+				PROVISIONING_PROFILE = "95436221-f204-422b-a822-cbd3e86cdc52";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -12055,7 +12081,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Guanwen Chen (VW3274J3M3)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -12076,6 +12102,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/IOTCamViewer/lib/Release-iphoneos\"",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = (
@@ -12084,7 +12111,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "IPCAM P";
-				PROVISIONING_PROFILE = "da115d26-1864-4805-b4f0-220d6c0d97d5";
+				PROVISIONING_PROFILE = "95436221-f204-422b-a822-cbd3e86cdc52";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -12098,7 +12125,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Guanwen Chen (VW3274J3M3)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -12119,6 +12146,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/IOTCamViewer/lib/Release-iphoneos\"",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = (
@@ -12126,7 +12154,7 @@
 					"-DP2PCAMLIVE",
 				);
 				PRODUCT_NAME = "IPCAM P";
-				PROVISIONING_PROFILE = "da115d26-1864-4805-b4f0-220d6c0d97d5";
+				PROVISIONING_PROFILE = "95436221-f204-422b-a822-cbd3e86cdc52";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;

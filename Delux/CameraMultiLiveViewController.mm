@@ -1383,7 +1383,8 @@ extern unsigned int _getTickCount() ;
         NSNumber *channel = [arrs objectAtIndex:2];
         
         //UIImageOrientationLeft UIImageOrientationUp UIImageOrientationRight
-        UIImage *img = [UIImage imageWithCIImage:ciImage scale:0.8 orientation:UIImageOrientationUp];
+        //UIImage *img = [UIImage imageWithCIImage:ciImage scale:0.8 orientation:UIImageOrientationUp];
+        UIImage *img = [UIImage imageWithCIImage:ciImage scale:[[UIScreen mainScreen] scale] orientation:UIImageOrientationUp];
 		
         for (int i=0;i<DEF_SplitViewNum;i++) {
             MyCamera *cameraIdx = [cameraArray objectAtIndex:i];

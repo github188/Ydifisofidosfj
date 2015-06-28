@@ -18,7 +18,7 @@
 #import "AddCameraController.h"
 #import "CheckViewController.h"
 #import "CameraMultiLiveViewController.h"
-#if defined(EasynPTarget) || defined(QTAIDT)
+#if defined(EasynPTarget) || defined(QTAIDT) || defined(IPCAMP)
 #import "AddWithApCameraController.h"
 #endif
 #if defined(BayitCam)
@@ -103,7 +103,7 @@
     
     
     
-#if defined(EasynPTarget) || defined(QTAIDT)
+#if defined(EasynPTarget) || defined(QTAIDT) || defined(IPCAMP)
     AddWithApCameraController *addController=[[AddWithApCameraController alloc]initWithNibName:@"AddWithApCameraController" bundle:nil];
     [self.navigationController pushViewController:addController animated:YES];
     [addController release];
