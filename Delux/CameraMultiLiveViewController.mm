@@ -853,7 +853,7 @@ extern unsigned int _getTickCount() ;
     CGFloat itemAllShowW=self.view.frame.size.width;
     CGFloat itemAllShowH=(itemH+itemStatusH)*2;
     
-    self.vdo1.frame=CGRectMake(0, self.view.frame.size.height/2-itemAllShowH/2, itemW, itemH);
+    self.vdo1.frame=CGRectMake(0, self.view.frame.size.height/2-itemAllShowH/2+self.view.frame.origin.y, itemW, itemH);
     statusBar1.frame=CGRectMake(0, self.vdo1.frame.origin.y+self.vdo1.frame.size.height, itemW, itemStatusH);
     self.vdo2.frame=CGRectMake(self.vdo1.frame.origin.x+itemMarginW+itemW, self.vdo1.frame.origin.y, itemW, itemH);
     statusBar2.frame=CGRectMake(statusBar1.frame.origin.x+itemW+itemMarginW, statusBar1.frame.origin.y, itemW, itemStatusH);
