@@ -242,7 +242,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="160" height="16"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
-                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="offline.png" id="xON-hU-3fC" userLabel="Image View - online 1">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="offline.png" id="xON-hU-3fC" userLabel="Image View - online 1">
                             <rect key="frame" x="3" y="6" width="10" height="10"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
@@ -253,7 +253,7 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UuG-jL-fBz" userLabel="Label Status 1">
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UuG-jL-fBz" userLabel="Label Status 1">
                             <rect key="frame" x="85" y="3" width="70" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -271,7 +271,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="160" height="16"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
-                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="offline.png" id="pgV-v9-DSi" userLabel="Image View - online 2">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="offline.png" id="pgV-v9-DSi" userLabel="Image View - online 2">
                             <rect key="frame" x="3" y="6" width="10" height="10"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
@@ -282,7 +282,7 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="v8T-Ep-YMP" userLabel="Label Status 2">
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="v8T-Ep-YMP" userLabel="Label Status 2">
                             <rect key="frame" x="85" y="3" width="70" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -300,7 +300,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="160" height="16"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
-                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="offline.png" id="qI5-ow-KNE" userLabel="Image View - online 3">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="offline.png" id="qI5-ow-KNE" userLabel="Image View - online 3">
                             <rect key="frame" x="3" y="6" width="10" height="10"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
@@ -311,7 +311,7 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6ha-uQ-qQx" userLabel="Label Status 3">
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6ha-uQ-qQx" userLabel="Label Status 3">
                             <rect key="frame" x="85" y="3" width="70" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -329,7 +329,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="160" height="16"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
-                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="offline.png" id="cx8-LI-HpN" userLabel="Image View - online 4">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="offline.png" id="cx8-LI-HpN" userLabel="Image View - online 4">
                             <rect key="frame" x="3" y="6" width="10" height="10"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
@@ -340,7 +340,7 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="53V-qw-Fge" userLabel="Label Status 4">
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="53V-qw-Fge" userLabel="Label Status 4">
                             <rect key="frame" x="85" y="3" width="70" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -566,7 +566,7 @@
         <image name="more_set_clicked.png" width="53" height="53"/>
         <image name="morefunction.png" width="52" height="49"/>
         <image name="morefunction_clicked.png" width="52" height="49"/>
-        <image name="moreset_bk.png" width="306" height="99"/>
+        <image name="moreset_bk.png" width="300" height="91"/>
         <image name="moreset_list1.png" width="143" height="34"/>
         <image name="moreset_list1_clicked.png" width="143" height="34"/>
         <image name="moreset_list2.png" width="143" height="34"/>

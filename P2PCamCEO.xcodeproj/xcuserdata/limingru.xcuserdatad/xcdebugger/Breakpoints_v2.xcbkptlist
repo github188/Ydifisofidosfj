@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOTCamViewer/EditCameraAdvancedController.m"
-            timestampString = "452351832.070482"
+            timestampString = "457280230.955175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1356"
@@ -122,12 +122,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOTCamViewer/EditCameraAdvancedController.m"
-            timestampString = "457164140.614068"
+            timestampString = "457280230.955175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1436"
             endingLineNumber = "1436"
-            landmarkName = "-timeoutSetTimeZoneResp:"
+            landmarkName = "-timeOutGetListWifiAPResp:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -240,22 +240,6 @@
             startingLineNumber = "231"
             endingLineNumber = "231"
             landmarkName = "-doMapping:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Delux/CameraMultiLiveViewController.mm"
-            timestampString = "457163210.091167"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2014"
-            endingLineNumber = "2014"
-            landmarkName = "-camera:didAddwithName:password:syncOnCloud:addToCloud:addFromCloud:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
