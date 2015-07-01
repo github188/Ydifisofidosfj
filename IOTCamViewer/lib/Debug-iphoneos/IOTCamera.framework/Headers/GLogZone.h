@@ -27,6 +27,7 @@ extern unsigned int g_dwGLogZoneSeed;
 #define tPinchZoom_MSK			(1<< 11)
 #define tUserDefaults_MSK		(1<< 12)
 #define tForeBackground_MSK		(1<< 13)
+#define tTimeStamp_MSK			(1<< 14)
 
 
 #define tAll					(1)
@@ -44,6 +45,7 @@ extern unsigned int g_dwGLogZoneSeed;
 #define tPinchZoom				(g_dwGLogZoneSeed & tPinchZoom_MSK)
 #define tUserDefaults			(g_dwGLogZoneSeed & tUserDefaults_MSK)
 #define tForeBackground			(g_dwGLogZoneSeed & tForeBackground_MSK)
+#define tTimeStamp				(g_dwGLogZoneSeed & tTimeStamp_MSK)
 
 
 #endif

@@ -1,8 +1,8 @@
 /*
  * AVIOCTRLDEFs.h
  *	Define AVIOCTRL Message Type and Context
- *  Created on: 2011-08-12
- *  Author: TUTK
+ *  Created on: 2015-03-13
+ *  Author: Gavin Chang @TUTK
  *
  */
 
@@ -186,7 +186,72 @@ typedef enum
     //easy set wifi
     IOTYPE_USER_IPCAM_SET_EZWIFI_REQ            = 0x512,
     IOTYPE_USER_IPCAM_SET_EZWIFI_RESP           = 0x513,
-    
+	
+	////////////////////////////////////////////////////////////////////////////////
+	// LITEON project function
+	//
+	
+	IOTYPE_USER_IPCAM_GET_CAMERAPOWER_REQ		= 0x0701,	// gather the power of camera
+	IOTYPE_USER_IPCAM_GET_CAMERAPOWER_RESP		= 0x0702,
+	
+	IOTYPE_USER_IPCAM_SET_CAMERAOFF_REQ			= 0x0703,	// power off camera
+	IOTYPE_USER_IPCAM_SET_CAMERAOFF_RESP		= 0x0704,
+	
+	IOTYPE_USER_IPCAM_GET_PHOTOLIST_REQ			= 0x0705,	// get pictures stored on camera SD card
+	IOTYPE_USER_IPCAM_GET_PHOTOLIST_RESP		= 0x0706,
+	
+	IOTYPE_USER_IPCAM_SET_PHOTODEL_REQ			= 0x0707,	// delete the picture stored on camera SD card with specific file name
+	IOTYPE_USER_IPCAM_SET_PHOTODEL_RESP			= 0x0708,
+	
+	IOTYPE_USER_IPCAM_GET_RECORDLENGTH_REQ		= 0x0709,	// get the configuration value of record period time
+	IOTYPE_USER_IPCAM_GET_RECORDLENGTH_RESP		= 0x070A,
+	IOTYPE_USER_IPCAM_SET_RECORDLENGTH_REQ		= 0x070B,	// set the configuration value of record period time
+	IOTYPE_USER_IPCAM_SET_RECORDLENGTH_RESP		= 0x070C,
+	
+	IOTYPE_USER_IPCAM_GET_IMAGEQUALITY_REQ		= 0x070D,	// get image quality
+	IOTYPE_USER_IPCAM_GET_IMAGEQUALITY_RESP		= 0x070E,
+	IOTYPE_USER_IPCAM_SET_IMAGEQUALITY_REQ		= 0x070F,	// set image quality
+	IOTYPE_USER_IPCAM_SET_IMAGEQUALITY_RESP		= 0x0710,
+	
+	IOTYPE_USER_IPCAM_GET_RESOLUTION_REQ		= 0x0711,	// get resolution
+	IOTYPE_USER_IPCAM_GET_RESOLUTION_RESP		= 0x0712,
+	IOTYPE_USER_IPCAM_SET_RESOLUTION_REQ		= 0x0713,	// set resolution
+	IOTYPE_USER_IPCAM_SET_RESOLUTION_RESP		= 0x0714,
+	
+	IOTYPE_USER_IPCAM_SET_BRIGHTNESS_REQ		= 0x0715,	// set brightness
+	IOTYPE_USER_IPCAM_SET_BRIGHTNESS_RESP		= 0x0716,
+
+	IOTYPE_USER_IPCAM_SET_SHARPNESS_REQ			= 0x0717,	// set sharp
+	IOTYPE_USER_IPCAM_SET_SHARPNESS_RESP		= 0x0718,
+
+	IOTYPE_USER_IPCAM_SET_CONTRAST_REQ			= 0x0719,	// set contrast
+	IOTYPE_USER_IPCAM_SET_CONTRAST_RESP			= 0x071A,
+
+	IOTYPE_USER_IPCAM_SET_WHITEBALANCE_REQ		= 0x071B,	// set white balance
+	IOTYPE_USER_IPCAM_SET_WHITEBALANCE_RESP		= 0x071C,
+
+	IOTYPE_USER_IPCAM_GET_FWVERSION_REQ			= 0x071D,	// get firmware version
+	IOTYPE_USER_IPCAM_GET_FWVERSION_RESP		= 0x071E,
+
+	IOTYPE_USER_IPCAM_SET_CHANNELID_REQ			= 0x071F,	// set channel id for FW upload to camera via AvApis
+	IOTYPE_USER_IPCAM_SET_CHANNELID_RESP		= 0x0720,
+
+	IOTYPE_USER_IPCAM_GET_REPLACEFW_REQ			= 0x0721,	// query the progress of FW installation
+	IOTYPE_USER_IPCAM_GET_REPLACEFW_RESP		= 0x0722,
+
+	IOTYPE_USER_IPCAM_SET_LOOPRECORD_REQ		= 0x0723,	// set camera recording loop mode
+	IOTYPE_USER_IPCAM_SET_LOOPRECORD_RESP		= 0x0724,
+
+	IOTYPE_USER_IPCAM_SET_FORMATSD_REQ			= 0x0725,	// format SD card on camera
+	IOTYPE_USER_IPCAM_SET_FORMATSD_RESP			= 0x0726,
+	
+	IOTYPE_USER_IPCAM_GET_DEVINFO_REQ			= 0x0727,	// get device info.
+	IOTYPE_USER_IPCAM_GET_DEVINFO_RESP			= 0x0728,
+	
+	IOTYPE_USER_IPCAM_SET_WIFIEDIT_REQ			= 0x0729,	// set wifi mode
+	IOTYPE_USER_IPCAM_SET_WIFIEDIT_RESP			= 0x072A,
+	
+	////////////////////////////////////////////////////////////////////////////////
 
 	IOTYPE_USER_IPCAM_PTZ_COMMAND				= 0x1001,	// P2P PTZ Command Msg
 	
@@ -1133,5 +1198,348 @@ typedef struct
 	unsigned int channel;						// camera index
     char szLocalIP[32];                         // device local ip
 }SMsgAVIoctrlGetLocalIPResp;
+
+
+////////////////////////////////////////////////////////////////////////////////
+// LITEON project function
+//
+//IOTYPE_USER_IPCAM_GET_CAMERAPOWER_REQ		= 0x0701,	// gather the power of camera
+typedef struct
+{
+	unsigned int	action;				// 1:send
+	unsigned char	reserved[4];
+	
+} SMsgAVIoctrlCameraPowerReq;
+
+//IOTYPE_USER_IPCAM_GET_CAMERAPOWER_RESP		= 0x0702,
+typedef struct
+{
+	unsigned int	result;             // 回傳值 0~100 ;  -1:充電中
+										// 0~100（共5格電量: 0~20%1格，21~40兩格，以此類推)
+	
+}SMsgAVIoctrlCameraPowerResp;
+
+//IOTYPE_USER_IPCAM_SET_CAMERAOFF_REQ			= 0x0703,
+typedef struct
+{
+	unsigned int	action;				// 0:Off
+	unsigned char	reserved[4];
+	
+} SMsgAVIoctrlCameraOffReq;
+
+//IOTYPE_USER_IPCAM_SET_CAMERAOFF_RESP		= 0x0704,
+typedef struct
+{
+	unsigned int result;				// 回傳值 0: success; otherwise: failed.
+	
+} SMsgAVIoctrlCameraOffResp;
+
+//IOTYPE_USER_IPCAM_GET_PHOTOLIST_REQ			= 0x0705,	// get pictures stored on camera SD card
+typedef struct
+{
+	unsigned int	nStartIdx;			// 起始index
+	unsigned int	channel;			// AvServer Index
+	
+} SMsgAVIoctrlPhotoListReq;
+
+//IOTYPE_USER_IPCAM_GET_PHOTOLIST_RESP		= 0x0706,
+#define MAX_NUM 10
+typedef struct
+{
+	unsigned char	name[64];
+	
+} Fileinfo;
+
+typedef struct
+{
+	unsigned int	total_number;           // total_number總共幾筆
+	unsigned int	nCount;	                // 每包長度,最多10筆
+	unsigned int	result;					// result : 0 還不是最後一包, 1 已經是最後一包
+	Fileinfo		Filename[MAX_NUM];
+	
+} SMsgAVIoctrlPhotoListResp;
+
+//IOTYPE_USER_IPCAM_SET_PHOTODEL_REQ			= 0x0707,	// delete the picture stored on camera SD card with specific file name
+typedef struct
+{
+	unsigned int	action;				// 0:del
+	unsigned char	name[64];
+	unsigned char	reserved[4];
+	
+} SMsgAVIoctrlPhotoDELReq;
+
+//IOTYPE_USER_IPCAM_SET_PHOTODEL_RESP			= 0x0708,
+typedef struct
+{
+	unsigned int	result;				// 回傳值  0: success; otherwise: failed.
+	
+} SMsgAVIoctrlPhotoDELResp;
+
+//IOTYPE_USER_IPCAM_GET_RECORDLENGTH_REQ		= 0x0709,	// get the configuration value of record period time
+typedef struct
+{
+	unsigned int	action;				// 1:截取錄影長度
+	unsigned char	reserved[4];
+	
+} SMsgAVIoctrlGetRecordLengthReq;
+
+//IOTYPE_USER_IPCAM_GET_RECORDLENGTH_RESP		= 0x070A,
+typedef struct
+{
+	unsigned int	result;          	// 回傳錄影長度
+	
+} SMsgAVIoctrlGetRecordLengthResp;
+
+//IOTYPE_USER_IPCAM_SET_RECORDLENGTH_REQ		= 0x070B,	// set the configuration value of record period time
+typedef struct
+{
+	unsigned int	action;				//  1, 2, 5, 20 設定錄影長度  (單位分鐘)
+	unsigned char	reserved[4];
+	
+} SMsgAVIoctrlSetRecordLengthReq;
+
+//IOTYPE_USER_IPCAM_SET_RECORDLENGTH_RESP		= 0x070C,
+typedef struct
+{
+	unsigned int	result;				// 回傳值  0: success; otherwise: failed.
+	
+} SMsgAVIoctrlSetRecordLengthResp;
+
+//IOTYPE_USER_IPCAM_GET_IMAGEQUALITY_REQ		= 0x070D,	// get image quality
+typedef struct
+{
+	unsigned int	action;				// 1:截取錄影長度
+	unsigned char	reserved[4];
+	
+} SMsgAVIoctrlGetImageQualityReq;
+
+//IOTYPE_USER_IPCAM_GET_IMAGEQUALITY_RESP		= 0x070E,
+typedef struct
+{
+	float			result;				// 8.0, 2.0, 1.0     (Mbits)
+	
+} SMsgAVIoctrlGetImageQualityResp;
+
+//IOTYPE_USER_IPCAM_SET_IMAGEQUALITY_REQ		= 0x070F,	// set image quality
+typedef struct
+{
+	float			action;				// 8.0, 2.0, 1.0     (Mbits)
+	unsigned char	reserved[4];
+	
+}SMsgAVIoctrlSetImageQualityReq;
+
+//IOTYPE_USER_IPCAM_SET_IMAGEQUALITY_RESP		= 0x0710,
+typedef struct
+{
+	unsigned int	result;				// 回傳值  0: success; otherwise: failed.
+	
+} SMsgAVIoctrlSetImageQualityResp;
+
+//IOTYPE_USER_IPCAM_GET_RESOLUTION_REQ		= 0x0711,	// get resolution
+typedef struct
+{
+	unsigned int	action;				// 1:截取解析度
+	unsigned char	reserved[4];
+	
+} SMsgAVIoctrlGetResolutlonReq;
+
+//IOTYPE_USER_IPCAM_GET_RESOLUTION_RESP		= 0x0712,
+typedef struct
+{
+	unsigned int	result;				// 回傳值  1, 2, 3
+	// 1:Preview 1080p@24fps H264 & SD 720p@30fps H264
+	// 2:Preview 720p@30ps H264 & SD 720p@30fsp H264
+	// 3:Preview 720p@30fps H264 & 1080p@24fps H264
+	
+} SMsgAVIoctrlGetResolutlonResp;
+
+//IOTYPE_USER_IPCAM_SET_RESOLUTION_REQ		= 0x0713,	// set resolution
+typedef struct
+{
+	unsigned int	action;				// 1, 2 ,3 設定解析度
+	// 1:Preview 1080p@24fps H264 & SD 720p@30fps H264
+	// 2:Preview 720p@30ps H264 & SD 720p@30fsp H264
+	// 3:Preview 720p@30fps H264 & 1080p@24fps H264    unsigned char reserved[4];
+	
+} SMsgAVIoctrlSetResolutlonReq;
+
+//IOTYPE_USER_IPCAM_SET_RESOLUTION_RESP		= 0x0713,
+typedef struct
+{
+	unsigned int	result;				// 回傳值  0: success; otherwise: failed.
+	
+} SMsgAVIoctrlSetResolutlonResp;
+
+//IOTYPE_USER_IPCAM_SET_BRIGHTNESS_REQ		= 0x0715,	// set brightness
+typedef struct
+{
+	unsigned int	action;				// 給值-128 到 +128 之間
+	unsigned char	reserved[4];
+	
+} SMsgAVIoctrlSetBrightnessReq;
+
+//IOTYPE_USER_IPCAM_SET_BRIGHTNESS_RESP		= 0x0716,
+typedef struct
+{
+	unsigned int	result;				// 回傳值  0: success; otherwise: failed.
+	
+} SMsgAVIoctrlSetBrightnessResp;
+
+//IOTYPE_USER_IPCAM_SET_SHARPNESS_REQ			= 0x0717,	// set sharp
+typedef struct
+{
+	unsigned int	action;				// 給值-128 到 +128 之間
+	unsigned char	reserved[4];
+	
+}SMsgAVIoctrlSetSharpnessReq;
+
+//IOTYPE_USER_IPCAM_SET_SHARPNESS_RESP		= 0x0718,
+typedef struct
+{
+	unsigned int	result;				// 回傳值  0: success; otherwise: failed.
+	
+} SMsgAVIoctrlSetSharpnessResp;
+
+//IOTYPE_USER_IPCAM_SET_CONTRAST_REQ			= 0x0719,	// set contrast
+typedef struct
+{
+	unsigned int	action;				// 給值-128 到 +128 之間
+	unsigned char	reserved[4];
+	
+} SMsgAVIoctrlSetContrastReq;
+
+//IOTYPE_USER_IPCAM_SET_CONTRAST_RESP			= 0x071A,
+typedef struct
+{
+	unsigned int	result;				// 回傳值  0: success; otherwise: failed.
+	
+} SMsgAVIoctrlSetContrastResp;
+
+//IOTYPE_USER_IPCAM_SET_WHITEBALANCE_REQ			= 0x071B,	// set white balance
+typedef struct
+{
+	unsigned int	action;				// 1:AUTO ; 2:DAYLIGHT ; 3:CLOUDY ; 4:FLUORESC
+	unsigned char	reserved[4];
+	
+} SMsgAVIoctrlSetWhitebalanceReq;
+
+//IOTYPE_USER_IPCAM_SET_WHITEBALANCE_RESP			= 0x071C,
+typedef struct
+{
+	unsigned int	result;				// 回傳值  0: success; otherwise: failed.
+	
+} SMsgAVIoctrlSetWhitebalanceResp;
+
+//IOTYPE_USER_IPCAM_GET_FWVERSION_REQ			= 0x071D,	// get firmware version
+typedef struct
+{
+	unsigned int	action;				// 1:send
+	unsigned char	reserved[4];
+	
+} SMsgAVIoctrlGetFwVersionReq;
+
+//IOTYPE_USER_IPCAM_GET_FWVERSION_RESP		= 0x071E,
+typedef struct
+{
+	unsigned int	result;          	// 回版號 (參考flow step1)
+	
+} SMsgAVIoctrlGetFwVersionResp;
+
+//IOTYPE_USER_IPCAM_SET_CHANNELID_REQ			= 0x071F,	// set channel id for FW upload to camera via AvApis
+typedef struct
+{
+	unsigned int	CHANNEL;			// 傳送值1~32 , 先預定9. (請參考step3及AVAPI傳檔案流程)
+	
+} SMsgAVIoctrlSetChannelIDReq;
+
+//IOTYPE_USER_IPCAM_SET_CHANNELID_RESP		= 0x0720,
+typedef struct
+{
+	unsigned int	result;          	// 回傳值  0: success; otherwise: failed.
+	
+} SMsgAVIoctrlSetChannelIDResp;
+
+//IOTYPE_USER_IPCAM_GET_REPLACEFW_REQ			= 0x0721,	// set channel id for FW upload to camera via AvApis
+typedef struct
+{
+	unsigned int	action;				// 1:send     (參考step4)
+	
+} SMsgAVIoctrlSetReplaceFWReq;
+
+//IOTYPE_USER_IPCAM_GET_REPLACEFW_RESP		= 0x0722,
+typedef struct
+{
+	unsigned int	result;				// 回傳值  1-100%; otherwise: failed.       (參考step5)
+ 
+} SMsgAVIoctrlSetReplaceFWResp;
+
+//IOTYPE_USER_IPCAM_SET_LOOPRECORD_REQ		= 0x0723,	// set channel id for FW upload to camera via AvApis
+typedef struct
+{
+	unsigned int	action;				// 1:開,0:關
+	unsigned char	reserved[4];
+	
+} SMsgAVIoctrlSetLoopRecordReq;
+
+//IOTYPE_USER_IPCAM_SET_LOOPRECORD_RESP		= 0x0724,
+typedef struct
+{
+	unsigned int	result;				// 回傳值  0: success; otherwise: failed.
+	
+} SMsgAVIoctrlSetLoopRecordResp;
+
+//IOTYPE_USER_IPCAM_SET_FORMATSD_REQ			= 0x0725,	// format SD card on camera
+typedef struct
+{
+	unsigned int	action;				// 1:send
+	unsigned char	reserved[4];
+	
+} SMsgAVIoctrlSetFormatSDReq;
+
+//IOTYPE_USER_IPCAM_SET_FORMATSD_RESP			= 0x0726,
+typedef struct
+{
+	unsigned int	result;				// 回傳值  0: success; otherwise: failed.
+	
+} SMsgAVIoctrlSetFormatSDResp;
+
+//IOTYPE_USER_IPCAM_GET_DEVINFO_REQ			= 0x0727,	// get device info.
+typedef struct
+{
+	unsigned int	action;                                     // 1:send
+	unsigned char	reserved[4];
+	
+} SMsgAVIoctrlGetDevInfoReq;
+
+//IOTYPE_USER_IPCAM_GET_DEVINFO_RESP			= 0x0728,
+typedef struct
+{
+	unsigned char	model[16];         	// 型號
+	unsigned int	allspace;	// SD 全部空間
+	unsigned int	Available;	// SD 可用空間
+	unsigned char	ipaddress[16];	// IP 位置
+	unsigned char	gateway[16];	// Gateway
+	unsigned char	netmask[16];	// Net Mask
+	
+} SMsgAVIoctrlGetDevInfoResp;
+
+//IOTYPE_USER_IPCAM_SET_WIFIEDIT_REQ			= 0x0729,	// set wifi mode
+typedef struct
+{
+	unsigned int	action;                                     // 1:2.4G ; 2:5G ; 3:Auto
+	unsigned char	reserved[4];
+	
+} SMsgAVIoctrlSetWifiEditReq;
+
+//IOTYPE_USER_IPCAM_SET_WIFIEDIT_RESP			= 0x072A,
+typedef struct
+{
+	unsigned int	result;         // 回傳值  0: success; otherwise: failed.
+	
+} SMsgAVIoctrlSetWifiEditResp;
+
+
+
+////////////////////////////////////////////////////////////////////////////////
 
 #endif
