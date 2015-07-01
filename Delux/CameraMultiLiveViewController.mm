@@ -1018,6 +1018,10 @@ extern unsigned int _getTickCount() ;
 				cameraNameXX.font = [UIFont systemFontOfSize:12.0f];
 				cameraNameXX.textColor = [UIColor whiteColor];
 			}
+            UIImageView* cameraConnectXX = [marrImg_Connt objectAtIndex:i];
+            if( cameraConnectXX ) {
+                cameraConnectXX.hidden=NO;
+            }
 			
 			[self camera:tempCamera _didChangeChannelStatus:[(NSNumber*)[channelArray objectAtIndex:i] intValue] ChannelStatus:tempCamera.sessionState];
 
@@ -1041,6 +1045,7 @@ extern unsigned int _getTickCount() ;
 			}
 			UIImageView* cameraConnectXX = [marrImg_Connt objectAtIndex:i];
 			if( cameraConnectXX ) {
+                cameraConnectXX.hidden=YES;
 				cameraConnectXX.image = [UIImage imageNamed:@"offline"];
 			}
         }

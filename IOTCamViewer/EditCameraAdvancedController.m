@@ -1385,28 +1385,29 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 #pragma mark - TimeZoneChangedDelegate Methods
 - (void) onTimeZoneChanged:(NSString*)tszTimeZone tzGMTDiff_In_Mins:(int)nGMTDiff_In_Mins {
     
-	/*mIoCtrlData_SetTimeZoneBefore.cbSize = sizeof(mIoCtrlData_SetTimeZoneBefore);
-	mIoCtrlData_SetTimeZoneBefore.nIsSupportTimeZone = 1;
-	mIoCtrlData_SetTimeZoneBefore.nGMTDiff = camera.nGMTDiff;
-	strcpy( mIoCtrlData_SetTimeZoneBefore.szTimeZoneString, [camera.strTimeZone UTF8String] );*/
+    
+    /*mIoCtrlData_SetTimeZoneBefore.cbSize = sizeof(mIoCtrlData_SetTimeZoneBefore);
+     mIoCtrlData_SetTimeZoneBefore.nIsSupportTimeZone = 1;
+     mIoCtrlData_SetTimeZoneBefore.nGMTDiff = camera.nGMTDiff;
+     strcpy( mIoCtrlData_SetTimeZoneBefore.szTimeZoneString, [camera.strTimeZone UTF8String] );*/
     
     NSDate* now =  [NSDate date];
     long utcTime_now = (long)[now timeIntervalSince1970];
-	
+    
     SMsgAVIoctrlTimeZoneExt setTimeZone;
     setTimeZone.cbSize = sizeof(setTimeZone);
     setTimeZone.nIsSupportTimeZone = 1;
     setTimeZone.nGMTDiff = nGMTDiff_In_Mins;
     setTimeZone.local_utc_time = utcTime_now + nGMTDiff_In_Mins*60*60;
     strcpy( setTimeZone.szTimeZoneString, [tszTimeZone UTF8String] );
-     setTimeZone.dst_on = (summerTime)? 1 : 0;
+    setTimeZone.dst_on = (summerTime)? 1 : 0;
     
     NSLog( @"<<< recv IOTYPE_USER_IPCAM_SET_TIMEZONE_REQ_EXT\n\tnIsSupportTimeZone: %d\n\tnGMTDiff: %d\n\tszTimeZoneString: %s\n---- Rise timer ----", setTimeZone.nIsSupportTimeZone, setTimeZone.nGMTDiff, setTimeZone.szTimeZoneString );
     [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_SET_TIMEZONE_REQ_EXT Data:(char *)&setTimeZone DataSize:sizeof(setTimeZone)];
-	
-	isWaitingForSetTimeZoneResp = TRUE;
-	//timerTimeZoneTimeOut = [[NSTimer scheduledTimerWithTimeInterval:12.0 target:self selector:@selector(timeoutSetTimeZoneResp:) userInfo:nil repeats:NO] retain];
-
+    
+    isWaitingForSetTimeZoneResp = TRUE;
+    //timerTimeZoneTimeOut = [[NSTimer scheduledTimerWithTimeInterval:12.0 target:self selector:@selector(timeoutSetTimeZoneResp:) userInfo:nil repeats:NO] retain];
+    
     [self.tableView reloadData];
 }
 
