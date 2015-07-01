@@ -790,20 +790,20 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
         NSString *argsString = @"%@?cmd=reg_client&token=%@&appid=%@&dev=0&lang=%@&udid=%@&os=ios&osver=%@&appver=%@&model=%@";
 #endif
         NSString *getURLString = [NSString stringWithFormat:argsString, hostString, tokenString, appidString, langCode , uuid,  systemVer , appVer , encodeUrl];
-#ifdef DEF_APNSTest
+
 		NSLog( @"==============================================");
 		NSLog( @"stringWithContentsOfURL ==> %@", getURLString );
 		NSLog( @"==============================================");
-#endif
+
         NSString *registerResult = [NSString stringWithContentsOfURL:[NSURL URLWithString:getURLString] encoding:NSUTF8StringEncoding error:&error];
-#ifdef DEF_APNSTest
+
 		NSLog( @"==============================================");
 		NSLog( @">>> %@", registerResult );
 		NSLog( @"==============================================");
         if (error != NULL) {
             NSLog(@"%@",[error localizedDescription]);
         }
-#endif
+
 
             NSString *uuid = [[[ UIDevice currentDevice] identifierForVendor] UUIDString];
         
@@ -824,34 +824,34 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 #endif
                     NSString *argsString = @"%@?cmd=reg_mapping&token=%@&uid=%@&appid=%@&udid=%@&os=ios";
                     NSString *getURLString = [NSString stringWithFormat:argsString, hostString, deviceTokenString, uid, appidString , uuid];
-#ifdef DEF_APNSTest
+
 					NSLog( @"==============================================");
 					NSLog( @"stringWithContentsOfURL ==> %@", getURLString );
 					NSLog( @"==============================================");
-#endif
+
 					NSString *registerResult = [NSString stringWithContentsOfURL:[NSURL URLWithString:getURLString] encoding:NSUTF8StringEncoding error:&error];
-#ifdef DEF_APNSTest
+
 					NSLog( @"==============================================");
 					NSLog( @">>> %@", registerResult );
 					NSLog( @"==============================================");
-#endif
+
 				}
 				else {
-#ifdef DEF_APNSTest
+
 					NSLog( @"==============================================");
 					NSLog( @">>> deviceTokenString is nil, re-mapping all devices NOT be executed!!!" );
 					NSLog( @"==============================================");
-#endif
+
 				}
 			}
 			[rs close];
 		}
 		else {
-#ifdef DEF_APNSTest
+
 			NSLog( @"==============================================");
 			NSLog( @" database is nil!!!" );
 			NSLog( @"==============================================");
-#endif
+
 		}
         [self syncApiPosterUuId:uuid dev_token:tokenString];
         [self deleteRemoveLstRecords];
