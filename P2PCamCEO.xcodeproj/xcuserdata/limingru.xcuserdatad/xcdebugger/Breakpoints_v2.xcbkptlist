@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOTCamViewer/EditCameraAdvancedController.m"
-            timestampString = "457280230.955175"
+            timestampString = "457881512.85867"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1356"
-            endingLineNumber = "1356"
+            startingLineNumber = "1366"
+            endingLineNumber = "1366"
             landmarkName = "-didChangeSecurityCode:"
             landmarkType = "5">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOTCamViewer/EditCameraAdvancedController.m"
-            timestampString = "457449155.826571"
+            timestampString = "457881512.85867"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1437"
-            endingLineNumber = "1437"
+            startingLineNumber = "1447"
+            endingLineNumber = "1447"
             landmarkName = "-timeOutGetListWifiAPResp:"
             landmarkType = "5">
          </BreakpointContent>

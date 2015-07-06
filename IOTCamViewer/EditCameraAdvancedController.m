@@ -11,6 +11,16 @@
 #import "WiFiNetworkController.h"
 #import "AboutDeviceController.h"
 #import "FormatSDCardController.h"
+typedef struct
+{
+    int cbSize;							// the following package size in bytes, should be sizeof(SMsgAVIoctrlTimeZone)
+    int nIsSupportTimeZone;
+    int nGMTDiff;						// the difference between GMT in hours
+    char szTimeZoneString[256];			// the timezone description string in multi-bytes char format
+    unsigned int local_utc_time;        //long local_utc_time;                // the number of seconds passed
+    // since the UNIX epoch (January 1, 1970 UTC)
+    int dst_on;                         // summer time, 0:off 1:on
+}SMsgAVIoctrlTimeZoneExt64Bit;
 
 @implementation EditCameraAdvancedController
 
@@ -1394,11 +1404,11 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     NSDate* now =  [NSDate date];
     long utcTime_now = (long)[now timeIntervalSince1970];
     
-    SMsgAVIoctrlTimeZoneExt setTimeZone;
+    SMsgAVIoctrlTimeZoneExt64Bit setTimeZone;
     setTimeZone.cbSize = sizeof(setTimeZone);
     setTimeZone.nIsSupportTimeZone = 1;
     setTimeZone.nGMTDiff = nGMTDiff_In_Mins;
-    setTimeZone.local_utc_time = utcTime_now + nGMTDiff_In_Mins*60*60;
+    setTimeZone.local_utc_time = (int)(utcTime_now + nGMTDiff_In_Mins*60*60);
     strcpy( setTimeZone.szTimeZoneString, [tszTimeZone UTF8String] );
     setTimeZone.dst_on = (summerTime)? 1 : 0;
     
