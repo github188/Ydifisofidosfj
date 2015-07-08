@@ -76,7 +76,6 @@
 		063286511AB71A8C0033ABD0 /* myup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 063286481AB71A8C0033ABD0 /* myup@2x.png */; };
 		063286521AB71A8C0033ABD0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 063286491AB71A8C0033ABD0 /* Images.xcassets */; };
 		063286541AB71AEE0033ABD0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 063286531AB71AEE0033ABD0 /* InfoPlist.strings */; };
-		063286551AB71E7D0033ABD0 /* Aztech IP Cam-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0632863E1AB71A800033ABD0 /* Aztech IP Cam-info.plist */; };
 		06335C231AC19E7F003DCD0A /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 06335C0D1AC19E7E003DCD0A /* IQKeyboardManager.bundle */; };
 		06335C241AC19E7F003DCD0A /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 06335C0D1AC19E7E003DCD0A /* IQKeyboardManager.bundle */; };
 		06335C251AC19E7F003DCD0A /* IQKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 06335C0F1AC19E7E003DCD0A /* IQKeyboardManager.m */; };
@@ -120,7 +119,6 @@
 		0647DCFC1AB866E200F5553A /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0647DCF41AB866D500F5553A /* iTunesArtwork@2x.png */; };
 		0647DCFF1AB8674100F5553A /* title_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0647DD011AB8674100F5553A /* title_logo.png */; };
 		0647DD041AB8675200F5553A /* title_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0647DD061AB8675200F5553A /* title_logo@2x.png */; };
-		0647DD091AB867F100F5553A /* EasyN P-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06F770631AB7215F00901EBA /* EasyN P-Info.plist */; };
 		0647DD0A1AB86C2F00F5553A /* title_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0647DD0C1AB86C2F00F5553A /* title_logo.png */; };
 		0647DD0F1AB86C3C00F5553A /* title_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0647DD111AB86C3C00F5553A /* title_logo@2x.png */; };
 		0647DD181AB86F9800F5553A /* addcam_clicked.png in Resources */ = {isa = PBXBuildFile; fileRef = 0647DD141AB86F9800F5553A /* addcam_clicked.png */; };
@@ -673,7 +671,6 @@
 		066041941B23133300FB6F32 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F71AB7148C5342007705B6 /* UIKit.framework */; };
 		066041951B23133300FB6F32 /* libZXingWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6122A53B169E5CF8005DFB49 /* libZXingWidget.a */; };
 		066041961B23133300FB6F32 /* IOTCamera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611F4EF615C0F52D00B8D8C3 /* IOTCamera.framework */; };
-		066041A31B23143200FB6F32 /* QTAIDT-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 066041A11B23142B00FB6F32 /* QTAIDT-Info.plist */; };
 		066041AD1B2314D700FB6F32 /* mydown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 066041A51B2314D700FB6F32 /* mydown@2x.png */; };
 		066041AE1B2314D700FB6F32 /* mydown1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 066041A61B2314D700FB6F32 /* mydown1@2x.png */; };
 		066041AF1B2314D700FB6F32 /* myleft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 066041A71B2314D700FB6F32 /* myleft@2x.png */; };
@@ -1254,7 +1251,6 @@
 		066DA07A1B037E7C00408AF2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F71AB7148C5342007705B6 /* UIKit.framework */; };
 		066DA07B1B037E7C00408AF2 /* libZXingWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6122A53B169E5CF8005DFB49 /* libZXingWidget.a */; };
 		066DA07C1B037E7C00408AF2 /* IOTCamera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611F4EF615C0F52D00B8D8C3 /* IOTCamera.framework */; };
-		066DA08A1B0385CD00408AF2 /* Bayit Cam-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 066DA0891B0385CD00408AF2 /* Bayit Cam-Info.plist */; };
 		066DA0901B03872900408AF2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 066DA08C1B03872900408AF2 /* InfoPlist.strings */; };
 		066DA09C1B03878300408AF2 /* mydown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 066DA0941B03878300408AF2 /* mydown@2x.png */; };
 		066DA09D1B03878300408AF2 /* mydown1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 066DA0951B03878300408AF2 /* mydown1@2x.png */; };
@@ -1806,7 +1802,6 @@
 		0682E05F1B08CCF30019BD70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F71AB7148C5342007705B6 /* UIKit.framework */; };
 		0682E0601B08CCF30019BD70 /* libZXingWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6122A53B169E5CF8005DFB49 /* libZXingWidget.a */; };
 		0682E0611B08CCF30019BD70 /* IOTCamera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611F4EF615C0F52D00B8D8C3 /* IOTCamera.framework */; };
-		0682E06B1B08CE660019BD70 /* WRT-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0682E06A1B08CE660019BD70 /* WRT-Info.plist */; };
 		0682E07D1B08D0580019BD70 /* mydown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0682E0751B08D0580019BD70 /* mydown@2x.png */; };
 		0682E07E1B08D0580019BD70 /* mydown1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0682E0761B08D0580019BD70 /* mydown1@2x.png */; };
 		0682E07F1B08D0580019BD70 /* myleft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0682E0771B08D0580019BD70 /* myleft@2x.png */; };
@@ -2469,7 +2464,6 @@
 		069EFB471B1207D00024CB5A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F71AB7148C5342007705B6 /* UIKit.framework */; };
 		069EFB481B1207D00024CB5A /* libZXingWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6122A53B169E5CF8005DFB49 /* libZXingWidget.a */; };
 		069EFB491B1207D00024CB5A /* IOTCamera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611F4EF615C0F52D00B8D8C3 /* IOTCamera.framework */; };
-		069EFB541B1208D10024CB5A /* IPCAM P-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 069EFB521B1208D10024CB5A /* IPCAM P-Info.plist */; };
 		069EFB551B1208D10024CB5A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 069EFB531B1208D10024CB5A /* InfoPlist.strings */; };
 		069EFB5F1B12092A0024CB5A /* mydown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 069EFB571B12092A0024CB5A /* mydown@2x.png */; };
 		069EFB601B12092A0024CB5A /* mydown1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 069EFB581B12092A0024CB5A /* mydown1@2x.png */; };
@@ -3053,7 +3047,6 @@
 		06B8CAF31B0A21BB006ED6EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F71AB7148C5342007705B6 /* UIKit.framework */; };
 		06B8CAF41B0A21BB006ED6EE /* libZXingWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6122A53B169E5CF8005DFB49 /* libZXingWidget.a */; };
 		06B8CAF51B0A21BB006ED6EE /* IOTCamera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 611F4EF615C0F52D00B8D8C3 /* IOTCamera.framework */; };
-		06B8CB001B0A228F006ED6EE /* Maccam-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06B8CAFE1B0A228F006ED6EE /* Maccam-Info.plist */; };
 		06B8CB091B0A2319006ED6EE /* addcam_clicked.png in Resources */ = {isa = PBXBuildFile; fileRef = 06B8CB051B0A2319006ED6EE /* addcam_clicked.png */; };
 		06B8CB0A1B0A2319006ED6EE /* addcam_clicked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06B8CB061B0A2319006ED6EE /* addcam_clicked@2x.png */; };
 		06B8CB0B1B0A2319006ED6EE /* addcam.png in Resources */ = {isa = PBXBuildFile; fileRef = 06B8CB071B0A2319006ED6EE /* addcam.png */; };
@@ -7108,7 +7101,7 @@
 		D8F71AAA148C5342007705B6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = TUTK;
 				TargetAttributes = {
 					06603F571B23133300FB6F32 = {
@@ -7509,7 +7502,6 @@
 				066041181B23133300FB6F32 /* add_okbtn_clicked.png in Resources */,
 				06AF78F41B2711C700D5499F /* button_click@2x.png in Resources */,
 				066041191B23133300FB6F32 /* moreset_listm.png in Resources */,
-				066041A31B23143200FB6F32 /* QTAIDT-Info.plist in Resources */,
 				0660411A1B23133300FB6F32 /* drop_unlink.png in Resources */,
 				0660411B1B23133300FB6F32 /* add_local_clicked@2x.png in Resources */,
 				0660411C1B23133300FB6F32 /* add_web@2x.png in Resources */,
@@ -7709,7 +7701,6 @@
 				066D9F041B037E7C00408AF2 /* drop_link.png in Resources */,
 				066DA0A11B03878300408AF2 /* myright1@2x.png in Resources */,
 				066D9F051B037E7C00408AF2 /* moreset_list2_clicked.png in Resources */,
-				066DA08A1B0385CD00408AF2 /* Bayit Cam-Info.plist in Resources */,
 				06118ED01B08E0B500BB45FB /* page2_ko.jpg in Resources */,
 				066DA1071B03882F00408AF2 /* title_logo.png in Resources */,
 				066D9F061B037E7C00408AF2 /* add_wifinext_clicked.png in Resources */,
@@ -8120,7 +8111,6 @@
 				0682DEAE1B08CCF30019BD70 /* DropboxSettingVC.xib in Resources */,
 				0682DEAF1B08CCF30019BD70 /* bkg_articalList.png in Resources */,
 				0682DEB01B08CCF30019BD70 /* live_chicon_clicke.png in Resources */,
-				0682E06B1B08CE660019BD70 /* WRT-Info.plist in Resources */,
 				0682DEB11B08CCF30019BD70 /* bkg_articalList@2x.png in Resources */,
 				0682DEB21B08CCF30019BD70 /* beep-beep.aiff in Resources */,
 				0682DEB31B08CCF30019BD70 /* AddCameraDetail.xib in Resources */,
@@ -8849,7 +8839,6 @@
 				069EFABD1B1207D00024CB5A /* more_event_disable@2x.png in Resources */,
 				069EFABE1B1207D00024CB5A /* ceo_rcplay_back_h.png in Resources */,
 				069EFABF1B1207D00024CB5A /* ceo_rcplay_forward@2x.png in Resources */,
-				069EFB541B1208D10024CB5A /* IPCAM P-Info.plist in Resources */,
 				069EFAC01B1207D00024CB5A /* add_wifi2.png in Resources */,
 				069EFAC11B1207D00024CB5A /* add_sync_clicked@2x.png in Resources */,
 				069EFAC21B1207D00024CB5A /* online@2x.png in Resources */,
@@ -9304,7 +9293,6 @@
 				06B8CA7A1B0A21BB006ED6EE /* drop_unlink.png in Resources */,
 				06B8CA7B1B0A21BB006ED6EE /* add_local_clicked@2x.png in Resources */,
 				06B8CA7C1B0A21BB006ED6EE /* add_web@2x.png in Resources */,
-				06B8CB001B0A228F006ED6EE /* Maccam-Info.plist in Resources */,
 				06B8CA7D1B0A21BB006ED6EE /* drop_unlink@2x.png in Resources */,
 				06B8CA7F1B0A21BB006ED6EE /* ceo_rcplay_line_full_h@2x.png in Resources */,
 				06B8CA801B0A21BB006ED6EE /* more.png in Resources */,
@@ -9755,7 +9743,6 @@
 				06F76FE61AB720A100901EBA /* ceo_rcplay_line_full_h@2x.png in Resources */,
 				06F76FE71AB720A100901EBA /* more.png in Resources */,
 				06F76FE91AB720A100901EBA /* Checkmark.png in Resources */,
-				0647DD091AB867F100F5553A /* EasyN P-Info.plist in Resources */,
 				06F76FEA1AB720A100901EBA /* leo_speaker_on_clicked@2x.png in Resources */,
 				06F76FEB1AB720A100901EBA /* Checkmark@2x.png in Resources */,
 				06F76FEC1AB720A100901EBA /* add_local_clicked.png in Resources */,
@@ -10130,7 +10117,6 @@
 				7A0B1C5419A466950071E5CF /* ceo_rcplay.png in Resources */,
 				7A553D5F194EB73C00F5AA11 /* drop_refresh_clicked.png in Resources */,
 				7A553D50194EB73C00F5AA11 /* call_on_clicked@2x.png in Resources */,
-				063286551AB71E7D0033ABD0 /* Aztech IP Cam-info.plist in Resources */,
 				7A553DB0194EB73D00F5AA11 /* more_photo_clicked@2x.png in Resources */,
 				7A553D6A194EB73D00F5AA11 /* leo_micinfo@2x.png in Resources */,
 				7A553D52194EB73C00F5AA11 /* cam_back@2x.png in Resources */,
