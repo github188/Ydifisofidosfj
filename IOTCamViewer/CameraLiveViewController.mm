@@ -914,11 +914,7 @@ extern unsigned int _getTickCount() {
         [self checkBTN];
         
         //动态布局
-#if defined(EasynPTarget)
-        self.scrollViewPortrait.frame=CGRectMake(0, self.scrollViewPortrait.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height-statusBar.frame.size.height);
-#else
         self.scrollViewPortrait.frame=CGRectMake(0, self.scrollViewPortrait.frame.origin.y, self.view.frame.size.width, self.view.frame.size.width/4*3);
-#endif
         self.scrollViewPortrait.contentSize=self.scrollViewPortrait.frame.size;
         self.monitorPortrait.frame=CGRectMake(0, 0, self.scrollViewPortrait.frame.size.width, self.scrollViewPortrait.frame.size.height);
         statusBar.frame=CGRectMake(0, 0, self.view.frame.size.width, statusBar.frame.size.height);
