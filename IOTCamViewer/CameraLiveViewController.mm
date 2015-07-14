@@ -1283,6 +1283,22 @@ extern unsigned int _getTickCount() {
         //camera.isSupportMultiRecording = YES;
         
         camera.delegate2 = self;
+        
+        
+        SMsgAVIoctrlGetAudioOutFormatReq *s = (SMsgAVIoctrlGetAudioOutFormatReq *)malloc(sizeof(SMsgAVIoctrlGetAudioOutFormatReq));
+        s->channel = 0;
+        [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GETAUDIOOUTFORMAT_REQ Data:(char *)s DataSize:sizeof(SMsgAVIoctrlGetAudioOutFormatReq)];
+        free(s);
+        
+        SMsgAVIoctrlGetSupportStreamReq *s2 = (SMsgAVIoctrlGetSupportStreamReq *)malloc(sizeof(SMsgAVIoctrlGetSupportStreamReq));
+        [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GETSUPPORTSTREAM_REQ Data:(char *)s2 DataSize:sizeof(SMsgAVIoctrlGetSupportStreamReq)];
+        free(s2);
+        
+        SMsgAVIoctrlTimeZone s3={0};
+        s3.cbSize = sizeof(s3);
+        [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];
+        
+        
 
         if ([camera getMultiStreamSupportOfChannel:0] && [[camera getSupportedStreams] count] > 1) {            
             if (self.navigationItem.rightBarButtonItem == nil) {
