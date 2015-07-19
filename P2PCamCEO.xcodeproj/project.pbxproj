@@ -1928,6 +1928,7 @@
 		069D50621B3845AC00B2E083 /* moreset_bk~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 069D50331B3845AC00B2E083 /* moreset_bk~ipad.png */; };
 		069D50631B3845AC00B2E083 /* moreset_bk~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 069D50331B3845AC00B2E083 /* moreset_bk~ipad.png */; };
 		069D50641B3845AC00B2E083 /* moreset_bk~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 069D50331B3845AC00B2E083 /* moreset_bk~ipad.png */; };
+		069EC1041B5BD96600E4708E /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E376D71B5A0BA2003A378F /* Accelerate.framework */; };
 		069EF9081B1203020024CB5A /* moreset.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CD3194EB73C00F5AA11 /* moreset.png */; };
 		069EF9091B1203020024CB5A /* moreset@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CD4194EB73C00F5AA11 /* moreset@2x.png */; };
 		069EF90A1B1203090024CB5A /* moreset_clicked.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CD7194EB73C00F5AA11 /* moreset_clicked.png */; };
@@ -5439,6 +5440,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				069EC1041B5BD96600E4708E /* Accelerate.framework in Frameworks */,
 				06728E3E1ACFE1590087029A /* VideoToolbox.framework in Frameworks */,
 				06F7703C1AB720A100901EBA /* MediaPlayer.framework in Frameworks */,
 				06F7703D1AB720A100901EBA /* libstdc++.6.0.9.dylib in Frameworks */,
@@ -12328,7 +12330,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -12358,7 +12360,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "83d1b0dc-5235-45c1-b5c6-c8ff6762d75b";
+				PROVISIONING_PROFILE = "fa73c75b-1985-4ce4-a4e9-f719fec9ad1f";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -12371,7 +12373,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -12402,7 +12404,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "83d1b0dc-5235-45c1-b5c6-c8ff6762d75b";
+				PROVISIONING_PROFILE = "fa73c75b-1985-4ce4-a4e9-f719fec9ad1f";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -12415,7 +12417,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -12446,7 +12448,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "83d1b0dc-5235-45c1-b5c6-c8ff6762d75b";
+				PROVISIONING_PROFILE = "fa73c75b-1985-4ce4-a4e9-f719fec9ad1f";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -12459,7 +12461,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -12489,7 +12491,7 @@
 					"-DP2PCAMLIVE",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "83d1b0dc-5235-45c1-b5c6-c8ff6762d75b";
+				PROVISIONING_PROFILE = "fa73c75b-1985-4ce4-a4e9-f719fec9ad1f";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";

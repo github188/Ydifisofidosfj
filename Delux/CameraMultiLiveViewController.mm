@@ -249,6 +249,17 @@ extern unsigned int _getTickCount() ;
 			
             [camera_list addObject:tempCamera];
             [tempCamera release];
+            
+            SMsgAVIoctrlSetStreamCtrlReq *ss = (SMsgAVIoctrlSetStreamCtrlReq *)malloc(sizeof(SMsgAVIoctrlSetStreamCtrlReq));
+            memset(ss, 0, sizeof(SMsgAVIoctrlSetStreamCtrlReq));
+            
+            ss->channel = 0;
+            ss->quality = AVIOCTRL_QUALITY_MIN;
+            [tempCamera sendIOCtrlToChannel:0
+                                   Type:IOTYPE_USER_IPCAM_SETSTREAMCTRL_REQ
+                                   Data:(char *)ss
+                               DataSize:sizeof(SMsgAVIoctrlSetStreamCtrlReq)];
+            free(ss);
         }
         
         [rs close];

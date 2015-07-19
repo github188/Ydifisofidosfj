@@ -180,7 +180,7 @@ BOOL g_bDiagnostic = FALSE;
 
 - (void)start:(NSInteger)channel
 {
-#if defined(IPCAMP)
+#if defined(IPCAMP) || defined(EasynPTarget)
     bIsSupportTimeZone = YES;
 #else
     bIsSupportTimeZone = NO;
@@ -199,7 +199,7 @@ BOOL g_bDiagnostic = FALSE;
 
 - (void)start4EventPlayback:(NSInteger)channel
 {
-#if defined(IPCAMP)
+#if defined(IPCAMP) || defined(EasynPTarget)
     bIsSupportTimeZone = YES;
 #else
     bIsSupportTimeZone = NO;
@@ -392,7 +392,7 @@ BOOL g_bDiagnostic = FALSE;
 		if( p->cbSize == sizeof(SMsgAVIoctrlTimeZone) ) {
 			NSLog( @">>>> IOTYPE_USER_IPCAM_GET_TIMEZONE_RESP <OK>\n\tbIsSupportTimeZone:%d\n\tnGMTDiff:%d\n\tstrTimeZone:%@", p->nIsSupportTimeZone, p->nGMTDiff, ( strlen(p->szTimeZoneString) > 0 ) ? [NSString stringWithUTF8String:p->szTimeZoneString]:@"(null)" );
 			bIsSupportTimeZone = p->nIsSupportTimeZone;
-#if defined(IPCAMP)
+#if defined(IPCAMP) || defined(EasynPTarget)
             
 #else
             bIsSupportTimeZone = NO;

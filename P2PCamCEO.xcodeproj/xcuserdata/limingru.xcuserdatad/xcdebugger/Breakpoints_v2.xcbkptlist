@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Delux/CameraMultiLiveViewController.mm"
-            timestampString = "458959344.459293"
+            timestampString = "459004845.540643"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1579"
-            endingLineNumber = "1579"
+            startingLineNumber = "1590"
+            endingLineNumber = "1590"
             landmarkName = "-onTimerStartShowRevoke:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Delux/CameraMultiLiveViewController.mm"
-            timestampString = "458959871.093703"
+            timestampString = "459004845.540643"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2090"
-            endingLineNumber = "2090"
+            startingLineNumber = "2101"
+            endingLineNumber = "2101"
             landmarkName = "-deleteSameUIDView:"
             landmarkType = "5">
          </BreakpointContent>
