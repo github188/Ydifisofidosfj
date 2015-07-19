@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Delux/CameraMultiLiveViewController.mm"
-            timestampString = "457449667.959245"
+            timestampString = "458959344.459293"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1575"
-            endingLineNumber = "1575"
+            startingLineNumber = "1579"
+            endingLineNumber = "1579"
             landmarkName = "-onTimerStartShowRevoke:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,28 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Delux/CameraMultiLiveViewController.mm"
-            timestampString = "457449155.826571"
+            timestampString = "458959871.093703"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2084"
-            endingLineNumber = "2084"
+            startingLineNumber = "2090"
+            endingLineNumber = "2090"
             landmarkName = "-deleteSameUIDView:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Delux/CameraMultiLiveViewController.mm"
-            timestampString = "457449667.959245"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1811"
-            endingLineNumber = "1811"
-            landmarkName = "-camera:_didChangeChannelStatus:ChannelStatus:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -80,22 +64,6 @@
             startingLineNumber = "204"
             endingLineNumber = "204"
             landmarkName = "-shouldAutorotateToInterfaceOrientation:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Delux/CameraMultiLiveViewController.mm"
-            timestampString = "457449667.959245"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1797"
-            endingLineNumber = "1797"
-            landmarkName = "-camera:_didChangeChannelStatus:ChannelStatus:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

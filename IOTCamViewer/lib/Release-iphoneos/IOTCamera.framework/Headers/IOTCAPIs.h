@@ -4,15 +4,15 @@ IOTC module is a kind of data communication modules to provide basic data
 transfer among devices and clients.
 
 \copyright Copyright (c) 2010 by Throughtek Co., Ltd. All Rights Reserved.
-
+ 
 Revision Table
 
 Version     | Name             |Date           |Description
 ------------|------------------|---------------|-------------------
  0.1        |Charlie           |2010-11-15     |Trial Version
- 0.2        |Charlie           |2010-12-28     |IOTC_Get_Version(), Session Alive
+ 0.2        |Charlie           |2010-12-28     |IOTC_Get_Version(), Session Alive 
  0.2.1      |Charlie           |2011-02-28     |Header structure --> Flag, IOTC_Connect return IOTC_ER_DEVICE_NOT_LISTENING, if Target device is not listening
- 0.3        |Charlie           |2011-03-02     |Support LAN Mode.
+ 0.3        |Charlie           |2011-03-02     |Support LAN Mode. 
  0.4        |Kevin             |2011-04-22     |Support ASIX110/220 8051 platform
  0.4.0.1    |Charlie           |2011-04-28     |Fix bug of LanSearch
  0.4.0.2    |Kevin             |2011-04-28     |Fix bug of gBuf multi-thread access currently.
@@ -64,49 +64,46 @@ Version     | Name             |Date           |Description
  * Platform Dependant Macro Definition
  * ============================================================================
  */
+#include "platform_Config.h"
 
-#ifdef _WIN32
-	#ifdef IOTC_STATIC_LIB
-		#define P2PAPI_API
-	#elif defined P2PAPI_EXPORTS
-		#define P2PAPI_API __declspec(dllexport)
-	#else
-		#define P2PAPI_API __declspec(dllimport)
-	#endif
-#else // #ifdef _WIN32
-	#define P2PAPI_API
-#endif //#ifdef _WIN32
-
-
-#ifndef _WIN32
-	#define __stdcall
-#endif // #ifndef _WIN32
-
-
-#ifdef _WIN32
+#ifdef IOTC_Win32
 /** @cond */
-
+#ifdef IOTC_STATIC_LIB
+#define P2PAPI_API  
+#elif defined P2PAPI_EXPORTS
+#define P2PAPI_API __declspec(dllexport)
+#else
+#define P2PAPI_API __declspec(dllimport)
+#endif // #ifdef P2PAPI_EXPORTS
 
 /** @endcond */
 /** The default max number of IOTC sessions in IOTC module.
  * It is platform dependent and refer to source code for more detail. */
 #define MAX_DEFAULT_IOTC_SESSION_NUMBER				128
-#endif // #ifdef _WIN32
+#endif // #ifdef IOTC_Win32
 
 #ifdef IOTC_ARC_HOPE312
+#define P2PAPI_API
 #define MAX_DEFAULT_IOTC_SESSION_NUMBER				16
+#define __stdcall 
 #endif // #ifdef IOTC_ARC_HOPE312
 
-#if defined (__linux__) || defined (__APPLE__)
+#ifdef IOTC_Linux
+#define P2PAPI_API
 #define MAX_DEFAULT_IOTC_SESSION_NUMBER				128
-#endif // #ifdef __linux__
+#define __stdcall 
+#endif // #ifdef IOTC_Linux
 
 #ifdef IOTC_ASIX8051
+#define P2PAPI_API
 #define MAX_DEFAULT_IOTC_SESSION_NUMBER				4
-#endif // #ifdef __linux__
+#define __stdcall 
+#endif // #ifdef IOTC_Linux
 
 #ifdef IOTC_UCOSII
+#define P2PAPI_API
 #define MAX_DEFAULT_IOTC_SESSION_NUMBER				8
+#define __stdcall 
 extern u32  TutkLoginTaskPri;
 extern u32  TutkRoutineTaskPri;
 #endif // #ifdef IOTC_UCOSII
@@ -121,10 +118,7 @@ extern "C" {
  */
 /** The maximum size, in byte, of the buffer used in IOTC_Session_Read(),
  * IOTC_Session_Write() and IOTC_Session_Read_Check_Lost(). */
-#define IOTC_MAX_PACKET_SIZE						1388
-
-/** The maximum size, in byte, of the buffer used in IOTC_Session_Write_Reliable(). */
-#define RELIABLE_MAX_PACKET_SIZE				    1384
+#define IOTC_MAX_PACKET_SIZE						1400
 
 /** The maximum number of IOTC channels for each IOTC session */
 #define MAX_CHANNEL_NUMBER							32
@@ -289,44 +283,10 @@ extern "C" {
 #define IOTC_ER_INVALID_ARG                         -46
 
 /** The remote device not support partial encoding. */
-#define IOTC_ER_NOT_SUPPORT_PE			            -47
+#define IOTC_ER_NOT_SUPPORT_PE			-47
 
 /** The remote device no more free session can be connected. */
 #define IOTC_ER_DEVICE_EXCEED_MAX_SESSION			-48
-
-
-/** The function call is a blocking call and was called by other thread. */
-#define IOTC_ER_BLOCKED_CALL									-49
-
-/** The session was closed. */
-#define IOTC_ER_SESSION_CLOSED								-50
-
-/** Remote doesn't support this function. */
-#define IOTC_ER_REMOTE_NOT_SUPPORTED					-51
-
-/** The function is aborted by related function. */
-#define IOTC_ER_ABORTED											-52
-
-/** The buffer size exceed maximum packet size. */
-#define IOTC_ER_EXCEED_MAX_PACKET_SIZE				-53
-
-/** Server does not support this feature. */
-#define IOTC_ER_SERVER_NOT_SUPPORT						-54
-
-/** Cannot find a path to write data*/
-#define IOTC_ER_NO_PATH_TO_WRITE_DATA				-55
-
-/** Start function is not called */
-#define IOTC_ER_SERVICE_IS_NOT_STARTED  			-56
-
-/** Already in processing*/
-#define IOTC_ER_STILL_IN_PROCESSING                    -57
-
-/** Out of memory*/
-#define IOTC_ER_NOT_ENOUGH_MEMORY                    -58
-
-/** All Server response can not find device */
-#define IOTC_ER_DEVICE_OFFLINE						-90 // 2015.05.08  Eddy Add
 
 
 /* ============================================================================
@@ -388,69 +348,30 @@ struct st_SInfo
 };
 
 /**
- * \details IOTC session info, containing all the information when a IOTC session is
- *  established between a device and a client. Users can use IOTC_Session_Check_Ex()
- *  to get IOTC session information.
- */
-struct st_SInfoEx
-{
-    unsigned int size; //size of the structure
-	unsigned char Mode; //!< 0: P2P mode, 1: Relay mode, 2: LAN mode
-	char CorD; //!< 0: As a Client, 1: As a Device
-	char UID[21]; //!< The UID of the device
-	char RemoteIP[17]; //!< The IP address of remote site used during this IOTC session
-	unsigned short RemotePort; //!< The port number of remote site used during this IOTC session
-	unsigned int TX_Packetcount; //!< The total packets sent from the device and the client during this IOTC session
-	unsigned int RX_Packetcount; //!< The total packets received in the device and the client during this IOTC session
-	unsigned int IOTCVersion; //!< The IOTC version
-	unsigned short VID; //!< The Vendor ID, part of VPG mechanism
-	unsigned short PID; //!< The Product ID, part of VPG mechanism
-	unsigned short GID; //!< The Group ID, part of VPG mechanism
-	unsigned char isSecure; //!< 0: The IOTC session is in non-secure mode, 1: The IOTC session is in secure mode
-	unsigned char LocalNatType; //!< The local NAT type, 0: Unknown type, 1: Type 1, 2: Type 2, 3: Type 3, 10: TCP only
-	unsigned char RemoteNatType; //!< The remote NAT type, 0: Unknown type, 1: Type 1, 2: Type 2, 3: Type 3, 10: TCP only
-	unsigned char RelayType; //!< 0: Not Relay, 1: UDP Relay, 2: TCP Relay
-	unsigned int NetState; //!<If no UDP packet is ever received, the first bit of value is 1, otherwise 0
-};
-
-/**
- * \details Device search info, containing all the information
- * when client searches devices in LAN.
+ * \details Device serch info, containing all the information
+ * when client searches devices in LAN. 
  */
 struct st_LanSearchInfo
 {
-	char UID[21]; //!< The UID of discovered device
-	char IP[16]; //!< The IP address of discovered device
-	unsigned short port; //!< The port number of discovered device used for IOTC session connection
+	char UID[21]; //!< The UID of discoveried device
+	char IP[16]; //!< The IP address of discoveried device
+	unsigned short port; //!< The port number of discoveried device used for IOTC session connection
 	char Reserved; //!< Reserved, no use
 };
 
 /**
- * \details Device search info, containing all the information and device name
- * when client searches devices in LAN.
+ * \details Device serch info, containing all the information and device name
+ * when client searches devices in LAN. 
  */
 struct st_LanSearchInfo2
 {
-	char UID[21]; //!< The UID of discovered device
-	char IP[16]; //!< The IP address of discovered device
-	unsigned short port; //!< The port number of discovered device used for IOTC session connection
-	char DeviceName[132]; //!< The Name of discovered device
+	char UID[21]; //!< The UID of discoveried device
+	char IP[16]; //!< The IP address of discoveried device
+	unsigned short port; //!< The port number of discoveried device used for IOTC session connection
+	char DeviceName[129]; //!< The Name of discoveried device
 	char Reserved; //!< Reserved, no use
 };
 
-/**
- * \details Device search info, containing all the information and device name
- * when client searches devices in LAN.
- */
-struct st_SearchDeviceInfo
-{
- char UID[21]; //!< The UID of discovered device
- char IP[16]; //!< The IP address of discovered device
- unsigned short port; //!< The port number of discovered device used for IOTC session connection
- char DeviceName[132]; //!< The Name of discovered device
- char Reserved; //!< Reserved, no use
- int  nNew; //!< New device
-};
 
 /* ============================================================================
  * Type Definition
@@ -464,7 +385,7 @@ struct st_SearchDeviceInfo
  *
  * \param pnLoginInfo [out] The login info with meanings of following bits
  *			- bit 0: the device is ready for connection by client from LAN if this bit is 1
- *			- bit 1: the device is ready for connection by client from Internet if this bit is 1
+ *			- bit 1: the device is ready for connection by client from Internet if this bit is 1 
  *			- bit 2: if this bit is 1, it means the device has received login
  *						response from IOTC servers since IOTC_Get_Login_Info()
  *						is called last time.
@@ -485,9 +406,6 @@ typedef void (__stdcall *loginInfoCB)(unsigned int nLoginInfo);
  *
  */
 typedef void (__stdcall *sessionStatusCB)(int nIOTCSessionID, int nErrorCode);
-
-
-typedef int (__stdcall *IOTC_SearchDeviceResultCB)(struct st_SearchDeviceInfo *psSearchDeviceInfo, int nArrayLength);
 
 /* ============================================================================
  * Function Declaration
@@ -546,7 +464,7 @@ P2PAPI_API void IOTC_Set_Max_Session_Number(unsigned int nMaxSessionNum);
  * \param cszP2PHostNameThird [in] Specify the host name or IP address of
  *			the third master. Can be NULL if only two masters are required.
  *			See attention below for more detail.
- * \param cszP2PHostNameFourth [in] Specify the host name or IP address of
+ * \param cszP2PHostNameFourth [in] Specify the host name or IP address of 
  *			the fourth master. Can be NULL if only two masters are required.
  *			See attention below for more detail.
  *
@@ -568,7 +486,7 @@ P2PAPI_API void IOTC_Set_Max_Session_Number(unsigned int nMaxSessionNum);
  *				because that will ensure devices and clients can still connect
  *				to masters even the network address configuration of masters
  *				changes in the future. However, in rare case, the host name
- *				of masters can not be resolved due to network issue and it is
+ *				of masters can not be resolved due to network issue and it is 
  *				necessary to specify IP address of masters in this function
  *				in order for successful connection. The host name and IP address
  *				of each master is listed as below:
@@ -577,9 +495,6 @@ P2PAPI_API void IOTC_Set_Max_Session_Number(unsigned int nMaxSessionNum);
  *				- Master #3: m3.iotcplatform.com => 46.137.188.54
  *				- Master #4: m4.iotcplatform.com => 122.226.84.253
  *				- Master #5: m5.iotcplatform.com => 61.188.37.216
- *				- Master #6: m6.iotcplatform.com => 120.24.59.150
- *				- Master #7: m7.iotcplatform.com => 114.215.137.159
- *				- Master #8: m8.iotcplatform.com => 104.199.156.58
  */
 P2PAPI_API int IOTC_Initialize(unsigned short nUDPPort, const char* cszP2PHostNamePrimary,
 								const char* cszP2PHostNameSecondary, const char* cszP2PHostNameThird,
@@ -668,7 +583,7 @@ P2PAPI_API int IOTC_DeInitialize(void);
  *			- #IOTC_ER_SERVER_NOT_RESPONSE IOTC servers have no response
  *			- #IOTC_ER_FAIL_GET_LOCAL_IP Fails to get the device's local IP address
  *			- #IOTC_ER_NETWORK_UNREACHABLE Network is unreachable
- *			- #IOTC_ER_NO_SERVER_LIST No IOTC server information while device login
+ *			- #IOTC_ER_NO_SERVER_LIST No IOTC server information while device login 
  *
  * \attention (1) This function is a block process. That means this function will return until
  *				the device can login into IOTC servers successfully or some error happens
@@ -687,7 +602,7 @@ P2PAPI_API int IOTC_Device_Login(const char *cszUID, const char *cszDeviceName, 
  *
  * \param pnLoginInfo [out] The login info with meanings of following bits
  *			- bit 0: the device is ready for connection by client from LAN if this bit is 1
- *			- bit 1: the device is ready for connection by client from Internet if this bit is 1
+ *			- bit 1: the device is ready for connection by client from Internet if this bit is 1 
  *			- bit 2: if this bit is 1, it means the device has received login
  *						response from IOTC servers since IOTC_Get_Login_Info()
  *						is called last time.
@@ -753,7 +668,7 @@ P2PAPI_API int  IOTC_Listen(unsigned int nTimeout);
 P2PAPI_API void IOTC_Listen_Exit(void);
 
 
-#if defined(_WIN32) || defined(IOTC_ARC_HOPE312) || defined(__linux__) || defined(__APPLE__)
+#if defined(IOTC_Win32) || defined(IOTC_ARC_HOPE312) || defined(IOTC_Linux)
 /**
  * \brief Used by a device to listen connections from clients
  *
@@ -789,7 +704,7 @@ P2PAPI_API void IOTC_Listen_Exit(void);
  *			- #IOTC_ER_AES_CERTIFY_FAIL The AES certification fails
  *
  * \attention (1) This function is available on Win32, Linux, Android, iOS and ARC platforms.<br><br>
- *				(2) The AES key shall be matched between a device and a client
+ *				(2) The AES key shall be matched between a device and a client 
  *				in order to establish connection successfully.
  */
 P2PAPI_API int  IOTC_Listen2(unsigned int nTimeout, const char *cszAESKey, IOTCSessionMode nSessionMode);
@@ -828,7 +743,7 @@ P2PAPI_API int  IOTC_Listen2(unsigned int nTimeout, const char *cszAESKey, IOTCS
  *			- #IOTC_ER_FAIL_SOCKET_BIND Fails to bind sockets
  *			- #IOTC_ER_NOT_SUPPORT_RELAY Not support relay connection by IOTC servers
  *			- #IOTC_ER_NO_SERVER_LIST No IOTC server information while client connect
- *			- #IOTC_ER_DEVICE_MULTI_LOGIN The connecting device duplicated loggin and may unconnectable
+ *			- #IOTC_ER_DEVICE_MULTI_LOGIN The connecting device duplicated loggin and may unconnectable 
  *
  * \attention This process is a block process.
  *
@@ -857,11 +772,11 @@ P2PAPI_API int  IOTC_Get_SessionID(void);
  *
  * \details This function is for a client to connect a device by specifying
  *			the UID of that device, and bind to a tutk_platform_free session ID from IOTC_Get_SessionID().
- * 			If connection is established with the help of IOTC servers,
- *			the #IOTC_ER_NoERROR will be returned in this function and then device and
- *			client can communicate for the other later by using this IOTC session ID.
- *			If this function is called by multiple threads, the connections will be
- *			processed concurrently.
+ * 			If connection is established with the help of IOTC servers, 
+ *			the #IOTC_ER_NoERROR will be returned in this function and then device and 
+ *			client can communicate for the other later by using this IOTC session ID. 
+ *			If this function is called by multiple threads, the connections will be 
+ *			processed concurrently. 
  *
  * \param cszUID [in] The UID of a device that client wants to connect
  * \param SID [in] The Session ID got from IOTC_Get_SessionID() the connection should bind to.
@@ -887,7 +802,7 @@ P2PAPI_API int  IOTC_Get_SessionID(void);
  *			- #IOTC_ER_FAIL_SOCKET_BIND Fails to bind sockets
  *			- #IOTC_ER_NOT_SUPPORT_RELAY Not support relay connection by IOTC servers
  *			- #IOTC_ER_NO_SERVER_LIST No IOTC server information while client connect
- *			- #IOTC_ER_DEVICE_MULTI_LOGIN The connecting device duplicated loggin and may unconnectable
+ *			- #IOTC_ER_DEVICE_MULTI_LOGIN The connecting device duplicated loggin and may unconnectable 
  *			- #IOTC_ER_INVALID_SID The specified IOTC session ID is not valid
  *
  * \attention If you call IOTC_Connect_Stop_BySID() and this function not return yet, and then use the same
@@ -946,7 +861,7 @@ P2PAPI_API int  IOTC_Connect_ByUID_Parallel(const char *cszUID, int SID);
  *			- #IOTC_ER_FAIL_SOCKET_BIND Fails to bind sockets
  *			- #IOTC_ER_NOT_SUPPORT_RELAY Not support relay connection by IOTC servers
  *			- #IOTC_ER_NO_SERVER_LIST No IOTC server information while client connect
- *			- #IOTC_ER_DEVICE_MULTI_LOGIN The connecting device duplicated loggin and may unconnectable
+ *			- #IOTC_ER_DEVICE_MULTI_LOGIN The connecting device duplicated loggin and may unconnectable 
  *
  * \attention (1) This process is a block process.<br><br>
  *				(2) The AES key shall be matched between a device and a client in
@@ -981,7 +896,7 @@ P2PAPI_API void IOTC_Connect_Stop(void);
  *			another thread before the return of connection process.
  *
  * \param SID [in] The Session ID of a connection which will be stop.
- *
+ *	
  * \return #IOTC_ER_NoERROR
  * \return Error code if return value < 0
  *			- #IOTC_ER_NOT_INITIALIZED The IOTC module is not initialized yet
@@ -1034,7 +949,7 @@ P2PAPI_API int IOTC_Connect_Stop_BySID(int SID);
  *				in this function according to the purpose defined by the user.
  */
 P2PAPI_API int  IOTC_Session_Read_Check_Lost(int nIOTCSessionID, char *abBuf, int nMaxBufSize,unsigned int nTimeout, unsigned short *pnPacketSN,char *pbFlagLost, unsigned char nIOTCChannelID);
-#endif // defined(_WIN32) || defined(IOTC_ARC_HOPE312) || defined(__linux__)
+#endif // defined(IOTC_Win32) || defined(IOTC_ARC_HOPE312) || defined(IOTC_Linux)
 
 
 /**
@@ -1058,28 +973,6 @@ P2PAPI_API int  IOTC_Session_Read_Check_Lost(int nIOTCSessionID, char *abBuf, in
 P2PAPI_API int  IOTC_Session_Check(int nIOTCSessionID, struct st_SInfo *psSessionInfo);
 
 /**
- * \brief Used by a device or a client to check the IOTC session info
- *
- * \details A device or a client may use this function to check if the IOTC session
- *			is still alive as well as getting the IOTC session info. The structure
- *          size must be filled. For example "info.size=sizeof(struct st_SInfoEx);"
- *
- * \param nIOTCSessionID [in] The session ID of the IOTC session to be checked
- * \param psSessionInfo [out] The session info of specified IOTC session
- *
- * \return #IOTC_ER_NoERROR if getting the IOTC session info successfully
- * \return Error code if return value < 0
- *			- #IOTC_ER_NOT_INITIALIZED The IOTC module is not initialized yet
- *			- #IOTC_ER_INVALID_SID The specified IOTC session ID is not valid
- *			- #IOTC_ER_SESSION_CLOSE_BY_REMOTE The IOTC session of specified
- *				session ID has been closed by remote site
- *			- #IOTC_ER_REMOTE_TIMEOUT_DISCONNECT The timeout defined by #IOTC_SESSION_ALIVE_TIMEOUT
- *				expires because	remote site has no response
- *          - #IOTC_ER_INVALID_ARG The size of structure is not filled
- */
-P2PAPI_API int  IOTC_Session_Check_Ex(int nIOTCSessionID, struct st_SInfoEx *psSessionInfo);
-
-/**
  * \brief Used by a device or a client to get the session status
  *
  * \details This function gets the session status between device and client. <br>
@@ -1089,7 +982,7 @@ P2PAPI_API int  IOTC_Session_Check_Ex(int nIOTCSessionID, struct st_SInfoEx *psS
  *			between device and client disconnected, for example, IOTC
  *			alive timeout or one side call IOTC_Session_Close() to close
  *			this session.
-
+ 
  * \param nIOTCSessionID [in] The session ID of the IOTC session to check status
  * \param pfxSessionStatusFn [in] The function pointer to getting session status function
  *
@@ -1259,7 +1152,7 @@ P2PAPI_API int IOTC_Session_Channel_ON(int nIOTCSessionID, unsigned char nIOTCCh
  * \brief Used by a device or a client to turn off a IOTC channel
  *
  * \details A device or a client uses this function to turn off a IOTC channel
- *			when this IOTC channel is no longer needed for communication.
+ *			when this IOTC channel is no longer needed for communication.	
  *
  * \param nIOTCSessionID [in] The session ID of the IOTC session containing the
  *			IOTC channel to be turned off
@@ -1296,10 +1189,10 @@ P2PAPI_API int IOTC_Session_Channel_OFF(int nIOTCSessionID, unsigned char nIOTCC
  *
  * \return IOTC_ER_NoERROR if search devices in LAN successfully
  * \return Error code if return value < 0
- *			- #IOTC_ER_INVALID_ARG The arguments passed in to this function is invalid.
+ *			- #IOTC_ER_INVALID_ARG The arguments passed in to this function is invalid. 
  *			- #IOTC_ER_FAIL_CREATE_SOCKET Fails to create sockets
  *			- #IOTC_ER_FAIL_SOCKET_OPT Fails to set up socket options
- *			- #IOTC_ER_FAIL_SOCKET_BIND Fails to bind sockets
+ *			- #IOTC_ER_FAIL_SOCKET_BIND Fails to bind sockets 
  */
 P2PAPI_API int IOTC_Lan_Search(struct st_LanSearchInfo *psLanSearchInfo, int nArrayLen, int nWaitTimeMs);
 
@@ -1321,7 +1214,7 @@ P2PAPI_API	void IOTC_Set_Log_Path(char *path, int nMaxSize);
  * \details Set partial encode On/Off
  *
  * \param nIOTCSessionID [in] The session ID of the IOTC session to be encrypted.
- *
+ * 
  * \param bPartialEncryption [in] 1: Enable partial encode, 0: Disable partial encode
  *
  * \return Error code if return value < 0
@@ -1340,10 +1233,10 @@ P2PAPI_API	int IOTC_Set_Partial_Encryption(int nIOTCSessionID, unsigned char bPa
  * \brief Set device name.
  *
  * \details Device can let client know its name when client call IOTC_Lan_Search2().
- *          The maximum size of device name is 131 Byte. We filled in 0 at the 132th Byte.
+ *          The maximum size of device name is 128 Byte. We filled in 0 at the 129th Byte.
  *
  * \param cszDeviceName  [in] This is user-defined device name. Clients will get it by calling IOTC_Lan_Search2().
- *
+ * 
  */
 P2PAPI_API  void IOTC_Set_Device_Name(const char *cszDeviceName);
 
@@ -1361,85 +1254,12 @@ P2PAPI_API  void IOTC_Set_Device_Name(const char *cszDeviceName);
  *
  * \return IOTC_ER_NoERROR if search devices in LAN successfully
  * \return Error code if return value < 0
- *			- #IOTC_ER_INVALID_ARG The arguments passed in to this function is invalid.
+ *			- #IOTC_ER_INVALID_ARG The arguments passed in to this function is invalid. 
  *			- #IOTC_ER_FAIL_CREATE_SOCKET Fails to create sockets
  *			- #IOTC_ER_FAIL_SOCKET_OPT Fails to set up socket options
- *			- #IOTC_ER_FAIL_SOCKET_BIND Fails to bind sockets
+ *			- #IOTC_ER_FAIL_SOCKET_BIND Fails to bind sockets 
  */
-P2PAPI_API  int IOTC_Lan_Search2(struct st_LanSearchInfo2 *psLanSearchInfo2, int nArrayLen, int nWaitTimeMs);
-
-/**
- * \brief Used for searching devices in LAN.
- *
- * \details When client and devices are in LAN, client can search devices and their name
- *			by calling this function.
- *
- * \param psLanSearchInfo2 [in] The array of struct st_LanSearchInfo2 store the search result and Device name.
- * \param nArrayLen [in] The size of psLanSearchInfo2 array
- * \param nWaitTimeMs [in] Period (or timeout) of searching LAN. (milliseconds)
- * \param nSendIntervalMs [in] Interval of sending broadcast for searching device in LAN. (milliseconds)
- *
- * \return IOTC_ER_NoERROR if search devices in LAN successfully
- * \return Error code if return value < 0
- *			- #IOTC_ER_INVALID_ARG The arguments passed in to this function is invalid.
- *			- #IOTC_ER_FAIL_CREATE_SOCKET Fails to create sockets
- *			- #IOTC_ER_FAIL_SOCKET_OPT Fails to set up socket options
- *			- #IOTC_ER_FAIL_SOCKET_BIND Fails to bind sockets
- */
-P2PAPI_API int IOTC_Lan_Search2_Ex(struct st_LanSearchInfo2 *psLanSearchInfo2, int nArrayLen, int nWaitTimeMs, int nSendIntervalMs);
-
-/**
-* \brief Start to search devices in LAN.
-*
-* \details When client and devices are in LAN, client can search devices and their name
-*			and the result can be polled by function IOTC_Search_Device_Result
-*
-* \param nWaitTimeMs [in] Period (or timeout) of searching LAN. (milliseconds)
-* \param nSendIntervalMs [in] Interval of sending broadcast for searching device in LAN. (milliseconds)
-*
-* \return IOTC_ER_NoERROR if search devices in LAN successfully
-* \return Error code if return value < 0
-*			- #IOTC_ER_INVALID_ARG The arguments passed in to this function is invalid.
-*			- #IOTC_ER_FAIL_CREATE_SOCKET Fails to create sockets
-*			- #IOTC_ER_FAIL_SOCKET_OPT Fails to set up socket options
-*			- #IOTC_ER_FAIL_SOCKET_BIND Fails to bind sockets
-*			- #IOTC_ER_STILL_IN_PROCESSING The function is called more then once before it stopped
-*			- #IOTC_ER_NOT_ENOUGH_MEMORY not enough memory
-*/
-P2PAPI_API int IOTC_Search_Device_Start(int nWaitTimeMs, int nSendIntervalMs);
-
-/**
-* \brief Poll the results of searched device in LAN.
-*
-* \details Use the function to poll the result of device search in LAN, the IOTC_Search_Device_Start should be called
-*			before use the function
-*
-* \param st_SearchDeviceInfo [in] The array of struct st_SearchDeviceInfo store the search result and Device name.
-* \param nArrayLen [in] The length of array
-* \param nGetAll [in] 0: get new queried device 1: get all queried devices
-*
-* \return IOTC_ER_NoERROR if search devices in LAN successfully
-* \return Error code if return value < 0
-*			- #IOTC_ER_INVALID_ARG The arguments passed in to this function is invalid.
-*			- #IOTC_ER_SERVICE_IS_NOT_STARTED The start function is not called
-*/
-P2PAPI_API int IOTC_Search_Device_Result(struct st_SearchDeviceInfo *psSearchDeviceInfo, int nArrayLen, int nGetAll);
-
-/**
-* \brief Stop to search devices in LAN.
-*
-* \details Stop to do device search in LAN, the IOTC_Search_Device_Start should be called
-*			before use the function
-*
-* \param st_SearchDeviceInfo [in] The array of struct st_SearchDeviceInfo store the search result and Device name.
-* \param nArrayLen [in] The length of array
-* \param nGetAll [in] 0: get new queried device 1: get all queried devices
-*
-* \return IOTC_ER_NoERROR if search devices in LAN successfully
-* \return Error code if return value < 0
-*			- #IOTC_ER_SERVICE_IS_NOT_STARTED The start function is not called
-*/
-P2PAPI_API int IOTC_Search_Device_Stop();
+P2PAPI_API  int IOTC_Lan_Search2 (struct st_LanSearchInfo2 *psLanSearchInfo2, int nArrayLen, int nWaitTimeMs);
 
 /**
  * \brief Turn on only TCP relay mode function.
@@ -1466,19 +1286,6 @@ P2PAPI_API void IOTC_TCPRelayOnly_TurnOn(void);
 P2PAPI_API void IOTC_Setup_LANConnection_Timeout(unsigned int nTimeout);
 
 /**
-* \brief Setup P2P connection timeout
-*
-* \details Only client can call this, it can determine how many time to try P2P connection.
-*			Once it called the timeout value is effective forever until IOTC_DeInitialize() be called.
-*
-* \param nTimeout [in] The timeout for this function in unit of millisecond, give 0 means skip P2P flow
-*
-* \attention	Mast be called before start connection. Minimum is 100 millisecond.
-*
-*/
-P2PAPI_API void IOTC_Setup_P2PConnection_Timeout(unsigned int nTimeout);
-
-/**
  * \brief ReInitialize IOTC module socket
  *
  * \details This function will reopen P2P UDP socket of IOTC module.
@@ -1497,85 +1304,6 @@ P2PAPI_API void IOTC_Setup_P2PConnection_Timeout(unsigned int nTimeout);
  *
  */
 P2PAPI_API int IOTC_ReInitSocket(unsigned short nUDPPort);
-
-/**
- * \brief Setup detect network reachable timeout
- *
- * \details Both device and client can call this, it can determine how many time to detect internet reachable.
- *			Once it called the timeout value is effective forever until IOTC_DeInitialize() be called.
- *
- * \param nTimeout [in] The timeout for this function in unit of millisecond
- *
- * \attention	Mast be called before start login or connection.
- *
- */
-P2PAPI_API void IOTC_Setup_DetectNetwork_Timeout(unsigned int nTimeout);
-
-/**
-* \brief Used by a device or a client to write data to the other in reliable way
-*
-* \details A device or a client uses this function to write data through
-*			a specific IOTC channel in a IOTC session in a reliable way.
-*
-* \param nIOTCSessionID [in] The session ID of the IOTC session to write data
-* \param cabBuf [in] The array of byte buffer containing the data to write.
-*			Its size cannot be larger than #RELIABLE_MAX_PACKET_SIZE
-* \param nBufSize [in] The length of the byte buffer. It cannot be larger than
-*			#RELIABLE_MAX_PACKET_SIZE
-* \param nIOTCChannelID [in] The IOTC channel ID in this IOTC session to write data
-* \param nTimeout [in] The timeout for this function in unit of millisecond, give 0 means it'll block until success or error occured.
-*
-* \return Return 0 if send successfully.
-* \return Error code if return value < 0
-*			- #IOTC_ER_NOT_INITIALIZED The IOTC module is not initialized yet
-*			- #IOTC_ER_INVALID_SID The specified IOTC session ID is not valid
-*			- #IOTC_ER_CH_NOT_ON The IOTC channel of specified channel ID is not turned on
-*			- #IOTC_ER_SESSION_CLOSE_BY_REMOTE The IOTC session of specified
-*				session ID has been closed by remote site
-*			- #IOTC_ER_REMOTE_TIMEOUT_DISCONNECT The timeout defined by #IOTC_SESSION_ALIVE_TIMEOUT
-*				expires because	remote site has no response
-*			- #IOTC_ER_EXCEED_MAX_PACKET_SIZE The packet size is larger than RELIABLE_MAX_PACKET_SIZE
-*			- #IOTC_ER_ABORTED Was aborted by IOTC_Session_Write_Reliable_Abort().
-*			- #IOTC_ER_BLOCKED_CALL IOTC_Session_Write_Reliable() with same channel and session ID was called in other place.
-*			- #IOTC_ER_SESSION_CLOSED The specified session is off or closed.
-*			- #IOTC_ER_SERVER_NOT_SUPPORT Server does not support this feature.
-*
-* \attention (1) The IOTC channel of ID 0 is enabled by default when a IOTC session is established.
-*				That means nIOTCChannelID can be specified as 0 if only one IOTC channel
-*				is needed by the user. If more IOTC channels are required, users
-*				should use IOTC_Session_Get_Free_Channel() and IOTC_Session_Channel_ON()
-*				to get more IOTC channel IDs and then specifying those IOTC channel IDs
-*				in this function according to the purpose defined by the user. <br><br>
-*				(2) This function will block when session is connected via TCP and socket buffer is full.
-*				(3) This function will need 4976 bytes stack size.
-*
-*/
-P2PAPI_API int IOTC_Session_Write_Reliable(int nIOTCSessionID, const char *cabBuf, int nBufSize, unsigned char nIOTCChannelID, unsigned int nTimeout);
-
-/**
-* \brief Used by a device or a client to abort specific IOTC_Session_Write_Reliable() immediately.
-*
-* \details A device or a client uses this function to write data through
-*			a specific IOTC channel in a IOTC session in a reliable way.
-*
-* \param nIOTCSessionID [in] The session ID of the IOTC session to write data
-* \param nIOTCChannelID [in] The IOTC channel ID in this IOTC session to write data
-*
-* \return Return 0 if IOTC_Session_Write_Reliable_Abort() call successfully.
-* \return Error code if return value < 0
-*			- #IOTC_ER_NOT_INITIALIZED The IOTC module is not initialized yet
-*			- #IOTC_ER_INVALID_SID The specified IOTC session ID is not valid
-*			- #IOTC_ER_CH_NOT_ON The IOTC channel of specified channel ID is not turned on
-* \attention The IOTC channel of ID 0 is enabled by default when a IOTC session is established.
-*				That means nIOTCChannelID can be specified as 0 if only one IOTC channel
-*				is needed by the user. If more IOTC channels are required, users
-*				should use IOTC_Session_Get_Free_Channel() and IOTC_Session_Channel_ON()
-*				to get more IOTC channel IDs and then specifying those IOTC channel IDs
-*				in this function according to the purpose defined by the user. <br><br>
-*
-**/
-P2PAPI_API int IOTC_Session_Write_Reliable_Abort(int nIOTCSessionID, unsigned char nIOTCChannelID);
-
 
 #ifdef IOTC_UCOSII
 void *malloc(unsigned int size);

@@ -41,6 +41,7 @@ typedef struct SUB_STREAM SubStream_t;
 #import <AudioToolbox/AudioToolbox.h>
 
 @protocol CameraDelegate;
+@protocol SoundToDeviceObserver;
 
 @class Camera;
 
@@ -67,6 +68,9 @@ typedef struct SUB_STREAM SubStream_t;
 	BOOL isBufferFromIFrame;
 }
 
+@property (nonatomic, assign) float mfGaPCMAmplifier_Gain;
+@property (nonatomic, assign) float mfGaPCMAmplifier_Gain_AfterMIC;
+@property (nonatomic, assign) float mfGaPCMAmplifier_Gain_BeforeSpeak;
 @property (nonatomic, assign) BOOL isChangeChannel;
 @property (nonatomic, assign) BOOL isCommonTypePFrame;
 @property (nonatomic, assign) BOOL isBufferFromIFrame;
@@ -93,6 +97,9 @@ typedef struct SUB_STREAM SubStream_t;
 
 @property (nonatomic, assign) id<VideoRecorderDelegate> videoRecorderDelegate;
 
+@property (nonatomic, assign) BOOL muteFarendAudioOnRecording;
+
+
 + (void)initIOTC;
 + (void)uninitIOTC;
 + (NSString *)getIOTCAPIsVerion;
@@ -114,6 +121,7 @@ typedef struct SUB_STREAM SubStream_t;
 - (void)startSoundToPhone:(NSInteger)channel;
 - (void)stopSoundToPhone:(NSInteger)channel;
 - (void)startSoundToDevice:(NSInteger)channel;
+- (void)startSoundToDevice:(NSInteger)channel observer:(id<SoundToDeviceObserver>)aSoundToDeviceObserver;
 - (void)stopSoundToDevice:(NSInteger)channel;
 - (void)sendIOCtrlToChannel:(NSInteger)channel Type:(NSInteger)type Data:(char *)buff DataSize:(NSInteger)size;
 - (unsigned int)getChannel:(NSInteger)channel Snapshot:(char *)imgData dataSize:(unsigned int)size WithImageWidth:(unsigned int *)width ImageHeight:(unsigned int *)height;
@@ -165,4 +173,9 @@ typedef struct SUB_STREAM SubStream_t;
 - (void)camera:(Camera *)camera didReceiveIOCtrlWithType:(NSInteger)type Data:(const char*)data DataSize:(NSInteger)size;
 @end
 
+@protocol SoundToDeviceObserver <NSObject>
 
+- (void)didCompletedCreateAudioChannelForSpeak:(NSString*)aUid av_index:(int)aAVIndex;
+- (void)failToCreateAudioChannelForSpeak:(NSString*)aUid err_code:(int)aErrCode;
+
+@end

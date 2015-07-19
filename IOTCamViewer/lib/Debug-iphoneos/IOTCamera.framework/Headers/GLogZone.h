@@ -28,9 +28,11 @@ extern unsigned int g_dwGLogZoneSeed;
 #define tUserDefaults_MSK		(1<< 12)
 #define tForeBackground_MSK		(1<< 13)
 #define tTimeStamp_MSK			(1<< 14)
+#define tAudioUnitPLAY_MSK		(1<< 15)
+#define tAudioUnitRECORD_MSK	(1<< 16)
+#define tDecode_MSK				(1<< 17)
 
-
-#define tAll					(1)
+#define tAll					1
 #define tUI						(g_dwGLogZoneSeed & tUI_MSK)
 #define tCtrl					(g_dwGLogZoneSeed & tCtrl_MSK)
 #define tMemory					(g_dwGLogZoneSeed & tMemory_MSK)
@@ -46,6 +48,9 @@ extern unsigned int g_dwGLogZoneSeed;
 #define tUserDefaults			(g_dwGLogZoneSeed & tUserDefaults_MSK)
 #define tForeBackground			(g_dwGLogZoneSeed & tForeBackground_MSK)
 #define tTimeStamp				(g_dwGLogZoneSeed & tTimeStamp_MSK)
+#define tAudioUnitPLAY			(g_dwGLogZoneSeed & tAudioUnitPLAY_MSK)
+#define tAudioUnitRECORD		(g_dwGLogZoneSeed & tAudioUnitRECORD_MSK)
+#define tDecode					(g_dwGLogZoneSeed & tDecode_MSK)
 
 
 #endif

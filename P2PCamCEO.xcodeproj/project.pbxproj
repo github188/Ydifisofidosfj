@@ -3093,6 +3093,7 @@
 		06BA0EAD1ACAD71400448ACB /* f-Btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0EAB1ACAD71400448ACB /* f-Btn@2x.png */; };
 		06E1BC6C1AF5DB5100755606 /* refresh_27_07_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E1BC6B1AF5DB5100755606 /* refresh_27_07_1.png */; };
 		06E1BC6D1AF5DB5100755606 /* refresh_27_07_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E1BC6B1AF5DB5100755606 /* refresh_27_07_1.png */; };
+		06E376D81B5A0BA2003A378F /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E376D71B5A0BA2003A378F /* Accelerate.framework */; };
 		06F00DF21AFDA4F200139703 /* FIR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F00DF11AFDA4F200139703 /* FIR.framework */; };
 		06F00DF31AFDA4F200139703 /* FIR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F00DF11AFDA4F200139703 /* FIR.framework */; };
 		06F425F71AA9FB6500427383 /* AppGuidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F425F51AA9FB6500427383 /* AppGuidViewController.m */; };
@@ -4541,6 +4542,7 @@
 		06BA0EAA1ACAD71400448ACB /* f-Btn_Click@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "f-Btn_Click@2x.png"; sourceTree = "<group>"; };
 		06BA0EAB1ACAD71400448ACB /* f-Btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "f-Btn@2x.png"; sourceTree = "<group>"; };
 		06E1BC6B1AF5DB5100755606 /* refresh_27_07_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh_27_07_1.png; sourceTree = "<group>"; };
+		06E376D71B5A0BA2003A378F /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		06F00DF11AFDA4F200139703 /* FIR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FIR.framework; sourceTree = "<group>"; };
 		06F425F41AA9FB6500427383 /* AppGuidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGuidViewController.h; sourceTree = "<group>"; };
 		06F425F51AA9FB6500427383 /* AppGuidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGuidViewController.m; sourceTree = "<group>"; };
@@ -5478,11 +5480,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06E376D81B5A0BA2003A378F /* Accelerate.framework in Frameworks */,
+				573267FD1860A48700BBE793 /* Security.framework in Frameworks */,
 				7A0B1C9619A6E9490071E5CF /* MediaPlayer.framework in Frameworks */,
 				7A0B1C9019A597BC0071E5CF /* libstdc++.6.0.9.dylib in Frameworks */,
 				7ABFD0C4190F6F7F00DDF03B /* SystemConfiguration.framework in Frameworks */,
 				572B926C18EA4BFA0041B732 /* CoreImage.framework in Frameworks */,
-				573267FD1860A48700BBE793 /* Security.framework in Frameworks */,
 				573267FB1860993000BBE793 /* DropboxSDK.framework in Frameworks */,
 				610DBA76169AF0BF00292CF9 /* AssetsLibrary.framework in Frameworks */,
 				610DBA77169AF0BF00292CF9 /* libz.dylib in Frameworks */,
@@ -6598,6 +6601,7 @@
 		8649B9501791443A000C621D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				06E376D71B5A0BA2003A378F /* Accelerate.framework */,
 				06F00DF11AFDA4F200139703 /* FIR.framework */,
 				06728E3D1ACFE1590087029A /* VideoToolbox.framework */,
 				7A0B1C9519A6E9490071E5CF /* MediaPlayer.framework */,
@@ -12498,7 +12502,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -12521,7 +12525,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "Aztech IP Cam";
-				PROVISIONING_PROFILE = "348df631-a77c-40d6-b948-1ca8741dc7f5";
+				PROVISIONING_PROFILE = "7f2dc5cd-ad2a-4094-af42-b8ffad955a09";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -12535,7 +12539,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -12559,7 +12563,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "Aztech IP Cam";
-				PROVISIONING_PROFILE = "348df631-a77c-40d6-b948-1ca8741dc7f5";
+				PROVISIONING_PROFILE = "7f2dc5cd-ad2a-4094-af42-b8ffad955a09";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -12573,7 +12577,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -12597,7 +12601,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "Aztech IP Cam";
-				PROVISIONING_PROFILE = "348df631-a77c-40d6-b948-1ca8741dc7f5";
+				PROVISIONING_PROFILE = "7f2dc5cd-ad2a-4094-af42-b8ffad955a09";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -12611,7 +12615,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -12634,7 +12638,7 @@
 					"-DP2PCAMLIVE",
 				);
 				PRODUCT_NAME = "Aztech IP Cam";
-				PROVISIONING_PROFILE = "348df631-a77c-40d6-b948-1ca8741dc7f5";
+				PROVISIONING_PROFILE = "7f2dc5cd-ad2a-4094-af42-b8ffad955a09";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";

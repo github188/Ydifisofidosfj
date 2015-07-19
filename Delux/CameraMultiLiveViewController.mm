@@ -861,6 +861,10 @@ extern unsigned int _getTickCount() ;
     statusBar3.frame=CGRectMake(0, self.vdo3.frame.origin.y+itemH, itemW, itemStatusH);
     self.vdo4.frame=CGRectMake(self.vdo3.frame.origin.x+itemW+itemMarginW, self.vdo3.frame.origin.y, itemW, itemH);
     statusBar4.frame=CGRectMake(statusBar3.frame.origin.x+itemW+itemMarginW, statusBar3.frame.origin.y, itemW, itemStatusH);
+    
+    cameraStatus1.frame=CGRectMake(statusBar1.frame.size.width-cameraStatus1.frame.size.width, 0, cameraStatus1.frame.size.width, statusBar1.frame.size.height);
+    
+    
     fullScreenButton1.frame=self.vdo1.frame;
     fullScreenButton2.frame=self.vdo2.frame;
     fullScreenButton3.frame=self.vdo3.frame;
@@ -1785,7 +1789,6 @@ extern unsigned int _getTickCount() ;
 			}	break;
 		}
 		
-		return;
 	}
 	
 	
@@ -1858,9 +1861,12 @@ extern unsigned int _getTickCount() ;
 							cameraStatusXX.text = NSLocalizedString(@"Timeout", @"");
 						} else if (status==CONNECTION_STATE_UNSUPPORTED){
 							cameraStatusXX.text = NSLocalizedString(@"Not Supported", @"");
-						} else if (status==CONNECTION_STATE_CONNECT_FAILED){
+						} else if (status==CONNECTION_STATE_CONNECT_FAILED || status== CONNECTION_STATE_DISCONNECTED){
 							cameraStatusXX.text = NSLocalizedString(@"Connect Failed", @"");
 						}
+                        else{
+                            cameraStatusXX.text = NSLocalizedString(@"Connect Failed", @"");
+                        }
 					}
 					
 				}
