@@ -4439,6 +4439,32 @@
 		069D50311B3845AC00B2E083 /* more_photo~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more_photo~ipad.png"; sourceTree = "<group>"; };
 		069D50321B3845AC00B2E083 /* more_set~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more_set~ipad.png"; sourceTree = "<group>"; };
 		069D50331B3845AC00B2E083 /* moreset_bk~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "moreset_bk~ipad.png"; sourceTree = "<group>"; };
+		069EC1051B5BDDA400E4708E /* ru */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ru; path = QTAIDT/images/ru.lproj/title_logo.png; sourceTree = "<group>"; };
+		069EC1061B5BDDA400E4708E /* ru */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ru; path = "QTAIDT/images/ru.lproj/title_logo@2x.png"; sourceTree = "<group>"; };
+		069EC1071B5BDDA400E4708E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		069EC1081B5BDDA400E4708E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		069EC1091B5BDDA500E4708E /* ru */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ru; path = "IPCAM P/images/ru.lproj/title_logo@2x.png"; sourceTree = "<group>"; };
+		069EC10A1B5BDDA500E4708E /* ru */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ru; path = "IPCAM P/images/ru.lproj/title_logo.png"; sourceTree = "<group>"; };
+		069EC10B1B5BDDA500E4708E /* ru */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ru; path = Maccam/images/ru.lproj/title_logo.png; sourceTree = "<group>"; };
+		069EC10C1B5BDDA500E4708E /* ru */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ru; path = "Maccam/images/ru.lproj/title_logo@2x.png"; sourceTree = "<group>"; };
+		069EC10D1B5BDDA600E4708E /* ru */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ru; path = WRT/images/ru.lproj/title_logo.png; sourceTree = "<group>"; };
+		069EC10E1B5BDDA600E4708E /* ru */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ru; path = "WRT/images/ru.lproj/title_logo@2x.png"; sourceTree = "<group>"; };
+		069EC10F1B5BDDA600E4708E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		069EC1101B5BDDA600E4708E /* ru */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ru; path = "Bayit Cam/images/ru.lproj/title_logo@2x.png"; sourceTree = "<group>"; };
+		069EC1111B5BDDA600E4708E /* ru */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ru; path = "Bayit Cam/images/ru.lproj/title_logo.png"; sourceTree = "<group>"; };
+		069EC1121B5BDDA700E4708E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/bayitcam.strings; sourceTree = "<group>"; };
+		069EC1131B5BDDA700E4708E /* ru */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ru; path = ru.lproj/title_logo.png; sourceTree = "<group>"; };
+		069EC1141B5BDDA700E4708E /* ru */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ru; path = "ru.lproj/title_logo@2x.png"; sourceTree = "<group>"; };
+		069EC1151B5BDDA700E4708E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/easyn.strings; sourceTree = "<group>"; };
+		069EC1161B5BDDA700E4708E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		069EC1171B5BDDA700E4708E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/zxingLangString.strings; sourceTree = "<group>"; };
+		069EC1181B5BDDA700E4708E /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/AddCamera.xib; sourceTree = "<group>"; };
+		069EC1191B5BDDA700E4708E /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/mainWindow.xib; sourceTree = "<group>"; };
+		069EC11A1B5BDDA700E4708E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		069EC11B1B5BDDA700E4708E /* ru */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ru; path = "ru.lproj/title_logo@2x~ipad.png"; sourceTree = "<group>"; };
+		069EC11C1B5BDDA800E4708E /* ru */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ru; path = "ru.lproj/title_logo~ipad.png"; sourceTree = "<group>"; };
+		069EC11D1B5BDDA800E4708E /* ru */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ru; path = ru.lproj/title_logo.png; sourceTree = "<group>"; };
+		069EC11E1B5BDDA800E4708E /* ru */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ru; path = "ru.lproj/title_logo@2x.png"; sourceTree = "<group>"; };
 		069EFB4F1B1207D00024CB5A /* IPCAM P.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IPCAM P.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		069EFB521B1208D10024CB5A /* IPCAM P-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "IPCAM P-Info.plist"; path = "IPCAM P/IPCAM P-Info.plist"; sourceTree = "<group>"; };
 		069EFB531B1208D10024CB5A /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = "IPCAM P/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -7143,6 +7169,7 @@
 				"zh-Hans",
 				ja,
 				ko,
+				ru,
 			);
 			mainGroup = D8F71AA8148C5342007705B6;
 			productRefGroup = D8F71AB4148C5342007705B6 /* Products */;
@@ -11178,6 +11205,7 @@
 				0644168E1B3C3CCE00AC75BD /* zh-Hant */,
 				0644168F1B3C3CD100AC75BD /* zh-Hans */,
 				064416901B3C3CD400AC75BD /* ko */,
+				069EC11B1B5BDDA700E4708E /* ru */,
 			);
 			name = "title_logo@2x~ipad.png";
 			sourceTree = "<group>";
@@ -11189,6 +11217,7 @@
 				0647DD021AB8674600F5553A /* zh-Hant */,
 				0647DD031AB8674A00F5553A /* zh-Hans */,
 				0609569D1AD4208E00F00FE0 /* ko */,
+				069EC1131B5BDDA700E4708E /* ru */,
 			);
 			name = title_logo.png;
 			sourceTree = "<group>";
@@ -11200,6 +11229,7 @@
 				0647DD071AB8675300F5553A /* zh-Hant */,
 				0647DD081AB8675400F5553A /* zh-Hans */,
 				0609569E1AD4208E00F00FE0 /* ko */,
+				069EC1141B5BDDA700E4708E /* ru */,
 			);
 			name = "title_logo@2x.png";
 			sourceTree = "<group>";
@@ -11211,6 +11241,7 @@
 				0647DD0D1AB86C3200F5553A /* zh-Hant */,
 				0647DD0E1AB86C3300F5553A /* zh-Hans */,
 				060956A51AD4209000F00FE0 /* ko */,
+				069EC11D1B5BDDA800E4708E /* ru */,
 			);
 			name = title_logo.png;
 			sourceTree = "<group>";
@@ -11222,6 +11253,7 @@
 				0647DD121AB86C3E00F5553A /* zh-Hant */,
 				0647DD131AB86C3F00F5553A /* zh-Hans */,
 				060956A61AD4209000F00FE0 /* ko */,
+				069EC11E1B5BDDA800E4708E /* ru */,
 			);
 			name = "title_logo@2x.png";
 			sourceTree = "<group>";
@@ -11233,6 +11265,7 @@
 				066041F01B2315E200FB6F32 /* en */,
 				066041F11B2315E500FB6F32 /* zh-Hant */,
 				066041F21B2315E700FB6F32 /* ko */,
+				069EC1051B5BDDA400E4708E /* ru */,
 			);
 			name = title_logo.png;
 			sourceTree = "<group>";
@@ -11244,6 +11277,7 @@
 				066041F31B2315EB00FB6F32 /* ko */,
 				066041F41B2315ED00FB6F32 /* zh-Hant */,
 				066041F51B2315EE00FB6F32 /* en */,
+				069EC1061B5BDDA400E4708E /* ru */,
 			);
 			name = "title_logo@2x.png";
 			sourceTree = "<group>";
@@ -11255,6 +11289,7 @@
 				066041F91B23161900FB6F32 /* en */,
 				066041FA1B23161A00FB6F32 /* zh-Hant */,
 				066041FB1B23161B00FB6F32 /* ko */,
+				069EC1071B5BDDA400E4708E /* ru */,
 			);
 			name = InfoPlist.strings;
 			path = QTAIDT;
@@ -11267,6 +11302,7 @@
 				066DA1081B03883F00408AF2 /* zh-Hant */,
 				066DA1091B03884200408AF2 /* en */,
 				066DA10A1B03884400408AF2 /* ko */,
+				069EC1111B5BDDA600E4708E /* ru */,
 			);
 			name = title_logo.png;
 			sourceTree = "<group>";
@@ -11278,6 +11314,7 @@
 				0682E0DC1B08D0C80019BD70 /* en */,
 				0682E0DD1B08D0CB0019BD70 /* zh-Hant */,
 				0682E0DE1B08D0D10019BD70 /* ko */,
+				069EC10D1B5BDDA600E4708E /* ru */,
 			);
 			name = title_logo.png;
 			sourceTree = "<group>";
@@ -11289,6 +11326,7 @@
 				0682E0DF1B08D0D90019BD70 /* en */,
 				0682E0E01B08D0DC0019BD70 /* zh-Hant */,
 				0682E0E11B08D0DE0019BD70 /* ko */,
+				069EC10E1B5BDDA600E4708E /* ru */,
 			);
 			name = "title_logo@2x.png";
 			sourceTree = "<group>";
@@ -11300,6 +11338,7 @@
 				0688793A1ABE1B9C0017A41A /* zh-Hant */,
 				0688793B1ABE1B9D0017A41A /* zh-Hans */,
 				0609569F1AD4208F00F00FE0 /* ko */,
+				069EC1151B5BDDA700E4708E /* ru */,
 			);
 			name = easyn.strings;
 			sourceTree = "<group>";
@@ -11311,6 +11350,7 @@
 				069C72F51B2075BA00D02130 /* zh-Hant */,
 				069C72F61B2075BC00D02130 /* zh-Hans */,
 				069C72F71B2075BE00D02130 /* ko */,
+				069EC10F1B5BDDA600E4708E /* ru */,
 			);
 			name = InfoPlist.strings;
 			path = WRT;
@@ -11323,6 +11363,7 @@
 				069D50241B383AF300B2E083 /* en */,
 				069D50251B383AF700B2E083 /* zh-Hans */,
 				069D50261B383AF900B2E083 /* ko */,
+				069EC11C1B5BDDA800E4708E /* ru */,
 			);
 			name = "title_logo~ipad.png";
 			sourceTree = "<group>";
@@ -11334,6 +11375,7 @@
 				069EFB9F1B120A230024CB5A /* zh-Hant */,
 				069EFBA01B120A260024CB5A /* zh-Hans */,
 				069EFBA11B120A290024CB5A /* ko */,
+				069EC10A1B5BDDA500E4708E /* ru */,
 			);
 			name = title_logo.png;
 			sourceTree = "<group>";
@@ -11345,6 +11387,7 @@
 				069EFBA51B120A5F0024CB5A /* zh-Hant */,
 				069EFBA61B120A610024CB5A /* zh-Hans */,
 				069EFBA71B120A630024CB5A /* ko */,
+				069EC1091B5BDDA500E4708E /* ru */,
 			);
 			name = "title_logo@2x.png";
 			sourceTree = "<group>";
@@ -11356,6 +11399,7 @@
 				069EFBAF1B121A7F0024CB5A /* zh-Hant */,
 				069EFBB01B121A800024CB5A /* zh-Hans */,
 				069EFBB11B121A810024CB5A /* ko */,
+				069EC1081B5BDDA400E4708E /* ru */,
 			);
 			name = Localizable.strings;
 			path = "IPCAM P";
@@ -11368,6 +11412,7 @@
 				06B8CB3B1B0A2366006ED6EE /* zh-Hant */,
 				06B8CB3C1B0A2368006ED6EE /* zh-Hans */,
 				06B8CB3D1B0A236B006ED6EE /* ko */,
+				069EC10B1B5BDDA500E4708E /* ru */,
 			);
 			name = title_logo.png;
 			sourceTree = "<group>";
@@ -11379,6 +11424,7 @@
 				06B8CB3E1B0A2375006ED6EE /* zh-Hant */,
 				06B8CB3F1B0A2377006ED6EE /* zh-Hans */,
 				06B8CB401B0A2379006ED6EE /* ko */,
+				069EC10C1B5BDDA500E4708E /* ru */,
 			);
 			name = "title_logo@2x.png";
 			sourceTree = "<group>";
@@ -11390,6 +11436,7 @@
 				06FB5F241B063459005B7674 /* en */,
 				06FB5F251B06345C005B7674 /* zh-Hant */,
 				06FB5F261B063460005B7674 /* ko */,
+				069EC1101B5BDDA600E4708E /* ru */,
 			);
 			name = "title_logo@2x.png";
 			sourceTree = "<group>";
@@ -11398,6 +11445,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				06FF92581B055ABE00DD5803 /* en */,
+				069EC1121B5BDDA700E4708E /* ru */,
 			);
 			name = bayitcam.strings;
 			path = "Bayit Cam";
@@ -11410,6 +11458,7 @@
 				61082AF71531CEA100DDF07D /* zh-Hant */,
 				619274DC157EF65D00E6B5A2 /* zh-Hans */,
 				060956A31AD4209000F00FE0 /* ko */,
+				069EC1191B5BDDA700E4708E /* ru */,
 			);
 			name = mainWindow.xib;
 			sourceTree = "<group>";
@@ -11421,6 +11470,7 @@
 				61890F2E1533CCAB0031B4EC /* zh-Hant */,
 				619274DD157EF70500E6B5A2 /* zh-Hans */,
 				060956A21AD4209000F00FE0 /* ko */,
+				069EC1181B5BDDA700E4708E /* ru */,
 			);
 			name = AddCamera.xib;
 			sourceTree = "<group>";
@@ -11432,6 +11482,7 @@
 				61890F361533D1430031B4EC /* zh-Hant */,
 				619274DB157EF65600E6B5A2 /* zh-Hans */,
 				060956A81AD421F800F00FE0 /* ko */,
+				069EC1161B5BDDA700E4708E /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -11443,6 +11494,7 @@
 				86418B0A1996782C00A25BB8 /* zh-Hans */,
 				86418B0B1996783A00A25BB8 /* zh-Hant */,
 				060956A11AD4208F00F00FE0 /* ko */,
+				069EC1171B5BDDA700E4708E /* ru */,
 			);
 			name = zxingLangString.strings;
 			sourceTree = "<group>";
@@ -11452,6 +11504,7 @@
 			children = (
 				D8F71AC1148C5342007705B6 /* en */,
 				060956A41AD4209000F00FE0 /* ko */,
+				069EC11A1B5BDDA700E4708E /* ru */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
