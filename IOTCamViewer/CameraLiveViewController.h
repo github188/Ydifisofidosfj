@@ -148,6 +148,7 @@ extern NSString *deviceTokenString;
 #endif
     BOOL isRecording;
     NSString *recordFileName;
+	CGSize msizeOrgVideoResolution;	// During local recording cannot change this , and also cannot do listen / talk function    
     
     BOOL isMyRationed;
     

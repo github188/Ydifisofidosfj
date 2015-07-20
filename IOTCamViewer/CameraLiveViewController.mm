@@ -594,53 +594,85 @@ extern unsigned int _getTickCount() {
 
 - (void)onBtnRecording {
 #if !(TARGET_IPHONE_SIMULATOR)
-    if (self.videoGenerator.isRecording) {
+    if( 0 < msizeOrgVideoResolution.width && msizeOrgVideoResolution.width <= 1920 &&
+       0 < msizeOrgVideoResolution.height && msizeOrgVideoResolution.height <= 1080 ) {
         
-        //[UIAlertView alertViewWithTitle: @"Error" message: @"Still recording video"];
+        if (isRecording && self.videoGenerator != nil && self.videoGenerator.isRecording) {
+            
+            //[UIAlertView alertViewWithTitle: @"Error" message: @"Still recording video"];
+            
+            [self.videoGenerator stopRecordingWithCompletionHandler:nil];
+            return;
+        }
         
-        [self.videoGenerator stopRecordingWithCompletionHandler:nil];
-        return;
+        uint64_t freespace = [VideoGenerator freeDiskspace];
+        NSLog(@"Freespace %llu", freespace);
+        if (freespace < 314572800) { // 300Mb
+            
+            [UIAlertView alertViewWithTitle: NSLocalizedString(@"Warning",@"") message: NSLocalizedString(@"Not enough space to save video",@"")];
+            
+        }
+        
+        else if (mCodecId != MEDIA_CODEC_VIDEO_H264) {
+            
+            [UIAlertView alertViewWithTitle: NSLocalizedString(@"Warning",@"") message: NSLocalizedString(@"Camera's video type is not supported recording",@"")];
+            
+            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",nil];
+            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click", nil];
+            
+            [self.horizMenu reloadData];
+            [self.longHorizMenu reloadData];
+            
+        }
+        
+        else {
+            
+            //camera.isRecordForAlex = YES;
+            
+            //會備存至CameraRoll
+            recordFileName = [[NSString stringWithFormat:@"CEO_Record_CH%d_%f.mp4", (int)selectedChannel, [[NSDate date] timeIntervalSince1970]] retain];
+            NSString *path= [self pathForDocumentsResource:recordFileName];
+            NSURL* url = [NSURL fileURLWithPath:path];
+            
+            camera.isShowInLiveView = YES;
+            camera.isRecording = YES;
+            
+            if( self.videoGenerator ) {
+                [self.videoGenerator release];
+            }
+            
+            self.videoGenerator = [[VideoGenerator alloc] initWithDestinationURL:url andCamera:camera];
+            self.videoGenerator.size = msizeOrgVideoResolution;
+            int nRECDuration = 180;
+            NSLog(@"**[REC start <1>]***************************************");
+            NSLog(@" local recording to %@", [url absoluteString]);
+            NSLog(@" recordingChannel:%d",(int)selectedChannel);
+            NSLog(@" duration: %d", nRECDuration);
+            
+            [self.videoGenerator startRecordingForChannel:selectedChannel withDuration:nRECDuration];
+            
+            [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(reTryVideoREC:) userInfo:nil repeats:NO];
+            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable", @"f+Btn", @"f-Btn",nil];
+            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable",@"f+Btn_Click", @"f-Btn_Click",nil];
+            
+            [self.horizMenu reloadData];
+            [self.longHorizMenu reloadData];
+            
+        }
     }
-    
-    uint64_t freespace = [VideoGenerator freeDiskspace];
-    NSLog(@"Freespace %llu", freespace);
-    if (freespace < 314572800) { // 300Mb
-        
-        [UIAlertView alertViewWithTitle: NSLocalizedString(@"Warning",@"") message: NSLocalizedString(@"Not enough space to save video",@"")];
-        
-    }
-    
-    else if (mCodecId != MEDIA_CODEC_VIDEO_H264) {
-        
-        [UIAlertView alertViewWithTitle: NSLocalizedString(@"Warning",@"") message: NSLocalizedString(@"Camera's video type is not supported recording",@"")];
-        
-        self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",nil];
-        self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click", nil];
-        
-        [self.horizMenu reloadData];
-        [self.longHorizMenu reloadData];
-        
-    }
-    
     else {
-        
-        //會備存至CameraRoll
-        recordFileName = [[NSString alloc] initWithFormat:@"CEO_Record_%f.mp4", [[NSDate date] timeIntervalSince1970]];
-        NSString *path= [self pathForDocumentsResource:recordFileName];
-        NSURL* url = [NSURL fileURLWithPath: path];
-        
-        camera.isShowInLiveView = YES;
-        
-        self.videoGenerator = [[VideoGenerator alloc] initWithDestinationURL: url andCamera: camera];
-        [self.videoGenerator startRecordingForChannel:selectedChannel withDuration:180];
-        
-        self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable", @"f+Btn", @"f-Btn",nil];
-        self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable",@"f+Btn_Click", @"f-Btn_Click",nil];
-        
-        [self.horizMenu reloadData];
-        [self.longHorizMenu reloadData];
+        NSLog(@"Ignore local REC function... due to the msizeOrgVideoResolution value invalid!!!");
     }
 #endif
+}
+- (void)reTryVideoREC:(NSTimer*)aTimer
+{
+    if( !isRecording ) {
+        
+        NSLog(@"**[REC start <reTry>]***************************************");
+        [self onBtnRecording];
+        
+    }
 }
 
 #if !(TARGET_IPHONE_SIMULATOR)
@@ -1538,6 +1570,9 @@ extern unsigned int _getTickCount() {
 			NSLog( @"!!!!!!!! ERROR !!!!!!!!" );
 			return;
 		}
+        
+        msizeOrgVideoResolution.width = videoWidth;
+        msizeOrgVideoResolution.height = videoHeight;
 		
 		CGSize maxZoom = CGSizeMake((videoWidth*2.0 > 1920)?1920:videoWidth*2.0, (videoHeight*2.0 > 1080)?1080:videoHeight*2.0);
 		if( glView && videoWidth > 0 && videoHeight > 0 ) {
