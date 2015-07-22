@@ -24,6 +24,11 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
+		<key>MKC Eye.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>Maccam.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -53,6 +58,11 @@
 			<true/>
 		</dict>
 		<key>0682DE0D1B08CCF30019BD70</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0692A7121B5FC55400D28D06</key>
 		<dict>
 			<key>primary</key>
 			<true/>
