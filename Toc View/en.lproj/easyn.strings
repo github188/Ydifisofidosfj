@@ -1,0 +1,16 @@
+
+"WIFI一键设置"="Add Camera";
+"AddApWifiTips"="1.Wi-Fi SmartConfig";
+"AddApWifiTips2"="Camera first setting to connect network without  cable,only for specified camera";
+"AddApWifiOtherTips"="2.Ethernet cable connection or connected to router wirelessly";
+"AddApWifiNextStep"="Next";
+"AddApWifiStep2Tips"="Please connect the power adapter to the camera,then the camera will rotate, after  Ding-Dong tone from camera,then click \"Next\"";
+"AddApWifiStep2NeedWifiTips"="Please make sure the phone connect wifi first.";
+"AddApWifiStep3SettingBtnTitle"="Setting";
+"AddApWifiSSIDTips"="SSID can not be empty!";
+"AddApWifiPsdTips"="Password can not be empty!";
+"AddApWifiAudioTips"="If any Ding-dong tone from camera?";
+"AddApWifiResetTips"="Press the RESET button at the bottom of camera for 10 seconds for RESET";
+"AddApWifiWaitingTips"="Wi-fi is configuration, please wait patiently";
+"AddApWifiErrorTips"="WIFI connection failed, please confirm your wifi password!";
+"ViewPsdLbl"="Show password";

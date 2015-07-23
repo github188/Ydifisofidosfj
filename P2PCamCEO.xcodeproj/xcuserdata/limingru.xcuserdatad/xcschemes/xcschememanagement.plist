@@ -39,6 +39,11 @@
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
+		<key>Toc View.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>WRT.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -68,6 +73,11 @@
 			<true/>
 		</dict>
 		<key>069EF90C1B1207D00024CB5A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>06AA8C4E1B5FE8960050A6E7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
