@@ -708,6 +708,7 @@
 		066041ED1B23153500FB6F32 /* title_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 066041EA1B23153500FB6F32 /* title_logo@2x.png */; };
 		066041F61B23161700FB6F32 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 066041F81B23161700FB6F32 /* InfoPlist.strings */; };
 		0660B76E1B64A06300EC4155 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E376D71B5A0BA2003A378F /* Accelerate.framework */; };
+		0660B76F1B64A2BE00EC4155 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E376D71B5A0BA2003A378F /* Accelerate.framework */; };
 		06642F661B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06642F651B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg */; };
 		06642F671B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06642F651B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg */; };
 		06642F681B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06642F651B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg */; };
@@ -6644,6 +6645,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0660B76F1B64A2BE00EC4155 /* Accelerate.framework in Frameworks */,
 				066DA05C1B037E7C00408AF2 /* MediaPlayer.framework in Frameworks */,
 				066DA05D1B037E7C00408AF2 /* libstdc++.6.0.9.dylib in Frameworks */,
 				066DA05E1B037E7C00408AF2 /* SystemConfiguration.framework in Frameworks */,
@@ -14635,7 +14637,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "Bayit Cam";
-				PROVISIONING_PROFILE = "16cd66d0-6741-41cf-a07e-b76bef814fd1";
+				PROVISIONING_PROFILE = "c9c70833-614d-499c-b49c-65ff0d77160f";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -14673,7 +14675,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "Bayit Cam";
-				PROVISIONING_PROFILE = "16cd66d0-6741-41cf-a07e-b76bef814fd1";
+				PROVISIONING_PROFILE = "c9c70833-614d-499c-b49c-65ff0d77160f";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -14711,7 +14713,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "Bayit Cam";
-				PROVISIONING_PROFILE = "16cd66d0-6741-41cf-a07e-b76bef814fd1";
+				PROVISIONING_PROFILE = "c9c70833-614d-499c-b49c-65ff0d77160f";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -14748,7 +14750,7 @@
 					"-DP2PCAMLIVE",
 				);
 				PRODUCT_NAME = "Bayit Cam";
-				PROVISIONING_PROFILE = "16cd66d0-6741-41cf-a07e-b76bef814fd1";
+				PROVISIONING_PROFILE = "c9c70833-614d-499c-b49c-65ff0d77160f";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
