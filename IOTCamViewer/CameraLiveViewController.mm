@@ -892,7 +892,8 @@ extern unsigned int _getTickCount() {
         NSString *audioTitleStr=longAudioTitle.titleLabel.text;
         CGSize audioTitleStrSize=[audioTitleStr sizeWithFont:longAudioTitle.titleLabel.font];
         longTalkButton.frame=CGRectMake(self.view.frame.size.width-audioTitleStrSize.width-self.longTalkButtonBtn.frame.size.width-15, self.view.frame.size.height-self.longHorizMenu.frame.size.height-longTalkButton.frame.size.height, audioTitleStrSize.width+self.longTalkButtonBtn.frame.size.width, longTalkButton.frame.size.height);
-        longAudioTitle.frame=CGRectMake(0, longTalkButton.frame.size.height-audioTitleStrSize.height, audioTitleStrSize.width+15, audioTitleStrSize.height);
+        longAudioTitle.frame=CGRectMake(0, longTalkButton.frame.size.height-audioTitleStrSize.height, audioTitleStrSize.width+25, audioTitleStrSize.height);
+        longAudioTitle.titleLabel.textAlignment=NSTextAlignmentCenter;
         self.longTalkButtonBtn.frame=CGRectMake(longAudioTitle.frame.origin.x+longAudioTitle.frame.size.width, longTalkButton.frame.size.height-self.longTalkButtonBtn.frame.size.height, self.longTalkButtonBtn.frame.size.width, self.longTalkButtonBtn.frame.size.height);
         
         longQVGAView.frame=CGRectMake(self.view.frame.size.width/2-longQVGAView.frame.size.width/2, self.view.frame.size.height-self.longHorizMenu.frame.size.height-longQVGAView.frame.size.height-15, longQVGAView.frame.size.width, longQVGAView.frame.size.height);
@@ -954,7 +955,8 @@ extern unsigned int _getTickCount() {
         NSString *audioTitleStr=AudioTitle.titleLabel.text;
         CGSize audioTitleStrSize=[audioTitleStr sizeWithFont:AudioTitle.titleLabel.font];
         talkButton.frame=CGRectMake(self.view.frame.size.width-audioTitleStrSize.width-self.talkButtonBtn.frame.size.width-15, self.view.frame.size.height-self.horizMenu.frame.size.height-talkButton.frame.size.height, audioTitleStrSize.width+self.talkButtonBtn.frame.size.width, talkButton.frame.size.height);
-        AudioTitle.frame=CGRectMake(0, talkButton.frame.size.height-audioTitleStrSize.height, audioTitleStrSize.width+15, audioTitleStrSize.height);
+        AudioTitle.frame=CGRectMake(0, talkButton.frame.size.height-audioTitleStrSize.height, audioTitleStrSize.width+20, audioTitleStrSize.height);
+
         self.talkButtonBtn.frame=CGRectMake(AudioTitle.frame.origin.x+AudioTitle.frame.size.width, talkButton.frame.size.height-self.talkButtonBtn.frame.size.height, self.talkButtonBtn.frame.size.width, self.talkButtonBtn.frame.size.height);
         
         scrollQVGAView.frame=CGRectMake(self.view.frame.size.width/2-scrollQVGAView.frame.size.width/2, self.view.frame.size.height-self.horizMenu.frame.size.height-scrollQVGAView.frame.size.height, scrollQVGAView.frame.size.width, scrollQVGAView.frame.size.height);
@@ -1122,14 +1124,16 @@ extern unsigned int _getTickCount() {
 #if defined(EasynPTarget)
     [set50Hz setTitle:NSLocalizedString(@"Indoor Mode(50Hz)", @"") forState:UIControlStateNormal];
     [_longBtn50HZ setTitle:NSLocalizedString(@"Indoor Mode(50Hz)", @"") forState:UIControlStateNormal];
+    [set60Hz setTitle:[NSString stringWithFormat:@"%@%@",NSLocalizedString(@"Outdoor Mode", @""),NSLocalizedString(@"60HZ", @"")] forState:UIControlStateNormal];
+    [_longBtn60HZ setTitle:[NSString stringWithFormat:@"%@%@",NSLocalizedString(@"Outdoor Mode", @""),NSLocalizedString(@"60HZ", @"")] forState:UIControlStateNormal];
 #else
     [set50Hz setTitle:[NSString stringWithFormat:@"%@(50HZ)",NSLocalizedString(@"Night Mode", @"")] forState:UIControlStateNormal];
     [_longBtn50HZ setTitle:[NSString stringWithFormat:@"%@(50HZ)",NSLocalizedString(@"Night Mode", @"")] forState:UIControlStateNormal];
+    [set60Hz setTitle:[NSString stringWithFormat:@"%@(%@)",NSLocalizedString(@"Outdoor Mode", @""),NSLocalizedString(@"60HZ", @"")] forState:UIControlStateNormal];
+    [_longBtn60HZ setTitle:[NSString stringWithFormat:@"%@(%@)",NSLocalizedString(@"Outdoor Mode", @""),NSLocalizedString(@"60HZ", @"")] forState:UIControlStateNormal];
 #endif
     
     
-    [set60Hz setTitle:[NSString stringWithFormat:@"%@(60HZ)",NSLocalizedString(@"Outdoor Mode", @"")] forState:UIControlStateNormal];
-    [_longBtn60HZ setTitle:[NSString stringWithFormat:@"%@(60HZ)",NSLocalizedString(@"Outdoor Mode", @"")] forState:UIControlStateNormal];
     
     [longSetHighest setTitle:NSLocalizedString(@"Highest", @"") forState:UIControlStateNormal];
     [longSetHigh setTitle:NSLocalizedString(@"High", @"") forState:UIControlStateNormal];
