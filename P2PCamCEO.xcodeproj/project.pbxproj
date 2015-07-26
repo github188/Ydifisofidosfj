@@ -707,6 +707,7 @@
 		066041EC1B23153500FB6F32 /* title_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 066041E81B23153500FB6F32 /* title_logo.png */; };
 		066041ED1B23153500FB6F32 /* title_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 066041EA1B23153500FB6F32 /* title_logo@2x.png */; };
 		066041F61B23161700FB6F32 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 066041F81B23161700FB6F32 /* InfoPlist.strings */; };
+		0660B76E1B64A06300EC4155 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E376D71B5A0BA2003A378F /* Accelerate.framework */; };
 		06642F661B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06642F651B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg */; };
 		06642F671B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06642F651B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg */; };
 		06642F681B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06642F651B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg */; };
@@ -6765,6 +6766,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0660B76E1B64A06300EC4155 /* Accelerate.framework in Frameworks */,
 				069EFB291B1207D00024CB5A /* MediaPlayer.framework in Frameworks */,
 				069EFB2A1B1207D00024CB5A /* libstdc++.6.0.9.dylib in Frameworks */,
 				069EFB2B1B1207D00024CB5A /* SystemConfiguration.framework in Frameworks */,
