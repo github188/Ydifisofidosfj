@@ -35,7 +35,9 @@
     self.navigationItem.title = NSLocalizedString(@"用户手册", @"");
     [self.skipBtn setTitle:NSLocalizedString(@"GuidSkip", @"") forState:UIControlStateNormal];
     
-    
+#if defined(MKCEYE)
+    self.view.backgroundColor=[UIColor colorWithRed:149/255.0 green:162/255.0 blue:181/255.0 alpha:1.0f];
+#endif
 
     
 }
