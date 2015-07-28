@@ -62,6 +62,7 @@ extern unsigned int _getTickCount() {
 @synthesize items = _items;
 @synthesize selectItems = selectItems;
 @synthesize hideToolBarTimer;
+@synthesize isCanSendSetCameraCMD;
 
 #if !(TARGET_IPHONE_SIMULATOR)
 @synthesize videoGenerator;
@@ -1098,6 +1099,7 @@ extern unsigned int _getTickCount() {
     
     camera.isShowInMultiView = NO;
     isChangeChannel = NO;
+    self.isCanSendSetCameraCMD=YES;
     
 #if defined(BayitCam)
     [AudioTitle setTitle:NSLocalizedStringFromTable(@"Push to talk", @"bayitcam", nil) forState:UIControlStateNormal];
@@ -1323,7 +1325,7 @@ extern unsigned int _getTickCount() {
         camera.delegate2 = self;
         
         
-        SMsgAVIoctrlGetAudioOutFormatReq *s = (SMsgAVIoctrlGetAudioOutFormatReq *)malloc(sizeof(SMsgAVIoctrlGetAudioOutFormatReq));
+        /*SMsgAVIoctrlGetAudioOutFormatReq *s = (SMsgAVIoctrlGetAudioOutFormatReq *)malloc(sizeof(SMsgAVIoctrlGetAudioOutFormatReq));
         s->channel = 0;
         [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GETAUDIOOUTFORMAT_REQ Data:(char *)s DataSize:sizeof(SMsgAVIoctrlGetAudioOutFormatReq)];
         free(s);
@@ -1334,7 +1336,7 @@ extern unsigned int _getTickCount() {
         
         SMsgAVIoctrlTimeZone s3={0};
         s3.cbSize = sizeof(s3);
-        [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];
+        [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];*/
         
         
 
@@ -1402,9 +1404,19 @@ extern unsigned int _getTickCount() {
         [loadingViewPortrait startAnimating];
         [loadingViewLandscape startAnimating];
         
-        [self loadCameraQVGAStatus];
+        //[self loadCameraQVGAStatus];
+        [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(setCameraQVGAFPS) userInfo:nil repeats:NO];
+        
         
         [self activeAudioSession];
+    }
+}
+-(void)setCameraQVGAFPS{
+    if(self.isCanSendSetCameraCMD){
+        [MyCamera loadCameraQVGA:camera];
+    }
+    else{
+        [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(setCameraQVGAFPS) userInfo:nil repeats:NO];
     }
 }
 -(void)loadCameraQVGAStatus{
@@ -2318,6 +2330,7 @@ extern unsigned int _getTickCount() {
 
             isQVGAView = NO;
             isEModeView = NO;
+            self.isCanSendSetCameraCMD=NO;
             
             selectedAudioMode = AUDIO_MODE_SPEAKER;
             [self activeAudioSession];
@@ -2340,6 +2353,7 @@ extern unsigned int _getTickCount() {
             isActive = NO;
             
             self.myPtzView.hidden=NO;
+            self.isCanSendSetCameraCMD=YES;
         }
         
     } else if (index == RECORDING) {

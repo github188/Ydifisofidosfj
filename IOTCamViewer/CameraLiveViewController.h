@@ -197,6 +197,7 @@ extern NSString *deviceTokenString;
 @property (nonatomic, retain) NSMutableArray *items;
 @property (nonatomic, retain) NSMutableArray *selectItems;
 @property (nonatomic, retain)NSTimer *hideToolBarTimer;
+@property(nonatomic) BOOL isCanSendSetCameraCMD;
 
 - (IBAction)back:(id)sender;
 - (IBAction)snapshot:(id)sender;
