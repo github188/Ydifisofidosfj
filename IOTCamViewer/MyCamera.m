@@ -439,6 +439,18 @@ BOOL g_bDiagnostic = FALSE;
 //    return;
 //}
 
++(void)setcameraLoadAVGA:(NSString *)uid withIsLoad:(BOOL)isLoad{
+    NSUserDefaults *userDefault=[NSUserDefaults standardUserDefaults];
+    NSString *key=[NSString stringWithFormat:@"QVGALOAD%@",uid];
+    [userDefault setBool:isLoad forKey:key];
+}
++(BOOL)getCameraLoadQVGA:(NSString *)uid{
+    NSUserDefaults *userDefault=[NSUserDefaults standardUserDefaults];
+    NSString *key=[NSString stringWithFormat:@"QVGALOAD%@",uid];
+    BOOL rsult= [userDefault boolForKey:key];
+    return rsult;
+}
+
 
 +(NSString *)cameraQVGAKey:(NSString *)uid{
     return [NSString stringWithFormat:@"%@QVGA",uid];

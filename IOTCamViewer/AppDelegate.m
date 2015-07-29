@@ -334,6 +334,13 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
     }
     [rs close];
     //迁移图片／录像END
+    //设置摄像机是不是第一次打开单画面
+    FMResultSet *camearars = [database executeQuery:@"SELECT * FROM device"];
+    while([camearars next]) {
+        NSString *uid = [camearars stringForColumn:@"dev_uid"];
+        [MyCamera setcameraLoadAVGA:uid withIsLoad:NO];
+    }
+    //设置摄像机是不是第一次打开单画面END
     
     //注册推送通知
     if([[[UIDevice currentDevice]systemVersion] floatValue]>=8.0f){

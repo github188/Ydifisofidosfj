@@ -63,6 +63,7 @@ extern unsigned int _getTickCount() {
 @synthesize selectItems = selectItems;
 @synthesize hideToolBarTimer;
 @synthesize isCanSendSetCameraCMD;
+@synthesize isTalkButtonAction;
 
 #if !(TARGET_IPHONE_SIMULATOR)
 @synthesize videoGenerator;
@@ -367,6 +368,24 @@ extern unsigned int _getTickCount() {
 
 #pragma mark Functions of buttons
 - (IBAction)talkOn:(id)sender {
+    
+    if(!self.isTalkButtonAction)
+    {
+        SMsgAVIoctrlGetAudioOutFormatReq *s = (SMsgAVIoctrlGetAudioOutFormatReq *)malloc(sizeof(SMsgAVIoctrlGetAudioOutFormatReq));
+        s->channel = 0;
+        [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GETAUDIOOUTFORMAT_REQ Data:(char *)s DataSize:sizeof(SMsgAVIoctrlGetAudioOutFormatReq)];
+        free(s);
+        
+        SMsgAVIoctrlGetSupportStreamReq *s2 = (SMsgAVIoctrlGetSupportStreamReq *)malloc(sizeof(SMsgAVIoctrlGetSupportStreamReq));
+        [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GETSUPPORTSTREAM_REQ Data:(char *)s2 DataSize:sizeof(SMsgAVIoctrlGetSupportStreamReq)];
+        free(s2);
+        
+        SMsgAVIoctrlTimeZone s3={0};
+        s3.cbSize = sizeof(s3);
+        [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];
+        self.isTalkButtonAction=YES;
+    }
+    
     isTalking = YES;
     selectedAudioMode = AUDIO_MODE_MICROPHONE;
     [camera stopSoundToPhone:selectedChannel];
@@ -1325,18 +1344,7 @@ extern unsigned int _getTickCount() {
         camera.delegate2 = self;
         
         
-        /*SMsgAVIoctrlGetAudioOutFormatReq *s = (SMsgAVIoctrlGetAudioOutFormatReq *)malloc(sizeof(SMsgAVIoctrlGetAudioOutFormatReq));
-        s->channel = 0;
-        [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GETAUDIOOUTFORMAT_REQ Data:(char *)s DataSize:sizeof(SMsgAVIoctrlGetAudioOutFormatReq)];
-        free(s);
-        
-        SMsgAVIoctrlGetSupportStreamReq *s2 = (SMsgAVIoctrlGetSupportStreamReq *)malloc(sizeof(SMsgAVIoctrlGetSupportStreamReq));
-        [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GETSUPPORTSTREAM_REQ Data:(char *)s2 DataSize:sizeof(SMsgAVIoctrlGetSupportStreamReq)];
-        free(s2);
-        
-        SMsgAVIoctrlTimeZone s3={0};
-        s3.cbSize = sizeof(s3);
-        [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];*/
+
         
         
 
@@ -1404,9 +1412,10 @@ extern unsigned int _getTickCount() {
         [loadingViewPortrait startAnimating];
         [loadingViewLandscape startAnimating];
         
-        //[self loadCameraQVGAStatus];
-        [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(setCameraQVGAFPS) userInfo:nil repeats:NO];
-        
+        if(![MyCamera getCameraLoadQVGA:camera.uid]) {
+            //[self loadCameraQVGAStatus];
+            [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(setCameraQVGAFPS) userInfo:nil repeats:NO];
+        }
         
         [self activeAudioSession];
     }
@@ -1665,6 +1674,7 @@ extern unsigned int _getTickCount() {
         SMsgAVIoctrlSetStreamCtrlResp* pResult=(SMsgAVIoctrlSetStreamCtrlResp*)data;
         NSLog(@"IOTYPE_USER_IPCAM_SETSTREAMCTRL_RESP result=%d",pResult->result);
         [self initQVGAMode:[MyCamera getCameraQVGA:camera]];
+        [MyCamera setcameraLoadAVGA:camera.uid withIsLoad:YES];
         if (camera_==camera) {
 			[camera reStartShow:selectedChannel withCompleteBlock:^(void){
 				

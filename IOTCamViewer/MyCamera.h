@@ -74,6 +74,9 @@
 +(void)loadCameraQVGA:(MyCamera *)ca;
 +(NSInteger)getCameraQVGA:(MyCamera *)camera;
 
++(void)setcameraLoadAVGA:(NSString *)uid withIsLoad:(BOOL)isLoad;
++(BOOL)getCameraLoadQVGA:(NSString *)uid;
+
 @end
 
 @protocol MyCameraDelegate <NSObject>
