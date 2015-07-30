@@ -817,7 +817,7 @@ extern unsigned int _getTickCount() {
         
         //將資料回步回手機
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        [userDefaults setInteger:selectedChannel forKey:[[NSString alloc] initWithFormat:@"ChannelMultiSetting_%@",viewTag]];
+        [userDefaults setInteger:selectedChannel forKey:[[[NSString alloc] autorelease] initWithFormat:@"ChannelMultiSetting_%@",viewTag]];
         [userDefaults synchronize];
         
         [self.delegate didReStartCamera:camera cameraChannel:[NSNumber numberWithInteger:camera.lastChannel] withView:viewTag];
@@ -1225,6 +1225,7 @@ extern unsigned int _getTickCount() {
     
     self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:negativeSpacer, backButton, nil];
     [backButton release];
+    [negativeSpacer release];
     
     [self.monitorPortrait setMinimumGestureLength:100 MaximumVariance:50];
     [self.monitorPortrait setUserInteractionEnabled:YES];
@@ -1369,6 +1370,7 @@ extern unsigned int _getTickCount() {
 
                 self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:negativeSpacer, streamButton, nil];
                 [streamButton release];
+                [negativeSpacer release];
             }
             
             self.navigationItem.title = [NSString stringWithFormat:@"%@ - CH%d", camera.name, selectedChannel + 1];
@@ -1832,6 +1834,7 @@ extern unsigned int _getTickCount() {
 
         self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:negativeSpacer, streamButton, nil];
         [streamButton release];
+        [negativeSpacer release];
         
 		[NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(cameraStartShow:) userInfo:nil repeats:NO];
 	}
