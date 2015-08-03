@@ -369,7 +369,7 @@ extern unsigned int _getTickCount() {
 #pragma mark Functions of buttons
 - (IBAction)talkOn:(id)sender {
     
-    /*if(!self.isTalkButtonAction)
+    if(!self.isTalkButtonAction)
     {
         SMsgAVIoctrlGetAudioOutFormatReq *s = (SMsgAVIoctrlGetAudioOutFormatReq *)malloc(sizeof(SMsgAVIoctrlGetAudioOutFormatReq));
         s->channel = 0;
@@ -384,7 +384,7 @@ extern unsigned int _getTickCount() {
         s3.cbSize = sizeof(s3);
         [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];
         self.isTalkButtonAction=YES;
-    }*/
+    }
     
     isTalking = YES;
     selectedAudioMode = AUDIO_MODE_MICROPHONE;
@@ -1345,7 +1345,7 @@ extern unsigned int _getTickCount() {
         camera.delegate2 = self;
         
         
-        SMsgAVIoctrlGetAudioOutFormatReq *s = (SMsgAVIoctrlGetAudioOutFormatReq *)malloc(sizeof(SMsgAVIoctrlGetAudioOutFormatReq));
+        /*SMsgAVIoctrlGetAudioOutFormatReq *s = (SMsgAVIoctrlGetAudioOutFormatReq *)malloc(sizeof(SMsgAVIoctrlGetAudioOutFormatReq));
         s->channel = 0;
         [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GETAUDIOOUTFORMAT_REQ Data:(char *)s DataSize:sizeof(SMsgAVIoctrlGetAudioOutFormatReq)];
         free(s);
@@ -1356,7 +1356,7 @@ extern unsigned int _getTickCount() {
         
         SMsgAVIoctrlTimeZone s3={0};
         s3.cbSize = sizeof(s3);
-        [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];
+        [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];*/
 
         
         
