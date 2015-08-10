@@ -231,6 +231,26 @@ extern NSString *deviceTokenString;
 
 @property (retain, nonatomic) IBOutlet UIButton *talkButtonBtn;
 @property (retain, nonatomic) IBOutlet UIButton *longTalkButtonBtn;
+//对比度
+@property (retain, nonatomic) IBOutlet UIScrollView *portraitConstrastScrollView;
+@property (retain, nonatomic) IBOutlet UIView *portraitContrastView;
+@property (retain, nonatomic) IBOutlet UIButton *portraitContrastTitle;
+@property (retain, nonatomic) IBOutlet UIButton *portaitContrastHigest;
+@property (retain, nonatomic) IBOutlet UIButton *portaitContrastHigt;
+@property (retain, nonatomic) IBOutlet UIButton *portaitContrastMiddle;
+@property (retain, nonatomic) IBOutlet UIButton *portaitContrastLow;
+@property (retain, nonatomic) IBOutlet UIButton *portaitContrastLowest;
+- (IBAction)onContrastClicked:(id)sender;
+//亮度
+@property (retain, nonatomic) IBOutlet UIScrollView *portraitBrightScrollView;
+@property (retain, nonatomic) IBOutlet UIView *portraitBrightView;
+@property (retain, nonatomic) IBOutlet UIButton *portraitBrightTitle;
+@property (retain, nonatomic) IBOutlet UIButton *portraitBrightHigh;
+@property (retain, nonatomic) IBOutlet UIButton *portraitBrightHighLow;
+@property (retain, nonatomic) IBOutlet UIButton *portraitBrightMiddle;
+@property (retain, nonatomic) IBOutlet UIButton *portraitBrightLow;
+@property (retain, nonatomic) IBOutlet UIButton *portraitBrightLowest;
+- (IBAction)onBrightClicked:(id)sender;
 
 @end
 

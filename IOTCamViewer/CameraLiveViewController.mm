@@ -637,8 +637,8 @@ extern unsigned int _getTickCount() {
             
             [UIAlertView alertViewWithTitle: NSLocalizedString(@"Warning",@"") message: NSLocalizedString(@"Camera's video type is not supported recording",@"")];
             
-            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",nil];
-            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click", nil];
+            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",@"psd_bright",@"psd_contrast",nil];
+            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click", @"psd_bright_clicked",@"psd_contrast_clicked",nil];
             
             [self.horizMenu reloadData];
             [self.longHorizMenu reloadData];
@@ -672,8 +672,8 @@ extern unsigned int _getTickCount() {
             [self.videoGenerator startRecordingForChannel:selectedChannel withDuration:nRECDuration];
             
             [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(reTryVideoREC:) userInfo:nil repeats:NO];
-            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable", @"f+Btn", @"f-Btn",nil];
-            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable",@"f+Btn_Click", @"f-Btn_Click",nil];
+            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable", @"f+Btn", @"f-Btn",@"psd_bright",@"psd_contrast",nil];
+            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable",@"f+Btn_Click", @"f-Btn_Click",@"psd_bright_clicked",@"psd_contrast_clicked",nil];
             
             [self.horizMenu reloadData];
             [self.longHorizMenu reloadData];
@@ -732,8 +732,8 @@ extern unsigned int _getTickCount() {
         [self.videoGenerator saveToAlbumWithCompletionHandler: ^(NSError* error) {
             if (!error) {
                 
-                self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode", @"f+Btn", @"f-Btn",nil];
-                self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click", nil];
+                self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode", @"f+Btn", @"f-Btn",@"psd_bright",@"psd_contrast",nil];
+                self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click", @"psd_bright_clicked",@"psd_contrast_clicked",nil];
                 
                 [self.horizMenu reloadData];
                 [self.longHorizMenu reloadData];
@@ -982,6 +982,10 @@ extern unsigned int _getTickCount() {
         self.talkButtonBtn.frame=CGRectMake(AudioTitle.frame.origin.x+AudioTitle.frame.size.width, talkButton.frame.size.height-self.talkButtonBtn.frame.size.height, self.talkButtonBtn.frame.size.width, self.talkButtonBtn.frame.size.height);
         
         scrollQVGAView.frame=CGRectMake(self.view.frame.size.width/2-scrollQVGAView.frame.size.width/2, self.view.frame.size.height-self.horizMenu.frame.size.height-scrollQVGAView.frame.size.height, scrollQVGAView.frame.size.width, scrollQVGAView.frame.size.height);
+        //亮度对比度
+        self.portraitBrightScrollView.frame=CGRectMake(self.view.frame.size.width/2-self.portraitBrightScrollView.frame.size.width/2, self.view.frame.size.height-self.horizMenu.frame.size.height-self.portraitBrightScrollView.frame.size.height, self.portraitBrightScrollView.frame.size.width, self.portraitBrightScrollView.frame.size.height);
+        self.portraitConstrastScrollView.frame=CGRectMake(self.view.frame.size.width/2-self.portraitConstrastScrollView.frame.size.width/2, self.view.frame.size.height-self.horizMenu.frame.size.height-self.portraitConstrastScrollView.frame.size.height, self.portraitConstrastScrollView.frame.size.width, self.portraitConstrastScrollView.frame.size.height);
+        
         
         scrollEModeView.frame=CGRectMake(self.view.frame.size.width/2-scrollEModeView.frame.size.width/2, self.view.frame.size.height-self.horizMenu.frame.size.height-scrollEModeView.frame.size.height, scrollEModeView.frame.size.width, scrollEModeView.frame.size.height);
         
@@ -1107,6 +1111,22 @@ extern unsigned int _getTickCount() {
     [_longBtn60HZ release];
     [_talkButtonBtn release];
     [_longTalkButtonBtn release];
+    [_portraitConstrastScrollView release];
+    [_portraitContrastView release];
+    [_portraitContrastTitle release];
+    [_portaitContrastHigest release];
+    [_portaitContrastHigt release];
+    [_portaitContrastMiddle release];
+    [_portaitContrastLow release];
+    [_portaitContrastLowest release];
+    [_portraitBrightScrollView release];
+    [_portraitBrightView release];
+    [_portraitBrightTitle release];
+    [_portraitBrightHigh release];
+    [_portraitBrightHighLow release];
+    [_portraitBrightMiddle release];
+    [_portraitBrightLow release];
+    [_portraitBrightLowest release];
     [super dealloc];
 }
 
@@ -1177,8 +1197,8 @@ extern unsigned int _getTickCount() {
     
     self.navigationController.navigationBar.translucent = NO;
     
-    self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",nil];
-    self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click", nil];
+    self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",@"psd_bright",@"psd_contrast",nil];
+    self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click", @"psd_bright_clicked",@"psd_contrast_clicked",nil];
     
     [scrollQVGAView setContentSize:qvgaView.frame.size];
     [scrollQVGAView setClipsToBounds:YES];
@@ -2313,7 +2333,7 @@ extern unsigned int _getTickCount() {
 #if defined(EasynPTarget) || defined(IPCAMP) || defined(QTAIDT)
     return [self.items count];
 #else
-    return [self.items count]-2;
+    return [self.items count]-4;
 #endif
 }
 
@@ -2702,6 +2722,10 @@ extern unsigned int _getTickCount() {
 - (IBAction)landBackAction:(id)sender {
 }
 
+- (IBAction)onContrastClicked:(id)sender {
+}
+- (IBAction)onBrightClicked:(id)sender {
+}
 @end
 
 @implementation UINavigationController (autorotation)
