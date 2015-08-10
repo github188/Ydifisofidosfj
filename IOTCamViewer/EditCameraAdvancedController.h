@@ -19,6 +19,9 @@
 #import "FMDatabase.h"
 #import "DeviceListOnCloud.h"
 #import "ChooseViewController.h"
+#if defined(CameraMailSetting)
+#import "MailSettingController.h"
+#endif
 
 #define SECURITYCODE_SECTION_INDEX 0
 #define VIDEO_SECTION_INDEX 1
@@ -30,9 +33,13 @@
 extern FMDatabase *database;
 
 @protocol EditCameraAdvancedDelegate;
-
+#if defined(CameraMailSetting)
 @interface EditCameraAdvancedController : UITableViewController 
-<MyCameraDelegate, RecordingModeDelegate, MotionDetectionDelegate, VideoQualityDelegate, VideoFlipDelegate, EnvironmentModeDelegate, SecurityCodeDelegate, WiFiNetworkDelegate, TimeZoneChangedDelegate, DeviceOnCloudDelegate,ChooseDelegate> {
+<MyCameraDelegate, RecordingModeDelegate, MotionDetectionDelegate, VideoQualityDelegate, VideoFlipDelegate, EnvironmentModeDelegate, SecurityCodeDelegate, WiFiNetworkDelegate, TimeZoneChangedDelegate, DeviceOnCloudDelegate,ChooseDelegate,MailSettingDelegate> {
+#else
+@interface EditCameraAdvancedController : UITableViewController
+    <MyCameraDelegate, RecordingModeDelegate, MotionDetectionDelegate, VideoQualityDelegate, VideoFlipDelegate, EnvironmentModeDelegate, SecurityCodeDelegate, WiFiNetworkDelegate, TimeZoneChangedDelegate, DeviceOnCloudDelegate,ChooseDelegate> {
+#endif
     
     MyCamera *camera;
     NSString *theNewPassword;

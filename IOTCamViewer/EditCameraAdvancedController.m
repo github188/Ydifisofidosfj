@@ -11,6 +11,7 @@
 #import "WiFiNetworkController.h"
 #import "AboutDeviceController.h"
 #import "FormatSDCardController.h"
+
 typedef struct
 {
     int cbSize;							// the following package size in bytes, should be sizeof(SMsgAVIoctrlTimeZone)
@@ -270,6 +271,9 @@ typedef struct
     if ([self getSyncSettingSectionIndex] <0){
         idx--;
     }
+#if defined(CameraMailSetting)
+    idx++;
+#endif
     
     return [camera getDeviceInfoSupportOfChannel:0] ? idx : -1;
 }
@@ -434,9 +438,13 @@ typedef struct
     if ([camera getDeviceInfoSupportOfChannel:0])
         row++;
     
+#if defined(CameraMailSetting)
+    row++;
+#endif
+    
     //for SyncSetting
     row++;
-    	
+    
 	NSLog( @"numberOfSectionsInTableView : %d", row );
 	
     return row;
@@ -469,7 +477,13 @@ typedef struct
         if ([camera getRecordSettingSupportOfChannel:0]) row++;
         if ([camera getFormatSDCardSupportOfChannel:0]) row++;
         return row;
-    } else if (section == [self getDeviceInfoSectionIndex]) {
+    }
+#if defined(CameraMailSetting)
+    else if (section == [self getDeviceInfoSectionIndex]-1){
+        return 1;
+    }
+#endif
+    else if (section == [self getDeviceInfoSectionIndex]) {
         int row = 0;
         if ([camera getDeviceInfoSupportOfChannel:0]) row++;
         return row;
@@ -892,6 +906,13 @@ typedef struct
                 [text release];
         }
     }
+#if defined(CameraMailSetting)
+    else if (section == [self getDeviceInfoSectionIndex]-1){
+        cell.textLabel.text = NSLocalizedString(@"Mail Setting", @"");
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.detailTextLabel.text = @"";
+    }
+#endif
     else if (section == [self getDeviceInfoSectionIndex]) {
         		
         NSString *text = [[NSString alloc] initWithString:NSLocalizedString(@"About Device", @"")];
@@ -1158,6 +1179,14 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
             [controller release];
         }
     }
+#if defined(CameraMailSetting)
+    else if (section == [self getDeviceInfoSectionIndex]-1){
+        MailSettingController*  controller = [[MailSettingController alloc] initWithStyle:UITableViewStyleGrouped delgate:self];
+        controller.camera = self.camera;
+        [self.navigationController pushViewController:controller animated:YES];
+        [controller release];
+    }
+#endif
     else if (section == [self getDeviceInfoSectionIndex]) {
 		if( ![self readyToPushNextVC] ) {
 			[self.tableView deselectRowAtIndexPath:indexPath animated:YES];

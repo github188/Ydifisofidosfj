@@ -4874,6 +4874,10 @@
 		06D3FADD1B78EFB0006AF177 /* title_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D3FAD91B78EFB0006AF177 /* title_logo.png */; };
 		06D3FADE1B78EFB0006AF177 /* title_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D3FADB1B78EFB0006AF177 /* title_logo@2x.png */; };
 		06D3FAE21B78EFF8006AF177 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D3FAE11B78EFF8006AF177 /* Images.xcassets */; };
+		06D3FAE51B795D42006AF177 /* MailSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D3FAE41B795D41006AF177 /* MailSettingController.m */; };
+		06D3FAEB1B795D78006AF177 /* smtpServers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06D3FAE61B795D78006AF177 /* smtpServers.plist */; };
+		06D3FAEC1B795D78006AF177 /* MailProtocolController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D3FAE81B795D78006AF177 /* MailProtocolController.m */; };
+		06D3FAED1B795D78006AF177 /* MailSmtpController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D3FAEA1B795D78006AF177 /* MailSmtpController.m */; };
 		06E1BC6C1AF5DB5100755606 /* refresh_27_07_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E1BC6B1AF5DB5100755606 /* refresh_27_07_1.png */; };
 		06E1BC6D1AF5DB5100755606 /* refresh_27_07_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E1BC6B1AF5DB5100755606 /* refresh_27_07_1.png */; };
 		06E376D81B5A0BA2003A378F /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E376D71B5A0BA2003A378F /* Accelerate.framework */; };
@@ -6809,6 +6813,13 @@
 		06D3FADF1B78EFC7006AF177 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = "MAJESTIC IPCAM P/images/en.lproj/title_logo@2x.png"; sourceTree = "<group>"; };
 		06D3FAE01B78EFCC006AF177 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = "MAJESTIC IPCAM P/images/en.lproj/title_logo.png"; sourceTree = "<group>"; };
 		06D3FAE11B78EFF8006AF177 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "MAJESTIC IPCAM P/Images.xcassets"; sourceTree = "<group>"; };
+		06D3FAE31B795D41006AF177 /* MailSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MailSettingController.h; sourceTree = "<group>"; };
+		06D3FAE41B795D41006AF177 /* MailSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MailSettingController.m; sourceTree = "<group>"; };
+		06D3FAE61B795D78006AF177 /* smtpServers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = smtpServers.plist; sourceTree = "<group>"; };
+		06D3FAE71B795D78006AF177 /* MailProtocolController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MailProtocolController.h; sourceTree = "<group>"; };
+		06D3FAE81B795D78006AF177 /* MailProtocolController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MailProtocolController.m; sourceTree = "<group>"; };
+		06D3FAE91B795D78006AF177 /* MailSmtpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MailSmtpController.h; sourceTree = "<group>"; };
+		06D3FAEA1B795D78006AF177 /* MailSmtpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MailSmtpController.m; sourceTree = "<group>"; };
 		06E1BC6B1AF5DB5100755606 /* refresh_27_07_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh_27_07_1.png; sourceTree = "<group>"; };
 		06E376D71B5A0BA2003A378F /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		06F00DF11AFDA4F200139703 /* FIR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FIR.framework; sourceTree = "<group>"; };
@@ -8855,6 +8866,13 @@
 		06D3FA891B78E811006AF177 /* MAJESTIC IPCAM P */ = {
 			isa = PBXGroup;
 			children = (
+				06D3FAE61B795D78006AF177 /* smtpServers.plist */,
+				06D3FAE71B795D78006AF177 /* MailProtocolController.h */,
+				06D3FAE81B795D78006AF177 /* MailProtocolController.m */,
+				06D3FAE91B795D78006AF177 /* MailSmtpController.h */,
+				06D3FAEA1B795D78006AF177 /* MailSmtpController.m */,
+				06D3FAE31B795D41006AF177 /* MailSettingController.h */,
+				06D3FAE41B795D41006AF177 /* MailSettingController.m */,
 				06D3FAE11B78EFF8006AF177 /* Images.xcassets */,
 				06D3FAAC1B78EF7C006AF177 /* images */,
 				06D3FA9B1B78EF54006AF177 /* aztechjt */,
@@ -13490,6 +13508,7 @@
 				06D3F9961B78E7C1006AF177 /* more_event_disable.png in Resources */,
 				06D3F9971B78E7C1006AF177 /* ceo_rcplay_line.png in Resources */,
 				06D3F9981B78E7C1006AF177 /* moreset_listm@2x.png in Resources */,
+				06D3FAEB1B795D78006AF177 /* smtpServers.plist in Resources */,
 				06D3F99A1B78E7C1006AF177 /* add_web.png in Resources */,
 				06D3F99B1B78E7C1006AF177 /* microphone@2X.png in Resources */,
 				06D3F99C1B78E7C1006AF177 /* snapshot.png in Resources */,
@@ -15553,6 +15572,7 @@
 				06D3F8701B78E7C1006AF177 /* UIImageView+ImageView.m in Sources */,
 				06D3F8711B78E7C1006AF177 /* MKHorizMenu.m in Sources */,
 				06D3F8721B78E7C1006AF177 /* UIBarButtonItem+WEPopover.m in Sources */,
+				06D3FAE51B795D42006AF177 /* MailSettingController.m in Sources */,
 				06D3F8731B78E7C1006AF177 /* WEPopoverContainerView.m in Sources */,
 				06D3F8741B78E7C1006AF177 /* UIImage+Resize.m in Sources */,
 				06D3F8751B78E7C1006AF177 /* WEPopoverController.m in Sources */,
@@ -15572,6 +15592,7 @@
 				06D3F8831B78E7C1006AF177 /* FMDatabasePool.m in Sources */,
 				06D3F8841B78E7C1006AF177 /* FMDatabaseQueue.m in Sources */,
 				06D3F8851B78E7C1006AF177 /* FMResultSet.m in Sources */,
+				06D3FAED1B795D78006AF177 /* MailSmtpController.m in Sources */,
 				06D3F8861B78E7C1006AF177 /* RootViewController.m in Sources */,
 				06D3F8871B78E7C1006AF177 /* CheckNetwork.m in Sources */,
 				06D3F8881B78E7C1006AF177 /* Reachability.m in Sources */,
@@ -15597,6 +15618,7 @@
 				06D3F89C1B78E7C1006AF177 /* UITextView+TextView.m in Sources */,
 				06D3F89D1B78E7C1006AF177 /* UIImage+DrawImage.m in Sources */,
 				06D3F89E1B78E7C1006AF177 /* NSArray+Sort.m in Sources */,
+				06D3FAEC1B795D78006AF177 /* MailProtocolController.m in Sources */,
 				06D3F89F1B78E7C1006AF177 /* TimeZoneListController.m in Sources */,
 				06D3F8A01B78E7C1006AF177 /* cCustomNavigationController.m in Sources */,
 				06D3F8A11B78E7C1006AF177 /* IQTextView.m in Sources */,
@@ -17581,6 +17603,7 @@
 					NewSearchLanDevice,
 					RemoveModel,
 					RemoveVendor,
+					CameraMailSetting,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/MAJESTIC IPCAM P/MAJESTIC IPCAM P-Info.plist";
@@ -17624,6 +17647,7 @@
 					NewSearchLanDevice,
 					RemoveModel,
 					RemoveVendor,
+					CameraMailSetting,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/MAJESTIC IPCAM P/MAJESTIC IPCAM P-Info.plist";
@@ -17668,6 +17692,7 @@
 					NewSearchLanDevice,
 					RemoveModel,
 					RemoveVendor,
+					CameraMailSetting,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/MAJESTIC IPCAM P/MAJESTIC IPCAM P-Info.plist";
@@ -17712,6 +17737,7 @@
 					NewSearchLanDevice,
 					RemoveModel,
 					RemoveVendor,
+					CameraMailSetting,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/MAJESTIC IPCAM P/MAJESTIC IPCAM P-Info.plist";
