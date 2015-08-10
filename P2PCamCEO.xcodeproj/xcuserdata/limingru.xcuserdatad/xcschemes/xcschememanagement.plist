@@ -24,6 +24,11 @@
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
+		<key>MAJESTIC IPCAM P.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
 		<key>MKC Eye.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -83,6 +88,11 @@
 			<true/>
 		</dict>
 		<key>06B8C8B81B0A21BB006ED6EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>06D3F82A1B78E7C1006AF177</key>
 		<dict>
 			<key>primary</key>
 			<true/>
