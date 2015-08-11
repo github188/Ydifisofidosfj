@@ -2351,13 +2351,27 @@ extern unsigned int _getTickCount() {
     scrollQVGAView.hidden = YES;
     scrollEModeView.hidden = YES;
     
+    self.portraitBrightScrollView.hidden=YES;
+    self.portraitConstrastScrollView.hidden=YES;
+    
     longTalkButton.hidden = YES;
     longQVGAView.hidden = YES;
     longEModeView.hidden = YES;
     
     isActive = YES;
     
-    if(index==7){
+    if(index==9){
+        isActive=NO;
+        self.portraitBrightScrollView.hidden=NO;
+        [self.horizMenu setUnselectedIndex:9 animated:YES];
+    }
+    else if(index==10)
+    {
+        isActive=NO;
+        self.portraitConstrastScrollView.hidden=NO;
+        [self.horizMenu setUnselectedIndex:10 animated:YES];
+    }
+    else if(index==7){
         isActive=NO;
         [self myPtzAction:AVIOCTRL_LENS_ZOOM_IN];
         [self.horizMenu setUnselectedIndex:7 animated:YES];
