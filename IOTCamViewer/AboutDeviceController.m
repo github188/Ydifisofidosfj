@@ -237,6 +237,9 @@
 #if defined(BayitCam)
            vender=@"EN";
 #endif
+#if defined(MAJESTICIPCAMP)
+        vender=@"Majestic";
+#endif
         
         if (vender == nil || [vender length] == 0) {
             [cell addSubview:venderIndicator];

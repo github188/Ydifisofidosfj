@@ -155,6 +155,10 @@ extern NSString *deviceTokenString;
     char emode;
     
     BOOL isHiddenTopNav;
+    
+    
+    BOOL isBright;
+    BOOL isContrast;
 }
 
 //for Recording
@@ -240,6 +244,18 @@ extern NSString *deviceTokenString;
 @property (retain, nonatomic) IBOutlet UIButton *portaitContrastMiddle;
 @property (retain, nonatomic) IBOutlet UIButton *portaitContrastLow;
 @property (retain, nonatomic) IBOutlet UIButton *portaitContrastLowest;
+
+@property (retain, nonatomic) IBOutlet UIView *landConstrastView;
+@property (retain, nonatomic) IBOutlet UIButton *landConstrastTitle;
+@property (retain, nonatomic) IBOutlet UIButton *landContrastHighest;
+@property (retain, nonatomic) IBOutlet UIButton *landContrastHigh;
+@property (retain, nonatomic) IBOutlet UIButton *landContrastMiddle;
+@property (retain, nonatomic) IBOutlet UIButton *landContrastLow;
+@property (retain, nonatomic) IBOutlet UIButton *landContrastLowest;
+
+
+
+
 - (IBAction)onContrastClicked:(id)sender;
 //亮度
 @property (retain, nonatomic) IBOutlet UIScrollView *portraitBrightScrollView;
@@ -250,6 +266,15 @@ extern NSString *deviceTokenString;
 @property (retain, nonatomic) IBOutlet UIButton *portraitBrightMiddle;
 @property (retain, nonatomic) IBOutlet UIButton *portraitBrightLow;
 @property (retain, nonatomic) IBOutlet UIButton *portraitBrightLowest;
+
+@property (retain, nonatomic) IBOutlet UIView *landBrightView;
+@property (retain, nonatomic) IBOutlet UIButton *landBrightTitle;
+@property (retain, nonatomic) IBOutlet UIButton *landBrightHighest;
+@property (retain, nonatomic) IBOutlet UIButton *landBrightHigh;
+@property (retain, nonatomic) IBOutlet UIButton *landBrightMiddle;
+@property (retain, nonatomic) IBOutlet UIButton *landBrightLow;
+@property (retain, nonatomic) IBOutlet UIButton *landBrightLowest;
+
 - (IBAction)onBrightClicked:(id)sender;
 
 @end

@@ -17634,8 +17634,8 @@
 					IPCAMP,
 					NewSearchLanDevice,
 					RemoveModel,
-					RemoveVendor,
 					CameraMailSetting,
+					MAJESTICIPCAMP,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/MAJESTIC IPCAM P/MAJESTIC IPCAM P-Info.plist";
@@ -17678,8 +17678,8 @@
 					IPCAMP,
 					NewSearchLanDevice,
 					RemoveModel,
-					RemoveVendor,
 					CameraMailSetting,
+					MAJESTICIPCAMP,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/MAJESTIC IPCAM P/MAJESTIC IPCAM P-Info.plist";
@@ -17723,8 +17723,8 @@
 					IPCAMP,
 					NewSearchLanDevice,
 					RemoveModel,
-					RemoveVendor,
 					CameraMailSetting,
+					MAJESTICIPCAMP,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/MAJESTIC IPCAM P/MAJESTIC IPCAM P-Info.plist";
@@ -17768,8 +17768,8 @@
 					IPCAMP,
 					NewSearchLanDevice,
 					RemoveModel,
-					RemoveVendor,
 					CameraMailSetting,
+					MAJESTICIPCAMP,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/MAJESTIC IPCAM P/MAJESTIC IPCAM P-Info.plist";

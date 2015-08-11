@@ -15,6 +15,20 @@
                 <outlet property="frameInfoLabel" destination="66" id="67"/>
                 <outlet property="horizMenu" destination="ZCU-og-BNj" id="MQL-2Z-CvD"/>
                 <outlet property="landBackBtn" destination="O6d-UQ-nMa" id="TZE-QP-whU"/>
+                <outlet property="landBrightHigh" destination="Q4K-Rt-4Kq" id="Ncr-sg-94j"/>
+                <outlet property="landBrightHighest" destination="Ya7-4K-PV6" id="Zfm-8q-0h2"/>
+                <outlet property="landBrightLow" destination="6p4-aK-elB" id="t5R-O7-k33"/>
+                <outlet property="landBrightLowest" destination="FMJ-B2-gSj" id="Nsk-r2-emQ"/>
+                <outlet property="landBrightMiddle" destination="wNG-zX-HAW" id="0BF-ux-Fsc"/>
+                <outlet property="landBrightTitle" destination="nnn-lw-MTJ" id="Qpc-9h-K1s"/>
+                <outlet property="landBrightView" destination="S3O-WB-Mte" id="dNv-42-1d4"/>
+                <outlet property="landConstrastTitle" destination="4ae-rJ-oBU" id="bf0-Wz-cdD"/>
+                <outlet property="landConstrastView" destination="33K-Ji-C80" id="JWx-sl-4fL"/>
+                <outlet property="landContrastHigh" destination="NI0-cl-dEC" id="hq7-8R-u2X"/>
+                <outlet property="landContrastHighest" destination="Y9M-JU-ucL" id="ciG-EU-frd"/>
+                <outlet property="landContrastLow" destination="YwI-eb-5VX" id="Boz-k0-N5C"/>
+                <outlet property="landContrastLowest" destination="OGF-L5-0sA" id="Qdq-gQ-2bJ"/>
+                <outlet property="landContrastMiddle" destination="ljh-Ig-b76" id="mIb-1K-XTU"/>
                 <outlet property="landscapeView" destination="96" id="118"/>
                 <outlet property="loadingViewLandscape" destination="162" id="166"/>
                 <outlet property="loadingViewPortrait" destination="161" id="167"/>
@@ -863,6 +877,186 @@
                         <outlet property="itemSelectedDelegate" destination="-1" id="x8A-9a-don"/>
                     </connections>
                 </scrollView>
+                <view hidden="YES" contentMode="scaleToFill" id="S3O-WB-Mte" userLabel="BrightView">
+                    <rect key="frame" x="124" y="-124" width="320" height="172"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nnn-lw-MTJ">
+                            <rect key="frame" x="100" y="0.0" width="120" height="23"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="亮度" backgroundImage="toolinfo_bk.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ya7-4K-PV6">
+                            <rect key="frame" x="57" y="25" width="206" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="最高" backgroundImage="qualitylist.png">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" backgroundImage="qualitylist_clicked.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onBrightClicked:" destination="-1" eventType="touchUpInside" id="xFl-Xl-1fE"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Q4K-Rt-4Kq">
+                            <rect key="frame" x="57" y="57" width="206" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="高" backgroundImage="qualitylist.png">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" backgroundImage="qualitylist_clicked.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onBrightClicked:" destination="-1" eventType="touchUpInside" id="wyN-WM-mca"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wNG-zX-HAW">
+                            <rect key="frame" x="57" y="89" width="206" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="適中" backgroundImage="qualitylist.png">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" backgroundImage="qualitylist_clicked.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onBrightClicked:" destination="-1" eventType="touchUpInside" id="0pg-7L-f1v"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6p4-aK-elB">
+                            <rect key="frame" x="57" y="121" width="206" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="低" backgroundImage="qualitylist.png">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" backgroundImage="qualitylist_clicked.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onBrightClicked:" destination="-1" eventType="touchUpInside" id="wUN-DM-J3N"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FMJ-B2-gSj">
+                            <rect key="frame" x="57" y="153" width="206" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="最低" backgroundImage="qualitylist.png">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" backgroundImage="qualitylist_clicked.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onBrightClicked:" destination="-1" eventType="touchUpInside" id="DoT-8B-gbg"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" id="33K-Ji-C80" userLabel="ContrastView">
+                    <rect key="frame" x="124" y="-124" width="320" height="172"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4ae-rJ-oBU">
+                            <rect key="frame" x="100" y="0.0" width="120" height="23"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="对比度" backgroundImage="toolinfo_bk.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Y9M-JU-ucL">
+                            <rect key="frame" x="57" y="25" width="206" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="最高" backgroundImage="qualitylist.png">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" backgroundImage="qualitylist_clicked.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onContrastClicked:" destination="-1" eventType="touchUpInside" id="Mk0-L5-SDN"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NI0-cl-dEC">
+                            <rect key="frame" x="57" y="57" width="206" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="高" backgroundImage="qualitylist.png">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" backgroundImage="qualitylist_clicked.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onContrastClicked:" destination="-1" eventType="touchUpInside" id="xze-WA-52L"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ljh-Ig-b76">
+                            <rect key="frame" x="57" y="89" width="206" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="適中" backgroundImage="qualitylist.png">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" backgroundImage="qualitylist_clicked.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onContrastClicked:" destination="-1" eventType="touchUpInside" id="SNR-y9-mP1"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YwI-eb-5VX">
+                            <rect key="frame" x="57" y="121" width="206" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="低" backgroundImage="qualitylist.png">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" backgroundImage="qualitylist_clicked.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onContrastClicked:" destination="-1" eventType="touchUpInside" id="FWT-Z3-pYl"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OGF-L5-0sA">
+                            <rect key="frame" x="57" y="153" width="206" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="最低" backgroundImage="qualitylist.png">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" backgroundImage="qualitylist_clicked.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onContrastClicked:" destination="-1" eventType="touchUpInside" id="rl1-Ts-PoP"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>

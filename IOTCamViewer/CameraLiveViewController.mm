@@ -919,6 +919,9 @@ extern unsigned int _getTickCount() {
         
         longQVGAView.frame=CGRectMake(self.view.frame.size.width/2-longQVGAView.frame.size.width/2, self.view.frame.size.height-self.longHorizMenu.frame.size.height-longQVGAView.frame.size.height-15, longQVGAView.frame.size.width, longQVGAView.frame.size.height);
         
+        self.landBrightView.frame=CGRectMake(self.view.frame.size.width/2-self.landBrightView.frame.size.width/2, self.view.frame.size.height-self.longHorizMenu.frame.size.height-self.landBrightView.frame.size.height-15, self.landBrightView.frame.size.width, self.landBrightView.frame.size.height);
+        self.landConstrastView.frame=CGRectMake(self.view.frame.size.width/2-self.landConstrastView.frame.size.width/2, self.view.frame.size.height-self.longHorizMenu.frame.size.height-self.landConstrastView.frame.size.height-15, self.landConstrastView.frame.size.width, self.landConstrastView.frame.size.height);
+        
         longEModeView.frame=CGRectMake(self.view.frame.size.width/2-longEModeView.frame.size.width/2, self.view.frame.size.height-self.longHorizMenu.frame.size.height-longEModeView.frame.size.height, longEModeView.frame.size.width, longEModeView.frame.size.height);
         self.loadingViewLandscape.frame=CGRectMake(self.view.frame.size.width/2-self.loadingViewLandscape.frame.size.width/2, self.view.frame.size.height/2-self.loadingViewLandscape.frame.size.height/2, self.loadingViewLandscape.frame.size.width, self.loadingViewLandscape.frame.size.height);
         
@@ -1127,6 +1130,20 @@ extern unsigned int _getTickCount() {
     [_portraitBrightMiddle release];
     [_portraitBrightLow release];
     [_portraitBrightLowest release];
+    [_landConstrastView release];
+    [_landConstrastTitle release];
+    [_landContrastHighest release];
+    [_landContrastHigh release];
+    [_landContrastMiddle release];
+    [_landContrastLow release];
+    [_landContrastLowest release];
+    [_landBrightView release];
+    [_landBrightTitle release];
+    [_landBrightHighest release];
+    [_landBrightHigh release];
+    [_landBrightMiddle release];
+    [_landBrightLow release];
+    [_landBrightLowest release];
     [super dealloc];
 }
 
@@ -1185,6 +1202,40 @@ extern unsigned int _getTickCount() {
     [longSetLowest setTitle:NSLocalizedString(@"Lowest", @"") forState:UIControlStateNormal];
     [longSetOutDoor setTitle:NSLocalizedString(@"Outdoor Mode", @"") forState:UIControlStateNormal];
     [longSetNight setTitle:NSLocalizedString(@"Night Mode", @"") forState:UIControlStateNormal];
+    
+    
+    /*****亮度、对比度***********/
+    [self.portraitContrastTitle setTitle:NSLocalizedString(@"Contrast", @"") forState:UIControlStateNormal];
+    [self.portraitBrightTitle setTitle:NSLocalizedString(@"Bright", @"") forState:UIControlStateNormal];
+    [self.landConstrastTitle setTitle:NSLocalizedString(@"Contrast", @"") forState:UIControlStateNormal];
+    [self.landBrightTitle setTitle:NSLocalizedString(@"Bright", @"") forState:UIControlStateNormal];
+    
+    [self.portraitBrightHigh setTitle:NSLocalizedString(@"Highest", @"") forState:UIControlStateNormal];
+    [self.portraitBrightHighLow setTitle:NSLocalizedString(@"High", @"") forState:UIControlStateNormal];
+    [self.portraitBrightMiddle setTitle:NSLocalizedString(@"Medium", @"") forState:UIControlStateNormal];
+    [self.portraitBrightLow setTitle:NSLocalizedString(@"Low", @"") forState:UIControlStateNormal];
+    [self.portraitBrightLowest setTitle:NSLocalizedString(@"Lowest", @"") forState:UIControlStateNormal];
+    
+    [self.portaitContrastHigest setTitle:NSLocalizedString(@"Highest", @"") forState:UIControlStateNormal];
+    [self.portaitContrastHigt setTitle:NSLocalizedString(@"High", @"") forState:UIControlStateNormal];
+    [self.portaitContrastMiddle setTitle:NSLocalizedString(@"Medium", @"") forState:UIControlStateNormal];
+    [self.portaitContrastLow setTitle:NSLocalizedString(@"Low", @"") forState:UIControlStateNormal];
+    [self.portaitContrastLowest setTitle:NSLocalizedString(@"Lowest", @"") forState:UIControlStateNormal];
+    
+    [self.landBrightHighest setTitle:NSLocalizedString(@"Highest", @"") forState:UIControlStateNormal];
+    [self.landBrightHigh setTitle:NSLocalizedString(@"High", @"") forState:UIControlStateNormal];
+    [self.landBrightMiddle setTitle:NSLocalizedString(@"Medium", @"") forState:UIControlStateNormal];
+    [self.landBrightLow setTitle:NSLocalizedString(@"Low", @"") forState:UIControlStateNormal];
+    [self.landBrightLowest setTitle:NSLocalizedString(@"Lowest", @"") forState:UIControlStateNormal];
+    
+    [self.landContrastHighest setTitle:NSLocalizedString(@"Highest", @"") forState:UIControlStateNormal];
+    [self.landContrastHigh setTitle:NSLocalizedString(@"High", @"") forState:UIControlStateNormal];
+    [self.landContrastMiddle setTitle:NSLocalizedString(@"Medium", @"") forState:UIControlStateNormal];
+    [self.landContrastLow setTitle:NSLocalizedString(@"Low", @"") forState:UIControlStateNormal];
+    [self.landContrastLowest setTitle:NSLocalizedString(@"Lowest", @"") forState:UIControlStateNormal];
+    
+    /*****亮度、对比度***********/
+    
     
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
     if (screenBounds.size.height == 480) {
@@ -1787,6 +1838,18 @@ extern unsigned int _getTickCount() {
     }
 }
 
+-(void)initSettingFiveStatus:(NSInteger)tg withpView:(UIView *)pview{
+    for (UIButton *b in [pview subviews]) {
+        if(b.tag==0) continue;
+        if(b.tag==tg){
+            [b setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        }
+        else{
+            [b setTitleColor:[UIColor colorWithRed:0 green:122/255.0 blue:255.0/255.0 alpha:1.0f] forState:UIControlStateNormal];
+        }
+    }
+}
+
 #pragma mark - Application's Documents directory
 
 - (NSURL *)applicationDocumentsDirectory {
@@ -2353,6 +2416,8 @@ extern unsigned int _getTickCount() {
     
     self.portraitBrightScrollView.hidden=YES;
     self.portraitConstrastScrollView.hidden=YES;
+    self.landBrightView.hidden=YES;
+    self.landConstrastView.hidden=YES;
     
     longTalkButton.hidden = YES;
     longQVGAView.hidden = YES;
@@ -2361,15 +2426,31 @@ extern unsigned int _getTickCount() {
     isActive = YES;
     
     if(index==9){
-        isActive=NO;
-        self.portraitBrightScrollView.hidden=NO;
-        [self.horizMenu setUnselectedIndex:9 animated:YES];
+        if(isBright){
+            isBright=NO;
+            isActive=NO;
+        }
+        else{
+            self.portraitBrightScrollView.hidden=NO;
+            self.landBrightView.hidden=NO;
+            //[self.horizMenu setUnselectedIndex:9 animated:YES];
+            //[self.longHorizMenu setUnselectedIndex:9 animated:YES];
+            isBright=YES;
+        }
     }
     else if(index==10)
     {
-        isActive=NO;
-        self.portraitConstrastScrollView.hidden=NO;
-        [self.horizMenu setUnselectedIndex:10 animated:YES];
+        if(isContrast){
+            isContrast=NO;
+            isActive=NO;
+        }
+        else{
+            self.portraitConstrastScrollView.hidden=NO;
+            self.landConstrastView.hidden=NO;
+            //[self.horizMenu setUnselectedIndex:10 animated:YES];
+            //[self.longHorizMenu setUnselectedIndex:10 animated:YES];
+            isContrast=YES;
+        }
     }
     else if(index==7){
         isActive=NO;
@@ -2737,8 +2818,55 @@ extern unsigned int _getTickCount() {
 }
 
 - (IBAction)onContrastClicked:(id)sender {
+    SMsgAVIoctrlSetContrastReq *s = (SMsgAVIoctrlSetContrastReq *)malloc(sizeof(SMsgAVIoctrlSetContrastReq));
+    memset(s, 0, sizeof(SMsgAVIoctrlSetContrastReq));
+    
+    s->channel = 0;
+    s->contrast = [(UIView*)sender tag];
+    
+    [camera sendIOCtrlToChannel:0
+                           Type:IOTYPE_HICHIP_SETCONTRAST_REQ
+                           Data:(char *)s
+                       DataSize:sizeof(SMsgAVIoctrlSetContrastReq)];
+    
+    
+    
+    self.landConstrastView.hidden=YES;
+    self.portraitConstrastScrollView.hidden=YES;
+    
+    [self.horizMenu reloadData];
+    [self.longHorizMenu reloadData];
+    
+    [self initSettingFiveStatus:s->contrast withpView:self.portraitContrastView];
+    [self initSettingFiveStatus:s->contrast withpView:self.landConstrastView];
+    
+    free(s);
+    
 }
 - (IBAction)onBrightClicked:(id)sender {
+    SMsgAVIoctrlSetBrightReq *s = (SMsgAVIoctrlSetBrightReq *)malloc(sizeof(SMsgAVIoctrlSetBrightReq));
+    memset(s, 0, sizeof(SMsgAVIoctrlSetBrightReq));
+    
+    s->channel = 0;
+    s->bright = [(UIView*)sender tag];
+    
+    [camera sendIOCtrlToChannel:0
+                           Type:IOTYPE_HICHIP_SETBRIGHT_REQ
+                           Data:(char *)s
+                       DataSize:sizeof(SMsgAVIoctrlSetBrightReq)];
+    
+    
+    
+    self.landBrightView.hidden=YES;
+    self.portraitBrightScrollView.hidden=YES;
+    
+    [self.horizMenu reloadData];
+    [self.longHorizMenu reloadData];
+    
+    [self initSettingFiveStatus:s->bright withpView:self.landBrightView];
+    [self initSettingFiveStatus:s->bright withpView:self.portraitBrightView];
+    
+    free(s);
 }
 @end
 
