@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Delux/CameraMultiLiveViewController.mm"
-            timestampString = "459004845.540643"
+            timestampString = "460999537.20176"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1590"
-            endingLineNumber = "1590"
+            startingLineNumber = "1594"
+            endingLineNumber = "1594"
             landmarkName = "-onTimerStartShowRevoke:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Delux/CameraMultiLiveViewController.mm"
-            timestampString = "459004845.540643"
+            timestampString = "460999537.20176"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2101"
-            endingLineNumber = "2101"
+            startingLineNumber = "2105"
+            endingLineNumber = "2105"
             landmarkName = "-deleteSameUIDView:"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOTCamViewer/CameraLiveViewController.mm"
-            timestampString = "460996753.453249"
+            timestampString = "460999537.20176"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2890"
-            endingLineNumber = "2890">
+            startingLineNumber = "2896"
+            endingLineNumber = "2896">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -104,11 +104,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOTCamViewer/CameraLiveViewController.mm"
-            timestampString = "460996753.453249"
+            timestampString = "460999537.20176"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2895"
-            endingLineNumber = "2895">
+            startingLineNumber = "2901"
+            endingLineNumber = "2901">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
