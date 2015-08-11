@@ -250,6 +250,9 @@ extern unsigned int _getTickCount() ;
             [camera_list addObject:tempCamera];
             [tempCamera release];
             
+#if defined(Aztech)
+#else
+            
             SMsgAVIoctrlSetStreamCtrlReq *ss = (SMsgAVIoctrlSetStreamCtrlReq *)malloc(sizeof(SMsgAVIoctrlSetStreamCtrlReq));
             memset(ss, 0, sizeof(SMsgAVIoctrlSetStreamCtrlReq));
             
@@ -260,6 +263,7 @@ extern unsigned int _getTickCount() ;
                                    Data:(char *)ss
                                DataSize:sizeof(SMsgAVIoctrlSetStreamCtrlReq)];
             free(ss);
+#endif
         }
         
         [rs close];

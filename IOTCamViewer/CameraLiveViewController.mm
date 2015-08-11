@@ -1497,21 +1497,27 @@ extern unsigned int _getTickCount() {
         [loadingViewPortrait startAnimating];
         [loadingViewLandscape startAnimating];
         
+#if defined(Aztech)
+#else
         if(![MyCamera getCameraLoadQVGA:camera.uid]) {
             //[self loadCameraQVGAStatus];
             [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(setCameraQVGAFPS) userInfo:nil repeats:NO];
         }
+#endif
         
         [self activeAudioSession];
     }
 }
 -(void)setCameraQVGAFPS{
+#if defined(Aztech)
+#else
     if(self.isCanSendSetCameraCMD){
         [MyCamera loadCameraQVGA:camera];
     }
     else{
         [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(setCameraQVGAFPS) userInfo:nil repeats:NO];
     }
+#endif
 }
 -(void)loadCameraQVGAStatus{
     SMsgAVIoctrlGetStreamCtrlReq *quality = (SMsgAVIoctrlGetStreamCtrlReq *)malloc(sizeof(SMsgAVIoctrlGetStreamCtrlReq));
