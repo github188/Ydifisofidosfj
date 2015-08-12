@@ -4285,7 +4285,6 @@
 		06D3F8331B78E7C1006AF177 /* UITabBarController+TabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C0170193339F70032A77E /* UITabBarController+TabBar.m */; };
 		06D3F8341B78E7C1006AF177 /* UIView+View.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C0178193339F70032A77E /* UIView+View.m */; };
 		06D3F8351B78E7C1006AF177 /* AddCameraDetailController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8CEE7E114989C3B007CE9E8 /* AddCameraDetailController.mm */; };
-		06D3F8361B78E7C1006AF177 /* AddWithApCamera2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0688794C1ABE2C4D0017A41A /* AddWithApCamera2Controller.m */; };
 		06D3F8371B78E7C1006AF177 /* UITableView+TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C0172193339F70032A77E /* UITableView+TableView.m */; };
 		06D3F8381B78E7C1006AF177 /* UIDevice+Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C0158193339F60032A77E /* UIDevice+Device.m */; };
 		06D3F8391B78E7C1006AF177 /* LANSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C3D169149B21C7008DE8D3 /* LANSearchController.m */; };
@@ -4325,14 +4324,12 @@
 		06D3F85B1B78E7C1006AF177 /* UIView+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06335C1E1AC19E7F003DCD0A /* UIView+Hierarchy.m */; };
 		06D3F85C1B78E7C1006AF177 /* IQKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 06335C0F1AC19E7E003DCD0A /* IQKeyboardManager.m */; };
 		06D3F85D1B78E7C1006AF177 /* IQToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 06335C191AC19E7E003DCD0A /* IQToolbar.m */; };
-		06D3F85E1B78E7C1006AF177 /* AddWithApCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 068879311ABE18B70017A41A /* AddWithApCameraController.m */; };
 		06D3F85F1B78E7C1006AF177 /* MoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 573267ED185FF0B200BBE793 /* MoreVC.m */; };
 		06D3F8601B78E7C1006AF177 /* CameraPlaybackController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8CC69DF14BBDD3300256FB5 /* CameraPlaybackController.mm */; };
 		06D3F8611B78E7C1006AF177 /* VideoFlipController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BB832E15020522001F03AB /* VideoFlipController.m */; };
 		06D3F8621B78E7C1006AF177 /* EnvironmentModeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8BB833115020C74001F03AB /* EnvironmentModeController.m */; };
 		06D3F8631B78E7C1006AF177 /* AppGuidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F425F51AA9FB6500427383 /* AppGuidViewController.m */; };
 		06D3F8641B78E7C1006AF177 /* NSNumber+Mathematica.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C0144193339F60032A77E /* NSNumber+Mathematica.m */; };
-		06D3F8651B78E7C1006AF177 /* AddWithApCamera1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0688793D1ABE204E0017A41A /* AddWithApCamera1Controller.m */; };
 		06D3F8661B78E7C1006AF177 /* UIAlertView+MKBlockAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B1C8919A4CFBC0071E5CF /* UIAlertView+MKBlockAdditions.m */; };
 		06D3F8671B78E7C1006AF177 /* UINavigationController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C0168193339F60032A77E /* UINavigationController+Navigation.m */; };
 		06D3F8681B78E7C1006AF177 /* UIColor+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C0156193339F60032A77E /* UIColor+Colors.m */; };
@@ -4536,7 +4533,6 @@
 		06D3F93F1B78E7C1006AF177 /* add_wifinext@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C5A194EB73A00F5AA11 /* add_wifinext@2x.png */; };
 		06D3F9401B78E7C1006AF177 /* popoverArrowUpSimple.png in Resources */ = {isa = PBXBuildFile; fileRef = D8ECB1ED15294E2C00598466 /* popoverArrowUpSimple.png */; };
 		06D3F9411B78E7C1006AF177 /* leo_qvga@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C8E194EB73B00F5AA11 /* leo_qvga@2x.png */; };
-		06D3F9421B78E7C1006AF177 /* AddWithApCamera1Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0688793E1ABE204E0017A41A /* AddWithApCamera1Controller.xib */; };
 		06D3F9431B78E7C1006AF177 /* remeberpsd2.png in Resources */ = {isa = PBXBuildFile; fileRef = 06B219821ADD4D51005E3A2B /* remeberpsd2.png */; };
 		06D3F9441B78E7C1006AF177 /* cam_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C6B194EB73B00F5AA11 /* cam_back.png */; };
 		06D3F9451B78E7C1006AF177 /* popoverBgSimple.png in Resources */ = {isa = PBXBuildFile; fileRef = D8ECB1EE15294E2C00598466 /* popoverBgSimple.png */; };
@@ -4571,7 +4567,6 @@
 		06D3F9651B78E7C1006AF177 /* toolinfo_bk.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553D01194EB73C00F5AA11 /* toolinfo_bk.png */; };
 		06D3F9661B78E7C1006AF177 /* popoverArrowRight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8ECB1FE15294E5B00598466 /* popoverArrowRight@2x.png */; };
 		06D3F9671B78E7C1006AF177 /* qualitylist.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CF3194EB73C00F5AA11 /* qualitylist.png */; };
-		06D3F9681B78E7C1006AF177 /* AddWithApCameraController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 068879321ABE18B70017A41A /* AddWithApCameraController.xib */; };
 		06D3F9691B78E7C1006AF177 /* add_wifi3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C51194EB73A00F5AA11 /* add_wifi3@2x.png */; };
 		06D3F96A1B78E7C1006AF177 /* login_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CAA194EB73B00F5AA11 /* login_btn@2x.png */; };
 		06D3F96B1B78E7C1006AF177 /* add_wifi3_bk.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C52194EB73A00F5AA11 /* add_wifi3_bk.png */; };
@@ -4782,7 +4777,6 @@
 		06D3FA471B78E7C1006AF177 /* leo_mirror_rl.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C85194EB73B00F5AA11 /* leo_mirror_rl.png */; };
 		06D3FA481B78E7C1006AF177 /* add_wifinext_clicked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C5C194EB73A00F5AA11 /* add_wifinext_clicked@2x.png */; };
 		06D3FA491B78E7C1006AF177 /* add_infobk.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C29194EB73A00F5AA11 /* add_infobk.png */; };
-		06D3FA4A1B78E7C1006AF177 /* AddWithApCamera2Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0688794D1ABE2C4D0017A41A /* AddWithApCamera2Controller.xib */; };
 		06D3FA4B1B78E7C1006AF177 /* leo_snapshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C91194EB73B00F5AA11 /* leo_snapshot.png */; };
 		06D3FA4C1B78E7C1006AF177 /* moreset_list1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CD9194EB73C00F5AA11 /* moreset_list1.png */; };
 		06D3FA4D1B78E7C1006AF177 /* leo_qvga_disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0B1C4D19A466950071E5CF /* leo_qvga_disable.png */; };
@@ -13447,7 +13441,6 @@
 				06D3FAD71B78EF98006AF177 /* iTunesArtwork.png in Resources */,
 				06D3F9401B78E7C1006AF177 /* popoverArrowUpSimple.png in Resources */,
 				06D3F9411B78E7C1006AF177 /* leo_qvga@2x.png in Resources */,
-				06D3F9421B78E7C1006AF177 /* AddWithApCamera1Controller.xib in Resources */,
 				06D3F9431B78E7C1006AF177 /* remeberpsd2.png in Resources */,
 				06D3F9441B78E7C1006AF177 /* cam_back.png in Resources */,
 				06D3F9451B78E7C1006AF177 /* popoverBgSimple.png in Resources */,
@@ -13488,7 +13481,6 @@
 				06D3FA951B78EE55006AF177 /* zxingLangString.strings in Resources */,
 				06D3F9661B78E7C1006AF177 /* popoverArrowRight@2x.png in Resources */,
 				06D3F9671B78E7C1006AF177 /* qualitylist.png in Resources */,
-				06D3F9681B78E7C1006AF177 /* AddWithApCameraController.xib in Resources */,
 				06D3F9691B78E7C1006AF177 /* add_wifi3@2x.png in Resources */,
 				06D3F96A1B78E7C1006AF177 /* login_btn@2x.png in Resources */,
 				06D3F96B1B78E7C1006AF177 /* add_wifi3_bk.png in Resources */,
@@ -13724,7 +13716,6 @@
 				06D3FA471B78E7C1006AF177 /* leo_mirror_rl.png in Resources */,
 				06D3FA481B78E7C1006AF177 /* add_wifinext_clicked@2x.png in Resources */,
 				06D3FA491B78E7C1006AF177 /* add_infobk.png in Resources */,
-				06D3FA4A1B78E7C1006AF177 /* AddWithApCamera2Controller.xib in Resources */,
 				06D3FA4B1B78E7C1006AF177 /* leo_snapshot.png in Resources */,
 				06D3FA4C1B78E7C1006AF177 /* moreset_list1.png in Resources */,
 				06D3FA4D1B78E7C1006AF177 /* leo_qvga_disable.png in Resources */,
@@ -15546,7 +15537,6 @@
 				06D3F8331B78E7C1006AF177 /* UITabBarController+TabBar.m in Sources */,
 				06D3F8341B78E7C1006AF177 /* UIView+View.m in Sources */,
 				06D3F8351B78E7C1006AF177 /* AddCameraDetailController.mm in Sources */,
-				06D3F8361B78E7C1006AF177 /* AddWithApCamera2Controller.m in Sources */,
 				06D3F8371B78E7C1006AF177 /* UITableView+TableView.m in Sources */,
 				06D3F8381B78E7C1006AF177 /* UIDevice+Device.m in Sources */,
 				06D3F8391B78E7C1006AF177 /* LANSearchController.m in Sources */,
@@ -15586,14 +15576,12 @@
 				06D3F85B1B78E7C1006AF177 /* UIView+Hierarchy.m in Sources */,
 				06D3F85C1B78E7C1006AF177 /* IQKeyboardManager.m in Sources */,
 				06D3F85D1B78E7C1006AF177 /* IQToolbar.m in Sources */,
-				06D3F85E1B78E7C1006AF177 /* AddWithApCameraController.m in Sources */,
 				06D3F85F1B78E7C1006AF177 /* MoreVC.m in Sources */,
 				06D3F8601B78E7C1006AF177 /* CameraPlaybackController.mm in Sources */,
 				06D3F8611B78E7C1006AF177 /* VideoFlipController.m in Sources */,
 				06D3F8621B78E7C1006AF177 /* EnvironmentModeController.m in Sources */,
 				06D3F8631B78E7C1006AF177 /* AppGuidViewController.m in Sources */,
 				06D3F8641B78E7C1006AF177 /* NSNumber+Mathematica.m in Sources */,
-				06D3F8651B78E7C1006AF177 /* AddWithApCamera1Controller.m in Sources */,
 				06D3F8661B78E7C1006AF177 /* UIAlertView+MKBlockAdditions.m in Sources */,
 				06D3F8671B78E7C1006AF177 /* UINavigationController+Navigation.m in Sources */,
 				06D3F8681B78E7C1006AF177 /* UIColor+Colors.m in Sources */,
@@ -17634,11 +17622,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					IPCAMP,
 					NewSearchLanDevice,
 					RemoveModel,
 					CameraMailSetting,
 					MAJESTICIPCAMP,
+					RemoveVendor,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/MAJESTIC IPCAM P/MAJESTIC IPCAM P-Info.plist";
@@ -17678,11 +17666,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					IPCAMP,
 					NewSearchLanDevice,
 					RemoveModel,
 					CameraMailSetting,
 					MAJESTICIPCAMP,
+					RemoveVendor,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/MAJESTIC IPCAM P/MAJESTIC IPCAM P-Info.plist";
@@ -17723,11 +17711,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					IPCAMP,
 					NewSearchLanDevice,
 					RemoveModel,
 					CameraMailSetting,
 					MAJESTICIPCAMP,
+					RemoveVendor,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/MAJESTIC IPCAM P/MAJESTIC IPCAM P-Info.plist";
@@ -17768,11 +17756,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					IPCAMP,
 					NewSearchLanDevice,
 					RemoveModel,
 					CameraMailSetting,
 					MAJESTICIPCAMP,
+					RemoveVendor,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/MAJESTIC IPCAM P/MAJESTIC IPCAM P-Info.plist";

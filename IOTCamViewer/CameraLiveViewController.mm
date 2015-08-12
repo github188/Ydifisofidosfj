@@ -637,8 +637,13 @@ extern unsigned int _getTickCount() {
             
             [UIAlertView alertViewWithTitle: NSLocalizedString(@"Warning",@"") message: NSLocalizedString(@"Camera's video type is not supported recording",@"")];
             
-            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",@"psd_bright",@"psd_contrast",nil];
-            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click", @"psd_bright_clicked",@"psd_contrast_clicked",nil];
+#if defined(MAJESTICIPCAMP)
+            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"psd_bright",@"psd_contrast",nil];
+            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked", @"psd_bright_clicked",@"psd_contrast_clicked",nil];
+#else
+            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",nil];
+            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click",nil];
+#endif
             
             [self.horizMenu reloadData];
             [self.longHorizMenu reloadData];
@@ -672,9 +677,14 @@ extern unsigned int _getTickCount() {
             [self.videoGenerator startRecordingForChannel:selectedChannel withDuration:nRECDuration];
             
             [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(reTryVideoREC:) userInfo:nil repeats:NO];
-            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable", @"f+Btn", @"f-Btn",@"psd_bright",@"psd_contrast",nil];
-            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable",@"f+Btn_Click", @"f-Btn_Click",@"psd_bright_clicked",@"psd_contrast_clicked",nil];
             
+#if defined(MAJESTICIPCAMP)
+            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable",@"psd_bright",@"psd_contrast",nil];
+            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable",@"psd_bright_clicked",@"psd_contrast_clicked",nil];
+#else
+            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable", @"f+Btn", @"f-Btn",nil];
+            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable",@"f+Btn_Click", @"f-Btn_Click",nil];
+#endif
             [self.horizMenu reloadData];
             [self.longHorizMenu reloadData];
             
@@ -731,10 +741,13 @@ extern unsigned int _getTickCount() {
         
         [self.videoGenerator saveToAlbumWithCompletionHandler: ^(NSError* error) {
             if (!error) {
-                
-                self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode", @"f+Btn", @"f-Btn",@"psd_bright",@"psd_contrast",nil];
-                self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click", @"psd_bright_clicked",@"psd_contrast_clicked",nil];
-                
+#if defined(MAJESTICIPCAMP)
+                self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"psd_bright",@"psd_contrast",nil];
+                self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked", @"psd_bright_clicked",@"psd_contrast_clicked",nil];
+#else
+                self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode", @"f+Btn", @"f-Btn",nil];
+                self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click",nil];
+#endif
                 [self.horizMenu reloadData];
                 [self.longHorizMenu reloadData];
                 
@@ -1247,10 +1260,13 @@ extern unsigned int _getTickCount() {
     }
     
     self.navigationController.navigationBar.translucent = NO;
-    
-    self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",@"psd_bright",@"psd_contrast",nil];
-    self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click", @"psd_bright_clicked",@"psd_contrast_clicked",nil];
-    
+#if defined(MAJESTICIPCAMP)
+    self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"psd_bright",@"psd_contrast",nil];
+    self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked", @"psd_bright_clicked",@"psd_contrast_clicked",nil];
+#else
+    self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",nil];
+    self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click",nil];
+#endif
     [scrollQVGAView setContentSize:qvgaView.frame.size];
     [scrollQVGAView setClipsToBounds:YES];
     scrollQVGAView.delegate = self;
@@ -2399,10 +2415,10 @@ extern unsigned int _getTickCount() {
 
 - (int) numberOfItemsForMenu:(MKHorizMenu *)tabView
 {
-#if defined(EasynPTarget) || defined(IPCAMP) || defined(QTAIDT)
+#if defined(EasynPTarget) || defined(IPCAMP) || defined(QTAIDT) || defined(MAJESTICIPCAMP)
     return [self.items count];
 #else
-    return [self.items count]-4;
+    return [self.items count]-2;
 #endif
 }
 
@@ -2432,6 +2448,14 @@ extern unsigned int _getTickCount() {
     isActive = YES;
     
     if(index==9){
+
+    }
+    else if(index==10)
+    {
+
+    }
+    else if(index==7){
+#if defined(MAJESTICIPCAMP)
         if(isBright){
             isBright=NO;
             isActive=NO;
@@ -2443,9 +2467,15 @@ extern unsigned int _getTickCount() {
             //[self.longHorizMenu setUnselectedIndex:9 animated:YES];
             isBright=YES;
         }
+#else
+        isActive=NO;
+        [self myPtzAction:AVIOCTRL_LENS_ZOOM_IN];
+        [self.horizMenu setUnselectedIndex:7 animated:YES];
+        [self.longHorizMenu setUnselectedIndex:7 animated:YES];
+#endif
     }
-    else if(index==10)
-    {
+    else if(index==8){
+#if defined(MAJESTICIPCAMP)
         if(isContrast){
             isContrast=NO;
             isActive=NO;
@@ -2457,18 +2487,12 @@ extern unsigned int _getTickCount() {
             //[self.longHorizMenu setUnselectedIndex:10 animated:YES];
             isContrast=YES;
         }
-    }
-    else if(index==7){
-        isActive=NO;
-        [self myPtzAction:AVIOCTRL_LENS_ZOOM_IN];
-        [self.horizMenu setUnselectedIndex:7 animated:YES];
-        [self.longHorizMenu setUnselectedIndex:7 animated:YES];
-    }
-    else if(index==8){
+#else
         isActive=NO;
         [self myPtzAction:AVIOCTRL_LENS_ZOOM_OUT];
         [self.horizMenu setUnselectedIndex:8 animated:YES];
         [self.longHorizMenu setUnselectedIndex:8 animated:YES];
+#endif
     }
     else if (index == SOUND_CONTROL && !isRecording) {
         

@@ -1120,6 +1120,11 @@ extern unsigned int _getTickCount() ;
     
     [logInOut setTitle:NSLocalizedString(@"用户手册", @"") forState:UIControlStateNormal];
     
+#if defined(MAJESTICIPCAMP)
+    logInOut.hidden=YES;
+    infoBTN.origin=CGPointMake(infoBTN.frame.origin.x, 34);
+#endif
+    
     
     [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(cameraStopShowCompleted:) name: @"CameraStopShowCompleted" object: nil];
 
