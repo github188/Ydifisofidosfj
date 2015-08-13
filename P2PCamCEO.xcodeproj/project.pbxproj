@@ -4867,7 +4867,6 @@
 		06D3FAD81B78EF98006AF177 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D3FAC21B78EF98006AF177 /* iTunesArtwork@2x.png */; };
 		06D3FADD1B78EFB0006AF177 /* title_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D3FAD91B78EFB0006AF177 /* title_logo.png */; };
 		06D3FADE1B78EFB0006AF177 /* title_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D3FADB1B78EFB0006AF177 /* title_logo@2x.png */; };
-		06D3FAE21B78EFF8006AF177 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06D3FAE11B78EFF8006AF177 /* Images.xcassets */; };
 		06D3FAE51B795D42006AF177 /* MailSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D3FAE41B795D41006AF177 /* MailSettingController.m */; };
 		06D3FAEB1B795D78006AF177 /* smtpServers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06D3FAE61B795D78006AF177 /* smtpServers.plist */; };
 		06D3FAEC1B795D78006AF177 /* MailProtocolController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D3FAE81B795D78006AF177 /* MailProtocolController.m */; };
@@ -4883,6 +4882,7 @@
 		06E1BC6C1AF5DB5100755606 /* refresh_27_07_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E1BC6B1AF5DB5100755606 /* refresh_27_07_1.png */; };
 		06E1BC6D1AF5DB5100755606 /* refresh_27_07_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E1BC6B1AF5DB5100755606 /* refresh_27_07_1.png */; };
 		06E376D81B5A0BA2003A378F /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E376D71B5A0BA2003A378F /* Accelerate.framework */; };
+		06E8CE621B7CF10D00DC6391 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06E8CE611B7CF10D00DC6391 /* Images.xcassets */; };
 		06F00DF21AFDA4F200139703 /* FIR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F00DF11AFDA4F200139703 /* FIR.framework */; };
 		06F00DF31AFDA4F200139703 /* FIR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F00DF11AFDA4F200139703 /* FIR.framework */; };
 		06F425F71AA9FB6500427383 /* AppGuidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F425F51AA9FB6500427383 /* AppGuidViewController.m */; };
@@ -6814,7 +6814,6 @@
 		06D3FADC1B78EFB0006AF177 /* it */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = it; path = "MAJESTIC IPCAM P/images/it.lproj/title_logo@2x.png"; sourceTree = "<group>"; };
 		06D3FADF1B78EFC7006AF177 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = "MAJESTIC IPCAM P/images/en.lproj/title_logo@2x.png"; sourceTree = "<group>"; };
 		06D3FAE01B78EFCC006AF177 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = "MAJESTIC IPCAM P/images/en.lproj/title_logo.png"; sourceTree = "<group>"; };
-		06D3FAE11B78EFF8006AF177 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "MAJESTIC IPCAM P/Images.xcassets"; sourceTree = "<group>"; };
 		06D3FAE31B795D41006AF177 /* MailSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MailSettingController.h; sourceTree = "<group>"; };
 		06D3FAE41B795D41006AF177 /* MailSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MailSettingController.m; sourceTree = "<group>"; };
 		06D3FAE61B795D78006AF177 /* smtpServers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = smtpServers.plist; sourceTree = "<group>"; };
@@ -6832,6 +6831,7 @@
 		06D3FAF51B796BF1006AF177 /* psd_bright_clicked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = psd_bright_clicked.png; sourceTree = "<group>"; };
 		06E1BC6B1AF5DB5100755606 /* refresh_27_07_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh_27_07_1.png; sourceTree = "<group>"; };
 		06E376D71B5A0BA2003A378F /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		06E8CE611B7CF10D00DC6391 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "MAJESTIC IPCAM P/Images.xcassets"; sourceTree = "<group>"; };
 		06F00DF11AFDA4F200139703 /* FIR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FIR.framework; sourceTree = "<group>"; };
 		06F425F41AA9FB6500427383 /* AppGuidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGuidViewController.h; sourceTree = "<group>"; };
 		06F425F51AA9FB6500427383 /* AppGuidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGuidViewController.m; sourceTree = "<group>"; };
@@ -8876,6 +8876,7 @@
 		06D3FA891B78E811006AF177 /* MAJESTIC IPCAM P */ = {
 			isa = PBXGroup;
 			children = (
+				06E8CE611B7CF10D00DC6391 /* Images.xcassets */,
 				06D3FAE61B795D78006AF177 /* smtpServers.plist */,
 				06D3FAE71B795D78006AF177 /* MailProtocolController.h */,
 				06D3FAE81B795D78006AF177 /* MailProtocolController.m */,
@@ -8883,7 +8884,6 @@
 				06D3FAEA1B795D78006AF177 /* MailSmtpController.m */,
 				06D3FAE31B795D41006AF177 /* MailSettingController.h */,
 				06D3FAE41B795D41006AF177 /* MailSettingController.m */,
-				06D3FAE11B78EFF8006AF177 /* Images.xcassets */,
 				06D3FAAC1B78EF7C006AF177 /* images */,
 				06D3FA9B1B78EF54006AF177 /* aztechjt */,
 				06D3FA8D1B78EE55006AF177 /* easyn.strings */,
@@ -13563,6 +13563,7 @@
 				06D3F9B51B78E7C1006AF177 /* button_click@2x.png in Resources */,
 				06D3F9B61B78E7C1006AF177 /* drop_refresh_clicked.png in Resources */,
 				06D3F9B71B78E7C1006AF177 /* call_on_clicked@2x.png in Resources */,
+				06E8CE621B7CF10D00DC6391 /* Images.xcassets in Resources */,
 				06D3F9B81B78E7C1006AF177 /* more_photo_clicked@2x.png in Resources */,
 				06D3F9B91B78E7C1006AF177 /* leo_micinfo@2x.png in Resources */,
 				06D3F9BA1B78E7C1006AF177 /* cam_back@2x.png in Resources */,
@@ -13590,7 +13591,6 @@
 				06D3FA931B78EE55006AF177 /* easyn.strings in Resources */,
 				06D3F9CC1B78E7C1006AF177 /* add_okbtn@2x.png in Resources */,
 				06D3F9CE1B78E7C1006AF177 /* add_web_clicked@2x.png in Resources */,
-				06D3FAE21B78EFF8006AF177 /* Images.xcassets in Resources */,
 				06D3FAD31B78EF98006AF177 /* page4_cn.jpg in Resources */,
 				06D3F9CF1B78E7C1006AF177 /* autologin.png in Resources */,
 				06D3FA9A1B78EEB9006AF177 /* InfoPlist.strings in Resources */,
