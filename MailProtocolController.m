@@ -58,7 +58,7 @@
     
     labelItems = [[NSArray alloc] initWithObjects:NSLocalizedString(@"Off", @""),
                   NSLocalizedString(@"TLS", @""),
-                  NSLocalizedString(@"STARTLS", @""), nil];
+                  NSLocalizedString(@"STARTLS", @""),NSLocalizedString(@"SSL", @""), nil];
     
     self.navigationItem.title = NSLocalizedString(@"Mail Protocol", @"");
     
@@ -104,7 +104,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return 4;
 }
 
 
@@ -135,9 +135,11 @@
     
     if (val == 0 && row == 0)
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    else if (val > 1 && row == 1)
+    else if (val ==1 && row == 1)
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    else if (val > 2 && row == 2)
+    else if (val == 2 && row == 2)
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    else if (val == 3 && row == 3)
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     cell.textLabel.text = [labelItems objectAtIndex:row];
     

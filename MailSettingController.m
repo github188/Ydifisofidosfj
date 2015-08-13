@@ -268,6 +268,9 @@
             text = [[NSString alloc] initWithString:NSLocalizedString(@"TLS", @"")];
         else if (mailProtocol == 2 )
             text = [[NSString alloc] initWithString:NSLocalizedString(@"STARTLS", @"")];
+        else if(mailProtocol==3){
+            text = [[NSString alloc] initWithString:NSLocalizedString(@"SSL", @"")];
+        }
         else
             text = nil;
         cell.detailTextLabel.text = text;
