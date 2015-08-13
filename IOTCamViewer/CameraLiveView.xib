@@ -209,7 +209,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <scrollView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" id="DLi-Sn-RSD" userLabel="Scroll View QVGA">
-                    <rect key="frame" x="0.0" y="326" width="320" height="196"/>
+                    <rect key="frame" x="0.0" y="326" width="320" height="120"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" id="lYp-XW-N5L" userLabel="View QVGA">

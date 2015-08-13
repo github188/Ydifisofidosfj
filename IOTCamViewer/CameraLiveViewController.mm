@@ -997,13 +997,16 @@ extern unsigned int _getTickCount() {
 
         self.talkButtonBtn.frame=CGRectMake(AudioTitle.frame.origin.x+AudioTitle.frame.size.width, talkButton.frame.size.height-self.talkButtonBtn.frame.size.height, self.talkButtonBtn.frame.size.width, self.talkButtonBtn.frame.size.height);
         
-        scrollQVGAView.frame=CGRectMake(self.view.frame.size.width/2-scrollQVGAView.frame.size.width/2, self.view.frame.size.height-self.horizMenu.frame.size.height-scrollQVGAView.frame.size.height, scrollQVGAView.frame.size.width, scrollQVGAView.frame.size.height);
+        CGFloat moreScrollViewFunHeight=self.view.frame.size.height-self.scrollViewPortrait.frame.size.height-self.scrollViewPortrait.frame.origin.y-self.horizMenu.frame.size.height;
+        
+        scrollQVGAView.frame=CGRectMake(self.view.frame.size.width/2-scrollQVGAView.frame.size.width/2, self.view.frame.size.height-self.horizMenu.frame.size.height-moreScrollViewFunHeight, scrollQVGAView.frame.size.width, moreScrollViewFunHeight);
         //亮度对比度
-        self.portraitBrightScrollView.frame=CGRectMake(self.view.frame.size.width/2-self.portraitBrightScrollView.frame.size.width/2, self.view.frame.size.height-self.horizMenu.frame.size.height-self.portraitBrightScrollView.frame.size.height, self.portraitBrightScrollView.frame.size.width, self.portraitBrightScrollView.frame.size.height);
-        self.portraitConstrastScrollView.frame=CGRectMake(self.view.frame.size.width/2-self.portraitConstrastScrollView.frame.size.width/2, self.view.frame.size.height-self.horizMenu.frame.size.height-self.portraitConstrastScrollView.frame.size.height, self.portraitConstrastScrollView.frame.size.width, self.portraitConstrastScrollView.frame.size.height);
+        self.portraitBrightScrollView.frame=CGRectMake(self.view.frame.size.width/2-self.portraitBrightScrollView.frame.size.width/2, self.view.frame.size.height-self.horizMenu.frame.size.height-moreScrollViewFunHeight, self.portraitBrightScrollView.frame.size.width, moreScrollViewFunHeight);
+        
+        self.portraitConstrastScrollView.frame=CGRectMake(self.view.frame.size.width/2-self.portraitConstrastScrollView.frame.size.width/2, self.view.frame.size.height-self.horizMenu.frame.size.height-moreScrollViewFunHeight, self.portraitConstrastScrollView.frame.size.width, moreScrollViewFunHeight);
         
         
-        scrollEModeView.frame=CGRectMake(self.view.frame.size.width/2-scrollEModeView.frame.size.width/2, self.view.frame.size.height-self.horizMenu.frame.size.height-scrollEModeView.frame.size.height, scrollEModeView.frame.size.width, scrollEModeView.frame.size.height);
+        scrollEModeView.frame=CGRectMake(self.view.frame.size.width/2-scrollEModeView.frame.size.width/2, self.view.frame.size.height-self.horizMenu.frame.size.height-moreScrollViewFunHeight, scrollEModeView.frame.size.width,moreScrollViewFunHeight);
         
         self.loadingViewPortrait.frame=CGRectMake(self.scrollViewPortrait.frame.size.width/2-self.loadingViewPortrait.frame.size.width/2, self.scrollViewPortrait.frame.origin.y+self.scrollViewPortrait.frame.size.height/2-self.loadingViewPortrait.frame.size.height/2, self.loadingViewPortrait.frame.size.width, self.loadingViewPortrait.frame.size.height);
         
@@ -1274,6 +1277,14 @@ extern unsigned int _getTickCount() {
     [scrollEModeView setContentSize:emodeView.frame.size];
     [scrollEModeView setClipsToBounds:YES];
     scrollEModeView.delegate = self;
+    
+    [self.portraitConstrastScrollView setContentSize:self.portraitContrastView.frame.size];
+    [self.portraitConstrastScrollView setClipsToBounds:YES];
+    self.portraitConstrastScrollView.delegate=self;
+    
+    [self.portraitBrightScrollView setContentSize:self.portraitBrightView.frame.size];
+    [self.portraitBrightScrollView setClipsToBounds:YES];
+    self.portraitBrightScrollView.delegate=self;
     
     UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
     [self.scrollViewLandscape addGestureRecognizer:singleFingerTap];
