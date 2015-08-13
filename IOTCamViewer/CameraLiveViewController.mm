@@ -2474,9 +2474,13 @@ extern unsigned int _getTickCount() {
         else{
             self.portraitBrightScrollView.hidden=NO;
             self.landBrightView.hidden=NO;
-            //[self.horizMenu setUnselectedIndex:9 animated:YES];
-            //[self.longHorizMenu setUnselectedIndex:9 animated:YES];
+            //[self.horizMenu setUnselectedIndex:7 animated:YES];
+            //[self.longHorizMenu setUnselectedIndex:7 animated:YES];
             isBright=YES;
+            
+            isContrast=NO;
+            isQVGAView=NO;
+            isEModeView=NO;
         }
 #else
         isActive=NO;
@@ -2494,9 +2498,13 @@ extern unsigned int _getTickCount() {
         else{
             self.portraitConstrastScrollView.hidden=NO;
             self.landConstrastView.hidden=NO;
-            //[self.horizMenu setUnselectedIndex:10 animated:YES];
-            //[self.longHorizMenu setUnselectedIndex:10 animated:YES];
+            //[self.horizMenu setUnselectedIndex:8 animated:YES];
+            //[self.longHorizMenu setUnselectedIndex:8 animated:YES];
             isContrast=YES;
+            
+            isBright=NO;
+            isQVGAView=NO;
+            isEModeView=NO;
         }
 #else
         isActive=NO;
@@ -2683,6 +2691,10 @@ extern unsigned int _getTickCount() {
             scrollQVGAView.hidden = NO;
             longQVGAView.hidden = NO;
             isQVGAView = YES;
+            
+            isContrast=NO;
+            isBright=NO;
+            isEModeView=NO;
 
         } else {
             
@@ -2704,6 +2716,10 @@ extern unsigned int _getTickCount() {
             scrollEModeView.hidden = NO;
             longEModeView.hidden = NO;
             isEModeView = YES;
+            
+            isQVGAView=NO;
+            isContrast=NO;
+            isBright=NO;
             
         } else {
             
@@ -2875,8 +2891,11 @@ extern unsigned int _getTickCount() {
     self.landConstrastView.hidden=YES;
     self.portraitConstrastScrollView.hidden=YES;
     
+    isContrast=NO;
+    
     [self.horizMenu reloadData];
     [self.longHorizMenu reloadData];
+    
     
     [self initSettingFiveStatus:s->contrast withpView:self.portraitContrastView];
     [self initSettingFiveStatus:s->contrast withpView:self.landConstrastView];
@@ -2901,6 +2920,7 @@ extern unsigned int _getTickCount() {
     self.landBrightView.hidden=YES;
     self.portraitBrightScrollView.hidden=YES;
     
+    isBright=NO;
     [self.horizMenu reloadData];
     [self.longHorizMenu reloadData];
     
