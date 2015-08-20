@@ -17298,7 +17298,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "Toc View";
-				PROVISIONING_PROFILE = "c952c81f-df02-4bdf-a606-c39f9c84c630";
+				PROVISIONING_PROFILE = "d68700ae-14d7-4b51-bf19-6c2c55cb50bd";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -17342,7 +17342,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "Toc View";
-				PROVISIONING_PROFILE = "c952c81f-df02-4bdf-a606-c39f9c84c630";
+				PROVISIONING_PROFILE = "d68700ae-14d7-4b51-bf19-6c2c55cb50bd";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -17386,7 +17386,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "Toc View";
-				PROVISIONING_PROFILE = "c952c81f-df02-4bdf-a606-c39f9c84c630";
+				PROVISIONING_PROFILE = "d68700ae-14d7-4b51-bf19-6c2c55cb50bd";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -17429,7 +17429,7 @@
 					"-DP2PCAMLIVE",
 				);
 				PRODUCT_NAME = "Toc View";
-				PROVISIONING_PROFILE = "c952c81f-df02-4bdf-a606-c39f9c84c630";
+				PROVISIONING_PROFILE = "d68700ae-14d7-4b51-bf19-6c2c55cb50bd";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";

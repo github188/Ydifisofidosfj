@@ -13,4 +13,4 @@
 "AddApWifiResetTips"="제품 하부에 리셋버튼을 10초간 누르시면, 제품이 리셋 됩니다.";
 "AddApWifiWaitingTips"="현재 Wi-Fi를 연결중입니다. 잠시만 기다려 주세요.";
 "AddApWifiErrorTips"="Wi-Fi연결 실패, Wi-Fi 비밀번호를 다시 확인해 주세요";
-"ViewPsdLbl"="암호 표시";
+"ViewPsdLbl"="비밀번호 표시";
