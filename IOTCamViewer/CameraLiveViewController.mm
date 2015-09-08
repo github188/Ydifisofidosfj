@@ -2865,6 +2865,12 @@ extern unsigned int _getTickCount() {
     request->limit = 0;
     request->aux = 0;
     
+#if defined(EasynPTarget)
+    if(cmd==AVIOCTRL_LENS_ZOOM_IN||cmd==AVIOCTRL_LENS_ZOOM_OUT){
+        request->reserve[1]=10;
+    }
+#endif
+    
     [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_PTZ_COMMAND Data:(char *)request DataSize:sizeof(SMsgAVIoctrlPtzCmd)];
     
     free(request);
