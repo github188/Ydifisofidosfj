@@ -17820,7 +17820,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "728b194c-f7fc-4c59-8afb-f8610d95c5c7";
+				PROVISIONING_PROFILE = "4167bac7-0cf3-4422-9465-4b765f9d9a4d";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -17864,7 +17864,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "728b194c-f7fc-4c59-8afb-f8610d95c5c7";
+				PROVISIONING_PROFILE = "4167bac7-0cf3-4422-9465-4b765f9d9a4d";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -17908,7 +17908,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "728b194c-f7fc-4c59-8afb-f8610d95c5c7";
+				PROVISIONING_PROFILE = "4167bac7-0cf3-4422-9465-4b765f9d9a4d";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -17951,7 +17951,7 @@
 					"-DP2PCAMLIVE",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "728b194c-f7fc-4c59-8afb-f8610d95c5c7";
+				PROVISIONING_PROFILE = "4167bac7-0cf3-4422-9465-4b765f9d9a4d";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
