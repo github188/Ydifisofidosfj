@@ -88,6 +88,7 @@
         
         customButton.tag = tag++;
         [customButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        [customButton addTarget:self action:@selector(buttonTouchDown:) forControlEvents:UIControlEventTouchDown];
         
         customButton.frame = CGRectMake(xPos, 3, bgImg.size.width, 38);
         xPos += bgImg.size.width;
@@ -119,7 +120,26 @@
     thisButton.selected = NO;
     //[self setContentOffset:CGPointMake(thisButton.frame.origin.x - kLeftOffset, 0) animated:animated];
 }
-
+-(void)buttonTouchDown:(id)sender{
+    UIButton *button = (UIButton*) sender;
+    
+    for(int i = 0; i < self.itemCount; i++)
+    {
+        UIButton *thisButton = (UIButton*) [self viewWithTag:i + kButtonBaseTag];
+        if(i + kButtonBaseTag == button.tag)
+            if (thisButton.selected == NO) {
+                thisButton.selected = YES;
+            } else {
+                thisButton.selected = NO;
+            }
+            else
+                thisButton.selected = NO;
+    }
+    NSLog(@"Item TouchDown");
+    if([self.itemSelectedDelegate respondsToSelector:@selector(horizMenu:itemTouchDownAtIndex:)]){
+        [self.itemSelectedDelegate horizMenu:self itemTouchDownAtIndex:button.tag - kButtonBaseTag];
+    }
+}
 -(void) buttonTapped:(id) sender
 {
     UIButton *button = (UIButton*) sender;
@@ -136,7 +156,7 @@
         else
             thisButton.selected = NO;
     }
-    
+    NSLog(@"Item TouchUp");
     [self.itemSelectedDelegate horizMenu:self itemSelectedAtIndex:button.tag - kButtonBaseTag];
 }
 

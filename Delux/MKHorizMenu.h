@@ -36,6 +36,8 @@
 @protocol MKHorizMenuDelegate <NSObject>
 @required
 - (void)horizMenu:(MKHorizMenu*) horizMenu itemSelectedAtIndex:(NSUInteger) index;
+@optional
+- (void)horizMenu:(MKHorizMenu*) horizMenu itemTouchDownAtIndex:(NSUInteger) index;
 @end
 
 @interface MKHorizMenu : UIScrollView {

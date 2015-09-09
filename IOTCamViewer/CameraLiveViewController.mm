@@ -2440,6 +2440,24 @@ extern unsigned int _getTickCount() {
 
 #pragma mark -
 #pragma mark HorizMenu Delegate
+-(void) horizMenu:(MKHorizMenu *)horizMenu itemTouchDownAtIndex:(NSUInteger)index{
+    if(index==7){
+#if defined(MAJESTICIPCAMP)
+#else
+        [self myPtzAction:AVIOCTRL_LENS_ZOOM_IN];
+        [self.horizMenu setUnselectedIndex:7 animated:YES];
+        [self.longHorizMenu setUnselectedIndex:7 animated:YES];
+#endif
+    }
+    else if(index==8){
+#if defined(MAJESTICIPCAMP)
+#else
+        [self myPtzAction:AVIOCTRL_LENS_ZOOM_OUT];
+        [self.horizMenu setUnselectedIndex:8 animated:YES];
+        [self.longHorizMenu setUnselectedIndex:8 animated:YES];
+#endif
+    }
+}
 -(void) horizMenu:(MKHorizMenu *)horizMenu itemSelectedAtIndex:(NSUInteger)index
 {
     
@@ -2484,7 +2502,7 @@ extern unsigned int _getTickCount() {
         }
 #else
         isActive=NO;
-        [self myPtzAction:AVIOCTRL_LENS_ZOOM_IN];
+        [self stopPT];
         [self.horizMenu setUnselectedIndex:7 animated:YES];
         [self.longHorizMenu setUnselectedIndex:7 animated:YES];
 #endif
@@ -2508,7 +2526,7 @@ extern unsigned int _getTickCount() {
         }
 #else
         isActive=NO;
-        [self myPtzAction:AVIOCTRL_LENS_ZOOM_OUT];
+        [self stopPT];
         [self.horizMenu setUnselectedIndex:8 animated:YES];
         [self.longHorizMenu setUnselectedIndex:8 animated:YES];
 #endif
@@ -2874,7 +2892,14 @@ extern unsigned int _getTickCount() {
     [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_PTZ_COMMAND Data:(char *)request DataSize:sizeof(SMsgAVIoctrlPtzCmd)];
     
     free(request);
-    [self performSelector:@selector(stopPT) withObject:nil afterDelay:0.1];
+    if(cmd==AVIOCTRL_LENS_ZOOM_IN||cmd==AVIOCTRL_LENS_ZOOM_OUT){
+#ifndef EasynPTarget
+        [self performSelector:@selector(stopPT) withObject:nil afterDelay:0.1];
+#endif
+    }
+    else{
+        [self performSelector:@selector(stopPT) withObject:nil afterDelay:0.1];
+    }
 }
 
 - (IBAction)landBackAction:(id)sender {
