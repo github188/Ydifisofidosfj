@@ -1,0 +1,16 @@
+
+"WIFI一键设置"="新增摄像机";
+"AddApWifiTips"="1、Wi-Fi智能设置";
+"AddApWifiTips2"="无需网线连接，首次设置摄像机连接网络，仅支持部分型号";
+"AddApWifiOtherTips"="2、网线连接或已无线连接路由器";
+"AddApWifiNextStep"="下一步";
+"AddApWifiStep2Tips"="请将摄像机接上电源适配器，待其自检结束，并在确认摄像机发出“叮咚”声后，点击下一步";
+"AddApWifiStep2NeedWifiTips"="请确保手机先已连接Wi-Fi.";
+"AddApWifiStep3SettingBtnTitle"="设置";
+"AddApWifiSSIDTips"="SSID不能为空！";
+"AddApWifiPsdTips"="密码不能为空！";
+"AddApWifiAudioTips"="是否听到摄像机叮咚提示音";
+"AddApWifiResetTips"="请顶住摄像机底部的RESET按钮10秒，重新设置";
+"AddApWifiWaitingTips"="正在配置Wi-Fi,请耐心等待";
+"AddApWifiErrorTips"="连接Wi-Fi失败，请重新确认Wi-Fi密码！";
+"ViewPsdLbl"="显示密码";
