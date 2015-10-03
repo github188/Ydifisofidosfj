@@ -18,7 +18,6 @@
 #import <AVFoundation/AVFoundation.h>
 #import "EventListController.h"
 #import "AppDelegate.h"
-#import "DropboxSettingVC.h"
 #import "AppInfoController.h"
 #import "StartViewController.h"
 #import "cCustomNavigationController.h"
@@ -434,9 +433,6 @@ extern unsigned int _getTickCount() ;
     return;
     [self camStopShow];
     
-    DropboxSettingVC *controller = [[DropboxSettingVC alloc] initWithNibName:@"DropboxSettingVC" bundle:nil];
-    [self.navigationController pushViewController:controller animated:YES];
-    [controller release];
 }
 
 - (IBAction)goInfo:(id)sender {

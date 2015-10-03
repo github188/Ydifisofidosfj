@@ -8,7 +8,6 @@
 
 #import "MoreVC.h"
 #import "AppInfoController.h"
-#import "DropboxSettingVC.h"
 
 @interface MoreVC ()
 
@@ -141,9 +140,6 @@
     switch (row) {
         case 0:
         {
-            DropboxSettingVC *vc = [[DropboxSettingVC alloc] initWithNibName:@"DropboxSettingVC" bundle:nil];
-            [self.navigationController pushViewController:vc animated:YES];
-            [vc release];
         }
             break;
             

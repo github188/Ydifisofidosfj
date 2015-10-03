@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "CheckNetwork.h"
-#import <DropboxSDK/DropboxSDK.h>
 #import "AppInfoController.h"
 #import "StartViewController.h"
 #import "CameraMultiLiveViewController.h"
@@ -32,7 +31,7 @@ NSString *const kApplicationWillEnterForeground = @"Application_Will_Enter_Foreg
 NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foreground";
 
 #ifdef SUPPORT_DROPBOX
-@interface AppDelegate () <DBSessionDelegate, DBNetworkRequestDelegate>
+@interface AppDelegate ()
 #else
 @interface AppDelegate ()
 #endif
@@ -69,11 +68,6 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
 {
     return UIInterfaceOrientationPortrait;
 }
-
-
--(void)sessionDidReceiveAuthorizationFailure:(DBSession *)session userId:(NSString *)userId {}
--(void)networkRequestStarted{}
--(void)networkRequestStopped{}
 
 + (NSString *) pathForDocumentsResource:(NSString *) relativePath
 {
@@ -248,12 +242,6 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
 		
     [UIApplication sharedApplication].idleTimerDisabled = YES;
     
-#ifdef SUPPORT_DROPBOX
-	// Set these variables before launching the app
-    NSString* appKey = @"zo6kr8w12onxr8c";
-	NSString* appSecret = @"0xjdiq7mrprnsat";
-	NSString *root = kDBRootAppFolder; // Should be set to either kDBRootAppFolder or kDBRootDropbox
-#endif
     
 #if 0 // dropbox debug
     NSString* errorMsg = nil;
@@ -283,17 +271,6 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
 		  autorelease]
 		 show];
 	}
-#endif
-
-    
-#ifdef SUPPORT_DROPBOX
-    DBSession* session =
-    [[DBSession alloc] initWithAppKey:appKey appSecret:appSecret root:root];
-	session.delegate = self; // DBSessionDelegate methods allow you to handle re-authenticating
-	[DBSession setSharedSession:session];
-    [session release];
-	
-	[DBRequest setNetworkRequestDelegate:self];
 #endif
     
     /* Appearance Setting */
@@ -377,27 +354,6 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
     [_window setRootViewController:navigationController];
     [_window makeKeyAndVisible];
          
-#ifndef SUPPORT_DROPBOX
-    UIViewController *thisIsTheViewControllerIWantToSetNow;
-    int indexForViewControllerYouWantToReplace = 3;
-         
-    thisIsTheViewControllerIWantToSetNow = [[AppInfoController alloc] initWithNibName:nil bundle:nil];
-         
-         
-    NSMutableArray *tabbarViewControllers = [self.rootViewController.viewControllers mutableCopy];
-    
-    [tabbarViewControllers replaceObjectAtIndex:indexForViewControllerYouWantToReplace withObject:thisIsTheViewControllerIWantToSetNow];
-         
-    self.rootViewController.viewControllers = tabbarViewControllers;
-         
-    NSArray *items = self.rootViewController.tabBar.items;
-    UITabBarItem *item = [items objectAtIndex:3];
-    item.image = [UIImage imageNamed:@"info.png"];
-    item.title = NSLocalizedString(@"App Info",@"");
-    
-    [tabbarViewControllers release];
-    [thisIsTheViewControllerIWantToSetNow release];
-#endif
     
     [[IQKeyboardManager sharedManager] setEnable:YES];
     
@@ -423,21 +379,6 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
     // dropbox schema
     if ( [urlString hasPrefix:@"db-"]){
         
-#ifdef SUPPORT_DROPBOX
-        if ([[DBSession sharedSession] handleOpenURL:url]) {
-            if ([[DBSession sharedSession] isLinked]) {
-                
-                NSLog(@"LINKED!");
-
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"Agree" object:nil];
-                
-            } else {
-                
-                NSLog(@"LINKED CANCEL!");
-            }
-        
-        }
-#endif
     }
 	else if ( [urlString hasPrefix:@"p2pcamlive"]){
         

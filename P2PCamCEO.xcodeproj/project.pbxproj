@@ -232,7 +232,6 @@
 		06603FB41B23133300FB6F32 /* DDBadgeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C596431585F585006FB0D6 /* DDBadgeViewCell.m */; };
 		06603FB51B23133300FB6F32 /* UIBarButtonItem+BarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C014E193339F60032A77E /* UIBarButtonItem+BarButtonItem.m */; };
 		06603FB61B23133300FB6F32 /* CameraMultiLiveViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF857719061DAC00A82745 /* CameraMultiLiveViewController.mm */; };
-		06603FB71B23133300FB6F32 /* DropboxSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 573267F4185FFDDF00BBE793 /* DropboxSettingVC.m */; };
 		06603FB81B23133300FB6F32 /* MyCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 618B31A715A12D45009A59A7 /* MyCamera.m */; };
 		06603FB91B23133300FB6F32 /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61963C1115AA869500DB266E /* PullRefreshTableViewController.m */; };
 		06603FBA1B23133300FB6F32 /* CustomGridTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = 6198544615D4A88D00A1F4EF /* CustomGridTableViewCellStyle1.m */; };
@@ -290,7 +289,6 @@
 		06603FF41B23133300FB6F32 /* liveview.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CF2194EB73C00F5AA11 /* liveview.png */; };
 		06603FF51B23133300FB6F32 /* leo_snapshot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C92194EB73B00F5AA11 /* leo_snapshot@2x.png */; };
 		06603FF61B23133300FB6F32 /* ceo_rcplay_line_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A49904819AB46FD00B19CD4 /* ceo_rcplay_line_full.png */; };
-		06603FF71B23133300FB6F32 /* DropboxSettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 573267F5185FFDDF00BBE793 /* DropboxSettingVC.xib */; };
 		06603FF81B23133300FB6F32 /* bkg_articalList.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CEE8161499F413007CE9E8 /* bkg_articalList.png */; };
 		06603FF91B23133300FB6F32 /* live_chicon_clicke.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C9F194EB73B00F5AA11 /* live_chicon_clicke.png */; };
 		06603FFB1B23133300FB6F32 /* bkg_articalList@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CEE8171499F413007CE9E8 /* bkg_articalList@2x.png */; };
@@ -810,7 +808,6 @@
 		066D9E981B037E7C00408AF2 /* DDBadgeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C596431585F585006FB0D6 /* DDBadgeViewCell.m */; };
 		066D9E991B037E7C00408AF2 /* UIBarButtonItem+BarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C014E193339F60032A77E /* UIBarButtonItem+BarButtonItem.m */; };
 		066D9E9A1B037E7C00408AF2 /* CameraMultiLiveViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF857719061DAC00A82745 /* CameraMultiLiveViewController.mm */; };
-		066D9E9B1B037E7C00408AF2 /* DropboxSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 573267F4185FFDDF00BBE793 /* DropboxSettingVC.m */; };
 		066D9E9C1B037E7C00408AF2 /* MyCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 618B31A715A12D45009A59A7 /* MyCamera.m */; };
 		066D9E9D1B037E7C00408AF2 /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61963C1115AA869500DB266E /* PullRefreshTableViewController.m */; };
 		066D9E9E1B037E7C00408AF2 /* CustomGridTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = 6198544615D4A88D00A1F4EF /* CustomGridTableViewCellStyle1.m */; };
@@ -868,7 +865,6 @@
 		066D9ED61B037E7C00408AF2 /* liveview.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CF2194EB73C00F5AA11 /* liveview.png */; };
 		066D9ED71B037E7C00408AF2 /* leo_snapshot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C92194EB73B00F5AA11 /* leo_snapshot@2x.png */; };
 		066D9ED81B037E7C00408AF2 /* ceo_rcplay_line_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A49904819AB46FD00B19CD4 /* ceo_rcplay_line_full.png */; };
-		066D9ED91B037E7C00408AF2 /* DropboxSettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 573267F5185FFDDF00BBE793 /* DropboxSettingVC.xib */; };
 		066D9EDA1B037E7C00408AF2 /* bkg_articalList.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CEE8161499F413007CE9E8 /* bkg_articalList.png */; };
 		066D9EDB1B037E7C00408AF2 /* live_chicon_clicke.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C9F194EB73B00F5AA11 /* live_chicon_clicke.png */; };
 		066D9EDC1B037E7C00408AF2 /* bkg_articalList@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CEE8171499F413007CE9E8 /* bkg_articalList@2x.png */; };
@@ -1371,7 +1367,6 @@
 		0682DE6A1B08CCF30019BD70 /* DDBadgeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C596431585F585006FB0D6 /* DDBadgeViewCell.m */; };
 		0682DE6B1B08CCF30019BD70 /* UIBarButtonItem+BarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C014E193339F60032A77E /* UIBarButtonItem+BarButtonItem.m */; };
 		0682DE6C1B08CCF30019BD70 /* CameraMultiLiveViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF857719061DAC00A82745 /* CameraMultiLiveViewController.mm */; };
-		0682DE6D1B08CCF30019BD70 /* DropboxSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 573267F4185FFDDF00BBE793 /* DropboxSettingVC.m */; };
 		0682DE6E1B08CCF30019BD70 /* MyCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 618B31A715A12D45009A59A7 /* MyCamera.m */; };
 		0682DE6F1B08CCF30019BD70 /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61963C1115AA869500DB266E /* PullRefreshTableViewController.m */; };
 		0682DE701B08CCF30019BD70 /* CustomGridTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = 6198544615D4A88D00A1F4EF /* CustomGridTableViewCellStyle1.m */; };
@@ -1429,7 +1424,6 @@
 		0682DEAB1B08CCF30019BD70 /* liveview.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CF2194EB73C00F5AA11 /* liveview.png */; };
 		0682DEAC1B08CCF30019BD70 /* leo_snapshot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C92194EB73B00F5AA11 /* leo_snapshot@2x.png */; };
 		0682DEAD1B08CCF30019BD70 /* ceo_rcplay_line_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A49904819AB46FD00B19CD4 /* ceo_rcplay_line_full.png */; };
-		0682DEAE1B08CCF30019BD70 /* DropboxSettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 573267F5185FFDDF00BBE793 /* DropboxSettingVC.xib */; };
 		0682DEAF1B08CCF30019BD70 /* bkg_articalList.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CEE8161499F413007CE9E8 /* bkg_articalList.png */; };
 		0682DEB01B08CCF30019BD70 /* live_chicon_clicke.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C9F194EB73B00F5AA11 /* live_chicon_clicke.png */; };
 		0682DEB11B08CCF30019BD70 /* bkg_articalList@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CEE8171499F413007CE9E8 /* bkg_articalList@2x.png */; };
@@ -2008,7 +2002,6 @@
 		0692A7711B5FC55400D28D06 /* DDBadgeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C596431585F585006FB0D6 /* DDBadgeViewCell.m */; };
 		0692A7721B5FC55400D28D06 /* UIBarButtonItem+BarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C014E193339F60032A77E /* UIBarButtonItem+BarButtonItem.m */; };
 		0692A7731B5FC55400D28D06 /* CameraMultiLiveViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF857719061DAC00A82745 /* CameraMultiLiveViewController.mm */; };
-		0692A7741B5FC55400D28D06 /* DropboxSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 573267F4185FFDDF00BBE793 /* DropboxSettingVC.m */; };
 		0692A7751B5FC55400D28D06 /* MyCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 618B31A715A12D45009A59A7 /* MyCamera.m */; };
 		0692A7761B5FC55400D28D06 /* IQTitleBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 06335C171AC19E7E003DCD0A /* IQTitleBarButtonItem.m */; };
 		0692A7771B5FC55400D28D06 /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61963C1115AA869500DB266E /* PullRefreshTableViewController.m */; };
@@ -2039,7 +2032,6 @@
 		0692A7A91B5FC55400D28D06 /* CameraLiveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8C2A98E1490BF8B001B84F0 /* CameraLiveView.xib */; };
 		0692A7AC1B5FC55400D28D06 /* CameraList.xib in Resources */ = {isa = PBXBuildFile; fileRef = D87E3D7E149848800030B2EF /* CameraList.xib */; };
 		0692A7B11B5FC55400D28D06 /* AddCamera.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61890F2D1533CCA00031B4EC /* AddCamera.xib */; };
-		0692A7B81B5FC55400D28D06 /* DropboxSettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 573267F5185FFDDF00BBE793 /* DropboxSettingVC.xib */; };
 		0692A7B91B5FC55400D28D06 /* bkg_articalList.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CEE8161499F413007CE9E8 /* bkg_articalList.png */; };
 		0692A7BB1B5FC55400D28D06 /* bkg_articalList@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CEE8171499F413007CE9E8 /* bkg_articalList@2x.png */; };
 		0692A7BC1B5FC55400D28D06 /* beep-beep.aiff in Resources */ = {isa = PBXBuildFile; fileRef = D8C3D163149AF628008DE8D3 /* beep-beep.aiff */; };
@@ -2366,7 +2358,6 @@
 		069EF9691B1207D00024CB5A /* DDBadgeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C596431585F585006FB0D6 /* DDBadgeViewCell.m */; };
 		069EF96A1B1207D00024CB5A /* UIBarButtonItem+BarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C014E193339F60032A77E /* UIBarButtonItem+BarButtonItem.m */; };
 		069EF96B1B1207D00024CB5A /* CameraMultiLiveViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF857719061DAC00A82745 /* CameraMultiLiveViewController.mm */; };
-		069EF96C1B1207D00024CB5A /* DropboxSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 573267F4185FFDDF00BBE793 /* DropboxSettingVC.m */; };
 		069EF96D1B1207D00024CB5A /* MyCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 618B31A715A12D45009A59A7 /* MyCamera.m */; };
 		069EF96E1B1207D00024CB5A /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61963C1115AA869500DB266E /* PullRefreshTableViewController.m */; };
 		069EF96F1B1207D00024CB5A /* CustomGridTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = 6198544615D4A88D00A1F4EF /* CustomGridTableViewCellStyle1.m */; };
@@ -2424,7 +2415,6 @@
 		069EF9A91B1207D00024CB5A /* liveview.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CF2194EB73C00F5AA11 /* liveview.png */; };
 		069EF9AB1B1207D00024CB5A /* leo_snapshot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C92194EB73B00F5AA11 /* leo_snapshot@2x.png */; };
 		069EF9AC1B1207D00024CB5A /* ceo_rcplay_line_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A49904819AB46FD00B19CD4 /* ceo_rcplay_line_full.png */; };
-		069EF9AD1B1207D00024CB5A /* DropboxSettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 573267F5185FFDDF00BBE793 /* DropboxSettingVC.xib */; };
 		069EF9AE1B1207D00024CB5A /* bkg_articalList.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CEE8161499F413007CE9E8 /* bkg_articalList.png */; };
 		069EF9AF1B1207D00024CB5A /* live_chicon_clicke.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C9F194EB73B00F5AA11 /* live_chicon_clicke.png */; };
 		069EF9B01B1207D00024CB5A /* bkg_articalList@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CEE8171499F413007CE9E8 /* bkg_articalList@2x.png */; };
@@ -2939,7 +2929,6 @@
 		06AA8CAD1B5FE8960050A6E7 /* DDBadgeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C596431585F585006FB0D6 /* DDBadgeViewCell.m */; };
 		06AA8CAE1B5FE8960050A6E7 /* UIBarButtonItem+BarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C014E193339F60032A77E /* UIBarButtonItem+BarButtonItem.m */; };
 		06AA8CAF1B5FE8960050A6E7 /* CameraMultiLiveViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF857719061DAC00A82745 /* CameraMultiLiveViewController.mm */; };
-		06AA8CB01B5FE8960050A6E7 /* DropboxSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 573267F4185FFDDF00BBE793 /* DropboxSettingVC.m */; };
 		06AA8CB11B5FE8960050A6E7 /* MyCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 618B31A715A12D45009A59A7 /* MyCamera.m */; };
 		06AA8CB21B5FE8960050A6E7 /* IQTitleBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 06335C171AC19E7E003DCD0A /* IQTitleBarButtonItem.m */; };
 		06AA8CB31B5FE8960050A6E7 /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61963C1115AA869500DB266E /* PullRefreshTableViewController.m */; };
@@ -3001,7 +2990,6 @@
 		06AA8CF11B5FE8960050A6E7 /* liveview.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CF2194EB73C00F5AA11 /* liveview.png */; };
 		06AA8CF21B5FE8960050A6E7 /* leo_snapshot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C92194EB73B00F5AA11 /* leo_snapshot@2x.png */; };
 		06AA8CF31B5FE8960050A6E7 /* ceo_rcplay_line_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A49904819AB46FD00B19CD4 /* ceo_rcplay_line_full.png */; };
-		06AA8CF41B5FE8960050A6E7 /* DropboxSettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 573267F5185FFDDF00BBE793 /* DropboxSettingVC.xib */; };
 		06AA8CF51B5FE8960050A6E7 /* bkg_articalList.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CEE8161499F413007CE9E8 /* bkg_articalList.png */; };
 		06AA8CF61B5FE8960050A6E7 /* live_chicon_clicke.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C9F194EB73B00F5AA11 /* live_chicon_clicke.png */; };
 		06AA8CF71B5FE8960050A6E7 /* bkg_articalList@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CEE8171499F413007CE9E8 /* bkg_articalList@2x.png */; };
@@ -3509,7 +3497,6 @@
 		06B8C9151B0A21BB006ED6EE /* DDBadgeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C596431585F585006FB0D6 /* DDBadgeViewCell.m */; };
 		06B8C9161B0A21BB006ED6EE /* UIBarButtonItem+BarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C014E193339F60032A77E /* UIBarButtonItem+BarButtonItem.m */; };
 		06B8C9171B0A21BB006ED6EE /* CameraMultiLiveViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF857719061DAC00A82745 /* CameraMultiLiveViewController.mm */; };
-		06B8C9181B0A21BB006ED6EE /* DropboxSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 573267F4185FFDDF00BBE793 /* DropboxSettingVC.m */; };
 		06B8C9191B0A21BB006ED6EE /* MyCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 618B31A715A12D45009A59A7 /* MyCamera.m */; };
 		06B8C91A1B0A21BB006ED6EE /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61963C1115AA869500DB266E /* PullRefreshTableViewController.m */; };
 		06B8C91B1B0A21BB006ED6EE /* CustomGridTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = 6198544615D4A88D00A1F4EF /* CustomGridTableViewCellStyle1.m */; };
@@ -3567,7 +3554,6 @@
 		06B8C9541B0A21BB006ED6EE /* liveview.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CF2194EB73C00F5AA11 /* liveview.png */; };
 		06B8C9551B0A21BB006ED6EE /* leo_snapshot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C92194EB73B00F5AA11 /* leo_snapshot@2x.png */; };
 		06B8C9561B0A21BB006ED6EE /* ceo_rcplay_line_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A49904819AB46FD00B19CD4 /* ceo_rcplay_line_full.png */; };
-		06B8C9571B0A21BB006ED6EE /* DropboxSettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 573267F5185FFDDF00BBE793 /* DropboxSettingVC.xib */; };
 		06B8C9581B0A21BB006ED6EE /* bkg_articalList.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CEE8161499F413007CE9E8 /* bkg_articalList.png */; };
 		06B8C9591B0A21BB006ED6EE /* live_chicon_clicke.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C9F194EB73B00F5AA11 /* live_chicon_clicke.png */; };
 		06B8C95B1B0A21BB006ED6EE /* bkg_articalList@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CEE8171499F413007CE9E8 /* bkg_articalList@2x.png */; };
@@ -4371,7 +4357,6 @@
 		06CAA4C21BC0142C00853612 /* DDBadgeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C596431585F585006FB0D6 /* DDBadgeViewCell.m */; };
 		06CAA4C31BC0142C00853612 /* UIBarButtonItem+BarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C014E193339F60032A77E /* UIBarButtonItem+BarButtonItem.m */; };
 		06CAA4C41BC0142C00853612 /* CameraMultiLiveViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF857719061DAC00A82745 /* CameraMultiLiveViewController.mm */; };
-		06CAA4C51BC0142C00853612 /* DropboxSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 573267F4185FFDDF00BBE793 /* DropboxSettingVC.m */; };
 		06CAA4C61BC0142C00853612 /* MyCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 618B31A715A12D45009A59A7 /* MyCamera.m */; };
 		06CAA4C71BC0142C00853612 /* IQTitleBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 06335C171AC19E7E003DCD0A /* IQTitleBarButtonItem.m */; };
 		06CAA4C81BC0142C00853612 /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61963C1115AA869500DB266E /* PullRefreshTableViewController.m */; };
@@ -4433,7 +4418,6 @@
 		06CAA5021BC0142C00853612 /* liveview.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CF2194EB73C00F5AA11 /* liveview.png */; };
 		06CAA5031BC0142C00853612 /* leo_snapshot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C92194EB73B00F5AA11 /* leo_snapshot@2x.png */; };
 		06CAA5041BC0142C00853612 /* ceo_rcplay_line_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A49904819AB46FD00B19CD4 /* ceo_rcplay_line_full.png */; };
-		06CAA5051BC0142C00853612 /* DropboxSettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 573267F5185FFDDF00BBE793 /* DropboxSettingVC.xib */; };
 		06CAA5071BC0142C00853612 /* bkg_articalList.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CEE8161499F413007CE9E8 /* bkg_articalList.png */; };
 		06CAA5081BC0142C00853612 /* live_chicon_clicke.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C9F194EB73B00F5AA11 /* live_chicon_clicke.png */; };
 		06CAA5091BC0142C00853612 /* bkg_articalList@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CEE8171499F413007CE9E8 /* bkg_articalList@2x.png */; };
@@ -4810,7 +4794,6 @@
 		06CAA6A81BC0142C00853612 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABFD0C3190F6F7F00DDF03B /* SystemConfiguration.framework */; };
 		06CAA6A91BC0142C00853612 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572B926B18EA4BFA0041B732 /* CoreImage.framework */; };
 		06CAA6AA1BC0142C00853612 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573267FC1860A48700BBE793 /* Security.framework */; };
-		06CAA6AB1BC0142C00853612 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573267FA1860993000BBE793 /* DropboxSDK.framework */; };
 		06CAA6AC1BC0142C00853612 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E5509215D9E3E800AA6184 /* AssetsLibrary.framework */; };
 		06CAA6AD1BC0142C00853612 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6108DB8A15CB9EA0002966A2 /* libz.dylib */; };
 		06CAA6AE1BC0142C00853612 /* libbz2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6108DB8315CB833D002966A2 /* libbz2.1.0.dylib */; };
@@ -4978,7 +4961,6 @@
 		06D3F88A1B78E7C1006AF177 /* DDBadgeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C596431585F585006FB0D6 /* DDBadgeViewCell.m */; };
 		06D3F88B1B78E7C1006AF177 /* UIBarButtonItem+BarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C014E193339F60032A77E /* UIBarButtonItem+BarButtonItem.m */; };
 		06D3F88C1B78E7C1006AF177 /* CameraMultiLiveViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF857719061DAC00A82745 /* CameraMultiLiveViewController.mm */; };
-		06D3F88D1B78E7C1006AF177 /* DropboxSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 573267F4185FFDDF00BBE793 /* DropboxSettingVC.m */; };
 		06D3F88E1B78E7C1006AF177 /* MyCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 618B31A715A12D45009A59A7 /* MyCamera.m */; };
 		06D3F88F1B78E7C1006AF177 /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61963C1115AA869500DB266E /* PullRefreshTableViewController.m */; };
 		06D3F8901B78E7C1006AF177 /* CustomGridTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = 6198544615D4A88D00A1F4EF /* CustomGridTableViewCellStyle1.m */; };
@@ -5037,7 +5019,6 @@
 		06D3F8CC1B78E7C1006AF177 /* liveview.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CF2194EB73C00F5AA11 /* liveview.png */; };
 		06D3F8CD1B78E7C1006AF177 /* leo_snapshot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C92194EB73B00F5AA11 /* leo_snapshot@2x.png */; };
 		06D3F8CE1B78E7C1006AF177 /* ceo_rcplay_line_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A49904819AB46FD00B19CD4 /* ceo_rcplay_line_full.png */; };
-		06D3F8CF1B78E7C1006AF177 /* DropboxSettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 573267F5185FFDDF00BBE793 /* DropboxSettingVC.xib */; };
 		06D3F8D01B78E7C1006AF177 /* bkg_articalList.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CEE8161499F413007CE9E8 /* bkg_articalList.png */; };
 		06D3F8D11B78E7C1006AF177 /* live_chicon_clicke.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C9F194EB73B00F5AA11 /* live_chicon_clicke.png */; };
 		06D3F8D21B78E7C1006AF177 /* bkg_articalList@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CEE8171499F413007CE9E8 /* bkg_articalList@2x.png */; };
@@ -5582,7 +5563,6 @@
 		06F76E861AB720A100901EBA /* DDBadgeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C596431585F585006FB0D6 /* DDBadgeViewCell.m */; };
 		06F76E871AB720A100901EBA /* UIBarButtonItem+BarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A1C014E193339F60032A77E /* UIBarButtonItem+BarButtonItem.m */; };
 		06F76E881AB720A100901EBA /* CameraMultiLiveViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7AAF857719061DAC00A82745 /* CameraMultiLiveViewController.mm */; };
-		06F76E891AB720A100901EBA /* DropboxSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 573267F4185FFDDF00BBE793 /* DropboxSettingVC.m */; };
 		06F76E8A1AB720A100901EBA /* MyCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 618B31A715A12D45009A59A7 /* MyCamera.m */; };
 		06F76E8B1AB720A100901EBA /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61963C1115AA869500DB266E /* PullRefreshTableViewController.m */; };
 		06F76E8C1AB720A100901EBA /* CustomGridTableViewCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = 6198544615D4A88D00A1F4EF /* CustomGridTableViewCellStyle1.m */; };
@@ -5639,7 +5619,6 @@
 		06F76EC11AB720A100901EBA /* liveview.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CF2194EB73C00F5AA11 /* liveview.png */; };
 		06F76EC21AB720A100901EBA /* leo_snapshot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C92194EB73B00F5AA11 /* leo_snapshot@2x.png */; };
 		06F76EC31AB720A100901EBA /* ceo_rcplay_line_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A49904819AB46FD00B19CD4 /* ceo_rcplay_line_full.png */; };
-		06F76EC41AB720A100901EBA /* DropboxSettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 573267F5185FFDDF00BBE793 /* DropboxSettingVC.xib */; };
 		06F76EC51AB720A100901EBA /* bkg_articalList.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CEE8161499F413007CE9E8 /* bkg_articalList.png */; };
 		06F76EC61AB720A100901EBA /* live_chicon_clicke.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553C9F194EB73B00F5AA11 /* live_chicon_clicke.png */; };
 		06F76EC71AB720A100901EBA /* bkg_articalList@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8CEE8171499F413007CE9E8 /* bkg_articalList@2x.png */; };
@@ -6028,8 +6007,6 @@
 		572B926C18EA4BFA0041B732 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572B926B18EA4BFA0041B732 /* CoreImage.framework */; };
 		573267EF185FF0B200BBE793 /* MoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 573267ED185FF0B200BBE793 /* MoreVC.m */; };
 		573267F1185FF0B200BBE793 /* MoreVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 573267EE185FF0B200BBE793 /* MoreVC.xib */; };
-		573267F6185FFDDF00BBE793 /* DropboxSettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 573267F4185FFDDF00BBE793 /* DropboxSettingVC.m */; };
-		573267F8185FFDDF00BBE793 /* DropboxSettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 573267F5185FFDDF00BBE793 /* DropboxSettingVC.xib */; };
 		573267FB1860993000BBE793 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573267FA1860993000BBE793 /* DropboxSDK.framework */; };
 		573267FD1860A48700BBE793 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573267FC1860A48700BBE793 /* Security.framework */; };
 		57DE16E81868235C00B6682F /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = 57DE16E61868235C00B6682F /* more.png */; };
@@ -7531,9 +7508,6 @@
 		573267EC185FF0B200BBE793 /* MoreVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreVC.h; sourceTree = "<group>"; };
 		573267ED185FF0B200BBE793 /* MoreVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreVC.m; sourceTree = "<group>"; };
 		573267EE185FF0B200BBE793 /* MoreVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreVC.xib; sourceTree = "<group>"; };
-		573267F3185FFDDF00BBE793 /* DropboxSettingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropboxSettingVC.h; sourceTree = "<group>"; };
-		573267F4185FFDDF00BBE793 /* DropboxSettingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxSettingVC.m; sourceTree = "<group>"; };
-		573267F5185FFDDF00BBE793 /* DropboxSettingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropboxSettingVC.xib; sourceTree = "<group>"; };
 		573267FA1860993000BBE793 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DropboxSDK.framework; path = "../dropbox-ios-sdk-1.3.9/DropboxSDK.framework"; sourceTree = "<group>"; };
 		573267FC1860A48700BBE793 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		579014C8187FB1B700FEB68F /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/GLKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -8479,7 +8453,6 @@
 				06CAA6A81BC0142C00853612 /* SystemConfiguration.framework in Frameworks */,
 				06CAA6A91BC0142C00853612 /* CoreImage.framework in Frameworks */,
 				06CAA6AA1BC0142C00853612 /* Security.framework in Frameworks */,
-				06CAA6AB1BC0142C00853612 /* DropboxSDK.framework in Frameworks */,
 				06CAA6AC1BC0142C00853612 /* AssetsLibrary.framework in Frameworks */,
 				06CAA6AD1BC0142C00853612 /* libz.dylib in Frameworks */,
 				06CAA6AE1BC0142C00853612 /* libbz2.1.0.dylib in Frameworks */,
@@ -10427,9 +10400,6 @@
 				573267EC185FF0B200BBE793 /* MoreVC.h */,
 				573267ED185FF0B200BBE793 /* MoreVC.m */,
 				573267EE185FF0B200BBE793 /* MoreVC.xib */,
-				573267F3185FFDDF00BBE793 /* DropboxSettingVC.h */,
-				573267F4185FFDDF00BBE793 /* DropboxSettingVC.m */,
-				573267F5185FFDDF00BBE793 /* DropboxSettingVC.xib */,
 				06F425F41AA9FB6500427383 /* AppGuidViewController.h */,
 				06F425F51AA9FB6500427383 /* AppGuidViewController.m */,
 				06F425F61AA9FB6500427383 /* AppGuidViewController.xib */,
@@ -11000,7 +10970,6 @@
 				06603FF41B23133300FB6F32 /* liveview.png in Resources */,
 				06603FF51B23133300FB6F32 /* leo_snapshot@2x.png in Resources */,
 				06603FF61B23133300FB6F32 /* ceo_rcplay_line_full.png in Resources */,
-				06603FF71B23133300FB6F32 /* DropboxSettingVC.xib in Resources */,
 				069963CF1B2339A100F88461 /* f+Btn_Click@2x.png in Resources */,
 				06603FF81B23133300FB6F32 /* bkg_articalList.png in Resources */,
 				06603FF91B23133300FB6F32 /* live_chicon_clicke.png in Resources */,
@@ -11450,7 +11419,6 @@
 				066D9ED61B037E7C00408AF2 /* liveview.png in Resources */,
 				066D9ED71B037E7C00408AF2 /* leo_snapshot@2x.png in Resources */,
 				066D9ED81B037E7C00408AF2 /* ceo_rcplay_line_full.png in Resources */,
-				066D9ED91B037E7C00408AF2 /* DropboxSettingVC.xib in Resources */,
 				066D9EDA1B037E7C00408AF2 /* bkg_articalList.png in Resources */,
 				066D9EDB1B037E7C00408AF2 /* live_chicon_clicke.png in Resources */,
 				066D9EDC1B037E7C00408AF2 /* bkg_articalList@2x.png in Resources */,
@@ -11910,7 +11878,6 @@
 				0682DEAB1B08CCF30019BD70 /* liveview.png in Resources */,
 				0682DEAC1B08CCF30019BD70 /* leo_snapshot@2x.png in Resources */,
 				0682DEAD1B08CCF30019BD70 /* ceo_rcplay_line_full.png in Resources */,
-				0682DEAE1B08CCF30019BD70 /* DropboxSettingVC.xib in Resources */,
 				0682DEAF1B08CCF30019BD70 /* bkg_articalList.png in Resources */,
 				0682DEB01B08CCF30019BD70 /* live_chicon_clicke.png in Resources */,
 				0682DEB11B08CCF30019BD70 /* bkg_articalList@2x.png in Resources */,
@@ -12332,7 +12299,6 @@
 				06C235A41B65146700CC8D5E /* leo_speaker_off.png in Resources */,
 				0692A7B11B5FC55400D28D06 /* AddCamera.xib in Resources */,
 				06C2363C1B65148600CC8D5E /* cam_back@2x.png in Resources */,
-				0692A7B81B5FC55400D28D06 /* DropboxSettingVC.xib in Resources */,
 				06C2357C1B65146700CC8D5E /* morefunction_clicked.png in Resources */,
 				06C236AD1B65149E00CC8D5E /* ceo_record_tab_l@2x.png in Resources */,
 				0692A7B91B5FC55400D28D06 /* bkg_articalList.png in Resources */,
@@ -12769,7 +12735,6 @@
 				069EF9A91B1207D00024CB5A /* liveview.png in Resources */,
 				069EF9AB1B1207D00024CB5A /* leo_snapshot@2x.png in Resources */,
 				069EF9AC1B1207D00024CB5A /* ceo_rcplay_line_full.png in Resources */,
-				069EF9AD1B1207D00024CB5A /* DropboxSettingVC.xib in Resources */,
 				069EF9AE1B1207D00024CB5A /* bkg_articalList.png in Resources */,
 				069EF9AF1B1207D00024CB5A /* live_chicon_clicke.png in Resources */,
 				069EF9B01B1207D00024CB5A /* bkg_articalList@2x.png in Resources */,
@@ -13217,7 +13182,6 @@
 				06AA8CF11B5FE8960050A6E7 /* liveview.png in Resources */,
 				06AA8CF21B5FE8960050A6E7 /* leo_snapshot@2x.png in Resources */,
 				06AA8CF31B5FE8960050A6E7 /* ceo_rcplay_line_full.png in Resources */,
-				06AA8CF41B5FE8960050A6E7 /* DropboxSettingVC.xib in Resources */,
 				0688C3851B61180600079BB5 /* f-Btn@2x.png in Resources */,
 				06AA8CF51B5FE8960050A6E7 /* bkg_articalList.png in Resources */,
 				06AA8CF61B5FE8960050A6E7 /* live_chicon_clicke.png in Resources */,
@@ -13683,7 +13647,6 @@
 				06B8CB091B0A2319006ED6EE /* addcam_clicked.png in Resources */,
 				06B8C9551B0A21BB006ED6EE /* leo_snapshot@2x.png in Resources */,
 				06B8C9561B0A21BB006ED6EE /* ceo_rcplay_line_full.png in Resources */,
-				06B8C9571B0A21BB006ED6EE /* DropboxSettingVC.xib in Resources */,
 				06B8C9581B0A21BB006ED6EE /* bkg_articalList.png in Resources */,
 				06B8C9591B0A21BB006ED6EE /* live_chicon_clicke.png in Resources */,
 				06B8C95B1B0A21BB006ED6EE /* bkg_articalList@2x.png in Resources */,
@@ -14120,7 +14083,6 @@
 				06CAA5031BC0142C00853612 /* leo_snapshot@2x.png in Resources */,
 				06CAA7251BC0167300853612 /* page2_en@2x.jpg in Resources */,
 				06CAA5041BC0142C00853612 /* ceo_rcplay_line_full.png in Resources */,
-				06CAA5051BC0142C00853612 /* DropboxSettingVC.xib in Resources */,
 				06CAA5071BC0142C00853612 /* bkg_articalList.png in Resources */,
 				06CAA5081BC0142C00853612 /* live_chicon_clicke.png in Resources */,
 				06CAA5091BC0142C00853612 /* bkg_articalList@2x.png in Resources */,
@@ -14580,7 +14542,6 @@
 				06D3F8CC1B78E7C1006AF177 /* liveview.png in Resources */,
 				06D3F8CD1B78E7C1006AF177 /* leo_snapshot@2x.png in Resources */,
 				06D3F8CE1B78E7C1006AF177 /* ceo_rcplay_line_full.png in Resources */,
-				06D3F8CF1B78E7C1006AF177 /* DropboxSettingVC.xib in Resources */,
 				06D3FAF81B796BF1006AF177 /* psd_contrast_clicked@2x.png in Resources */,
 				06D3F8D01B78E7C1006AF177 /* bkg_articalList.png in Resources */,
 				06D3F8D11B78E7C1006AF177 /* live_chicon_clicke.png in Resources */,
@@ -15041,7 +15002,6 @@
 				06F76EC11AB720A100901EBA /* liveview.png in Resources */,
 				06F76EC21AB720A100901EBA /* leo_snapshot@2x.png in Resources */,
 				06F76EC31AB720A100901EBA /* ceo_rcplay_line_full.png in Resources */,
-				06F76EC41AB720A100901EBA /* DropboxSettingVC.xib in Resources */,
 				06F76EC51AB720A100901EBA /* bkg_articalList.png in Resources */,
 				06F76EC61AB720A100901EBA /* live_chicon_clicke.png in Resources */,
 				06F76EC71AB720A100901EBA /* bkg_articalList@2x.png in Resources */,
@@ -15495,7 +15455,6 @@
 				7A553DD7194EB73D00F5AA11 /* liveview.png in Resources */,
 				7A553D78194EB73D00F5AA11 /* leo_snapshot@2x.png in Resources */,
 				7A49904A19AB46FD00B19CD4 /* ceo_rcplay_line_full.png in Resources */,
-				573267F8185FFDDF00BBE793 /* DropboxSettingVC.xib in Resources */,
 				610DBA38169AF0BF00292CF9 /* bkg_articalList.png in Resources */,
 				7A553D85194EB73D00F5AA11 /* live_chicon_clicke.png in Resources */,
 				610DBA39169AF0BF00292CF9 /* bkg_articalList@2x.png in Resources */,
@@ -16011,7 +15970,6 @@
 				06603FB41B23133300FB6F32 /* DDBadgeViewCell.m in Sources */,
 				06603FB51B23133300FB6F32 /* UIBarButtonItem+BarButtonItem.m in Sources */,
 				06603FB61B23133300FB6F32 /* CameraMultiLiveViewController.mm in Sources */,
-				06603FB71B23133300FB6F32 /* DropboxSettingVC.m in Sources */,
 				06603FB81B23133300FB6F32 /* MyCamera.m in Sources */,
 				06603FB91B23133300FB6F32 /* PullRefreshTableViewController.m in Sources */,
 				06603FBA1B23133300FB6F32 /* CustomGridTableViewCellStyle1.m in Sources */,
@@ -16133,7 +16091,6 @@
 				066D9E981B037E7C00408AF2 /* DDBadgeViewCell.m in Sources */,
 				066D9E991B037E7C00408AF2 /* UIBarButtonItem+BarButtonItem.m in Sources */,
 				066D9E9A1B037E7C00408AF2 /* CameraMultiLiveViewController.mm in Sources */,
-				066D9E9B1B037E7C00408AF2 /* DropboxSettingVC.m in Sources */,
 				066D9E9C1B037E7C00408AF2 /* MyCamera.m in Sources */,
 				066D9E9D1B037E7C00408AF2 /* PullRefreshTableViewController.m in Sources */,
 				066D9E9E1B037E7C00408AF2 /* CustomGridTableViewCellStyle1.m in Sources */,
@@ -16256,7 +16213,6 @@
 				0682DE6A1B08CCF30019BD70 /* DDBadgeViewCell.m in Sources */,
 				0682DE6B1B08CCF30019BD70 /* UIBarButtonItem+BarButtonItem.m in Sources */,
 				0682DE6C1B08CCF30019BD70 /* CameraMultiLiveViewController.mm in Sources */,
-				0682DE6D1B08CCF30019BD70 /* DropboxSettingVC.m in Sources */,
 				0682DE6E1B08CCF30019BD70 /* MyCamera.m in Sources */,
 				0682DE6F1B08CCF30019BD70 /* PullRefreshTableViewController.m in Sources */,
 				0682DE701B08CCF30019BD70 /* CustomGridTableViewCellStyle1.m in Sources */,
@@ -16380,7 +16336,6 @@
 				0692A7711B5FC55400D28D06 /* DDBadgeViewCell.m in Sources */,
 				0692A7721B5FC55400D28D06 /* UIBarButtonItem+BarButtonItem.m in Sources */,
 				0692A7731B5FC55400D28D06 /* CameraMultiLiveViewController.mm in Sources */,
-				0692A7741B5FC55400D28D06 /* DropboxSettingVC.m in Sources */,
 				0692A7751B5FC55400D28D06 /* MyCamera.m in Sources */,
 				0692A7761B5FC55400D28D06 /* IQTitleBarButtonItem.m in Sources */,
 				0692A7771B5FC55400D28D06 /* PullRefreshTableViewController.m in Sources */,
@@ -16506,7 +16461,6 @@
 				069EF9691B1207D00024CB5A /* DDBadgeViewCell.m in Sources */,
 				069EF96A1B1207D00024CB5A /* UIBarButtonItem+BarButtonItem.m in Sources */,
 				069EF96B1B1207D00024CB5A /* CameraMultiLiveViewController.mm in Sources */,
-				069EF96C1B1207D00024CB5A /* DropboxSettingVC.m in Sources */,
 				069EF96D1B1207D00024CB5A /* MyCamera.m in Sources */,
 				069EF96E1B1207D00024CB5A /* PullRefreshTableViewController.m in Sources */,
 				069EF96F1B1207D00024CB5A /* CustomGridTableViewCellStyle1.m in Sources */,
@@ -16630,7 +16584,6 @@
 				06AA8CAD1B5FE8960050A6E7 /* DDBadgeViewCell.m in Sources */,
 				06AA8CAE1B5FE8960050A6E7 /* UIBarButtonItem+BarButtonItem.m in Sources */,
 				06AA8CAF1B5FE8960050A6E7 /* CameraMultiLiveViewController.mm in Sources */,
-				06AA8CB01B5FE8960050A6E7 /* DropboxSettingVC.m in Sources */,
 				06AA8CB11B5FE8960050A6E7 /* MyCamera.m in Sources */,
 				06AA8CB21B5FE8960050A6E7 /* IQTitleBarButtonItem.m in Sources */,
 				06AA8CB31B5FE8960050A6E7 /* PullRefreshTableViewController.m in Sources */,
@@ -16753,7 +16706,6 @@
 				06B8C9151B0A21BB006ED6EE /* DDBadgeViewCell.m in Sources */,
 				06B8C9161B0A21BB006ED6EE /* UIBarButtonItem+BarButtonItem.m in Sources */,
 				06B8C9171B0A21BB006ED6EE /* CameraMultiLiveViewController.mm in Sources */,
-				06B8C9181B0A21BB006ED6EE /* DropboxSettingVC.m in Sources */,
 				06B8C9191B0A21BB006ED6EE /* MyCamera.m in Sources */,
 				06B8C91A1B0A21BB006ED6EE /* PullRefreshTableViewController.m in Sources */,
 				06B8C91B1B0A21BB006ED6EE /* CustomGridTableViewCellStyle1.m in Sources */,
@@ -16877,7 +16829,6 @@
 				06CAA4C21BC0142C00853612 /* DDBadgeViewCell.m in Sources */,
 				06CAA4C31BC0142C00853612 /* UIBarButtonItem+BarButtonItem.m in Sources */,
 				06CAA4C41BC0142C00853612 /* CameraMultiLiveViewController.mm in Sources */,
-				06CAA4C51BC0142C00853612 /* DropboxSettingVC.m in Sources */,
 				06CAA4C61BC0142C00853612 /* MyCamera.m in Sources */,
 				06CAA4C71BC0142C00853612 /* IQTitleBarButtonItem.m in Sources */,
 				06CAA4C81BC0142C00853612 /* PullRefreshTableViewController.m in Sources */,
@@ -17002,7 +16953,6 @@
 				06D3F88A1B78E7C1006AF177 /* DDBadgeViewCell.m in Sources */,
 				06D3F88B1B78E7C1006AF177 /* UIBarButtonItem+BarButtonItem.m in Sources */,
 				06D3F88C1B78E7C1006AF177 /* CameraMultiLiveViewController.mm in Sources */,
-				06D3F88D1B78E7C1006AF177 /* DropboxSettingVC.m in Sources */,
 				06D3F88E1B78E7C1006AF177 /* MyCamera.m in Sources */,
 				06D3F88F1B78E7C1006AF177 /* PullRefreshTableViewController.m in Sources */,
 				06D3F8901B78E7C1006AF177 /* CustomGridTableViewCellStyle1.m in Sources */,
@@ -17127,7 +17077,6 @@
 				06F76E861AB720A100901EBA /* DDBadgeViewCell.m in Sources */,
 				06F76E871AB720A100901EBA /* UIBarButtonItem+BarButtonItem.m in Sources */,
 				06F76E881AB720A100901EBA /* CameraMultiLiveViewController.mm in Sources */,
-				06F76E891AB720A100901EBA /* DropboxSettingVC.m in Sources */,
 				06F76E8A1AB720A100901EBA /* MyCamera.m in Sources */,
 				06335C2C1AC19E7F003DCD0A /* IQTitleBarButtonItem.m in Sources */,
 				06F76E8B1AB720A100901EBA /* PullRefreshTableViewController.m in Sources */,
@@ -17250,7 +17199,6 @@
 				610DBA2A169AF0BF00292CF9 /* DDBadgeViewCell.m in Sources */,
 				7A1C0185193339F70032A77E /* UIBarButtonItem+BarButtonItem.m in Sources */,
 				7AAF857919061DAC00A82745 /* CameraMultiLiveViewController.mm in Sources */,
-				573267F6185FFDDF00BBE793 /* DropboxSettingVC.m in Sources */,
 				610DBA2B169AF0BF00292CF9 /* MyCamera.m in Sources */,
 				610DBA2C169AF0BF00292CF9 /* PullRefreshTableViewController.m in Sources */,
 				610DBA2D169AF0BF00292CF9 /* CustomGridTableViewCellStyle1.m in Sources */,
