@@ -1,0 +1,16 @@
+
+"WIFI一键设置"="Aggiungi Camera";
+"AddApWifiTips"="1.Configurazione Smart WiFi";
+"AddApWifiTips2"="Primo settaggio camera collegarlo alla rete senza cavo, solo per specifiche camere";
+"AddApWifiOtherTips"="2.Connessione di rete cablata o tramite router WiFi";
+"AddApWifiNextStep"="Avanti";
+"AddApWifiStep2Tips"="Collegare l'alimentatore alla telecamera, poi la telecamera al router, dopo il tono di Ding-Dong  fare clic su \"Avanti\"";
+"AddApWifiStep2NeedWifiTips"="Assicurarsi che il telefono sia conneso al WiFi";
+"AddApWifiStep3SettingBtnTitle"="Configurazione";
+"AddApWifiSSIDTips"="SSD non può essere vuoto";
+"AddApWifiPsdTips"="La password non può essere vuota";
+"AddApWifiAudioTips"="Se alcun tono di Din_dong dalla camera?";
+"AddApWifiResetTips"="Premere il tasto RESET nella parte inferiore della fotocamera per 10 secondi per RESET";
+"AddApWifiWaitingTips"="WiFi è cinfigurata, si prega di attendere";
+"AddApWifiErrorTips"="Connessione WiFi fallita, si prega di confermare la password wifi";
+"ViewPsdLbl"="vedi password";

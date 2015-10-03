@@ -1,0 +1,16 @@
+
+"WIFI一键设置"="새로운 카메라";
+"AddApWifiTips"="1.SMART Wi-Fi 설정모드";
+"AddApWifiTips2"="간편한 설정으로 유선연결없이 네트워크 설정이 가능 합니다. 다만 해당 모델의 기능 지원여부를 확인해 주세요.";
+"AddApWifiOtherTips"="2.유선 혹은 무선네트워크가 연결 되었습니다.";
+"AddApWifiNextStep"="다음";
+"AddApWifiStep2Tips"="카메라 전원을 연결후 자동 상하좌우 동작이 멈추면, 딩동 소리를 확인후 다음을 눌러 주세요.";
+"AddApWifiStep2NeedWifiTips"="핸드폰을 먼저 Wi-Fi 무선신호에 연결해 주세요";
+"AddApWifiStep3SettingBtnTitle"="설정";
+"AddApWifiSSIDTips"="SSID를 선택 또는 확인해주세요.";
+"AddApWifiPsdTips"="비밀번호를 입력해 주세요";
+"AddApWifiAudioTips"="카메라로 부터 딩동 소리를 들었는지 확인해 주세요";
+"AddApWifiResetTips"="제품 하부에 리셋버튼을 10초간 누르시면, 제품이 리셋 됩니다.";
+"AddApWifiWaitingTips"="현재 Wi-Fi를 연결중입니다. 잠시만 기다려 주세요.";
+"AddApWifiErrorTips"="Wi-Fi연결 실패, Wi-Fi 비밀번호를 다시 확인해 주세요";
+"ViewPsdLbl"="암호 표시";

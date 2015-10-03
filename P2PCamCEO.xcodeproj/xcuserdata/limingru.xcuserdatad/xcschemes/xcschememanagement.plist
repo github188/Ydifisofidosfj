@@ -49,6 +49,11 @@
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
+		<key>SVIP CLOUD.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
 		<key>Toc View.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -103,6 +108,11 @@
 			<true/>
 		</dict>
 		<key>06D3F82A1B78E7C1006AF177</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>06D794E11BC0355E00B1E986</key>
 		<dict>
 			<key>primary</key>
 			<true/>
