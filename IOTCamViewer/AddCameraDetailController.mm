@@ -346,6 +346,9 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+}
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
     /****上方坐标设置***/
     CGFloat marginW=100.f;
     CGFloat marginLRW=(self.view.frame.size.width-self.qrBtn.frame.size.width-self.lansBtn.frame.size.width-marginW)/2;
@@ -362,7 +365,6 @@
     marginLRW=(self.view.frame.size.width-add.frame.size.width-cancel.frame.size.width-marginW)/2;
     add.frame=CGRectMake(marginLRW, add.frame.origin.y, add.frame.size.width, add.frame.size.height);
     cancel.frame=CGRectMake(add.frame.origin.x+add.frame.size.width+marginW, cancel.frame.origin.y, cancel.frame.size.width, cancel.frame.size.height);
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated {

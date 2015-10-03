@@ -151,15 +151,18 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    
+    [super viewWillAppear:animated];
+        [self refresh:nil];
+}
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
 #if defined(EasynPTarget) || defined(BayitCam) || defined(NewSearchLanDevice)
     [self easynpToolBar];
 #else
     self.tableView.frame=CGRectMake(0, 10, self.view.frame.size.width, self.view.frame.size.height-20-self.toolBar.size.height);
 #endif
     
-    [self refresh:nil];
-    [super viewWillAppear:animated];
+
 }
 
 - (void)dealloc {
