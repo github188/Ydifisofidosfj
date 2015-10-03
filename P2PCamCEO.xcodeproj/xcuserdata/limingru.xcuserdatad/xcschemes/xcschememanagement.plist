@@ -39,6 +39,11 @@
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
+		<key>PNP-V.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
 		<key>QTAIDT.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -88,6 +93,11 @@
 			<true/>
 		</dict>
 		<key>06B8C8B81B0A21BB006ED6EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>06CAA4631BC0142C00853612</key>
 		<dict>
 			<key>primary</key>
 			<true/>
