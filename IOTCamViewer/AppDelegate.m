@@ -17,7 +17,6 @@
 #import <SystemConfiguration/CaptiveNetwork.h>
 #import "IQKeyboardManager.h"
 #if defined(EasynPTarget)
-#import <FIR/FIR.h>
 //NSString *g_tpnsHostString = @"http://push1.ipcam.hk/apns/apns.php";
 #else
 //NSString *g_tpnsHostString = @"http://push.iotcplatform.com/apns/apns.php";
@@ -233,10 +232,6 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-#if defined(EasynPTarget)
-    [FIR handleCrashWithKey:@"68a7098718930bfdd0d6d07211438f66"]; 
-#endif
 	
 	//g_dwGLogZoneSeed = tCtrl_MSK|tReStartShow_MSK;
 	

@@ -4816,7 +4816,6 @@
 		06CAA6AE1BC0142C00853612 /* libbz2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6108DB8315CB833D002966A2 /* libbz2.1.0.dylib */; };
 		06CAA6AF1BC0142C00853612 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 618BDCEC15A3D2D0005ADEBC /* MessageUI.framework */; };
 		06CAA6B01BC0142C00853612 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61EC09E81599BF6200BE959E /* Foundation.framework */; };
-		06CAA6B11BC0142C00853612 /* FIR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F00DF11AFDA4F200139703 /* FIR.framework */; };
 		06CAA6B21BC0142C00853612 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82F330C157DF3C700A4AD37 /* SystemConfiguration.framework */; };
 		06CAA6B31BC0142C00853612 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A738DA154E64AA00D31CDD /* OpenAL.framework */; };
 		06CAA6B41BC0142C00853612 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D150149AE286008DE8D3 /* AddressBookUI.framework */; };
@@ -8486,7 +8485,6 @@
 				06CAA6AE1BC0142C00853612 /* libbz2.1.0.dylib in Frameworks */,
 				06CAA6AF1BC0142C00853612 /* MessageUI.framework in Frameworks */,
 				06CAA6B01BC0142C00853612 /* Foundation.framework in Frameworks */,
-				06CAA6B11BC0142C00853612 /* FIR.framework in Frameworks */,
 				06CAA6B21BC0142C00853612 /* SystemConfiguration.framework in Frameworks */,
 				06CAA6B31BC0142C00853612 /* OpenAL.framework in Frameworks */,
 				06CAA6B41BC0142C00853612 /* AddressBookUI.framework in Frameworks */,
