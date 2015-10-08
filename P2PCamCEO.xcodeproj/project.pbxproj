@@ -977,7 +977,6 @@
 		0660418A1B23133300FB6F32 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F71ABB148C5342007705B6 /* CoreGraphics.framework */; };
 		0660418B1B23133300FB6F32 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D1AD14A03253008DE8D3 /* CoreData.framework */; };
 		0660418C1B23133300FB6F32 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D148149AE16C008DE8D3 /* AddressBook.framework */; };
-		0660418D1B23133300FB6F32 /* FIR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F00DF11AFDA4F200139703 /* FIR.framework */; };
 		0660418E1B23133300FB6F32 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D149149AE16C008DE8D3 /* CoreMedia.framework */; };
 		0660418F1B23133300FB6F32 /* VideoRecorderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0B1C8D19A4D0ED0071E5CF /* VideoRecorderSDK.framework */; };
 		066041901B23133300FB6F32 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D14A149AE16C008DE8D3 /* CoreVideo.framework */; };
@@ -1557,7 +1556,6 @@
 		066DA0701B037E7C00408AF2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F71ABB148C5342007705B6 /* CoreGraphics.framework */; };
 		066DA0711B037E7C00408AF2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D1AD14A03253008DE8D3 /* CoreData.framework */; };
 		066DA0721B037E7C00408AF2 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D148149AE16C008DE8D3 /* AddressBook.framework */; };
-		066DA0731B037E7C00408AF2 /* FIR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F00DF11AFDA4F200139703 /* FIR.framework */; };
 		066DA0741B037E7C00408AF2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D149149AE16C008DE8D3 /* CoreMedia.framework */; };
 		066DA0751B037E7C00408AF2 /* VideoRecorderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0B1C8D19A4D0ED0071E5CF /* VideoRecorderSDK.framework */; };
 		066DA0761B037E7C00408AF2 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D14A149AE16C008DE8D3 /* CoreVideo.framework */; };
@@ -2112,7 +2110,6 @@
 		0682E0551B08CCF30019BD70 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F71ABB148C5342007705B6 /* CoreGraphics.framework */; };
 		0682E0561B08CCF30019BD70 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D1AD14A03253008DE8D3 /* CoreData.framework */; };
 		0682E0571B08CCF30019BD70 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D148149AE16C008DE8D3 /* AddressBook.framework */; };
-		0682E0581B08CCF30019BD70 /* FIR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F00DF11AFDA4F200139703 /* FIR.framework */; };
 		0682E0591B08CCF30019BD70 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D149149AE16C008DE8D3 /* CoreMedia.framework */; };
 		0682E05A1B08CCF30019BD70 /* VideoRecorderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0B1C8D19A4D0ED0071E5CF /* VideoRecorderSDK.framework */; };
 		0682E05B1B08CCF30019BD70 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D14A149AE16C008DE8D3 /* CoreVideo.framework */; };
@@ -2444,7 +2441,6 @@
 		0692A9531B5FC55400D28D06 /* libbz2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6108DB8315CB833D002966A2 /* libbz2.1.0.dylib */; };
 		0692A9541B5FC55400D28D06 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 618BDCEC15A3D2D0005ADEBC /* MessageUI.framework */; };
 		0692A9551B5FC55400D28D06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61EC09E81599BF6200BE959E /* Foundation.framework */; };
-		0692A9561B5FC55400D28D06 /* FIR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F00DF11AFDA4F200139703 /* FIR.framework */; };
 		0692A9571B5FC55400D28D06 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82F330C157DF3C700A4AD37 /* SystemConfiguration.framework */; };
 		0692A9581B5FC55400D28D06 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A738DA154E64AA00D31CDD /* OpenAL.framework */; };
 		0692A9591B5FC55400D28D06 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D150149AE286008DE8D3 /* AddressBookUI.framework */; };
@@ -3102,7 +3098,6 @@
 		069EFB3D1B1207D00024CB5A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F71ABB148C5342007705B6 /* CoreGraphics.framework */; };
 		069EFB3E1B1207D00024CB5A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D1AD14A03253008DE8D3 /* CoreData.framework */; };
 		069EFB3F1B1207D00024CB5A /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D148149AE16C008DE8D3 /* AddressBook.framework */; };
-		069EFB401B1207D00024CB5A /* FIR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F00DF11AFDA4F200139703 /* FIR.framework */; };
 		069EFB411B1207D00024CB5A /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D149149AE16C008DE8D3 /* CoreMedia.framework */; };
 		069EFB421B1207D00024CB5A /* VideoRecorderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0B1C8D19A4D0ED0071E5CF /* VideoRecorderSDK.framework */; };
 		069EFB431B1207D00024CB5A /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D14A149AE16C008DE8D3 /* CoreVideo.framework */; };
@@ -3688,7 +3683,6 @@
 		06AA8E901B5FE8960050A6E7 /* libbz2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6108DB8315CB833D002966A2 /* libbz2.1.0.dylib */; };
 		06AA8E911B5FE8960050A6E7 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 618BDCEC15A3D2D0005ADEBC /* MessageUI.framework */; };
 		06AA8E921B5FE8960050A6E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61EC09E81599BF6200BE959E /* Foundation.framework */; };
-		06AA8E931B5FE8960050A6E7 /* FIR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F00DF11AFDA4F200139703 /* FIR.framework */; };
 		06AA8E941B5FE8960050A6E7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82F330C157DF3C700A4AD37 /* SystemConfiguration.framework */; };
 		06AA8E951B5FE8960050A6E7 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A738DA154E64AA00D31CDD /* OpenAL.framework */; };
 		06AA8E961B5FE8960050A6E7 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D150149AE286008DE8D3 /* AddressBookUI.framework */; };
@@ -4242,7 +4236,6 @@
 		06B8CAE91B0A21BB006ED6EE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F71ABB148C5342007705B6 /* CoreGraphics.framework */; };
 		06B8CAEA1B0A21BB006ED6EE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D1AD14A03253008DE8D3 /* CoreData.framework */; };
 		06B8CAEB1B0A21BB006ED6EE /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D148149AE16C008DE8D3 /* AddressBook.framework */; };
-		06B8CAEC1B0A21BB006ED6EE /* FIR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F00DF11AFDA4F200139703 /* FIR.framework */; };
 		06B8CAED1B0A21BB006ED6EE /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D149149AE16C008DE8D3 /* CoreMedia.framework */; };
 		06B8CAEE1B0A21BB006ED6EE /* VideoRecorderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0B1C8D19A4D0ED0071E5CF /* VideoRecorderSDK.framework */; };
 		06B8CAEF1B0A21BB006ED6EE /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D14A149AE16C008DE8D3 /* CoreVideo.framework */; };
@@ -5727,7 +5720,6 @@
 		06D3FA751B78E7C1006AF177 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F71ABB148C5342007705B6 /* CoreGraphics.framework */; };
 		06D3FA761B78E7C1006AF177 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D1AD14A03253008DE8D3 /* CoreData.framework */; };
 		06D3FA771B78E7C1006AF177 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D148149AE16C008DE8D3 /* AddressBook.framework */; };
-		06D3FA781B78E7C1006AF177 /* FIR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F00DF11AFDA4F200139703 /* FIR.framework */; };
 		06D3FA791B78E7C1006AF177 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D149149AE16C008DE8D3 /* CoreMedia.framework */; };
 		06D3FA7A1B78E7C1006AF177 /* VideoRecorderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A0B1C8D19A4D0ED0071E5CF /* VideoRecorderSDK.framework */; };
 		06D3FA7B1B78E7C1006AF177 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3D14A149AE16C008DE8D3 /* CoreVideo.framework */; };
@@ -6048,8 +6040,6 @@
 		06E1BC6D1AF5DB5100755606 /* refresh_27_07_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E1BC6B1AF5DB5100755606 /* refresh_27_07_1.png */; };
 		06E376D81B5A0BA2003A378F /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E376D71B5A0BA2003A378F /* Accelerate.framework */; };
 		06E8CE621B7CF10D00DC6391 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06E8CE611B7CF10D00DC6391 /* Images.xcassets */; };
-		06F00DF21AFDA4F200139703 /* FIR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F00DF11AFDA4F200139703 /* FIR.framework */; };
-		06F00DF31AFDA4F200139703 /* FIR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F00DF11AFDA4F200139703 /* FIR.framework */; };
 		06F425F71AA9FB6500427383 /* AppGuidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F425F51AA9FB6500427383 /* AppGuidViewController.m */; };
 		06F425F81AA9FB6500427383 /* AppGuidViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F425F61AA9FB6500427383 /* AppGuidViewController.xib */; };
 		06F76E331AB720A100901EBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AC3148C5342007705B6 /* main.m */; };
@@ -8365,7 +8355,6 @@
 		06E1BC6B1AF5DB5100755606 /* refresh_27_07_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh_27_07_1.png; sourceTree = "<group>"; };
 		06E376D71B5A0BA2003A378F /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		06E8CE611B7CF10D00DC6391 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "MAJESTIC IPCAM P/Images.xcassets"; sourceTree = "<group>"; };
-		06F00DF11AFDA4F200139703 /* FIR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FIR.framework; sourceTree = "<group>"; };
 		06F425F41AA9FB6500427383 /* AppGuidViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGuidViewController.h; sourceTree = "<group>"; };
 		06F425F51AA9FB6500427383 /* AppGuidViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGuidViewController.m; sourceTree = "<group>"; };
 		06F425F61AA9FB6500427383 /* AppGuidViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppGuidViewController.xib; sourceTree = "<group>"; };
@@ -9080,7 +9069,6 @@
 				0660418A1B23133300FB6F32 /* CoreGraphics.framework in Frameworks */,
 				0660418B1B23133300FB6F32 /* CoreData.framework in Frameworks */,
 				0660418C1B23133300FB6F32 /* AddressBook.framework in Frameworks */,
-				0660418D1B23133300FB6F32 /* FIR.framework in Frameworks */,
 				0660418E1B23133300FB6F32 /* CoreMedia.framework in Frameworks */,
 				0660418F1B23133300FB6F32 /* VideoRecorderSDK.framework in Frameworks */,
 				066041901B23133300FB6F32 /* CoreVideo.framework in Frameworks */,
@@ -9121,7 +9109,6 @@
 				066DA0701B037E7C00408AF2 /* CoreGraphics.framework in Frameworks */,
 				066DA0711B037E7C00408AF2 /* CoreData.framework in Frameworks */,
 				066DA0721B037E7C00408AF2 /* AddressBook.framework in Frameworks */,
-				066DA0731B037E7C00408AF2 /* FIR.framework in Frameworks */,
 				066DA0741B037E7C00408AF2 /* CoreMedia.framework in Frameworks */,
 				066DA0751B037E7C00408AF2 /* VideoRecorderSDK.framework in Frameworks */,
 				066DA0761B037E7C00408AF2 /* CoreVideo.framework in Frameworks */,
@@ -9161,7 +9148,6 @@
 				0682E0551B08CCF30019BD70 /* CoreGraphics.framework in Frameworks */,
 				0682E0561B08CCF30019BD70 /* CoreData.framework in Frameworks */,
 				0682E0571B08CCF30019BD70 /* AddressBook.framework in Frameworks */,
-				0682E0581B08CCF30019BD70 /* FIR.framework in Frameworks */,
 				0682E0591B08CCF30019BD70 /* CoreMedia.framework in Frameworks */,
 				0682E05A1B08CCF30019BD70 /* VideoRecorderSDK.framework in Frameworks */,
 				0682E05B1B08CCF30019BD70 /* CoreVideo.framework in Frameworks */,
@@ -9191,7 +9177,6 @@
 				0692A9531B5FC55400D28D06 /* libbz2.1.0.dylib in Frameworks */,
 				0692A9541B5FC55400D28D06 /* MessageUI.framework in Frameworks */,
 				0692A9551B5FC55400D28D06 /* Foundation.framework in Frameworks */,
-				0692A9561B5FC55400D28D06 /* FIR.framework in Frameworks */,
 				0692A9571B5FC55400D28D06 /* SystemConfiguration.framework in Frameworks */,
 				0692A9581B5FC55400D28D06 /* OpenAL.framework in Frameworks */,
 				0692A9591B5FC55400D28D06 /* AddressBookUI.framework in Frameworks */,
@@ -9245,7 +9230,6 @@
 				069EFB3D1B1207D00024CB5A /* CoreGraphics.framework in Frameworks */,
 				069EFB3E1B1207D00024CB5A /* CoreData.framework in Frameworks */,
 				069EFB3F1B1207D00024CB5A /* AddressBook.framework in Frameworks */,
-				069EFB401B1207D00024CB5A /* FIR.framework in Frameworks */,
 				069EFB411B1207D00024CB5A /* CoreMedia.framework in Frameworks */,
 				069EFB421B1207D00024CB5A /* VideoRecorderSDK.framework in Frameworks */,
 				069EFB431B1207D00024CB5A /* CoreVideo.framework in Frameworks */,
@@ -9275,7 +9259,6 @@
 				06AA8E901B5FE8960050A6E7 /* libbz2.1.0.dylib in Frameworks */,
 				06AA8E911B5FE8960050A6E7 /* MessageUI.framework in Frameworks */,
 				06AA8E921B5FE8960050A6E7 /* Foundation.framework in Frameworks */,
-				06AA8E931B5FE8960050A6E7 /* FIR.framework in Frameworks */,
 				06AA8E941B5FE8960050A6E7 /* SystemConfiguration.framework in Frameworks */,
 				06AA8E951B5FE8960050A6E7 /* OpenAL.framework in Frameworks */,
 				06AA8E961B5FE8960050A6E7 /* AddressBookUI.framework in Frameworks */,
@@ -9327,7 +9310,6 @@
 				06B8CAE91B0A21BB006ED6EE /* CoreGraphics.framework in Frameworks */,
 				06B8CAEA1B0A21BB006ED6EE /* CoreData.framework in Frameworks */,
 				06B8CAEB1B0A21BB006ED6EE /* AddressBook.framework in Frameworks */,
-				06B8CAEC1B0A21BB006ED6EE /* FIR.framework in Frameworks */,
 				06B8CAED1B0A21BB006ED6EE /* CoreMedia.framework in Frameworks */,
 				06B8CAEE1B0A21BB006ED6EE /* VideoRecorderSDK.framework in Frameworks */,
 				06B8CAEF1B0A21BB006ED6EE /* CoreVideo.framework in Frameworks */,
@@ -9409,7 +9391,6 @@
 				06D3FA751B78E7C1006AF177 /* CoreGraphics.framework in Frameworks */,
 				06D3FA761B78E7C1006AF177 /* CoreData.framework in Frameworks */,
 				06D3FA771B78E7C1006AF177 /* AddressBook.framework in Frameworks */,
-				06D3FA781B78E7C1006AF177 /* FIR.framework in Frameworks */,
 				06D3FA791B78E7C1006AF177 /* CoreMedia.framework in Frameworks */,
 				06D3FA7A1B78E7C1006AF177 /* VideoRecorderSDK.framework in Frameworks */,
 				06D3FA7B1B78E7C1006AF177 /* CoreVideo.framework in Frameworks */,
@@ -9479,7 +9460,6 @@
 				06F770441AB720A100901EBA /* libbz2.1.0.dylib in Frameworks */,
 				06F770451AB720A100901EBA /* MessageUI.framework in Frameworks */,
 				06F770461AB720A100901EBA /* Foundation.framework in Frameworks */,
-				06F00DF31AFDA4F200139703 /* FIR.framework in Frameworks */,
 				06F770471AB720A100901EBA /* SystemConfiguration.framework in Frameworks */,
 				06F770481AB720A100901EBA /* OpenAL.framework in Frameworks */,
 				06F770491AB720A100901EBA /* AddressBookUI.framework in Frameworks */,
@@ -9532,7 +9512,6 @@
 				610DBA84169AF0BF00292CF9 /* CoreGraphics.framework in Frameworks */,
 				610DBA85169AF0BF00292CF9 /* CoreData.framework in Frameworks */,
 				610DBA86169AF0BF00292CF9 /* AddressBook.framework in Frameworks */,
-				06F00DF21AFDA4F200139703 /* FIR.framework in Frameworks */,
 				610DBA87169AF0BF00292CF9 /* CoreMedia.framework in Frameworks */,
 				7A0B1C8E19A4D0ED0071E5CF /* VideoRecorderSDK.framework in Frameworks */,
 				610DBA88169AF0BF00292CF9 /* CoreVideo.framework in Frameworks */,
@@ -11583,7 +11562,6 @@
 			isa = PBXGroup;
 			children = (
 				06E376D71B5A0BA2003A378F /* Accelerate.framework */,
-				06F00DF11AFDA4F200139703 /* FIR.framework */,
 				06728E3D1ACFE1590087029A /* VideoToolbox.framework */,
 				7A0B1C9519A6E9490071E5CF /* MediaPlayer.framework */,
 				7A0B1C8F19A597BC0071E5CF /* libstdc++.6.0.9.dylib */,
@@ -12197,7 +12175,7 @@
 						DevelopmentTeam = G795A5K2W9;
 					};
 					06AA8C4E1B5FE8960050A6E7 = {
-						DevelopmentTeam = Q2PV74KQN7;
+						DevelopmentTeam = ASXQRD22FS;
 					};
 					06B8C8B81B0A21BB006ED6EE = {
 						DevelopmentTeam = G795A5K2W9;
@@ -12206,6 +12184,9 @@
 						DevelopmentTeam = PRL47EL6NY;
 					};
 					06D3F82A1B78E7C1006AF177 = {
+						DevelopmentTeam = T8LENNA4UQ;
+					};
+					06D794E11BC0355E00B1E986 = {
 						DevelopmentTeam = Q2PV74KQN7;
 					};
 					06F76E311AB720A100901EBA = {
@@ -20366,6 +20347,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
 				COMPRESS_PNG_FILES = NO;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IOTCamViewer/lib/Release-iphoneos",
@@ -20393,7 +20375,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "IPCAM P";
-				PROVISIONING_PROFILE = "8ec1bfdc-5e1b-494a-91da-b0f938c08a42";
+				PROVISIONING_PROFILE = "de4f80d1-47ac-49c4-be08-487411cdc49e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -20409,6 +20391,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
 				COMPRESS_PNG_FILES = NO;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IOTCamViewer/lib/Release-iphoneos",
@@ -20437,7 +20420,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "IPCAM P";
-				PROVISIONING_PROFILE = "8ec1bfdc-5e1b-494a-91da-b0f938c08a42";
+				PROVISIONING_PROFILE = "de4f80d1-47ac-49c4-be08-487411cdc49e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -20453,6 +20436,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
 				COMPRESS_PNG_FILES = NO;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IOTCamViewer/lib/Release-iphoneos",
@@ -20481,7 +20465,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "IPCAM P";
-				PROVISIONING_PROFILE = "8ec1bfdc-5e1b-494a-91da-b0f938c08a42";
+				PROVISIONING_PROFILE = "de4f80d1-47ac-49c4-be08-487411cdc49e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -20497,6 +20481,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
 				COMPRESS_PNG_FILES = NO;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IOTCamViewer/lib/Release-iphoneos",
@@ -20524,7 +20509,7 @@
 					"-DP2PCAMLIVE",
 				);
 				PRODUCT_NAME = "IPCAM P";
-				PROVISIONING_PROFILE = "8ec1bfdc-5e1b-494a-91da-b0f938c08a42";
+				PROVISIONING_PROFILE = "de4f80d1-47ac-49c4-be08-487411cdc49e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -20538,7 +20523,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: KOREA C.N.O. TECH CO., LTD. (N8HN8YQ29K)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -20568,8 +20553,9 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tocview.cic200;
 				PRODUCT_NAME = "Toc View";
-				PROVISIONING_PROFILE = "d68700ae-14d7-4b51-bf19-6c2c55cb50bd";
+				PROVISIONING_PROFILE = "7afc5825-def3-4f69-9625-bf6fd332f533";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -20582,7 +20568,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: KOREA C.N.O. TECH CO., LTD. (N8HN8YQ29K)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -20613,8 +20599,9 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tocview.cic200;
 				PRODUCT_NAME = "Toc View";
-				PROVISIONING_PROFILE = "d68700ae-14d7-4b51-bf19-6c2c55cb50bd";
+				PROVISIONING_PROFILE = "7afc5825-def3-4f69-9625-bf6fd332f533";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -20627,7 +20614,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: KOREA C.N.O. TECH CO., LTD. (N8HN8YQ29K)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -20658,8 +20645,9 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tocview.cic200;
 				PRODUCT_NAME = "Toc View";
-				PROVISIONING_PROFILE = "d68700ae-14d7-4b51-bf19-6c2c55cb50bd";
+				PROVISIONING_PROFILE = "7afc5825-def3-4f69-9625-bf6fd332f533";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -20672,7 +20660,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: KOREA C.N.O. TECH CO., LTD. (N8HN8YQ29K)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -20702,8 +20690,9 @@
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"-DP2PCAMLIVE",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tocview.cic200;
 				PRODUCT_NAME = "Toc View";
-				PROVISIONING_PROFILE = "d68700ae-14d7-4b51-bf19-6c2c55cb50bd";
+				PROVISIONING_PROFILE = "7afc5825-def3-4f69-9625-bf6fd332f533";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -20886,7 +20875,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "Apple Production IOS Push Services: com.ipcam.pvpv";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: KUEI YUAN WU (PRL47EL6NY)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -20918,7 +20907,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ipcam.pvpv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "673a775c-e0d0-41ed-ab32-286a8a90698e";
+				PROVISIONING_PROFILE = "d42c6d5a-6789-4bdc-ab4f-b5f55126a8a4";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -20931,7 +20920,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "Apple Production IOS Push Services: com.ipcam.pvpv";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: KUEI YUAN WU (PRL47EL6NY)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -20964,7 +20953,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ipcam.pvpv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "673a775c-e0d0-41ed-ab32-286a8a90698e";
+				PROVISIONING_PROFILE = "d42c6d5a-6789-4bdc-ab4f-b5f55126a8a4";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -20977,7 +20966,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "Apple Production IOS Push Services: com.ipcam.pvpv";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: KUEI YUAN WU (PRL47EL6NY)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -21010,7 +20999,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ipcam.pvpv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "673a775c-e0d0-41ed-ab32-286a8a90698e";
+				PROVISIONING_PROFILE = "d42c6d5a-6789-4bdc-ab4f-b5f55126a8a4";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -21023,7 +21012,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "Apple Production IOS Push Services: com.ipcam.pvpv";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: KUEI YUAN WU (PRL47EL6NY)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -21055,7 +21044,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ipcam.pvpv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "673a775c-e0d0-41ed-ab32-286a8a90698e";
+				PROVISIONING_PROFILE = "d42c6d5a-6789-4bdc-ab4f-b5f55126a8a4";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -21068,8 +21057,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen Wellsense Technology Co., Ltd. (4UAMEVVS34)";
 				COMPRESS_PNG_FILES = NO;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IOTCamViewer/lib/Release-iphoneos",
@@ -21097,8 +21087,9 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ipcamp.IPCAMP;
 				PRODUCT_NAME = "IPCAM P copy";
-				PROVISIONING_PROFILE = "596982ea-f7ec-46dd-8d5e-1f65c409a748";
+				PROVISIONING_PROFILE = "7c13e62c-b2d1-4b86-85a0-b58359ca1aaf";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -21112,8 +21103,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen Wellsense Technology Co., Ltd. (4UAMEVVS34)";
 				COMPRESS_PNG_FILES = NO;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IOTCamViewer/lib/Release-iphoneos",
@@ -21142,8 +21134,9 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ipcamp.IPCAMP;
 				PRODUCT_NAME = "IPCAM P copy";
-				PROVISIONING_PROFILE = "596982ea-f7ec-46dd-8d5e-1f65c409a748";
+				PROVISIONING_PROFILE = "7c13e62c-b2d1-4b86-85a0-b58359ca1aaf";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -21157,8 +21150,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen Wellsense Technology Co., Ltd. (4UAMEVVS34)";
 				COMPRESS_PNG_FILES = NO;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IOTCamViewer/lib/Release-iphoneos",
@@ -21187,8 +21181,9 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ipcamp.IPCAMP;
 				PRODUCT_NAME = "IPCAM P copy";
-				PROVISIONING_PROFILE = "596982ea-f7ec-46dd-8d5e-1f65c409a748";
+				PROVISIONING_PROFILE = "7c13e62c-b2d1-4b86-85a0-b58359ca1aaf";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -21202,8 +21197,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen Wellsense Technology Co., Ltd. (4UAMEVVS34)";
 				COMPRESS_PNG_FILES = NO;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IOTCamViewer/lib/Release-iphoneos",
@@ -21231,8 +21227,9 @@
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"-DP2PCAMLIVE",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ipcamp.IPCAMP;
 				PRODUCT_NAME = "IPCAM P copy";
-				PROVISIONING_PROFILE = "596982ea-f7ec-46dd-8d5e-1f65c409a748";
+				PROVISIONING_PROFILE = "7c13e62c-b2d1-4b86-85a0-b58359ca1aaf";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -21246,7 +21243,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "Apple Production IOS Push Services: com.ipcam.pvpv";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -21257,7 +21254,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = EasynPTarget;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					EasynPTarget,
+					RemoveVendor,
+				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				HEADER_SEARCH_PATHS = (
 					"zxing/iphone/ZXingWidget/Classes/**",
@@ -21276,9 +21276,9 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ipcam.pvpv;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.easyn.test.svipcloud;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "673a775c-e0d0-41ed-ab32-286a8a90698e";
+				PROVISIONING_PROFILE = "61017271-ab2b-4b1d-9d9b-a289fe781c87";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -21291,7 +21291,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "Apple Production IOS Push Services: com.ipcam.pvpv";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -21302,7 +21302,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = EasynPTarget;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					EasynPTarget,
+					RemoveVendor,
+				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				HEADER_SEARCH_PATHS = (
 					"zxing/iphone/ZXingWidget/Classes/**",
@@ -21322,9 +21325,9 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ipcam.pvpv;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.easyn.test.svipcloud;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "673a775c-e0d0-41ed-ab32-286a8a90698e";
+				PROVISIONING_PROFILE = "61017271-ab2b-4b1d-9d9b-a289fe781c87";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -21337,7 +21340,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "Apple Production IOS Push Services: com.ipcam.pvpv";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -21348,7 +21351,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = EasynPTarget;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					EasynPTarget,
+					RemoveVendor,
+				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				HEADER_SEARCH_PATHS = (
 					"zxing/iphone/ZXingWidget/Classes/**",
@@ -21368,9 +21374,9 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ipcam.pvpv;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.easyn.test.svipcloud;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "673a775c-e0d0-41ed-ab32-286a8a90698e";
+				PROVISIONING_PROFILE = "61017271-ab2b-4b1d-9d9b-a289fe781c87";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -21383,7 +21389,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "Apple Production IOS Push Services: com.ipcam.pvpv";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -21394,7 +21400,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = EasynPTarget;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					EasynPTarget,
+					RemoveVendor,
+				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				HEADER_SEARCH_PATHS = (
 					"zxing/iphone/ZXingWidget/Classes/**",
@@ -21413,9 +21422,9 @@
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"-DP2PCAMLIVE",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ipcam.pvpv;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.easyn.test.svipcloud;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "673a775c-e0d0-41ed-ab32-286a8a90698e";
+				PROVISIONING_PROFILE = "61017271-ab2b-4b1d-9d9b-a289fe781c87";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -21459,7 +21468,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "728b194c-f7fc-4c59-8afb-f8610d95c5c7";
+				PROVISIONING_PROFILE = "46142639-b3cc-4b42-bd98-74dd80651af6";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -21504,7 +21513,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "728b194c-f7fc-4c59-8afb-f8610d95c5c7";
+				PROVISIONING_PROFILE = "46142639-b3cc-4b42-bd98-74dd80651af6";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -21549,7 +21558,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "728b194c-f7fc-4c59-8afb-f8610d95c5c7";
+				PROVISIONING_PROFILE = "46142639-b3cc-4b42-bd98-74dd80651af6";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -21593,7 +21602,7 @@
 					"-DP2PCAMLIVE",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "728b194c-f7fc-4c59-8afb-f8610d95c5c7";
+				PROVISIONING_PROFILE = "46142639-b3cc-4b42-bd98-74dd80651af6";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
