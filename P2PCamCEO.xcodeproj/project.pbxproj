@@ -5912,7 +5912,6 @@
 		06D7958A1BC0355E00B1E986 /* beep-beep.aiff in Resources */ = {isa = PBXBuildFile; fileRef = D8C3D163149AF628008DE8D3 /* beep-beep.aiff */; };
 		06D7958B1BC0355E00B1E986 /* AddCameraDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8C3D172149F2615008DE8D3 /* AddCameraDetail.xib */; };
 		06D7958E1BC0355E00B1E986 /* moreset.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CD3194EB73C00F5AA11 /* moreset.png */; settings = {ASSET_TAGS = (); }; };
-		06D7958F1BC0355E00B1E986 /* info_27_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 06AAE5D91AEFCAC90064CE78 /* info_27_03.png */; };
 		06D795951BC0355E00B1E986 /* WiFiPassword.xib in Resources */ = {isa = PBXBuildFile; fileRef = D897027714ABF63000635FD9 /* WiFiPassword.xib */; };
 		06D7959B1BC0355E00B1E986 /* LANSearch.xib in Resources */ = {isa = PBXBuildFile; fileRef = D897027C14AC13D600635FD9 /* LANSearch.xib */; };
 		06D7959E1BC0355E00B1E986 /* CameraPlayback.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8CC69DC14BBDBD000256FB5 /* CameraPlayback.xib */; };
@@ -5995,11 +5994,9 @@
 		06D796EB1BC0355E00B1E986 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB381E9191CA6200085B07B /* Icon-Small@2x.png */; };
 		06D796EE1BC0355E00B1E986 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB381E4191CA6200085B07B /* Icon-72.png */; };
 		06D796F51BC0355E00B1E986 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB381EB191CA6200085B07B /* Icon@2x.png */; };
-		06D796F61BC0355E00B1E986 /* refresh_27_07_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E1BC6B1AF5DB5100755606 /* refresh_27_07_1.png */; };
 		06D796F91BC0355E00B1E986 /* america.csv in Resources */ = {isa = PBXBuildFile; fileRef = 86244ABF1769AD4B00C2564B /* america.csv */; };
 		06D797051BC0355E00B1E986 /* f+Btn_Click@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0EA61ACAD6F300448ACB /* f+Btn_Click@2x.png */; };
 		06D797071BC0355E00B1E986 /* europe.csv in Resources */ = {isa = PBXBuildFile; fileRef = 86244AC01769AD4B00C2564B /* europe.csv */; };
-		06D7970B1BC0355E00B1E986 /* refresh_27_07.png in Resources */ = {isa = PBXBuildFile; fileRef = 06AAE5DA1AEFCAC90064CE78 /* refresh_27_07.png */; };
 		06D797151BC0355E00B1E986 /* asia.csv in Resources */ = {isa = PBXBuildFile; fileRef = 86244AC11769AD4B00C2564B /* asia.csv */; };
 		06D797181BC0355E00B1E986 /* AppGuidViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F425F61AA9FB6500427383 /* AppGuidViewController.xib */; };
 		06D7971A1BC0355E00B1E986 /* TimeZoneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 869CC4CA17C715D200AFA42D /* TimeZoneCell.xib */; };
@@ -16322,7 +16319,6 @@
 				06D7958B1BC0355E00B1E986 /* AddCameraDetail.xib in Resources */,
 				06D7958E1BC0355E00B1E986 /* moreset.png in Resources */,
 				065AB4531BC03882007C24D5 /* add_web@2x.png in Resources */,
-				06D7958F1BC0355E00B1E986 /* info_27_03.png in Resources */,
 				065AB4BC1BC03882007C24D5 /* more_delete_clicked.png in Resources */,
 				065AB4F71BC03882007C24D5 /* ceo_rcplay_back_click.png in Resources */,
 				065AB51D1BC03882007C24D5 /* leo_speaker_on_disable.png in Resources */,
@@ -16653,7 +16649,6 @@
 				065AB4ED1BC03882007C24D5 /* qualitylist.png in Resources */,
 				065AB4381BC03882007C24D5 /* add_infobk.png in Resources */,
 				06D796F51BC0355E00B1E986 /* Icon@2x.png in Resources */,
-				06D796F61BC0355E00B1E986 /* refresh_27_07_1.png in Resources */,
 				065AB4BB1BC03882007C24D5 /* more_delete@2x.png in Resources */,
 				065AB4901BC03882007C24D5 /* leo_speaker_off.png in Resources */,
 				065AB2CE1BC037CD007C24D5 /* myright@2x.png in Resources */,
@@ -16670,7 +16665,6 @@
 				06D797071BC0355E00B1E986 /* europe.csv in Resources */,
 				065AB4F01BC03882007C24D5 /* qualitylist_clicked@2x.png in Resources */,
 				065AB5271BC03882007C24D5 /* ceo_rcplay_back_h@2x.png in Resources */,
-				06D7970B1BC0355E00B1E986 /* refresh_27_07.png in Resources */,
 				065AB4A71BC03882007C24D5 /* login_btn_clicked@2x.png in Resources */,
 				065AB5171BC03882007C24D5 /* leo_qvga_disable.png in Resources */,
 				065AB4E61BC03882007C24D5 /* moreset_listm_clicked@2x.png in Resources */,
