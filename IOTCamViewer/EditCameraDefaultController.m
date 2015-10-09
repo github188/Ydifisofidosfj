@@ -275,6 +275,9 @@
 #pragma mark - Table DataSoruce Methods 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView 
 {
+#if defined(MAJESTICIPCAMP)
+    return 2;
+#endif
     return 4;
 }
 
@@ -284,10 +287,13 @@
         return 2;
     else if (section == ADVANCED_SECTION_INDEX)
         return 1;
+#if defined(MAJESTICIPCAMP)
+#else
     else if (section == RECONNECT_SECTION_INDEX)
         return 1;
     else if (section == DELETE_SECTION_INDEX)
         return 1;
+#endif
     else
         return 0;
 }
@@ -387,6 +393,8 @@
                 }
             }
         }
+#if defined(MAJESTICIPCAMP)
+#else
         else if (section == RECONNECT_SECTION_INDEX) {
             
             if (row == RECONNECT_ROW_INDEX) {
@@ -401,6 +409,7 @@
                 cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:SectionTableIdentifier] autorelease];
             }
         }
+#endif
     }
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
