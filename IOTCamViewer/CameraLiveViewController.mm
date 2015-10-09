@@ -2550,6 +2550,9 @@ extern unsigned int _getTickCount() {
             
             self.myPtzView.hidden=YES;
             
+            [self.horizMenu setSelectedIndex:SOUND_CONTROL animated:YES];
+            [self.longHorizMenu setSelectedIndex:SOUND_CONTROL animated:YES];
+            
         } else if (isListening==YES && isTalking==NO){
             
             selectedAudioMode = AUDIO_MODE_OFF;
@@ -2561,6 +2564,9 @@ extern unsigned int _getTickCount() {
             
             self.myPtzView.hidden=NO;
             self.isCanSendSetCameraCMD=YES;
+            
+            [self.horizMenu setUnselectedIndex:SOUND_CONTROL animated:YES];
+            [self.longHorizMenu setUnselectedIndex:SOUND_CONTROL animated:YES];
         }
         
     } else if (index == RECORDING) {
