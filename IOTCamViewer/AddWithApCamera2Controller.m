@@ -8,7 +8,8 @@
 
 #import "AddWithApCamera2Controller.h"
 #import "AppDelegate.h"
-#ifndef TARGET_IPHONE_SIMULATOR
+#if TARGET_IPHONE_SIMULATOR
+#else
 #import "HiSmartLink.h"
 #endif
 #import "AddCameraDetailController.h"
@@ -147,10 +148,10 @@
         [hud release];
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-#ifndef TARGET_IPHONE_SIMULATOR
-            int result=HiStartSmartConnection(ssid, psd);
-#else
+#if TARGET_IPHONE_SIMULATOR
             int result=0;
+#else
+            int result=HiStartSmartConnection(ssid, psd);
 #endif
             dispatch_async(dispatch_get_main_queue(), ^{
                 [hud hide:YES];
@@ -170,7 +171,8 @@
                         controller.isFromAutoWifi=YES;
                         [self.navigationController pushViewController:controller animated:YES];
                         [controller release];
-#ifndef TARGET_IPHONE_SIMULATOR
+#if TARGET_IPHONE_SIMULATOR
+#else
                         HiStopSmartConnection();
 #endif
                     }];
@@ -179,7 +181,8 @@
                     UIAlertView *alert=[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"Warning", @"") message:NSLocalizedStringFromTable(@"AddApWifiErrorTips", @"easyn", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"Warning", @"") otherButtonTitles:nil, nil];
                     [alert show];
                     [alert release];
-#ifndef TARGET_IPHONE_SIMULATOR
+#if TARGET_IPHONE_SIMULATOR
+#else
                     HiStopSmartConnection();
 #endif
                 }
