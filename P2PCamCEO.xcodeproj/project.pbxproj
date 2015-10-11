@@ -20336,7 +20336,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = EasynPTarget;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					EasynPTarget,
+					RemoveVendor,
+				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				HEADER_SEARCH_PATHS = (
 					"zxing/iphone/ZXingWidget/Classes/**",
@@ -20382,7 +20385,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = EasynPTarget;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					EasynPTarget,
+					RemoveVendor,
+				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				HEADER_SEARCH_PATHS = (
 					"zxing/iphone/ZXingWidget/Classes/**",
@@ -20429,7 +20435,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = EasynPTarget;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					EasynPTarget,
+					RemoveVendor,
+				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				HEADER_SEARCH_PATHS = (
 					"zxing/iphone/ZXingWidget/Classes/**",
@@ -20476,7 +20485,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = EasynPTarget;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					EasynPTarget,
+					RemoveVendor,
+				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				HEADER_SEARCH_PATHS = (
 					"zxing/iphone/ZXingWidget/Classes/**",
@@ -20692,7 +20704,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = EasynPTarget;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					EasynPTarget,
+					RemoveVendor,
+				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				HEADER_SEARCH_PATHS = (
 					"zxing/iphone/ZXingWidget/Classes/**",
@@ -20737,7 +20752,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = EasynPTarget;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					EasynPTarget,
+					RemoveVendor,
+				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				HEADER_SEARCH_PATHS = (
 					"zxing/iphone/ZXingWidget/Classes/**",
@@ -20783,7 +20801,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = EasynPTarget;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					EasynPTarget,
+					RemoveVendor,
+				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				HEADER_SEARCH_PATHS = (
 					"zxing/iphone/ZXingWidget/Classes/**",
@@ -20829,7 +20850,10 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = EasynPTarget;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					EasynPTarget,
+					RemoveVendor,
+				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				HEADER_SEARCH_PATHS = (
 					"zxing/iphone/ZXingWidget/Classes/**",
