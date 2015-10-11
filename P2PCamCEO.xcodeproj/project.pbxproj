@@ -20903,6 +20903,7 @@
 					CameraMailSetting,
 					MAJESTICIPCAMP,
 					RemoveVendor,
+					TimeZoneAction,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/MAJESTIC IPCAM P/MAJESTIC IPCAM P-Info.plist";
@@ -20949,6 +20950,7 @@
 					CameraMailSetting,
 					MAJESTICIPCAMP,
 					RemoveVendor,
+					TimeZoneAction,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/MAJESTIC IPCAM P/MAJESTIC IPCAM P-Info.plist";
@@ -20996,6 +20998,7 @@
 					CameraMailSetting,
 					MAJESTICIPCAMP,
 					RemoveVendor,
+					TimeZoneAction,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/MAJESTIC IPCAM P/MAJESTIC IPCAM P-Info.plist";
@@ -21043,6 +21046,7 @@
 					CameraMailSetting,
 					MAJESTICIPCAMP,
 					RemoveVendor,
+					TimeZoneAction,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/MAJESTIC IPCAM P/MAJESTIC IPCAM P-Info.plist";

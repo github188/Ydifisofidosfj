@@ -485,5 +485,12 @@ BOOL g_bDiagnostic = FALSE;
     free(quality);
 }
 
-
+-(void)setCameraSummaryTime:(BOOL)yesOrNo{
+    NSUserDefaults *userDefault=[NSUserDefaults standardUserDefaults];
+    [userDefault setBool:yesOrNo forKey:[NSString stringWithFormat:@"cn.easynp.timezonesummary.%@",self.uid]];
+}
+-(BOOL)getCameraSummartTime{
+    NSUserDefaults *userDefault=[NSUserDefaults standardUserDefaults];
+    return [userDefault boolForKey:[NSString stringWithFormat:@"cn.easynp.timezonesummary.%@",self.uid]];
+}
 @end

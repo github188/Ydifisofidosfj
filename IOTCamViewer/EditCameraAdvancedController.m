@@ -441,7 +441,6 @@ typedef struct
 #if defined(CameraMailSetting)
     row++;
 #endif
-    
     //for SyncSetting
     row++;
     
@@ -461,6 +460,9 @@ typedef struct
         if ([camera getEnvironmentModeSupportOfChannel:0]) row++;
         return row;
     } else if (section == [self getTimeZoneSettingSectionIndex]) {
+#if defined(TimeZoneAction)
+        return 2;
+#endif
         return 1;
     } else if (section == [self getWifiSettingSectionIndex]) {
         int row = 0;
@@ -508,6 +510,15 @@ typedef struct
                  initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:SectionTableIdentifier]
                 autorelease];
         if (section == [self getTimeZoneSettingSectionIndex]) {
+#if defined(TimeZoneAction)
+            if (row==1) {
+                UISwitch *switchView = [[UISwitch alloc] initWithFrame:CGRectZero];
+                switchView.tag = 7000;
+                cell.accessoryView = switchView;
+                [switchView addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
+                [switchView release];
+            }
+#else
             if (row==0) {
                 UISwitch *switchView = [[UISwitch alloc] initWithFrame:CGRectZero];
                 switchView.tag = 7000+row;
@@ -515,6 +526,7 @@ typedef struct
                 [switchView addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
                 [switchView release];
             }
+#endif
         }
     }
     
@@ -684,31 +696,39 @@ typedef struct
         }
     }    
     else if (section == [self getTimeZoneSettingSectionIndex]) {
-        
-        NSString *text = nil;
-        
-        if( isWaitingForSetTimeZoneResp ) {
-            [cell addSubview:timezoneIndicator];
-			[timezoneIndicator startAnimating];
-			timezoneIndicator.center = CGPointMake(cellIndicator_X, cellIndicator_Y+7 );
+        if(indexPath.row==0){
+            NSString *text = nil;
             
-            text = @"";
-        } else {
-            [timezoneIndicator stopAnimating];
-			[timezoneIndicator removeFromSuperview];
+            if( isWaitingForSetTimeZoneResp ) {
+                [cell addSubview:timezoneIndicator];
+                [timezoneIndicator startAnimating];
+                timezoneIndicator.center = CGPointMake(cellIndicator_X, cellIndicator_Y+7 );
+                
+                text = @"";
+            } else {
+                [timezoneIndicator stopAnimating];
+                [timezoneIndicator removeFromSuperview];
+                summerTime=[self.camera getCameraSummartTime];
+                
+                text = [[NSString alloc] initWithFormat:@"GMT%@%d%@", (camera.nGMTDiff>0)?@"+":@"",camera.nGMTDiff, summerTime? NSLocalizedString(@"(DST)", @""):NSLocalizedString(@"(Standard time)", @"")];
+                
+                [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+                [cell setSelectionStyle:UITableViewCellSelectionStyleBlue];
+            }
             
-			text = [[NSString alloc] initWithFormat:@"GMT%@%d%@", (camera.nGMTDiff>0)?@"+":@"",camera.nGMTDiff, summerTime? NSLocalizedString(@"(DST)", @""):NSLocalizedString(@"(Standard time)", @"")];
-			
-			[cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
-			[cell setSelectionStyle:UITableViewCellSelectionStyleBlue];
+            cell.textLabel.text = [NSString stringWithString:NSLocalizedString(@"Time Zone", @"")];
+            cell.detailTextLabel.text = text;
+#if defined(TimeZoneAction)
+#else
+            [(UISwitch *)cell.accessoryView setOn:summerTime? YES:NO animated:YES];
+#endif
+            if (text)
+                [text release];
+        }
+        else{
+            cell.textLabel.text=@"DST";
             [(UISwitch *)cell.accessoryView setOn:summerTime? YES:NO animated:YES];
         }
-        
-        cell.textLabel.text = [NSString stringWithString:NSLocalizedString(@"Time Zone", @"")];
-        cell.detailTextLabel.text = text;
-        
-        if (text)
-            [text release];		
 	}
 	else if (section == [self getWifiSettingSectionIndex]) {
         
@@ -959,6 +979,7 @@ typedef struct
     
     if (check.tag-7000==0) {
         summerTime = check.on;
+        [self.camera setCameraSummaryTime:summerTime];
         [self.tableView reloadData];
     }
     return;

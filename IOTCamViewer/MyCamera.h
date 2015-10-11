@@ -77,6 +77,9 @@
 +(void)setcameraLoadAVGA:(NSString *)uid withIsLoad:(BOOL)isLoad;
 +(BOOL)getCameraLoadQVGA:(NSString *)uid;
 
+
+-(void)setCameraSummaryTime:(BOOL)yesOrNo;
+-(BOOL)getCameraSummartTime;
 @end
 
 @protocol MyCameraDelegate <NSObject>
