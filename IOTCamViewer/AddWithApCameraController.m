@@ -42,6 +42,12 @@
     [self.wifiNextBtn setTitle:NSLocalizedStringFromTable(@"AddApWifiNextStep", @"easyn", nil) forState:UIControlStateNormal];
     [self.otherNextBtn setTitle:NSLocalizedStringFromTable(@"AddApWifiNextStep", @"easyn", nil) forState:UIControlStateNormal];
     
+
+#if defined(SVIPCLOUD)
+    [self.wifiNextBtn setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    [self.otherNextBtn setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+#endif
+    
 }
 -(void)back:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];

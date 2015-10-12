@@ -37,6 +37,10 @@
     self.title=NSLocalizedStringFromTable(@"WIFI一键设置", @"easyn", nil);
     [self.nextBtn setTitle:NSLocalizedStringFromTable(@"AddApWifiNextStep", @"easyn", nil) forState:UIControlStateNormal];
     self.tipsLbl.text=NSLocalizedStringFromTable(@"AddApWifiStep2Tips", @"easyn", nil);
+    
+#if defined(SVIPCLOUD)
+    [self.nextBtn setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+#endif
 }
 -(void)back:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];

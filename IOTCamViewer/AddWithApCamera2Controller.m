@@ -48,7 +48,9 @@
     
     self.viewPsdLbl.text=NSLocalizedStringFromTable(@"ViewPsdLbl", @"easyn", nil);
     self.psdInput.secureTextEntry=YES;
-    
+#if defined(SVIPCLOUD)
+    [self.settingBnr setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+#endif
 }
 - (BOOL)textFieldShouldReturn:(UITextField *) textField
 {
