@@ -329,6 +329,13 @@
     
     SSID.text = ssid;
     
+#if defined(SVIPCLOUD)
+    textFieldName.textColor=HexRGB(0x3d3c3c);
+    textFieldUID.textColor=HexRGB(0x3d3c3c);
+    textFieldPassword.textColor=HexRGB(0x3d3c3c);
+    [add setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    [cancel setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+#endif
     
     
     [super viewDidLoad];

@@ -1116,6 +1116,25 @@ extern unsigned int _getTickCount() ;
     
     [logInOut setTitle:NSLocalizedString(@"用户手册", @"") forState:UIControlStateNormal];
     
+#if defined(SVIPCLOUD)
+    //3d3c3c
+    [dropboxRec setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    [infoBTN setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    [logInOut setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    
+    cameraName1.textColor=HexRGB(0x3d3c3c);
+    cameraName2.textColor=HexRGB(0x3d3c3c);
+    cameraName3.textColor=HexRGB(0x3d3c3c);
+    cameraName4.textColor=HexRGB(0x3d3c3c);
+    
+    cameraStatus1.textColor=HexRGB(0x3d3c3c);
+    cameraStatus2.textColor=HexRGB(0x3d3c3c);
+    cameraStatus3.textColor=HexRGB(0x3d3c3c);
+    cameraStatus4.textColor=HexRGB(0x3d3c3c);
+    
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:HexRGB(0x3d3c3c),NSForegroundColorAttributeName,nil]];    
+#endif
+    
 #if defined(MAJESTICIPCAMP)
     logInOut.hidden=YES;
     infoBTN.origin=CGPointMake(infoBTN.frame.origin.x, 34);
