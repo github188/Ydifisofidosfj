@@ -82,6 +82,11 @@ extern FMDatabase *database;
     BOOL summerTime;
     
     NSArray* arrTimeZoneTable;
+        
+    
+    NSString *timeZoneString;
+        NSInteger timeZoneValue;
+        
 }
 
 @property (nonatomic, retain) NSTimer* timerListWifiApResp;

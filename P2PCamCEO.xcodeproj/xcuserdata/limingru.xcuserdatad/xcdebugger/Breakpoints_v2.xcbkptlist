@@ -72,11 +72,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOTCamViewer/EditCameraAdvancedController.m"
-            timestampString = "466266935.438248"
+            timestampString = "466437421.000312"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1497"
-            endingLineNumber = "1497"
+            startingLineNumber = "1505"
+            endingLineNumber = "1505"
             landmarkName = "-timeOutGetListWifiAPResp:"
             landmarkType = "5">
          </BreakpointContent>

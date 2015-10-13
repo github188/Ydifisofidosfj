@@ -981,6 +981,8 @@ typedef struct
         summerTime = check.on;
         [self.camera setCameraSummaryTime:summerTime];
         [self.tableView reloadData];
+        
+        [self onTimeZoneChanged:timeZoneString tzGMTDiff_In_Mins:timeZoneValue];
     }
     return;
     
@@ -1271,6 +1273,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
             camera.nGMTDiff = s->nGMTDiff;
             summerTime  = s->dst_on;
             
+            timeZoneString=camera.strTimeZone;
+            timeZoneValue=camera.nGMTDiff;
+            
             //utcTime = utcTime + camera.nGMTDiff*60*60 + (summerTime? 1*60*60:0);
             
             isWaitingForSetTimeZoneResp = FALSE;
@@ -1450,6 +1455,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
      mIoCtrlData_SetTimeZoneBefore.nIsSupportTimeZone = 1;
      mIoCtrlData_SetTimeZoneBefore.nGMTDiff = camera.nGMTDiff;
      strcpy( mIoCtrlData_SetTimeZoneBefore.szTimeZoneString, [camera.strTimeZone UTF8String] );*/
+    
+    timeZoneString=tszTimeZone;
+    timeZoneValue=nGMTDiff_In_Mins;
     
     NSDate* now =  [NSDate date];
     long utcTime_now = (long)[now timeIntervalSince1970];
