@@ -951,7 +951,6 @@
 		066041781B23133300FB6F32 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABFD0C3190F6F7F00DDF03B /* SystemConfiguration.framework */; };
 		066041791B23133300FB6F32 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572B926B18EA4BFA0041B732 /* CoreImage.framework */; };
 		0660417A1B23133300FB6F32 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573267FC1860A48700BBE793 /* Security.framework */; };
-		0660417B1B23133300FB6F32 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573267FA1860993000BBE793 /* DropboxSDK.framework */; };
 		0660417C1B23133300FB6F32 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E5509215D9E3E800AA6184 /* AssetsLibrary.framework */; };
 		0660417D1B23133300FB6F32 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6108DB8A15CB9EA0002966A2 /* libz.dylib */; };
 		0660417E1B23133300FB6F32 /* libbz2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6108DB8315CB833D002966A2 /* libbz2.1.0.dylib */; };
@@ -1522,7 +1521,6 @@
 		066DA05E1B037E7C00408AF2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABFD0C3190F6F7F00DDF03B /* SystemConfiguration.framework */; };
 		066DA05F1B037E7C00408AF2 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572B926B18EA4BFA0041B732 /* CoreImage.framework */; };
 		066DA0601B037E7C00408AF2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573267FC1860A48700BBE793 /* Security.framework */; };
-		066DA0611B037E7C00408AF2 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573267FA1860993000BBE793 /* DropboxSDK.framework */; };
 		066DA0621B037E7C00408AF2 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E5509215D9E3E800AA6184 /* AssetsLibrary.framework */; };
 		066DA0631B037E7C00408AF2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6108DB8A15CB9EA0002966A2 /* libz.dylib */; };
 		066DA0641B037E7C00408AF2 /* libbz2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6108DB8315CB833D002966A2 /* libbz2.1.0.dylib */; };
@@ -2068,7 +2066,6 @@
 		0682E0431B08CCF30019BD70 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABFD0C3190F6F7F00DDF03B /* SystemConfiguration.framework */; };
 		0682E0441B08CCF30019BD70 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572B926B18EA4BFA0041B732 /* CoreImage.framework */; };
 		0682E0451B08CCF30019BD70 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573267FC1860A48700BBE793 /* Security.framework */; };
-		0682E0461B08CCF30019BD70 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573267FA1860993000BBE793 /* DropboxSDK.framework */; };
 		0682E0471B08CCF30019BD70 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E5509215D9E3E800AA6184 /* AssetsLibrary.framework */; };
 		0682E0481B08CCF30019BD70 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6108DB8A15CB9EA0002966A2 /* libz.dylib */; };
 		0682E0491B08CCF30019BD70 /* libbz2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6108DB8315CB833D002966A2 /* libbz2.1.0.dylib */; };
@@ -2402,7 +2399,6 @@
 		0692A94D1B5FC55400D28D06 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABFD0C3190F6F7F00DDF03B /* SystemConfiguration.framework */; };
 		0692A94E1B5FC55400D28D06 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572B926B18EA4BFA0041B732 /* CoreImage.framework */; };
 		0692A94F1B5FC55400D28D06 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573267FC1860A48700BBE793 /* Security.framework */; };
-		0692A9501B5FC55400D28D06 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573267FA1860993000BBE793 /* DropboxSDK.framework */; };
 		0692A9511B5FC55400D28D06 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E5509215D9E3E800AA6184 /* AssetsLibrary.framework */; };
 		0692A9521B5FC55400D28D06 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6108DB8A15CB9EA0002966A2 /* libz.dylib */; };
 		0692A9531B5FC55400D28D06 /* libbz2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6108DB8315CB833D002966A2 /* libbz2.1.0.dylib */; };
@@ -3039,7 +3035,6 @@
 		069EFB2B1B1207D00024CB5A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABFD0C3190F6F7F00DDF03B /* SystemConfiguration.framework */; };
 		069EFB2C1B1207D00024CB5A /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572B926B18EA4BFA0041B732 /* CoreImage.framework */; };
 		069EFB2D1B1207D00024CB5A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573267FC1860A48700BBE793 /* Security.framework */; };
-		069EFB2E1B1207D00024CB5A /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573267FA1860993000BBE793 /* DropboxSDK.framework */; };
 		069EFB2F1B1207D00024CB5A /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E5509215D9E3E800AA6184 /* AssetsLibrary.framework */; };
 		069EFB301B1207D00024CB5A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6108DB8A15CB9EA0002966A2 /* libz.dylib */; };
 		069EFB311B1207D00024CB5A /* libbz2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6108DB8315CB833D002966A2 /* libbz2.1.0.dylib */; };
@@ -3628,7 +3623,6 @@
 		06AA8E8A1B5FE8960050A6E7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABFD0C3190F6F7F00DDF03B /* SystemConfiguration.framework */; };
 		06AA8E8B1B5FE8960050A6E7 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572B926B18EA4BFA0041B732 /* CoreImage.framework */; };
 		06AA8E8C1B5FE8960050A6E7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573267FC1860A48700BBE793 /* Security.framework */; };
-		06AA8E8D1B5FE8960050A6E7 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573267FA1860993000BBE793 /* DropboxSDK.framework */; };
 		06AA8E8E1B5FE8960050A6E7 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E5509215D9E3E800AA6184 /* AssetsLibrary.framework */; };
 		06AA8E8F1B5FE8960050A6E7 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6108DB8A15CB9EA0002966A2 /* libz.dylib */; };
 		06AA8E901B5FE8960050A6E7 /* libbz2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6108DB8315CB833D002966A2 /* libbz2.1.0.dylib */; };
@@ -4161,7 +4155,6 @@
 		06B8CAD71B0A21BB006ED6EE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABFD0C3190F6F7F00DDF03B /* SystemConfiguration.framework */; };
 		06B8CAD81B0A21BB006ED6EE /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572B926B18EA4BFA0041B732 /* CoreImage.framework */; };
 		06B8CAD91B0A21BB006ED6EE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573267FC1860A48700BBE793 /* Security.framework */; };
-		06B8CADA1B0A21BB006ED6EE /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573267FA1860993000BBE793 /* DropboxSDK.framework */; };
 		06B8CADB1B0A21BB006ED6EE /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E5509215D9E3E800AA6184 /* AssetsLibrary.framework */; };
 		06B8CADC1B0A21BB006ED6EE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6108DB8A15CB9EA0002966A2 /* libz.dylib */; };
 		06B8CADD1B0A21BB006ED6EE /* libbz2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6108DB8315CB833D002966A2 /* libbz2.1.0.dylib */; };
@@ -5628,7 +5621,6 @@
 		06D3FA621B78E7C1006AF177 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABFD0C3190F6F7F00DDF03B /* SystemConfiguration.framework */; };
 		06D3FA631B78E7C1006AF177 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572B926B18EA4BFA0041B732 /* CoreImage.framework */; };
 		06D3FA641B78E7C1006AF177 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573267FC1860A48700BBE793 /* Security.framework */; };
-		06D3FA651B78E7C1006AF177 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573267FA1860993000BBE793 /* DropboxSDK.framework */; };
 		06D3FA661B78E7C1006AF177 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E5509215D9E3E800AA6184 /* AssetsLibrary.framework */; };
 		06D3FA671B78E7C1006AF177 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6108DB8A15CB9EA0002966A2 /* libz.dylib */; };
 		06D3FA681B78E7C1006AF177 /* libbz2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6108DB8315CB833D002966A2 /* libbz2.1.0.dylib */; };
@@ -6442,7 +6434,6 @@
 		06F7703E1AB720A100901EBA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABFD0C3190F6F7F00DDF03B /* SystemConfiguration.framework */; };
 		06F7703F1AB720A100901EBA /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572B926B18EA4BFA0041B732 /* CoreImage.framework */; };
 		06F770401AB720A100901EBA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573267FC1860A48700BBE793 /* Security.framework */; };
-		06F770411AB720A100901EBA /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573267FA1860993000BBE793 /* DropboxSDK.framework */; };
 		06F770421AB720A100901EBA /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E5509215D9E3E800AA6184 /* AssetsLibrary.framework */; };
 		06F770431AB720A100901EBA /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6108DB8A15CB9EA0002966A2 /* libz.dylib */; };
 		06F770441AB720A100901EBA /* libbz2.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6108DB8315CB833D002966A2 /* libbz2.1.0.dylib */; };
@@ -6480,7 +6471,6 @@
 		572B926C18EA4BFA0041B732 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572B926B18EA4BFA0041B732 /* CoreImage.framework */; };
 		573267EF185FF0B200BBE793 /* MoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 573267ED185FF0B200BBE793 /* MoreVC.m */; };
 		573267F1185FF0B200BBE793 /* MoreVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 573267EE185FF0B200BBE793 /* MoreVC.xib */; };
-		573267FB1860993000BBE793 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573267FA1860993000BBE793 /* DropboxSDK.framework */; };
 		573267FD1860A48700BBE793 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573267FC1860A48700BBE793 /* Security.framework */; };
 		57DE16E81868235C00B6682F /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = 57DE16E61868235C00B6682F /* more.png */; };
 		57DE16EA1868235C00B6682F /* more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57DE16E71868235C00B6682F /* more@2x.png */; };
@@ -8319,7 +8309,6 @@
 		573267EC185FF0B200BBE793 /* MoreVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreVC.h; sourceTree = "<group>"; };
 		573267ED185FF0B200BBE793 /* MoreVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreVC.m; sourceTree = "<group>"; };
 		573267EE185FF0B200BBE793 /* MoreVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreVC.xib; sourceTree = "<group>"; };
-		573267FA1860993000BBE793 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DropboxSDK.framework; path = "../dropbox-ios-sdk-1.3.9/DropboxSDK.framework"; sourceTree = "<group>"; };
 		573267FC1860A48700BBE793 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		579014C8187FB1B700FEB68F /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/GLKit.framework; sourceTree = DEVELOPER_DIR; };
 		57DE16E61868235C00B6682F /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = more.png; path = images/more.png; sourceTree = "<group>"; };
@@ -8978,7 +8967,6 @@
 				066041781B23133300FB6F32 /* SystemConfiguration.framework in Frameworks */,
 				066041791B23133300FB6F32 /* CoreImage.framework in Frameworks */,
 				0660417A1B23133300FB6F32 /* Security.framework in Frameworks */,
-				0660417B1B23133300FB6F32 /* DropboxSDK.framework in Frameworks */,
 				0660417C1B23133300FB6F32 /* AssetsLibrary.framework in Frameworks */,
 				0660417D1B23133300FB6F32 /* libz.dylib in Frameworks */,
 				0660417E1B23133300FB6F32 /* libbz2.1.0.dylib in Frameworks */,
@@ -9019,7 +9007,6 @@
 				066DA05E1B037E7C00408AF2 /* SystemConfiguration.framework in Frameworks */,
 				066DA05F1B037E7C00408AF2 /* CoreImage.framework in Frameworks */,
 				066DA0601B037E7C00408AF2 /* Security.framework in Frameworks */,
-				066DA0611B037E7C00408AF2 /* DropboxSDK.framework in Frameworks */,
 				066DA0621B037E7C00408AF2 /* AssetsLibrary.framework in Frameworks */,
 				066DA0631B037E7C00408AF2 /* libz.dylib in Frameworks */,
 				066DA0641B037E7C00408AF2 /* libbz2.1.0.dylib in Frameworks */,
@@ -9058,7 +9045,6 @@
 				0682E0431B08CCF30019BD70 /* SystemConfiguration.framework in Frameworks */,
 				0682E0441B08CCF30019BD70 /* CoreImage.framework in Frameworks */,
 				0682E0451B08CCF30019BD70 /* Security.framework in Frameworks */,
-				0682E0461B08CCF30019BD70 /* DropboxSDK.framework in Frameworks */,
 				0682E0471B08CCF30019BD70 /* AssetsLibrary.framework in Frameworks */,
 				0682E0481B08CCF30019BD70 /* libz.dylib in Frameworks */,
 				0682E0491B08CCF30019BD70 /* libbz2.1.0.dylib in Frameworks */,
@@ -9099,7 +9085,6 @@
 				0692A94D1B5FC55400D28D06 /* SystemConfiguration.framework in Frameworks */,
 				0692A94E1B5FC55400D28D06 /* CoreImage.framework in Frameworks */,
 				0692A94F1B5FC55400D28D06 /* Security.framework in Frameworks */,
-				0692A9501B5FC55400D28D06 /* DropboxSDK.framework in Frameworks */,
 				0692A9511B5FC55400D28D06 /* AssetsLibrary.framework in Frameworks */,
 				0692A9521B5FC55400D28D06 /* libz.dylib in Frameworks */,
 				0692A9531B5FC55400D28D06 /* libbz2.1.0.dylib in Frameworks */,
@@ -9139,7 +9124,6 @@
 				069EFB2B1B1207D00024CB5A /* SystemConfiguration.framework in Frameworks */,
 				069EFB2C1B1207D00024CB5A /* CoreImage.framework in Frameworks */,
 				069EFB2D1B1207D00024CB5A /* Security.framework in Frameworks */,
-				069EFB2E1B1207D00024CB5A /* DropboxSDK.framework in Frameworks */,
 				069EFB2F1B1207D00024CB5A /* AssetsLibrary.framework in Frameworks */,
 				069EFB301B1207D00024CB5A /* libz.dylib in Frameworks */,
 				069EFB311B1207D00024CB5A /* libbz2.1.0.dylib in Frameworks */,
@@ -9181,7 +9165,6 @@
 				06AA8E8A1B5FE8960050A6E7 /* SystemConfiguration.framework in Frameworks */,
 				06AA8E8B1B5FE8960050A6E7 /* CoreImage.framework in Frameworks */,
 				06AA8E8C1B5FE8960050A6E7 /* Security.framework in Frameworks */,
-				06AA8E8D1B5FE8960050A6E7 /* DropboxSDK.framework in Frameworks */,
 				06AA8E8E1B5FE8960050A6E7 /* AssetsLibrary.framework in Frameworks */,
 				06AA8E8F1B5FE8960050A6E7 /* libz.dylib in Frameworks */,
 				06AA8E901B5FE8960050A6E7 /* libbz2.1.0.dylib in Frameworks */,
@@ -9220,7 +9203,6 @@
 				06B8CAD71B0A21BB006ED6EE /* SystemConfiguration.framework in Frameworks */,
 				06B8CAD81B0A21BB006ED6EE /* CoreImage.framework in Frameworks */,
 				06B8CAD91B0A21BB006ED6EE /* Security.framework in Frameworks */,
-				06B8CADA1B0A21BB006ED6EE /* DropboxSDK.framework in Frameworks */,
 				06B8CADB1B0A21BB006ED6EE /* AssetsLibrary.framework in Frameworks */,
 				06B8CADC1B0A21BB006ED6EE /* libz.dylib in Frameworks */,
 				06B8CADD1B0A21BB006ED6EE /* libbz2.1.0.dylib in Frameworks */,
@@ -9300,7 +9282,6 @@
 				06D3FA621B78E7C1006AF177 /* SystemConfiguration.framework in Frameworks */,
 				06D3FA631B78E7C1006AF177 /* CoreImage.framework in Frameworks */,
 				06D3FA641B78E7C1006AF177 /* Security.framework in Frameworks */,
-				06D3FA651B78E7C1006AF177 /* DropboxSDK.framework in Frameworks */,
 				06D3FA661B78E7C1006AF177 /* AssetsLibrary.framework in Frameworks */,
 				06D3FA671B78E7C1006AF177 /* libz.dylib in Frameworks */,
 				06D3FA681B78E7C1006AF177 /* libbz2.1.0.dylib in Frameworks */,
@@ -9382,7 +9363,6 @@
 				06F7703E1AB720A100901EBA /* SystemConfiguration.framework in Frameworks */,
 				06F7703F1AB720A100901EBA /* CoreImage.framework in Frameworks */,
 				06F770401AB720A100901EBA /* Security.framework in Frameworks */,
-				06F770411AB720A100901EBA /* DropboxSDK.framework in Frameworks */,
 				06F770421AB720A100901EBA /* AssetsLibrary.framework in Frameworks */,
 				06F770431AB720A100901EBA /* libz.dylib in Frameworks */,
 				06F770441AB720A100901EBA /* libbz2.1.0.dylib in Frameworks */,
@@ -9422,7 +9402,6 @@
 				7A0B1C9019A597BC0071E5CF /* libstdc++.6.0.9.dylib in Frameworks */,
 				7ABFD0C4190F6F7F00DDF03B /* SystemConfiguration.framework in Frameworks */,
 				572B926C18EA4BFA0041B732 /* CoreImage.framework in Frameworks */,
-				573267FB1860993000BBE793 /* DropboxSDK.framework in Frameworks */,
 				610DBA76169AF0BF00292CF9 /* AssetsLibrary.framework in Frameworks */,
 				610DBA77169AF0BF00292CF9 /* libz.dylib in Frameworks */,
 				610DBA78169AF0BF00292CF9 /* libbz2.1.0.dylib in Frameworks */,
@@ -11498,7 +11477,6 @@
 				572B926B18EA4BFA0041B732 /* CoreImage.framework */,
 				579014C8187FB1B700FEB68F /* GLKit.framework */,
 				573267FC1860A48700BBE793 /* Security.framework */,
-				573267FA1860993000BBE793 /* DropboxSDK.framework */,
 				8649B9511791443A000C621D /* UIKit.framework */,
 				8649B9531791443A000C621D /* Foundation.framework */,
 				8649B9551791443A000C621D /* CoreGraphics.framework */,
