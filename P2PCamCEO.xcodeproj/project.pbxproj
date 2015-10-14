@@ -6986,6 +6986,30 @@
 		86B9EE4317525881006A142D /* DirectDisplayShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 86B9EE3F17525823006A142D /* DirectDisplayShader.fsh */; };
 		86B9EE4417525881006A142D /* DirectDisplayShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 86B9EE4017525823006A142D /* DirectDisplayShader.vsh */; };
 		86B9EE47175258D2006A142D /* CameraShowGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B9EE45175258D2006A142D /* CameraShowGLView.m */; };
+		BB82419F1BCE2A740067B3CF /* SnapshotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB82419D1BCE2A740067B3CF /* SnapshotViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BB8241A01BCE2A740067B3CF /* SnapshotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB82419D1BCE2A740067B3CF /* SnapshotViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BB8241A11BCE2A740067B3CF /* SnapshotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB82419D1BCE2A740067B3CF /* SnapshotViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BB8241A21BCE2A740067B3CF /* SnapshotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB82419D1BCE2A740067B3CF /* SnapshotViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BB8241A31BCE2A740067B3CF /* SnapshotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB82419D1BCE2A740067B3CF /* SnapshotViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BB8241A41BCE2A740067B3CF /* SnapshotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB82419D1BCE2A740067B3CF /* SnapshotViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BB8241A51BCE2A740067B3CF /* SnapshotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB82419D1BCE2A740067B3CF /* SnapshotViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BB8241A61BCE2A740067B3CF /* SnapshotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB82419D1BCE2A740067B3CF /* SnapshotViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BB8241A71BCE2A740067B3CF /* SnapshotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB82419D1BCE2A740067B3CF /* SnapshotViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BB8241A81BCE2A740067B3CF /* SnapshotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB82419D1BCE2A740067B3CF /* SnapshotViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BB8241A91BCE2A740067B3CF /* SnapshotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB82419D1BCE2A740067B3CF /* SnapshotViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BB8241AA1BCE2A740067B3CF /* SnapshotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB82419D1BCE2A740067B3CF /* SnapshotViewController.m */; settings = {ASSET_TAGS = (); }; };
+		BB8241AB1BCE2A740067B3CF /* SnapshotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB82419E1BCE2A740067B3CF /* SnapshotViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		BB8241AC1BCE2A740067B3CF /* SnapshotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB82419E1BCE2A740067B3CF /* SnapshotViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		BB8241AD1BCE2A740067B3CF /* SnapshotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB82419E1BCE2A740067B3CF /* SnapshotViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		BB8241AE1BCE2A740067B3CF /* SnapshotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB82419E1BCE2A740067B3CF /* SnapshotViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		BB8241AF1BCE2A740067B3CF /* SnapshotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB82419E1BCE2A740067B3CF /* SnapshotViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		BB8241B01BCE2A740067B3CF /* SnapshotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB82419E1BCE2A740067B3CF /* SnapshotViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		BB8241B11BCE2A740067B3CF /* SnapshotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB82419E1BCE2A740067B3CF /* SnapshotViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		BB8241B21BCE2A740067B3CF /* SnapshotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB82419E1BCE2A740067B3CF /* SnapshotViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		BB8241B31BCE2A740067B3CF /* SnapshotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB82419E1BCE2A740067B3CF /* SnapshotViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		BB8241B41BCE2A740067B3CF /* SnapshotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB82419E1BCE2A740067B3CF /* SnapshotViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		BB8241B51BCE2A740067B3CF /* SnapshotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB82419E1BCE2A740067B3CF /* SnapshotViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		BB8241B61BCE2A740067B3CF /* SnapshotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB82419E1BCE2A740067B3CF /* SnapshotViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		BBD282581BC90FBA000E0D5B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBD282571BC90FBA000E0D5B /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -8811,6 +8835,9 @@
 		86B9EE4017525823006A142D /* DirectDisplayShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = DirectDisplayShader.vsh; path = Shaders/DirectDisplayShader.vsh; sourceTree = "<group>"; };
 		86B9EE45175258D2006A142D /* CameraShowGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraShowGLView.m; sourceTree = "<group>"; };
 		86B9EE46175258D2006A142D /* CameraShowGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraShowGLView.h; sourceTree = "<group>"; };
+		BB82419C1BCE2A740067B3CF /* SnapshotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnapshotViewController.h; sourceTree = "<group>"; };
+		BB82419D1BCE2A740067B3CF /* SnapshotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnapshotViewController.m; sourceTree = "<group>"; };
+		BB82419E1BCE2A740067B3CF /* SnapshotViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SnapshotViewController.xib; sourceTree = "<group>"; };
 		BBD282571BC90FBA000E0D5B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Toc View/Images.xcassets"; sourceTree = "<group>"; };
 		D8028D0114A818DE00BE124F /* AboutDeviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutDeviceController.h; sourceTree = "<group>"; };
 		D8028D0214A818DE00BE124F /* AboutDeviceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutDeviceController.m; sourceTree = "<group>"; };
@@ -11819,6 +11846,9 @@
 				D8858F6514904A47009F55E5 /* Resources */,
 				D8F71ABE148C5342007705B6 /* Supporting Files */,
 				063109801ABA41B400C6F0F1 /* DefineExtension.h */,
+				BB82419C1BCE2A740067B3CF /* SnapshotViewController.h */,
+				BB82419D1BCE2A740067B3CF /* SnapshotViewController.m */,
+				BB82419E1BCE2A740067B3CF /* SnapshotViewController.xib */,
 			);
 			name = P2PCam264;
 			path = IOTCamViewer;
@@ -12541,6 +12571,7 @@
 				066041581B23133300FB6F32 /* add_wifinext.png in Resources */,
 				0660415A1B23133300FB6F32 /* europe.csv in Resources */,
 				0660415B1B23133300FB6F32 /* more_set_clicked.png in Resources */,
+				BB8241B11BCE2A740067B3CF /* SnapshotViewController.xib in Resources */,
 				0660415C1B23133300FB6F32 /* login@2x.png in Resources */,
 				0660415D1B23133300FB6F32 /* more_cancel.png in Resources */,
 				0660415E1B23133300FB6F32 /* leo_mirror_rl.png in Resources */,
@@ -12997,6 +13028,7 @@
 				066DA0461B037E7C00408AF2 /* leo_mirror_rl.png in Resources */,
 				066DA0471B037E7C00408AF2 /* add_wifinext_clicked@2x.png in Resources */,
 				066DA0481B037E7C00408AF2 /* add_infobk.png in Resources */,
+				BB8241AD1BCE2A740067B3CF /* SnapshotViewController.xib in Resources */,
 				066DA0491B037E7C00408AF2 /* leo_snapshot.png in Resources */,
 				066DA04A1B037E7C00408AF2 /* moreset_list1.png in Resources */,
 				06118EC51B08E0AC00BB45FB /* page4_cn@2x.jpg in Resources */,
@@ -13064,6 +13096,7 @@
 				0682DEA81B08CCF30019BD70 /* AddCamera.xib in Resources */,
 				0682DEA91B08CCF30019BD70 /* add_wifi4@2x.png in Resources */,
 				0682DEAA1B08CCF30019BD70 /* more_event_clicked.png in Resources */,
+				BB8241AE1BCE2A740067B3CF /* SnapshotViewController.xib in Resources */,
 				0682DEAB1B08CCF30019BD70 /* liveview.png in Resources */,
 				0682DEAC1B08CCF30019BD70 /* leo_snapshot@2x.png in Resources */,
 				0682DEAD1B08CCF30019BD70 /* ceo_rcplay_line_full.png in Resources */,
@@ -13484,6 +13517,7 @@
 				06C236AD1B65149E00CC8D5E /* ceo_record_tab_l@2x.png in Resources */,
 				0692A7B91B5FC55400D28D06 /* bkg_articalList.png in Resources */,
 				06C234D01B6510FB00CC8D5E /* 6chlist_bk_bg@2x.jpg in Resources */,
+				BB8241B21BCE2A740067B3CF /* SnapshotViewController.xib in Resources */,
 				06C235661B65146700CC8D5E /* moreset_list1_clicked.png in Resources */,
 				06C235891B65146700CC8D5E /* leo_speaker_on_clicked@2x.png in Resources */,
 				0692A9CD1B5FC84C00D28D06 /* iTunesArtwork.png in Resources */,
@@ -14235,6 +14269,7 @@
 				069EFAE41B1207D00024CB5A /* ceo_set_clicked.png in Resources */,
 				069EFAE51B1207D00024CB5A /* more_changech.png in Resources */,
 				069EFAE61B1207D00024CB5A /* add_btnbk_clicked.png in Resources */,
+				BB8241B01BCE2A740067B3CF /* SnapshotViewController.xib in Resources */,
 				069EFAE71B1207D00024CB5A /* moreset_list1_clicked@2x.png in Resources */,
 				069EFAE81B1207D00024CB5A /* add_lsearch@2x.png in Resources */,
 				069EFAEA1B1207D00024CB5A /* add_qrcode_clicked.png in Resources */,
@@ -14502,6 +14537,7 @@
 				06AA8D8D1B5FE8960050A6E7 /* popoverArrowRight@2x.png in Resources */,
 				0688C3821B61180600079BB5 /* page4_en@2x.jpg in Resources */,
 				06AA8D8E1B5FE8960050A6E7 /* qualitylist.png in Resources */,
+				BB8241B31BCE2A740067B3CF /* SnapshotViewController.xib in Resources */,
 				06AA8D8F1B5FE8960050A6E7 /* AddWithApCamera2Controller.xib in Resources */,
 				06AA8D901B5FE8960050A6E7 /* add_wifi3@2x.png in Resources */,
 				06AA8D911B5FE8960050A6E7 /* login_btn@2x.png in Resources */,
@@ -14855,6 +14891,7 @@
 				06B8C9821B0A21BB006ED6EE /* drop_link.png in Resources */,
 				06B8C9831B0A21BB006ED6EE /* moreset_list2_clicked.png in Resources */,
 				06B8C9851B0A21BB006ED6EE /* add_wifinext_clicked.png in Resources */,
+				BB8241AF1BCE2A740067B3CF /* SnapshotViewController.xib in Resources */,
 				06B8C9861B0A21BB006ED6EE /* event@2x.png in Resources */,
 				06B8C9871B0A21BB006ED6EE /* add_wifi4.png in Resources */,
 				06B8C9891B0A21BB006ED6EE /* morefunction.png in Resources */,
@@ -15196,6 +15233,7 @@
 				06CAA4E11BC0142C00853612 /* add_wifi_1.png in Resources */,
 				06CAA4E21BC0142C00853612 /* DirectDisplayShader.fsh in Resources */,
 				06CAA4E31BC0142C00853612 /* add_wifi_1@2x.png in Resources */,
+				BB8241B51BCE2A740067B3CF /* SnapshotViewController.xib in Resources */,
 				06CAA4E41BC0142C00853612 /* ceo_record_play@2x.png in Resources */,
 				06CAA4E61BC0142C00853612 /* ceo_rcplay_time.png in Resources */,
 				06CAA4E71BC0142C00853612 /* ceo_recordstop@2x.png in Resources */,
@@ -16063,6 +16101,7 @@
 				06D3FA451B78E7C1006AF177 /* login@2x.png in Resources */,
 				06D3FA461B78E7C1006AF177 /* more_cancel.png in Resources */,
 				06D3FA471B78E7C1006AF177 /* leo_mirror_rl.png in Resources */,
+				BB8241B41BCE2A740067B3CF /* SnapshotViewController.xib in Resources */,
 				06D3FA481B78E7C1006AF177 /* add_wifinext_clicked@2x.png in Resources */,
 				06D3FA491B78E7C1006AF177 /* add_infobk.png in Resources */,
 				06D3FA4B1B78E7C1006AF177 /* leo_snapshot.png in Resources */,
@@ -16361,6 +16400,7 @@
 				065AB2F01BC03800007C24D5 /* 6chlist_bk@2x.png in Resources */,
 				065AB4551BC03882007C24D5 /* add_web_clicked@2x.png in Resources */,
 				065AB4851BC03882007C24D5 /* leo_mirror_ud@2x.png in Resources */,
+				BB8241B61BCE2A740067B3CF /* SnapshotViewController.xib in Resources */,
 				065AB5101BC03882007C24D5 /* ceo_recordstop@2x.png in Resources */,
 				065AB5151BC03882007C24D5 /* leo_mirror_ud_disable.png in Resources */,
 				06D7967E1BC0355E00B1E986 /* speaker_mute@2X.png in Resources */,
@@ -16896,6 +16936,7 @@
 				06F770021AB720A100901EBA /* CustomPeriodEventSearchController.xib in Resources */,
 				06F770031AB720A100901EBA /* ceo_record_tab_l.png in Resources */,
 				06F770041AB720A100901EBA /* TimeZoneListController.xib in Resources */,
+				BB8241AC1BCE2A740067B3CF /* SnapshotViewController.xib in Resources */,
 				06F770051AB720A100901EBA /* add_list_bk.png in Resources */,
 				06F770061AB720A100901EBA /* africa.csv in Resources */,
 				06F770071AB720A100901EBA /* refresh_clicked.png in Resources */,
@@ -17381,6 +17422,7 @@
 				7A553D8C194EB73D00F5AA11 /* login@2x.png in Resources */,
 				7A553D99194EB73D00F5AA11 /* more_cancel.png in Resources */,
 				7A553D6B194EB73D00F5AA11 /* leo_mirror_rl.png in Resources */,
+				BB8241AB1BCE2A740067B3CF /* SnapshotViewController.xib in Resources */,
 				7A553D42194EB73C00F5AA11 /* add_wifinext_clicked@2x.png in Resources */,
 				7A553D0F194EB73C00F5AA11 /* add_infobk.png in Resources */,
 				7A553D77194EB73D00F5AA11 /* leo_snapshot.png in Resources */,
@@ -17476,6 +17518,7 @@
 				06603F931B23133300FB6F32 /* NSURL+URL.m in Sources */,
 				06603F941B23133300FB6F32 /* iToast.m in Sources */,
 				06603F951B23133300FB6F32 /* FormatSDCardController.m in Sources */,
+				BB8241A51BCE2A740067B3CF /* SnapshotViewController.m in Sources */,
 				06603F961B23133300FB6F32 /* UIApplication+KeyView.m in Sources */,
 				06603F971B23133300FB6F32 /* AppInfoController.m in Sources */,
 				06603F981B23133300FB6F32 /* ChannelPickerContentController.m in Sources */,
@@ -17550,6 +17593,7 @@
 				066D9E481B037E7C00408AF2 /* UIDevice+Device.m in Sources */,
 				066D9E491B037E7C00408AF2 /* LANSearchController.m in Sources */,
 				066D9E4A1B037E7C00408AF2 /* LANSearchDevice.m in Sources */,
+				BB8241A11BCE2A740067B3CF /* SnapshotViewController.m in Sources */,
 				066D9E4B1B037E7C00408AF2 /* NSArray+AroundArray.m in Sources */,
 				066D9E4C1B037E7C00408AF2 /* ALAssetsLibrary+SaveAsset.m in Sources */,
 				066D9E4D1B037E7C00408AF2 /* UIImage+Extras.m in Sources */,
@@ -17668,6 +17712,7 @@
 				0682DE161B08CCF30019BD70 /* UITabBarController+TabBar.m in Sources */,
 				0682DE171B08CCF30019BD70 /* UIView+View.m in Sources */,
 				0682DE181B08CCF30019BD70 /* AddCameraDetailController.mm in Sources */,
+				BB8241A21BCE2A740067B3CF /* SnapshotViewController.m in Sources */,
 				0682DE191B08CCF30019BD70 /* UITableView+TableView.m in Sources */,
 				0682DE1A1B08CCF30019BD70 /* UIDevice+Device.m in Sources */,
 				0682DE1B1B08CCF30019BD70 /* LANSearchController.m in Sources */,
@@ -17843,6 +17888,7 @@
 				0692A7511B5FC55400D28D06 /* iToast.m in Sources */,
 				0692A7521B5FC55400D28D06 /* FormatSDCardController.m in Sources */,
 				0692A7531B5FC55400D28D06 /* UIApplication+KeyView.m in Sources */,
+				BB8241A61BCE2A740067B3CF /* SnapshotViewController.m in Sources */,
 				0692A7541B5FC55400D28D06 /* AppInfoController.m in Sources */,
 				0692A7551B5FC55400D28D06 /* ChannelPickerContentController.m in Sources */,
 				0692A7561B5FC55400D28D06 /* UIButton+Button.m in Sources */,
@@ -17967,6 +18013,7 @@
 				069EF9481B1207D00024CB5A /* NSURL+URL.m in Sources */,
 				069EF9491B1207D00024CB5A /* iToast.m in Sources */,
 				069EF94A1B1207D00024CB5A /* FormatSDCardController.m in Sources */,
+				BB8241A41BCE2A740067B3CF /* SnapshotViewController.m in Sources */,
 				069EF94B1B1207D00024CB5A /* UIApplication+KeyView.m in Sources */,
 				069EF94C1B1207D00024CB5A /* AppInfoController.m in Sources */,
 				069EF94D1B1207D00024CB5A /* ChannelPickerContentController.m in Sources */,
@@ -18091,6 +18138,7 @@
 				06AA8C8D1B5FE8960050A6E7 /* iToast.m in Sources */,
 				06AA8C8E1B5FE8960050A6E7 /* FormatSDCardController.m in Sources */,
 				06AA8C8F1B5FE8960050A6E7 /* UIApplication+KeyView.m in Sources */,
+				BB8241A71BCE2A740067B3CF /* SnapshotViewController.m in Sources */,
 				06AA8C901B5FE8960050A6E7 /* AppInfoController.m in Sources */,
 				06AA8C911B5FE8960050A6E7 /* ChannelPickerContentController.m in Sources */,
 				06AA8C921B5FE8960050A6E7 /* UIButton+Button.m in Sources */,
@@ -18161,6 +18209,7 @@
 				06B8C8C11B0A21BB006ED6EE /* UITabBarController+TabBar.m in Sources */,
 				06B8C8C21B0A21BB006ED6EE /* UIView+View.m in Sources */,
 				06B8C8C31B0A21BB006ED6EE /* AddCameraDetailController.mm in Sources */,
+				BB8241A31BCE2A740067B3CF /* SnapshotViewController.m in Sources */,
 				06B8C8C41B0A21BB006ED6EE /* UITableView+TableView.m in Sources */,
 				06B8C8C51B0A21BB006ED6EE /* UIDevice+Device.m in Sources */,
 				06B8C8C61B0A21BB006ED6EE /* LANSearchController.m in Sources */,
@@ -18336,6 +18385,7 @@
 				06CAA4A21BC0142C00853612 /* iToast.m in Sources */,
 				06CAA4A31BC0142C00853612 /* FormatSDCardController.m in Sources */,
 				06CAA4A41BC0142C00853612 /* UIApplication+KeyView.m in Sources */,
+				BB8241A91BCE2A740067B3CF /* SnapshotViewController.m in Sources */,
 				06CAA4A51BC0142C00853612 /* AppInfoController.m in Sources */,
 				06CAA4A61BC0142C00853612 /* ChannelPickerContentController.m in Sources */,
 				06CAA4A71BC0142C00853612 /* UIButton+Button.m in Sources */,
@@ -18460,6 +18510,7 @@
 				06D3F86C1B78E7C1006AF177 /* UIApplication+KeyView.m in Sources */,
 				06D3F86D1B78E7C1006AF177 /* AppInfoController.m in Sources */,
 				06D3F86E1B78E7C1006AF177 /* ChannelPickerContentController.m in Sources */,
+				BB8241A81BCE2A740067B3CF /* SnapshotViewController.m in Sources */,
 				06D3F86F1B78E7C1006AF177 /* UIButton+Button.m in Sources */,
 				06D3F8701B78E7C1006AF177 /* UIImageView+ImageView.m in Sources */,
 				06D3F8711B78E7C1006AF177 /* MKHorizMenu.m in Sources */,
@@ -18584,6 +18635,7 @@
 				06D795201BC0355E00B1E986 /* iToast.m in Sources */,
 				06D795211BC0355E00B1E986 /* FormatSDCardController.m in Sources */,
 				06D795221BC0355E00B1E986 /* UIApplication+KeyView.m in Sources */,
+				BB8241AA1BCE2A740067B3CF /* SnapshotViewController.m in Sources */,
 				06D795231BC0355E00B1E986 /* AppInfoController.m in Sources */,
 				06D795241BC0355E00B1E986 /* ChannelPickerContentController.m in Sources */,
 				06D795251BC0355E00B1E986 /* UIButton+Button.m in Sources */,
@@ -18708,6 +18760,7 @@
 				06F76E6A1AB720A100901EBA /* iToast.m in Sources */,
 				06F76E6B1AB720A100901EBA /* FormatSDCardController.m in Sources */,
 				06F76E6C1AB720A100901EBA /* UIApplication+KeyView.m in Sources */,
+				BB8241A01BCE2A740067B3CF /* SnapshotViewController.m in Sources */,
 				06F76E6D1AB720A100901EBA /* AppInfoController.m in Sources */,
 				06F76E6E1AB720A100901EBA /* ChannelPickerContentController.m in Sources */,
 				06F76E6F1AB720A100901EBA /* UIButton+Button.m in Sources */,
@@ -18778,6 +18831,7 @@
 				7A1C0196193339F70032A77E /* UITabBarController+TabBar.m in Sources */,
 				7A1C019A193339F70032A77E /* UIView+View.m in Sources */,
 				610DBA06169AF0BF00292CF9 /* AddCameraDetailController.mm in Sources */,
+				BB82419F1BCE2A740067B3CF /* SnapshotViewController.m in Sources */,
 				7A1C0197193339F70032A77E /* UITableView+TableView.m in Sources */,
 				7A1C018A193339F70032A77E /* UIDevice+Device.m in Sources */,
 				610DBA07169AF0BF00292CF9 /* LANSearchController.m in Sources */,

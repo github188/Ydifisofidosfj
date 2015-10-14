@@ -139,7 +139,89 @@ typedef enum {
     IOTYPE_HICHIP_GETCONTRAST_REQ               =0x606,
     IOTYPE_HICHIP_GETCONTRAST_RESP              =0x607,
     IOTYPE_HICHIP_SETCONTRAST_REQ               =0x608,
-    IOTYPE_HICHIP_SETCONTRAST_RESP              =0x609
+    IOTYPE_HICHIP_SETCONTRAST_RESP              =0x609,
+    //录像设置
+    IOTYPE_USER_IPCAM_GET_REC_REQ		        = 0x2211,
+    IOTYPE_USER_IPCAM_GET_REC_RESP		        = 0x2212,
+    IOTYPE_USER_IPCAM_SET_REC_REQ		        = 0x2213,
+    IOTYPE_USER_IPCAM_SET_REC_RESP		        = 0x2214,
+    //抓拍
+    IOTYPE_USER_IPCAM_GET_SNAP_REQ		    = 0x2215,
+    IOTYPE_USER_IPCAM_GET_SNAP_RESP		    = 0x2216,
+    IOTYPE_USER_IPCAM_SET_SNAP_REQ		    = 0x2217,
+    IOTYPE_USER_IPCAM_SET_SNAP_RESP		    = 0x2218,
+    //图片预览
+    IOTYPE_USEREX_IPCAM_GET_PREVIEW_REQ				=0x5001,
+    IOTYPE_USEREX_IPCAM_GET_PREVIEW_RESP				=0x5002
 }ENUM_AVIOCTRL_MSGTYPEOwnExt;
+//录像设置
+/* IOTYPE_USER_IPCAM_GET_REC_REQ		        = 0x2211,   */
+typedef struct
+{
+    unsigned char reserved[8];
+}SMsgAVIoctrlGetRecReq;
+
+/* IOTYPE_USER_IPCAM_GET_REC_RESP		        = 0x2212,   */
+/* IOTYPE_USER_IPCAM_SET_REC_REQ		        = 0x2213,   */
+typedef struct
+{
+    unsigned int  u32RecChn;    /* 11, 12, 13*/
+    unsigned int  u32PlanRecEnable; /* 0:disable, 1:enable */
+    unsigned int  u32PlanRecLen; //定时录像文件时长
+    unsigned int  u32AlarmRecEnable; /* 0:disable, 1:enable */
+    unsigned int  u32AlarmRecLen; //报警录像文件时长,预报警录像+报警录像,5+10=15秒.
+    unsigned char reserved[8];
+} SMsgAVIoctrlGetRecResp, SMsgAVIoctrlSetRecReq;
+
+/* IOTYPE_USER_IPCAM_SET_REC_RESP		        = 0x2214,   */
+typedef struct
+{
+    unsigned int  result;	// 0: success; otherwise: failed.
+    unsigned char reserved[8];
+}SMsgAVIoctrlSetRecResp;
+
+/* IOTYPE_USER_IPCAM_GET_SNAP_REQ		        = 0x2215,   */
+typedef struct
+{
+    unsigned char reserved[8];
+}SMsgAVIoctrlGetSnapReq;
+
+/* IOTYPE_USER_IPCAM_GET_SNAP_RESP		        = 0x2216,   */
+/* IOTYPE_USER_IPCAM_SET_SNAP_REQ		        = 0x2217,   */
+typedef struct
+{
+    unsigned int  u32SnapEnable;  /* 0:disable, 1:enable */
+    unsigned int  u32SnapChn;      /* 11, 12, 13*/
+    unsigned int  u32SnapInterval; /* 5s ~ 24*60*60s  */
+    unsigned int  u32SnapCount; /* 1-3 */
+    unsigned char reserved[8];
+} SMsgAVIoctrlGetSnapResp, SMsgAVIoctrlSetSnapReq;
+
+/* IOTYPE_USER_IPCAM_SET_SNAP_RESP		        = 0x2218,   */
+typedef struct
+{
+    unsigned int  result;	// 0: success; otherwise: failed.
+    unsigned char reserved[8];
+}SMsgAVIoctrlSetSnapResp;
+//图片预览
+typedef struct
+{
+    unsigned int 	resolution; /*0: QQVGA 1:720P*/
+    unsigned char reserved[4];
+}SMsgAVIoctrlGetPreReq;
+
+typedef struct
+{
+    unsigned int size; /*each real package size, max 1000 bytes*/
+    unsigned char buf [1000];	/*picture content*/
+}PicInfo;
+typedef struct
+{
+    unsigned int TotalSize;	/*total picture size */
+    unsigned int  endflag;	 /*0 :(begin to send ) 1: end*/
+    unsigned int count;  /*package number ,start from 0  */
+    PicInfo picinfo;
+}SMsgAVIoctrlGetPreResp;
+//说明: 图片预览客户端接收数据,类似录像列表，endflag=0，开始分隔图片（1000 bytes）一包发送, endflag=1,发送最后一包数据，大小见size, 720P （ >100kbytes）图片太大接收时间较长。
 
 #endif
