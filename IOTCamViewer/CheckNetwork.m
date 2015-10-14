@@ -13,7 +13,7 @@
 
 +(BOOL)pingServer
 {
-    NSURL *url = [NSURL URLWithString:@"http://push1.ipcam.hk"];
+    NSURL *url = [NSURL URLWithString:@"https://push1.ipcam.hk"];
     NSURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     NSHTTPURLResponse *response = nil;
     [NSURLConnection sendSynchronousRequest:request

@@ -16,11 +16,11 @@
 #import <SystemConfiguration/CaptiveNetwork.h>
 #import "IQKeyboardManager.h"
 #if defined(EasynPTarget)
-//NSString *g_tpnsHostString = @"http://push1.ipcam.hk/apns/apns.php";
+//NSString *g_tpnsHostString = @"https://push1.ipcam.hk/apns/apns.php";
 #else
-//NSString *g_tpnsHostString = @"http://push.iotcplatform.com/apns/apns.php";
+//NSString *g_tpnsHostString = @"https://push.iotcplatform.com/apns/apns.php";
 #endif
-NSString *g_tpnsHostString = @"http://push1.ipcam.hk/apns/apns.php";
+NSString *g_tpnsHostString = @"https://push1.ipcam.hk/apns/apns.php";
 
 NSMutableArray *camera_list;
 FMDatabase *database;
