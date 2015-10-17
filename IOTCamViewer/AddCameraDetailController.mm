@@ -335,6 +335,11 @@
     textFieldPassword.textColor=HexRGB(0x3d3c3c);
     [add setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
     [cancel setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    
+    lanSearch.textColor=HexRGB(0x3d3c3c);
+    _qrLbl.textColor=HexRGB(0x3d3c3c);
+    SSID.textColor=HexRGB(0x3d3c3c);
+    
 #endif
     
     
@@ -411,6 +416,9 @@
         
         cell.textLabel.text = [fieldLabels objectAtIndex:row];
         cell.textLabel.textColor = [UIColor whiteColor];
+#if defined(SVIPCLOUD)
+        cell.textLabel.textColor=HexRGB(0x3d3c3c);
+#endif
         cell.opaque = NO;
         cell.backgroundColor = [UIColor clearColor];
         cell.backgroundView = nil;

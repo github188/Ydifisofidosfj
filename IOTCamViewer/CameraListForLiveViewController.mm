@@ -277,6 +277,9 @@
                                    style:UIBarButtonItemStyleBordered 
                                    target:self action:@selector(toggleEdit:)];
     self.navigationItem.rightBarButtonItem = editButton;
+#if defined(SVIPCLOUD)
+    [editButton setTintColor:HexRGB(0x3d3c3c)];
+#endif
     [editButton release];    
     
     searchedData = [[NSMutableArray alloc] init];
@@ -442,8 +445,12 @@
 		/* load camera name */
 		UILabel *cameraNameLabel = (UILabel *)[cell viewWithTag:CAMERA_NAME_TAG];
 		if (cameraNameLabel != nil)
+        {
 			cameraNameLabel.text = camera.name;
-		
+#if defined(SVIPCLOUD)
+            cameraNameLabel.textColor=HexRGB(0x3d3c3c);
+#endif
+        }
 		/* load camera status */
 		UILabel *cameraStatusLabel = (UILabel *)[cell viewWithTag:CAMERA_STATUS_TAG];
 
@@ -586,12 +593,20 @@
 			}
 			NSLog(@"%@ wait for connecting", camera.uid);
 		}
+        
+#if defined(SVIPCLOUD)
+        cameraStatusLabel.textColor=HexRGB(0x3d3c3c);
+#endif
 		
 		/* load camera UID */
 		UILabel *cameraUIDLabel = (UILabel *)[cell viewWithTag:CAMERA_UID_TAG];
 		if (cameraUIDLabel != nil)
-			cameraUIDLabel.text = camera.uid;    
-			
+        {
+			cameraUIDLabel.text = camera.uid;
+#if defined(SVIPCLOUD)
+            cameraUIDLabel.textColor=HexRGB(0x3d3c3c);
+#endif
+        }
 		/* load camera snapshot */
 		UIImageView *cameraSnapshotImageView = (UIImageView *)[cell viewWithTag:CAMERA_SNAPSHOT_TAG];
 		if (cameraSnapshotImageView != nil) {

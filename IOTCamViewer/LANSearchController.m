@@ -112,6 +112,9 @@
     refreshLbl.numberOfLines=0;
     refreshLbl.font=[UIFont systemFontOfSize:14.0f];
     [self.view addSubview:refreshLbl];
+#if defined(SVIPCLOUD)
+    refreshLbl.textColor=HexRGB(0x3d3c3c);
+#endif
     [refreshLbl release];
     [refreshBtn release];
     
@@ -130,6 +133,9 @@
                                      action:@selector(cancel:)];
     
     self.navigationItem.leftBarButtonItem = cancelButton;
+#if defined(SVIPCLOUD)
+    cancelButton.tintColor=HexRGB(0x3d3c3c);
+#endif
     [cancelButton release];    
     
     
@@ -233,6 +239,9 @@
         tipsLbl.numberOfLines=0;
         tipsLbl.textAlignment=NSTextAlignmentLeft;
         [cell.contentView addSubview:tipsLbl];
+#if defined(SVIPCLOUD)
+        tipsLbl.textColor=HexRGB(0x3d3c3c);
+#endif
         [tipsLbl release];
         [tipsBtn release];
     }

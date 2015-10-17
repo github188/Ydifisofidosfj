@@ -130,6 +130,13 @@
     [copyright setText:NSLocalizedString(@"Copyright © 2015. All rights reserved.", @"")];
     [copyright setTextAlignment:UITextAlignmentCenter];
     
+    
+#if defined(SVIPCLOUD)
+    [appName setTextColor:HexRGB(0x3d3c3c)];
+    [appVer setTextColor:HexRGB(0x3d3c3c)];
+    [copyright setTextColor:HexRGB(0x3d3c3c)];
+#endif
+    
     UIView *view = [[UIView alloc] init];
     [view setBackgroundColor:[UIColor clearColor]];    
     [view addSubview:appIconView];

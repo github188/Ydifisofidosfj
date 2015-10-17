@@ -50,6 +50,9 @@
     self.psdInput.secureTextEntry=YES;
 #if defined(SVIPCLOUD)
     [self.settingBnr setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    [self.ssidLbl setTextColor:HexRGB(0x3d3c3c)];
+    [self.psdLbl setTextColor:HexRGB(0x3d3c3c)];
+    [self.viewPsdLbl setTextColor:HexRGB(0x3d3c3c)];
 #endif
 }
 - (BOOL)textFieldShouldReturn:(UITextField *) textField

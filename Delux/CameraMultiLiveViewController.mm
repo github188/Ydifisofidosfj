@@ -1032,6 +1032,9 @@ extern unsigned int _getTickCount() ;
 				cameraNameXX.text = tempCamera.name;
 				cameraNameXX.font = [UIFont systemFontOfSize:12.0f];
 				cameraNameXX.textColor = [UIColor whiteColor];
+#if defined(SVIPCLOUD)
+                cameraNameXX.textColor=HexRGB(0x3d3c3c);
+#endif
 			}
             UIImageView* cameraConnectXX = [marrImg_Connt objectAtIndex:i];
             if( cameraConnectXX ) {

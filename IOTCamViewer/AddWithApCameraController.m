@@ -46,6 +46,9 @@
 #if defined(SVIPCLOUD)
     [self.wifiNextBtn setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
     [self.otherNextBtn setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    [self.wifiTips setTextColor:HexRGB(0x3d3c3c)];
+    [self.wifitips2 setTextColor:HexRGB(0x3d3c3c)];
+    [self.otherTips setTextColor:HexRGB(0x3d3c3c)];
 #endif
     
 }

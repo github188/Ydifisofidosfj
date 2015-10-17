@@ -40,6 +40,7 @@
     
 #if defined(SVIPCLOUD)
     [self.nextBtn setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    [self.tipsLbl setTextColor:HexRGB(0x3d3c3c)];
 #endif
 }
 -(void)back:(id)sender{
