@@ -55,10 +55,16 @@
             }
             
             else if (isFromChannel) {
+                if ([filePath rangeOfString:@"CEO_Record"].location != NSNotFound) {
+                    continue;
+                }
                 if ([filePath rangeOfString:[NSString stringWithFormat:@"CH%d",cameraChannel]].location != NSNotFound) {
                     [mutableArray addObject:[NSString stringWithFormat:@"%@", filePath]];
                 }
             } else {
+                if ([filePath rangeOfString:@"CEO_Record"].location != NSNotFound) {
+                    continue;
+                }
                 [mutableArray addObject:[NSString stringWithFormat:@"%@", filePath]];
             }
         }
