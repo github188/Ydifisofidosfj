@@ -179,6 +179,9 @@
         label.tag = LABEL_TAG;
         label.font = [UIFont boldSystemFontOfSize:[UIFont labelFontSize]];
         [cell.contentView addSubview:label];
+#if defined(SVIPCLOUD)
+        label.textColor=HexRGB(0x3d3c3c);
+#endif
         [label release];
         
         UITextField *textField = nil;
