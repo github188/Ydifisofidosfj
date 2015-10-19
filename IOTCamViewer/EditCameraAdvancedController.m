@@ -944,6 +944,11 @@ typedef struct
             [text release];
     }
     
+#if defined(SVIPCLOUD)
+    cell.textLabel.textColor=HexRGB(0x3d3c3c);
+    cell.detailTextLabel.textColor=HexRGB(0x3d3c3c);
+#endif
+    
     return cell;
 }
 

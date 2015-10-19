@@ -321,6 +321,9 @@
         uidTextView.userInteractionEnabled = NO;
         uidTextView.text = camera.uid;
         uidTextView.font = [uidTextView.font fontWithSize:15];
+#if defined(SVIPCLOUD)
+        uidTextView.textColor=HexRGB(0x3d3c3c);
+#endif
         
         UIView *view = [[UIView alloc] init];
         [view setBackgroundColor:[UIColor clearColor]];  
@@ -426,6 +429,9 @@
         
         label.text = [fieldLabels objectAtIndex:row];  
         label.backgroundColor = [UIColor clearColor];
+#if defined(SVIPCLOUD)
+        label.textColor=HexRGB(0x3d3c3c);
+#endif
         
         NSNumber *rowAsNum = [[NSNumber alloc] initWithInt:row];
         
@@ -633,6 +639,10 @@
             cell.textLabel.text = NSLocalizedString(@"Remove this device", @"");
         }
     }
+    
+#if defined(SVIPCLOUD)
+    cell.textLabel.textColor=HexRGB(0x3d3c3c);
+#endif
     
     return cell;
 }
