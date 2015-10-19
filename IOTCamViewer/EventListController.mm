@@ -397,7 +397,7 @@
                 
                 NSLog(@"<<< Get Event(%d): %d/%d/%d %d:%2d:%2d (%f)", saEvt.status, saEvt.stTime.year, saEvt.stTime.month, saEvt.stTime.day, (int)saEvt.stTime.hour, (int)saEvt.stTime.minute, (int)saEvt.stTime.second, timeInMillis);
                                 
-                Event *evt = [[Event alloc] initWithEventType:saEvt.event EventTime:[self getTimeInMillis:saEvt.stTime] EventStatus:saEvt.status];
+                Event *evt = [[Event alloc] initWithEventType:saEvt.event-3600 EventTime:[self getTimeInMillis:saEvt.stTime] EventStatus:saEvt.status];
                 
                 [event_list addObject:evt];
                 [evt release];
