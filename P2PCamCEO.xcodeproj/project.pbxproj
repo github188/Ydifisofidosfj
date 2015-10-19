@@ -5843,14 +5843,12 @@
 		06D795C11BC0355E00B1E986 /* moreset.png in Resources */ = {isa = PBXBuildFile; fileRef = 06B8C8B21B0A1D5A006ED6EE /* moreset.png */; };
 		06D795C31BC0355E00B1E986 /* CheckSSIDView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AAF3AFE1922272A000D7FAF /* CheckSSIDView.xib */; };
 		06D795C41BC0355E00B1E986 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = D87DB2E3151C5BC700AC9123 /* info.png */; };
-		06D795C61BC0355E00B1E986 /* 6chlist_bk_bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06642F651B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg */; };
 		06D795CA1BC0355E00B1E986 /* info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D87DB2E4151C5BC700AC9123 /* info@2x.png */; };
 		06D795CD1BC0355E00B1E986 /* AddWithApCamera1Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0688793E1ABE204E0017A41A /* AddWithApCamera1Controller.xib */; };
 		06D795CF1BC0355E00B1E986 /* lan.png in Resources */ = {isa = PBXBuildFile; fileRef = D87DB2E5151C5BC700AC9123 /* lan.png */; };
 		06D795DB1BC0355E00B1E986 /* videoClip.png in Resources */ = {isa = PBXBuildFile; fileRef = D87DB2E6151C5BC700AC9123 /* videoClip.png */; };
 		06D795E01BC0355E00B1E986 /* ChannelPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = D80740451525989A00068A35 /* ChannelPicker.xib */; };
 		06D795E21BC0355E00B1E986 /* popoverArrowDownSimple.png in Resources */ = {isa = PBXBuildFile; fileRef = D8ECB1EA15294E2C00598466 /* popoverArrowDownSimple.png */; };
-		06D795E81BC0355E00B1E986 /* f-Btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0EAB1ACAD71400448ACB /* f-Btn@2x.png */; };
 		06D795EA1BC0355E00B1E986 /* popoverArrowLeftSimple.png in Resources */ = {isa = PBXBuildFile; fileRef = D8ECB1EB15294E2C00598466 /* popoverArrowLeftSimple.png */; };
 		06D795ED1BC0355E00B1E986 /* popoverArrowRightSimple.png in Resources */ = {isa = PBXBuildFile; fileRef = D8ECB1EC15294E2C00598466 /* popoverArrowRightSimple.png */; };
 		06D795F31BC0355E00B1E986 /* remeberpsd2.png in Resources */ = {isa = PBXBuildFile; fileRef = 06B219821ADD4D51005E3A2B /* remeberpsd2.png */; };
@@ -5885,7 +5883,6 @@
 		06D7967E1BC0355E00B1E986 /* speaker_mute@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = D8C596391585A137006FB0D6 /* speaker_mute@2X.png */; };
 		06D796801BC0355E00B1E986 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 61963C0C15AA867D00DB266E /* arrow.png */; };
 		06D796811BC0355E00B1E986 /* StartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ABFD0CE190F926400DDF03B /* StartView.xib */; };
-		06D796851BC0355E00B1E986 /* f-Btn_Click@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0EAA1ACAD71400448ACB /* f-Btn_Click@2x.png */; };
 		06D7968A1BC0355E00B1E986 /* CameraMultiLiveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AAF857519061DAC00A82745 /* CameraMultiLiveView.xib */; };
 		06D796911BC0355E00B1E986 /* CustomGridTableViewCellStyle1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6198544715D4A88D00A1F4EF /* CustomGridTableViewCellStyle1.xib */; };
 		06D796931BC0355E00B1E986 /* CustomGridTableViewCellStyle2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6198544A15D4A88D00A1F4EF /* CustomGridTableViewCellStyle2.xib */; };
@@ -5894,7 +5891,6 @@
 		06D796A01BC0355E00B1E986 /* moreset_clicked.png in Resources */ = {isa = PBXBuildFile; fileRef = 06B8C8B31B0A1D5A006ED6EE /* moreset_clicked.png */; };
 		06D796A11BC0355E00B1E986 /* PhotoViewerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6198545215D4A88D00A1F4EF /* PhotoViewerViewController.xib */; };
 		06D796A31BC0355E00B1E986 /* thumbnailCheckMark.png in Resources */ = {isa = PBXBuildFile; fileRef = 6198551215D4AEF300A1F4EF /* thumbnailCheckMark.png */; };
-		06D796B31BC0355E00B1E986 /* f+Btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0EA71ACAD6F300448ACB /* f+Btn@2x.png */; };
 		06D796B81BC0355E00B1E986 /* thumbnailCheckMark2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6198551315D4AEF300A1F4EF /* thumbnailCheckMark2.png */; };
 		06D796B91BC0355E00B1E986 /* buttonRedBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 6198551615D4B0E500A1F4EF /* buttonRedBackground.png */; };
 		06D796C11BC0355E00B1E986 /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = 57DE16E61868235C00B6682F /* more.png */; };
@@ -5906,7 +5902,6 @@
 		06D796E61BC0355E00B1E986 /* africa.csv in Resources */ = {isa = PBXBuildFile; fileRef = 86244ABD1769AD4B00C2564B /* africa.csv */; };
 		06D796EA1BC0355E00B1E986 /* oceania.csv in Resources */ = {isa = PBXBuildFile; fileRef = 86244ABE1769AD4B00C2564B /* oceania.csv */; };
 		06D796F91BC0355E00B1E986 /* america.csv in Resources */ = {isa = PBXBuildFile; fileRef = 86244ABF1769AD4B00C2564B /* america.csv */; };
-		06D797051BC0355E00B1E986 /* f+Btn_Click@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0EA61ACAD6F300448ACB /* f+Btn_Click@2x.png */; };
 		06D797071BC0355E00B1E986 /* europe.csv in Resources */ = {isa = PBXBuildFile; fileRef = 86244AC01769AD4B00C2564B /* europe.csv */; };
 		06D797151BC0355E00B1E986 /* asia.csv in Resources */ = {isa = PBXBuildFile; fileRef = 86244AC11769AD4B00C2564B /* asia.csv */; };
 		06D797181BC0355E00B1E986 /* AppGuidViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F425F61AA9FB6500427383 /* AppGuidViewController.xib */; };
@@ -16213,7 +16208,6 @@
 				06D795C11BC0355E00B1E986 /* moreset.png in Resources */,
 				06D795C31BC0355E00B1E986 /* CheckSSIDView.xib in Resources */,
 				06D795C41BC0355E00B1E986 /* info.png in Resources */,
-				06D795C61BC0355E00B1E986 /* 6chlist_bk_bg@2x.jpg in Resources */,
 				06D795CA1BC0355E00B1E986 /* info@2x.png in Resources */,
 				065AB4511BC03882007C24D5 /* add_warn@2x.png in Resources */,
 				065AB44B1BC03882007C24D5 /* add_qrcode_clicked@2x.png in Resources */,
@@ -16249,7 +16243,6 @@
 				065AB48D1BC03882007C24D5 /* leo_snapshot@2x.png in Resources */,
 				065AB2FA1BC03800007C24D5 /* f+Btn@2x.png in Resources */,
 				065AB45D1BC03882007C24D5 /* addcam_clicked@2x.png in Resources */,
-				06D795E81BC0355E00B1E986 /* f-Btn@2x.png in Resources */,
 				065AB4831BC03882007C24D5 /* leo_mirror_rl_clicked@2x.png in Resources */,
 				065AB5231BC03882007C24D5 /* ceo_pause_h@2x.png in Resources */,
 				06D795EA1BC0355E00B1E986 /* popoverArrowLeftSimple.png in Resources */,
@@ -16386,7 +16379,6 @@
 				06D796801BC0355E00B1E986 /* arrow.png in Resources */,
 				06D796811BC0355E00B1E986 /* StartView.xib in Resources */,
 				065AB43C1BC03882007C24D5 /* add_local.png in Resources */,
-				06D796851BC0355E00B1E986 /* f-Btn_Click@2x.png in Resources */,
 				065AB53B1BC03882007C24D5 /* refresh@2x.png in Resources */,
 				065AB4FF1BC03882007C24D5 /* ceo_rcplay_line.png in Resources */,
 				06D7968A1BC0355E00B1E986 /* CameraMultiLiveView.xib in Resources */,
@@ -16419,7 +16411,6 @@
 				065AB4FE1BC03882007C24D5 /* ceo_rcplay_forward_click@2x.png in Resources */,
 				065AB5041BC03882007C24D5 /* ceo_rcplay_time@2x.png in Resources */,
 				065AB2D11BC037CD007C24D5 /* myup1@2x.png in Resources */,
-				06D796B31BC0355E00B1E986 /* f+Btn@2x.png in Resources */,
 				065AB4D21BC03882007C24D5 /* morefunction_clicked.png in Resources */,
 				065AB4751BC03882007C24D5 /* drop_refresh_clicked@2x.png in Resources */,
 				065AB5081BC03882007C24D5 /* ceo_record_clicked@2x.png in Resources */,
@@ -16503,7 +16494,6 @@
 				065AB4341BC03882007C24D5 /* add_camwifibk.png in Resources */,
 				065AB4F91BC03882007C24D5 /* ceo_rcplay_click.png in Resources */,
 				065AB4CD1BC03882007C24D5 /* more_set_clicked.png in Resources */,
-				06D797051BC0355E00B1E986 /* f+Btn_Click@2x.png in Resources */,
 				06D797071BC0355E00B1E986 /* europe.csv in Resources */,
 				065AB4F01BC03882007C24D5 /* qualitylist_clicked@2x.png in Resources */,
 				065AB5271BC03882007C24D5 /* ceo_rcplay_back_h@2x.png in Resources */,
@@ -21109,7 +21099,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Lingbo Zeng (7FS3V9B7H4)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -21145,7 +21135,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.easyn.test.svipcloud;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c906b0e2-3238-4138-aef8-e2c8d3768315";
+				PROVISIONING_PROFILE = "61017271-ab2b-4b1d-9d9b-a289fe781c87";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -21158,7 +21148,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Lingbo Zeng (7FS3V9B7H4)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -21195,7 +21185,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.easyn.test.svipcloud;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c906b0e2-3238-4138-aef8-e2c8d3768315";
+				PROVISIONING_PROFILE = "61017271-ab2b-4b1d-9d9b-a289fe781c87";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -21208,7 +21198,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Lingbo Zeng (7FS3V9B7H4)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -21245,7 +21235,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.easyn.test.svipcloud;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c906b0e2-3238-4138-aef8-e2c8d3768315";
+				PROVISIONING_PROFILE = "61017271-ab2b-4b1d-9d9b-a289fe781c87";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -21258,7 +21248,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Lingbo Zeng (7FS3V9B7H4)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -21294,7 +21284,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.easyn.test.svipcloud;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c906b0e2-3238-4138-aef8-e2c8d3768315";
+				PROVISIONING_PROFILE = "61017271-ab2b-4b1d-9d9b-a289fe781c87";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
