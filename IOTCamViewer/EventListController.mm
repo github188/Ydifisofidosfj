@@ -143,7 +143,10 @@
     self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:negativeSpacer, backButton, nil];
     [backButton release];
     
-    searchButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Search", nil) style:UIBarButtonItemStyleDone target:self action:@selector(search:)];    
+    searchButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Search", nil) style:UIBarButtonItemStyleDone target:self action:@selector(search:)];
+#if defined(SVIPCLOUD)
+    [searchButton setTintColor:HexRGB(0x3d3c3c)];
+#endif
     NSArray* toolbarItems = [NSArray arrayWithObjects: searchButton, nil];
     [toolbarItems makeObjectsPerformSelector:@selector(release)];
     self.toolbarItems = toolbarItems;    
@@ -244,6 +247,9 @@
             
             cell.accessoryType = UITableViewCellAccessoryNone;
             cell.textLabel.text = NSLocalizedString(@"No result found", @"");
+#if defined(SVIPCLOUD)
+            cell.textLabel.textColor=HexRGB(0x3d3c3c);
+#endif
             
         } else {
         
@@ -280,7 +286,10 @@
             [date release];
         }
     }
-    
+#if defined(SVIPCLOUD)
+    cell.textLabel.textColor=HexRGB(0x3d3c3c);
+    cell.detailTextLabel.textColor=HexRGB(0x3d3c3c);
+#endif
     return cell;
 #else
 
@@ -330,6 +339,10 @@
     [dateFormatter release];
     [date release];
     
+#if defined(SVIPCLOUD)
+    cell.textLabel.textColor=HexRGB(0x3d3c3c);
+    cell.detailTextLabel.textColor=HexRGB(0x3d3c3c);
+#endif
     return cell;
 #endif
 }

@@ -1372,6 +1372,41 @@ extern unsigned int _getTickCount() {
     [self initQVGAMode:[MyCamera getCameraQVGA:self.camera]];
     
     
+#if defined(SVIPCLOUD)
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:HexRGB(0x3d3c3c),NSForegroundColorAttributeName,nil]];
+    statusLabel.textColor=HexRGB(0x3d3c3c);
+    modeLabel.textColor=HexRGB(0x3d3c3c);
+    videoInfoLabel.textColor=HexRGB(0x3d3c3c);
+    frameInfoLabel.textColor=HexRGB(0x3d3c3c);
+    [_qualityLabel setTextColor:HexRGB(0x3d3c3c)];
+    [AudioTitle setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    [longAudioTitle setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    
+    [QVGATitle setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    [setHighest setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    [setHigh setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    [setMedium setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    [setLow setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    [setLowest setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    
+    [longQVGATitle setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    [longSetHighest setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    [longSetHigh setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    [longSetMedium setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    [longSetLow setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    [longSetLowest setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    
+    [set50Hz setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    [set60Hz setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    [setOutDoor setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    [setNight setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    [EModeTitle setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    [longSetOutDoor setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    [longSetNight setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+    [longEModeTitle setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+#endif
+    
+    
     [super viewDidLoad];
 }
 
@@ -1703,6 +1738,9 @@ extern unsigned int _getTickCount() {
     
 	self.qualityLabel.text = [NSString stringWithFormat:@"%@:%@", NSLocalizedString(@"Quality", @""), [camera_ getOverAllQualityString]];
 	self.qualityLabel.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+#if defined(SVIPCLOUD)
+    [_qualityLabel setTextColor:HexRGB(0x3d3c3c)];
+#endif
 	
     [loadingViewPortrait stopAnimating];
     [loadingViewLandscape stopAnimating];
@@ -1774,6 +1812,9 @@ extern unsigned int _getTickCount() {
 #endif
 		self.qualityLabel.text = [NSString stringWithFormat:@"%@:%@", NSLocalizedString(@"Quality", @""), [camera getOverAllQualityString]];
 		self.qualityLabel.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+#if defined(SVIPCLOUD)
+        [_qualityLabel setTextColor:HexRGB(0x3d3c3c)];
+#endif
     }
 }
 
@@ -1842,6 +1883,13 @@ extern unsigned int _getTickCount() {
         
         [_longBtn50HZ setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         [_longBtn60HZ setTitleColor:[UIColor colorWithRed:0 green:122/255.0 blue:255.0/255.0 alpha:1.0f] forState:UIControlStateNormal];
+        
+#if defined(SVIPCLOUD)
+        [set50Hz setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+        [set60Hz setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+        [_longBtn50HZ setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+        [_longBtn60HZ setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+#endif
     }
     if(emode==1){
         [set60Hz setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
@@ -1858,6 +1906,9 @@ extern unsigned int _getTickCount() {
         }
         else{
             [b setTitleColor:[UIColor colorWithRed:0 green:122/255.0 blue:255.0/255.0 alpha:1.0f] forState:UIControlStateNormal];
+#if defined(SVIPCLOUD)
+            [b setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+#endif
         }
     }
     for (UIButton *b in [qvgaView subviews]) {
@@ -1867,6 +1918,9 @@ extern unsigned int _getTickCount() {
         }
         else{
             [b setTitleColor:[UIColor colorWithRed:0 green:122/255.0 blue:255.0/255.0 alpha:1.0f] forState:UIControlStateNormal];
+#if defined(SVIPCLOUD)
+            [b setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
+#endif
         }
     }
 }

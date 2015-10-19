@@ -519,6 +519,12 @@ extern unsigned int _getTickCount();
     self.scrollViewLandscape.contentMode = UIViewContentModeScaleToFill;
     self.scrollViewLandscape.contentSize = self.scrollViewLandscape.frame.size;
     
+#if defined(SVIPCLOUD)
+    statusLabel.textColor=HexRGB(0x3d3c3c);
+    videoInfoLabel.textColor=HexRGB(0x3d3c3c);
+    frameInfoLabel.textColor=HexRGB(0x3d3c3c);
+#endif
+    
     
     
     [[NSNotificationCenter defaultCenter] addObserver:self
