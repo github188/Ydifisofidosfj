@@ -20382,7 +20382,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tocview.cic200;
 				PRODUCT_NAME = "Toc View";
-				PROVISIONING_PROFILE = "7afc5825-def3-4f69-9625-bf6fd332f533";
+				PROVISIONING_PROFILE = "9b32edc3-987e-47f6-b0cc-d28ba7367dcc";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -20432,7 +20432,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tocview.cic200;
 				PRODUCT_NAME = "Toc View";
-				PROVISIONING_PROFILE = "7afc5825-def3-4f69-9625-bf6fd332f533";
+				PROVISIONING_PROFILE = "9b32edc3-987e-47f6-b0cc-d28ba7367dcc";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -20482,7 +20482,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tocview.cic200;
 				PRODUCT_NAME = "Toc View";
-				PROVISIONING_PROFILE = "7afc5825-def3-4f69-9625-bf6fd332f533";
+				PROVISIONING_PROFILE = "9b32edc3-987e-47f6-b0cc-d28ba7367dcc";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -20531,7 +20531,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tocview.cic200;
 				PRODUCT_NAME = "Toc View";
-				PROVISIONING_PROFILE = "7afc5825-def3-4f69-9625-bf6fd332f533";
+				PROVISIONING_PROFILE = "9b32edc3-987e-47f6-b0cc-d28ba7367dcc";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
