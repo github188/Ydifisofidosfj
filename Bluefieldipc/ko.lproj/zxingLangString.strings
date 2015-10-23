@@ -1,0 +1,15 @@
+/* 
+  langString.strings
+  ZXingWidget
+
+  Created by Gavin Chang on 2013/11/15.
+
+*/
+
+/* No comment provided by engineer. */
+"Place a barcode inside the viewfinder rectangle to scan it." = "QR코드를 제대로 맞춰서 인식 시켜주세요";
+
+"Cancel" = "취소";
+
+"Light" = "라이트";
+
