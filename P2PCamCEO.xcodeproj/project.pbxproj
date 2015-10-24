@@ -21104,7 +21104,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.easyn.Bluefieldipc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "60524ec0-d6b5-475a-84eb-3b3a7308fdbb";
+				PROVISIONING_PROFILE = "a5591951-6b79-44f9-a1f9-9b91c4759d75";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -21154,7 +21154,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.easyn.Bluefieldipc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "60524ec0-d6b5-475a-84eb-3b3a7308fdbb";
+				PROVISIONING_PROFILE = "a5591951-6b79-44f9-a1f9-9b91c4759d75";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -21204,7 +21204,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.easyn.Bluefieldipc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "60524ec0-d6b5-475a-84eb-3b3a7308fdbb";
+				PROVISIONING_PROFILE = "a5591951-6b79-44f9-a1f9-9b91c4759d75";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -21253,7 +21253,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.easyn.Bluefieldipc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "60524ec0-d6b5-475a-84eb-3b3a7308fdbb";
+				PROVISIONING_PROFILE = "a5591951-6b79-44f9-a1f9-9b91c4759d75";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";

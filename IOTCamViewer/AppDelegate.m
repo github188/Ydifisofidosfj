@@ -357,6 +357,10 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
     
     [[IQKeyboardManager sharedManager] setEnable:YES];
     
+    //NSError *error;
+    //NSString *registerResult = [NSString stringWithContentsOfURL:[NSURL URLWithString:g_tpnsHostString] encoding:NSUTF8StringEncoding error:&error];
+    //NSLog(@"%@",error);
+    
     return YES;
 }
 
