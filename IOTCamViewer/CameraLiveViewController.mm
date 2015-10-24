@@ -641,14 +641,9 @@ extern unsigned int _getTickCount() {
             self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"psd_bright",@"psd_contrast",nil];
             self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked", @"psd_bright_clicked",@"psd_contrast_clicked",nil];
 #else
-            if(isHasSDCard){
-                self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",nil];
-                self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click",nil];
-            }
-            else{
-                self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",nil];
-                self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click",nil];
-            }
+            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",nil];
+            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click",nil];
+            
 #endif
             
             [self.horizMenu reloadData];
@@ -688,14 +683,8 @@ extern unsigned int _getTickCount() {
             self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable",@"psd_bright",@"psd_contrast",nil];
             self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable",@"psd_bright_clicked",@"psd_contrast_clicked",nil];
 #else
-            if(isHasSDCard){
-                self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable", @"f+Btn", @"f-Btn",nil];
-                self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable",@"f+Btn_Click", @"f-Btn_Click",nil];
-            }
-            else{
-                self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable", @"f+Btn", @"f-Btn",nil];
-                self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable",@"f+Btn_Click", @"f-Btn_Click",nil];
-            }
+            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable", @"f+Btn", @"f-Btn",nil];
+            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable",@"f+Btn_Click", @"f-Btn_Click",nil];
 #endif
             [self.horizMenu reloadData];
             [self.longHorizMenu reloadData];
@@ -757,14 +746,8 @@ extern unsigned int _getTickCount() {
                 self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"psd_bright",@"psd_contrast",nil];
                 self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked", @"psd_bright_clicked",@"psd_contrast_clicked",nil];
 #else
-                if(isHasSDCard){
-                    self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode", @"f+Btn", @"f-Btn",nil];
-                    self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click",nil];
-                }
-                else{
-                    self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode", @"f+Btn", @"f-Btn",nil];
-                    self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click",nil];
-                }
+                self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode", @"f+Btn", @"f-Btn",nil];
+                self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click",nil];
 #endif
                 [self.horizMenu reloadData];
                 [self.longHorizMenu reloadData];
@@ -1190,7 +1173,6 @@ extern unsigned int _getTickCount() {
     camera.isShowInMultiView = NO;
     isChangeChannel = NO;
     self.isCanSendSetCameraCMD=YES;
-    isHasSDCard=YES;
     
 #if defined(BayitCam)
     [AudioTitle setTitle:NSLocalizedStringFromTable(@"Push to talk", @"bayitcam", nil) forState:UIControlStateNormal];
@@ -1286,14 +1268,8 @@ extern unsigned int _getTickCount() {
     self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"psd_bright",@"psd_contrast",nil];
     self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked", @"psd_bright_clicked",@"psd_contrast_clicked",nil];
 #else
-    if(isHasSDCard){
-        self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",nil];
-        self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click",nil];
-    }
-    else{
-        self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",nil];
-        self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click",nil];
-    }
+    self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",nil];
+    self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click",nil];
 #endif
     [scrollQVGAView setContentSize:qvgaView.frame.size];
     [scrollQVGAView setClipsToBounds:YES];
@@ -1429,18 +1405,6 @@ extern unsigned int _getTickCount() {
     [longSetOutDoor setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
     [longSetNight setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
     [longEModeTitle setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
-#endif
-    
-
-#if defined(CheckSdCard)
-    SMsgAVIoctrlDeviceInfoReq *s = (SMsgAVIoctrlDeviceInfoReq *)malloc(sizeof(SMsgAVIoctrlDeviceInfoReq));
-    memset(s, 0, sizeof(SMsgAVIoctrlDeviceInfoReq));
-    
-    [camera sendIOCtrlToChannel:0
-                           Type:IOTYPE_USER_IPCAM_DEVINFO_REQ
-                           Data:(char *)s
-                       DataSize:sizeof(SMsgAVIoctrlDeviceInfoReq)];
-    free(s);
 #endif
     
     [super viewDidLoad];
@@ -1862,27 +1826,6 @@ extern unsigned int _getTickCount() {
         if(pResult->quality!=[MyCamera getCameraQVGA:camera]){
             [MyCamera loadCameraQVGA:camera];
         }
-    }
-    
-    if (camera_ == camera && type == IOTYPE_USER_IPCAM_DEVINFO_RESP) {
-        
-        SMsgAVIoctrlDeviceInfoResp *structDevInfo = (SMsgAVIoctrlDeviceInfoResp*)data;
-        isHasSDCard=structDevInfo->total>0;
-#if defined(MAJESTICIPCAMP)
-        self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"psd_bright",@"psd_contrast",nil];
-        self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked", @"psd_bright_clicked",@"psd_contrast_clicked",nil];
-#else
-        if(isHasSDCard){
-            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",nil];
-            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click",nil];
-        }
-        else{
-            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",nil];
-            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click",nil];
-        }
-#endif
-        [self.horizMenu reloadData];
-        [self.longHorizMenu reloadData];
     }
     
     if (type == (int)IOTYPE_USER_IPCAM_SETSTREAMCTRL_RESP) {
@@ -2552,7 +2495,7 @@ extern unsigned int _getTickCount() {
 #pragma mark -
 #pragma mark HorizMenu Delegate
 -(void) horizMenu:(MKHorizMenu *)horizMenu itemTouchDownAtIndex:(NSUInteger)index{
-    NSInteger offsetCount=isHasSDCard?0:1;
+    NSInteger offsetCount=0;
     if(index==7-offsetCount){
 #if defined(MAJESTICIPCAMP)
 #else
@@ -2572,7 +2515,7 @@ extern unsigned int _getTickCount() {
 }
 -(void) horizMenu:(MKHorizMenu *)horizMenu itemSelectedAtIndex:(NSUInteger)index
 {
-    NSInteger offsetCount=isHasSDCard?0:1;
+    NSInteger offsetCount=0;
     talkButton.hidden = YES;
     scrollQVGAView.hidden = YES;
     scrollEModeView.hidden = YES;
@@ -2681,7 +2624,7 @@ extern unsigned int _getTickCount() {
             [self.longHorizMenu setUnselectedIndex:SOUND_CONTROL animated:YES];
         }
         
-    } else if (index == RECORDING && isHasSDCard) {
+    } else if (index == RECORDING) {
     
         isQVGAView = NO;
         isEModeView = NO;

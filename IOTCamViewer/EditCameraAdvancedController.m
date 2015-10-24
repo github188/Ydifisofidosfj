@@ -246,7 +246,7 @@ typedef struct
     }
     
     return ([camera getRecordSettingSupportOfChannel:0] ||
-            [camera getFormatSDCardSupportOfChannel:0]) ? idx : -1;
+            [camera getFormatSDCardSupportOfChannel:0])&&isHasSDCard ? idx : -1;
 }
 
 - (int)getDeviceInfoSectionIndex
@@ -343,6 +343,11 @@ typedef struct
                         @"GMT+10",
                         @"GMT+11",
                         @"GMT+12", nil];
+#if defined(CheckSdCard)
+    isHasSDCard=NO;
+#else
+    isHasSDCard=YES;
+#endif
     
     [super viewDidLoad];
 }
@@ -431,8 +436,8 @@ typedef struct
     if ([camera getMotionDetectionSettingSupportOfChannel:0])
         row++;
     
-    if ([camera getRecordSettingSupportOfChannel:0] ||
-        [camera getFormatSDCardSupportOfChannel:0])
+    if (([camera getRecordSettingSupportOfChannel:0] ||
+        [camera getFormatSDCardSupportOfChannel:0])&&isHasSDCard)
         row++;
     
     if ([camera getDeviceInfoSupportOfChannel:0])
@@ -1395,6 +1400,12 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
             isRecvWiFi = true;
             [self.tableView reloadData];
         }
+        else if (camera_ == camera && type == IOTYPE_USER_IPCAM_DEVINFO_RESP) {
+            
+            SMsgAVIoctrlDeviceInfoResp *structDevInfo = (SMsgAVIoctrlDeviceInfoResp*)data;
+            isHasSDCard=structDevInfo->total>0;
+            [self.tableView reloadData];
+        }
     }
 }
 
@@ -1644,6 +1655,17 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
                            Data:(char *)structRecordingMode
                        DataSize:sizeof(SMsgAVIoctrlGetRecordReq)];
     free(structRecordingMode);
+    
+#if defined(CheckSdCard)
+    SMsgAVIoctrlDeviceInfoReq *s = (SMsgAVIoctrlDeviceInfoReq *)malloc(sizeof(SMsgAVIoctrlDeviceInfoReq));
+    memset(s, 0, sizeof(SMsgAVIoctrlDeviceInfoReq));
+    
+    [camera sendIOCtrlToChannel:0
+                           Type:IOTYPE_USER_IPCAM_DEVINFO_REQ
+                           Data:(char *)s
+                       DataSize:sizeof(SMsgAVIoctrlDeviceInfoReq)];
+    free(s);
+#endif
 }
 
 @end
