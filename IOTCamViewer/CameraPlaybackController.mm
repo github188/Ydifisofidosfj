@@ -465,12 +465,16 @@ extern unsigned int _getTickCount();
     toolBar.items = [NSArray arrayWithObjects:playButton, nil];        
     playbackChannelIndex = -1;
     
+    NSTimeZone *time=[NSTimeZone localTimeZone];
+    NSInteger timeZoneNum=time.secondsFromGMT/3600;
+    NSInteger diffSecons=(_timeZoneNumber-timeZoneNum)*3600;
+    
 #ifndef MacGulp
     self.navigationItem.title = NSLocalizedString(@"Playback", nil);
     //self.navigationItem.prompt = camera.name;
 #else    
     NSString *evtTime;
-    NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970:self.event.eventTime];
+    NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970:self.event.eventTime+diffSecons];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init]; 
     [dateFormatter setLocale:[NSLocale currentLocale]];
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
@@ -586,9 +590,13 @@ extern unsigned int _getTickCount();
     NSString *evtName;
     NSString *evtTime;
     
-    evtName = [Event getEventTypeName:self.event.eventType];       
+    evtName = [Event getEventTypeName:self.event.eventType];
     
-    NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970:self.event.eventTime];
+    NSTimeZone *time=[NSTimeZone localTimeZone];
+    NSInteger timeZoneNum=time.secondsFromGMT/3600;
+    NSInteger diffSecons=(self.timeZoneNumber-timeZoneNum)*3600;
+    
+    NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970:self.event.eventTime+diffSecons];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init]; 
     [dateFormatter setLocale:[NSLocale currentLocale]];
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
