@@ -58,11 +58,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOTCamViewer/CameraLiveViewController.mm"
-            timestampString = "466091547.484128"
+            timestampString = "467342215.145127"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2988"
-            endingLineNumber = "2988">
+            startingLineNumber = "3046"
+            endingLineNumber = "3046"
+            landmarkName = "-onContrastClicked:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -88,11 +90,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOTCamViewer/CameraLiveViewController.mm"
-            timestampString = "466091547.484128"
+            timestampString = "467342215.145127"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2993"
-            endingLineNumber = "2993">
+            startingLineNumber = "3051"
+            endingLineNumber = "3051"
+            landmarkName = "-onContrastClicked:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

@@ -159,6 +159,8 @@ extern NSString *deviceTokenString;
     
     BOOL isBright;
     BOOL isContrast;
+    
+    BOOL isHasSDCard;
 }
 
 //for Recording
