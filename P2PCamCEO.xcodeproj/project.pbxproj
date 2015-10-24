@@ -12815,6 +12815,9 @@
 					06603F571B23133300FB6F32 = {
 						DevelopmentTeam = G795A5K2W9;
 					};
+					066C78471BDA5C2400419134 = {
+						DevelopmentTeam = Q2PV74KQN7;
+					};
 					066D9E3B1B037E7C00408AF2 = {
 						DevelopmentTeam = Y93RM4F8S2;
 					};
@@ -21098,8 +21101,9 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.easyn.test.bluefieldipc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "46142639-b3cc-4b42-bd98-74dd80651af6";
+				PROVISIONING_PROFILE = "f022167f-1d48-428a-9115-fb2a743efb91";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -21146,8 +21150,9 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.easyn.test.bluefieldipc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "46142639-b3cc-4b42-bd98-74dd80651af6";
+				PROVISIONING_PROFILE = "f022167f-1d48-428a-9115-fb2a743efb91";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -21194,8 +21199,9 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.easyn.test.bluefieldipc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "46142639-b3cc-4b42-bd98-74dd80651af6";
+				PROVISIONING_PROFILE = "f022167f-1d48-428a-9115-fb2a743efb91";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -21241,8 +21247,9 @@
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"-DP2PCAMLIVE",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.easyn.test.bluefieldipc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "46142639-b3cc-4b42-bd98-74dd80651af6";
+				PROVISIONING_PROFILE = "f022167f-1d48-428a-9115-fb2a743efb91";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
