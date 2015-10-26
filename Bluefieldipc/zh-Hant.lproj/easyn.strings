@@ -1,0 +1,16 @@
+
+"WIFI一键设置"="新增攝影機";
+"AddApWifiTips"="1.Wi-Fi智能設置";
+"AddApWifiTips2"="無需網線連接，首次設置攝像機連接網絡，僅支持部分型號";
+"AddApWifiOtherTips"="2.網絡連接或已無線連接路由器";
+"AddApWifiNextStep"="下一步";
+"AddApWifiStep2Tips"="請將攝像機接上電源適配器，待其自檢結束，並在確認攝像機發出“叮咚”聲後，點擊下一步.";
+"AddApWifiStep2NeedWifiTips"="請確保手機先已連接Wi-Fi.";
+"AddApWifiStep3SettingBtnTitle"="設置";
+"AddApWifiSSIDTips"="SSID不能為空！";
+"AddApWifiPsdTips"="密碼不能為空！";
+"AddApWifiAudioTips"="是否聽到攝像機叮咚提示音";
+"AddApWifiResetTips"="請頂住攝像機底部的RESET按鈕10秒，重新設置";
+"AddApWifiWaitingTips"="正在配置WIFI，請耐心等待";
+"AddApWifiErrorTips"="連接Wi-Fi失敗，請重新確認Wi-Fi密碼！";
+"ViewPsdLbl"="顯示密碼";

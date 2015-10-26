@@ -21,6 +21,8 @@
     MyCamera *camera;
         
     BOOL isSearchingEvent;
+    
+    NSInteger timeZoneNumber;
 }
 
 @property (nonatomic, retain) MyCamera *camera;

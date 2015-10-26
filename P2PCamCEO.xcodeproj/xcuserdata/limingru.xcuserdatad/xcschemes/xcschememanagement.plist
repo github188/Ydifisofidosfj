@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>Bluefieldipc.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
 		<key>EasyN P.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -68,6 +73,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>06603F571B23133300FB6F32</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>066C78471BDA5C2400419134</key>
 		<dict>
 			<key>primary</key>
 			<true/>

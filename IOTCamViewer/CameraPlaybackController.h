@@ -73,6 +73,7 @@ extern NSString *deviceTokenString;
 
 @property (nonatomic, retain) MyCamera *camera;
 @property (nonatomic, retain) Event *event;
+@property(nonatomic) NSInteger timeZoneNumber;
 
 - (IBAction)back:(id)sender;
 - (IBAction)play:(id)sender;

@@ -643,6 +643,7 @@ extern unsigned int _getTickCount() {
 #else
             self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",nil];
             self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click",nil];
+            
 #endif
             
             [self.horizMenu reloadData];
@@ -1405,7 +1406,6 @@ extern unsigned int _getTickCount() {
     [longSetNight setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
     [longEModeTitle setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
 #endif
-    
     
     [super viewDidLoad];
 }
@@ -2495,7 +2495,8 @@ extern unsigned int _getTickCount() {
 #pragma mark -
 #pragma mark HorizMenu Delegate
 -(void) horizMenu:(MKHorizMenu *)horizMenu itemTouchDownAtIndex:(NSUInteger)index{
-    if(index==7){
+    NSInteger offsetCount=0;
+    if(index==7-offsetCount){
 #if defined(MAJESTICIPCAMP)
 #else
         [self myPtzAction:AVIOCTRL_LENS_ZOOM_IN];
@@ -2503,7 +2504,7 @@ extern unsigned int _getTickCount() {
         [self.longHorizMenu setUnselectedIndex:7 animated:YES];
 #endif
     }
-    else if(index==8){
+    else if(index==8-offsetCount){
 #if defined(MAJESTICIPCAMP)
 #else
         [self myPtzAction:AVIOCTRL_LENS_ZOOM_OUT];
@@ -2514,7 +2515,7 @@ extern unsigned int _getTickCount() {
 }
 -(void) horizMenu:(MKHorizMenu *)horizMenu itemSelectedAtIndex:(NSUInteger)index
 {
-    
+    NSInteger offsetCount=0;
     talkButton.hidden = YES;
     scrollQVGAView.hidden = YES;
     scrollEModeView.hidden = YES;
@@ -2530,14 +2531,14 @@ extern unsigned int _getTickCount() {
     
     isActive = YES;
     
-    if(index==9){
+    if(index==9-offsetCount){
 
     }
-    else if(index==10)
+    else if(index==10-offsetCount)
     {
 
     }
-    else if(index==7){
+    else if(index==7-offsetCount){
 #if defined(MAJESTICIPCAMP)
         if(isBright){
             isBright=NO;
@@ -2561,7 +2562,7 @@ extern unsigned int _getTickCount() {
         [self.longHorizMenu setUnselectedIndex:7 animated:YES];
 #endif
     }
-    else if(index==8){
+    else if(index==8-offsetCount){
 #if defined(MAJESTICIPCAMP)
         if(isContrast){
             isContrast=NO;
@@ -2636,7 +2637,7 @@ extern unsigned int _getTickCount() {
 
         [self onBtnRecording];
         
-    } else if (index == SNAPSHOT  && !isRecording) {
+    } else if (index == SNAPSHOT-offsetCount  && !isRecording) {
 
         isQVGAView = NO;
         isEModeView = NO;
@@ -2652,7 +2653,7 @@ extern unsigned int _getTickCount() {
         [self.horizMenu setUnselectedIndex:SNAPSHOT animated:YES];
         [self.longHorizMenu setUnselectedIndex:SNAPSHOT animated:YES];
         
-    } else if (index == MIRROR_UP_DOWN  && !isRecording) {
+    } else if (index == MIRROR_UP_DOWN-offsetCount  && !isRecording) {
         
         [self.horizMenu reloadData];
         [self.longHorizMenu reloadData];
@@ -2702,7 +2703,7 @@ extern unsigned int _getTickCount() {
             isVerticalFlip = NO;
         }
         
-    } else if (index == MIRROR_LEFT_RIGHT && !isRecording) {
+    } else if (index == MIRROR_LEFT_RIGHT-offsetCount && !isRecording) {
         
         [self.horizMenu reloadData];
         [self.longHorizMenu reloadData];
@@ -2756,7 +2757,7 @@ extern unsigned int _getTickCount() {
 //        [self onBtnSetCamera];
 //        
 //        [self.horizMenu setUnselectedIndex:4 animated:YES];
-    } else if (index == QVGA && !isRecording) {
+    } else if (index == QVGA-offsetCount && !isRecording) {
         
         if (isQVGAView == NO) {
             isListening = NO;
@@ -2781,7 +2782,7 @@ extern unsigned int _getTickCount() {
         }
         
         
-    } else if (index == EMODE && !isRecording) {
+    } else if (index == EMODE-offsetCount && !isRecording) {
         
         if (isEModeView == NO) {
             isListening = NO;

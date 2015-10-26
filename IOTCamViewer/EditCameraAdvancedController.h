@@ -87,6 +87,8 @@ extern FMDatabase *database;
     NSString *timeZoneString;
         NSInteger timeZoneValue;
         
+        BOOL isHasSDCard;
+        
 }
 
 @property (nonatomic, retain) NSTimer* timerListWifiApResp;

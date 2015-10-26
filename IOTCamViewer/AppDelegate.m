@@ -739,6 +739,10 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 		NSLog( @"==============================================");
 
         NSString *registerResult = [NSString stringWithContentsOfURL:[NSURL URLWithString:getURLString] encoding:NSUTF8StringEncoding error:&error];
+        
+        //UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"TT" message:[NSString stringWithFormat:@"t=%@,err=%@,registerResult=%@",inDeviceTokenStr,error,registerResult] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        //[alert show];
+        //[alert release];
 
 		NSLog( @"==============================================");
 		NSLog( @">>> %@", registerResult );
@@ -777,6 +781,11 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 					NSLog( @"==============================================");
 					NSLog( @">>> %@", registerResult );
 					NSLog( @"==============================================");
+                    
+                    
+                    //UIAlertView *alert=[[UIAlertView alloc] initWithTitle:@"TT" message:[NSString stringWithFormat:@"t=%@,err=%@,registerResult=%@",inDeviceTokenStr,error,registerResult] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+                    //[alert show];
+                    //[alert release];
 
 				}
 				else {

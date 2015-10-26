@@ -160,15 +160,12 @@
 //#ifndef MacGulp
 //        self.navigationItem.prompt = camera.name;        
 //#endif
+        camera.delegate2=self;
         
-        STimeDay start, stop;
-        NSDate *now = [NSDate date];
-        NSDate *past = [NSDate dateWithTimeIntervalSinceNow:-43200];
-        
-        start = [Event getTimeDay:[past timeIntervalSince1970]];
-        stop = [Event getTimeDay:[now timeIntervalSince1970]];
-        
-        [self searchEventFrom:start To:stop];
+        // get TimeZone
+        SMsgAVIoctrlTimeZoneExt s3={0};
+        s3.cbSize = sizeof(s3);
+        [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ_EXT Data:(char *)&s3 DataSize:sizeof(s3)];
     }    
 }
 
@@ -273,14 +270,19 @@
             
             cell.textLabel.text = [Event getEventTypeName:evt.eventType];  
             
+            NSTimeZone *time=[NSTimeZone localTimeZone];
+            NSInteger timeZoneNum=time.secondsFromGMT/3600;
+            NSInteger diffSecons=(timeZoneNumber-timeZoneNum)*3600;
             
-            NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970:evt.eventTime];
+            NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970:evt.eventTime+diffSecons];
             NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init]; 
             [dateFormatter setLocale:[NSLocale currentLocale]];
             [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
             [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
                 
             cell.detailTextLabel.text = [dateFormatter stringFromDate:date];
+            
+
             
             [dateFormatter release];
             [date release];
@@ -326,9 +328,13 @@
         cell.badgeHighlightedColor = [UIColor clearColor];
     }
     
-    cell.textLabel.text = [Event getEventTypeName:evt.eventType];   
+    cell.textLabel.text = [Event getEventTypeName:evt.eventType];
     
-    NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970:evt.eventTime];
+    NSTimeZone *time=[NSTimeZone localTimeZone];
+    NSInteger timeZoneNum=time.secondsFromGMT/3600;
+    NSInteger diffSecons=(timeZoneNumber-timeZoneNum)*3600;
+    
+    NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970:evt.eventTime+diffSecons];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init]; 
     [dateFormatter setLocale:[NSLocale currentLocale]];
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
@@ -367,6 +373,7 @@
     CameraPlaybackController *controller = [[CameraPlaybackController alloc] initWithNibName:@"MacGulpCameraPlayback" bundle:nil];  
 #endif
     controller.camera = camera;
+    controller.timeZoneNumber=timeZoneNumber;
     controller.event = [event_list objectAtIndex:[indexPath row]];    
     [self.navigationController pushViewController:controller animated:YES];
     [controller release];
@@ -374,9 +381,14 @@
 
 #pragma mark - MyCameraDelegate Methods
 - (void)camera:(MyCamera *)camera _didReceiveIOCtrlWithType:(NSInteger)type Data:(const char *)data DataSize:(NSInteger)size
-{    
+{
+    if(type == IOTYPE_USER_IPCAM_GET_TIMEZONE_RESP_EXT) {
+        SMsgAVIoctrlTimeZoneExt *s = (SMsgAVIoctrlTimeZoneExt *)data;
+        timeZoneNumber = s->nGMTDiff;
+        [self refresh];
+    }
     if (type == IOTYPE_USER_IPCAM_LISTEVENT_RESP) {
-                
+        
         SMsgAVIoctrlListEventResp *s = (SMsgAVIoctrlListEventResp *)data ;
                 
         if (s->total == 0) {
@@ -397,7 +409,7 @@
                 
                 NSLog(@"<<< Get Event(%d): %d/%d/%d %d:%2d:%2d (%f)", saEvt.status, saEvt.stTime.year, saEvt.stTime.month, saEvt.stTime.day, (int)saEvt.stTime.hour, (int)saEvt.stTime.minute, (int)saEvt.stTime.second, timeInMillis);
                                 
-                Event *evt = [[Event alloc] initWithEventType:saEvt.event-3600 EventTime:[self getTimeInMillis:saEvt.stTime] EventStatus:saEvt.status];
+                Event *evt = [[Event alloc] initWithEventType:saEvt.event EventTime:[self getTimeInMillis:saEvt.stTime] EventStatus:saEvt.status];
                 
                 [event_list addObject:evt];
                 [evt release];
