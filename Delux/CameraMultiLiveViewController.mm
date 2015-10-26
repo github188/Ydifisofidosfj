@@ -1112,9 +1112,12 @@ extern unsigned int _getTickCount() ;
     [self checkStatus];
     
     //[self connectAndShow];
-    
+    //Elenco Camere
+#if defined(MAJESTICIPCAMP)
+    [dropboxRec setTitle:@"Elenco Camere" forState:UIControlStateNormal];
+#else
     [dropboxRec setTitle:NSLocalizedString(@"Camera List", @"") forState:UIControlStateNormal];
-    
+#endif
     [infoBTN setTitle:NSLocalizedString(@"Information", @"") forState:UIControlStateNormal];
     
     [logInOut setTitle:NSLocalizedString(@"用户手册", @"") forState:UIControlStateNormal];
