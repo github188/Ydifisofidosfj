@@ -12963,7 +12963,7 @@
 						DevelopmentTeam = Q2PV74KQN7;
 					};
 					0692A7121B5FC55400D28D06 = {
-						DevelopmentTeam = Q2PV74KQN7;
+						DevelopmentTeam = G795A5K2W9;
 					};
 					069EF90C1B1207D00024CB5A = {
 						DevelopmentTeam = G795A5K2W9;
@@ -21848,8 +21848,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
 				COMPRESS_PNG_FILES = NO;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IOTCamViewer/lib/Release-iphoneos",
@@ -21880,8 +21881,9 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.easynp.mkceye;
 				PRODUCT_NAME = "EasyN P copy";
-				PROVISIONING_PROFILE = "b33d2c9d-958a-464a-8800-a72d3c465d6b";
+				PROVISIONING_PROFILE = "e965a50f-5217-4628-85dd-490e5df27f99";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -21894,8 +21896,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
 				COMPRESS_PNG_FILES = NO;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IOTCamViewer/lib/Release-iphoneos",
@@ -21927,8 +21930,9 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.easynp.mkceye;
 				PRODUCT_NAME = "EasyN P copy";
-				PROVISIONING_PROFILE = "b33d2c9d-958a-464a-8800-a72d3c465d6b";
+				PROVISIONING_PROFILE = "e965a50f-5217-4628-85dd-490e5df27f99";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -21941,8 +21945,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
 				COMPRESS_PNG_FILES = NO;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IOTCamViewer/lib/Release-iphoneos",
@@ -21974,8 +21979,9 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.easynp.mkceye;
 				PRODUCT_NAME = "EasyN P copy";
-				PROVISIONING_PROFILE = "b33d2c9d-958a-464a-8800-a72d3c465d6b";
+				PROVISIONING_PROFILE = "e965a50f-5217-4628-85dd-490e5df27f99";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -21988,8 +21994,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
 				COMPRESS_PNG_FILES = NO;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IOTCamViewer/lib/Release-iphoneos",
@@ -22020,8 +22027,9 @@
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"-DP2PCAMLIVE",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.easynp.mkceye;
 				PRODUCT_NAME = "EasyN P copy";
-				PROVISIONING_PROFILE = "b33d2c9d-958a-464a-8800-a72d3c465d6b";
+				PROVISIONING_PROFILE = "e965a50f-5217-4628-85dd-490e5df27f99";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
