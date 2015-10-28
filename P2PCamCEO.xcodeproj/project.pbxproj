@@ -21862,6 +21862,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					EasynPTarget,
 					MKCEYE,
+					RemoveVendor,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				HEADER_SEARCH_PATHS = (
@@ -21910,6 +21911,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					EasynPTarget,
 					MKCEYE,
+					RemoveVendor,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				HEADER_SEARCH_PATHS = (
@@ -21959,6 +21961,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					EasynPTarget,
 					MKCEYE,
+					RemoveVendor,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				HEADER_SEARCH_PATHS = (
@@ -22008,6 +22011,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					EasynPTarget,
 					MKCEYE,
+					RemoveVendor,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				HEADER_SEARCH_PATHS = (
