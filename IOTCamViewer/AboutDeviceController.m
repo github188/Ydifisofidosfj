@@ -181,11 +181,25 @@
 #if defined(RemoveVendor) && (defined(EasynPTarget) || defined(RemoveModel))
         index=row+2;
         row=index;
+#else
+        index=row+1;
+        row=index;
 #endif
     }
     else if(row==2){
 #if defined(RemoveVendor) && (defined(EasynPTarget) || defined(RemoveModel))
         index=row+2;
+        row=index;
+#else
+        index=row+1;
+        row=index;
+#endif
+    }
+    else if(row==3){
+#if defined(RemoveVendor) && (defined(EasynPTarget) || defined(RemoveModel))
+        index=row
+#else
+        index=row+1;
         row=index;
 #endif
     }
