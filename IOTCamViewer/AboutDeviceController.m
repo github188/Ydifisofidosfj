@@ -197,7 +197,7 @@
     }
     else if(row==3){
 #if defined(RemoveVendor) && (defined(EasynPTarget) || defined(RemoveModel))
-        index=row
+        index=row;
 #else
         index=row+1;
         row=index;
