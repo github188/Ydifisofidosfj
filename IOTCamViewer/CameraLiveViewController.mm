@@ -2480,6 +2480,9 @@ extern unsigned int _getTickCount() {
 
 - (int) numberOfItemsForMenu:(MKHorizMenu *)tabView
 {
+#if defined(MoveDF)
+    return [self.items count]-2;
+#endif
 #if defined(EasynPTarget) || defined(IPCAMP) || defined(QTAIDT) || defined(MAJESTICIPCAMP)
     return [self.items count];
 #else

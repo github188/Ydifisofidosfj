@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0640"
+   LastUpgradeVersion = "0710"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "069EF90C1B1207D00024CB5A"
-               BuildableName = "IPCAM P.app"
-               BlueprintName = "IPCAM P"
+               BlueprintIdentifier = "063733411BE2406200F767A8"
+               BuildableName = "IDHD CONTROL.app"
+               BlueprintName = "IDHD CONTROL"
                ReferencedContainer = "container:P2PCamCEO.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "069EF90C1B1207D00024CB5A"
-            BuildableName = "IPCAM P.app"
-            BlueprintName = "IPCAM P"
+            BlueprintIdentifier = "063733411BE2406200F767A8"
+            BuildableName = "IDHD CONTROL.app"
+            BlueprintName = "IDHD CONTROL"
             ReferencedContainer = "container:P2PCamCEO.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -55,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "069EF90C1B1207D00024CB5A"
-            BuildableName = "IPCAM P.app"
-            BlueprintName = "IPCAM P"
+            BlueprintIdentifier = "063733411BE2406200F767A8"
+            BuildableName = "IDHD CONTROL.app"
+            BlueprintName = "IDHD CONTROL"
             ReferencedContainer = "container:P2PCamCEO.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -74,9 +74,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "069EF90C1B1207D00024CB5A"
-            BuildableName = "IPCAM P.app"
-            BlueprintName = "IPCAM P"
+            BlueprintIdentifier = "063733411BE2406200F767A8"
+            BuildableName = "IDHD CONTROL.app"
+            BlueprintName = "IDHD CONTROL"
             ReferencedContainer = "container:P2PCamCEO.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

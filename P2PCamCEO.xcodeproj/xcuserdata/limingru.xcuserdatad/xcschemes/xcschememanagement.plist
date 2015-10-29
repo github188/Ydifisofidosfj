@@ -24,6 +24,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>IDHD CONTROL.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>13</integer>
+		</dict>
 		<key>IPCAM P.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -72,6 +77,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>063733411BE2406200F767A8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>06603F571B23133300FB6F32</key>
 		<dict>
 			<key>primary</key>
