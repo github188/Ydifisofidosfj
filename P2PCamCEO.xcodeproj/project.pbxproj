@@ -23415,7 +23415,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.easynp.mkceye;
 				PRODUCT_NAME = "EasyN P copy";
-				PROVISIONING_PROFILE = "48a8ddde-a119-4cc2-b771-04813c54e711";
+				PROVISIONING_PROFILE = "e965a50f-5217-4628-85dd-490e5df27f99";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -23465,7 +23465,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.easynp.mkceye;
 				PRODUCT_NAME = "EasyN P copy";
-				PROVISIONING_PROFILE = "48a8ddde-a119-4cc2-b771-04813c54e711";
+				PROVISIONING_PROFILE = "e965a50f-5217-4628-85dd-490e5df27f99";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -23515,7 +23515,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.easynp.mkceye;
 				PRODUCT_NAME = "EasyN P copy";
-				PROVISIONING_PROFILE = "48a8ddde-a119-4cc2-b771-04813c54e711";
+				PROVISIONING_PROFILE = "e965a50f-5217-4628-85dd-490e5df27f99";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -23564,7 +23564,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.easynp.mkceye;
 				PRODUCT_NAME = "EasyN P copy";
-				PROVISIONING_PROFILE = "48a8ddde-a119-4cc2-b771-04813c54e711";
+				PROVISIONING_PROFILE = "e965a50f-5217-4628-85dd-490e5df27f99";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
