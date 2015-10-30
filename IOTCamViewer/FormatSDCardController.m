@@ -151,7 +151,16 @@
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
     return NSLocalizedString(@"Format command will ERASE all data of your SDCard", @"");
 }
-
+#if defined(MAJESTICIPCAMP)
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    UILabel *titleLbl=[[[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100)]autorelease];
+    titleLbl.text=NSLocalizedString(@"Format command will ERASE all data of your SDCard", @"");
+    titleLbl.lineBreakMode=NSLineBreakByWordWrapping;
+    titleLbl.numberOfLines=0;
+    titleLbl.font=[UIFont fontWithName:@"Courier" size:14];
+    return titleLbl;
+}
+#endif
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
