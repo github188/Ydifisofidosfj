@@ -24317,7 +24317,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yongzhi Lei (LM5ZQ8W79X)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen Wellsense Technology Co., Ltd. (4UAMEVVS34)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -24350,7 +24350,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ipcamp.IPCAMP;
 				PRODUCT_NAME = "IPCAM P copy";
-				PROVISIONING_PROFILE = "ec0040b9-3f13-48ea-a766-d6627cb7168b";
+				PROVISIONING_PROFILE = "531d0d01-3a9c-4dbc-8385-97f65e21ba4f";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -24364,7 +24364,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yongzhi Lei (LM5ZQ8W79X)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen Wellsense Technology Co., Ltd. (4UAMEVVS34)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -24398,7 +24398,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ipcamp.IPCAMP;
 				PRODUCT_NAME = "IPCAM P copy";
-				PROVISIONING_PROFILE = "ec0040b9-3f13-48ea-a766-d6627cb7168b";
+				PROVISIONING_PROFILE = "531d0d01-3a9c-4dbc-8385-97f65e21ba4f";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -24412,7 +24412,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yongzhi Lei (LM5ZQ8W79X)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen Wellsense Technology Co., Ltd. (4UAMEVVS34)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -24446,7 +24446,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ipcamp.IPCAMP;
 				PRODUCT_NAME = "IPCAM P copy";
-				PROVISIONING_PROFILE = "ec0040b9-3f13-48ea-a766-d6627cb7168b";
+				PROVISIONING_PROFILE = "531d0d01-3a9c-4dbc-8385-97f65e21ba4f";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -24460,7 +24460,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yongzhi Lei (LM5ZQ8W79X)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen Wellsense Technology Co., Ltd. (4UAMEVVS34)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -24493,7 +24493,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ipcamp.IPCAMP;
 				PRODUCT_NAME = "IPCAM P copy";
-				PROVISIONING_PROFILE = "ec0040b9-3f13-48ea-a766-d6627cb7168b";
+				PROVISIONING_PROFILE = "531d0d01-3a9c-4dbc-8385-97f65e21ba4f";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
