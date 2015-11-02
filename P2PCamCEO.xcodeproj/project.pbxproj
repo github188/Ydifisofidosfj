@@ -23071,6 +23071,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					BayitCam,
 					NewSearchLanDevice,
+					MoveDF,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Bayit Cam/Bayit Cam-Info.plist";
@@ -23111,6 +23112,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					BayitCam,
 					NewSearchLanDevice,
+					MoveDF,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Bayit Cam/Bayit Cam-Info.plist";
@@ -23152,6 +23154,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					BayitCam,
 					NewSearchLanDevice,
+					MoveDF,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Bayit Cam/Bayit Cam-Info.plist";
@@ -23193,6 +23196,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					BayitCam,
 					NewSearchLanDevice,
+					MoveDF,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Bayit Cam/Bayit Cam-Info.plist";
