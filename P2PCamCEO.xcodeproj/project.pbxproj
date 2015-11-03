@@ -3357,6 +3357,16 @@
 		0688C3981B61185200079BB5 /* title_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0688C3951B61185200079BB5 /* title_logo@2x.png */; };
 		0688C39C1B61211A00079BB5 /* moreset.png in Resources */ = {isa = PBXBuildFile; fileRef = 06B8C8B21B0A1D5A006ED6EE /* moreset.png */; };
 		0688C39D1B61211A00079BB5 /* moreset_clicked.png in Resources */ = {isa = PBXBuildFile; fileRef = 06B8C8B31B0A1D5A006ED6EE /* moreset_clicked.png */; };
+		068931101BE9089A00B958FC /* AddWithApCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = 068879311ABE18B70017A41A /* AddWithApCameraController.m */; };
+		068931111BE9089A00B958FC /* AddWithApCameraController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 068879321ABE18B70017A41A /* AddWithApCameraController.xib */; };
+		068931121BE9089A00B958FC /* AddWithApCamera1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0688793D1ABE204E0017A41A /* AddWithApCamera1Controller.m */; };
+		068931131BE9089A00B958FC /* AddWithApCamera1Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0688793E1ABE204E0017A41A /* AddWithApCamera1Controller.xib */; };
+		068931141BE9089A00B958FC /* AddWithApCamera2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0688794C1ABE2C4D0017A41A /* AddWithApCamera2Controller.m */; };
+		068931151BE9089A00B958FC /* AddWithApCamera2Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0688794D1ABE2C4D0017A41A /* AddWithApCamera2Controller.xib */; };
+		068931161BE908DD00B958FC /* easyn.strings in Resources */ = {isa = PBXBuildFile; fileRef = 068879391ABE1B900017A41A /* easyn.strings */; };
+		068931171BE9093B00B958FC /* button_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0E9F1ACACE8B00448ACB /* button_bg@2x.png */; };
+		068931181BE9094900B958FC /* remeberpsd2.png in Resources */ = {isa = PBXBuildFile; fileRef = 06B219821ADD4D51005E3A2B /* remeberpsd2.png */; };
+		068931191BE9094B00B958FC /* remeberpsd1.png in Resources */ = {isa = PBXBuildFile; fileRef = 06B219811ADD4D51005E3A2B /* remeberpsd1.png */; };
 		0692A7141B5FC55400D28D06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AC3148C5342007705B6 /* main.m */; };
 		0692A7151B5FC55400D28D06 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AC7148C5343007705B6 /* AppDelegate.m */; };
 		0692A7161B5FC55400D28D06 /* CameraListForLiveViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AE3148C657B007705B6 /* CameraListForLiveViewController.mm */; };
@@ -15181,6 +15191,7 @@
 				066D9F021B037E7C00408AF2 /* event.png in Resources */,
 				066D9F031B037E7C00408AF2 /* ceo_rcplay_back_click_h@2x.png in Resources */,
 				066D9F041B037E7C00408AF2 /* drop_link.png in Resources */,
+				068931151BE9089A00B958FC /* AddWithApCamera2Controller.xib in Resources */,
 				066DA0A11B03878300408AF2 /* myright1@2x.png in Resources */,
 				066D9F051B037E7C00408AF2 /* moreset_list2_clicked.png in Resources */,
 				06118ED01B08E0B500BB45FB /* page2_ko.jpg in Resources */,
@@ -15267,6 +15278,7 @@
 				066D9F541B037E7C00408AF2 /* ceo_rcplay_line@2x.png in Resources */,
 				066D9F551B037E7C00408AF2 /* add_camicon.png in Resources */,
 				066D9F561B037E7C00408AF2 /* more_photo@2x.png in Resources */,
+				068931171BE9093B00B958FC /* button_bg@2x.png in Resources */,
 				066D9F571B037E7C00408AF2 /* leo_speaker_off_clicked.png in Resources */,
 				066D9F591B037E7C00408AF2 /* add_web_clicked.png in Resources */,
 				066D9F5A1B037E7C00408AF2 /* leo_emode_clicked.png in Resources */,
@@ -15347,11 +15359,13 @@
 				066D9F9D1B037E7C00408AF2 /* add_wifi2.png in Resources */,
 				066D9F9E1B037E7C00408AF2 /* speaker.png in Resources */,
 				06118ECB1B08E0B500BB45FB /* page1_en.jpg in Resources */,
+				068931191BE9094B00B958FC /* remeberpsd1.png in Resources */,
 				066D9F9F1B037E7C00408AF2 /* speaker@2X.png in Resources */,
 				066D9FA01B037E7C00408AF2 /* ceo_pause_click_h.png in Resources */,
 				066D9FA11B037E7C00408AF2 /* gallery.png in Resources */,
 				066D9FA31B037E7C00408AF2 /* moreset_list2.png in Resources */,
 				066D9FA41B037E7C00408AF2 /* cam_back_clicked@2x.png in Resources */,
+				068931111BE9089A00B958FC /* AddWithApCameraController.xib in Resources */,
 				066D9FA51B037E7C00408AF2 /* ceo_pause.png in Resources */,
 				066D9FA61B037E7C00408AF2 /* moreset_bk@2x.png in Resources */,
 				066D9FA71B037E7C00408AF2 /* leo_emode.png in Resources */,
@@ -15375,6 +15389,7 @@
 				066D9FB81B037E7C00408AF2 /* leo_micinfo@2x.png in Resources */,
 				066D9FB91B037E7C00408AF2 /* cam_back@2x.png in Resources */,
 				066D9FBA1B037E7C00408AF2 /* speaker_mute.png in Resources */,
+				068931161BE908DD00B958FC /* easyn.strings in Resources */,
 				066D9FBB1B037E7C00408AF2 /* login_bk@2x.png in Resources */,
 				066D9FBC1B037E7C00408AF2 /* leo_mirror_rl_clicked@2x.png in Resources */,
 				066D9FBD1B037E7C00408AF2 /* speaker_mute@2X.png in Resources */,
@@ -15388,6 +15403,7 @@
 				066D9FC41B037E7C00408AF2 /* ceo_rcplay_forward_h@2x.png in Resources */,
 				066D9FC51B037E7C00408AF2 /* add_wifi3.png in Resources */,
 				066D9FC71B037E7C00408AF2 /* more_photo_clicked.png in Resources */,
+				068931181BE9094900B958FC /* remeberpsd2.png in Resources */,
 				066D9FC81B037E7C00408AF2 /* CameraMultiLiveView.xib in Resources */,
 				066D9FC91B037E7C00408AF2 /* add_okbtn@2x.png in Resources */,
 				066D9FCB1B037E7C00408AF2 /* add_web_clicked@2x.png in Resources */,
@@ -15472,6 +15488,7 @@
 				066DA01B1B037E7C00408AF2 /* add_uidpw@2x.png in Resources */,
 				066DA01C1B037E7C00408AF2 /* add_wifi_1a.png in Resources */,
 				066DA01D1B037E7C00408AF2 /* ceo_rcplay_h.png in Resources */,
+				068931131BE9089A00B958FC /* AddWithApCamera1Controller.xib in Resources */,
 				066DA01F1B037E7C00408AF2 /* CustomPeriodEventSearchController.xib in Resources */,
 				066DA0201B037E7C00408AF2 /* ceo_record_tab_l.png in Resources */,
 				066DA0211B037E7C00408AF2 /* TimeZoneListController.xib in Resources */,
@@ -20335,6 +20352,7 @@
 				066D9E451B037E7C00408AF2 /* UIView+View.m in Sources */,
 				066D9E461B037E7C00408AF2 /* AddCameraDetailController.mm in Sources */,
 				066D9E471B037E7C00408AF2 /* UITableView+TableView.m in Sources */,
+				068931121BE9089A00B958FC /* AddWithApCamera1Controller.m in Sources */,
 				066D9E481B037E7C00408AF2 /* UIDevice+Device.m in Sources */,
 				066D9E491B037E7C00408AF2 /* LANSearchController.m in Sources */,
 				066D9E4A1B037E7C00408AF2 /* LANSearchDevice.m in Sources */,
@@ -20376,6 +20394,7 @@
 				066D9E6D1B037E7C00408AF2 /* IQToolbar.m in Sources */,
 				066D9E6E1B037E7C00408AF2 /* MoreVC.m in Sources */,
 				066D9E6F1B037E7C00408AF2 /* CameraPlaybackController.mm in Sources */,
+				068931101BE9089A00B958FC /* AddWithApCameraController.m in Sources */,
 				066D9E701B037E7C00408AF2 /* VideoFlipController.m in Sources */,
 				066D9E711B037E7C00408AF2 /* EnvironmentModeController.m in Sources */,
 				066D9E721B037E7C00408AF2 /* AppGuidViewController.m in Sources */,
@@ -20387,6 +20406,7 @@
 				066D9E781B037E7C00408AF2 /* iToast.m in Sources */,
 				066D9E791B037E7C00408AF2 /* FormatSDCardController.m in Sources */,
 				066D9E7A1B037E7C00408AF2 /* UIApplication+KeyView.m in Sources */,
+				068931141BE9089A00B958FC /* AddWithApCamera2Controller.m in Sources */,
 				066D9E7B1B037E7C00408AF2 /* AppInfoController.m in Sources */,
 				066D9E7C1B037E7C00408AF2 /* ChannelPickerContentController.m in Sources */,
 				066D9E7D1B037E7C00408AF2 /* UIButton+Button.m in Sources */,

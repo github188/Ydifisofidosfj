@@ -319,6 +319,9 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     addBTNView.frame=CGRectMake(0, self.view.frame.size.height, self.view.frame.size.width, addBTNView.frame.size.height);
+}
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
     //自动布局
     localBtn.frame=CGRectMake(addBTNView.frame.size.width/2-localBtn.frame.size.width/2, localBtn.frame.origin.y, localBtn.frame.size.width, localBtn.frame.size.height);
     

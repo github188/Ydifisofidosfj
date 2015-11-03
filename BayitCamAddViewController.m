@@ -8,6 +8,7 @@
 
 #import "BayitCamAddViewController.h"
 #import "AddCameraDetailController.h"
+#import "AddWithApCameraController.h"
 
 @interface BayitCamAddViewController ()
 
@@ -37,6 +38,11 @@
     self.navigationItem.title = NSLocalizedString(@"Add Camera", @"");
     [self.addBtn setTitle:NSLocalizedString(@"Add Camera", @"") forState:UIControlStateNormal];
     
+    [self.view bringSubviewToFront:self.toolBarView];
+}
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    [self.view bringSubviewToFront:self.toolBarView];
 }
 - (IBAction)back:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];
@@ -63,8 +69,8 @@
     [super dealloc];
 }
 - (IBAction)addAction:(id)sender {
-    AddCameraDetailController *controller = [[AddCameraDetailController alloc] initWithNibName:@"AddCameraDetail" bundle:nil delegate:[[self.navigationController viewControllers] objectAtIndex:0]];
-    [self.navigationController pushViewController:controller animated:YES];
-    [controller release];
+    AddWithApCameraController *addController=[[AddWithApCameraController alloc]initWithNibName:@"AddWithApCameraController" bundle:nil];
+    [self.navigationController pushViewController:addController animated:YES];
+    [addController release];
 }
 @end
