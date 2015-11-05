@@ -23,6 +23,7 @@
 #endif
 #if defined(BayitCam)
 #import "BayitCamAddViewController.h"
+#import "BayitCamAddFlowViewController.h"
 #endif
 
 @implementation CameraListForLiveViewController
@@ -95,7 +96,7 @@
     
     
 #if defined(BayitCam)
-    BayitCamAddViewController *bayitAdd=[[BayitCamAddViewController alloc]initWithNibName:@"BayitCamAddViewController" bundle:nil];
+    BayitCamAddFlowViewController *bayitAdd=[[BayitCamAddFlowViewController alloc]initWithNibName:@"BayitCamAddFlowViewController" bundle:nil];
     [self.navigationController pushViewController:bayitAdd animated:YES];
     [bayitAdd release];
     return;

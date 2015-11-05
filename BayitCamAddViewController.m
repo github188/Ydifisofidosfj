@@ -69,8 +69,8 @@
     [super dealloc];
 }
 - (IBAction)addAction:(id)sender {
-    AddWithApCameraController *addController=[[AddWithApCameraController alloc]initWithNibName:@"AddWithApCameraController" bundle:nil];
-    [self.navigationController pushViewController:addController animated:YES];
-    [addController release];
+    AddCameraDetailController *controller = [[AddCameraDetailController alloc] initWithNibName:@"AddCameraDetail" bundle:nil delegate:[[self.navigationController viewControllers] objectAtIndex:0]];
+    [self.navigationController pushViewController:controller animated:YES];
+    [controller release];
 }
 @end

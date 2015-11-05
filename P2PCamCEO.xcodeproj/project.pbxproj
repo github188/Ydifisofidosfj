@@ -6280,6 +6280,13 @@
 		06CAA7511BC01D3300853612 /* title_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06CAA74E1BC01D3200853612 /* title_logo@2x.png */; };
 		06CAA7541BC01E6500853612 /* moreset.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CD3194EB73C00F5AA11 /* moreset.png */; };
 		06CAA7551BC01E6500853612 /* moreset@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CD4194EB73C00F5AA11 /* moreset@2x.png */; };
+		06D1DE621BEB2CC400F5E475 /* BayitCamAddFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D1DE601BEB2CC400F5E475 /* BayitCamAddFlowViewController.m */; };
+		06D1DE631BEB2CC400F5E475 /* BayitCamAddFlowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06D1DE611BEB2CC400F5E475 /* BayitCamAddFlowViewController.xib */; };
+		06D1DE681BEB2DF400F5E475 /* button_click@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D1DE641BEB2DF400F5E475 /* button_click@2x.png */; };
+		06D1DE691BEB2DF400F5E475 /* button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D1DE651BEB2DF400F5E475 /* button@2x.png */; };
+		06D1DE6A1BEB2DF400F5E475 /* wifi-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D1DE661BEB2DF400F5E475 /* wifi-2@2x.png */; };
+		06D1DE6B1BEB2DF400F5E475 /* write@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D1DE671BEB2DF400F5E475 /* write@2x.png */; };
+		06D1DE6C1BEB3BFE00F5E475 /* libHISmartWifi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0688795B1ABEAE230017A41A /* libHISmartWifi.a */; };
 		06D3F82C1B78E7C1006AF177 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AC3148C5342007705B6 /* main.m */; };
 		06D3F82D1B78E7C1006AF177 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AC7148C5343007705B6 /* AppDelegate.m */; };
 		06D3F82E1B78E7C1006AF177 /* CameraListForLiveViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AE3148C657B007705B6 /* CameraListForLiveViewController.mm */; };
@@ -9478,6 +9485,13 @@
 		06CAA74F1BC01D3300853612 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = "PNPV/images/en.lproj/title_logo@2x.png"; sourceTree = "<group>"; };
 		06CAA7521BC01D3E00853612 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zh-Hant"; path = "PNPV/images/zh-Hant.lproj/title_logo.png"; sourceTree = "<group>"; };
 		06CAA7531BC01D4300853612 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zh-Hant"; path = "PNPV/images/zh-Hant.lproj/title_logo@2x.png"; sourceTree = "<group>"; };
+		06D1DE5F1BEB2CC400F5E475 /* BayitCamAddFlowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BayitCamAddFlowViewController.h; path = "Bayit Cam/BayitCamAddFlowViewController.h"; sourceTree = "<group>"; };
+		06D1DE601BEB2CC400F5E475 /* BayitCamAddFlowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BayitCamAddFlowViewController.m; path = "Bayit Cam/BayitCamAddFlowViewController.m"; sourceTree = "<group>"; };
+		06D1DE611BEB2CC400F5E475 /* BayitCamAddFlowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BayitCamAddFlowViewController.xib; path = "Bayit Cam/BayitCamAddFlowViewController.xib"; sourceTree = "<group>"; };
+		06D1DE641BEB2DF400F5E475 /* button_click@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button_click@2x.png"; path = "Bayit Cam/images/button_click@2x.png"; sourceTree = "<group>"; };
+		06D1DE651BEB2DF400F5E475 /* button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button@2x.png"; path = "Bayit Cam/images/button@2x.png"; sourceTree = "<group>"; };
+		06D1DE661BEB2DF400F5E475 /* wifi-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wifi-2@2x.png"; path = "Bayit Cam/images/wifi-2@2x.png"; sourceTree = "<group>"; };
+		06D1DE671BEB2DF400F5E475 /* write@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "write@2x.png"; path = "Bayit Cam/images/write@2x.png"; sourceTree = "<group>"; };
 		06D3FA871B78E7C1006AF177 /* IPCAM P copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IPCAM P copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06D3FA8A1B78E830006AF177 /* MAJESTIC IPCAM P-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "MAJESTIC IPCAM P-Info.plist"; path = "MAJESTIC IPCAM P/MAJESTIC IPCAM P-Info.plist"; sourceTree = "<group>"; };
 		06D3FA8E1B78EE55006AF177 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "MAJESTIC IPCAM P/en.lproj/easyn.strings"; sourceTree = "<group>"; };
@@ -10474,6 +10488,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06D1DE6C1BEB3BFE00F5E475 /* libHISmartWifi.a in Frameworks */,
 				0660B76F1B64A2BE00EC4155 /* Accelerate.framework in Frameworks */,
 				066DA05C1B037E7C00408AF2 /* MediaPlayer.framework in Frameworks */,
 				066DA05D1B037E7C00408AF2 /* libstdc++.6.0.9.dylib in Frameworks */,
@@ -11603,6 +11618,9 @@
 				06FF92511B04F42B00DD5803 /* BayitCamAddViewController.m */,
 				06FF92521B04F42B00DD5803 /* BayitCamAddViewController.xib */,
 				06FF92591B055ABE00DD5803 /* bayitcam.strings */,
+				06D1DE5F1BEB2CC400F5E475 /* BayitCamAddFlowViewController.h */,
+				06D1DE601BEB2CC400F5E475 /* BayitCamAddFlowViewController.m */,
+				06D1DE611BEB2CC400F5E475 /* BayitCamAddFlowViewController.xib */,
 			);
 			name = "Bayit Cam";
 			sourceTree = "<group>";
@@ -11625,6 +11643,10 @@
 		066DA0A41B03879400408AF2 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				06D1DE641BEB2DF400F5E475 /* button_click@2x.png */,
+				06D1DE651BEB2DF400F5E475 /* button@2x.png */,
+				06D1DE661BEB2DF400F5E475 /* wifi-2@2x.png */,
+				06D1DE671BEB2DF400F5E475 /* write@2x.png */,
 				06FB5F471B064191005B7674 /* page1_cn@2x.jpg */,
 				06FB5F481B064191005B7674 /* page1_en@2x.jpg */,
 				06FB5F491B064191005B7674 /* page1_ko@2x.jpg */,
@@ -15161,6 +15183,7 @@
 				06FF92571B055ABE00DD5803 /* bayitcam.strings in Resources */,
 				066D9EE91B037E7C00408AF2 /* ceo_pause_h@2x.png in Resources */,
 				066D9EEA1B037E7C00408AF2 /* onlinebar@2x.png in Resources */,
+				06D1DE6B1BEB2DF400F5E475 /* write@2x.png in Resources */,
 				066D9EEB1B037E7C00408AF2 /* LANSearch.xib in Resources */,
 				066D9EEC1B037E7C00408AF2 /* add_warn.png in Resources */,
 				069D50521B3845AC00B2E083 /* more_photo~ipad.png in Resources */,
@@ -15237,6 +15260,7 @@
 				066D9F2E1B037E7C00408AF2 /* ceo_rcplay_back.png in Resources */,
 				06118EC21B08E0AC00BB45FB /* page3_en@2x.jpg in Resources */,
 				066D9F2F1B037E7C00408AF2 /* popoverArrowDownSimple.png in Resources */,
+				06D1DE6A1BEB2DF400F5E475 /* wifi-2@2x.png in Resources */,
 				066D9F301B037E7C00408AF2 /* more_cancel@2x.png in Resources */,
 				066D9F311B037E7C00408AF2 /* more_cancel_clicked.png in Resources */,
 				066D9F331B037E7C00408AF2 /* drop_unlink_clicked.png in Resources */,
@@ -15403,6 +15427,7 @@
 				066D9FC41B037E7C00408AF2 /* ceo_rcplay_forward_h@2x.png in Resources */,
 				066D9FC51B037E7C00408AF2 /* add_wifi3.png in Resources */,
 				066D9FC71B037E7C00408AF2 /* more_photo_clicked.png in Resources */,
+				06D1DE631BEB2CC400F5E475 /* BayitCamAddFlowViewController.xib in Resources */,
 				068931181BE9094900B958FC /* remeberpsd2.png in Resources */,
 				066D9FC81B037E7C00408AF2 /* CameraMultiLiveView.xib in Resources */,
 				066D9FC91B037E7C00408AF2 /* add_okbtn@2x.png in Resources */,
@@ -15410,6 +15435,7 @@
 				066D9FCC1B037E7C00408AF2 /* autologin.png in Resources */,
 				066D9FCD1B037E7C00408AF2 /* more_changech_disable.png in Resources */,
 				066D9FCE1B037E7C00408AF2 /* title_bk@2x.png in Resources */,
+				06D1DE691BEB2DF400F5E475 /* button@2x.png in Resources */,
 				066D9FCF1B037E7C00408AF2 /* morefunction_clicked.png in Resources */,
 				066D9FD01B037E7C00408AF2 /* CustomGridTableViewCellStyle1.xib in Resources */,
 				066D9FD11B037E7C00408AF2 /* live_chicon@2x.png in Resources */,
@@ -15513,6 +15539,7 @@
 				066DA1041B0387DE00408AF2 /* addcam@2x.png in Resources */,
 				066DA0371B037E7C00408AF2 /* add_wifi3_bk@2x.png in Resources */,
 				06118EBB1B08E0AC00BB45FB /* page1_ko@2x.jpg in Resources */,
+				06D1DE681BEB2DF400F5E475 /* button_click@2x.png in Resources */,
 				066DA0381B037E7C00408AF2 /* more_changech_disable@2x.png in Resources */,
 				066DA0391B037E7C00408AF2 /* all_bk@2x.png in Resources */,
 				066DA03A1B037E7C00408AF2 /* ceo_rcplay_click@2x.png in Resources */,
@@ -20385,6 +20412,7 @@
 				066D9E641B037E7C00408AF2 /* CameraListForEventsController.mm in Sources */,
 				066D9E651B037E7C00408AF2 /* EventListController.mm in Sources */,
 				066D9E661B037E7C00408AF2 /* NSDictionary+Dictionary.m in Sources */,
+				06D1DE621BEB2CC400F5E475 /* BayitCamAddFlowViewController.m in Sources */,
 				066D9E671B037E7C00408AF2 /* Event.m in Sources */,
 				066D9E681B037E7C00408AF2 /* DeviceListOnCloudViewController.m in Sources */,
 				066D9E691B037E7C00408AF2 /* UIActionSheet+MKBlockAdditions.m in Sources */,
@@ -23079,12 +23107,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Bayit Home Automation Corp. (Y93RM4F8S2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Lingbo Zeng (7FS3V9B7H4)";
 				COMPRESS_PNG_FILES = NO;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IOTCamViewer/lib/Release-iphoneos",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
@@ -23094,11 +23124,17 @@
 					MoveDF,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				HEADER_SEARCH_PATHS = (
+					"zxing/iphone/ZXingWidget/Classes/**",
+					zxing/cpp/core/src,
+					"$(PROJECT_DIR)/HiSmartWifi/include",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Bayit Cam/Bayit Cam-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/IOTCamViewer/lib/Debug-iphoneos\"",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = (
@@ -23106,7 +23142,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "Bayit Cam";
-				PROVISIONING_PROFILE = "16cd66d0-6741-41cf-a07e-b76bef814fd1";
+				PROVISIONING_PROFILE = "c906b0e2-3238-4138-aef8-e2c8d3768315";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -23120,12 +23156,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Bayit Home Automation Corp. (Y93RM4F8S2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Lingbo Zeng (7FS3V9B7H4)";
 				COMPRESS_PNG_FILES = NO;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IOTCamViewer/lib/Release-iphoneos",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
@@ -23135,11 +23173,17 @@
 					MoveDF,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				HEADER_SEARCH_PATHS = (
+					"zxing/iphone/ZXingWidget/Classes/**",
+					zxing/cpp/core/src,
+					"$(PROJECT_DIR)/HiSmartWifi/include",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Bayit Cam/Bayit Cam-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/IOTCamViewer/lib/Release-iphoneos\"",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = (
@@ -23148,7 +23192,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "Bayit Cam";
-				PROVISIONING_PROFILE = "16cd66d0-6741-41cf-a07e-b76bef814fd1";
+				PROVISIONING_PROFILE = "c906b0e2-3238-4138-aef8-e2c8d3768315";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -23162,12 +23206,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Bayit Home Automation Corp. (Y93RM4F8S2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Lingbo Zeng (7FS3V9B7H4)";
 				COMPRESS_PNG_FILES = NO;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IOTCamViewer/lib/Release-iphoneos",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
@@ -23177,11 +23223,17 @@
 					MoveDF,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				HEADER_SEARCH_PATHS = (
+					"zxing/iphone/ZXingWidget/Classes/**",
+					zxing/cpp/core/src,
+					"$(PROJECT_DIR)/HiSmartWifi/include",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Bayit Cam/Bayit Cam-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/IOTCamViewer/lib/Release-iphoneos\"",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = (
@@ -23190,7 +23242,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "Bayit Cam";
-				PROVISIONING_PROFILE = "16cd66d0-6741-41cf-a07e-b76bef814fd1";
+				PROVISIONING_PROFILE = "c906b0e2-3238-4138-aef8-e2c8d3768315";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -23204,12 +23256,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Bayit Home Automation Corp. (Y93RM4F8S2)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Lingbo Zeng (7FS3V9B7H4)";
 				COMPRESS_PNG_FILES = NO;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IOTCamViewer/lib/Release-iphoneos",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IOTCamViewer/P2PCam264-Prefix.pch";
@@ -23219,11 +23273,17 @@
 					MoveDF,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				HEADER_SEARCH_PATHS = (
+					"zxing/iphone/ZXingWidget/Classes/**",
+					zxing/cpp/core/src,
+					"$(PROJECT_DIR)/HiSmartWifi/include",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Bayit Cam/Bayit Cam-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/IOTCamViewer/lib/Release-iphoneos\"",
+					"$(PROJECT_DIR)/HiSmartWifi/lib",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = (
@@ -23231,7 +23291,7 @@
 					"-DP2PCAMLIVE",
 				);
 				PRODUCT_NAME = "Bayit Cam";
-				PROVISIONING_PROFILE = "16cd66d0-6741-41cf-a07e-b76bef814fd1";
+				PROVISIONING_PROFILE = "c906b0e2-3238-4138-aef8-e2c8d3768315";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
