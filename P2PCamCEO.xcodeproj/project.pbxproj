@@ -6290,10 +6290,6 @@
 		06D1DE7C1BEB4D2F00F5E475 /* ceo_presetting_clicked.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D1DE6D1BEB4D2F00F5E475 /* ceo_presetting_clicked.png */; };
 		06D1DE7D1BEB4D2F00F5E475 /* ceo_presetting_enable_disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D1DE6E1BEB4D2F00F5E475 /* ceo_presetting_enable_disable.png */; };
 		06D1DE7E1BEB4D2F00F5E475 /* ceo_presetting_enable.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D1DE6F1BEB4D2F00F5E475 /* ceo_presetting_enable.png */; };
-		06D1DE7F1BEB4D2F00F5E475 /* leo_emode_clicked.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D1DE701BEB4D2F00F5E475 /* leo_emode_clicked.png */; };
-		06D1DE801BEB4D2F00F5E475 /* leo_emode_clicked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D1DE711BEB4D2F00F5E475 /* leo_emode_clicked@2x.png */; };
-		06D1DE811BEB4D2F00F5E475 /* leo_emode.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D1DE721BEB4D2F00F5E475 /* leo_emode.png */; };
-		06D1DE821BEB4D2F00F5E475 /* leo_emode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D1DE731BEB4D2F00F5E475 /* leo_emode@2x.png */; };
 		06D1DE831BEB4D2F00F5E475 /* position_01_click.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D1DE741BEB4D2F00F5E475 /* position_01_click.png */; };
 		06D1DE841BEB4D2F00F5E475 /* position_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D1DE751BEB4D2F00F5E475 /* position_01.png */; };
 		06D1DE851BEB4D2F00F5E475 /* position_02_click.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D1DE761BEB4D2F00F5E475 /* position_02_click.png */; };
@@ -9510,10 +9506,6 @@
 		06D1DE6D1BEB4D2F00F5E475 /* ceo_presetting_clicked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ceo_presetting_clicked.png; path = "Bayit Cam/images/ceo_presetting_clicked.png"; sourceTree = "<group>"; };
 		06D1DE6E1BEB4D2F00F5E475 /* ceo_presetting_enable_disable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ceo_presetting_enable_disable.png; path = "Bayit Cam/images/ceo_presetting_enable_disable.png"; sourceTree = "<group>"; };
 		06D1DE6F1BEB4D2F00F5E475 /* ceo_presetting_enable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ceo_presetting_enable.png; path = "Bayit Cam/images/ceo_presetting_enable.png"; sourceTree = "<group>"; };
-		06D1DE701BEB4D2F00F5E475 /* leo_emode_clicked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = leo_emode_clicked.png; path = "Bayit Cam/images/leo_emode_clicked.png"; sourceTree = "<group>"; };
-		06D1DE711BEB4D2F00F5E475 /* leo_emode_clicked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "leo_emode_clicked@2x.png"; path = "Bayit Cam/images/leo_emode_clicked@2x.png"; sourceTree = "<group>"; };
-		06D1DE721BEB4D2F00F5E475 /* leo_emode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = leo_emode.png; path = "Bayit Cam/images/leo_emode.png"; sourceTree = "<group>"; };
-		06D1DE731BEB4D2F00F5E475 /* leo_emode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "leo_emode@2x.png"; path = "Bayit Cam/images/leo_emode@2x.png"; sourceTree = "<group>"; };
 		06D1DE741BEB4D2F00F5E475 /* position_01_click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = position_01_click.png; path = "Bayit Cam/images/position_01_click.png"; sourceTree = "<group>"; };
 		06D1DE751BEB4D2F00F5E475 /* position_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = position_01.png; path = "Bayit Cam/images/position_01.png"; sourceTree = "<group>"; };
 		06D1DE761BEB4D2F00F5E475 /* position_02_click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = position_02_click.png; path = "Bayit Cam/images/position_02_click.png"; sourceTree = "<group>"; };
@@ -11676,10 +11668,6 @@
 				06D1DE6D1BEB4D2F00F5E475 /* ceo_presetting_clicked.png */,
 				06D1DE6E1BEB4D2F00F5E475 /* ceo_presetting_enable_disable.png */,
 				06D1DE6F1BEB4D2F00F5E475 /* ceo_presetting_enable.png */,
-				06D1DE701BEB4D2F00F5E475 /* leo_emode_clicked.png */,
-				06D1DE711BEB4D2F00F5E475 /* leo_emode_clicked@2x.png */,
-				06D1DE721BEB4D2F00F5E475 /* leo_emode.png */,
-				06D1DE731BEB4D2F00F5E475 /* leo_emode@2x.png */,
 				06D1DE741BEB4D2F00F5E475 /* position_01_click.png */,
 				06D1DE751BEB4D2F00F5E475 /* position_01.png */,
 				06D1DE761BEB4D2F00F5E475 /* position_02_click.png */,
@@ -15510,7 +15498,6 @@
 				066D9FE21B037E7C00408AF2 /* add_uidpw.png in Resources */,
 				066D9FE31B037E7C00408AF2 /* leo_mirror_rl@2x.png in Resources */,
 				066D9FE41B037E7C00408AF2 /* ceo_rcplay_click.png in Resources */,
-				06D1DE801BEB4D2F00F5E475 /* leo_emode_clicked@2x.png in Resources */,
 				066D9FE61B037E7C00408AF2 /* add_devicessid@2x.png in Resources */,
 				066D9FE71B037E7C00408AF2 /* login_btn_clicked@2x.png in Resources */,
 				066D9FE81B037E7C00408AF2 /* more_event_disable@2x.png in Resources */,
@@ -15524,7 +15511,6 @@
 				066D9FF11B037E7C00408AF2 /* ceo_rcplay_time@2x.png in Resources */,
 				066D9FF21B037E7C00408AF2 /* add_newinfo@2x.png in Resources */,
 				066D9FF31B037E7C00408AF2 /* ceo_rcplay@2x.png in Resources */,
-				06D1DE821BEB4D2F00F5E475 /* leo_emode@2x.png in Resources */,
 				066D9FF41B037E7C00408AF2 /* ceo_record_tab_l@2x.png in Resources */,
 				066D9FF51B037E7C00408AF2 /* leo_mirror_ud_disable@2x.png in Resources */,
 				066D9FF71B037E7C00408AF2 /* thumbnailCheckMark2.png in Resources */,
@@ -15613,7 +15599,6 @@
 				066DA0461B037E7C00408AF2 /* leo_mirror_rl.png in Resources */,
 				066DA0471B037E7C00408AF2 /* add_wifinext_clicked@2x.png in Resources */,
 				066DA0481B037E7C00408AF2 /* add_infobk.png in Resources */,
-				06D1DE811BEB4D2F00F5E475 /* leo_emode.png in Resources */,
 				06D1DE7E1BEB4D2F00F5E475 /* ceo_presetting_enable.png in Resources */,
 				BB8241AD1BCE2A740067B3CF /* SnapshotViewController.xib in Resources */,
 				066DA0491B037E7C00408AF2 /* leo_snapshot.png in Resources */,
@@ -15631,7 +15616,6 @@
 				066DA0531B037E7C00408AF2 /* ceo_rcplay_line_full_h.png in Resources */,
 				066DA0541B037E7C00408AF2 /* TimeZoneCell.xib in Resources */,
 				066DA0551B037E7C00408AF2 /* qualitylist_clicked@2x.png in Resources */,
-				06D1DE7F1BEB4D2F00F5E475 /* leo_emode_clicked.png in Resources */,
 				066DA0561B037E7C00408AF2 /* toolinfo_bk@2x.png in Resources */,
 				06118EB91B08E0AC00BB45FB /* page1_cn@2x.jpg in Resources */,
 				066DA0571B037E7C00408AF2 /* ceo_set_clicked@2x.png in Resources */,
