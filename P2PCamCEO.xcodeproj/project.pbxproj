@@ -23166,6 +23166,7 @@
 					BayitCam,
 					NewSearchLanDevice,
 					MoveDF,
+					RemoveModel,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				HEADER_SEARCH_PATHS = (
@@ -23215,6 +23216,7 @@
 					BayitCam,
 					NewSearchLanDevice,
 					MoveDF,
+					RemoveModel,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				HEADER_SEARCH_PATHS = (
@@ -23265,6 +23267,7 @@
 					BayitCam,
 					NewSearchLanDevice,
 					MoveDF,
+					RemoveModel,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				HEADER_SEARCH_PATHS = (
@@ -23315,6 +23318,7 @@
 					BayitCam,
 					NewSearchLanDevice,
 					MoveDF,
+					RemoveModel,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				HEADER_SEARCH_PATHS = (

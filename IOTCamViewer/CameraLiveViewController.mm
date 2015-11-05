@@ -956,6 +956,10 @@ extern unsigned int _getTickCount() {
         longEModeView.frame=CGRectMake(self.view.frame.size.width/2-longEModeView.frame.size.width/2, self.view.frame.size.height-self.longHorizMenu.frame.size.height-longEModeView.frame.size.height, longEModeView.frame.size.width, longEModeView.frame.size.height);
         self.loadingViewLandscape.frame=CGRectMake(self.view.frame.size.width/2-self.loadingViewLandscape.frame.size.width/2, self.view.frame.size.height/2-self.loadingViewLandscape.frame.size.height/2, self.loadingViewLandscape.frame.size.width, self.loadingViewLandscape.frame.size.height);
         
+        if(![[self.view subviews]containsObject:self.prePositionView]){
+            [self.view addSubview:self.prePositionView];
+        }
+        self.prePositionView.frame=CGRectMake(0, self.view.frame.size.height-self.prePositionView.frame.size.height-self.longHorizMenu.frame.size.height-30, self.prePositionView.frame.size.width, self.prePositionView.frame.size.height);
         
 		if( glView == nil ) {
 			glView = [[CameraShowGLView alloc] initWithFrame:self.monitorLandscape.frame];
@@ -1027,6 +1031,11 @@ extern unsigned int _getTickCount() {
         scrollEModeView.frame=CGRectMake(self.view.frame.size.width/2-scrollEModeView.frame.size.width/2, self.view.frame.size.height-self.horizMenu.frame.size.height-moreScrollViewFunHeight, scrollEModeView.frame.size.width,moreScrollViewFunHeight);
         
         self.loadingViewPortrait.frame=CGRectMake(self.scrollViewPortrait.frame.size.width/2-self.loadingViewPortrait.frame.size.width/2, self.scrollViewPortrait.frame.origin.y+self.scrollViewPortrait.frame.size.height/2-self.loadingViewPortrait.frame.size.height/2, self.loadingViewPortrait.frame.size.width, self.loadingViewPortrait.frame.size.height);
+        
+        if(![[self.view subviews]containsObject:self.prePositionView]){
+            [self.view addSubview:self.prePositionView];
+        }
+        self.prePositionView.frame=CGRectMake(0, self.view.frame.size.height-self.prePositionView.frame.size.height-self.horizMenu.frame.size.height-30, self.prePositionView.frame.size.width, self.prePositionView.frame.size.height);
         
 		NSLog( @"video frame {%d,%d}%dx%d", (int)self.monitorPortrait.frame.origin.x, (int)self.monitorPortrait.frame.origin.y, (int)self.monitorPortrait.frame.size.width, (int)self.monitorPortrait.frame.size.height);
 		if( glView == nil ) {
@@ -1178,6 +1187,14 @@ extern unsigned int _getTickCount() {
     [_landBrightMiddle release];
     [_landBrightLow release];
     [_landBrightLowest release];
+    [_prePositionView release];
+    [_prePositionTitleLbl release];
+    [_prePositionTipsLbl release];
+    [preBtnArr release];
+    [_preBtn1 release];
+    [_preBtn2 release];
+    [_preBtn3 release];
+    [_preBtn4 release];
     [super dealloc];
 }
 
@@ -1187,9 +1204,33 @@ extern unsigned int _getTickCount() {
 
 - (void)viewDidLoad {
     
+    
+    //button长按事件
+    UILongPressGestureRecognizer *longPress1 = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(preBtnLongTouch1:)];
+    [self.preBtn1 addGestureRecognizer:longPress1];
+    
+    UILongPressGestureRecognizer *longPress2 = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(preBtnLongTouch2:)];
+    [self.preBtn2 addGestureRecognizer:longPress2];
+    
+    UILongPressGestureRecognizer *longPress3 = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(preBtnLongTouch3:)];
+    [self.preBtn3 addGestureRecognizer:longPress3];
+    
+    UILongPressGestureRecognizer *longPress4 = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(preBtnLongTouch4:)];
+    [self.preBtn4 addGestureRecognizer:longPress4];
+    
+    [longPress1 release];
+    [longPress2 release];
+    [longPress3 release];
+    [longPress4 release];
+    
+    preBtnArr=@[self.preBtn1,self.preBtn2,self.preBtn3,self.preBtn4];
+    [preBtnArr retain];
+    
     camera.isShowInMultiView = NO;
     isChangeChannel = NO;
     self.isCanSendSetCameraCMD=YES;
+    
+    self.prePositionView.hidden=YES;
     
 #if defined(BayitCam)
     [AudioTitle setTitle:NSLocalizedStringFromTable(@"Push to talk", @"bayitcam", nil) forState:UIControlStateNormal];
@@ -1895,6 +1936,19 @@ extern unsigned int _getTickCount() {
             [self initViewEmode];
         }
     }
+    else if (type==IOTYPE_USER_IPCAM_GETPRESET_RESP){
+        SMsgAVIoctrlGetPresetResp* pResult=(SMsgAVIoctrlGetPresetResp*)data;
+        NSLog(@"%d",pResult->nPresetIdx);
+    }
+    else if(type==IOTYPE_USER_IPCAM_SETPRESET_RESP){
+        SMsgAVIoctrlSetPresetResp *pResult=(SMsgAVIoctrlSetPresetResp*)data;
+        if(pResult->result==0){
+            NSLog(@"OK");
+        }
+        else{
+            NSLog(@"ERROR");
+        }
+    }
 }
 -(void)initViewEmode{
     if(emode==0){
@@ -2524,6 +2578,9 @@ extern unsigned int _getTickCount() {
 -(void) horizMenu:(MKHorizMenu *)horizMenu itemTouchDownAtIndex:(NSUInteger)index{
     NSInteger offsetCount=0;
     if(index==7-offsetCount){
+#if defined(BayitCam)
+        return;
+#endif
 #if defined(MAJESTICIPCAMP)
 #else
         [self myPtzAction:AVIOCTRL_LENS_ZOOM_IN];
@@ -2542,6 +2599,10 @@ extern unsigned int _getTickCount() {
 }
 -(void) horizMenu:(MKHorizMenu *)horizMenu itemSelectedAtIndex:(NSUInteger)index
 {
+    
+    self.prePositionView.hidden=YES;
+    self.myPtzView.hidden=NO;
+    
     NSInteger offsetCount=0;
     talkButton.hidden = YES;
     scrollQVGAView.hidden = YES;
@@ -2568,7 +2629,16 @@ extern unsigned int _getTickCount() {
     else if(index==7-offsetCount){
         
 #if defined(BayitCam)
-        
+        if(isPrePosition){
+            self.prePositionView.hidden=YES;
+            self.myPtzView.hidden=NO;
+            isPrePosition=NO;
+        }
+        else{
+            self.prePositionView.hidden=NO;
+            self.myPtzView.hidden=YES;
+            isPrePosition=YES;
+        }
         return;
 #endif
         
@@ -3053,6 +3123,74 @@ extern unsigned int _getTickCount() {
     [self initSettingFiveStatus:s->bright withpView:self.portraitBrightView];
     
     free(s);
+}
+- (IBAction)preAction:(UIButton *)sender {
+    NSInteger index=sender.tag;
+    SMsgAVIoctrlGetPresetReq *s = (SMsgAVIoctrlGetPresetReq *)malloc(sizeof(SMsgAVIoctrlGetPresetReq));
+    memset(s, 0, sizeof(SMsgAVIoctrlGetPresetReq));
+    
+    s->channel = 0;
+    s->nPresetIdx=(int)index;
+    
+    [camera sendIOCtrlToChannel:0
+                           Type:IOTYPE_USER_IPCAM_GETPRESET_REQ
+                           Data:(char *)s
+                       DataSize:sizeof(SMsgAVIoctrlGetPresetReq)];
+    free(s);
+    for (UIButton *btn in preBtnArr) {
+        btn.selected=NO;
+        if(btn.tag==sender.tag){
+            btn.selected=YES;
+        }
+    }
+}
+-(void)preBtnLongTouch1:(UILongPressGestureRecognizer *)gestureRecognizer{
+    
+    if ([gestureRecognizer state] != UIGestureRecognizerStateBegan){
+        return;
+    }
+    [self setPreAction:0];
+}
+-(void)preBtnLongTouch2:(UILongPressGestureRecognizer *)gestureRecognizer{
+    
+    if ([gestureRecognizer state] != UIGestureRecognizerStateBegan){
+        return;
+    }
+    [self setPreAction:1];
+}
+-(void)preBtnLongTouch3:(UILongPressGestureRecognizer *)gestureRecognizer{
+    
+    if ([gestureRecognizer state] != UIGestureRecognizerStateBegan){
+        return;
+    }
+    [self setPreAction:2];
+}
+-(void)preBtnLongTouch4:(UILongPressGestureRecognizer *)gestureRecognizer{
+    
+    if ([gestureRecognizer state] != UIGestureRecognizerStateBegan){
+        return;
+    }
+    [self setPreAction:3];
+}
+-(void)setPreAction:(NSInteger)index{
+    SMsgAVIoctrlSetPresetReq *s = (SMsgAVIoctrlSetPresetReq *)malloc(sizeof(SMsgAVIoctrlSetPresetReq));
+    memset(s, 0, sizeof(SMsgAVIoctrlSetPresetReq));
+    
+    s->channel = 0;
+    s->nPresetIdx=(int)index;
+    
+    [camera sendIOCtrlToChannel:0
+                           Type:IOTYPE_USER_IPCAM_SETPRESET_REQ
+                           Data:(char *)s
+                       DataSize:sizeof(SMsgAVIoctrlSetPresetReq)];
+    free(s);
+    
+    for (UIButton *btn in preBtnArr) {
+        btn.selected=NO;
+        if(btn.tag==index){
+            btn.selected=YES;
+        }
+    }
 }
 @end
 
