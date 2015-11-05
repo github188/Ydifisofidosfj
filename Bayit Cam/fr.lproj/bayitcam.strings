@@ -8,3 +8,8 @@
 "Push to talk"="Push to talk";
 "Are you sure you want to remove this camera?"="Are you sure you want to remove this camera?";
 "Are you sure you want to delete this camera?"="Are you sure you want to delete this camera?";
+
+"Quick Setup"="Quick Setup";
+"Quick Setup Info"="Pair the camera with your WiFi network wirelessly (no ethernet cable required).Works with most WiFi router configurations.";
+"Manually add a camera"="Manually add a camera";
+"Manually add a camera Info"="Scan the QR code on your camera(ethernet cable required).";
