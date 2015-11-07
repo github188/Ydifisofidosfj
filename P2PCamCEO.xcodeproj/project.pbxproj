@@ -25078,7 +25078,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -25114,7 +25114,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.easyn.gdkjb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "46142639-b3cc-4b42-bd98-74dd80651af6";
+				PROVISIONING_PROFILE = "915af1d2-c2c2-43f5-8c9c-2318d595a6a3";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -25127,7 +25127,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -25164,7 +25164,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.easyn.gdkjb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "46142639-b3cc-4b42-bd98-74dd80651af6";
+				PROVISIONING_PROFILE = "915af1d2-c2c2-43f5-8c9c-2318d595a6a3";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -25177,7 +25177,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -25214,7 +25214,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.easyn.gdkjb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "46142639-b3cc-4b42-bd98-74dd80651af6";
+				PROVISIONING_PROFILE = "915af1d2-c2c2-43f5-8c9c-2318d595a6a3";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -25227,7 +25227,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Guanwen Chen (G795A5K2W9)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -25263,7 +25263,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.easyn.gdkjb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "46142639-b3cc-4b42-bd98-74dd80651af6";
+				PROVISIONING_PROFILE = "915af1d2-c2c2-43f5-8c9c-2318d595a6a3";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
