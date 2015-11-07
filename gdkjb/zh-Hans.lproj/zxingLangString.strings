@@ -1,0 +1,15 @@
+/* 
+  langString.strings
+  ZXingWidget
+
+  Created by Gavin Chang on 2013/11/15.
+
+*/
+
+/* No comment provided by engineer. */
+"Place a barcode inside the viewfinder rectangle to scan it." = "请将二维码对准于方框内";
+
+"Cancel" = "取消";
+
+"Light" = "闪灯";
+

@@ -74,6 +74,11 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>gdkjb.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>14</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -103,6 +108,11 @@
 			<true/>
 		</dict>
 		<key>0692A7121B5FC55400D28D06</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>069DCDF51BEDD43700A87F65</key>
 		<dict>
 			<key>primary</key>
 			<true/>
