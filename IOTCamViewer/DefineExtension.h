@@ -152,7 +152,12 @@ typedef enum {
     IOTYPE_USER_IPCAM_SET_SNAP_RESP		    = 0x2218,
     //图片预览
     IOTYPE_USEREX_IPCAM_GET_PREVIEW_REQ				=0x5001,
-    IOTYPE_USEREX_IPCAM_GET_PREVIEW_RESP				=0x5002
+    IOTYPE_USEREX_IPCAM_GET_PREVIEW_RESP				=0x5002,
+    //预置位
+    IOTYPE_USER_IPCAM_SETPRESET_REQ				= 0x440,
+    IOTYPE_USER_IPCAM_SETPRESET_RESP			= 0x441,
+    IOTYPE_USER_IPCAM_GETPRESET_REQ				= 0x442,
+    IOTYPE_USER_IPCAM_GETPRESET_RESP			= 0x443
 }ENUM_AVIOCTRL_MSGTYPEOwnExt;
 //录像设置
 /* IOTYPE_USER_IPCAM_GET_REC_REQ		        = 0x2211,   */
@@ -223,5 +228,31 @@ typedef struct
     PicInfo picinfo;
 }SMsgAVIoctrlGetPreResp;
 //说明: 图片预览客户端接收数据,类似录像列表，endflag=0，开始分隔图片（1000 bytes）一包发送, endflag=1,发送最后一包数据，大小见size, 720P （ >100kbytes）图片太大接收时间较长。
+//预置位
+/* IOTYPE_USER_IPCAM_SETPRESET_REQ				= 0x440
+ */
+/* IOTYPE_USER_IPCAM_GETPRESET_RESP				= 0x443*/
+ 
+ typedef struct
+ {
+	unsigned int channel;	// AvServer Index
+	unsigned int nPresetIdx;	//0~6
+ } SMsgAVIoctrlSetPresetReq,SMsgAVIoctrlGetPresetResp;
+ 
+ /* IOTYPE_USER_IPCAM_SETPRESET_RESP				= 0x441
+ */
+typedef struct
+{
+    int result;	// 0: success; otherwise: failed.
+    unsigned char reserved[4];
+    
+} SMsgAVIoctrlSetPresetResp;
 
+/* IOTYPE_USER_IPCAM_GETPRESET_REQ				= 0x442
+ */
+typedef struct
+{
+    unsigned int channel;	// AvServer Index
+    unsigned int nPresetIdx;	//0~6
+} SMsgAVIoctrlGetPresetReq;
 #endif

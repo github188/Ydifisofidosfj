@@ -159,6 +159,10 @@ extern NSString *deviceTokenString;
     
     BOOL isBright;
     BOOL isContrast;
+    
+    BOOL isPrePosition;
+    
+    NSArray *preBtnArr;
 }
 
 //for Recording
@@ -276,6 +280,17 @@ extern NSString *deviceTokenString;
 @property (retain, nonatomic) IBOutlet UIButton *landBrightLowest;
 
 - (IBAction)onBrightClicked:(id)sender;
+
+
+@property (retain, nonatomic) IBOutlet UIView *prePositionView;
+@property (retain, nonatomic) IBOutlet UILabel *prePositionTitleLbl;
+@property (retain, nonatomic) IBOutlet UILabel *prePositionTipsLbl;
+@property (retain, nonatomic) IBOutlet UIButton *preBtn1;
+@property (retain, nonatomic) IBOutlet UIButton *preBtn2;
+@property (retain, nonatomic) IBOutlet UIButton *preBtn3;
+@property (retain, nonatomic) IBOutlet UIButton *preBtn4;
+- (IBAction)preAction:(UIButton *)sender;
+
 
 @end
 

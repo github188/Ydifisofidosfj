@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOTCamViewer/CameraLiveViewController.mm"
-            timestampString = "468408098.636768"
+            timestampString = "468429902.159888"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "3022"
-            endingLineNumber = "3022"
+            startingLineNumber = "3092"
+            endingLineNumber = "3092"
             landmarkName = "-onContrastClicked:"
             landmarkType = "5">
          </BreakpointContent>
@@ -80,22 +80,6 @@
             startingLineNumber = "1516"
             endingLineNumber = "1516"
             landmarkName = "-timeOutGetListWifiAPResp:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "IOTCamViewer/CameraLiveViewController.mm"
-            timestampString = "468408098.636768"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "3027"
-            endingLineNumber = "3027"
-            landmarkName = "-onContrastClicked:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -128,6 +112,38 @@
             startingLineNumber = "167"
             endingLineNumber = "167"
             landmarkName = "-doMapping:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IOTCamViewer/CameraLiveViewController.mm"
+            timestampString = "468429902.159888"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "3156"
+            endingLineNumber = "3156"
+            landmarkName = "-preBtnLongTouch2:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IOTCamViewer/CameraLiveViewController.mm"
+            timestampString = "468429902.159888"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "3170"
+            endingLineNumber = "3170"
+            landmarkName = "-preBtnLongTouch4:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

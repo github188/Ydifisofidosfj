@@ -90,7 +90,7 @@
         [customButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
         [customButton addTarget:self action:@selector(buttonTouchDown:) forControlEvents:UIControlEventTouchDown];
         
-        customButton.frame = CGRectMake(xPos, 3, bgImg.size.width, 38);
+        customButton.frame = CGRectMake(xPos, 3, 47, 38);
         xPos += bgImg.size.width;
         if(i+1<self.itemCount){
             xPos += buttonPadding;

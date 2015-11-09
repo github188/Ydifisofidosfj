@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraLiveViewController">
@@ -73,6 +73,13 @@
                 <outlet property="portraitContrastTitle" destination="qxj-5e-bcr" id="wKo-aJ-g1e"/>
                 <outlet property="portraitContrastView" destination="oAo-xB-3AH" id="ckK-tW-OKT"/>
                 <outlet property="portraitView" destination="1" id="119"/>
+                <outlet property="preBtn1" destination="GVr-mC-2Hg" id="w1R-ji-I7v"/>
+                <outlet property="preBtn2" destination="VXt-qB-GNh" id="2gx-QK-ate"/>
+                <outlet property="preBtn3" destination="J0h-23-JVd" id="wRd-yk-yVW"/>
+                <outlet property="preBtn4" destination="Reu-27-MPm" id="gEg-Y8-gDw"/>
+                <outlet property="prePositionTipsLbl" destination="FUd-X7-8UB" id="5AG-lS-lch"/>
+                <outlet property="prePositionTitleLbl" destination="6Pz-WF-kpc" id="ElT-KB-44Q"/>
+                <outlet property="prePositionView" destination="wbg-Jy-8i1" id="nPB-QO-tRU"/>
                 <outlet property="qualityLabel" destination="168" id="169"/>
                 <outlet property="qvgaView" destination="lYp-XW-N5L" id="nM1-kC-NjI"/>
                 <outlet property="scrollEModeView" destination="xTV-bb-XdJ" id="QVr-7G-RUs"/>
@@ -676,6 +683,84 @@
                         <outlet property="delegate" destination="-1" id="QzW-Ol-rzB"/>
                     </connections>
                 </scrollView>
+                <view contentMode="scaleToFill" id="wbg-Jy-8i1">
+                    <rect key="frame" x="0.0" y="227" width="320" height="114"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="预置位" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6Pz-WF-kpc">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <color key="backgroundColor" red="0.10980392156862745" green="0.5725490196078431" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" id="3Oc-zk-ROc">
+                            <rect key="frame" x="0.0" y="31" width="320" height="83"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击来移动至位置，长按来存储位置" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FUd-X7-8UB">
+                                    <rect key="frame" x="0.0" y="46" width="320" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <animations/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GVr-mC-2Hg">
+                                    <rect key="frame" x="26" y="14" width="24" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <animations/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <state key="normal" backgroundImage="position_01.png"/>
+                                    <state key="selected" backgroundImage="position_01_click.png">
+                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="preAction:" destination="-1" eventType="touchUpInside" id="TQF-qX-ak0"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VXt-qB-GNh">
+                                    <rect key="frame" x="109" y="14" width="24" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <animations/>
+                                    <state key="normal" backgroundImage="position_02.png"/>
+                                    <state key="selected" backgroundImage="position_02_click.png"/>
+                                    <connections>
+                                        <action selector="preAction:" destination="-1" eventType="touchUpInside" id="cQu-g1-KUh"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Reu-27-MPm">
+                                    <rect key="frame" x="263" y="14" width="24" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <animations/>
+                                    <state key="normal" backgroundImage="position_04.png"/>
+                                    <state key="selected" backgroundImage="position_04_click.png"/>
+                                    <connections>
+                                        <action selector="preAction:" destination="-1" eventType="touchUpInside" id="o9Z-Wa-AsL"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="J0h-23-JVd">
+                                    <rect key="frame" x="190" y="14" width="24" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <animations/>
+                                    <state key="normal" backgroundImage="position_03.png"/>
+                                    <state key="selected" backgroundImage="position_03_click.png"/>
+                                    <connections>
+                                        <action selector="preAction:" destination="-1" eventType="touchUpInside" id="2Kk-el-vfC"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <animations/>
+                            <color key="backgroundColor" red="0.10980392156862745" green="0.5725490196078431" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1167,6 +1252,14 @@
         <image name="myright1.png" width="40" height="40"/>
         <image name="myup.png" width="40" height="40"/>
         <image name="myup1.png" width="40" height="40"/>
+        <image name="position_01.png" width="48" height="48"/>
+        <image name="position_01_click.png" width="48" height="48"/>
+        <image name="position_02.png" width="48" height="48"/>
+        <image name="position_02_click.png" width="48" height="48"/>
+        <image name="position_03.png" width="48" height="48"/>
+        <image name="position_03_click.png" width="48" height="48"/>
+        <image name="position_04.png" width="48" height="48"/>
+        <image name="position_04_click.png" width="48" height="48"/>
         <image name="qualitylist.png" width="206" height="30"/>
         <image name="qualitylist_clicked.png" width="206" height="30"/>
         <image name="toolinfo_bk.png" width="121" height="23"/>
