@@ -917,6 +917,11 @@ extern unsigned int _getTickCount() {
 	}	
 }
 
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    self.prePositionView.frame=CGRectMake(0, self.view.frame.size.height-self.prePositionView.frame.size.height-self.horizMenu.frame.size.height, self.prePositionView.frame.size.width, self.prePositionView.frame.size.height);
+}
+
 - (void)changeOrientation:(UIInterfaceOrientation)orientation {
     
     if (orientation == UIInterfaceOrientationLandscapeLeft ||
@@ -959,7 +964,7 @@ extern unsigned int _getTickCount() {
         if(![[self.view subviews]containsObject:self.prePositionView]){
             [self.view addSubview:self.prePositionView];
         }
-        self.prePositionView.frame=CGRectMake(0, self.view.frame.size.height-self.prePositionView.frame.size.height-self.longHorizMenu.frame.size.height-30, self.prePositionView.frame.size.width, self.prePositionView.frame.size.height);
+        //self.prePositionView.frame=CGRectMake(0, self.view.frame.size.height-self.prePositionView.frame.size.height-self.longHorizMenu.frame.size.height-30, self.prePositionView.frame.size.width, self.prePositionView.frame.size.height);
         
 		if( glView == nil ) {
 			glView = [[CameraShowGLView alloc] initWithFrame:self.monitorLandscape.frame];
@@ -1035,7 +1040,6 @@ extern unsigned int _getTickCount() {
         if(![[self.view subviews]containsObject:self.prePositionView]){
             [self.view addSubview:self.prePositionView];
         }
-        self.prePositionView.frame=CGRectMake(0, self.view.frame.size.height-self.prePositionView.frame.size.height-self.horizMenu.frame.size.height-30, self.prePositionView.frame.size.width, self.prePositionView.frame.size.height);
         
 		NSLog( @"video frame {%d,%d}%dx%d", (int)self.monitorPortrait.frame.origin.x, (int)self.monitorPortrait.frame.origin.y, (int)self.monitorPortrait.frame.size.width, (int)self.monitorPortrait.frame.size.height);
 		if( glView == nil ) {
@@ -1944,6 +1948,7 @@ extern unsigned int _getTickCount() {
         SMsgAVIoctrlSetPresetResp *pResult=(SMsgAVIoctrlSetPresetResp*)data;
         if(pResult->result==0){
             NSLog(@"OK");
+            [[iToast makeText:NSLocalizedStringFromTable(@"Saving successful", @"bayitcam", nil)]show];
         }
         else{
             NSLog(@"ERROR");
@@ -3137,12 +3142,12 @@ extern unsigned int _getTickCount() {
                            Data:(char *)s
                        DataSize:sizeof(SMsgAVIoctrlGetPresetReq)];
     free(s);
-    for (UIButton *btn in preBtnArr) {
+    /*for (UIButton *btn in preBtnArr) {
         btn.selected=NO;
         if(btn.tag==sender.tag){
             btn.selected=YES;
         }
-    }
+    }*/
 }
 -(void)preBtnLongTouch1:(UILongPressGestureRecognizer *)gestureRecognizer{
     
@@ -3185,12 +3190,12 @@ extern unsigned int _getTickCount() {
                        DataSize:sizeof(SMsgAVIoctrlSetPresetReq)];
     free(s);
     
-    for (UIButton *btn in preBtnArr) {
+    /*for (UIButton *btn in preBtnArr) {
         btn.selected=NO;
         if(btn.tag==index){
             btn.selected=YES;
         }
-    }
+    }*/
 }
 @end
 

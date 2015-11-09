@@ -53,7 +53,7 @@
                     </constraints>
                 </view>
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="add_camwifibk.png" translatesAutoresizingMaskIntoConstraints="NO" id="sUT-Qe-elN">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="504"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="530"/>
                     <animations/>
                 </imageView>
             </subviews>
@@ -69,6 +69,7 @@
                 <constraint firstAttribute="bottom" secondItem="uKW-w6-Lpy" secondAttribute="bottom" id="ORx-XH-Gov"/>
                 <constraint firstItem="uKW-w6-Lpy" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OVR-Eq-JQN"/>
                 <constraint firstItem="sUT-Qe-elN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PFs-vb-UBJ"/>
+                <constraint firstItem="uLq-jv-MtF" firstAttribute="top" secondItem="sUT-Qe-elN" secondAttribute="bottom" id="QnR-qU-anz"/>
                 <constraint firstItem="uLq-jv-MtF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="k9S-4f-YHQ"/>
                 <constraint firstItem="sUT-Qe-elN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="r9d-nk-5mg"/>
                 <constraint firstAttribute="bottom" secondItem="uLq-jv-MtF" secondAttribute="bottom" id="tO9-AX-Zlg"/>
