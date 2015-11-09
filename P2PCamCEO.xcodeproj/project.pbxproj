@@ -2730,6 +2730,8 @@
 		066DA1071B03882F00408AF2 /* title_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 066DA1051B03882F00408AF2 /* title_logo.png */; };
 		06728E3E1ACFE1590087029A /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06728E3D1ACFE1590087029A /* VideoToolbox.framework */; };
 		06728E3F1ACFE1640087029A /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06728E3D1ACFE1590087029A /* VideoToolbox.framework */; };
+		0672C3D71BF0F05400249DB8 /* BayitCamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0672C3D51BF0F05400249DB8 /* BayitCamViewController.m */; };
+		0672C3D81BF0F05400249DB8 /* BayitCamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0672C3D61BF0F05400249DB8 /* BayitCamViewController.xib */; };
 		068000881B645DA700711CC8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 068000841B645DA700711CC8 /* Localizable.strings */; };
 		068000891B645DA700711CC8 /* zxingLangString.strings in Resources */ = {isa = PBXBuildFile; fileRef = 068000861B645DA700711CC8 /* zxingLangString.strings */; };
 		068000961B645EE000711CC8 /* page1_ru@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 068000921B645EE000711CC8 /* page1_ru@2x.jpg */; };
@@ -9404,6 +9406,9 @@
 		066DA1091B03884200408AF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = "Bayit Cam/images/en.lproj/title_logo.png"; sourceTree = "<group>"; };
 		066DA10A1B03884400408AF2 /* ko */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ko; path = "Bayit Cam/images/ko.lproj/title_logo.png"; sourceTree = "<group>"; };
 		06728E3D1ACFE1590087029A /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		0672C3D41BF0F05400249DB8 /* BayitCamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BayitCamViewController.h; path = "Bayit Cam/BayitCamViewController.h"; sourceTree = "<group>"; };
+		0672C3D51BF0F05400249DB8 /* BayitCamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BayitCamViewController.m; path = "Bayit Cam/BayitCamViewController.m"; sourceTree = "<group>"; };
+		0672C3D61BF0F05400249DB8 /* BayitCamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BayitCamViewController.xib; path = "Bayit Cam/BayitCamViewController.xib"; sourceTree = "<group>"; };
 		068000851B645DA700711CC8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		068000871B645DA700711CC8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/zxingLangString.strings; sourceTree = "<group>"; };
 		0680008A1B645DAD00711CC8 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -12306,6 +12311,9 @@
 				06D1DE5F1BEB2CC400F5E475 /* BayitCamAddFlowViewController.h */,
 				06D1DE601BEB2CC400F5E475 /* BayitCamAddFlowViewController.m */,
 				06D1DE611BEB2CC400F5E475 /* BayitCamAddFlowViewController.xib */,
+				0672C3D41BF0F05400249DB8 /* BayitCamViewController.h */,
+				0672C3D51BF0F05400249DB8 /* BayitCamViewController.m */,
+				0672C3D61BF0F05400249DB8 /* BayitCamViewController.xib */,
 			);
 			name = "Bayit Cam";
 			sourceTree = "<group>";
@@ -16076,6 +16084,7 @@
 				066D9F4C1B037E7C00408AF2 /* ceo_rcplay_forward.png in Resources */,
 				066D9F4D1B037E7C00408AF2 /* ceo_rcplay_back_click@2x.png in Resources */,
 				066DA0A01B03878300408AF2 /* myright@2x.png in Resources */,
+				0672C3D81BF0F05400249DB8 /* BayitCamViewController.xib in Resources */,
 				066D9F4E1B037E7C00408AF2 /* live_chicon.png in Resources */,
 				066D9F4F1B037E7C00408AF2 /* morefunction_clicked@2x.png in Resources */,
 				066D9F501B037E7C00408AF2 /* offline@2x.png in Resources */,
@@ -21718,6 +21727,7 @@
 				066D9EAB1B037E7C00408AF2 /* UIImage+DrawImage.m in Sources */,
 				066D9EAC1B037E7C00408AF2 /* NSArray+Sort.m in Sources */,
 				066D9EAD1B037E7C00408AF2 /* TimeZoneListController.m in Sources */,
+				0672C3D71BF0F05400249DB8 /* BayitCamViewController.m in Sources */,
 				066D9EAE1B037E7C00408AF2 /* cCustomNavigationController.m in Sources */,
 				066D9EAF1B037E7C00408AF2 /* IQTextView.m in Sources */,
 			);

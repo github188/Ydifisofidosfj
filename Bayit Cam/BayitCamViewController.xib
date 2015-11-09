@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BayitCamViewController">
+            <connections>
+                <outlet property="attentionLbl" destination="c7d-dE-cxe" id="Kb6-n4-bEm"/>
+                <outlet property="infoTextView" destination="UIH-Vb-5VM" id="lm3-Ii-Cwg"/>
+                <outlet property="skipBtn" destination="xkT-0m-ik5" id="tyl-a9-fcm"/>
+                <outlet property="urlBtn" destination="aJc-6j-grw" id="S1t-zM-VpT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkT-0m-ik5">
+                    <rect key="frame" x="538" y="562" width="46" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="Bi3-km-Fvn"/>
+                        <constraint firstAttribute="height" constant="30" id="Nmw-MC-HSf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="Skip"/>
+                    <connections>
+                        <action selector="skip:" destination="-1" eventType="touchUpInside" id="jWB-KH-Knb"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attention!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7d-dE-cxe">
+                    <rect key="frame" x="16" y="107" width="568" height="30"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="APc-dk-WWp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.24313725490196078" green="0.58431372549019611" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIH-Vb-5VM">
+                    <rect key="frame" x="16" y="139" width="568" height="90"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="hON-02-QTV"/>
+                    </constraints>
+                    <string key="text">We have developed a new easier method for setting up your camera, as a result the WPS setup option (shown in the manual included) is no longer available. 
+Please take a look at the video in the following link for instructions on how to setup your camera.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.6470588235294118" green="0.6470588235294118" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJc-6j-grw">
+                    <rect key="frame" x="16" y="263" width="568" height="30"/>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="https://www.youtube.com/watch?v=rq2uMHJnpcg"/>
+                    <connections>
+                        <action selector="urlAction:" destination="-1" eventType="touchUpInside" id="4Pd-g4-grp"/>
+                    </connections>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="UIH-Vb-5VM" secondAttribute="trailing" constant="16" id="0FM-tX-7cu"/>
+                <constraint firstAttribute="trailing" secondItem="c7d-dE-cxe" secondAttribute="trailing" constant="16" id="9ll-xG-F0Y"/>
+                <constraint firstAttribute="bottom" secondItem="xkT-0m-ik5" secondAttribute="bottom" constant="8" id="Cyw-Wn-Itg"/>
+                <constraint firstAttribute="trailing" secondItem="xkT-0m-ik5" secondAttribute="trailing" constant="16" id="D5K-lZ-8Sx"/>
+                <constraint firstItem="aJc-6j-grw" firstAttribute="top" secondItem="UIH-Vb-5VM" secondAttribute="bottom" constant="34" id="DAG-OU-gkd"/>
+                <constraint firstItem="UIH-Vb-5VM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="STX-sI-2Bf"/>
+                <constraint firstItem="c7d-dE-cxe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="a3J-wx-uRE"/>
+                <constraint firstItem="c7d-dE-cxe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="107" id="aAd-vj-W3O"/>
+                <constraint firstItem="aJc-6j-grw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="fRh-BM-HHj"/>
+                <constraint firstItem="c7d-dE-cxe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="h5K-YX-lwg"/>
+                <constraint firstItem="UIH-Vb-5VM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="h9X-SR-sAB"/>
+                <constraint firstItem="UIH-Vb-5VM" firstAttribute="top" secondItem="c7d-dE-cxe" secondAttribute="top" constant="32" id="kAh-yU-suO"/>
+                <constraint firstAttribute="trailing" secondItem="aJc-6j-grw" secondAttribute="trailing" constant="16" id="qIG-dZ-eVH"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

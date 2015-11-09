@@ -14,3 +14,7 @@
 "Manually add a camera"="Manually add a camera";
 "Manually add a camera Info"="Scan the QR code on your camera(ethernet cable required).";
 "Saving successful"="Saving successful";
+
+"Attention!"="Attention!";
+"We have developed a new easier method for setting up your camera, as a result the WPS setup option (shown in the manual included) is no longer available.Please take a look at the video in the following link for instructions on how to setup your camera."="We have developed a new easier method for setting up your camera, as a result the WPS setup option (shown in the manual included) is no longer available.Please take a look at the video in the following link for instructions on how to setup your camera.";
+"startUrl"="https://www.youtube.com/watch?v=rq2uMHJnpcg";

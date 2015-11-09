@@ -15,6 +15,9 @@
 #import <IOTCamera/GLogZone.h>
 #import <SystemConfiguration/CaptiveNetwork.h>
 #import "IQKeyboardManager.h"
+#if defined(BayitCam)
+#import "BayitCamViewController.h"
+#endif
 #if defined(EasynPTarget)
 //NSString *g_tpnsHostString = @"http://push1.ipcam.hk/apns/apns.php";
 #else
@@ -347,11 +350,16 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
     }
     mOpenUrlCmdStore.cmd = emNoCmd;
     
-    
-    CameraMultiLiveViewController *_startViewController = [[CameraMultiLiveViewController alloc] initWithNibName:@"CameraMultiLiveView" bundle:nil];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:_startViewController];
+    UIViewController *rootViewController=nil;
+#if defined(BayitCam)
+    rootViewController=[[[BayitCamViewController alloc]initWithNibName:@"BayitCamViewController" bundle:nil] autorelease];
+    [_window setRootViewController:rootViewController];
+#else
+    rootViewController = [[[CameraMultiLiveViewController alloc] initWithNibName:@"CameraMultiLiveView" bundle:nil] autorelease];
+    UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];
     [navigationController setNavigationBarHidden:YES];
     [_window setRootViewController:navigationController];
+#endif
     [_window makeKeyAndVisible];
          
     
