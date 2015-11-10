@@ -920,6 +920,14 @@ extern unsigned int _getTickCount() {
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
     self.prePositionView.frame=CGRectMake(0, self.view.frame.size.height-self.prePositionView.frame.size.height-self.horizMenu.frame.size.height, self.prePositionView.frame.size.width, self.prePositionView.frame.size.height);
+    
+    CGFloat marginW=50.0f;
+    CGFloat leftW=(self.view.frame.size.width-[preBtnArr count]*24-([preBtnArr count]-1)*marginW)/2;
+    NSInteger i=0;
+    for (UIButton *btn in preBtnArr) {
+        btn.frame=CGRectMake(leftW+i*24+i*marginW, btn.frame.origin.y, btn.frame.size.width, btn.frame.size.height);
+        i++;
+    }
 }
 
 - (void)changeOrientation:(UIInterfaceOrientation)orientation {
@@ -1226,6 +1234,10 @@ extern unsigned int _getTickCount() {
     [longPress2 release];
     [longPress3 release];
     [longPress4 release];
+    
+    self.prePositionTitleLbl.text=NSLocalizedStringFromTable(@"Preset", @"bayitcam", nil);
+    self.prePositionTipsLbl.text=NSLocalizedStringFromTable(@"Click to move preset, Longpress to save", @"bayitcam", nil);
+    
     
     preBtnArr=@[self.preBtn1,self.preBtn2,self.preBtn3,self.preBtn4];
     [preBtnArr retain];

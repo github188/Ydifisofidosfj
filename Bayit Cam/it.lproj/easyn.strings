@@ -1,0 +1,16 @@
+
+"WIFI一键设置"="Add Camera";
+"AddApWifiTips"="1.Wi-Fi SmartConfig";
+"AddApWifiTips2"="Camera first setting to connect network without  cable,only for specified camera";
+"AddApWifiOtherTips"="2.Ethernet cable connection or connected to router wirelessly";
+"AddApWifiNextStep"="Next";
+"AddApWifiStep2Tips"="Plug in the power cable, and wait for the camera to begin playing music. Then select “NEXT”.";
+"AddApWifiStep2NeedWifiTips"="Please make sure the phone connect wifi first.";
+"AddApWifiStep3SettingBtnTitle"="Next";
+"AddApWifiSSIDTips"="SSID can not be empty!";
+"AddApWifiPsdTips"="Password can not be empty!";
+"AddApWifiAudioTips"="If any Ding-dong tone from camera?";
+"AddApWifiResetTips"="Press the RESET button at the bottom of camera for 10 seconds for RESET";
+"AddApWifiWaitingTips"="Wi-Fi configuration in progress, please wait";
+"AddApWifiErrorTips"="WIFI connection failed, please confirm your wifi password!";
+"ViewPsdLbl"="Show password";

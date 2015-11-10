@@ -185,7 +185,7 @@
     <resources>
         <image name="button.png" width="159" height="40"/>
         <image name="button_click.png" width="159" height="40"/>
-        <image name="lan.png" width="48" height="37"/>
+        <image name="lan.png" width="20" height="20"/>
         <image name="wifi-2.png" width="28" height="20"/>
         <image name="write.png" width="25" height="25"/>
     </resources>

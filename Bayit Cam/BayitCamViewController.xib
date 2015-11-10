@@ -33,7 +33,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attention!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7d-dE-cxe">
-                    <rect key="frame" x="16" y="107" width="568" height="30"/>
+                    <rect key="frame" x="16" y="30" width="568" height="30"/>
                     <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -44,7 +44,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIH-Vb-5VM">
-                    <rect key="frame" x="16" y="139" width="568" height="90"/>
+                    <rect key="frame" x="16" y="62" width="568" height="90"/>
                     <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -57,7 +57,7 @@ Please take a look at the video in the following link for instructions on how to
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJc-6j-grw">
-                    <rect key="frame" x="16" y="263" width="568" height="30"/>
+                    <rect key="frame" x="16" y="157" width="568" height="30"/>
                     <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <state key="normal" title="https://www.youtube.com/watch?v=rq2uMHJnpcg"/>
@@ -73,10 +73,10 @@ Please take a look at the video in the following link for instructions on how to
                 <constraint firstAttribute="trailing" secondItem="c7d-dE-cxe" secondAttribute="trailing" constant="16" id="9ll-xG-F0Y"/>
                 <constraint firstAttribute="bottom" secondItem="xkT-0m-ik5" secondAttribute="bottom" constant="8" id="Cyw-Wn-Itg"/>
                 <constraint firstAttribute="trailing" secondItem="xkT-0m-ik5" secondAttribute="trailing" constant="16" id="D5K-lZ-8Sx"/>
-                <constraint firstItem="aJc-6j-grw" firstAttribute="top" secondItem="UIH-Vb-5VM" secondAttribute="bottom" constant="34" id="DAG-OU-gkd"/>
+                <constraint firstItem="aJc-6j-grw" firstAttribute="top" secondItem="UIH-Vb-5VM" secondAttribute="bottom" constant="5" id="DAG-OU-gkd"/>
                 <constraint firstItem="UIH-Vb-5VM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="STX-sI-2Bf"/>
                 <constraint firstItem="c7d-dE-cxe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="a3J-wx-uRE"/>
-                <constraint firstItem="c7d-dE-cxe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="107" id="aAd-vj-W3O"/>
+                <constraint firstItem="c7d-dE-cxe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="aAd-vj-W3O"/>
                 <constraint firstItem="aJc-6j-grw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="fRh-BM-HHj"/>
                 <constraint firstItem="c7d-dE-cxe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="h5K-YX-lwg"/>
                 <constraint firstItem="UIH-Vb-5VM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="h9X-SR-sAB"/>

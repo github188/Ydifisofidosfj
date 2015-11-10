@@ -41,8 +41,15 @@
     self.infoTextView.text=NSLocalizedStringFromTable(@"We have developed a new easier method for setting up your camera, as a result the WPS setup option (shown in the manual included) is no longer available.Please take a look at the video in the following link for instructions on how to setup your camera.", @"bayitcam", nil);
     [self.urlBtn setTitle:NSLocalizedStringFromTable(@"startUrl", @"bayitcam", nil) forState:UIControlStateNormal];
     
+    NSString *movieFile=[[NSBundle mainBundle] pathForResource:@"1" ofType:@"mp4"];
+    moviePlayer=[[MPMoviePlayerController alloc]initWithContentURL:[NSURL fileURLWithPath:movieFile]];
+    [self.view addSubview:moviePlayer.view];
+    [moviePlayer play];
     
-    
+}
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    moviePlayer.view.frame=CGRectMake(0, self.urlBtn.frame.origin.y+self.urlBtn.frame.size.height, self.view.frame.size.width, self.view.frame.size.height-self.skipBtn.frame.size.height-(self.urlBtn.frame.origin.y+self.urlBtn.frame.size.height));
 }
 -(void)back:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];
@@ -68,6 +75,7 @@
     [_attentionLbl release];
     [_infoTextView release];
     [_urlBtn release];
+    [moviePlayer release];
     [super dealloc];
 }
 - (IBAction)skip:(id)sender {

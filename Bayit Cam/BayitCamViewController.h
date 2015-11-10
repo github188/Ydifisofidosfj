@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "CameraMultiLiveViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface BayitCamViewController : UIViewController
+{
+    MPMoviePlayerController *moviePlayer;
+}
 
 - (IBAction)skip:(id)sender;
 @property (retain, nonatomic) IBOutlet UIButton *skipBtn;

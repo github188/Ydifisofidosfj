@@ -3364,7 +3364,6 @@
 		068931131BE9089A00B958FC /* AddWithApCamera1Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0688793E1ABE204E0017A41A /* AddWithApCamera1Controller.xib */; };
 		068931141BE9089A00B958FC /* AddWithApCamera2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0688794C1ABE2C4D0017A41A /* AddWithApCamera2Controller.m */; };
 		068931151BE9089A00B958FC /* AddWithApCamera2Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0688794D1ABE2C4D0017A41A /* AddWithApCamera2Controller.xib */; };
-		068931161BE908DD00B958FC /* easyn.strings in Resources */ = {isa = PBXBuildFile; fileRef = 068879391ABE1B900017A41A /* easyn.strings */; };
 		068931171BE9093B00B958FC /* button_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06BA0E9F1ACACE8B00448ACB /* button_bg@2x.png */; };
 		068931181BE9094900B958FC /* remeberpsd2.png in Resources */ = {isa = PBXBuildFile; fileRef = 06B219821ADD4D51005E3A2B /* remeberpsd2.png */; };
 		068931191BE9094B00B958FC /* remeberpsd1.png in Resources */ = {isa = PBXBuildFile; fileRef = 06B219811ADD4D51005E3A2B /* remeberpsd1.png */; };
@@ -7722,6 +7721,8 @@
 		06E508141BF2289900300095 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06E508101BF2289900300095 /* Localizable.strings */; };
 		06E508151BF2289900300095 /* zxingLangString.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06E508121BF2289900300095 /* zxingLangString.strings */; };
 		06E508211BF23EB000300095 /* lan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E508201BF23EB000300095 /* lan@2x.png */; };
+		06E508241BF241D200300095 /* easyn.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06E508221BF241D200300095 /* easyn.strings */; };
+		06E5082A1BF24A4000300095 /* 1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 06E508291BF24A4000300095 /* 1.mp4 */; };
 		06E8CE621B7CF10D00DC6391 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06E8CE611B7CF10D00DC6391 /* Images.xcassets */; };
 		06F3E20D1BDFA9E400D6698D /* page1_sp@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06F3E2091BDFA9E400D6698D /* page1_sp@2x.jpg */; };
 		06F3E20E1BDFA9E400D6698D /* page2_sp@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06F3E20A1BDFA9E400D6698D /* page2_sp@2x.jpg */; };
@@ -10215,6 +10216,12 @@
 		06E5081C1BF228B700300095 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = "Bayit Cam/fr.lproj/zxingLangString.strings"; sourceTree = "<group>"; };
 		06E5081D1BF228B900300095 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = "Bayit Cam/es.lproj/zxingLangString.strings"; sourceTree = "<group>"; };
 		06E508201BF23EB000300095 /* lan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "lan@2x.png"; path = "Bayit Cam/images/lan@2x.png"; sourceTree = "<group>"; };
+		06E508231BF241D200300095 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "Bayit Cam/en.lproj/easyn.strings"; sourceTree = "<group>"; };
+		06E508251BF241DD00300095 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = "Bayit Cam/ru.lproj/easyn.strings"; sourceTree = "<group>"; };
+		06E508261BF241E100300095 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = "Bayit Cam/it.lproj/easyn.strings"; sourceTree = "<group>"; };
+		06E508271BF241E400300095 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = "Bayit Cam/fr.lproj/easyn.strings"; sourceTree = "<group>"; };
+		06E508281BF241E600300095 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = "Bayit Cam/es.lproj/easyn.strings"; sourceTree = "<group>"; };
+		06E508291BF24A4000300095 /* 1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = 1.mp4; path = "Bayit Cam/1.mp4"; sourceTree = "<group>"; };
 		06E8CE611B7CF10D00DC6391 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "MAJESTIC IPCAM P/Images.xcassets"; sourceTree = "<group>"; };
 		06F3E1971BDFA50000D6698D /* fr */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fr; path = fr.lproj/page1.png; sourceTree = "<group>"; };
 		06F3E1981BDFA50000D6698D /* fr */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fr; path = fr.lproj/page2.png; sourceTree = "<group>"; };
@@ -12311,6 +12318,8 @@
 		066DA0881B0385BD00408AF2 /* Bayit Cam */ = {
 			isa = PBXGroup;
 			children = (
+				06E508291BF24A4000300095 /* 1.mp4 */,
+				06E508221BF241D200300095 /* easyn.strings */,
 				06E508101BF2289900300095 /* Localizable.strings */,
 				06E508121BF2289900300095 /* zxingLangString.strings */,
 				066DA0A41B03879400408AF2 /* images */,
@@ -15947,6 +15956,7 @@
 				066D9EBF1B037E7C00408AF2 /* add_btnbk.png in Resources */,
 				06FF924E1B04E18900DD5803 /* add_camwifibk.png in Resources */,
 				06FF924F1B04E18900DD5803 /* add_camwifibk@2x.png in Resources */,
+				06E5082A1BF24A4000300095 /* 1.mp4 in Resources */,
 				066D9EC01B037E7C00408AF2 /* ceo_rcplay_title_h@2x.png in Resources */,
 				066D9EC11B037E7C00408AF2 /* leo_snapshot_disable@2x.png in Resources */,
 				066D9EC21B037E7C00408AF2 /* GetWiFiSSIDView.xib in Resources */,
@@ -15987,6 +15997,7 @@
 				066D9EE81B037E7C00408AF2 /* ceo_recordstop.png in Resources */,
 				06FF92571B055ABE00DD5803 /* bayitcam.strings in Resources */,
 				066D9EE91B037E7C00408AF2 /* ceo_pause_h@2x.png in Resources */,
+				06E508241BF241D200300095 /* easyn.strings in Resources */,
 				066D9EEA1B037E7C00408AF2 /* onlinebar@2x.png in Resources */,
 				06D1DE6B1BEB2DF400F5E475 /* write@2x.png in Resources */,
 				066D9EEB1B037E7C00408AF2 /* LANSearch.xib in Resources */,
@@ -16223,7 +16234,6 @@
 				066D9FB81B037E7C00408AF2 /* leo_micinfo@2x.png in Resources */,
 				066D9FB91B037E7C00408AF2 /* cam_back@2x.png in Resources */,
 				066D9FBA1B037E7C00408AF2 /* speaker_mute.png in Resources */,
-				068931161BE908DD00B958FC /* easyn.strings in Resources */,
 				066D9FBB1B037E7C00408AF2 /* login_bk@2x.png in Resources */,
 				066D9FBC1B037E7C00408AF2 /* leo_mirror_rl_clicked@2x.png in Resources */,
 				066D9FBD1B037E7C00408AF2 /* speaker_mute@2X.png in Resources */,
@@ -23817,6 +23827,18 @@
 				06E5081D1BF228B900300095 /* es */,
 			);
 			name = zxingLangString.strings;
+			sourceTree = "<group>";
+		};
+		06E508221BF241D200300095 /* easyn.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06E508231BF241D200300095 /* en */,
+				06E508251BF241DD00300095 /* ru */,
+				06E508261BF241E100300095 /* it */,
+				06E508271BF241E400300095 /* fr */,
+				06E508281BF241E600300095 /* es */,
+			);
+			name = easyn.strings;
 			sourceTree = "<group>";
 		};
 		06FB5F211B063452005B7674 /* title_logo@2x.png */ = {
