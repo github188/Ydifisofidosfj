@@ -9,6 +9,7 @@
 #import "BayitCamAddFlowViewController.h"
 #import "AddWithApCamera1Controller.h"
 #import "BayitCamAddViewController.h"
+#import "LANSearchController.h"
 
 @interface BayitCamAddFlowViewController ()
 
@@ -23,12 +24,15 @@
     /***文字界面***/
     [self.firstBtn setTitle:NSLocalizedString(@"Add Camera", @"") forState:UIControlStateNormal];
     [self.secondBtn setTitle:NSLocalizedString(@"Add Camera", @"") forState:UIControlStateNormal];
+    [self.thirdBtn setTitle:NSLocalizedString(@"Add Camera", @"") forState:UIControlStateNormal];
     
     self.firstLbl.text=NSLocalizedStringFromTable(@"Quick Setup", @"bayitcam", nil);
     self.secondLbl.text=NSLocalizedStringFromTable(@"Manually add a camera", @"bayitcam", nil);
+    self.thirdLbl.text=NSLocalizedStringFromTable(@"Search in LAN", @"bayitcam", nil);
     
     self.firstTextView.text=NSLocalizedStringFromTable(@"Quick Setup Info", @"bayitcam", nil);
     self.secondTextView.text=NSLocalizedStringFromTable(@"Manually add a camera Info", @"bayitcam", nil);
+    self.thirdTextView.text=NSLocalizedStringFromTable(@"Search and add a camera in the Local Area Network.", @"bayitcam", nil);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,6 +57,9 @@
     [_secondLbl release];
     [_secondTextView release];
     [_secondBtn release];
+    [_thirdLbl release];
+    [_thirdTextView release];
+    [_thirdBtn release];
     [super dealloc];
 }
 - (IBAction)firstAction:(id)sender {
@@ -64,5 +71,11 @@
     BayitCamAddViewController *addController=[[BayitCamAddViewController alloc]initWithNibName:@"BayitCamAddViewController" bundle:nil];
     [self.navigationController pushViewController:addController animated:YES];
     [addController release];
+}
+- (IBAction)thirdAction:(id)sender {
+    LANSearchController *controller = [[LANSearchController alloc] init];
+    controller.isFromAutoWifi=YES;
+    [self.navigationController pushViewController:controller animated:YES];
+    [controller release];
 }
 @end

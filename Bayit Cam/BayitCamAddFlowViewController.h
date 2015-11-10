@@ -20,4 +20,10 @@
 @property (retain, nonatomic) IBOutlet UIButton *secondBtn;
 - (IBAction)secondAction:(id)sender;
 
+
+@property (retain, nonatomic) IBOutlet UILabel *thirdLbl;
+@property (retain, nonatomic) IBOutlet UITextView *thirdTextView;
+@property (retain, nonatomic) IBOutlet UIButton *thirdBtn;
+- (IBAction)thirdAction:(id)sender;
+
 @end

@@ -305,7 +305,6 @@
     addBTNView.hidden = isFromChange;
     
 #if defined(BayitCam)
-    self.bayitTipsLbl.hidden=NO;
     self.bayitTipsLbl.text=NSLocalizedStringFromTable(@"Make sure your phone is connected to the WiFi network you want to setup the camera with.", @"bayitcam", nil);
 #endif
     
@@ -355,7 +354,8 @@
     
     
     [searchedData removeAllObjects];
-    [searchedData addObjectsFromArray:camera_list];    
+    [searchedData addObjectsFromArray:camera_list];
+    
     self.navigationItem.rightBarButtonItem.enabled = [searchedData count] > 0;
     
 	[arrReConntFlag removeAllObjects];
@@ -368,6 +368,7 @@
 		[arrReConntFlag addObject:[NSMutableArray arrayWithObjects:[NSString stringWithString:camera.uid], [NSNumber numberWithInt:0], nil]];
 	}
     [self.tableView reloadData];
+    self.bayitTipsLbl.hidden=[camera_list count]>0;
 	
 	AppDelegate* currentAppDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
 	if( currentAppDelegate.mOpenUrlCmdStore.cmd == emShowLiveViewByUID ) {
@@ -427,7 +428,7 @@
  numberOfRowsInSection:(NSInteger)section
 {
 #if defined(BayitCam)
-    self.bayitTipsLbl.hidden=[searchedData count]!=0;
+    self.bayitTipsLbl.hidden=[camera_list count]>0;
 #endif
     return [searchedData count];
 }

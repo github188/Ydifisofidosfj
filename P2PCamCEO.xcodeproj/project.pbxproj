@@ -7721,6 +7721,7 @@
 		06E376D81B5A0BA2003A378F /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E376D71B5A0BA2003A378F /* Accelerate.framework */; };
 		06E508141BF2289900300095 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06E508101BF2289900300095 /* Localizable.strings */; };
 		06E508151BF2289900300095 /* zxingLangString.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06E508121BF2289900300095 /* zxingLangString.strings */; };
+		06E508211BF23EB000300095 /* lan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E508201BF23EB000300095 /* lan@2x.png */; };
 		06E8CE621B7CF10D00DC6391 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06E8CE611B7CF10D00DC6391 /* Images.xcassets */; };
 		06F3E20D1BDFA9E400D6698D /* page1_sp@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06F3E2091BDFA9E400D6698D /* page1_sp@2x.jpg */; };
 		06F3E20E1BDFA9E400D6698D /* page2_sp@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06F3E20A1BDFA9E400D6698D /* page2_sp@2x.jpg */; };
@@ -10213,6 +10214,7 @@
 		06E5081B1BF228B500300095 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = "Bayit Cam/it.lproj/zxingLangString.strings"; sourceTree = "<group>"; };
 		06E5081C1BF228B700300095 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = "Bayit Cam/fr.lproj/zxingLangString.strings"; sourceTree = "<group>"; };
 		06E5081D1BF228B900300095 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = "Bayit Cam/es.lproj/zxingLangString.strings"; sourceTree = "<group>"; };
+		06E508201BF23EB000300095 /* lan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "lan@2x.png"; path = "Bayit Cam/images/lan@2x.png"; sourceTree = "<group>"; };
 		06E8CE611B7CF10D00DC6391 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "MAJESTIC IPCAM P/Images.xcassets"; sourceTree = "<group>"; };
 		06F3E1971BDFA50000D6698D /* fr */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fr; path = fr.lproj/page1.png; sourceTree = "<group>"; };
 		06F3E1981BDFA50000D6698D /* fr */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fr; path = fr.lproj/page2.png; sourceTree = "<group>"; };
@@ -12348,6 +12350,7 @@
 		066DA0A41B03879400408AF2 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				06E508201BF23EB000300095 /* lan@2x.png */,
 				06D1DE6D1BEB4D2F00F5E475 /* ceo_presetting_clicked.png */,
 				06D1DE6E1BEB4D2F00F5E475 /* ceo_presetting_enable_disable.png */,
 				06D1DE6F1BEB4D2F00F5E475 /* ceo_presetting_enable.png */,
@@ -16365,6 +16368,7 @@
 				066DA0441B037E7C00408AF2 /* login@2x.png in Resources */,
 				066DA0451B037E7C00408AF2 /* more_cancel.png in Resources */,
 				066DA0461B037E7C00408AF2 /* leo_mirror_rl.png in Resources */,
+				06E508211BF23EB000300095 /* lan@2x.png in Resources */,
 				066DA0471B037E7C00408AF2 /* add_wifinext_clicked@2x.png in Resources */,
 				066DA0481B037E7C00408AF2 /* add_infobk.png in Resources */,
 				06D1DE7E1BEB4D2F00F5E475 /* ceo_presetting_enable.png in Resources */,
