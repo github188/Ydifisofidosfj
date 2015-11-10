@@ -21,4 +21,6 @@
 
 @property (retain, nonatomic) IBOutlet UIButton *urlBtn;
 - (IBAction)urlAction:(id)sender;
+
+@property(nonatomic) BOOL isFromFormUI;
 @end

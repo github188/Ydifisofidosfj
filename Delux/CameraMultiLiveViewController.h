@@ -173,4 +173,8 @@ extern NSString *deviceTokenString;
 @property (retain, nonatomic) IBOutlet UIImageView *itemBgImgView3;
 @property (retain, nonatomic) IBOutlet UIImageView *itemBgImgView4;
 
+
+@property (retain, nonatomic) IBOutlet UIButton *setupVideoBtn;
+- (IBAction)goAttention:(id)sender;
+
 @end

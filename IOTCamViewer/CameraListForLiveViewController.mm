@@ -304,6 +304,11 @@
     
     addBTNView.hidden = isFromChange;
     
+#if defined(BayitCam)
+    self.bayitTipsLbl.hidden=NO;
+    self.bayitTipsLbl.text=NSLocalizedStringFromTable(@"Make sure your phone is connected to the WiFi network you want to setup the camera with.", @"bayitcam", nil);
+#endif
+    
     [super viewDidLoad];
 }
 
@@ -341,6 +346,7 @@
         self.tableView.height = self.view.frame.size.height-addBTNView.frame.size.height;
         [UIView animateWithDuration:0.5 animations:^{
             addBTNView.frame = CGRectMake(0, self.view.frame.size.height-addBTNView.frame.size.height, self.view.frame.size.width, addBTNView.frame.size.height);
+            self.bayitTipsLbl.frame=CGRectMake(self.view.frame.size.width/2-self.bayitTipsLbl.frame.size.width/2, addBTNView.frame.origin.y-self.bayitTipsLbl.frame.size.height, self.bayitTipsLbl.frame.size.width, self.bayitTipsLbl.frame.size.height);
         }];
     }
     else{
@@ -396,6 +402,7 @@
     [tableView release];
     [tableViewCell release];
     [localBtn release];
+    [_bayitTipsLbl release];
     [super dealloc];
 }
 
@@ -419,6 +426,9 @@
 - (NSInteger)tableView:(UITableView *)tableView 
  numberOfRowsInSection:(NSInteger)section
 {
+#if defined(BayitCam)
+    self.bayitTipsLbl.hidden=[searchedData count]!=0;
+#endif
     return [searchedData count];
 }
 

@@ -57,6 +57,7 @@ extern NSString *deviceTokenString;
 - (IBAction)toggleEdit:(id)sender;
 - (IBAction)goAddCamera:(id)sender;
 - (IBAction)goDeviceOnCloud:(id)sender;
+@property (retain, nonatomic) IBOutlet UILabel *bayitTipsLbl;
 
 @end
 

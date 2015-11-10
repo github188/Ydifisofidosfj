@@ -17,11 +17,35 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if(self.isFromFormUI){
+        self.navigationItem.title=NSLocalizedStringFromTable(@"Attention!", @"bayitcam", nil);
+        UIButton *customButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        customButton.frame = CGRectMake(0, 0, 44, 44);
+        [customButton setBackgroundImage:[UIImage imageNamed:@"cam_back" ] forState:UIControlStateNormal];
+        [customButton setBackgroundImage:[UIImage imageNamed:@"cam_back_clicked"] forState:UIControlStateHighlighted];
+        [customButton addTarget:self action:@selector(back:) forControlEvents:UIControlEventTouchUpInside];
+        
+        UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithCustomView:customButton];
+        UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
+                                           initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+                                           target:nil action:nil];
+        negativeSpacer.width = -16;
+        
+        self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:negativeSpacer, backButton, nil];
+        [backButton release];
+        self.skipBtn.hidden=YES;
+    }
     // Do any additional setup after loading the view from its nib.
     [self.skipBtn setTitle:NSLocalizedString(@"GuidSkip", @"") forState:UIControlStateNormal];
     self.attentionLbl.text=NSLocalizedStringFromTable(@"Attention!", @"bayitcam", nil);
     self.infoTextView.text=NSLocalizedStringFromTable(@"We have developed a new easier method for setting up your camera, as a result the WPS setup option (shown in the manual included) is no longer available.Please take a look at the video in the following link for instructions on how to setup your camera.", @"bayitcam", nil);
     [self.urlBtn setTitle:NSLocalizedStringFromTable(@"startUrl", @"bayitcam", nil) forState:UIControlStateNormal];
+    
+    
+    
+}
+-(void)back:(id)sender{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

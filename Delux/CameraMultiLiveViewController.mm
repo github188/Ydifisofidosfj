@@ -23,6 +23,10 @@
 #import "cCustomNavigationController.h"
 #import "AppGuidViewController.h"
 
+#if defined(BayitCam)
+#import "BayitCamViewController.h"
+#endif
+
 #ifndef P2PCAMLIVE
 #define SHOW_SESSION_MODE
 #endif
@@ -835,6 +839,7 @@ extern unsigned int _getTickCount() ;
     [_itemBgImgView3 release];
     [_itemBgImgView4 release];
     [_morecancel release];
+    [_setupVideoBtn release];
 	[super dealloc];
 }
 
@@ -1180,6 +1185,11 @@ extern unsigned int _getTickCount() ;
                                                  name:UIApplicationDidBecomeActiveNotification
                                                object:nil];
     
+    
+#if defined(BayitCam)
+    self.setupVideoBtn.hidden=NO;
+    [self.setupVideoBtn setTitle:NSLocalizedStringFromTable(@"SetupVideo", @"bayitcam", nil) forState:UIControlStateNormal];
+#endif
     
     [super viewDidLoad];
 
@@ -2338,4 +2348,10 @@ if(!isGoPlayEvent){
     }
 }
 
+- (IBAction)goAttention:(id)sender {
+    BayitCamViewController *vc=[[BayitCamViewController alloc]initWithNibName:@"BayitCamViewController" bundle:nil];
+    vc.isFromFormUI=YES;
+    [self.navigationController pushViewController:vc animated:YES];
+    [vc release];
+}
 @end
