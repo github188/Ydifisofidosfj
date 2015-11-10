@@ -694,8 +694,8 @@ extern unsigned int _getTickCount() {
 #endif
             
 #if defined(BayitCam)
-            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"ceo_presetting_enable.png",nil];
-            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"ceo_presetting_clicked.png",nil];
+            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_recordstop", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"ceo_presetting_enable.png",nil];
+            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"ceo_presetting_clicked.png",nil];
 #endif
             
             [self.horizMenu reloadData];

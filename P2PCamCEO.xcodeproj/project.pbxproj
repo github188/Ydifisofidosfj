@@ -14522,7 +14522,7 @@
 						DevelopmentTeam = G795A5K2W9;
 					};
 					066D9E3B1B037E7C00408AF2 = {
-						DevelopmentTeam = Q2PV74KQN7;
+						DevelopmentTeam = Y93RM4F8S2;
 					};
 					0682DE0D1B08CCF30019BD70 = {
 						DevelopmentTeam = Q2PV74KQN7;
@@ -24474,7 +24474,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Eliav Scaba (7FHL5WS2LU)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -24509,9 +24509,9 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.easyn.bayitcamtest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bayit.p2pcam;
 				PRODUCT_NAME = "Bayit Cam";
-				PROVISIONING_PROFILE = "a3daac57-884a-49c7-9648-57db39d3105f";
+				PROVISIONING_PROFILE = "ea2a3c30-cbcb-4911-ba32-f114a24b5123";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -24525,7 +24525,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Eliav Scaba (7FHL5WS2LU)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -24561,9 +24561,9 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.easyn.bayitcamtest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bayit.p2pcam;
 				PRODUCT_NAME = "Bayit Cam";
-				PROVISIONING_PROFILE = "a3daac57-884a-49c7-9648-57db39d3105f";
+				PROVISIONING_PROFILE = "ea2a3c30-cbcb-4911-ba32-f114a24b5123";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -24577,7 +24577,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Eliav Scaba (7FHL5WS2LU)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -24613,9 +24613,9 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.easyn.bayitcamtest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bayit.p2pcam;
 				PRODUCT_NAME = "Bayit Cam";
-				PROVISIONING_PROFILE = "a3daac57-884a-49c7-9648-57db39d3105f";
+				PROVISIONING_PROFILE = "ea2a3c30-cbcb-4911-ba32-f114a24b5123";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -24629,7 +24629,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Eliav Scaba (7FHL5WS2LU)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -24664,9 +24664,9 @@
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"-DP2PCAMLIVE",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.easyn.bayitcamtest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bayit.p2pcam;
 				PRODUCT_NAME = "Bayit Cam";
-				PROVISIONING_PROFILE = "a3daac57-884a-49c7-9648-57db39d3105f";
+				PROVISIONING_PROFILE = "ea2a3c30-cbcb-4911-ba32-f114a24b5123";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
