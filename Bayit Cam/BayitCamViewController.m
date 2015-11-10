@@ -49,10 +49,14 @@
 }
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
-    moviePlayer.view.frame=CGRectMake(0, self.urlBtn.frame.origin.y+self.urlBtn.frame.size.height, self.view.frame.size.width, self.view.frame.size.height-self.skipBtn.frame.size.height-(self.urlBtn.frame.origin.y+self.urlBtn.frame.size.height));
+    moviePlayer.view.frame=CGRectMake(0, self.urlBtn.frame.origin.y+self.urlBtn.frame.size.height, self.view.frame.size.width, self.view.frame.size.height-self.skipBtn.frame.size.height-15-(self.urlBtn.frame.origin.y+self.urlBtn.frame.size.height));
 }
 -(void)back:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
