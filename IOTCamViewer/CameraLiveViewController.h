@@ -36,9 +36,7 @@
 #import "MKHorizMenu.h"
 #import "Categories.h"
 #import "EditCameraDefaultController.h"
-#if !(TARGET_IPHONE_SIMULATOR)
 #import <VideoRecorderSDK/VideoRecorderSDK.h>
-#endif
 
 extern FMDatabase *database;
 extern NSString *deviceTokenString;
@@ -143,9 +141,7 @@ extern NSString *deviceTokenString;
     
     IBOutlet UIView *statusBar;
     
-#if !(TARGET_IPHONE_SIMULATOR)
     VideoGenerator* videoGenerator;
-#endif
     BOOL isRecording;
     NSString *recordFileName;
 	CGSize msizeOrgVideoResolution;	// During local recording cannot change this , and also cannot do listen / talk function    
@@ -166,9 +162,9 @@ extern NSString *deviceTokenString;
 }
 
 //for Recording
-#if !(TARGET_IPHONE_SIMULATOR)
+
 @property (retain, nonatomic) VideoGenerator* videoGenerator;
-#endif
+
 @property (nonatomic, retain) NSNumber *viewTag;
 @property (nonatomic, retain) NSString *recordFileName;
 @property (nonatomic, assign) id<CameraLiveViewDelegate> delegate;

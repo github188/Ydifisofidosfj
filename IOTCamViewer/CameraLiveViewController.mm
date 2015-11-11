@@ -65,9 +65,8 @@ extern unsigned int _getTickCount() {
 @synthesize isCanSendSetCameraCMD;
 @synthesize isTalkButtonAction;
 
-#if !(TARGET_IPHONE_SIMULATOR)
+
 @synthesize videoGenerator;
-#endif
 
 -(AppDelegate *)getAppDelegate{
     return (AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -411,7 +410,6 @@ extern unsigned int _getTickCount() {
     unsigned int codec_id = mCodecId;
     
     NSString *imgName;
-#if !(TARGET_IPHONE_SIMULATOR)
     if (isRecording) {
         imgName =[recordFileName stringByReplacingOccurrencesOfString:@"mp4" withString:@"jpg"];
 
@@ -420,10 +418,8 @@ extern unsigned int _getTickCount() {
     } else {
         imgName = [NSString stringWithFormat:@"CH%d_%f.jpg", selectedChannel, [[NSDate date] timeIntervalSince1970]];
     }
-#else
-    [[iToast makeText:NSLocalizedString(@"Snapshot saved", @"")]show];
-    return;
-#endif
+    //[[iToast makeText:NSLocalizedString(@"Snapshot saved", @"")]show];
+    //return;
     UIImage *img = NULL;
     
     if (codec_id == MEDIA_CODEC_VIDEO_MPEG4 || codec_id == MEDIA_CODEC_VIDEO_H264) {
@@ -613,7 +609,6 @@ extern unsigned int _getTickCount() {
 }
 
 - (void)onBtnRecording {
-#if !(TARGET_IPHONE_SIMULATOR)
     if( 0 < msizeOrgVideoResolution.width && msizeOrgVideoResolution.width <= 1920 &&
        0 < msizeOrgVideoResolution.height && msizeOrgVideoResolution.height <= 1080 ) {
         
@@ -706,7 +701,6 @@ extern unsigned int _getTickCount() {
     else {
         NSLog(@"Ignore local REC function... due to the msizeOrgVideoResolution value invalid!!!");
     }
-#endif
 }
 - (void)reTryVideoREC:(NSTimer*)aTimer
 {
@@ -718,7 +712,6 @@ extern unsigned int _getTickCount() {
     }
 }
 
-#if !(TARGET_IPHONE_SIMULATOR)
 -(void)recordingStarted:(NSNotification*)notif {
 
     isRecording = YES;
@@ -778,7 +771,6 @@ extern unsigned int _getTickCount() {
         }];
     }
 }
-#endif
 
 - (IBAction)back:(id)sender
 {
@@ -1376,10 +1368,8 @@ extern unsigned int _getTickCount() {
     isHorizontalFlip = NO;
     isEModeView = NO;
     isActive = NO;
-#if !(TARGET_IPHONE_SIMULATOR)
     [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(recordingStarted:) name: kNOTF_RECORDING_STARTED object: nil];
     [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(recordingStopped:) name: kNOTF_RECORDING_STOPPED object: nil];
-#endif
     [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(cameraStopShowCompleted:) name: @"CameraStopShowCompleted" object: nil];
 	
 #ifndef MacGulp
