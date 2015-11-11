@@ -44,9 +44,13 @@
                         <action selector="next:" destination="-1" eventType="touchUpInside" id="SHA-AU-QAB"/>
                     </connections>
                 </button>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="tips_elec.png" translatesAutoresizingMaskIntoConstraints="NO" id="iZy-tM-a67">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="tips_elec.png" translatesAutoresizingMaskIntoConstraints="NO" id="iZy-tM-a67">
                     <rect key="frame" x="225" y="29" width="150" height="150"/>
                     <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="2JJ-Gf-ao7"/>
+                        <constraint firstAttribute="height" constant="150" id="JrE-VE-wh0"/>
+                    </constraints>
                 </imageView>
             </subviews>
             <animations/>
@@ -66,7 +70,7 @@
     </objects>
     <resources>
         <image name="button_bg.png" width="105" height="31"/>
-        <image name="button_click.png" width="105" height="31"/>
-        <image name="tips_elec.png" width="150" height="150"/>
+        <image name="button_click.png" width="159" height="40"/>
+        <image name="tips_elec.png" width="300" height="300"/>
     </resources>
 </document>

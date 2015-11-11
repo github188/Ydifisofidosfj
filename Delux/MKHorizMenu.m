@@ -64,7 +64,7 @@
     CGFloat btnTotalWidth=0.0f;
     for(int i = 0 ; i < self.itemCount; i ++){
         UIImage *bgImg=[UIImage imageNamed:[dataSource horizMenu:self titleForItemAtIndex:i]];
-        btnTotalWidth+=bgImg.size.width;
+        btnTotalWidth+=47;
     }
     
     //计算左右变距

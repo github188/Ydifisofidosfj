@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraListForLiveViewController">
             <connections>
                 <outlet property="addBTNView" destination="g8N-3U-bub" id="On5-5e-8mQ"/>
+                <outlet property="bayitNoCameraTipsLbl" destination="aQK-hj-jTG" id="J8g-WM-VS1"/>
                 <outlet property="bayitTipsLbl" destination="Bay-Ag-xFd" id="Lsq-wj-Spx"/>
                 <outlet property="localBtn" destination="BS3-k3-vh7" id="FOw-cy-Tal"/>
                 <outlet property="localLabel" destination="WS3-uU-sny" id="B05-PB-hFl"/>
@@ -52,6 +53,14 @@
                 </searchBar>
                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make sure your phone is connected to the WiFi network you want to setup the camera with." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bay-Ag-xFd">
                     <rect key="frame" x="10" y="200" width="300" height="72"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No cameras added. Please add a camera" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aQK-hj-jTG">
+                    <rect key="frame" x="10" y="50" width="300" height="56"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <animations/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>

@@ -33,8 +33,26 @@
     self.firstTextView.text=NSLocalizedStringFromTable(@"Quick Setup Info", @"bayitcam", nil);
     self.secondTextView.text=NSLocalizedStringFromTable(@"Manually add a camera Info", @"bayitcam", nil);
     self.thirdTextView.text=NSLocalizedStringFromTable(@"Search and add a camera in the Local Area Network.", @"bayitcam", nil);
+    
+    UIButton *customButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    customButton.frame = CGRectMake(0, 0, 44, 44);
+    [customButton setBackgroundImage:[UIImage imageNamed:@"cam_back" ] forState:UIControlStateNormal];
+    [customButton setBackgroundImage:[UIImage imageNamed:@"cam_back_clicked"] forState:UIControlStateHighlighted];
+    [customButton addTarget:self action:@selector(back:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithCustomView:customButton];
+    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
+                                       initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
+                                       target:nil action:nil];
+    negativeSpacer.width = -16;
+    
+    self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:negativeSpacer, backButton, nil];
+    [backButton release];
+    [negativeSpacer release];
 }
-
+-(void)back:(id)sender{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

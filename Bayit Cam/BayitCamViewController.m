@@ -41,15 +41,15 @@
     self.infoTextView.text=NSLocalizedStringFromTable(@"We have developed a new easier method for setting up your camera, as a result the WPS setup option (shown in the manual included) is no longer available.Please take a look at the video in the following link for instructions on how to setup your camera.", @"bayitcam", nil);
     [self.urlBtn setTitle:NSLocalizedStringFromTable(@"startUrl", @"bayitcam", nil) forState:UIControlStateNormal];
     
-    NSString *movieFile=[[NSBundle mainBundle] pathForResource:@"1" ofType:@"mp4"];
-    moviePlayer=[[MPMoviePlayerController alloc]initWithContentURL:[NSURL fileURLWithPath:movieFile]];
+    NSURL *movieFile=[NSURL URLWithString:@"http://p.easyn.com/Bayit%20Cam%20HD%20BH1818,%20BH1820%20&%20BH1826%20Manual%20Setup%20video.mp4"];
+    moviePlayer=[[MPMoviePlayerController alloc]initWithContentURL:movieFile];
     [self.view addSubview:moviePlayer.view];
     [moviePlayer play];
     
 }
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
-    moviePlayer.view.frame=CGRectMake(0, self.urlBtn.frame.origin.y+self.urlBtn.frame.size.height, self.view.frame.size.width, self.view.frame.size.height-self.skipBtn.frame.size.height-15-(self.urlBtn.frame.origin.y+self.urlBtn.frame.size.height));
+    moviePlayer.view.frame=CGRectMake(15, self.urlBtn.frame.origin.y+self.urlBtn.frame.size.height, self.view.frame.size.width-30, self.view.frame.size.height-self.skipBtn.frame.size.height-15-(self.urlBtn.frame.origin.y+self.urlBtn.frame.size.height));
 }
 -(void)back:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];
