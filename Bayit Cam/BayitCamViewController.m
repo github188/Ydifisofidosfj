@@ -44,7 +44,7 @@
     NSURL *movieFile=[NSURL URLWithString:@"http://p.easyn.com/Bayit%20Cam%20HD%20BH1818,%20BH1820%20&%20BH1826%20Manual%20Setup%20video.mp4"];
     moviePlayer=[[MPMoviePlayerController alloc]initWithContentURL:movieFile];
     [self.view addSubview:moviePlayer.view];
-    [moviePlayer play];
+    [moviePlayer prepareToPlay];
     
 }
 -(void)viewDidLayoutSubviews{

@@ -3,7 +3,7 @@
 "AddApWifiTips"="1.Wi-Fi SmartConfig";
 "AddApWifiTips2"="Camera first setting to connect network without  cable,only for specified camera";
 "AddApWifiOtherTips"="2.Ethernet cable connection or connected to router wirelessly";
-"AddApWifiNextStep"="Next";
+"AddApWifiNextStep"="NEXT";
 "AddApWifiStep2Tips"="Plug in the power cable, and wait for the camera to begin playing music. Then select “NEXT”.";
 "AddApWifiStep2NeedWifiTips"="Please make sure the phone connect wifi first.";
 "AddApWifiStep3SettingBtnTitle"="Next";

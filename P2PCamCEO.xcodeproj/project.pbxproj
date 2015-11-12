@@ -725,6 +725,8 @@
 		0647DD321AB87C4C00F5553A /* myright@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0647DD2A1AB87C4C00F5553A /* myright@2x.png */; };
 		0647DD331AB87C4C00F5553A /* myup1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0647DD2B1AB87C4C00F5553A /* myup1@2x.png */; };
 		0647DD341AB87C4C00F5553A /* myup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0647DD2C1AB87C4C00F5553A /* myup@2x.png */; };
+		064ABA921BF4E73D00335514 /* title_logo@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 064ABA8E1BF4E73D00335514 /* title_logo@2x~ipad.png */; };
+		064ABA931BF4E73D00335514 /* title_logo~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 064ABA901BF4E73D00335514 /* title_logo~ipad.png */; };
 		065AB2BC1BC0377D007C24D5 /* SVIP CLOUD-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 065AB2BA1BC0374B007C24D5 /* SVIP CLOUD-Info.plist */; };
 		065AB2BE1BC0378C007C24D5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 065AB2BD1BC0378C007C24D5 /* InfoPlist.strings */; };
 		065AB2C01BC037A6007C24D5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 065AB2BF1BC037A6007C24D5 /* Images.xcassets */; };
@@ -8944,6 +8946,16 @@
 		0647DD2A1AB87C4C00F5553A /* myright@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myright@2x.png"; sourceTree = "<group>"; };
 		0647DD2B1AB87C4C00F5553A /* myup1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myup1@2x.png"; sourceTree = "<group>"; };
 		0647DD2C1AB87C4C00F5553A /* myup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myup@2x.png"; sourceTree = "<group>"; };
+		064ABA8F1BF4E73D00335514 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = "Bayit Cam/images/en.lproj/title_logo@2x~ipad.png"; sourceTree = "<group>"; };
+		064ABA911BF4E73D00335514 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = "Bayit Cam/images/en.lproj/title_logo~ipad.png"; sourceTree = "<group>"; };
+		064ABA941BF4E75C00335514 /* ru */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ru; path = "Bayit Cam/images/ru.lproj/title_logo@2x~ipad.png"; sourceTree = "<group>"; };
+		064ABA951BF4E76300335514 /* it */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = it; path = "Bayit Cam/images/it.lproj/title_logo@2x~ipad.png"; sourceTree = "<group>"; };
+		064ABA961BF4E76400335514 /* fr */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fr; path = "Bayit Cam/images/fr.lproj/title_logo@2x~ipad.png"; sourceTree = "<group>"; };
+		064ABA971BF4E76600335514 /* es */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = es; path = "Bayit Cam/images/es.lproj/title_logo@2x~ipad.png"; sourceTree = "<group>"; };
+		064ABA981BF4E76B00335514 /* ru */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ru; path = "Bayit Cam/images/ru.lproj/title_logo~ipad.png"; sourceTree = "<group>"; };
+		064ABA991BF4E76D00335514 /* it */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = it; path = "Bayit Cam/images/it.lproj/title_logo~ipad.png"; sourceTree = "<group>"; };
+		064ABA9A1BF4E76F00335514 /* fr */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fr; path = "Bayit Cam/images/fr.lproj/title_logo~ipad.png"; sourceTree = "<group>"; };
+		064ABA9B1BF4E77000335514 /* es */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = es; path = "Bayit Cam/images/es.lproj/title_logo~ipad.png"; sourceTree = "<group>"; };
 		065AB2BA1BC0374B007C24D5 /* SVIP CLOUD-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "SVIP CLOUD-Info.plist"; path = "SVIP CLOUD/SVIP CLOUD-Info.plist"; sourceTree = "<group>"; };
 		065AB2BD1BC0378C007C24D5 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = "SVIP CLOUD/InfoPlist.strings"; sourceTree = "<group>"; };
 		065AB2BF1BC037A6007C24D5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "SVIP CLOUD/Images.xcassets"; sourceTree = "<group>"; };
@@ -12357,6 +12369,8 @@
 		066DA0A41B03879400408AF2 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				064ABA8E1BF4E73D00335514 /* title_logo@2x~ipad.png */,
+				064ABA901BF4E73D00335514 /* title_logo~ipad.png */,
 				0666CB791BF37DA30067668B /* tips_elec.png */,
 				06E508201BF23EB000300095 /* lan@2x.png */,
 				06D1DE6D1BEB4D2F00F5E475 /* ceo_presetting_clicked.png */,
@@ -16154,6 +16168,7 @@
 				066D9F751B037E7C00408AF2 /* leo_mirror_rl_disable@2x.png in Resources */,
 				066D9F761B037E7C00408AF2 /* add_uidpw.png in Resources */,
 				066D9F771B037E7C00408AF2 /* more_event_clicked@2x.png in Resources */,
+				064ABA921BF4E73D00335514 /* title_logo@2x~ipad.png in Resources */,
 				066D9F781B037E7C00408AF2 /* ceo_record_clicked@2x.png in Resources */,
 				066D9F791B037E7C00408AF2 /* popoverArrowUp.png in Resources */,
 				066D9F7A1B037E7C00408AF2 /* morefunction@2x.png in Resources */,
@@ -16175,6 +16190,7 @@
 				066D9F891B037E7C00408AF2 /* add_local.png in Resources */,
 				066D9F8A1B037E7C00408AF2 /* microphone.png in Resources */,
 				066D9F8B1B037E7C00408AF2 /* leo_mirror_ud_disable.png in Resources */,
+				064ABA931BF4E73D00335514 /* title_logo~ipad.png in Resources */,
 				066D9F8C1B037E7C00408AF2 /* autologin_choose@2x.png in Resources */,
 				066D9F8D1B037E7C00408AF2 /* add_wifi1_bk.png in Resources */,
 				066D9F8E1B037E7C00408AF2 /* add_devicessid.png in Resources */,
@@ -23226,6 +23242,30 @@
 				06F3E2081BDFA54900D6698D /* es */,
 			);
 			name = "title_logo@2x.png";
+			sourceTree = "<group>";
+		};
+		064ABA8E1BF4E73D00335514 /* title_logo@2x~ipad.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				064ABA8F1BF4E73D00335514 /* en */,
+				064ABA941BF4E75C00335514 /* ru */,
+				064ABA951BF4E76300335514 /* it */,
+				064ABA961BF4E76400335514 /* fr */,
+				064ABA971BF4E76600335514 /* es */,
+			);
+			name = "title_logo@2x~ipad.png";
+			sourceTree = "<group>";
+		};
+		064ABA901BF4E73D00335514 /* title_logo~ipad.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				064ABA911BF4E73D00335514 /* en */,
+				064ABA981BF4E76B00335514 /* ru */,
+				064ABA991BF4E76D00335514 /* it */,
+				064ABA9A1BF4E76F00335514 /* fr */,
+				064ABA9B1BF4E77000335514 /* es */,
+			);
+			name = "title_logo~ipad.png";
 			sourceTree = "<group>";
 		};
 		065AB30B1BC0381B007C24D5 /* title_logo.png */ = {

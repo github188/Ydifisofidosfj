@@ -2636,15 +2636,17 @@ extern unsigned int _getTickCount() {
     else if(index==7-offsetCount){
         
 #if defined(BayitCam)
-        if(isPrePosition){
-            self.prePositionView.hidden=YES;
-            self.myPtzView.hidden=NO;
-            isPrePosition=NO;
-        }
-        else{
-            self.prePositionView.hidden=NO;
-            self.myPtzView.hidden=YES;
-            isPrePosition=YES;
+        if(!isRecording){
+            if(isPrePosition){
+                self.prePositionView.hidden=YES;
+                self.myPtzView.hidden=NO;
+                isPrePosition=NO;
+            }
+            else{
+                self.prePositionView.hidden=NO;
+                self.myPtzView.hidden=YES;
+                isPrePosition=YES;
+            }
         }
         return;
 #endif
