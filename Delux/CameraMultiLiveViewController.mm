@@ -2347,11 +2347,12 @@ if(!isGoPlayEvent){
         }
     }
 }
-
+#if defined(BayitCam)
 - (IBAction)goAttention:(id)sender {
     BayitCamViewController *vc=[[BayitCamViewController alloc]initWithNibName:@"BayitCamViewController" bundle:nil];
     vc.isFromFormUI=YES;
     [self.navigationController pushViewController:vc animated:YES];
     [vc release];
 }
+#endif
 @end
