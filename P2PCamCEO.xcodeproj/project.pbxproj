@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		060AF4291AC43BD700D8828D /* libHISmartWifi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0688795B1ABEAE230017A41A /* libHISmartWifi.a */; };
+		061096D91BF5746300C4B64C /* smtpServers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06D3FAE61B795D78006AF177 /* smtpServers.plist */; };
+		061096DA1BF5746900C4B64C /* MailProtocolController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D3FAE81B795D78006AF177 /* MailProtocolController.m */; };
+		061096DB1BF5747100C4B64C /* MailSmtpController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D3FAEA1B795D78006AF177 /* MailSmtpController.m */; };
+		061096DC1BF5747700C4B64C /* MailSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D3FAE41B795D41006AF177 /* MailSettingController.m */; };
 		06118EA71B08DE0800BB45FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06118EA61B08DE0800BB45FB /* Images.xcassets */; };
 		06118EA81B08DE2100BB45FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 066DA08E1B03872900408AF2 /* Images.xcassets */; };
 		06118EB91B08E0AC00BB45FB /* page1_cn@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06FB5F471B064191005B7674 /* page1_cn@2x.jpg */; };
@@ -14878,6 +14882,7 @@
 				063734AD1BE2406200F767A8 /* more_event_disable.png in Resources */,
 				063734AE1BE2406200F767A8 /* ceo_rcplay_line.png in Resources */,
 				063734AF1BE2406200F767A8 /* moreset_listm@2x.png in Resources */,
+				061096D91BF5746300C4B64C /* smtpServers.plist in Resources */,
 				063734B11BE2406200F767A8 /* add_web.png in Resources */,
 				063735C31BE241D500F767A8 /* addcam_clicked@2x.png in Resources */,
 				063734B21BE2406200F767A8 /* microphone@2X.png in Resources */,
@@ -21284,6 +21289,7 @@
 				0637334A1BE2406200F767A8 /* UITabBarController+TabBar.m in Sources */,
 				0637334B1BE2406200F767A8 /* UIView+View.m in Sources */,
 				0637334C1BE2406200F767A8 /* AddCameraDetailController.mm in Sources */,
+				061096DA1BF5746900C4B64C /* MailProtocolController.m in Sources */,
 				0637334D1BE2406200F767A8 /* AddWithApCamera2Controller.m in Sources */,
 				0637334E1BE2406200F767A8 /* UITableView+TableView.m in Sources */,
 				0637334F1BE2406200F767A8 /* UIDevice+Device.m in Sources */,
@@ -21336,6 +21342,7 @@
 				0637337E1BE2406200F767A8 /* UINavigationController+Navigation.m in Sources */,
 				0637337F1BE2406200F767A8 /* UIColor+Colors.m in Sources */,
 				063733801BE2406200F767A8 /* NSURL+URL.m in Sources */,
+				061096DC1BF5747700C4B64C /* MailSettingController.m in Sources */,
 				063733811BE2406200F767A8 /* iToast.m in Sources */,
 				063733821BE2406200F767A8 /* FormatSDCardController.m in Sources */,
 				063733831BE2406200F767A8 /* SnapshotViewController.m in Sources */,
@@ -21387,6 +21394,7 @@
 				063733B11BE2406200F767A8 /* CameraShowGLView.m in Sources */,
 				063733B21BE2406200F767A8 /* UIImage+Image.m in Sources */,
 				063733B31BE2406200F767A8 /* UITextView+TextView.m in Sources */,
+				061096DB1BF5747100C4B64C /* MailSmtpController.m in Sources */,
 				063733B41BE2406200F767A8 /* UIImage+DrawImage.m in Sources */,
 				063733B51BE2406200F767A8 /* NSArray+Sort.m in Sources */,
 				063733B61BE2406200F767A8 /* TimeZoneListController.m in Sources */,
@@ -24004,6 +24012,7 @@
 					RemoveModel,
 					RemoveVendor,
 					MoveDF,
+					CameraMailSetting,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/IDHD CONTROL/IDHD CONTROL-Info.plist";
@@ -24050,6 +24059,7 @@
 					RemoveModel,
 					RemoveVendor,
 					MoveDF,
+					CameraMailSetting,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/IDHD CONTROL/IDHD CONTROL-Info.plist";
@@ -24097,6 +24107,7 @@
 					RemoveModel,
 					RemoveVendor,
 					MoveDF,
+					CameraMailSetting,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/IDHD CONTROL/IDHD CONTROL-Info.plist";
@@ -24144,6 +24155,7 @@
 					RemoveModel,
 					RemoveVendor,
 					MoveDF,
+					CameraMailSetting,
 				);
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/IDHD CONTROL/IDHD CONTROL-Info.plist";
