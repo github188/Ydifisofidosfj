@@ -352,8 +352,19 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
     
     UIViewController *rootViewController=nil;
 #if defined(BayitCam)
-    rootViewController=[[[BayitCamViewController alloc]initWithNibName:@"BayitCamViewController" bundle:nil] autorelease];
-    [_window setRootViewController:rootViewController];
+    NSString *key=@"skip.ui";
+    NSUserDefaults *userDefault=[NSUserDefaults standardUserDefaults];
+    BOOL isSkip=[userDefault boolForKey:key];
+    if(isSkip){
+        rootViewController = [[[CameraMultiLiveViewController alloc] initWithNibName:@"CameraMultiLiveView" bundle:nil] autorelease];
+        UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];
+        [navigationController setNavigationBarHidden:YES];
+        [_window setRootViewController:navigationController];
+    }
+    else{
+        rootViewController=[[[BayitCamViewController alloc]initWithNibName:@"BayitCamViewController" bundle:nil] autorelease];
+        [_window setRootViewController:rootViewController];
+    }
 #else
     rootViewController = [[[CameraMultiLiveViewController alloc] initWithNibName:@"CameraMultiLiveView" bundle:nil] autorelease];
     UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];

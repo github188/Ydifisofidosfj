@@ -3279,6 +3279,21 @@
 		0682E0B51B08D08F0019BD70 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0682E08D1B08D08F0019BD70 /* iTunesArtwork@2x.png */; };
 		0682E0DA1B08D0AF0019BD70 /* title_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0682E0D61B08D0AF0019BD70 /* title_logo.png */; };
 		0682E0DB1B08D0AF0019BD70 /* title_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0682E0D81B08D0AF0019BD70 /* title_logo@2x.png */; };
+		0683730D1BF6DFD600B9CE08 /* UIMyWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0683730B1BF6DFA900B9CE08 /* UIMyWebView.m */; };
+		0683730E1BF6DFD900B9CE08 /* UIMyWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0683730B1BF6DFA900B9CE08 /* UIMyWebView.m */; };
+		0683730F1BF6DFD900B9CE08 /* UIMyWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0683730B1BF6DFA900B9CE08 /* UIMyWebView.m */; };
+		068373101BF6DFDA00B9CE08 /* UIMyWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0683730B1BF6DFA900B9CE08 /* UIMyWebView.m */; };
+		068373111BF6DFDB00B9CE08 /* UIMyWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0683730B1BF6DFA900B9CE08 /* UIMyWebView.m */; };
+		068373121BF6DFDC00B9CE08 /* UIMyWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0683730B1BF6DFA900B9CE08 /* UIMyWebView.m */; };
+		068373131BF6DFDC00B9CE08 /* UIMyWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0683730B1BF6DFA900B9CE08 /* UIMyWebView.m */; };
+		068373141BF6DFDD00B9CE08 /* UIMyWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0683730B1BF6DFA900B9CE08 /* UIMyWebView.m */; };
+		068373151BF6DFDE00B9CE08 /* UIMyWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0683730B1BF6DFA900B9CE08 /* UIMyWebView.m */; };
+		068373161BF6DFDE00B9CE08 /* UIMyWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0683730B1BF6DFA900B9CE08 /* UIMyWebView.m */; };
+		068373171BF6DFDF00B9CE08 /* UIMyWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0683730B1BF6DFA900B9CE08 /* UIMyWebView.m */; };
+		068373181BF6DFE100B9CE08 /* UIMyWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0683730B1BF6DFA900B9CE08 /* UIMyWebView.m */; };
+		068373191BF6DFE100B9CE08 /* UIMyWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0683730B1BF6DFA900B9CE08 /* UIMyWebView.m */; };
+		0683731A1BF6DFE200B9CE08 /* UIMyWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0683730B1BF6DFA900B9CE08 /* UIMyWebView.m */; };
+		0683731B1BF6DFE300B9CE08 /* UIMyWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0683730B1BF6DFA900B9CE08 /* UIMyWebView.m */; };
 		0684EEE71ADE968B006BD75A /* page1_cn@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0684EED71ADE968A006BD75A /* page1_cn@2x.jpg */; };
 		0684EEE81ADE968B006BD75A /* page1_en@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0684EED81ADE968A006BD75A /* page1_en@2x.jpg */; };
 		0684EEE91ADE968B006BD75A /* page1_ko@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0684EED91ADE968A006BD75A /* page1_ko@2x.jpg */; };
@@ -9465,6 +9480,8 @@
 		0682E0DF1B08D0D90019BD70 /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = "WRT/images/en.lproj/title_logo@2x.png"; sourceTree = "<group>"; };
 		0682E0E01B08D0DC0019BD70 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "zh-Hant"; path = "WRT/images/zh-Hant.lproj/title_logo@2x.png"; sourceTree = "<group>"; };
 		0682E0E11B08D0DE0019BD70 /* ko */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ko; path = "WRT/images/ko.lproj/title_logo@2x.png"; sourceTree = "<group>"; };
+		0683730A1BF6DFA900B9CE08 /* UIMyWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMyWebView.h; sourceTree = "<group>"; };
+		0683730B1BF6DFA900B9CE08 /* UIMyWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMyWebView.m; sourceTree = "<group>"; };
 		0684EED71ADE968A006BD75A /* page1_cn@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "page1_cn@2x.jpg"; sourceTree = "<group>"; };
 		0684EED81ADE968A006BD75A /* page1_en@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "page1_en@2x.jpg"; sourceTree = "<group>"; };
 		0684EED91ADE968A006BD75A /* page1_ko@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "page1_ko@2x.jpg"; sourceTree = "<group>"; };
@@ -14251,6 +14268,8 @@
 		D8F71ABD148C5342007705B6 /* P2PCam264 */ = {
 			isa = PBXGroup;
 			children = (
+				0683730A1BF6DFA900B9CE08 /* UIMyWebView.h */,
+				0683730B1BF6DFA900B9CE08 /* UIMyWebView.m */,
 				D8028D0014A8173300BE124F /* Classes */,
 				D8F71AB6148C5342007705B6 /* Frameworks */,
 				D8C4DBC414E2171D007CBFAE /* Images */,
@@ -21400,6 +21419,7 @@
 				063733B61BE2406200F767A8 /* TimeZoneListController.m in Sources */,
 				063733B71BE2406200F767A8 /* cCustomNavigationController.m in Sources */,
 				063733B81BE2406200F767A8 /* IQTextView.m in Sources */,
+				0683731A1BF6DFE200B9CE08 /* UIMyWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -21453,6 +21473,7 @@
 				06603F831B23133300FB6F32 /* Event.m in Sources */,
 				06603F841B23133300FB6F32 /* DeviceListOnCloudViewController.m in Sources */,
 				06603F851B23133300FB6F32 /* UIActionSheet+MKBlockAdditions.m in Sources */,
+				068373131BF6DFDC00B9CE08 /* UIMyWebView.m in Sources */,
 				06603F861B23133300FB6F32 /* NSArray+URLHandle.m in Sources */,
 				06603F871B23133300FB6F32 /* UIView+Hierarchy.m in Sources */,
 				06603F881B23133300FB6F32 /* IQKeyboardManager.m in Sources */,
@@ -21578,6 +21599,7 @@
 				066C78741BDA5C2400419134 /* EditWiFiPasswordController.m in Sources */,
 				066C78751BDA5C2400419134 /* CameraListForEventsController.mm in Sources */,
 				066C78761BDA5C2400419134 /* EventListController.mm in Sources */,
+				068373191BF6DFE100B9CE08 /* UIMyWebView.m in Sources */,
 				066C78771BDA5C2400419134 /* NSDictionary+Dictionary.m in Sources */,
 				066C78781BDA5C2400419134 /* Event.m in Sources */,
 				066C78791BDA5C2400419134 /* DeviceListOnCloudViewController.m in Sources */,
@@ -21778,6 +21800,7 @@
 				0672C3D71BF0F05400249DB8 /* BayitCamViewController.m in Sources */,
 				066D9EAE1B037E7C00408AF2 /* cCustomNavigationController.m in Sources */,
 				066D9EAF1B037E7C00408AF2 /* IQTextView.m in Sources */,
+				0683730D1BF6DFD600B9CE08 /* UIMyWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -21850,6 +21873,7 @@
 				0682DE4C1B08CCF30019BD70 /* UIApplication+KeyView.m in Sources */,
 				0682DE4D1B08CCF30019BD70 /* AppInfoController.m in Sources */,
 				0682DE4E1B08CCF30019BD70 /* ChannelPickerContentController.m in Sources */,
+				068373101BF6DFDA00B9CE08 /* UIMyWebView.m in Sources */,
 				0682DE4F1B08CCF30019BD70 /* UIButton+Button.m in Sources */,
 				0682DE501B08CCF30019BD70 /* UIImageView+ImageView.m in Sources */,
 				0682DE511B08CCF30019BD70 /* MKHorizMenu.m in Sources */,
@@ -21953,6 +21977,7 @@
 				0692A73F1B5FC55400D28D06 /* EditWiFiPasswordController.m in Sources */,
 				0692A7401B5FC55400D28D06 /* CameraListForEventsController.mm in Sources */,
 				0692A7411B5FC55400D28D06 /* EventListController.mm in Sources */,
+				068373141BF6DFDD00B9CE08 /* UIMyWebView.m in Sources */,
 				0692A7421B5FC55400D28D06 /* NSDictionary+Dictionary.m in Sources */,
 				0692A7431B5FC55400D28D06 /* Event.m in Sources */,
 				0692A7441B5FC55400D28D06 /* DeviceListOnCloudViewController.m in Sources */,
@@ -22078,6 +22103,7 @@
 				069DCE221BEDD43700A87F65 /* EditWiFiPasswordController.m in Sources */,
 				069DCE231BEDD43700A87F65 /* CameraListForEventsController.mm in Sources */,
 				069DCE241BEDD43700A87F65 /* EventListController.mm in Sources */,
+				0683731B1BF6DFE300B9CE08 /* UIMyWebView.m in Sources */,
 				069DCE251BEDD43700A87F65 /* NSDictionary+Dictionary.m in Sources */,
 				069DCE261BEDD43700A87F65 /* Event.m in Sources */,
 				069DCE271BEDD43700A87F65 /* DeviceListOnCloudViewController.m in Sources */,
@@ -22203,6 +22229,7 @@
 				069EF9381B1207D00024CB5A /* Event.m in Sources */,
 				069EF9391B1207D00024CB5A /* DeviceListOnCloudViewController.m in Sources */,
 				069EF93A1B1207D00024CB5A /* UIActionSheet+MKBlockAdditions.m in Sources */,
+				068373121BF6DFDC00B9CE08 /* UIMyWebView.m in Sources */,
 				069EF93B1B1207D00024CB5A /* NSArray+URLHandle.m in Sources */,
 				069EF93C1B1207D00024CB5A /* UIView+Hierarchy.m in Sources */,
 				069EF93D1B1207D00024CB5A /* IQKeyboardManager.m in Sources */,
@@ -22328,6 +22355,7 @@
 				06AA8C7B1B5FE8960050A6E7 /* EditWiFiPasswordController.m in Sources */,
 				06AA8C7C1B5FE8960050A6E7 /* CameraListForEventsController.mm in Sources */,
 				06AA8C7D1B5FE8960050A6E7 /* EventListController.mm in Sources */,
+				068373151BF6DFDE00B9CE08 /* UIMyWebView.m in Sources */,
 				06AA8C7E1B5FE8960050A6E7 /* NSDictionary+Dictionary.m in Sources */,
 				06AA8C7F1B5FE8960050A6E7 /* Event.m in Sources */,
 				06AA8C801B5FE8960050A6E7 /* DeviceListOnCloudViewController.m in Sources */,
@@ -22472,6 +22500,7 @@
 				06B8C8F71B0A21BB006ED6EE /* UIApplication+KeyView.m in Sources */,
 				06B8C8F81B0A21BB006ED6EE /* AppInfoController.m in Sources */,
 				06B8C8F91B0A21BB006ED6EE /* ChannelPickerContentController.m in Sources */,
+				068373111BF6DFDB00B9CE08 /* UIMyWebView.m in Sources */,
 				06B8C8FA1B0A21BB006ED6EE /* UIButton+Button.m in Sources */,
 				06B8C8FB1B0A21BB006ED6EE /* UIImageView+ImageView.m in Sources */,
 				06B8C8FC1B0A21BB006ED6EE /* MKHorizMenu.m in Sources */,
@@ -22575,6 +22604,7 @@
 				06CAA4901BC0142C00853612 /* EditWiFiPasswordController.m in Sources */,
 				06CAA4911BC0142C00853612 /* CameraListForEventsController.mm in Sources */,
 				06CAA4921BC0142C00853612 /* EventListController.mm in Sources */,
+				068373171BF6DFDF00B9CE08 /* UIMyWebView.m in Sources */,
 				06CAA4931BC0142C00853612 /* NSDictionary+Dictionary.m in Sources */,
 				06CAA4941BC0142C00853612 /* Event.m in Sources */,
 				06CAA4951BC0142C00853612 /* DeviceListOnCloudViewController.m in Sources */,
@@ -22700,6 +22730,7 @@
 				06D3F8581B78E7C1006AF177 /* DeviceListOnCloudViewController.m in Sources */,
 				06D3F8591B78E7C1006AF177 /* UIActionSheet+MKBlockAdditions.m in Sources */,
 				06D3F85A1B78E7C1006AF177 /* NSArray+URLHandle.m in Sources */,
+				068373161BF6DFDE00B9CE08 /* UIMyWebView.m in Sources */,
 				06D3F85B1B78E7C1006AF177 /* UIView+Hierarchy.m in Sources */,
 				06D3F85C1B78E7C1006AF177 /* IQKeyboardManager.m in Sources */,
 				06D3F85D1B78E7C1006AF177 /* IQToolbar.m in Sources */,
@@ -22825,6 +22856,7 @@
 				06D7950E1BC0355E00B1E986 /* EditWiFiPasswordController.m in Sources */,
 				06D7950F1BC0355E00B1E986 /* CameraListForEventsController.mm in Sources */,
 				06D795101BC0355E00B1E986 /* EventListController.mm in Sources */,
+				068373181BF6DFE100B9CE08 /* UIMyWebView.m in Sources */,
 				06D795111BC0355E00B1E986 /* NSDictionary+Dictionary.m in Sources */,
 				06D795121BC0355E00B1E986 /* Event.m in Sources */,
 				06D795131BC0355E00B1E986 /* DeviceListOnCloudViewController.m in Sources */,
@@ -22950,6 +22982,7 @@
 				06F76E581AB720A100901EBA /* EditWiFiPasswordController.m in Sources */,
 				06F76E591AB720A100901EBA /* CameraListForEventsController.mm in Sources */,
 				06F76E5A1AB720A100901EBA /* EventListController.mm in Sources */,
+				0683730F1BF6DFD900B9CE08 /* UIMyWebView.m in Sources */,
 				06F76E5B1AB720A100901EBA /* NSDictionary+Dictionary.m in Sources */,
 				06F76E5C1AB720A100901EBA /* Event.m in Sources */,
 				06F76E5D1AB720A100901EBA /* DeviceListOnCloudViewController.m in Sources */,
@@ -23094,6 +23127,7 @@
 				7A1C0184193339F70032A77E /* UIApplication+KeyView.m in Sources */,
 				610DBA1B169AF0BF00292CF9 /* AppInfoController.m in Sources */,
 				610DBA1C169AF0BF00292CF9 /* ChannelPickerContentController.m in Sources */,
+				0683730E1BF6DFD900B9CE08 /* UIMyWebView.m in Sources */,
 				7A1C0187193339F70032A77E /* UIButton+Button.m in Sources */,
 				7A1C0190193339F70032A77E /* UIImageView+ImageView.m in Sources */,
 				7AAF3B081928EC09000D7FAF /* MKHorizMenu.m in Sources */,

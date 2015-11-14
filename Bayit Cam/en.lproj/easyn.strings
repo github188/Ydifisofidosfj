@@ -6,7 +6,7 @@
 "AddApWifiNextStep"="NEXT";
 "AddApWifiStep2Tips"="Plug in the power cable, and wait for the camera to begin playing music. Then select “NEXT”.";
 "AddApWifiStep2NeedWifiTips"="Please make sure the phone connect wifi first.";
-"AddApWifiStep3SettingBtnTitle"="Next";
+"AddApWifiStep3SettingBtnTitle"="NEXT";
 "AddApWifiSSIDTips"="SSID can not be empty!";
 "AddApWifiPsdTips"="Password can not be empty!";
 "AddApWifiAudioTips"="If any Ding-dong tone from camera?";

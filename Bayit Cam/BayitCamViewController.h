@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "CameraMultiLiveViewController.h"
-#import <MediaPlayer/MediaPlayer.h>
+#import "UIMyWebView.h"
 
 @interface BayitCamViewController : UIViewController
 {
-    MPMoviePlayerController *moviePlayer;
+    UIMyWebView *webView;
 }
 
 - (IBAction)skip:(id)sender;
@@ -27,4 +27,9 @@
 - (IBAction)urlAction:(id)sender;
 
 @property(nonatomic) BOOL isFromFormUI;
+
+
+@property (retain, nonatomic) IBOutlet UIButton *remeberBtn;
+- (IBAction)remberClick:(id)sender;
+@property (retain, nonatomic) IBOutlet UILabel *remberLbl;
 @end
