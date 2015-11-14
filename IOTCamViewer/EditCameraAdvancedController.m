@@ -510,8 +510,7 @@ typedef struct
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:SectionTableIdentifier];
     
     if (cell == nil/* && section != [self getTimeZoneSettingSectionIndex]*/ ) {
-        
-        cell = [[[UITableViewCell alloc]
+      cell = [[[UITableViewCell alloc]
                  initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:SectionTableIdentifier]
                 autorelease];
         if (section == [self getTimeZoneSettingSectionIndex]) {
@@ -855,6 +854,8 @@ typedef struct
         cell.textLabel.text = [NSString stringWithString:NSLocalizedString(@"Motion Detection", @"")];
         cell.detailTextLabel.text = text;
         
+        detailFrame=cell.detailTextLabel.frame;
+        
         if (text)
             [text release];
     }
@@ -865,8 +866,47 @@ typedef struct
             NSString *text = nil;
             
             if ([camera getRecordSettingSupportOfChannel:0]) {
-
-                if (recordingMode < 0) {            
+#if defined(BayitCam)
+                cell=nil;
+                cell=[[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:SectionTableIdentifier] autorelease];
+                
+                if (recordingMode < 0) {
+                    
+                    [cell addSubview:recordIndicator];
+                    [recordIndicator startAnimating];
+                    recordIndicator.center = CGPointMake(cellIndicator_X, cellIndicator_Y);
+                }
+                else {
+                    
+                    [recordIndicator stopAnimating];
+                    [recordIndicator removeFromSuperview];
+                }
+                
+                if (recordingMode == 0)
+                    text = [[NSString alloc] initWithString:NSLocalizedString(@"Off", @"")];
+                else if (recordingMode == 1)
+                    text = [[NSString alloc] initWithString:NSLocalizedString(@"Full Time", @"")];
+                else if (recordingMode == 2)
+                    text = [[NSString alloc] initWithString:NSLocalizedString(@"Alarm", @"")];
+                else
+                    text = nil;
+                
+                [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+                [cell setSelectionStyle:UITableViewCellSelectionStyleBlue];
+                
+                cell.textLabel.text = [NSString stringWithString:NSLocalizedString(@"Recording Mode", @"")];
+                cell.detailTextLabel.text = NSLocalizedStringFromTable(@"Micro SD Card required", @"bayitcam", nil);
+                
+                
+                UILabel *infoLbl=[[[UILabel alloc]init]autorelease];
+                [cell addSubview:infoLbl];
+                infoLbl.text=text;
+                infoLbl.textAlignment=NSTextAlignmentRight;
+                infoLbl.textColor=[UIColor grayColor];
+                infoLbl.frame=CGRectMake(detailFrame.origin.x-60, detailFrame.origin.y, detailFrame.size.width+60, detailFrame.size.height);
+                
+#else
+                if (recordingMode < 0) {
 
                     [cell addSubview:recordIndicator];
                     [recordIndicator startAnimating];
@@ -889,7 +929,9 @@ typedef struct
                 
                 [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
                 [cell setSelectionStyle:UITableViewCellSelectionStyleBlue];
-                
+                cell.textLabel.text = [NSString stringWithString:NSLocalizedString(@"Recording Mode", @"")];
+                cell.detailTextLabel.text = text;
+#endif
             }
             else {
              
@@ -897,10 +939,11 @@ typedef struct
 
                 [cell setAccessoryType:UITableViewCellAccessoryNone];
                 [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+                cell.textLabel.text = [NSString stringWithString:NSLocalizedString(@"Recording Mode", @"")];
+                cell.detailTextLabel.text = text;
             }      
             
-            cell.textLabel.text = [NSString stringWithString:NSLocalizedString(@"Recording Mode", @"")];
-            cell.detailTextLabel.text = text;
+
             
             if (text)
                 [text release];

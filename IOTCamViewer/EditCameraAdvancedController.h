@@ -89,6 +89,8 @@ extern FMDatabase *database;
         
         BOOL isHasSDCard;
         
+        CGRect detailFrame;
+        
 }
 
 @property (nonatomic, retain) NSTimer* timerListWifiApResp;
