@@ -6892,9 +6892,9 @@
 		06D1DE6A1BEB2DF400F5E475 /* wifi-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D1DE661BEB2DF400F5E475 /* wifi-2@2x.png */; };
 		06D1DE6B1BEB2DF400F5E475 /* write@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D1DE671BEB2DF400F5E475 /* write@2x.png */; };
 		06D1DE6C1BEB3BFE00F5E475 /* libHISmartWifi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0688795B1ABEAE230017A41A /* libHISmartWifi.a */; };
-		06D1DE7C1BEB4D2F00F5E475 /* ceo_presetting_clicked.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D1DE6D1BEB4D2F00F5E475 /* ceo_presetting_clicked.png */; };
-		06D1DE7D1BEB4D2F00F5E475 /* ceo_presetting_enable_disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D1DE6E1BEB4D2F00F5E475 /* ceo_presetting_enable_disable.png */; };
-		06D1DE7E1BEB4D2F00F5E475 /* ceo_presetting_enable.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D1DE6F1BEB4D2F00F5E475 /* ceo_presetting_enable.png */; };
+		06D1DE7C1BEB4D2F00F5E475 /* ceo_presetting_clicked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D1DE6D1BEB4D2F00F5E475 /* ceo_presetting_clicked@2x.png */; };
+		06D1DE7D1BEB4D2F00F5E475 /* ceo_presetting_enable_disable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D1DE6E1BEB4D2F00F5E475 /* ceo_presetting_enable_disable@2x.png */; };
+		06D1DE7E1BEB4D2F00F5E475 /* ceo_presetting_enable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D1DE6F1BEB4D2F00F5E475 /* ceo_presetting_enable@2x.png */; };
 		06D1DE831BEB4D2F00F5E475 /* position_01_click.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D1DE741BEB4D2F00F5E475 /* position_01_click.png */; };
 		06D1DE841BEB4D2F00F5E475 /* position_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D1DE751BEB4D2F00F5E475 /* position_01.png */; };
 		06D1DE851BEB4D2F00F5E475 /* position_02_click.png in Resources */ = {isa = PBXBuildFile; fileRef = 06D1DE761BEB4D2F00F5E475 /* position_02_click.png */; };
@@ -10166,9 +10166,9 @@
 		06D1DE651BEB2DF400F5E475 /* button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button@2x.png"; path = "Bayit Cam/images/button@2x.png"; sourceTree = "<group>"; };
 		06D1DE661BEB2DF400F5E475 /* wifi-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wifi-2@2x.png"; path = "Bayit Cam/images/wifi-2@2x.png"; sourceTree = "<group>"; };
 		06D1DE671BEB2DF400F5E475 /* write@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "write@2x.png"; path = "Bayit Cam/images/write@2x.png"; sourceTree = "<group>"; };
-		06D1DE6D1BEB4D2F00F5E475 /* ceo_presetting_clicked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ceo_presetting_clicked.png; path = "Bayit Cam/images/ceo_presetting_clicked.png"; sourceTree = "<group>"; };
-		06D1DE6E1BEB4D2F00F5E475 /* ceo_presetting_enable_disable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ceo_presetting_enable_disable.png; path = "Bayit Cam/images/ceo_presetting_enable_disable.png"; sourceTree = "<group>"; };
-		06D1DE6F1BEB4D2F00F5E475 /* ceo_presetting_enable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ceo_presetting_enable.png; path = "Bayit Cam/images/ceo_presetting_enable.png"; sourceTree = "<group>"; };
+		06D1DE6D1BEB4D2F00F5E475 /* ceo_presetting_clicked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ceo_presetting_clicked@2x.png"; path = "Bayit Cam/images/ceo_presetting_clicked@2x.png"; sourceTree = "<group>"; };
+		06D1DE6E1BEB4D2F00F5E475 /* ceo_presetting_enable_disable@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ceo_presetting_enable_disable@2x.png"; path = "Bayit Cam/images/ceo_presetting_enable_disable@2x.png"; sourceTree = "<group>"; };
+		06D1DE6F1BEB4D2F00F5E475 /* ceo_presetting_enable@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ceo_presetting_enable@2x.png"; path = "Bayit Cam/images/ceo_presetting_enable@2x.png"; sourceTree = "<group>"; };
 		06D1DE741BEB4D2F00F5E475 /* position_01_click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = position_01_click.png; path = "Bayit Cam/images/position_01_click.png"; sourceTree = "<group>"; };
 		06D1DE751BEB4D2F00F5E475 /* position_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = position_01.png; path = "Bayit Cam/images/position_01.png"; sourceTree = "<group>"; };
 		06D1DE761BEB4D2F00F5E475 /* position_02_click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = position_02_click.png; path = "Bayit Cam/images/position_02_click.png"; sourceTree = "<group>"; };
@@ -12394,9 +12394,9 @@
 				064ABA901BF4E73D00335514 /* title_logo~ipad.png */,
 				0666CB791BF37DA30067668B /* tips_elec.png */,
 				06E508201BF23EB000300095 /* lan@2x.png */,
-				06D1DE6D1BEB4D2F00F5E475 /* ceo_presetting_clicked.png */,
-				06D1DE6E1BEB4D2F00F5E475 /* ceo_presetting_enable_disable.png */,
-				06D1DE6F1BEB4D2F00F5E475 /* ceo_presetting_enable.png */,
+				06D1DE6D1BEB4D2F00F5E475 /* ceo_presetting_clicked@2x.png */,
+				06D1DE6E1BEB4D2F00F5E475 /* ceo_presetting_enable_disable@2x.png */,
+				06D1DE6F1BEB4D2F00F5E475 /* ceo_presetting_enable@2x.png */,
 				06D1DE741BEB4D2F00F5E475 /* position_01_click.png */,
 				06D1DE751BEB4D2F00F5E475 /* position_01.png */,
 				06D1DE761BEB4D2F00F5E475 /* position_02_click.png */,
@@ -16168,7 +16168,7 @@
 				066D9F601B037E7C00408AF2 /* ceo_rcplay_forward_click_h@2x.png in Resources */,
 				066D9F611B037E7C00408AF2 /* popoverArrowLeft@2x.png in Resources */,
 				06118ED81B08E0B500BB45FB /* page4_ko.jpg in Resources */,
-				06D1DE7C1BEB4D2F00F5E475 /* ceo_presetting_clicked.png in Resources */,
+				06D1DE7C1BEB4D2F00F5E475 /* ceo_presetting_clicked@2x.png in Resources */,
 				066D9F621B037E7C00408AF2 /* popoverArrowRight.png in Resources */,
 				066D9F631B037E7C00408AF2 /* add_lsearch_clicked.png in Resources */,
 				066D9F651B037E7C00408AF2 /* login_email_bk@2x.png in Resources */,
@@ -16372,7 +16372,7 @@
 				066DA0191B037E7C00408AF2 /* add_qrcode_clicked.png in Resources */,
 				066DA01A1B037E7C00408AF2 /* more_delete_clicked@2x.png in Resources */,
 				066DA01B1B037E7C00408AF2 /* add_uidpw@2x.png in Resources */,
-				06D1DE7D1BEB4D2F00F5E475 /* ceo_presetting_enable_disable.png in Resources */,
+				06D1DE7D1BEB4D2F00F5E475 /* ceo_presetting_enable_disable@2x.png in Resources */,
 				066DA01C1B037E7C00408AF2 /* add_wifi_1a.png in Resources */,
 				066DA01D1B037E7C00408AF2 /* ceo_rcplay_h.png in Resources */,
 				068931131BE9089A00B958FC /* AddWithApCamera1Controller.xib in Resources */,
@@ -16419,7 +16419,7 @@
 				06E508211BF23EB000300095 /* lan@2x.png in Resources */,
 				066DA0471B037E7C00408AF2 /* add_wifinext_clicked@2x.png in Resources */,
 				066DA0481B037E7C00408AF2 /* add_infobk.png in Resources */,
-				06D1DE7E1BEB4D2F00F5E475 /* ceo_presetting_enable.png in Resources */,
+				06D1DE7E1BEB4D2F00F5E475 /* ceo_presetting_enable@2x.png in Resources */,
 				BB8241AD1BCE2A740067B3CF /* SnapshotViewController.xib in Resources */,
 				066DA0491B037E7C00408AF2 /* leo_snapshot.png in Resources */,
 				066DA04A1B037E7C00408AF2 /* moreset_list1.png in Resources */,

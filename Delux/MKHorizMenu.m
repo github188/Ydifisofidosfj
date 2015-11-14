@@ -64,7 +64,10 @@
     CGFloat btnTotalWidth=0.0f;
     for(int i = 0 ; i < self.itemCount; i ++){
         UIImage *bgImg=[UIImage imageNamed:[dataSource horizMenu:self titleForItemAtIndex:i]];
-        btnTotalWidth+=47;
+        btnTotalWidth+=bgImg.size.width;
+        if(i==3){
+            NSLog(@"OK");
+        }
     }
     
     //计算左右变距
@@ -90,7 +93,7 @@
         [customButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
         [customButton addTarget:self action:@selector(buttonTouchDown:) forControlEvents:UIControlEventTouchDown];
         
-        customButton.frame = CGRectMake(xPos, 3, 47, 38);
+        customButton.frame = CGRectMake(xPos, 3, bgImg.size.width, 38);
         xPos += bgImg.size.width;
         if(i+1<self.itemCount){
             xPos += buttonPadding;

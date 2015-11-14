@@ -643,8 +643,8 @@ extern unsigned int _getTickCount() {
 
 
 #if defined(BayitCam)
-            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"ceo_presetting_enable.png",nil];
-            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"ceo_presetting_clicked.png",nil];
+            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot",@"ceo_presetting_enable.png", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",nil];
+            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked",@"ceo_presetting_clicked.png", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",nil];
 #endif
             
             [self.horizMenu reloadData];
@@ -689,8 +689,8 @@ extern unsigned int _getTickCount() {
 #endif
             
 #if defined(BayitCam)
-            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_recordstop", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"ceo_presetting_enable.png",nil];
-            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"ceo_presetting_clicked.png",nil];
+            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_recordstop", @"leo_snapshot",@"ceo_presetting_enable.png", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",nil];
+            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked",@"ceo_presetting_clicked.png", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",nil];
 #endif
             
             [self.horizMenu reloadData];
@@ -755,8 +755,8 @@ extern unsigned int _getTickCount() {
                 self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click",nil];
 #endif
 #if defined(BayitCam)
-                self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"ceo_presetting_enable.png",nil];
-                self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"ceo_presetting_clicked.png",nil];
+                self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot",@"ceo_presetting_enable.png", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",nil];
+                self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked",@"ceo_presetting_clicked.png", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",nil];
 #endif
                 
                 [self.horizMenu reloadData];
@@ -1338,8 +1338,8 @@ extern unsigned int _getTickCount() {
     self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click",nil];
 #endif
 #if defined(BayitCam)
-    self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"ceo_presetting_enable.png",nil];
-    self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"ceo_presetting_clicked.png",nil];
+    self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot",@"ceo_presetting_enable.png", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",nil];
+    self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked",@"ceo_presetting_clicked.png", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",nil];
 #endif
     [scrollQVGAView setContentSize:qvgaView.frame.size];
     [scrollQVGAView setClipsToBounds:YES];
@@ -2625,6 +2625,16 @@ extern unsigned int _getTickCount() {
     longEModeView.hidden = YES;
     
     isActive = YES;
+    
+#if defined(BayitCam)
+    if(index==3){
+        index=7;
+    }
+    else if(index>=4)
+    {
+        index=index-1;
+    }
+#endif
     
     if(index==9-offsetCount){
 
