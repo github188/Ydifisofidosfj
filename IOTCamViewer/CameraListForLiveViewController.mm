@@ -333,7 +333,7 @@
     
     localLabel.frame=CGRectMake(0, localLabel.frame.origin.y, addBTNView.frame.size.width, localLabel.frame.size.height);
     
-    self.bayitNoCameraTipsLbl.frame=CGRectMake(self.bayitNoCameraTipsLbl.frame.origin.x, self.view.frame.size.height/2-self.bayitNoCameraTipsLbl.frame.size.height/2-20, self.bayitNoCameraTipsLbl.frame.size.width, self.bayitNoCameraTipsLbl.frame.size.height);
+    self.bayitNoCameraTipsLbl.frame=CGRectMake(self.bayitNoCameraTipsLbl.frame.origin.x, self.view.frame.size.height/2-self.bayitNoCameraTipsLbl.frame.size.height/2-40, self.bayitNoCameraTipsLbl.frame.size.width, self.bayitNoCameraTipsLbl.frame.size.height);
 }
 
 - (void)viewDidAppear:(BOOL)animated 
