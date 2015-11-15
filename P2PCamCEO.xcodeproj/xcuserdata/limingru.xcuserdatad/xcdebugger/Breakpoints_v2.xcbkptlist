@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOTCamViewer/CameraLiveViewController.mm"
-            timestampString = "469202981.958997"
+            timestampString = "469289747.457964"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "3114"
-            endingLineNumber = "3114"
+            startingLineNumber = "3121"
+            endingLineNumber = "3121"
             landmarkName = "-onContrastClicked:"
             landmarkType = "5">
          </BreakpointContent>
@@ -122,12 +122,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOTCamViewer/CameraLiveViewController.mm"
-            timestampString = "469202981.958997"
+            timestampString = "469289747.457964"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "3178"
-            endingLineNumber = "3178"
-            landmarkName = "-preBtnLongTouch2:"
+            startingLineNumber = "3185"
+            endingLineNumber = "3185"
+            landmarkName = "-preBtnLongTouch1:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -138,12 +138,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOTCamViewer/CameraLiveViewController.mm"
-            timestampString = "469202981.958997"
+            timestampString = "469289747.457964"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "3192"
-            endingLineNumber = "3192"
-            landmarkName = "-preBtnLongTouch4:"
+            startingLineNumber = "3199"
+            endingLineNumber = "3199"
+            landmarkName = "-preBtnLongTouch3:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

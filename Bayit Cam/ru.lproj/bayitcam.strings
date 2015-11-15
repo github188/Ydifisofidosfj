@@ -13,7 +13,6 @@
 "Quick Setup Info"="Pair the camera with your WiFi network wirelessly (no ethernet cable required).Works with most WiFi router configurations.";
 "Manually add a camera"="Manual Setup";
 "Manually add a camera Info"="Scan the QR code on your camera(ethernet cable required).";
-"Saving successful"="Saving successful";
 
 
 "Attention!"="Attention!";
@@ -24,8 +23,6 @@
 "Make sure your phone is connected to the WiFi network you want to setup the camera with."="Make sure your phone is connected to the WiFi network you want to setup the camera with.";
 "Search in LAN"="Search in LAN";
 "Search and add a camera in the Local Area Network."="Search and add a camera in the Local Area Network.";
-"Click to move preset, Longpress to save"="Click to move preset, Longpress to save";
-"Preset"="Preset";
 "No cameras added. Please add a camera"="No cameras added. \r\nPlease add a camera";
 "Do not show this message again"="Do not show this message again";
 "Micro SD Card required"="Micro SD Card required";

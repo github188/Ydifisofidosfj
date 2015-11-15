@@ -636,8 +636,8 @@ extern unsigned int _getTickCount() {
             self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"psd_bright",@"psd_contrast",nil];
             self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked", @"psd_bright_clicked",@"psd_contrast_clicked",nil];
 #else
-            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",nil];
-            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click",nil];
+            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot",@"ceo_presetting_enable.png", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",nil];
+            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked",@"ceo_presetting_clicked.png", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click",nil];
             
 #endif
 
@@ -684,13 +684,13 @@ extern unsigned int _getTickCount() {
             self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable",@"psd_bright",@"psd_contrast",nil];
             self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable",@"psd_bright_clicked",@"psd_contrast_clicked",nil];
 #else
-            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable", @"f+Btn", @"f-Btn",nil];
-            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable",@"f+Btn_Click", @"f-Btn_Click",nil];
+            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable",@"ceo_presetting_enable_disable.png", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable", @"f+Btn", @"f-Btn",nil];
+            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable",@"ceo_presetting_enable_disable.png", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable",@"f+Btn_Click", @"f-Btn_Click",nil];
 #endif
             
 #if defined(BayitCam)
-            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_recordstop", @"leo_snapshot",@"ceo_presetting_enable.png", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",nil];
-            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked",@"ceo_presetting_clicked.png", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",nil];
+            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_recordstop", @"leo_snapshot",@"ceo_presetting_enable_disable.png", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",nil];
+            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked",@"ceo_presetting_enable_disable.png", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",nil];
 #endif
             
             [self.horizMenu reloadData];
@@ -751,8 +751,8 @@ extern unsigned int _getTickCount() {
                 self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"psd_bright",@"psd_contrast",nil];
                 self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked", @"psd_bright_clicked",@"psd_contrast_clicked",nil];
 #else
-                self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode", @"f+Btn", @"f-Btn",nil];
-                self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click",nil];
+                self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot",@"ceo_presetting_enable.png", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode", @"f+Btn", @"f-Btn",nil];
+                self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked",@"ceo_presetting_clicked.png", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click",nil];
 #endif
 #if defined(BayitCam)
                 self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot",@"ceo_presetting_enable.png", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",nil];
@@ -1227,8 +1227,8 @@ extern unsigned int _getTickCount() {
     [longPress3 release];
     [longPress4 release];
     
-    self.prePositionTitleLbl.text=NSLocalizedStringFromTable(@"Preset", @"bayitcam", nil);
-    self.prePositionTipsLbl.text=NSLocalizedStringFromTable(@"Click to move preset, Longpress to save", @"bayitcam", nil);
+    self.prePositionTitleLbl.text=NSLocalizedString(@"Preset", @"");
+    self.prePositionTipsLbl.text=NSLocalizedString(@"Click to move preset, Longpress to save", @"");
     
     
     preBtnArr=@[self.preBtn1,self.preBtn2,self.preBtn3,self.preBtn4];
@@ -1334,8 +1334,8 @@ extern unsigned int _getTickCount() {
     self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"psd_bright",@"psd_contrast",nil];
     self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked", @"psd_bright_clicked",@"psd_contrast_clicked",nil];
 #else
-    self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",nil];
-    self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click",nil];
+    self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot",@"ceo_presetting_enable.png", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",nil];
+    self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked",@"ceo_presetting_clicked.png", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click",nil];
 #endif
 #if defined(BayitCam)
     self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot",@"ceo_presetting_enable.png", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",nil];
@@ -1950,7 +1950,7 @@ extern unsigned int _getTickCount() {
         SMsgAVIoctrlSetPresetResp *pResult=(SMsgAVIoctrlSetPresetResp*)data;
         if(pResult->result==0){
             NSLog(@"OK");
-            [[iToast makeText:NSLocalizedStringFromTable(@"Saving successful", @"bayitcam", nil)]show];
+            [[iToast makeText:NSLocalizedString(@"Saving successful", @"")]show];
         }
         else{
             NSLog(@"ERROR");
@@ -2584,25 +2584,19 @@ extern unsigned int _getTickCount() {
 #pragma mark HorizMenu Delegate
 -(void) horizMenu:(MKHorizMenu *)horizMenu itemTouchDownAtIndex:(NSUInteger)index{
     NSInteger offsetCount=0;
-    if(index==7-offsetCount){
-#if defined(BayitCam)
-        return;
-#endif
 #if defined(MAJESTICIPCAMP)
 #else
+    if(index==8-offsetCount){
         [self myPtzAction:AVIOCTRL_LENS_ZOOM_IN];
-        [self.horizMenu setUnselectedIndex:7 animated:YES];
-        [self.longHorizMenu setUnselectedIndex:7 animated:YES];
-#endif
-    }
-    else if(index==8-offsetCount){
-#if defined(MAJESTICIPCAMP)
-#else
-        [self myPtzAction:AVIOCTRL_LENS_ZOOM_OUT];
         [self.horizMenu setUnselectedIndex:8 animated:YES];
         [self.longHorizMenu setUnselectedIndex:8 animated:YES];
-#endif
     }
+    else if(index==9-offsetCount){
+        [self myPtzAction:AVIOCTRL_LENS_ZOOM_OUT];
+        [self.horizMenu setUnselectedIndex:9 animated:YES];
+        [self.longHorizMenu setUnselectedIndex:9 animated:YES];
+    }
+#endif
 }
 -(void) horizMenu:(MKHorizMenu *)horizMenu itemSelectedAtIndex:(NSUInteger)index
 {
@@ -2632,6 +2626,27 @@ extern unsigned int _getTickCount() {
     }
     else if(index>=4)
     {
+        index=index-1;
+    }
+#endif
+#if defined(MAJESTICIPCAMP)
+#else
+    if(index==3){
+        if(!isRecording){
+            if(isPrePosition){
+                self.prePositionView.hidden=YES;
+                self.myPtzView.hidden=NO;
+                isPrePosition=NO;
+            }
+            else{
+                self.prePositionView.hidden=NO;
+                self.myPtzView.hidden=YES;
+                isPrePosition=YES;
+            }
+        }
+        return;
+    }
+    if(index>=4){
         index=index-1;
     }
 #endif
