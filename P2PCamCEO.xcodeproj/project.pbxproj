@@ -25212,7 +25212,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.easynp.mkceye;
 				PRODUCT_NAME = "EasyN P copy";
-				PROVISIONING_PROFILE = "e965a50f-5217-4628-85dd-490e5df27f99";
+				PROVISIONING_PROFILE = "48a8ddde-a119-4cc2-b771-04813c54e711";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -25262,7 +25262,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.easynp.mkceye;
 				PRODUCT_NAME = "EasyN P copy";
-				PROVISIONING_PROFILE = "e965a50f-5217-4628-85dd-490e5df27f99";
+				PROVISIONING_PROFILE = "48a8ddde-a119-4cc2-b771-04813c54e711";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -25312,7 +25312,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.easynp.mkceye;
 				PRODUCT_NAME = "EasyN P copy";
-				PROVISIONING_PROFILE = "e965a50f-5217-4628-85dd-490e5df27f99";
+				PROVISIONING_PROFILE = "48a8ddde-a119-4cc2-b771-04813c54e711";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -25361,7 +25361,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.easynp.mkceye;
 				PRODUCT_NAME = "EasyN P copy";
-				PROVISIONING_PROFILE = "e965a50f-5217-4628-85dd-490e5df27f99";
+				PROVISIONING_PROFILE = "48a8ddde-a119-4cc2-b771-04813c54e711";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -26153,7 +26153,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ipcam.pvpv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d42c6d5a-6789-4bdc-ab4f-b5f55126a8a4";
+				PROVISIONING_PROFILE = "673a775c-e0d0-41ed-ab32-286a8a90698e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -26202,7 +26202,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ipcam.pvpv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d42c6d5a-6789-4bdc-ab4f-b5f55126a8a4";
+				PROVISIONING_PROFILE = "673a775c-e0d0-41ed-ab32-286a8a90698e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -26251,7 +26251,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ipcam.pvpv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d42c6d5a-6789-4bdc-ab4f-b5f55126a8a4";
+				PROVISIONING_PROFILE = "673a775c-e0d0-41ed-ab32-286a8a90698e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -26299,7 +26299,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ipcam.pvpv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d42c6d5a-6789-4bdc-ab4f-b5f55126a8a4";
+				PROVISIONING_PROFILE = "673a775c-e0d0-41ed-ab32-286a8a90698e";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
