@@ -1199,6 +1199,7 @@ extern unsigned int _getTickCount() {
     [_preBtn2 release];
     [_preBtn3 release];
     [_preBtn4 release];
+    [_preNumView release];
     [super dealloc];
 }
 
@@ -1229,6 +1230,11 @@ extern unsigned int _getTickCount() {
     
     self.prePositionTitleLbl.text=NSLocalizedString(@"Preset", @"");
     self.prePositionTipsLbl.text=NSLocalizedString(@"Click to move preset, Longpress to save", @"");
+    
+#if defined(MKCEYE)
+    self.prePositionTitleLbl.backgroundColor=HexRGB(0x92adb5);
+    self.preNumView.backgroundColor=HexRGB(0x92adb5);
+#endif
     
     
     preBtnArr=@[self.preBtn1,self.preBtn2,self.preBtn3,self.preBtn4];

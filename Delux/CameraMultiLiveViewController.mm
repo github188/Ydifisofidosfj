@@ -216,6 +216,7 @@ extern unsigned int _getTickCount() ;
     [alert show];
     [alert release];
 }
+#if defined(IDHDCONTROL)
 -(void)loadDeviceFromServer{
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     NSDictionary *dic=@{@"id":[NSString stringWithFormat:@"%ld",(long)[AccountInfo getUserId]]};
@@ -290,7 +291,7 @@ extern unsigned int _getTickCount() ;
         [self alertInfo:error.localizedDescription withTitle:@"提示"];
     }];
 }
-
+#endif
 - (void)loadDeviceFromDatabase {
     if (database != NULL) {
         

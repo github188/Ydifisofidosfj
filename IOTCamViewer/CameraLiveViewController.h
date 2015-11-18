@@ -286,6 +286,7 @@ extern NSString *deviceTokenString;
 @property (retain, nonatomic) IBOutlet UIButton *preBtn3;
 @property (retain, nonatomic) IBOutlet UIButton *preBtn4;
 - (IBAction)preAction:(UIButton *)sender;
+@property (retain, nonatomic) IBOutlet UIView *preNumView;
 
 
 @end

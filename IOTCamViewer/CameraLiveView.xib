@@ -77,6 +77,7 @@
                 <outlet property="preBtn2" destination="VXt-qB-GNh" id="2gx-QK-ate"/>
                 <outlet property="preBtn3" destination="J0h-23-JVd" id="wRd-yk-yVW"/>
                 <outlet property="preBtn4" destination="Reu-27-MPm" id="gEg-Y8-gDw"/>
+                <outlet property="preNumView" destination="3Oc-zk-ROc" id="Y6T-QZ-N61"/>
                 <outlet property="prePositionTipsLbl" destination="FUd-X7-8UB" id="5AG-lS-lch"/>
                 <outlet property="prePositionTitleLbl" destination="6Pz-WF-kpc" id="ElT-KB-44Q"/>
                 <outlet property="prePositionView" destination="wbg-Jy-8i1" id="nPB-QO-tRU"/>
