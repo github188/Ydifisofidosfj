@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "SignupViewController.h"
 #import "ForgotViewController.h"
+#import "HttpTool.h"
+#import "MBProgressHUD.h"
 
 @interface LoginViewController : UIViewController
 

@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HttpTool.h"
+#import "MBProgressHUD.h"
+#import "AccountInfo.h"
 
 @interface ForgotViewController : UIViewController
 

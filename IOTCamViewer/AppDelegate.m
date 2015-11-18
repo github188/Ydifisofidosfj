@@ -20,6 +20,7 @@
 #endif
 #if defined(IDHDCONTROL)
 #import "LoginViewController.h"
+#import "AccountInfo.h"
 #endif
 #if defined(EasynPTarget)
 //NSString *g_tpnsHostString = @"http://push1.ipcam.hk/apns/apns.php";
@@ -370,12 +371,18 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
     }
 #else
 #if defined(IDHDCONTROL)
-    
-    rootViewController = [[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil] autorelease];
-    UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];
-    [navigationController setNavigationBarHidden:YES];
-    [_window setRootViewController:navigationController];
-    
+    if(![AccountInfo isLogined]||![AccountInfo isRemember]){
+        rootViewController = [[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil] autorelease];
+        UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];
+        [navigationController setNavigationBarHidden:YES];
+        [_window setRootViewController:navigationController];
+    }
+    else{
+        rootViewController = [[[CameraMultiLiveViewController alloc] initWithNibName:@"CameraMultiLiveView" bundle:nil] autorelease];
+        UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];
+        [navigationController setNavigationBarHidden:YES];
+        [_window setRootViewController:navigationController];
+    }
 #else
     rootViewController = [[[CameraMultiLiveViewController alloc] initWithNibName:@"CameraMultiLiveView" bundle:nil] autorelease];
     UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];
