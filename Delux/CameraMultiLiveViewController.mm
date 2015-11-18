@@ -27,6 +27,11 @@
 #import "BayitCamViewController.h"
 #endif
 
+#if defined(IDHDCONTROL)
+#import "AccountInfo.h"
+#import "HttpTool.h"
+#endif
+
 #ifndef P2PCAMLIVE
 #define SHOW_SESSION_MODE
 #endif
@@ -206,9 +211,87 @@ extern unsigned int _getTickCount() ;
 {
     return interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown;
 }
+-(void)alertInfo:(NSString *)message withTitle:(NSString *)title{
+    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:title message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+    [alert show];
+    [alert release];
+}
+-(void)loadDeviceFromServer{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    NSDictionary *dic=@{@"id":[NSString stringWithFormat:@"%ld",(long)[AccountInfo getUserId]]};
+    HttpTool *httpTool=[HttpTool shareInstance];
+    [httpTool JsonGetRequst:@"/index.php?ctrl=app&act=getUuid" parameters:dic success:^(id responseObject) {
+        [MBProgressHUD hideAllHUDsForView: self.view animated:YES];
+        NSInteger code=[responseObject[@"code"]integerValue];
+        NSString *msg=responseObject[@"msg"];
+        if(code==1){
+            [self alertInfo:msg withTitle:@"提示"];
+        }
+        else{
+            //解析列表
+            NSMutableArray *arr=responseObject[@"list"];
+            for (NSInteger j=0; j<[arr count]; j++) {
+                NSString *uuid=arr[j][@"uuid"];
+                //UnBox
+                NSArray *uuidArr=[MyCamera unBoxUUID:uuid];
+                
+                NSString *uid = [uuidArr objectAtIndex:0];
+                NSString *name = [uuidArr objectAtIndex:3];
+                NSString *view_acc = @"admin";
+                NSString *view_pwd = [uuidArr objectAtIndex:1];
+                NSInteger channel = 0;
+                NSInteger isSync = NO;
+                NSInteger isFromCloud = NO;
+                NSLog(@"Load Camera(%@, %@, %@, %@, %d, ch:%d)", name, uid, view_acc, view_pwd, (int)isFromCloud, (int)channel);
+                
+                MyCamera *tempCamera = [[MyCamera alloc] initWithName:name viewAccount:view_acc viewPassword:view_pwd];
+                [tempCamera setLastChannel:channel];
+                [tempCamera connect:uid];
+                [tempCamera setSync:isSync];
+                [tempCamera setCloud:isFromCloud];
+                [tempCamera start:0];
+                
+                
+                //[tempCamera startShow:channel ScreenObject:self];
+                
+                SMsgAVIoctrlGetAudioOutFormatReq *s = (SMsgAVIoctrlGetAudioOutFormatReq *)malloc(sizeof(SMsgAVIoctrlGetAudioOutFormatReq));
+                s->channel = 0;
+                [tempCamera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GETAUDIOOUTFORMAT_REQ Data:(char *)s DataSize:sizeof(SMsgAVIoctrlGetAudioOutFormatReq)];
+                free(s);
+                
+                SMsgAVIoctrlGetSupportStreamReq *s2 = (SMsgAVIoctrlGetSupportStreamReq *)malloc(sizeof(SMsgAVIoctrlGetSupportStreamReq));
+                [tempCamera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GETSUPPORTSTREAM_REQ Data:(char *)s2 DataSize:sizeof(SMsgAVIoctrlGetSupportStreamReq)];
+                free(s2);
+                
+                SMsgAVIoctrlTimeZone s3={0};
+                s3.cbSize = sizeof(s3);
+                [tempCamera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];
+                
+                
+                [camera_list addObject:tempCamera];
+                [tempCamera release];
+                
+                SMsgAVIoctrlSetStreamCtrlReq *ss = (SMsgAVIoctrlSetStreamCtrlReq *)malloc(sizeof(SMsgAVIoctrlSetStreamCtrlReq));
+                memset(ss, 0, sizeof(SMsgAVIoctrlSetStreamCtrlReq));
+                
+                ss->channel = 0;
+                ss->quality = AVIOCTRL_QUALITY_MIN;
+                [tempCamera sendIOCtrlToChannel:0
+                                           Type:IOTYPE_USER_IPCAM_SETSTREAMCTRL_REQ
+                                           Data:(char *)ss
+                                       DataSize:sizeof(SMsgAVIoctrlSetStreamCtrlReq)];
+                free(ss);
+            }
+            [self checkStatus];
+            [self reStartShow];
+        }
+    } failure:^(NSError *error) {
+        [MBProgressHUD hideAllHUDsForView: self.view animated:YES];
+        [self alertInfo:error.localizedDescription withTitle:@"提示"];
+    }];
+}
 
 - (void)loadDeviceFromDatabase {
-    
     if (database != NULL) {
         
         FMResultSet *rs = [database executeQuery:@"SELECT * FROM device"];
@@ -1106,9 +1189,11 @@ extern unsigned int _getTickCount() ;
 	
 	
 	isMoreSetOpen = NO;
-
+#if defined(IDHDCONTROL)
+    [self loadDeviceFromServer];
+#else
     [self loadDeviceFromDatabase];
-    
+#endif
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     if ([userDefaults objectForKey:@"cloudUserPassword"] && ![[userDefaults objectForKey:@"cloudUserPassword"] isEqualToString:@""]){
         [self loadCamList];
@@ -2001,9 +2086,31 @@ if(!isGoPlayEvent){
 #pragma mark - AddCameraDelegate Methods
 - (void)camera:(NSString *)UID didAddwithName:(NSString *)name password:(NSString *)password syncOnCloud:(BOOL)isSync addToCloud:(BOOL)isAdd addFromCloud:(BOOL)isFromCloud {
     
+
+    
     MyCamera *camera_ = [[MyCamera alloc] initWithName:name viewAccount:@"admin" viewPassword:password];
     [camera_ connect:UID];
     [camera_ start:0];
+    
+#if defined(IDHDCONTROL)
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    NSDictionary *dic=@{@"id":[NSString stringWithFormat:@"%ld",(long)[AccountInfo getUserId]],@"uuid":[MyCamera boxUUID:camera_]};
+    HttpTool *httpTool=[HttpTool shareInstance];
+    [httpTool JsonGetRequst:@"/index.php?ctrl=app&act=saveUuid" parameters:dic success:^(id responseObject) {
+        [MBProgressHUD hideAllHUDsForView: self.view animated:YES];
+        NSInteger code=[responseObject[@"code"]integerValue];
+        NSString *msg=responseObject[@"msg"];
+        if(code==1){
+            [self alertInfo:msg withTitle:@"提示"];
+        }
+        else{
+            
+        }
+    } failure:^(NSError *error) {
+        [MBProgressHUD hideAllHUDsForView: self.view animated:YES];
+        [self alertInfo:error.localizedDescription withTitle:@"提示"];
+    }];
+#endif
     
     SMsgAVIoctrlGetAudioOutFormatReq *s = (SMsgAVIoctrlGetAudioOutFormatReq *)malloc(sizeof(SMsgAVIoctrlGetAudioOutFormatReq));
     s->channel = 0;
@@ -2207,6 +2314,26 @@ if(!isGoPlayEvent){
 
 #pragma mark - EditCameraDefaultDelegate Methods
 - (void)didRemoveDevice:(MyCamera *)removedCamera {
+#if defined(IDHDCONTROL)
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    NSDictionary *dic=@{@"id":[NSString stringWithFormat:@"%ld",(long)[AccountInfo getUserId]],@"uuid":removedCamera.uid};
+    HttpTool *httpTool=[HttpTool shareInstance];
+    [httpTool JsonGetRequst:@"/index.php?ctrl=app&act=delUuid" parameters:dic success:^(id responseObject) {
+        [MBProgressHUD hideAllHUDsForView: self.view animated:YES];
+        NSInteger code=[responseObject[@"code"]integerValue];
+        NSString *msg=responseObject[@"msg"];
+        if(code==1){
+            [self alertInfo:msg withTitle:@"提示"];
+        }
+        else{
+            //[self alertInfo:msg withTitle:@"提示"];
+        }
+    } failure:^(NSError *error) {
+        [MBProgressHUD hideAllHUDsForView: self.view animated:YES];
+        [self alertInfo:error.localizedDescription withTitle:@"提示"];
+    }];
+#endif
+    
     NSString *uid = removedCamera.uid;
  
     [removedCamera stop:0];

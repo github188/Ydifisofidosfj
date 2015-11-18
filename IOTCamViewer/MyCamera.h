@@ -80,6 +80,9 @@
 
 -(void)setCameraSummaryTime:(BOOL)yesOrNo;
 -(BOOL)getCameraSummartTime;
+
++(NSString *)boxUUID:(MyCamera *)camera;
++(NSArray *)unBoxUUID:(NSString *)strs;
 @end
 
 @protocol MyCameraDelegate <NSObject>

@@ -31,6 +31,10 @@
 #import "EditCameraDefaultController.h"
 #import "DeviceListOnCloud.h"
 #import "MBProgressHUD.h"
+#if defined(IDHDCONTROL)
+#import "AccountInfo.h"
+#import "HttpTool.h"
+#endif
 
 extern NSMutableArray *camera_list;
 extern FMDatabase *database;

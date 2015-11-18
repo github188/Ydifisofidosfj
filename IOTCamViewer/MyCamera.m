@@ -117,7 +117,26 @@ BOOL g_bDiagnostic = FALSE;
 {
     return ([self getServiceTypeOfChannel:channel] & (0x01<<15)) == 0;
 }
-
++(NSString *)boxUUID:(MyCamera *)camera{
+    //uid/密码/画质等级-摄像机名称
+    return [NSString stringWithFormat:@"%@/%@/%d-%@",camera.uid,camera.viewPwd,1,camera.name];
+}
++(NSArray *)unBoxUUID:(NSString *)strs{
+    NSArray *arr=[strs componentsSeparatedByString:@"/"];
+    NSString *uid=[arr objectAtIndex:0];
+    if([arr count]==1){
+        return [NSArray arrayWithObjects:uid,@"admin",@"1",@"camera",nil];
+    }
+    
+    NSString *pwd=[arr objectAtIndex:1];
+    NSString *other=[arr objectAtIndex:2];
+    
+    NSArray *otherArr=[other componentsSeparatedByString:@"-"];
+    NSString *q=[otherArr objectAtIndex:0];
+    NSString *name=[otherArr objectAtIndex:1];
+    
+    return [NSArray arrayWithObjects:uid,pwd,q,name,nil];
+}
 #pragma mark - 
 
 - (id)init
