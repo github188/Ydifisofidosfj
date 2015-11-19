@@ -2637,17 +2637,27 @@ extern unsigned int _getTickCount() {
 #endif
 #if defined(MAJESTICIPCAMP)
 #else
+    if(index!=3){
+        isPrePosition=NO;
+    }
     if(index==3){
         if(!isRecording){
             if(isPrePosition){
                 self.prePositionView.hidden=YES;
                 self.myPtzView.hidden=NO;
                 isPrePosition=NO;
+                
+                [self.horizMenu setUnselectedIndex:3 animated:YES];
+                [self.longHorizMenu setUnselectedIndex:3 animated:YES];
             }
             else{
                 self.prePositionView.hidden=NO;
                 self.myPtzView.hidden=YES;
                 isPrePosition=YES;
+                
+                [self.horizMenu setSelectedIndex:3 animated:YES];
+                [self.longHorizMenu setUnselectedIndex:3 animated:YES];
+                
             }
         }
         return;
