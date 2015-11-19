@@ -14,3 +14,5 @@
 "AddApWifiWaitingTips"="Configurando wifi, espere";
 "AddApWifiErrorTips"="Conexión wifi fallada, compruebe la clave de nuevo";
 "ViewPsdLbl"="Enseñar clave";
+
+"Warning"="Attention";

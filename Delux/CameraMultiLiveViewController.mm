@@ -1275,6 +1275,11 @@ extern unsigned int _getTickCount() ;
 #if defined(BayitCam)
     self.setupVideoBtn.hidden=NO;
     [self.setupVideoBtn setTitle:NSLocalizedStringFromTable(@"SetupVideo", @"bayitcam", nil) forState:UIControlStateNormal];
+    
+    logInOut.hidden=YES;
+    
+    infoBTN.frame=CGRectMake(infoBTN.frame.origin.x, 34, infoBTN.frame.size.width, infoBTN.frame.size.height);
+    self.setupVideoBtn.frame=CGRectMake(self.setupVideoBtn.frame.origin.x, 68, self.setupVideoBtn.frame.size.width, self.setupVideoBtn.frame.size.height);
 #endif
     
     [super viewDidLoad];

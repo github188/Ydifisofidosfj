@@ -11,6 +11,9 @@
 #import "MBProgressHUD.h"
 
 @interface AddWithApCamera2Controller : UIViewController<UIAlertViewDelegate,LANSearchDelegate,UITextFieldDelegate>
+{
+    NSString *alertInfoTitle;
+}
 
 @property (retain, nonatomic) IBOutlet UILabel *ssidLbl;
 @property (retain, nonatomic) IBOutlet UILabel *psdLbl;

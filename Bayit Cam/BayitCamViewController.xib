@@ -12,7 +12,6 @@
                 <outlet property="remberLbl" destination="THu-zJ-0jE" id="RVB-KO-jic"/>
                 <outlet property="remeberBtn" destination="Rbb-Ye-oha" id="eWS-BR-vUM"/>
                 <outlet property="skipBtn" destination="xkT-0m-ik5" id="tyl-a9-fcm"/>
-                <outlet property="urlBtn" destination="aJc-6j-grw" id="S1t-zM-VpT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -46,27 +45,17 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIH-Vb-5VM">
-                    <rect key="frame" x="16" y="62" width="568" height="110"/>
+                    <rect key="frame" x="16" y="62" width="568" height="125"/>
                     <animations/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="110" id="hON-02-QTV"/>
+                        <constraint firstAttribute="height" constant="125" id="hON-02-QTV"/>
                     </constraints>
-                    <string key="text">We have developed a new easier method for setting up your camera, as a result the WPS setup option (shown in the manual included) is no longer available. 
-Please take a look at the video in the following link for instructions on how to setup your camera.</string>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <string key="text">Thank you for purchasing Bayit Cam, in order to ensure an easy and smooth setup experience we have prepared the below setup video to walk you through getting your camera setup quickly. Please take a look at the below setup video for instructions on how to setup your Bayit Cam.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" red="0.6470588235294118" green="0.6470588235294118" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJc-6j-grw">
-                    <rect key="frame" x="16" y="177" width="568" height="30"/>
-                    <animations/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <state key="normal" title="https://www.youtube.com/watch?v=rq2uMHJnpcg"/>
-                    <connections>
-                        <action selector="urlAction:" destination="-1" eventType="touchUpInside" id="4Pd-g4-grp"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbb-Ye-oha">
                     <rect key="frame" x="16" y="563" width="24" height="24"/>
                     <animations/>
@@ -99,17 +88,14 @@ Please take a look at the video in the following link for instructions on how to
                 <constraint firstItem="THu-zJ-0jE" firstAttribute="leading" secondItem="Rbb-Ye-oha" secondAttribute="leading" constant="30" id="CZy-aC-96L"/>
                 <constraint firstAttribute="bottom" secondItem="xkT-0m-ik5" secondAttribute="bottom" constant="8" id="Cyw-Wn-Itg"/>
                 <constraint firstAttribute="trailing" secondItem="xkT-0m-ik5" secondAttribute="trailing" constant="16" id="D5K-lZ-8Sx"/>
-                <constraint firstItem="aJc-6j-grw" firstAttribute="top" secondItem="UIH-Vb-5VM" secondAttribute="bottom" constant="5" id="DAG-OU-gkd"/>
                 <constraint firstAttribute="bottom" secondItem="Rbb-Ye-oha" secondAttribute="bottom" constant="13" id="DsX-5t-HkA"/>
                 <constraint firstItem="UIH-Vb-5VM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="STX-sI-2Bf"/>
                 <constraint firstItem="c7d-dE-cxe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="a3J-wx-uRE"/>
                 <constraint firstItem="c7d-dE-cxe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="aAd-vj-W3O"/>
-                <constraint firstItem="aJc-6j-grw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="fRh-BM-HHj"/>
                 <constraint firstItem="c7d-dE-cxe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="h5K-YX-lwg"/>
                 <constraint firstItem="UIH-Vb-5VM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="h9X-SR-sAB"/>
                 <constraint firstItem="Rbb-Ye-oha" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="jzw-3i-vm4"/>
                 <constraint firstItem="UIH-Vb-5VM" firstAttribute="top" secondItem="c7d-dE-cxe" secondAttribute="top" constant="32" id="kAh-yU-suO"/>
-                <constraint firstAttribute="trailing" secondItem="aJc-6j-grw" secondAttribute="trailing" constant="16" id="qIG-dZ-eVH"/>
                 <constraint firstAttribute="bottom" secondItem="THu-zJ-0jE" secondAttribute="bottom" constant="15" id="vxK-Qm-JZe"/>
             </constraints>
         </view>

@@ -14,3 +14,5 @@
 "AddApWifiWaitingTips"="Le Wi-Fi est en configuration veuillez attendre quelques instants.";
 "AddApWifiErrorTips"="La connexion Wi-Fi a échouer, veuillez confirmer le mot de passe Wi-Fi";
 "ViewPsdLbl"="Afficher le mot de passe";
+
+"Warning"="Attention";

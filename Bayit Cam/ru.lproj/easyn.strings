@@ -14,3 +14,5 @@
 "AddApWifiWaitingTips"="Настройка wi-fi, ожидайте";
 "AddApWifiErrorTips"="Подключение Wi-Fi не удалось, пожалуйста, подтвердите ваш пароль Wi-Fi!";
 "ViewPsdLbl"="Показать пароль";
+
+"Warning"="Attention";

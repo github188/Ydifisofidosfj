@@ -22,10 +22,6 @@
 @property (retain, nonatomic) IBOutlet UILabel *attentionLbl;
 @property (retain, nonatomic) IBOutlet UILabel *infoTextView;
 
-
-@property (retain, nonatomic) IBOutlet UIButton *urlBtn;
-- (IBAction)urlAction:(id)sender;
-
 @property(nonatomic) BOOL isFromFormUI;
 
 

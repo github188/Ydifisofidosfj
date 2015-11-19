@@ -54,6 +54,12 @@
     [self.psdLbl setTextColor:HexRGB(0x3d3c3c)];
     [self.viewPsdLbl setTextColor:HexRGB(0x3d3c3c)];
 #endif
+    
+    alertInfoTitle=NSLocalizedString(@"Warning", @"");
+    
+#if defined(BayitCam)
+    alertInfoTitle = NSLocalizedStringFromTable(@"Warning", @"easyn", nil);
+#endif
 }
 - (BOOL)textFieldShouldReturn:(UITextField *) textField
 {
@@ -121,23 +127,23 @@
     
     if (ssid == nil || [ssid length] == 0) {
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Warning", @"") message:NSLocalizedStringFromTable(@"AddApWifiSSIDTips", @"easyn", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", @"") otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:alertInfoTitle message:NSLocalizedStringFromTable(@"AddApWifiSSIDTips", @"easyn", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", @"") otherButtonTitles:nil];
         [alert show];
     }
     else if (password == nil || [password length] == 0) {
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Warning", @"") message:NSLocalizedStringFromTable(@"AddApWifiPsdTips", @"easyn", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", @"") otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:alertInfoTitle message:NSLocalizedStringFromTable(@"AddApWifiPsdTips", @"easyn", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", @"") otherButtonTitles:nil];
         [alert show];
     }
     else if([ssid length] > 0 && [password length] > 0) {
-        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"Warning", @"") message:NSLocalizedStringFromTable(@"AddApWifiAudioTips", @"easyn", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"YES", @"") otherButtonTitles:NSLocalizedString(@"NO", @""), nil];
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:alertInfoTitle message:NSLocalizedStringFromTable(@"AddApWifiAudioTips", @"easyn", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"YES", @"") otherButtonTitles:NSLocalizedString(@"NO", @""), nil];
         [alert show];
         [alert release];
     }
 }
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if(buttonIndex==1){
-        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"Warning", @"") message:NSLocalizedStringFromTable(@"AddApWifiResetTips", @"easyn", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", @"") otherButtonTitles:nil, nil];
+        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:alertInfoTitle message:NSLocalizedStringFromTable(@"AddApWifiResetTips", @"easyn", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", @"") otherButtonTitles:nil, nil];
         [alert show];
         [alert release];
     }
@@ -183,7 +189,7 @@
                     }];
                 }
                 else{
-                    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:NSLocalizedString(@"Warning", @"") message:NSLocalizedStringFromTable(@"AddApWifiErrorTips", @"easyn", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"Warning", @"") otherButtonTitles:nil, nil];
+                    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:alertInfoTitle message:NSLocalizedStringFromTable(@"AddApWifiErrorTips", @"easyn", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"Warning", @"") otherButtonTitles:nil, nil];
                     [alert show];
                     [alert release];
 #if TARGET_IPHONE_SIMULATOR

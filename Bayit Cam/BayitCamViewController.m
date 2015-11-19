@@ -41,7 +41,6 @@
     [self.skipBtn setTitle:NSLocalizedString(@"GuidSkip", @"") forState:UIControlStateNormal];
     self.attentionLbl.text=NSLocalizedStringFromTable(@"Attention!", @"bayitcam", nil);
     self.infoTextView.text=NSLocalizedStringFromTable(@"We have developed a new easier method for setting up your camera, as a result the WPS setup option (shown in the manual included) is no longer available.Please take a look at the video in the following link for instructions on how to setup your camera.", @"bayitcam", nil);
-    [self.urlBtn setTitle:NSLocalizedStringFromTable(@"startUrl", @"bayitcam", nil) forState:UIControlStateNormal];
     self.remberLbl.text=NSLocalizedStringFromTable(@"Do not show this message again", @"bayitcam", nil);
     
     
@@ -51,7 +50,7 @@
 }
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
-    webView.frame=CGRectMake(15, self.urlBtn.frame.origin.y+self.urlBtn.frame.size.height, self.view.frame.size.width-30, self.view.frame.size.height-self.skipBtn.frame.size.height-15-(self.urlBtn.frame.origin.y+self.urlBtn.frame.size.height));
+    webView.frame=CGRectMake(15, self.infoTextView.frame.origin.y+self.infoTextView.frame.size.height, self.view.frame.size.width-30, self.view.frame.size.height-self.skipBtn.frame.size.height-15-(self.infoTextView.frame.origin.y+self.infoTextView.frame.size.height));
     NSURL *movieFile=[NSURL URLWithString:@"https://www.youtube.com/embed/rq2uMHJnpcg"];
     [webView loadRequest:[NSURLRequest requestWithURL:movieFile]];
 }
@@ -82,7 +81,6 @@
     [_skipBtn release];
     [_attentionLbl release];
     [_infoTextView release];
-    [_urlBtn release];
     [webView release];
     [_remberLbl release];
     [_remeberBtn release];
@@ -101,9 +99,6 @@
     UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:vc] autorelease];
     [navigationController setNavigationBarHidden:YES];
     [delegate.window setRootViewController:navigationController];
-}
-- (IBAction)urlAction:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:NSLocalizedStringFromTable(@"startUrl", @"bayitcam", nil)]];
 }
 - (IBAction)remberClick:(id)sender {
     self.remeberBtn.selected=!self.remeberBtn.selected;

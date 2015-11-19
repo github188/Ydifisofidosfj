@@ -9,8 +9,10 @@
 "AddApWifiStep3SettingBtnTitle"="NEXT";
 "AddApWifiSSIDTips"="SSID can not be empty!";
 "AddApWifiPsdTips"="Password can not be empty!";
-"AddApWifiAudioTips"="If any Ding-dong tone from camera?";
-"AddApWifiResetTips"="Press the RESET button at the bottom of camera for 10 seconds for RESET";
+"AddApWifiAudioTips"="Is there music playing from the camera speaker?";
+"AddApWifiResetTips"="Please reset the camera to factory settings by holding a pin in the reset hole on the bottom of the camera for 10 seconds.";
 "AddApWifiWaitingTips"="Wi-Fi configuration in progress, please wait";
 "AddApWifiErrorTips"="WIFI connection failed, please confirm your wifi password!";
 "ViewPsdLbl"="Show password";
+
+"Warning"="Attention";
