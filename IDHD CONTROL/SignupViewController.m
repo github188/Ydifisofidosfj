@@ -17,6 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [self.submitBtn setTitle:NSLocalizedStringFromTable(@"Submit", @"login", nil) forState:UIControlStateNormal];
+    self.emailField.placeholder=NSLocalizedStringFromTable(@"EmailTips", @"login", nil);
+    self.userNameField.placeholder=NSLocalizedStringFromTable(@"UserNameTips", @"login", nil);
+    self.passwordField.placeholder=NSLocalizedStringFromTable(@"firstPasswordTips", @"login", nil);
+    self.confirmPasswordField.placeholder=NSLocalizedStringFromTable(@"secondPasswordTips", @"login", nil);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,19 +56,19 @@
     NSString *rePsd=[self.confirmPasswordField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
     if(email.length==0||![email containsString:@"@"]){
-        [self alertInfo:@"请输入有效的Email" withTitle:@"提示"];
+        [self alertInfo:NSLocalizedStringFromTable(@"请输入有效的Email", @"login", nil) withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
         return;
     }
     if(user.length<6){
-        [self alertInfo:@"请输入至少6位长度的帐号" withTitle:@"提示"];
+        [self alertInfo:NSLocalizedStringFromTable(@"请输入至少6位长度的帐号", @"login", nil) withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
         return;
     }
     if(psd.length<6||psd.length>16){
-        [self alertInfo:@"请输入长度为6-16位的密码" withTitle:@"提示"];
+        [self alertInfo:NSLocalizedStringFromTable(@"请输入长度为6-16位的密码", @"login", nil) withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
         return;
     }
     if(![psd isEqualToString:rePsd]){
-        [self alertInfo:@"两次密码输入不一致" withTitle:@"提示"];
+        [self alertInfo:NSLocalizedStringFromTable(@"两次密码输入不一致", @"login", nil) withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
         return;
     }
     
@@ -74,18 +80,18 @@
         NSInteger code=[responseObject[@"code"]integerValue];
         NSString *msg=responseObject[@"msg"];
         if(code==1){
-            [self alertInfo:msg withTitle:@"提示"];
+            [self alertInfo:msg withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
         }
         else{
             [self back:nil];
         }
     } failure:^(NSError *error) {
         [MBProgressHUD hideAllHUDsForView: self.view animated:YES];
-        [self alertInfo:error.localizedDescription withTitle:@"提示"];
+        [self alertInfo:error.localizedDescription withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
     }];
 }
 -(void)alertInfo:(NSString *)message withTitle:(NSString *)title{
-    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:title message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:title message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:NSLocalizedStringFromTable(@"确定", @"login", nil), nil];
     [alert show];
     [alert release];
 }

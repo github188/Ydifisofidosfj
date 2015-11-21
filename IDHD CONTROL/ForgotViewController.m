@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.emailField.placeholder=NSLocalizedStringFromTable(@"EmailTips", @"login", nil);
+    [self.submitBtn setTitle:NSLocalizedStringFromTable(@"Submit", @"login", nil) forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,14 +46,14 @@
     [super dealloc];
 }
 -(void)alertInfo:(NSString *)message withTitle:(NSString *)title{
-    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:title message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:title message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:NSLocalizedStringFromTable(@"确定", @"login", nil), nil];
     [alert show];
     [alert release];
 }
 - (IBAction)submit:(id)sender {
     NSString *email=[self.emailField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     if(email.length==0||![email containsString:@"@"]){
-        [self alertInfo:@"请输入有效的Email" withTitle:@"提示"];
+        [self alertInfo:NSLocalizedStringFromTable(@"请输入有效的Email", @"login", nil) withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
         return;
     }
     
@@ -62,15 +65,15 @@
         NSInteger code=[responseObject[@"code"]integerValue];
         NSString *msg=responseObject[@"msg"];
         if(code==1){
-            [self alertInfo:msg withTitle:@"提示"];
+            [self alertInfo:msg withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
         }
         else{
-            [self alertInfo:msg withTitle:@"提示"];
+            [self alertInfo:msg withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
             [self back:nil];
         }
     } failure:^(NSError *error) {
         [MBProgressHUD hideAllHUDsForView: self.view animated:YES];
-        [self alertInfo:error.localizedDescription withTitle:@"提示"];
+        [self alertInfo:error.localizedDescription withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
     }];
 }
 @end

@@ -317,7 +317,6 @@
 		0637340D1BE2406200F767A8 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = D87DB2DF151C5BC700AC9123 /* camera.png */; };
 		0637340E1BE2406200F767A8 /* moreset_list1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CDA194EB73C00F5AA11 /* moreset_list1@2x.png */; };
 		0637340F1BE2406200F767A8 /* onlinebar.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A553CE9194EB73C00F5AA11 /* onlinebar.png */; };
-		063734101BE2406200F767A8 /* easyn.strings in Resources */ = {isa = PBXBuildFile; fileRef = 068879391ABE1B900017A41A /* easyn.strings */; };
 		063734121BE2406200F767A8 /* leo_speaker_off_disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0B1C4F19A466950071E5CF /* leo_speaker_off_disable.png */; };
 		063734131BE2406200F767A8 /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D87DB2E0151C5BC700AC9123 /* camera@2x.png */; };
 		063734141BE2406200F767A8 /* leo_emode_disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A0B1C4719A466950071E5CF /* leo_emode_disable.png */; };
@@ -1624,6 +1623,9 @@
 		06642F6B1B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06642F651B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg */; };
 		06642F6C1B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06642F651B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg */; };
 		0666CB7B1BF37DC90067668B /* tips_elec.png in Resources */ = {isa = PBXBuildFile; fileRef = 0666CB791BF37DA30067668B /* tips_elec.png */; };
+		066B41141C0072CC0050D493 /* easyn.strings in Resources */ = {isa = PBXBuildFile; fileRef = 066B41101C0072CC0050D493 /* easyn.strings */; };
+		066B41151C0072CC0050D493 /* zxingLangString.strings in Resources */ = {isa = PBXBuildFile; fileRef = 066B41121C0072CC0050D493 /* zxingLangString.strings */; };
+		066B411A1C007A130050D493 /* login.strings in Resources */ = {isa = PBXBuildFile; fileRef = 066B411C1C007A130050D493 /* login.strings */; };
 		066C78491BDA5C2400419134 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AC3148C5342007705B6 /* main.m */; };
 		066C784A1BDA5C2400419134 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AC7148C5343007705B6 /* AppDelegate.m */; };
 		066C784B1BDA5C2400419134 /* CameraListForLiveViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AE3148C657B007705B6 /* CameraListForLiveViewController.mm */; };
@@ -9457,6 +9459,12 @@
 		066041FB1B23161B00FB6F32 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		06642F651B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "6chlist_bk_bg@2x.jpg"; sourceTree = "<group>"; };
 		0666CB791BF37DA30067668B /* tips_elec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tips_elec.png; path = "Bayit Cam/images/tips_elec.png"; sourceTree = "<group>"; };
+		066B41111C0072CC0050D493 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "IDHD CONTROL/en.lproj/easyn.strings"; sourceTree = "<group>"; };
+		066B41131C0072CC0050D493 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "IDHD CONTROL/en.lproj/zxingLangString.strings"; sourceTree = "<group>"; };
+		066B41161C0072D90050D493 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = "IDHD CONTROL/fr.lproj/easyn.strings"; sourceTree = "<group>"; };
+		066B41171C0072E20050D493 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = "IDHD CONTROL/fr.lproj/zxingLangString.strings"; sourceTree = "<group>"; };
+		066B411B1C007A130050D493 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/login.strings; sourceTree = "<group>"; };
+		066B411D1C007A180050D493 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/login.strings; sourceTree = "<group>"; };
 		066C7AA11BDA5C2400419134 /* Bluefieldipc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bluefieldipc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		066C7AA41BDA5D5D00419134 /* Bluefieldipc-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Bluefieldipc-Info.plist"; path = "Bluefieldipc/Bluefieldipc-Info.plist"; sourceTree = "<group>"; };
 		066C7AA81BDA5D9A00419134 /* mydown1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mydown1@2x.png"; sourceTree = "<group>"; };
@@ -11947,6 +11955,8 @@
 		0637359B1BE2414C00F767A8 /* IDHD CONTROL */ = {
 			isa = PBXGroup;
 			children = (
+				066B41101C0072CC0050D493 /* easyn.strings */,
+				066B41121C0072CC0050D493 /* zxingLangString.strings */,
 				063735EC1BE242C400F767A8 /* aztechjt */,
 				063735E81BE2422A00F767A8 /* Localizable.strings */,
 				063735A31BE241A600F767A8 /* images */,
@@ -11964,6 +11974,7 @@
 				06B165BA1BFB6E2200931E99 /* ForgotViewController.xib */,
 				06DE27C61BFCD708005A068F /* AccountInfo.h */,
 				06DE27C71BFCD708005A068F /* AccountInfo.m */,
+				066B411C1C007A130050D493 /* login.strings */,
 			);
 			name = "IDHD CONTROL";
 			sourceTree = "<group>";
@@ -15066,6 +15077,7 @@
 				063733BC1BE2406200F767A8 /* more_changech_clicked.png in Resources */,
 				063733BD1BE2406200F767A8 /* login_pw_bk.png in Resources */,
 				06B165951BFB5A4E00931E99 /* Checked@3x.png in Resources */,
+				066B41141C0072CC0050D493 /* easyn.strings in Resources */,
 				063733BE1BE2406200F767A8 /* login_bk.png in Resources */,
 				063733C01BE2406200F767A8 /* add_wifi_1.png in Resources */,
 				063733C11BE2406200F767A8 /* DirectDisplayShader.fsh in Resources */,
@@ -15148,7 +15160,6 @@
 				0637340D1BE2406200F767A8 /* camera.png in Resources */,
 				0637340E1BE2406200F767A8 /* moreset_list1@2x.png in Resources */,
 				0637340F1BE2406200F767A8 /* onlinebar.png in Resources */,
-				063734101BE2406200F767A8 /* easyn.strings in Resources */,
 				063734121BE2406200F767A8 /* leo_speaker_off_disable.png in Resources */,
 				063734131BE2406200F767A8 /* camera@2x.png in Resources */,
 				063734141BE2406200F767A8 /* leo_emode_disable.png in Resources */,
@@ -15395,6 +15406,7 @@
 				063734F01BE2406200F767A8 /* CheckView.xib in Resources */,
 				06B165AA1BFB5A4E00931E99 /* submit@2x.png in Resources */,
 				063734F11BE2406200F767A8 /* ceo_record@2x.png in Resources */,
+				066B411A1C007A130050D493 /* login.strings in Resources */,
 				063734F21BE2406200F767A8 /* ceo_record_tab_r.png in Resources */,
 				06B165AD1BFB5A4E00931E99 /* user@3x.png in Resources */,
 				063734F31BE2406200F767A8 /* leo_qvga_clicked.png in Resources */,
@@ -15446,6 +15458,7 @@
 				063735201BE2406200F767A8 /* add_local_clicked.png in Resources */,
 				063735211BE2406200F767A8 /* more_photo.png in Resources */,
 				063735221BE2406200F767A8 /* toolbar_bk.png in Resources */,
+				066B41151C0072CC0050D493 /* zxingLangString.strings in Resources */,
 				063735241BE2406200F767A8 /* liveview_info@2x.png in Resources */,
 				063735251BE2406200F767A8 /* drop_refresh_clicked@2x.png in Resources */,
 				063735261BE2406200F767A8 /* moreset_listm_clicked@2x.png in Resources */,
@@ -23898,6 +23911,34 @@
 			);
 			name = InfoPlist.strings;
 			path = QTAIDT;
+			sourceTree = "<group>";
+		};
+		066B41101C0072CC0050D493 /* easyn.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				066B41111C0072CC0050D493 /* en */,
+				066B41161C0072D90050D493 /* fr */,
+			);
+			name = easyn.strings;
+			sourceTree = "<group>";
+		};
+		066B41121C0072CC0050D493 /* zxingLangString.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				066B41131C0072CC0050D493 /* en */,
+				066B41171C0072E20050D493 /* fr */,
+			);
+			name = zxingLangString.strings;
+			sourceTree = "<group>";
+		};
+		066B411C1C007A130050D493 /* login.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				066B411B1C007A130050D493 /* en */,
+				066B411D1C007A180050D493 /* fr */,
+			);
+			name = login.strings;
+			path = "IDHD CONTROL";
 			sourceTree = "<group>";
 		};
 		066C7ABC1BDA5E0F00419134 /* easyn.strings */ = {
