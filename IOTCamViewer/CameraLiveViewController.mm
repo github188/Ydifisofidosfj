@@ -689,8 +689,8 @@ extern unsigned int _getTickCount() {
 #endif
             
 #if defined(BayitCam)
-            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_recordstop", @"leo_snapshot",@"ceo_presetting_enable_disable.png", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",nil];
-            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked",@"ceo_presetting_enable_disable.png", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",nil];
+            self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable",@"ceo_presetting_enable_disable.png", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable",nil];
+            self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_off_disable", @"ceo_recordstop", @"leo_snapshot_disable",@"ceo_presetting_enable_disable.png", @"leo_mirror_ud_disable", @"leo_mirror_rl_disable", @"leo_qvga_disable", @"leo_emode_disable",nil];
 #endif
             
             [self.horizMenu reloadData];
@@ -2634,7 +2634,7 @@ extern unsigned int _getTickCount() {
     {
         index=index-1;
     }
-#endif
+#else
 #if defined(MAJESTICIPCAMP)
 #else
     if(index!=3){
@@ -2666,7 +2666,7 @@ extern unsigned int _getTickCount() {
         index=index-1;
     }
 #endif
-    
+#endif
     if(index==9-offsetCount){
 
     }

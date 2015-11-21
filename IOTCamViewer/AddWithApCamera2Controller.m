@@ -189,7 +189,7 @@
                     }];
                 }
                 else{
-                    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:alertInfoTitle message:NSLocalizedStringFromTable(@"AddApWifiErrorTips", @"easyn", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"Warning", @"") otherButtonTitles:nil, nil];
+                    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:alertInfoTitle message:NSLocalizedStringFromTable(@"AddApWifiErrorTips", @"easyn", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", @"") otherButtonTitles:nil, nil];
                     [alert show];
                     [alert release];
 #if TARGET_IPHONE_SIMULATOR
