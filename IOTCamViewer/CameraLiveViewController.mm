@@ -763,7 +763,7 @@ extern unsigned int _getTickCount() {
                 [self.longHorizMenu reloadData];
                 
                 MBProgressHUD* hud = [MBProgressHUD showHUDAddedTo: self.view animated: YES];
-                hud.labelText = NSLocalizedString(@"Recording Saved to Album",@"");
+                hud.detailsLabelText = NSLocalizedString(@"Recording Saved to Album",@"");
                 [hud hide: YES afterDelay: 0.5];
             } else {
                 [UIAlertView alertViewWithTitle: NSLocalizedString(@"ERROR!",@"") message: NSLocalizedString(@"Error saving video",@"")];

@@ -266,7 +266,7 @@
     [button.layer setBorderWidth:1.0f];
     [button.layer setBorderColor: [[UIColor darkGrayColor] CGColor]];
     
-    button.frame=CGRectMake(0.0, 100.0, 60.0, 30.0);
+    button.frame=CGRectMake(0.0, 100.0, 120.0, 30.0);
     [button addTarget:self action:@selector(deletePhotosAlertView) forControlEvents:UIControlEventTouchUpInside];
     
     UIBarButtonItem* deleteButton = [[[UIBarButtonItem alloc] initWithCustomView:button] autorelease];
