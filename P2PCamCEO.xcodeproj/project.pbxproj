@@ -23,6 +23,7 @@
 		061096DA1BF5746900C4B64C /* MailProtocolController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D3FAE81B795D78006AF177 /* MailProtocolController.m */; };
 		061096DB1BF5747100C4B64C /* MailSmtpController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D3FAEA1B795D78006AF177 /* MailSmtpController.m */; };
 		061096DC1BF5747700C4B64C /* MailSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06D3FAE41B795D41006AF177 /* MailSettingController.m */; };
+		06111DBE1C02041400EF7D89 /* addcam_clicked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 06111DBD1C02041400EF7D89 /* addcam_clicked@2x.png */; };
 		06118EA71B08DE0800BB45FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06118EA61B08DE0800BB45FB /* Images.xcassets */; };
 		06118EA81B08DE2100BB45FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 066DA08E1B03872900408AF2 /* Images.xcassets */; };
 		06118EB91B08E0AC00BB45FB /* page1_cn@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06FB5F471B064191005B7674 /* page1_cn@2x.jpg */; };
@@ -678,7 +679,6 @@
 		063735A01BE2417800F767A8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0637359F1BE2417800F767A8 /* Images.xcassets */; };
 		063735A21BE2419400F767A8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 063735A11BE2419400F767A8 /* InfoPlist.strings */; };
 		063735C21BE241D500F767A8 /* addcam_clicked.png in Resources */ = {isa = PBXBuildFile; fileRef = 063735A41BE241D500F767A8 /* addcam_clicked.png */; };
-		063735C31BE241D500F767A8 /* addcam_clicked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 063735A51BE241D500F767A8 /* addcam_clicked@2x.png */; };
 		063735C41BE241D500F767A8 /* addcam.png in Resources */ = {isa = PBXBuildFile; fileRef = 063735A61BE241D500F767A8 /* addcam.png */; };
 		063735C51BE241D500F767A8 /* addcam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 063735A71BE241D500F767A8 /* addcam@2x.png */; };
 		063735C61BE241D500F767A8 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 063735A81BE241D500F767A8 /* iTunesArtwork.png */; };
@@ -8936,6 +8936,7 @@
 		060D2ADA1BF8285D00572575 /* position_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = position_03.png; path = "MKC Eye/images/position_03.png"; sourceTree = "<group>"; };
 		060D2ADB1BF8285D00572575 /* position_04_click.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = position_04_click.png; path = "MKC Eye/images/position_04_click.png"; sourceTree = "<group>"; };
 		060D2ADC1BF8285D00572575 /* position_04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = position_04.png; path = "MKC Eye/images/position_04.png"; sourceTree = "<group>"; };
+		06111DBD1C02041400EF7D89 /* addcam_clicked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "addcam_clicked@2x.png"; path = "IDHD CONTROL/images/addcam_clicked@2x.png"; sourceTree = "<group>"; };
 		06118EA61B08DE0800BB45FB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = WRT/Images.xcassets; sourceTree = "<group>"; };
 		06118ED91B08E11900BB45FB /* page1_cn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = page1_cn.jpg; path = WRT/images/page1_cn.jpg; sourceTree = "<group>"; };
 		06118EDA1B08E11900BB45FB /* page1_en.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = page1_en.jpg; path = WRT/images/page1_en.jpg; sourceTree = "<group>"; };
@@ -9007,7 +9008,6 @@
 		0637359F1BE2417800F767A8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "IDHD CONTROL/Images.xcassets"; sourceTree = "<group>"; };
 		063735A11BE2419400F767A8 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = "IDHD CONTROL/InfoPlist.strings"; sourceTree = "<group>"; };
 		063735A41BE241D500F767A8 /* addcam_clicked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = addcam_clicked.png; path = "IDHD CONTROL/images/addcam_clicked.png"; sourceTree = "<group>"; };
-		063735A51BE241D500F767A8 /* addcam_clicked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "addcam_clicked@2x.png"; path = "IDHD CONTROL/images/addcam_clicked@2x.png"; sourceTree = "<group>"; };
 		063735A61BE241D500F767A8 /* addcam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = addcam.png; path = "IDHD CONTROL/images/addcam.png"; sourceTree = "<group>"; };
 		063735A71BE241D500F767A8 /* addcam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "addcam@2x.png"; path = "IDHD CONTROL/images/addcam@2x.png"; sourceTree = "<group>"; };
 		063735A81BE241D500F767A8 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iTunesArtwork.png; path = "IDHD CONTROL/images/iTunesArtwork.png"; sourceTree = "<group>"; };
@@ -11982,6 +11982,7 @@
 		063735A31BE241A600F767A8 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				06111DBD1C02041400EF7D89 /* addcam_clicked@2x.png */,
 				06B1652D1BFB59EF00931E99 /* login */,
 				06B165211BFB595D00931E99 /* page1_en@2x.jpg */,
 				06B165221BFB595D00931E99 /* page2_en@2x.jpg */,
@@ -11990,7 +11991,6 @@
 				063735E01BE241F200F767A8 /* title_logo.png */,
 				063735E21BE241F200F767A8 /* title_logo@2x.png */,
 				063735A41BE241D500F767A8 /* addcam_clicked.png */,
-				063735A51BE241D500F767A8 /* addcam_clicked@2x.png */,
 				063735A61BE241D500F767A8 /* addcam.png */,
 				063735A71BE241D500F767A8 /* addcam@2x.png */,
 				063735A81BE241D500F767A8 /* iTunesArtwork.png */,
@@ -15088,6 +15088,7 @@
 				063733C71BE2406200F767A8 /* ceo_recordstop@2x.png in Resources */,
 				063733C81BE2406200F767A8 /* login_btn_clicked.png in Resources */,
 				063735FB1BE242C400F767A8 /* myup1@2x.png in Resources */,
+				06111DBE1C02041400EF7D89 /* addcam_clicked@2x.png in Resources */,
 				063733C91BE2406200F767A8 /* autologin_choose.png in Resources */,
 				06B165B71BFB66C800931E99 /* SignupViewController.xib in Resources */,
 				063733CB1BE2406200F767A8 /* moreset_listm_clicked.png in Resources */,
@@ -15337,7 +15338,6 @@
 				063734AF1BE2406200F767A8 /* moreset_listm@2x.png in Resources */,
 				061096D91BF5746300C4B64C /* smtpServers.plist in Resources */,
 				063734B11BE2406200F767A8 /* add_web.png in Resources */,
-				063735C31BE241D500F767A8 /* addcam_clicked@2x.png in Resources */,
 				063734B21BE2406200F767A8 /* microphone@2X.png in Resources */,
 				063734B31BE2406200F767A8 /* snapshot.png in Resources */,
 				063734B41BE2406200F767A8 /* snapshot@2X.png in Resources */,
@@ -24571,7 +24571,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: AMANDINE MANQUANT (ZE66563XVM)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: UNIVERSAT L ECRAN DU MONDE (Q6B84LV5ND)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -24605,7 +24605,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.ipcamp.IDHDCONTROL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c439f931-fa3f-4765-9410-ad8d2e52ada0";
+				PROVISIONING_PROFILE = "8129699f-df63-41f2-93db-d8dfca11b150";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -24619,7 +24619,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: AMANDINE MANQUANT (ZE66563XVM)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: UNIVERSAT L ECRAN DU MONDE (Q6B84LV5ND)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -24654,7 +24654,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.ipcamp.IDHDCONTROL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c439f931-fa3f-4765-9410-ad8d2e52ada0";
+				PROVISIONING_PROFILE = "8129699f-df63-41f2-93db-d8dfca11b150";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -24668,7 +24668,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: AMANDINE MANQUANT (ZE66563XVM)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: UNIVERSAT L ECRAN DU MONDE (Q6B84LV5ND)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -24703,7 +24703,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.ipcamp.IDHDCONTROL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c439f931-fa3f-4765-9410-ad8d2e52ada0";
+				PROVISIONING_PROFILE = "8129699f-df63-41f2-93db-d8dfca11b150";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -24717,7 +24717,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: AMANDINE MANQUANT (ZE66563XVM)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: UNIVERSAT L ECRAN DU MONDE (Q6B84LV5ND)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -24751,7 +24751,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.ipcamp.IDHDCONTROL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c439f931-fa3f-4765-9410-ad8d2e52ada0";
+				PROVISIONING_PROFILE = "8129699f-df63-41f2-93db-d8dfca11b150";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;

@@ -226,7 +226,7 @@ extern unsigned int _getTickCount() ;
         NSInteger code=[responseObject[@"code"]integerValue];
         NSString *msg=responseObject[@"msg"];
         if(code==1){
-            [self alertInfo:msg withTitle:@"提示"];
+            [self alertInfo:msg withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
         }
         else{
             //解析列表
@@ -284,11 +284,11 @@ extern unsigned int _getTickCount() ;
                 free(ss);
             }
             [self checkStatus];
-            [self reStartShow];
+            [self viewWillAppear:YES];
         }
     } failure:^(NSError *error) {
         [MBProgressHUD hideAllHUDsForView: self.view animated:YES];
-        [self alertInfo:error.localizedDescription withTitle:@"提示"];
+        [self alertInfo:error.localizedDescription withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
     }];
 }
 #endif
@@ -2107,14 +2107,14 @@ if(!isGoPlayEvent){
         NSInteger code=[responseObject[@"code"]integerValue];
         NSString *msg=responseObject[@"msg"];
         if(code==1){
-            [self alertInfo:msg withTitle:@"提示"];
+            [self alertInfo:msg withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
         }
         else{
             
         }
     } failure:^(NSError *error) {
         [MBProgressHUD hideAllHUDsForView: self.view animated:YES];
-        [self alertInfo:error.localizedDescription withTitle:@"提示"];
+        [self alertInfo:error.localizedDescription withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
     }];
 #endif
     
@@ -2329,14 +2329,14 @@ if(!isGoPlayEvent){
         NSInteger code=[responseObject[@"code"]integerValue];
         NSString *msg=responseObject[@"msg"];
         if(code==1){
-            [self alertInfo:msg withTitle:@"提示"];
+            [self alertInfo:msg withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
         }
         else{
-            //[self alertInfo:msg withTitle:@"提示"];
+            //[self alertInfo:msg withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
         }
     } failure:^(NSError *error) {
         [MBProgressHUD hideAllHUDsForView: self.view animated:YES];
-        [self alertInfo:error.localizedDescription withTitle:@"提示"];
+        [self alertInfo:error.localizedDescription withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
     }];
 #endif
     
