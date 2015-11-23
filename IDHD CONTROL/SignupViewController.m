@@ -73,9 +73,9 @@
     }
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    NSDictionary *dic=@{@"phone":@"13400001234",@"email":email,@"uname":user,@"pwd":psd};
+    NSDictionary *dic=@{@"phone":@"13400001234",@"email":email,@"uname":email,@"pwd":psd};
     HttpTool *httpTool=[HttpTool shareInstance];
-    [httpTool JsonGetRequst:@"/index.php?ctrl=app&act=regIn" parameters:dic success:^(id responseObject) {
+    [httpTool JsonGetRequst:@"/index.php?ctrl=app&act=regInFr" parameters:dic success:^(id responseObject) {
         [MBProgressHUD hideAllHUDsForView: self.view animated:YES];
         NSInteger code=[responseObject[@"code"]integerValue];
         NSString *msg=responseObject[@"msg"];
