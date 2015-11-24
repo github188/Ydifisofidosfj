@@ -51,7 +51,7 @@
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
     webView.frame=CGRectMake(15, self.infoTextView.frame.origin.y+self.infoTextView.frame.size.height, self.view.frame.size.width-30, self.view.frame.size.height-self.skipBtn.frame.size.height-15-(self.infoTextView.frame.origin.y+self.infoTextView.frame.size.height));
-    NSURL *movieFile=[NSURL URLWithString:@"https://www.youtube.com/embed/rq2uMHJnpcg"];
+    NSURL *movieFile=[NSURL URLWithString:@"https://www.youtube.com/embed/AeMM-puHK2A"];
     [webView loadRequest:[NSURLRequest requestWithURL:movieFile]];
 }
 -(void)back:(id)sender{
