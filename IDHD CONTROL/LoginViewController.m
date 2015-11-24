@@ -20,7 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.userNameField.placeholder=NSLocalizedStringFromTable(@"EmailTips", @"login", nil);
+    self.userNameField.placeholder=NSLocalizedStringFromTable(@"UserNameTips", @"login", nil);
     self.passwordField.placeholder=NSLocalizedStringFromTable(@"PasswordTips", @"login", nil);
     self.rememberLbl.text=NSLocalizedStringFromTable(@"Remember", @"login", nil);
     [self.loginBtn setTitle:NSLocalizedStringFromTable(@"Login", @"login", nil) forState:UIControlStateNormal];
@@ -67,7 +67,7 @@
     }
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    NSDictionary *paraDic=@{@"email":user,@"pwd":psd};
+    NSDictionary *paraDic=@{@"uname":user,@"pwd":psd};
     [httpTool JsonGetRequst:@"/index.php?ctrl=app&act=logInFr" parameters:paraDic success:^(id responseObject) {
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
         NSLog(@"%@",responseObject);

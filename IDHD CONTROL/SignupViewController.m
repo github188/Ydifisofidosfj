@@ -73,7 +73,7 @@
     }
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    NSDictionary *dic=@{@"phone":@"13400001234",@"email":email,@"uname":email,@"pwd":psd};
+    NSDictionary *dic=@{@"email":email,@"uname":user,@"pwd":psd};
     HttpTool *httpTool=[HttpTool shareInstance];
     [httpTool JsonGetRequst:@"/index.php?ctrl=app&act=regInFr" parameters:dic success:^(id responseObject) {
         [MBProgressHUD hideAllHUDsForView: self.view animated:YES];
