@@ -88,6 +88,7 @@
         
         [customButton setBackgroundImage:bgImg forState:UIControlStateNormal];
         [customButton setBackgroundImage:[UIImage imageNamed:[dataSource selectedItemImageForMenu:self itemAtIndex:i]] forState:UIControlStateSelected];
+        [customButton setBackgroundImage:[UIImage imageNamed:[dataSource selectedItemImageForMenu:self itemAtIndex:i]] forState:UIControlStateHighlighted];
         
         customButton.tag = tag++;
         [customButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];

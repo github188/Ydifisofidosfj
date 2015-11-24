@@ -2594,13 +2594,19 @@ extern unsigned int _getTickCount() {
 #else
     if(index==8-offsetCount){
         [self myPtzAction:AVIOCTRL_LENS_ZOOM_IN];
-        [self.horizMenu setUnselectedIndex:8 animated:YES];
-        [self.longHorizMenu setUnselectedIndex:8 animated:YES];
+        //[self.horizMenu setSelectedIndex:8 animated:YES];
+        //[self.longHorizMenu setSelectedIndex:8 animated:YES];
+        
+        //[self.horizMenu setUnselectedIndex:8 animated:YES];
+        //[self.longHorizMenu setUnselectedIndex:8 animated:YES];
     }
     else if(index==9-offsetCount){
         [self myPtzAction:AVIOCTRL_LENS_ZOOM_OUT];
-        [self.horizMenu setUnselectedIndex:9 animated:YES];
-        [self.longHorizMenu setUnselectedIndex:9 animated:YES];
+        //[self.horizMenu setSelectedIndex:9 animated:YES];
+        //[self.longHorizMenu setSelectedIndex:9 animated:YES];
+        
+        //[self.horizMenu setUnselectedIndex:9 animated:YES];
+        //[self.longHorizMenu setUnselectedIndex:9 animated:YES];
     }
 #endif
 }
