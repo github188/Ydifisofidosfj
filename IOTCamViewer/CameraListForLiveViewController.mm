@@ -348,7 +348,7 @@
         [UIView animateWithDuration:0.5 animations:^{
             addBTNView.frame = CGRectMake(0, self.view.frame.size.height-addBTNView.frame.size.height, self.view.frame.size.width, addBTNView.frame.size.height);
             self.bayitTipsLbl.frame=CGRectMake(self.view.frame.size.width/2-self.bayitTipsLbl.frame.size.width/2, addBTNView.frame.origin.y-self.bayitTipsLbl.frame.size.height, self.bayitTipsLbl.frame.size.width, self.bayitTipsLbl.frame.size.height);
-    self.bayitNoCameraTipsLbl.frame=CGRectMake(self.bayitNoCameraTipsLbl.frame.origin.x, self.view.frame.size.height/2-self.bayitNoCameraTipsLbl.frame.size.height/2-65, self.bayitNoCameraTipsLbl.frame.size.width, self.bayitNoCameraTipsLbl.frame.size.height);
+            self.bayitNoCameraTipsLbl.frame=CGRectMake(self.view.frame.size.width/2-self.bayitNoCameraTipsLbl.frame.size.width/2, self.view.frame.size.height/2-self.bayitNoCameraTipsLbl.frame.size.height/2-65, self.bayitNoCameraTipsLbl.frame.size.width, self.bayitNoCameraTipsLbl.frame.size.height);
         }];
     }
     else{
