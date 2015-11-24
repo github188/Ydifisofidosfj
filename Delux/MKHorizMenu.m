@@ -130,14 +130,16 @@
     for(int i = 0; i < self.itemCount; i++)
     {
         UIButton *thisButton = (UIButton*) [self viewWithTag:i + kButtonBaseTag];
-        if(i + kButtonBaseTag == button.tag)
-            if (thisButton.selected == NO) {
+        if(i + kButtonBaseTag == button.tag){
+            /*if (thisButton.selected == NO) {
                 thisButton.selected = YES;
             } else {
                 thisButton.selected = NO;
-            }
-            else
+            }*/
+        }
+        else{
                 thisButton.selected = NO;
+        }
     }
     NSLog(@"Item TouchDown");
     if([self.itemSelectedDelegate respondsToSelector:@selector(horizMenu:itemTouchDownAtIndex:)]){

@@ -2717,8 +2717,8 @@ extern unsigned int _getTickCount() {
 #else
         isActive=NO;
         [self stopPT];
-        [self.horizMenu setUnselectedIndex:7 animated:YES];
-        [self.longHorizMenu setUnselectedIndex:7 animated:YES];
+        [self.horizMenu setUnselectedIndex:8 animated:YES];
+        [self.longHorizMenu setUnselectedIndex:8 animated:YES];
 #endif
     }
     else if(index==8-offsetCount){
@@ -2741,8 +2741,8 @@ extern unsigned int _getTickCount() {
 #else
         isActive=NO;
         [self stopPT];
-        [self.horizMenu setUnselectedIndex:8 animated:YES];
-        [self.longHorizMenu setUnselectedIndex:8 animated:YES];
+        [self.horizMenu setUnselectedIndex:9 animated:YES];
+        [self.longHorizMenu setUnselectedIndex:9 animated:YES];
 #endif
     }
     else if (index == SOUND_CONTROL && !isRecording) {
