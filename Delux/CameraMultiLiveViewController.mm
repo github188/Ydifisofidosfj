@@ -212,7 +212,7 @@ extern unsigned int _getTickCount() ;
     return interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown;
 }
 -(void)alertInfo:(NSString *)message withTitle:(NSString *)title{
-    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:title message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:title message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:NSLocalizedString(@"OK", @""), nil];
     [alert show];
     [alert release];
 }
@@ -2097,26 +2097,6 @@ if(!isGoPlayEvent){
     MyCamera *camera_ = [[MyCamera alloc] initWithName:name viewAccount:@"admin" viewPassword:password];
     [camera_ connect:UID];
     [camera_ start:0];
-    
-#if defined(IDHDCONTROL)
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    NSDictionary *dic=@{@"id":[NSString stringWithFormat:@"%ld",(long)[AccountInfo getUserId]],@"uuid":[MyCamera boxUUID:camera_]};
-    HttpTool *httpTool=[HttpTool shareInstance];
-    [httpTool JsonGetRequst:@"/index.php?ctrl=app&act=saveUuid" parameters:dic success:^(id responseObject) {
-        [MBProgressHUD hideAllHUDsForView: self.view animated:YES];
-        NSInteger code=[responseObject[@"code"]integerValue];
-        NSString *msg=responseObject[@"msg"];
-        if(code==1){
-            [self alertInfo:msg withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
-        }
-        else{
-            
-        }
-    } failure:^(NSError *error) {
-        [MBProgressHUD hideAllHUDsForView: self.view animated:YES];
-        [self alertInfo:error.localizedDescription withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
-    }];
-#endif
     
     SMsgAVIoctrlGetAudioOutFormatReq *s = (SMsgAVIoctrlGetAudioOutFormatReq *)malloc(sizeof(SMsgAVIoctrlGetAudioOutFormatReq));
     s->channel = 0;

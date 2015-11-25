@@ -13,6 +13,11 @@
 #import "ZXingWidgetController.h"
 #import "LANSearchController.h"
 #import "Categories.h"
+#import "MBProgressHUD.h"
+#if defined(IDHDCONTROL)
+#import "AccountInfo.h"
+#import "HttpTool.h"
+#endif
 
 @class Camera;
 

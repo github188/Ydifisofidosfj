@@ -371,18 +371,11 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
     }
 #else
 #if defined(IDHDCONTROL)
-    if(![AccountInfo isLogined]||![AccountInfo isRemember]){
-        rootViewController = [[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil] autorelease];
-        UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];
-        [navigationController setNavigationBarHidden:YES];
-        [_window setRootViewController:navigationController];
-    }
-    else{
-        rootViewController = [[[CameraMultiLiveViewController alloc] initWithNibName:@"CameraMultiLiveView" bundle:nil] autorelease];
-        UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];
-        [navigationController setNavigationBarHidden:YES];
-        [_window setRootViewController:navigationController];
-    }
+    rootViewController = [[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil] autorelease];
+    UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];
+    [navigationController setNavigationBarHidden:YES];
+    [_window setRootViewController:navigationController];
+    
 #else
     rootViewController = [[[CameraMultiLiveViewController alloc] initWithNibName:@"CameraMultiLiveView" bundle:nil] autorelease];
     UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];

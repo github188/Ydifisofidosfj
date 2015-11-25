@@ -26,6 +26,11 @@
     [self.loginBtn setTitle:NSLocalizedStringFromTable(@"Login", @"login", nil) forState:UIControlStateNormal];
     [self.forgotBtn setTitle:NSLocalizedStringFromTable(@"Forget password", @"login", nil) forState:UIControlStateNormal];
     [self.signupBtn setTitle:NSLocalizedStringFromTable(@"Sign up", @"login", nil) forState:UIControlStateNormal];
+    
+    self.rememberBtn.selected=[AccountInfo isRemember];
+    self.userNameField.text=[AccountInfo getUserName];
+    self.passwordField.text=[AccountInfo getPassword];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -81,7 +86,7 @@
         else{
             NSDictionary *dic=responseObject[@"list"];
             NSInteger id=[dic[@"id"]integerValue];
-            [AccountInfo SignIn:id withIsRemember:self.rememberBtn.selected];
+            [AccountInfo SignIn:id withUserName:user withPassword:psd withIsRemember:self.rememberBtn.selected];
             
             CameraMultiLiveViewController *vc=[[[CameraMultiLiveViewController alloc] initWithNibName:@"CameraMultiLiveView" bundle:nil] autorelease];
             AppDelegate *delegate=(AppDelegate *)([[UIApplication sharedApplication] delegate]);

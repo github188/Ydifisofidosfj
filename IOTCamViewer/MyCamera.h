@@ -82,6 +82,7 @@
 -(BOOL)getCameraSummartTime;
 
 +(NSString *)boxUUID:(MyCamera *)camera;
++(NSString *)boxUUID:(NSString *)uid widthPwd:(NSString *)viewPwd withName:(NSString *)name;
 +(NSArray *)unBoxUUID:(NSString *)strs;
 @end
 

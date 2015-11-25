@@ -184,9 +184,34 @@
             }
         }
         
+        
+        
+#if defined(IDHDCONTROL)
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        NSDictionary *dic=@{@"id":[NSString stringWithFormat:@"%ld",(long)[AccountInfo getUserId]],@"uuid":[MyCamera boxUUID:uid_ widthPwd:password withName:name_]};
+        HttpTool *httpTool=[HttpTool shareInstance];
+        [httpTool JsonGetRequst:@"/index.php?ctrl=app&act=saveUuid" parameters:dic success:^(id responseObject) {
+            [MBProgressHUD hideAllHUDsForView: self.view animated:YES];
+            NSInteger code=[responseObject[@"code"]integerValue];
+            NSString *msg=responseObject[@"msg"];
+            if(code==1){
+                [self alertInfo:msg withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
+            }
+            else{
+                
+                [self.navigationController popToViewController:[[self.navigationController viewControllers] objectAtIndex:0] animated:YES];
+                
+                [self.delegate camera:uid_ didAddwithName:name_ password:password syncOnCloud:isSyncOnCloud addToCloud:isAddToCloud addFromCloud:isFromDOC];
+            }
+        } failure:^(NSError *error) {
+            [MBProgressHUD hideAllHUDsForView: self.view animated:YES];
+            [self alertInfo:error.localizedDescription withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
+        }];
+#else
         [self.navigationController popToViewController:[[self.navigationController viewControllers] objectAtIndex:0] animated:YES];
         
         [self.delegate camera:uid_ didAddwithName:name_ password:password syncOnCloud:isSyncOnCloud addToCloud:isAddToCloud addFromCloud:isFromDOC];
+#endif
         
     }
     else {
@@ -196,7 +221,11 @@
         [alert release];
     }
 }
-
+-(void)alertInfo:(NSString *)message withTitle:(NSString *)title{
+    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:title message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:NSLocalizedString(@"OK", @""), nil];
+    [alert show];
+    [alert release];
+}
 - (IBAction)textFieldDone:(id)sender 
 {    
     [sender resignFirstResponder];

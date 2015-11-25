@@ -121,6 +121,9 @@ BOOL g_bDiagnostic = FALSE;
     //uid/密码/画质等级-摄像机名称
     return [NSString stringWithFormat:@"%@/%@/%d-%@",camera.uid,camera.viewPwd,1,camera.name];
 }
++(NSString *)boxUUID:(NSString *)uid widthPwd:(NSString *)viewPwd withName:(NSString *)name{
+    return [NSString stringWithFormat:@"%@/%@/%d-%@",uid,viewPwd,1,name];
+}
 +(NSArray *)unBoxUUID:(NSString *)strs{
     NSArray *arr=[strs componentsSeparatedByString:@"/"];
     NSString *uid=[arr objectAtIndex:0];
