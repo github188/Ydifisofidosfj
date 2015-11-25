@@ -1034,8 +1034,9 @@ typedef struct
         summerTime = check.on;
         [self.camera setCameraSummaryTime:summerTime];
         [self.tableView reloadData];
-        
-        [self onTimeZoneChanged:timeZoneString tzGMTDiff_In_Mins:timeZoneValue];
+        if(timeZoneString){
+            [self onTimeZoneChanged:timeZoneString tzGMTDiff_In_Mins:timeZoneValue];
+        }
     }
     return;
     

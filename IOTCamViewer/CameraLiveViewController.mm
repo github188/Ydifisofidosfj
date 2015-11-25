@@ -1628,6 +1628,17 @@ extern unsigned int _getTickCount() {
         [camera startShow:selectedChannel ScreenObject:self];
         
         
+        SMsgAVIoctrlSetSoundReq *quality = (SMsgAVIoctrlSetSoundReq*)malloc(sizeof(SMsgAVIoctrlSetSoundReq));
+        memset(quality, 0, sizeof(SMsgAVIoctrlSetSoundReq));
+        quality->SoundIn=95;
+        quality->SoundOut=95;
+        [camera sendIOCtrlToChannel:0
+                                Type:0x224E
+                                Data:(char *)quality
+                            DataSize:sizeof(SMsgAVIoctrlSetSoundReq)];
+        
+        free(quality);
+        
         [loadingViewLandscape setHidden:NO];
         [loadingViewPortrait setHidden:NO];
         [loadingViewPortrait startAnimating];

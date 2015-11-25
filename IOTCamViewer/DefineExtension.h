@@ -255,4 +255,45 @@ typedef struct
     unsigned int channel;	// AvServer Index
     unsigned int nPresetIdx;	//0~6
 } SMsgAVIoctrlGetPresetReq;
+
+
+//IOTYPE_USER_IPCAM_GET_SOUND_VOLUME_REQ = 0x224C,
+
+typedef struct
+
+{
+    
+    unsigned char reserved[8];
+    
+}SMsgAVIoctrlGetSoundReq;
+
+//IOTYPE_USER_IPCAM_SET_SOUND_VOLUME_RESP = 0x224F,
+
+typedef struct
+
+{
+    
+    unsigned int result; // 0: success; otherwise: failed.
+    
+    unsigned char reserved[4];
+    
+}SMsgAVIoctrlSetSoundResp;
+
+//IOTYPE_USER_IPCAM_GET_SOUND_VOLUME_RESP = 0x224D,
+
+//IOTYPE_USER_IPCAM_SET_SOUND_VOLUME_REQ = 0x224E,
+
+typedef struct
+
+{
+    
+    unsigned int SoundIn;// 1-100
+    
+    unsigned int SoundOut;// 1-100
+    
+    unsigned char reserved[8];
+    
+}SMsgAVIoctrlGetSoundResp,SMsgAVIoctrlSetSoundReq;
+
+
 #endif

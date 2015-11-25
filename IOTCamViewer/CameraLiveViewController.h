@@ -37,6 +37,7 @@
 #import "Categories.h"
 #import "EditCameraDefaultController.h"
 #import <VideoRecorderSDK/VideoRecorderSDK.h>
+#import "DefineExtension.h"
 
 extern FMDatabase *database;
 extern NSString *deviceTokenString;

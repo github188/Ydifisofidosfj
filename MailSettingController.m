@@ -333,6 +333,10 @@
         self.navigationItem.rightBarButtonItem.enabled=!senderIndicator.isAnimating;
         [self.tableView reloadData];
     }
+    if (camera_ == camera && type == IOTYPE_USEREX_IPCAM_SET_SMTP_RESP) {
+        SMsgAVIoctrlExSetSmtpResp *s = (SMsgAVIoctrlExSetSmtpResp*)data;
+        NSLog(@"%d",s->result);
+    }
 }
 #pragma mark - didSetMailProtocolDelegate Methods
 - (void)didSetMailProtocol:(NSInteger)value {
