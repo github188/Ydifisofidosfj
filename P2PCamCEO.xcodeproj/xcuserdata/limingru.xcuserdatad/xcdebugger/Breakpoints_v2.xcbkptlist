@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOTCamViewer/CameraLiveViewController.mm"
-            timestampString = "470151126.02329"
+            timestampString = "470238597.549584"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "3154"
-            endingLineNumber = "3154"
+            startingLineNumber = "3158"
+            endingLineNumber = "3158"
             landmarkName = "-onContrastClicked:"
             landmarkType = "5">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOTCamViewer/CameraLiveViewController.mm"
-            timestampString = "470151126.02329"
+            timestampString = "470238597.549584"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "3218"
-            endingLineNumber = "3218"
+            startingLineNumber = "3222"
+            endingLineNumber = "3222"
             landmarkName = "-preBtnLongTouch1:"
             landmarkType = "5">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOTCamViewer/CameraLiveViewController.mm"
-            timestampString = "470151126.02329"
+            timestampString = "470238597.549584"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "3232"
-            endingLineNumber = "3232"
+            startingLineNumber = "3236"
+            endingLineNumber = "3236"
             landmarkName = "-preBtnLongTouch3:"
             landmarkType = "5">
          </BreakpointContent>

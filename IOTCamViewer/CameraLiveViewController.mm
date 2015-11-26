@@ -1973,6 +1973,10 @@ extern unsigned int _getTickCount() {
             NSLog(@"ERROR");
         }
     }
+    else if(type==0x224F){
+        SMsgAVIoctrlSetSoundResp *d=(SMsgAVIoctrlSetSoundResp*)data;
+        //NSLog(@"%@",d);
+    }
 }
 -(void)initViewEmode{
     if(emode==0){
