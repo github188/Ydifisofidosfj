@@ -110,6 +110,7 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
     
     [_rootViewController release];
     [_window release];
+    [_apnsUserInfo release];
     [super dealloc];
 }
 
@@ -235,6 +236,8 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	
 	//g_dwGLogZoneSeed = tCtrl_MSK|tReStartShow_MSK;
+    
+    self.apnsUserInfo = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
 	
 	unsigned int version = [Camera getIOTCamerVersion];
 	unsigned char v[4] = {0};
