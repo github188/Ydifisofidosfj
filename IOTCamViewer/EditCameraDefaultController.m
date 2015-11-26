@@ -83,6 +83,41 @@
         return;
     }
     
+#if defined(IDHDCONTROL)
+    if (isNeedReconn ||
+        ![cameraName isEqualToString:self.camera.name] ||
+        ![cameraPassword isEqualToString:self.camera.viewPwd]) {
+        
+        HttpTool *httpTool=[HttpTool shareInstance];
+        NSDictionary *dic=@{@"id":[NSString stringWithFormat:@"%ld",(long)[AccountInfo getUserId]],@"uuid":self.camera.uid,@"pwd":cameraPassword};
+        [httpTool JsonPostRequst:@"/index.php?ctrl=app&act=chgPwd" parameters:dic success:^(id responseObject) {
+            NSInteger code=[responseObject[@"code"]integerValue];
+            NSString *msg=responseObject[@"msg"];
+            if(code==1){
+                [self alertInfo:msg withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
+            }
+            else{
+                [self.camera setName:cameraName];
+                [self.camera setViewAcc:@"admin"];
+                [self.camera setViewPwd:cameraPassword];
+                
+                [self.delegate didChangeSetting:self.camera];
+                
+                if (database != NULL) {
+                    if (![database executeUpdate:@"UPDATE device SET dev_nickname=?, view_pwd=? WHERE dev_uid=?", cameraName, cameraPassword, camera.uid]) {
+                        NSLog(@"Fail to update device to database.");
+                    }
+                }
+                
+                [self.navigationController popViewControllerAnimated:YES];
+            }
+        } failure:^(NSError *error) {
+            [self alertInfo:error.localizedDescription withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
+        }];
+        
+    }
+#else
+    
     if (isNeedReconn ||
         ![cameraName isEqualToString:self.camera.name] ||
         ![cameraPassword isEqualToString:self.camera.viewPwd]) {
@@ -101,8 +136,13 @@
     }
     
     [self.navigationController popViewControllerAnimated:YES];
+#endif
 }
-
+-(void)alertInfo:(NSString *)message withTitle:(NSString *)title{
+    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:title message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:NSLocalizedString(@"OK", @""), nil];
+    [alert show];
+    [alert release];
+}
 - (IBAction)textFieldDone:(id)sender
 {
     [sender resignFirstResponder];

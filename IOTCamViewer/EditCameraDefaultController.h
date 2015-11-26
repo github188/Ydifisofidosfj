@@ -32,6 +32,12 @@
 #import "EditCameraAdvancedController.h"
 #import "SecurityCodeController.h"
 
+#import "MBProgressHUD.h"
+#if defined(IDHDCONTROL)
+#import "AccountInfo.h"
+#import "HttpTool.h"
+#endif
+
 @protocol EditCameraDefaultDelegate;
 
 @interface EditCameraDefaultController : UITableViewController <UITextFieldDelegate, EditCameraAdvancedDelegate, MyCameraDelegate,SecurityCodeDelegate> {
