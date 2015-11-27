@@ -14,12 +14,11 @@
     [store setInteger:id forKey:@"account.id"];
     [store setBool:YES forKey:@"account.logined"];
     [store setBool:isRemember forKey:@"account.remember"];
+    [store setObject:userName forKey:@"account.username"];
     if(isRemember){
-        [store setObject:userName forKey:@"account.username"];
         [store setObject:password forKey:@"account.password"];
     }
     else{
-        [store setObject:@"" forKey:@"account.username"];
         [store setObject:@"" forKey:@"account.password"];
     }
 }
