@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface AccountInfo : NSObject
-+(void)SignIn:(NSInteger)id withIsRemember:(BOOL)isRemember;
++(void)SignIn:(NSInteger)id withUserName:(NSString *)userName withPassword:(NSString *)password withIsRemember:(BOOL)isRemember;
 +(NSInteger)getUserId;
 +(BOOL)isLogined;
 +(BOOL)isRemember;
++(NSString *)getUserName;
++(NSString *)getPassword;
 @end

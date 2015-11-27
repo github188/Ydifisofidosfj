@@ -110,6 +110,7 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
     
     [_rootViewController release];
     [_window release];
+    [_apnsUserInfo release];
     [super dealloc];
 }
 
@@ -235,6 +236,8 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	
 	//g_dwGLogZoneSeed = tCtrl_MSK|tReStartShow_MSK;
+    
+    self.apnsUserInfo = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
 	
 	unsigned int version = [Camera getIOTCamerVersion];
 	unsigned char v[4] = {0};
@@ -371,18 +374,11 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
     }
 #else
 #if defined(IDHDCONTROL)
-    if(![AccountInfo isLogined]||![AccountInfo isRemember]){
-        rootViewController = [[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil] autorelease];
-        UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];
-        [navigationController setNavigationBarHidden:YES];
-        [_window setRootViewController:navigationController];
-    }
-    else{
-        rootViewController = [[[CameraMultiLiveViewController alloc] initWithNibName:@"CameraMultiLiveView" bundle:nil] autorelease];
-        UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];
-        [navigationController setNavigationBarHidden:YES];
-        [_window setRootViewController:navigationController];
-    }
+    rootViewController = [[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil] autorelease];
+    UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];
+    [navigationController setNavigationBarHidden:YES];
+    [_window setRootViewController:navigationController];
+    
 #else
     rootViewController = [[[CameraMultiLiveViewController alloc] initWithNibName:@"CameraMultiLiveView" bundle:nil] autorelease];
     UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];

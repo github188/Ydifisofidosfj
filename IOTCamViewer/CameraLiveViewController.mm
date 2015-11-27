@@ -1628,6 +1628,17 @@ extern unsigned int _getTickCount() {
         [camera startShow:selectedChannel ScreenObject:self];
         
         
+        SMsgAVIoctrlSetSoundReq *quality = (SMsgAVIoctrlSetSoundReq*)malloc(sizeof(SMsgAVIoctrlSetSoundReq));
+        memset(quality, 0, sizeof(SMsgAVIoctrlSetSoundReq));
+        quality->SoundIn=95;
+        quality->SoundOut=95;
+        [camera sendIOCtrlToChannel:0
+                                Type:0x224E
+                                Data:(char *)quality
+                            DataSize:sizeof(SMsgAVIoctrlSetSoundReq)];
+        
+        free(quality);
+        
         [loadingViewLandscape setHidden:NO];
         [loadingViewPortrait setHidden:NO];
         [loadingViewPortrait startAnimating];
@@ -1961,6 +1972,10 @@ extern unsigned int _getTickCount() {
         else{
             NSLog(@"ERROR");
         }
+    }
+    else if(type==0x224F){
+        SMsgAVIoctrlSetSoundResp *d=(SMsgAVIoctrlSetSoundResp*)data;
+        //NSLog(@"%@",d);
     }
 }
 -(void)initViewEmode{
@@ -2594,13 +2609,19 @@ extern unsigned int _getTickCount() {
 #else
     if(index==8-offsetCount){
         [self myPtzAction:AVIOCTRL_LENS_ZOOM_IN];
-        [self.horizMenu setUnselectedIndex:8 animated:YES];
-        [self.longHorizMenu setUnselectedIndex:8 animated:YES];
+        //[self.horizMenu setSelectedIndex:8 animated:YES];
+        //[self.longHorizMenu setSelectedIndex:8 animated:YES];
+        
+        //[self.horizMenu setUnselectedIndex:8 animated:YES];
+        //[self.longHorizMenu setUnselectedIndex:8 animated:YES];
     }
     else if(index==9-offsetCount){
         [self myPtzAction:AVIOCTRL_LENS_ZOOM_OUT];
-        [self.horizMenu setUnselectedIndex:9 animated:YES];
-        [self.longHorizMenu setUnselectedIndex:9 animated:YES];
+        //[self.horizMenu setSelectedIndex:9 animated:YES];
+        //[self.longHorizMenu setSelectedIndex:9 animated:YES];
+        
+        //[self.horizMenu setUnselectedIndex:9 animated:YES];
+        //[self.longHorizMenu setUnselectedIndex:9 animated:YES];
     }
 #endif
 }
@@ -2711,8 +2732,8 @@ extern unsigned int _getTickCount() {
 #else
         isActive=NO;
         [self stopPT];
-        [self.horizMenu setUnselectedIndex:7 animated:YES];
-        [self.longHorizMenu setUnselectedIndex:7 animated:YES];
+        [self.horizMenu setUnselectedIndex:8 animated:YES];
+        [self.longHorizMenu setUnselectedIndex:8 animated:YES];
 #endif
     }
     else if(index==8-offsetCount){
@@ -2735,8 +2756,8 @@ extern unsigned int _getTickCount() {
 #else
         isActive=NO;
         [self stopPT];
-        [self.horizMenu setUnselectedIndex:8 animated:YES];
-        [self.longHorizMenu setUnselectedIndex:8 animated:YES];
+        [self.horizMenu setUnselectedIndex:9 animated:YES];
+        [self.longHorizMenu setUnselectedIndex:9 animated:YES];
 #endif
     }
     else if (index == SOUND_CONTROL && !isRecording) {

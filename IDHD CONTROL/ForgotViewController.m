@@ -52,7 +52,7 @@
 }
 - (IBAction)submit:(id)sender {
     NSString *email=[self.emailField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    if(email.length==0||![email containsString:@"@"]){
+    if(email.length==0||[email rangeOfString:@"@"].length==0){
         [self alertInfo:NSLocalizedStringFromTable(@"请输入有效的Email", @"login", nil) withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
         return;
     }

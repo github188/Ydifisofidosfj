@@ -55,7 +55,7 @@
     NSString *psd=[self.passwordField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString *rePsd=[self.confirmPasswordField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
-    if(email.length==0||![email containsString:@"@"]){
+    if(email.length==0||[email rangeOfString:@"@"].length==0){
         [self alertInfo:NSLocalizedStringFromTable(@"请输入有效的Email", @"login", nil) withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
         return;
     }
@@ -73,7 +73,7 @@
     }
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    NSDictionary *dic=@{@"phone":@"13400001234",@"email":email,@"uname":email,@"pwd":psd};
+    NSDictionary *dic=@{@"email":email,@"uname":user,@"pwd":psd};
     HttpTool *httpTool=[HttpTool shareInstance];
     [httpTool JsonGetRequst:@"/index.php?ctrl=app&act=regInFr" parameters:dic success:^(id responseObject) {
         [MBProgressHUD hideAllHUDsForView: self.view animated:YES];

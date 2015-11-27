@@ -20,12 +20,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.userNameField.placeholder=NSLocalizedStringFromTable(@"EmailTips", @"login", nil);
+    self.userNameField.placeholder=NSLocalizedStringFromTable(@"UserNameTips", @"login", nil);
     self.passwordField.placeholder=NSLocalizedStringFromTable(@"PasswordTips", @"login", nil);
     self.rememberLbl.text=NSLocalizedStringFromTable(@"Remember", @"login", nil);
     [self.loginBtn setTitle:NSLocalizedStringFromTable(@"Login", @"login", nil) forState:UIControlStateNormal];
     [self.forgotBtn setTitle:NSLocalizedStringFromTable(@"Forget password", @"login", nil) forState:UIControlStateNormal];
     [self.signupBtn setTitle:NSLocalizedStringFromTable(@"Sign up", @"login", nil) forState:UIControlStateNormal];
+    
+    self.rememberBtn.selected=[AccountInfo isRemember];
+    self.userNameField.text=[AccountInfo getUserName];
+    self.passwordField.text=[AccountInfo getPassword];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -67,7 +72,7 @@
     }
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    NSDictionary *paraDic=@{@"email":user,@"pwd":psd};
+    NSDictionary *paraDic=@{@"uname":user,@"pwd":psd};
     [httpTool JsonGetRequst:@"/index.php?ctrl=app&act=logInFr" parameters:paraDic success:^(id responseObject) {
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
         NSLog(@"%@",responseObject);
@@ -81,7 +86,7 @@
         else{
             NSDictionary *dic=responseObject[@"list"];
             NSInteger id=[dic[@"id"]integerValue];
-            [AccountInfo SignIn:id withIsRemember:self.rememberBtn.selected];
+            [AccountInfo SignIn:id withUserName:user withPassword:psd withIsRemember:self.rememberBtn.selected];
             
             CameraMultiLiveViewController *vc=[[[CameraMultiLiveViewController alloc] initWithNibName:@"CameraMultiLiveView" bundle:nil] autorelease];
             AppDelegate *delegate=(AppDelegate *)([[UIApplication sharedApplication] delegate]);

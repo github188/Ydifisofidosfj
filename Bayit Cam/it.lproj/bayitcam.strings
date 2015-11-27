@@ -16,12 +16,11 @@
 
 "Attention!"="Attention!";
 "We have developed a new easier method for setting up your camera, as a result the WPS setup option (shown in the manual included) is no longer available.Please take a look at the video in the following link for instructions on how to setup your camera."="Thank you for purchasing Bayit Cam, in order to ensure an easy and smooth setup experience we have prepared the below setup video to walk you through getting your camera setup quickly. Please take a look at the below setup video for instructions on how to setup your Bayit Cam.";
-"startUrl"="https://www.youtube.com/watch?v=rq2uMHJnpcg";
 
 "SetupVideo"="Setup Video";
 "Make sure your phone is connected to the WiFi network you want to setup the camera with."="Make sure your phone is connected to the WiFi network you want to setup the camera with.";
 "Search in LAN"="Search in LAN";
 "Search and add a camera in the Local Area Network."="Search and add a camera in the Local Area Network.";
-"No cameras added. Please add a camera"="No cameras added. \r\nPlease add a camera";
+"No cameras added. Please add a camera"="No cameras added. \r\nPlease add a camera.";
 "Do not show this message again"="Do not show this message again";
 "Micro SD Card required"="(Micro SD Card required)";
