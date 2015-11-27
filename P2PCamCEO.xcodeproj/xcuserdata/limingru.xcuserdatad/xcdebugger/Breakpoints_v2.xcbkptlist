@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOTCamViewer/EditCameraDefaultController.m"
-            timestampString = "470326878.931468"
+            timestampString = "470331243.749703"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "-doMapping:"
             landmarkType = "5">
          </BreakpointContent>
