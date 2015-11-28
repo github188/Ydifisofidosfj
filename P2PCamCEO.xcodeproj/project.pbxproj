@@ -27113,7 +27113,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -27147,7 +27147,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "728b194c-f7fc-4c59-8afb-f8610d95c5c7";
+				PROVISIONING_PROFILE = "419670b5-0598-46ab-8639-14186aad7c2a";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -27195,7 +27195,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "728b194c-f7fc-4c59-8afb-f8610d95c5c7";
+				PROVISIONING_PROFILE = "c3fe5e7a-a472-4a3a-9626-ccde2c1dacd2";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -27243,7 +27243,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "728b194c-f7fc-4c59-8afb-f8610d95c5c7";
+				PROVISIONING_PROFILE = "c3fe5e7a-a472-4a3a-9626-ccde2c1dacd2";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -27290,7 +27290,7 @@
 					"-DP2PCAMLIVE",
 				);
 				PRODUCT_NAME = "EasyN P";
-				PROVISIONING_PROFILE = "728b194c-f7fc-4c59-8afb-f8610d95c5c7";
+				PROVISIONING_PROFILE = "c3fe5e7a-a472-4a3a-9626-ccde2c1dacd2";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
