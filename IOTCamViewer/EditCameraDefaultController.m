@@ -47,10 +47,10 @@
 - (IBAction)back:(id)sender 
 {
     
-    /*if(isPressReconnButton) {
+    if(isPressReconnButton) {
         NSLog( @"ignore!!!" );
         return;
-    }*/
+    }
     
     NSString *cameraName = nil;
     NSString *cameraPassword = nil;
@@ -82,13 +82,27 @@
         
         return;
     }
+    
+    if (isNeedReconn ||
+        ![cameraName isEqualToString:self.camera.name] ||
+        ![cameraPassword isEqualToString:self.camera.viewPwd]) {
+        
+        [self.camera setName:cameraName];
+        [self.camera setViewAcc:@"admin"];
+        [self.camera setViewPwd:cameraPassword];
+        
+        [self.delegate didChangeSetting:self.camera];
+    }
+    
+    if (database != NULL) {
+        if (![database executeUpdate:@"UPDATE device SET dev_nickname=?, view_pwd=? WHERE dev_uid=?", cameraName, cameraPassword, camera.uid]) {
+            NSLog(@"Fail to update device to database.");
+        }
+    }
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
--(void)alertInfo:(NSString *)message withTitle:(NSString *)title{
-    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:title message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:NSLocalizedString(@"OK", @""), nil];
-    [alert show];
-    [alert release];
-}
+
 - (IBAction)textFieldDone:(id)sender
 {
     [sender resignFirstResponder];
@@ -788,61 +802,6 @@ replacementString:(NSString *)string {
     
     if (textField == textFieldName) self.name = textField.text;
     if (textField == textFieldPassword) self.password = textField.text;
-    
-    NSString *cameraName=textFieldName.text;
-    NSString *cameraPassword=textFieldPassword.text;
-    
-    if(![cameraName isEqualToString:self.camera.name]||![cameraPassword isEqualToString:self.camera.viewPwd]){
-        
-        SMsgAVIoctrlSetPasswdReq *s2 = (SMsgAVIoctrlSetPasswdReq *)malloc(sizeof(SMsgAVIoctrlSetPasswdReq));
-        memcpy(s2->oldpasswd, [self.camera.viewPwd UTF8String], [self.camera.viewPwd length]);
-        memcpy(s2->newpasswd, [cameraPassword UTF8String], [cameraPassword length]);
-        [self.camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_SETPASSWORD_REQ Data:(char *)s2 DataSize:sizeof(SMsgAVIoctrlSetPasswdReq)];
-        free(s2);
-        
-        [self.camera setName:cameraName];
-        [self.camera setViewAcc:@"admin"];
-        [self.camera setViewPwd:cameraPassword];
-        
-        [self.delegate didChangeSetting:self.camera];
-        
-        if (database != NULL) {
-            if (![database executeUpdate:@"UPDATE device SET dev_nickname=?, view_pwd=? WHERE dev_uid=?", cameraName, cameraPassword, camera.uid]) {
-                NSLog(@"Fail to update device to database.");
-            }
-        }
-        
-#if defined(IDHDCONTROL)
-        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-            HttpTool *httpTool=[HttpTool shareInstance];
-            NSDictionary *dic=@{@"id":[NSString stringWithFormat:@"%ld",(long)[AccountInfo getUserId]],@"uuid":self.camera.uid,@"pwd":cameraPassword};
-            [httpTool JsonPostRequst:@"/index.php?ctrl=app&act=chgPwd" parameters:dic success:^(id responseObject) {
-                [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-                NSInteger code=[responseObject[@"code"]integerValue];
-                NSString *msg=responseObject[@"msg"];
-                if(code==1){
-                    [self alertInfo:msg withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
-                }
-                else{
-
-                }
-            } failure:^(NSError *error) {
-                [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
-                [self alertInfo:error.localizedDescription withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
-            }];
-#else
-            [self.camera setName:cameraName];
-            [self.camera setViewAcc:@"admin"];
-            [self.camera setViewPwd:cameraPassword];
-            [self.delegate didChangeSetting:self.camera];
-        if (database != NULL) {
-            if (![database executeUpdate:@"UPDATE device SET dev_nickname=?, view_pwd=? WHERE dev_uid=?", cameraName, cameraPassword, camera.uid]) {
-                NSLog(@"Fail to update device to database.");
-            }
-        }
-#endif
-    }
-    
 }
 
 #pragma mark - SecurityCodeDelegate Methods
@@ -884,7 +843,6 @@ replacementString:(NSString *)string {
 #pragma mark - MyCameraDelegate Methods
 - (void)camera:(MyCamera *)camera_ _didChangeSessionStatus:(NSInteger)status
 {
-    [self.tableView reloadData];
     if (camera_ == camera) {
         
         if (!isKeyboardShow) {
@@ -896,8 +854,7 @@ replacementString:(NSString *)string {
 }
 
 - (void)camera:(Camera *)camera_ _didChangeChannelStatus:(NSInteger)channel ChannelStatus:(NSInteger)status
-{
-    [self.tableView reloadData];
+{    
     if (camera_ == camera) {
         
         if (!isKeyboardShow) {
@@ -906,12 +863,6 @@ replacementString:(NSString *)string {
     }
     
     //NSLog(@"didChangeChannel:%d Status:%d", channel, status);
-}
--(void)camera:(MyCamera *)camera _didReceiveIOCtrlWithType:(NSInteger)type Data:(const char *)data DataSize:(NSInteger)size{
-    if(type==IOTYPE_USER_IPCAM_SETPASSWORD_RESP){
-        SMsgAVIoctrlSetPasswdReq *da=(SMsgAVIoctrlSetPasswdReq *)data;
-        NSLog(@"%@",da);
-    }
 }
 
 @end
