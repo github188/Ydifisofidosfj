@@ -25625,7 +25625,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.easynp.mkceye;
 				PRODUCT_NAME = "EasyN P copy";
-				PROVISIONING_PROFILE = "48a8ddde-a119-4cc2-b771-04813c54e711";
+				PROVISIONING_PROFILE = "a49e6e18-ff51-4633-8efe-2bff88ee51ba";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -25675,7 +25675,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.easynp.mkceye;
 				PRODUCT_NAME = "EasyN P copy";
-				PROVISIONING_PROFILE = "48a8ddde-a119-4cc2-b771-04813c54e711";
+				PROVISIONING_PROFILE = "a49e6e18-ff51-4633-8efe-2bff88ee51ba";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -25725,7 +25725,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.easynp.mkceye;
 				PRODUCT_NAME = "EasyN P copy";
-				PROVISIONING_PROFILE = "48a8ddde-a119-4cc2-b771-04813c54e711";
+				PROVISIONING_PROFILE = "a49e6e18-ff51-4633-8efe-2bff88ee51ba";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -25774,7 +25774,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.easynp.mkceye;
 				PRODUCT_NAME = "EasyN P copy";
-				PROVISIONING_PROFILE = "48a8ddde-a119-4cc2-b771-04813c54e711";
+				PROVISIONING_PROFILE = "a49e6e18-ff51-4633-8efe-2bff88ee51ba";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -26015,7 +26015,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "IPCAM P";
-				PROVISIONING_PROFILE = "9771d506-aa3b-4ea8-8117-0ab9b0f47e81";
+				PROVISIONING_PROFILE = "bbd613c7-b92c-45f6-898e-02e0870aa2c1";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -26060,7 +26060,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "IPCAM P";
-				PROVISIONING_PROFILE = "9771d506-aa3b-4ea8-8117-0ab9b0f47e81";
+				PROVISIONING_PROFILE = "bbd613c7-b92c-45f6-898e-02e0870aa2c1";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -26105,7 +26105,7 @@
 					"-DSUPPORT_DROPBOX",
 				);
 				PRODUCT_NAME = "IPCAM P";
-				PROVISIONING_PROFILE = "9771d506-aa3b-4ea8-8117-0ab9b0f47e81";
+				PROVISIONING_PROFILE = "bbd613c7-b92c-45f6-898e-02e0870aa2c1";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -26149,7 +26149,7 @@
 					"-DP2PCAMLIVE",
 				);
 				PRODUCT_NAME = "IPCAM P";
-				PROVISIONING_PROFILE = "9771d506-aa3b-4ea8-8117-0ab9b0f47e81";
+				PROVISIONING_PROFILE = "bbd613c7-b92c-45f6-898e-02e0870aa2c1";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
