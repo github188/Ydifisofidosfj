@@ -239,7 +239,7 @@ extern unsigned int _getTickCount() ;
                 NSString *uid = [uuidArr objectAtIndex:0];
                 NSString *name = [uuidArr objectAtIndex:3];
                 NSString *view_acc = @"admin";
-                NSString *view_pwd = [uuidArr objectAtIndex:1];
+                NSString *view_pwd = arr[j][@"pwd"];
                 NSInteger channel = 0;
                 NSInteger isSync = NO;
                 NSInteger isFromCloud = NO;

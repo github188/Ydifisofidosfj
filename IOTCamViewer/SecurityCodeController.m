@@ -286,24 +286,52 @@
             SMsgAVIoctrlSetPasswdResp *s = (SMsgAVIoctrlSetPasswdResp *)data;
             if (s->result==0) {
                 [passwdIndicator stopAnimating ];//停止
-                NSString *newPassword = nil;
-                if (self.textFieldNewPassword != nil) newPassword = textFieldNewPassword.text;
-                NSLog(@"change security code(%@) in SecurityCodeController", newPassword);
-                if (self.delegate) {
-                    [self.delegate didChangeSecurityCode:newPassword];
-                }
-                // [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:1] animated:YES];
-                //  [self.navigationController popToViewController:self.delegate animated:YES];
-                int count = self.navigationController.viewControllers.count;
-                if (count >= 3) {
-                    [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:count-3] animated:YES];
-                } else {
-                    [self.navigationController popViewControllerAnimated:YES];
-                    
-                }
+#if defined(IDHDCONTROL)
+                [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+                HttpTool *httpTool=[HttpTool shareInstance];
+                NSDictionary *p=@{@"id":[NSString stringWithFormat:@"%ld",(long)[AccountInfo getUserId]],@"uuid":self.camera.uid,@"pwd":textFieldNewPassword.text};
+                [httpTool JsonPostRequst:@"/index.php?ctrl=app&act=chgPwd" parameters:p success:^(id responseObject) {
+                    [MBProgressHUD hideAllHUDsForView: self.view animated:YES];
+                    NSInteger code=[responseObject[@"code"]integerValue];
+                    NSString *msg=responseObject[@"msg"];
+                    if(code==1){
+                        [self alertInfo:msg withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
+                    }
+                    else{
+                        [self secrectCodeSuccess];
+                    }
+                } failure:^(NSError *error) {
+                    [MBProgressHUD hideAllHUDsForView: self.view animated:YES];
+                    [self alertInfo:error.localizedDescription withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
+                }];
+#else
+                [self secrectCodeSuccess];
+#endif
             }
             
 		}
+    }
+}
+-(void)alertInfo:(NSString *)message withTitle:(NSString *)title{
+    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:title message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:NSLocalizedString(@"OK", @""), nil];
+    [alert show];
+    [alert release];
+}
+-(void)secrectCodeSuccess{
+    NSString *newPassword = nil;
+    if (self.textFieldNewPassword != nil) newPassword = textFieldNewPassword.text;
+    NSLog(@"change security code(%@) in SecurityCodeController", newPassword);
+    if (self.delegate) {
+        [self.delegate didChangeSecurityCode:newPassword];
+    }
+    // [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:1] animated:YES];
+    //  [self.navigationController popToViewController:self.delegate animated:YES];
+    int count = self.navigationController.viewControllers.count;
+    if (count >= 3) {
+        [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:count-3] animated:YES];
+    } else {
+        [self.navigationController popViewControllerAnimated:YES];
+        
     }
 }
 

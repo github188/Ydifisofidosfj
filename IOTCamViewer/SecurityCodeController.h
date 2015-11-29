@@ -16,6 +16,12 @@
 #define NEWPASSWORD_ROW_INDEX 1
 #define CONFIRMPASSWORD_ROW_INDEX 2
 
+#import "MBProgressHUD.h"
+#if defined(IDHDCONTROL)
+#import "AccountInfo.h"
+#import "HttpTool.h"
+#endif
+
 @class MyCamera;
 
 @protocol SecurityCodeDelegate;
