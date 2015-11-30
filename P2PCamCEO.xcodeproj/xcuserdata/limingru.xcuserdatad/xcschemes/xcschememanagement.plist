@@ -54,6 +54,11 @@
 			<key>orderHint</key>
 			<integer>10</integer>
 		</dict>
+		<key>QIEAPP.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>15</integer>
+		</dict>
 		<key>QTAIDT.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -82,6 +87,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0617381B1C0C8E270028DCB8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>063733411BE2406200F767A8</key>
 		<dict>
 			<key>primary</key>
