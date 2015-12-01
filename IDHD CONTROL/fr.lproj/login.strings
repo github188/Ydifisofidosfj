@@ -5,26 +5,26 @@
   Created by fourones on 15/11/21.
   Copyright © 2015年 TUTK. All rights reserved.
 */
-"UserNameTips"="UserName";
-"PasswordTips"="Password";
-"Remember"="Remember";
-"Login"="Login";
-"Forget password"="Forget password?";
-"Sign up"="Sign up";
+"UserNameTips"="Nom d'utilisateur";
+"PasswordTips"="Mot de passe";
+"Remember"="Mémoriser les informations";
+"Login"="Se connecter";
+"Forget password"="Mot de passe oublié ?";
+"Sign up"="S'enregistrer";
 
-"请输入用户名和密码"="请输入用户名和密码";
-"提示"="提示";
+"请输入用户名和密码"="Veuillez entrer votre identifiant et mot de passe";
+"提示"="Attention";
 
-"确定"="确定";
+"确定"="Ok";
 
-"请输入有效的Email"="请输入有效的Email";
+"请输入有效的Email"="L'adresse email est invalide";
 
-"EmailTips"="E-mail";
-"Submit"="Submit";
+"EmailTips"="Email";
+"Submit"="Envoyer";
 
-"firstPasswordTips"="6-16 letter and digits";
-"secondPasswordTips"="Confirm password";
+"firstPasswordTips"="De 6 à 16 charactères";
+"secondPasswordTips"="Confirmer le mot de passe";
 
-"请输入至少6位长度的帐号"="请输入至少6位长度的帐号";
-"请输入长度为6-16位的密码"="请输入长度为6-16位的密码";
-"两次密码输入不一致"="两次密码输入不一致";
+"请输入至少6位长度的帐号"="Veuillez insérer votre nom de compte (6 charactères minimum)";
+"请输入长度为6-16位的密码"="Veuillez insérer votre mot de passe (6 à 16 charactères maximum)";
+"两次密码输入不一致"="Echec de la confirmation du mot de passe";

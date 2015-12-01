@@ -12,12 +12,12 @@
 "Forget password"="Forget password?";
 "Sign up"="Sign up";
 
-"请输入用户名和密码"="请输入用户名和密码";
-"提示"="提示";
+"请输入用户名和密码"="Please enter your username and password";
+"提示"="Attention";
 
-"确定"="确定";
+"确定"="OK";
 
-"请输入有效的Email"="请输入有效的Email";
+"请输入有效的Email"="Please enter a valid email address";
 
 "EmailTips"="E-mail";
 "Submit"="Submit";
@@ -25,6 +25,6 @@
 "firstPasswordTips"="6-16 letter and digits";
 "secondPasswordTips"="Confirm password";
 
-"请输入至少6位长度的帐号"="请输入至少6位长度的帐号";
-"请输入长度为6-16位的密码"="请输入长度为6-16位的密码";
-"两次密码输入不一致"="两次密码输入不一致";
+"请输入至少6位长度的帐号"="Please enter your Account no less than 6 digits or letters";
+"请输入长度为6-16位的密码"="Please enter a password with 6-16 digits or letters";
+"两次密码输入不一致"="confirm password failed;

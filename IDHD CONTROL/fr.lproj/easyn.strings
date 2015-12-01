@@ -4,7 +4,7 @@
 "AddApWifiTips2"="Pour une connexion de votre caméra sans câble ethernet.";
 "AddApWifiOtherTips"="2.Connexion de votre caméra via un câble ethernet ou reliée à un routeur sans fil";
 "AddApWifiNextStep"="Suivant";
-"AddApWifiStep2Tips"="Veuillez connecter l'adaptateur à la caméra. La caméra va bouger sur elle-même puis émèttre un Ding-Dong, puis appuyer sur \"Suivant\".";
+"AddApWifiStep2Tips"="Veuillez connecter l'adaptateur à la caméra. La caméra va bouger sur elle-même puis émettre un Ding-Dong, puis appuyer sur \"Suivant\".";
 "AddApWifiStep2NeedWifiTips"="Veuillez vous assurer que votre téléphone est bien connecté à votre réseau wifi.";
 "AddApWifiStep3SettingBtnTitle"="Paramètres";
 "AddApWifiSSIDTips"="SSID ne peut être vide";
