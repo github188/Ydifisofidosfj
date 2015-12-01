@@ -42,11 +42,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOTCamViewer/CameraLiveViewController.mm"
-            timestampString = "470675389.875221"
+            timestampString = "470679163.684595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "3172"
-            endingLineNumber = "3172">
+            startingLineNumber = "3184"
+            endingLineNumber = "3184"
+            landmarkName = "-onBrightClicked:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -104,11 +106,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOTCamViewer/CameraLiveViewController.mm"
-            timestampString = "470675389.875221"
+            timestampString = "470679163.684595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "3236"
-            endingLineNumber = "3236">
+            startingLineNumber = "3248"
+            endingLineNumber = "3248"
+            landmarkName = "-setPreAction:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -118,11 +122,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOTCamViewer/CameraLiveViewController.mm"
-            timestampString = "470675389.875221"
+            timestampString = "470679163.684595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "3250"
-            endingLineNumber = "3250">
+            startingLineNumber = "3262"
+            endingLineNumber = "3262"
+            landmarkName = "-setPreAction:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -149,6 +155,22 @@
             continueAfterRunningActions = "No"
             scope = "0"
             stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IOTCamViewer/APLEAGLView.m"
+            timestampString = "470679950.249675"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "-initWithCoder:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
