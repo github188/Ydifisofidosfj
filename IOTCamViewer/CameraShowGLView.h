@@ -77,4 +77,6 @@
 - (void)deattachCamera;
 - (void)setMinimumGestureLength:(NSInteger)length MaximumVariance:(NSInteger)variance;
 
+- (UIImage *) displayImage:(CVImageBufferRef)imageBuffer;
+
 @end

@@ -66,7 +66,7 @@ enum {
 	fRatioMonitor = newFrame.size.width/newFrame.size.height;
     
 	if( fRatioMonitor < fRatioFrame ) {
-        float width = newFrame.size.width;
+        CGFloat width = newFrame.size.width;
         
 //        if ( width > 1280){
 //            width = 1280;
@@ -84,7 +84,7 @@ enum {
 	}
 	else {
         
-        float height = newFrame.size.height;
+        CGFloat height = newFrame.size.height;
 //        if ( height > 720){
 //            height = 720;
 //        }
@@ -187,12 +187,63 @@ enum {
 	context = nil;
 }
 
-- (void)renderVideo:(CVImageBufferRef)videoFrame
+
+
+
+- (UIImage *) displayImage:(CVImageBufferRef)imageBuffer
 {
+    CVImageBufferRef buffer = imageBuffer;
+    
+    CVPixelBufferLockBaseAddress(buffer, 0);
+    
+    //從 CVImageBufferRef 取得影像的細部資訊
+    uint8_t *base;
+    size_t width, height, bytesPerRow;
+    base = CVPixelBufferGetBaseAddress(buffer);
+    width = CVPixelBufferGetWidth(buffer);
+    height = CVPixelBufferGetHeight(buffer);
+    bytesPerRow = CVPixelBufferGetBytesPerRow(buffer);
+    
+    //利用取得影像細部資訊格式化 CGContextRef
+    CGColorSpaceRef colorSpace;
+    CGContextRef cgContext;
+    colorSpace = CGColorSpaceCreateDeviceRGB();
+    cgContext = CGBitmapContextCreate (base, width, height, 8, bytesPerRow, colorSpace, kCGBitmapByteOrder32Little | kCGImageAlphaPremultipliedFirst);
+    
+    CGColorSpaceRelease(colorSpace);
+    
+    //透過 CGImageRef 將 CGContextRef 轉換成 UIImage
+    CGImageRef cgImage;
+    UIImage *image;
+    cgImage = CGBitmapContextCreateImage(cgContext);
+    image = [UIImage imageWithCGImage:cgImage];
+    CGImageRelease(cgImage);
+    CGContextRelease(cgContext);
+    
+    CVPixelBufferUnlockBaseAddress(buffer, 0);
+    
+    return image;
+    
+    //        NSString *fileName = [Utilities documentsPath:[NSString stringWithFormat:@"image%i.png",tmp]];
+    //    tmp ++;
+    //    [UIImagePNGRepresentation(image) writeToFile:fileName atomically:YES];
+    //    NSError *error;
+    //    NSFileManager *fileMgr = [NSFileManager defaultManager];
+    //    NSLog(@"Documents directory: %@", [fileMgr contentsOfDirectoryAtPath:fileName error:&error]);
+    
+    //成功轉換成 UIImage
+    //    self.imageView.image = [UIImage imageNamed:@"image3"];
+//    [self.imageView setImage:image];
+}
+
+
+
+
+- (void)renderVideo:(CVImageBufferRef)videoFrame
+{    
 	CVPixelBufferLockBaseAddress(videoFrame, 0);
-	int bufferHeight = CVPixelBufferGetHeight(videoFrame);
-	int bufferWidth = CVPixelBufferGetWidth(videoFrame);
-	//NSLog( @"renderVideo %dx%d", bufferWidth, bufferHeight );
+	int bufferHeight = (int)CVPixelBufferGetHeight(videoFrame);
+	int bufferWidth = (int)CVPixelBufferGetWidth(videoFrame);
 	
 	// Create a new texture from the camera frame data, display that using the shaders
 	if( videoFrameTexture != 0 ) {
@@ -204,6 +255,7 @@ enum {
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 		
+        //GL_APPLE_texture_format_BGRA8888
 		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, bufferWidth, bufferHeight, 0, GL_RGBA, GL_UNSIGNED_BYTE, CVPixelBufferGetBaseAddress(videoFrame));
 		
 		[self drawFrame];
@@ -663,7 +715,7 @@ enum {
     if (direction != DirectionNone) {
         
         if (self.delegate && [self.delegate respondsToSelector:@selector(monitor:gestureSwiped:)]) {
-            [self.delegate monitor:self gestureSwiped:direction];
+            [self.delegate monitor:nil gestureSwiped:direction];
         }
         else {
             

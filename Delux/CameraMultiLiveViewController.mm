@@ -240,6 +240,9 @@ extern unsigned int _getTickCount() ;
                 NSString *name = [uuidArr objectAtIndex:3];
                 NSString *view_acc = @"admin";
                 NSString *view_pwd = arr[j][@"pwd"];
+                if(!view_pwd || [view_pwd isEqual:[NSNull null]]){
+                    view_pwd = [uuidArr objectAtIndex:1];
+                }
                 NSInteger channel = 0;
                 NSInteger isSync = NO;
                 NSInteger isFromCloud = NO;
@@ -272,7 +275,7 @@ extern unsigned int _getTickCount() ;
                 [camera_list addObject:tempCamera];
                 [tempCamera release];
                 
-                SMsgAVIoctrlSetStreamCtrlReq *ss = (SMsgAVIoctrlSetStreamCtrlReq *)malloc(sizeof(SMsgAVIoctrlSetStreamCtrlReq));
+                /*SMsgAVIoctrlSetStreamCtrlReq *ss = (SMsgAVIoctrlSetStreamCtrlReq *)malloc(sizeof(SMsgAVIoctrlSetStreamCtrlReq));
                 memset(ss, 0, sizeof(SMsgAVIoctrlSetStreamCtrlReq));
                 
                 ss->channel = 0;
@@ -281,7 +284,7 @@ extern unsigned int _getTickCount() ;
                                            Type:IOTYPE_USER_IPCAM_SETSTREAMCTRL_REQ
                                            Data:(char *)ss
                                        DataSize:sizeof(SMsgAVIoctrlSetStreamCtrlReq)];
-                free(ss);
+                free(ss);*/
             }
             [self checkStatus];
             [self viewWillAppear:YES];
@@ -340,7 +343,7 @@ extern unsigned int _getTickCount() ;
 #if defined(Aztech)
 #else
             
-            SMsgAVIoctrlSetStreamCtrlReq *ss = (SMsgAVIoctrlSetStreamCtrlReq *)malloc(sizeof(SMsgAVIoctrlSetStreamCtrlReq));
+            /*SMsgAVIoctrlSetStreamCtrlReq *ss = (SMsgAVIoctrlSetStreamCtrlReq *)malloc(sizeof(SMsgAVIoctrlSetStreamCtrlReq));
             memset(ss, 0, sizeof(SMsgAVIoctrlSetStreamCtrlReq));
             
             ss->channel = 0;
@@ -349,7 +352,7 @@ extern unsigned int _getTickCount() ;
                                    Type:IOTYPE_USER_IPCAM_SETSTREAMCTRL_REQ
                                    Data:(char *)ss
                                DataSize:sizeof(SMsgAVIoctrlSetStreamCtrlReq)];
-            free(ss);
+            free(ss);*/
 #endif
         }
         
