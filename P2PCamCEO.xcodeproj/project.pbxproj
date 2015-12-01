@@ -8461,6 +8461,9 @@
 		06DE27C21BFCC804005A068F /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DE27C01BFCC804005A068F /* HttpTool.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		06DE27C51BFCCCEE005A068F /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DE27C41BFCCCEE005A068F /* HTTPClient.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		06DE27C81BFCD708005A068F /* AccountInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 06DE27C71BFCD708005A068F /* AccountInfo.m */; };
+		06E002481C0DF3840051BBF9 /* APLEAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E002471C0DF3840051BBF9 /* APLEAGLView.m */; };
+		06E0024B1C0DF5BD0051BBF9 /* YUV420Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E002491C0DF5BD0051BBF9 /* YUV420Shader.fsh */; };
+		06E0024C1C0DF5BD0051BBF9 /* YUV420Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E0024A1C0DF5BD0051BBF9 /* YUV420Shader.vsh */; };
 		06E1BC6C1AF5DB5100755606 /* refresh_27_07_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E1BC6B1AF5DB5100755606 /* refresh_27_07_1.png */; };
 		06E1BC6D1AF5DB5100755606 /* refresh_27_07_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 06E1BC6B1AF5DB5100755606 /* refresh_27_07_1.png */; };
 		06E376D81B5A0BA2003A378F /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E376D71B5A0BA2003A378F /* Accelerate.framework */; };
@@ -11150,6 +11153,10 @@
 		06DE27C41BFCCCEE005A068F /* HTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPClient.m; sourceTree = "<group>"; };
 		06DE27C61BFCD708005A068F /* AccountInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountInfo.h; path = "IDHD CONTROL/AccountInfo.h"; sourceTree = "<group>"; };
 		06DE27C71BFCD708005A068F /* AccountInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountInfo.m; path = "IDHD CONTROL/AccountInfo.m"; sourceTree = "<group>"; };
+		06E002461C0DF3840051BBF9 /* APLEAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLEAGLView.h; sourceTree = "<group>"; };
+		06E002471C0DF3840051BBF9 /* APLEAGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLEAGLView.m; sourceTree = "<group>"; };
+		06E002491C0DF5BD0051BBF9 /* YUV420Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = YUV420Shader.fsh; path = Shaders/YUV420Shader.fsh; sourceTree = "<group>"; };
+		06E0024A1C0DF5BD0051BBF9 /* YUV420Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = YUV420Shader.vsh; path = Shaders/YUV420Shader.vsh; sourceTree = "<group>"; };
 		06E1BC6B1AF5DB5100755606 /* refresh_27_07_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh_27_07_1.png; sourceTree = "<group>"; };
 		06E376D71B5A0BA2003A378F /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		06E508111BF2289900300095 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "Bayit Cam/en.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -15126,6 +15133,8 @@
 		86B9EE3E1752580A006A142D /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
+				06E002491C0DF5BD0051BBF9 /* YUV420Shader.fsh */,
+				06E0024A1C0DF5BD0051BBF9 /* YUV420Shader.vsh */,
 				86B9EE3F17525823006A142D /* DirectDisplayShader.fsh */,
 				86B9EE4017525823006A142D /* DirectDisplayShader.vsh */,
 			);
@@ -15165,6 +15174,8 @@
 		D8028D0014A8173300BE124F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				06E002461C0DF3840051BBF9 /* APLEAGLView.h */,
+				06E002471C0DF3840051BBF9 /* APLEAGLView.m */,
 				0631097C1ABA3D5D00C6F0F1 /* ChooseViewController.h */,
 				0631097D1ABA3D5D00C6F0F1 /* ChooseViewController.m */,
 				55AA60E418C6FAE500338DBD /* UIDevice+Version.h */,
@@ -16664,6 +16675,7 @@
 				063734EC1BE2406200F767A8 /* leo_mirror_ud.png in Resources */,
 				06B165911BFB5A4E00931E99 /* Arrow@3x.png in Resources */,
 				06B1658E1BFB5A4E00931E99 /* Arrow-click@2x.png in Resources */,
+				06E0024C1C0DF5BD0051BBF9 /* YUV420Shader.vsh in Resources */,
 				063734EE1BE2406200F767A8 /* 6chlist_bk_bg@2x.jpg in Resources */,
 				063734EF1BE2406200F767A8 /* CustomTableViewCellStyle1.xib in Resources */,
 				063734F01BE2406200F767A8 /* CheckView.xib in Resources */,
@@ -16790,6 +16802,7 @@
 				063735621BE2406200F767A8 /* qualitylist@2x.png in Resources */,
 				063735631BE2406200F767A8 /* moreset_clicked.png in Resources */,
 				063735F81BE242C400F767A8 /* myleft@2x.png in Resources */,
+				06E0024B1C0DF5BD0051BBF9 /* YUV420Shader.fsh in Resources */,
 				063735641BE2406200F767A8 /* more_set@2x.png in Resources */,
 				063735661BE2406200F767A8 /* asia.csv in Resources */,
 				063735681BE2406200F767A8 /* ceo_rcplay_h@2x.png in Resources */,
@@ -23329,6 +23342,7 @@
 				063733AF1BE2406200F767A8 /* UIDevice+Version.m in Sources */,
 				063733B01BE2406200F767A8 /* CustomPeriodEventSearchController.m in Sources */,
 				063733B11BE2406200F767A8 /* CameraShowGLView.m in Sources */,
+				06E002481C0DF3840051BBF9 /* APLEAGLView.m in Sources */,
 				063733B21BE2406200F767A8 /* UIImage+Image.m in Sources */,
 				063733B31BE2406200F767A8 /* UITextView+TextView.m in Sources */,
 				061096DB1BF5747100C4B64C /* MailSmtpController.m in Sources */,
