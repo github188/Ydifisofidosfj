@@ -27,4 +27,4 @@
 
 "请输入至少6位长度的帐号"="Please enter your Account no less than 6 digits or letters";
 "请输入长度为6-16位的密码"="Please enter a password with 6-16 digits or letters";
-"两次密码输入不一致"="confirm password failed;
+"两次密码输入不一致"="confirm password failed";
