@@ -8482,6 +8482,51 @@
 		06F3E2181BDFAAB000D6698D /* page4_sp@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06F3E2141BDFAAB000D6698D /* page4_sp@2x.jpg */; };
 		06F425F71AA9FB6500427383 /* AppGuidViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F425F51AA9FB6500427383 /* AppGuidViewController.m */; };
 		06F425F81AA9FB6500427383 /* AppGuidViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06F425F61AA9FB6500427383 /* AppGuidViewController.xib */; };
+		06F55B711C0EA1CC00E66DFB /* APLEAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E002471C0DF3840051BBF9 /* APLEAGLView.m */; };
+		06F55B721C0EA1CD00E66DFB /* APLEAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E002471C0DF3840051BBF9 /* APLEAGLView.m */; };
+		06F55B731C0EA1CD00E66DFB /* APLEAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E002471C0DF3840051BBF9 /* APLEAGLView.m */; };
+		06F55B741C0EA1CE00E66DFB /* APLEAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E002471C0DF3840051BBF9 /* APLEAGLView.m */; };
+		06F55B751C0EA1CE00E66DFB /* APLEAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E002471C0DF3840051BBF9 /* APLEAGLView.m */; };
+		06F55B761C0EA1CE00E66DFB /* APLEAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E002471C0DF3840051BBF9 /* APLEAGLView.m */; };
+		06F55B771C0EA1CF00E66DFB /* APLEAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E002471C0DF3840051BBF9 /* APLEAGLView.m */; };
+		06F55B781C0EA1CF00E66DFB /* APLEAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E002471C0DF3840051BBF9 /* APLEAGLView.m */; };
+		06F55B791C0EA1D000E66DFB /* APLEAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E002471C0DF3840051BBF9 /* APLEAGLView.m */; };
+		06F55B7A1C0EA1D100E66DFB /* APLEAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E002471C0DF3840051BBF9 /* APLEAGLView.m */; };
+		06F55B7B1C0EA1D100E66DFB /* APLEAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E002471C0DF3840051BBF9 /* APLEAGLView.m */; };
+		06F55B7C1C0EA1D200E66DFB /* APLEAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E002471C0DF3840051BBF9 /* APLEAGLView.m */; };
+		06F55B7D1C0EA1D200E66DFB /* APLEAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E002471C0DF3840051BBF9 /* APLEAGLView.m */; };
+		06F55B7E1C0EA1D300E66DFB /* APLEAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E002471C0DF3840051BBF9 /* APLEAGLView.m */; };
+		06F55B7F1C0EA1D400E66DFB /* APLEAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E002471C0DF3840051BBF9 /* APLEAGLView.m */; };
+		06F55B801C0EA1F400E66DFB /* YUV420Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E002491C0DF5BD0051BBF9 /* YUV420Shader.fsh */; };
+		06F55B811C0EA1F400E66DFB /* YUV420Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E0024A1C0DF5BD0051BBF9 /* YUV420Shader.vsh */; };
+		06F55B821C0EA1F400E66DFB /* YUV420Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E002491C0DF5BD0051BBF9 /* YUV420Shader.fsh */; };
+		06F55B831C0EA1F400E66DFB /* YUV420Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E0024A1C0DF5BD0051BBF9 /* YUV420Shader.vsh */; };
+		06F55B841C0EA1F500E66DFB /* YUV420Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E002491C0DF5BD0051BBF9 /* YUV420Shader.fsh */; };
+		06F55B851C0EA1F500E66DFB /* YUV420Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E0024A1C0DF5BD0051BBF9 /* YUV420Shader.vsh */; };
+		06F55B861C0EA1F500E66DFB /* YUV420Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E002491C0DF5BD0051BBF9 /* YUV420Shader.fsh */; };
+		06F55B871C0EA1F500E66DFB /* YUV420Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E0024A1C0DF5BD0051BBF9 /* YUV420Shader.vsh */; };
+		06F55B881C0EA1F600E66DFB /* YUV420Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E002491C0DF5BD0051BBF9 /* YUV420Shader.fsh */; };
+		06F55B891C0EA1F600E66DFB /* YUV420Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E0024A1C0DF5BD0051BBF9 /* YUV420Shader.vsh */; };
+		06F55B8A1C0EA1F600E66DFB /* YUV420Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E002491C0DF5BD0051BBF9 /* YUV420Shader.fsh */; };
+		06F55B8B1C0EA1F600E66DFB /* YUV420Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E0024A1C0DF5BD0051BBF9 /* YUV420Shader.vsh */; };
+		06F55B8C1C0EA1F600E66DFB /* YUV420Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E002491C0DF5BD0051BBF9 /* YUV420Shader.fsh */; };
+		06F55B8D1C0EA1F600E66DFB /* YUV420Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E0024A1C0DF5BD0051BBF9 /* YUV420Shader.vsh */; };
+		06F55B8E1C0EA1F700E66DFB /* YUV420Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E002491C0DF5BD0051BBF9 /* YUV420Shader.fsh */; };
+		06F55B8F1C0EA1F700E66DFB /* YUV420Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E0024A1C0DF5BD0051BBF9 /* YUV420Shader.vsh */; };
+		06F55B901C0EA1F700E66DFB /* YUV420Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E002491C0DF5BD0051BBF9 /* YUV420Shader.fsh */; };
+		06F55B911C0EA1F700E66DFB /* YUV420Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E0024A1C0DF5BD0051BBF9 /* YUV420Shader.vsh */; };
+		06F55B921C0EA1F800E66DFB /* YUV420Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E002491C0DF5BD0051BBF9 /* YUV420Shader.fsh */; };
+		06F55B931C0EA1F800E66DFB /* YUV420Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E0024A1C0DF5BD0051BBF9 /* YUV420Shader.vsh */; };
+		06F55B941C0EA1F800E66DFB /* YUV420Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E002491C0DF5BD0051BBF9 /* YUV420Shader.fsh */; };
+		06F55B951C0EA1F800E66DFB /* YUV420Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E0024A1C0DF5BD0051BBF9 /* YUV420Shader.vsh */; };
+		06F55B961C0EA1F900E66DFB /* YUV420Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E002491C0DF5BD0051BBF9 /* YUV420Shader.fsh */; };
+		06F55B971C0EA1F900E66DFB /* YUV420Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E0024A1C0DF5BD0051BBF9 /* YUV420Shader.vsh */; };
+		06F55B981C0EA1F900E66DFB /* YUV420Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E002491C0DF5BD0051BBF9 /* YUV420Shader.fsh */; };
+		06F55B991C0EA1F900E66DFB /* YUV420Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E0024A1C0DF5BD0051BBF9 /* YUV420Shader.vsh */; };
+		06F55B9A1C0EA1FB00E66DFB /* YUV420Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E002491C0DF5BD0051BBF9 /* YUV420Shader.fsh */; };
+		06F55B9B1C0EA1FB00E66DFB /* YUV420Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E0024A1C0DF5BD0051BBF9 /* YUV420Shader.vsh */; };
+		06F55B9C1C0EA1FC00E66DFB /* YUV420Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E002491C0DF5BD0051BBF9 /* YUV420Shader.fsh */; };
+		06F55B9D1C0EA1FC00E66DFB /* YUV420Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 06E0024A1C0DF5BD0051BBF9 /* YUV420Shader.vsh */; };
 		06F76E331AB720A100901EBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AC3148C5342007705B6 /* main.m */; };
 		06F76E341AB720A100901EBA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AC7148C5343007705B6 /* AppDelegate.m */; };
 		06F76E351AB720A100901EBA /* CameraListForLiveViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AE3148C657B007705B6 /* CameraListForLiveViewController.mm */; };
@@ -15901,6 +15946,7 @@
 				0617389C1C0C8E270028DCB8 /* add_wifi_1@2x.png in Resources */,
 				0617389D1C0C8E270028DCB8 /* ceo_record_play@2x.png in Resources */,
 				0617389F1C0C8E270028DCB8 /* ceo_rcplay_time.png in Resources */,
+				06F55B9D1C0EA1FC00E66DFB /* YUV420Shader.vsh in Resources */,
 				061738A01C0C8E270028DCB8 /* ceo_recordstop@2x.png in Resources */,
 				061738A11C0C8E270028DCB8 /* login_btn_clicked.png in Resources */,
 				061738A21C0C8E270028DCB8 /* autologin_choose.png in Resources */,
@@ -15981,6 +16027,7 @@
 				061738ED1C0C8E270028DCB8 /* moreset_list2_clicked.png in Resources */,
 				061738EF1C0C8E270028DCB8 /* add_wifinext_clicked.png in Resources */,
 				061738F01C0C8E270028DCB8 /* event@2x.png in Resources */,
+				06F55B9C1C0EA1FC00E66DFB /* YUV420Shader.fsh in Resources */,
 				06173AD01C0C90310028DCB8 /* page1_ko@2x.jpg in Resources */,
 				061738F11C0C8E270028DCB8 /* add_wifi4.png in Resources */,
 				061738F21C0C8E270028DCB8 /* morefunction.png in Resources */,
@@ -16942,6 +16989,7 @@
 				0660403F1B23133300FB6F32 /* drop_unlink_clicked@2x.png in Resources */,
 				066040401B23133300FB6F32 /* ceo_rcplay_back_click_h.png in Resources */,
 				066040411B23133300FB6F32 /* add_qrcode_clicked@2x.png in Resources */,
+				06F55B8C1C0EA1F600E66DFB /* YUV420Shader.fsh in Resources */,
 				066041DA1B2314FF00FB6F32 /* page2_cn.jpg in Resources */,
 				066040431B23133300FB6F32 /* call_on.png in Resources */,
 				066041F61B23161700FB6F32 /* InfoPlist.strings in Resources */,
@@ -17129,6 +17177,7 @@
 				066040F81B23133300FB6F32 /* ceo_record@2x.png in Resources */,
 				066040FA1B23133300FB6F32 /* ceo_record_tab_r.png in Resources */,
 				066040FB1B23133300FB6F32 /* leo_qvga_clicked.png in Resources */,
+				06F55B8D1C0EA1F600E66DFB /* YUV420Shader.vsh in Resources */,
 				066040FC1B23133300FB6F32 /* online.png in Resources */,
 				066040FD1B23133300FB6F32 /* call_on_clicked.png in Resources */,
 				061AA76B1B25D5B000DD34D0 /* AddWithApCameraController.xib in Resources */,
@@ -17300,6 +17349,7 @@
 				066C7AF61BDA5F2900419134 /* f-Btn@2x.png in Resources */,
 				066C78E61BDA5C2400419134 /* add_wifi4@2x.png in Resources */,
 				066C78E71BDA5C2400419134 /* more_delete~ipad.png in Resources */,
+				06F55B981C0EA1F900E66DFB /* YUV420Shader.fsh in Resources */,
 				066C78E81BDA5C2400419134 /* more_event_clicked.png in Resources */,
 				066C78E91BDA5C2400419134 /* liveview.png in Resources */,
 				066C78EA1BDA5C2400419134 /* leo_snapshot@2x.png in Resources */,
@@ -17503,6 +17553,7 @@
 				066C7AF21BDA5F2900419134 /* addcam@2x.png in Resources */,
 				066C79B71BDA5C2400419134 /* microphone@2X.png in Resources */,
 				066C7AF81BDA5F2900419134 /* f+Btn@2x.png in Resources */,
+				06F55B991C0EA1F900E66DFB /* YUV420Shader.vsh in Resources */,
 				066C79B81BDA5C2400419134 /* snapshot.png in Resources */,
 				066C79B91BDA5C2400419134 /* snapshot@2X.png in Resources */,
 				066C79BC1BDA5C2400419134 /* add_wifi2.png in Resources */,
@@ -17732,6 +17783,7 @@
 				066D9ECD1B037E7C00408AF2 /* mainWindow.xib in Resources */,
 				066D9ECE1B037E7C00408AF2 /* CameraLiveView.xib in Resources */,
 				066D9ECF1B037E7C00408AF2 /* leo_emode@2x.png in Resources */,
+				06F55B841C0EA1F500E66DFB /* YUV420Shader.fsh in Resources */,
 				066D9ED11B037E7C00408AF2 /* CameraList.xib in Resources */,
 				066D9ED31B037E7C00408AF2 /* AddCamera.xib in Resources */,
 				066D9ED41B037E7C00408AF2 /* add_wifi4@2x.png in Resources */,
@@ -17888,6 +17940,7 @@
 				066D9F5A1B037E7C00408AF2 /* leo_emode_clicked.png in Resources */,
 				066D9F5B1B037E7C00408AF2 /* leo_mirror_rl_disable.png in Resources */,
 				066D9F5C1B037E7C00408AF2 /* more_changech_clicked@2x.png in Resources */,
+				06F55B851C0EA1F500E66DFB /* YUV420Shader.vsh in Resources */,
 				066D9F5D1B037E7C00408AF2 /* call_on@2x.png in Resources */,
 				066D9F5E1B037E7C00408AF2 /* popoverArrowLeft.png in Resources */,
 				066D9F601B037E7C00408AF2 /* ceo_rcplay_forward_click_h@2x.png in Resources */,
@@ -18249,6 +18302,7 @@
 				06118EF11B08E11900BB45FB /* page3_cn.jpg in Resources */,
 				0682DED01B08CCF30019BD70 /* login_pw_bk@2x.png in Resources */,
 				0682DED11B08CCF30019BD70 /* leo_emode_disable@2x.png in Resources */,
+				06F55B871C0EA1F500E66DFB /* YUV420Shader.vsh in Resources */,
 				069D50611B3845AC00B2E083 /* moreset_bk~ipad.png in Resources */,
 				0682DED31B08CCF30019BD70 /* refresh_clicked@2x.png in Resources */,
 				0682DED41B08CCF30019BD70 /* camera.png in Resources */,
@@ -18406,6 +18460,7 @@
 				0682DF721B08CCF30019BD70 /* add_lsearch_clicked@2x.png in Resources */,
 				0682DF731B08CCF30019BD70 /* login.png in Resources */,
 				0682DF741B08CCF30019BD70 /* drop_refresh.png in Resources */,
+				06F55B861C0EA1F500E66DFB /* YUV420Shader.fsh in Resources */,
 				0682DF761B08CCF30019BD70 /* more_event_disable.png in Resources */,
 				0682DF771B08CCF30019BD70 /* ceo_rcplay_line.png in Resources */,
 				0682DF781B08CCF30019BD70 /* moreset_listm@2x.png in Resources */,
@@ -18653,6 +18708,7 @@
 				0692A9DC1B5FCFA300D28D06 /* page1_i@2x.jpg in Resources */,
 				06C235771B65146700CC8D5E /* more_event_clicked@2x.png in Resources */,
 				06C236F81B6514B600CC8D5E /* ceo_rcplay_h@2x.png in Resources */,
+				06F55B8E1C0EA1F700E66DFB /* YUV420Shader.fsh in Resources */,
 				06C236D11B65149E00CC8D5E /* pic_play_MarkMan.png in Resources */,
 				0692A7BC1B5FC55400D28D06 /* beep-beep.aiff in Resources */,
 				06C236581B65148600CC8D5E /* more_event@2x.png in Resources */,
@@ -18943,6 +18999,7 @@
 				06C236C61B65149E00CC8D5E /* leo_mirror_rl_disable@2x.png in Resources */,
 				06C236531B65148600CC8D5E /* more_delete.png in Resources */,
 				06C236721B65148600CC8D5E /* Checkmark@2x.png in Resources */,
+				06F55B8F1C0EA1F700E66DFB /* YUV420Shader.vsh in Resources */,
 				0692A8CE1B5FC55400D28D06 /* thumbnailCheckMark.png in Resources */,
 				06C235A81B65146700CC8D5E /* leo_speaker_on.png in Resources */,
 				0692A9BB1B5FC84C00D28D06 /* page3_en@2x.jpg in Resources */,
@@ -19111,6 +19168,7 @@
 				069DCEC31BEDD43700A87F65 /* moreset_list1@2x.png in Resources */,
 				069DCEC41BEDD43700A87F65 /* onlinebar.png in Resources */,
 				069DCEC51BEDD43700A87F65 /* leo_speaker_off_disable.png in Resources */,
+				06F55B9B1C0EA1FB00E66DFB /* YUV420Shader.vsh in Resources */,
 				069DCEC61BEDD43700A87F65 /* camera@2x.png in Resources */,
 				069DCEC71BEDD43700A87F65 /* leo_emode_disable.png in Resources */,
 				069DD0601BEDD82400A87F65 /* Images.xcassets in Resources */,
@@ -19123,6 +19181,7 @@
 				069DD12C1BEDD92300A87F65 /* addcam.png in Resources */,
 				069DD11C1BEDD8DF00A87F65 /* myup@2x.png in Resources */,
 				069DCECE1BEDD43700A87F65 /* add_wifi4.png in Resources */,
+				06F55B9A1C0EA1FB00E66DFB /* YUV420Shader.fsh in Resources */,
 				069DCECF1BEDD43700A87F65 /* morefunction.png in Resources */,
 				069DCED11BEDD43700A87F65 /* leo_micinfo.png in Resources */,
 				069DCED21BEDD43700A87F65 /* leo_qvga_disable@2x.png in Resources */,
@@ -19497,6 +19556,7 @@
 				069EF9941B1207D00024CB5A /* leo_snapshot_disable@2x.png in Resources */,
 				069EF9951B1207D00024CB5A /* GetWiFiSSIDView.xib in Resources */,
 				069EF9961B1207D00024CB5A /* DirectDisplayShader.vsh in Resources */,
+				06F55B8B1C0EA1F600E66DFB /* YUV420Shader.vsh in Resources */,
 				069EFB661B12092A0024CB5A /* myup1@2x.png in Resources */,
 				069EF9971B1207D00024CB5A /* add_wifi_1.png in Resources */,
 				069EF9981B1207D00024CB5A /* ceo_rcplay_back_click.png in Resources */,
@@ -19582,6 +19642,7 @@
 				069EF9E31B1207D00024CB5A /* leo_micinfo.png in Resources */,
 				069EF9E41B1207D00024CB5A /* leo_qvga_disable@2x.png in Resources */,
 				069EF9E51B1207D00024CB5A /* add_camicon@2x.png in Resources */,
+				06F55B8A1C0EA1F600E66DFB /* YUV420Shader.fsh in Resources */,
 				069EF9E61B1207D00024CB5A /* ceo_set.png in Resources */,
 				069EF9E71B1207D00024CB5A /* more_changech@2x.png in Resources */,
 				069EF9E81B1207D00024CB5A /* leo_snapshot_clicked@2x.png in Resources */,
@@ -19944,6 +20005,7 @@
 				0688C3491B6117D800079BB5 /* myleft@2x.png in Resources */,
 				06AA8CD01B5FE8960050A6E7 /* ceo_rcplay_time.png in Resources */,
 				06AA8CD21B5FE8960050A6E7 /* ceo_recordstop@2x.png in Resources */,
+				06F55B911C0EA1F700E66DFB /* YUV420Shader.vsh in Resources */,
 				06AA8CD31B5FE8960050A6E7 /* login_btn_clicked.png in Resources */,
 				06AA8CD41B5FE8960050A6E7 /* autologin_choose.png in Resources */,
 				06AA8CD51B5FE8960050A6E7 /* moreset_listm_clicked.png in Resources */,
@@ -20024,6 +20086,7 @@
 				0688C3701B61180600079BB5 /* addcam_clicked.png in Resources */,
 				06AA8D251B5FE8960050A6E7 /* add_wifinext_clicked.png in Resources */,
 				06AA8D261B5FE8960050A6E7 /* event@2x.png in Resources */,
+				06F55B901C0EA1F700E66DFB /* YUV420Shader.fsh in Resources */,
 				06AA8D271B5FE8960050A6E7 /* add_wifi4.png in Resources */,
 				06AA8D281B5FE8960050A6E7 /* morefunction.png in Resources */,
 				06AA8D2A1B5FE8960050A6E7 /* leo_micinfo.png in Resources */,
@@ -20530,6 +20593,7 @@
 				06B8C9B51B0A21BB006ED6EE /* ceo_rcplay_line_h@2x.png in Resources */,
 				06B8C9B61B0A21BB006ED6EE /* IQKeyboardManager.bundle in Resources */,
 				06B8CB311B0A2332006ED6EE /* page4_cn.jpg in Resources */,
+				06F55B891C0EA1F600E66DFB /* YUV420Shader.vsh in Resources */,
 				06B8C9B71B0A21BB006ED6EE /* popoverArrowLeftSimple.png in Resources */,
 				06B8C9B91B0A21BB006ED6EE /* login_icon.png in Resources */,
 				06B8C9BA1B0A21BB006ED6EE /* refresh_27_07_1.png in Resources */,
@@ -20618,6 +20682,7 @@
 				06B8CA0C1B0A21BB006ED6EE /* add_wifi1_bk.png in Resources */,
 				06642F6A1B31BCF000111ECA /* 6chlist_bk_bg@2x.jpg in Resources */,
 				06B8CA0D1B0A21BB006ED6EE /* add_devicessid.png in Resources */,
+				06F55B881C0EA1F600E66DFB /* YUV420Shader.fsh in Resources */,
 				06B8CA0E1B0A21BB006ED6EE /* leo_speaker_on_clicked.png in Resources */,
 				06B8CA0F1B0A21BB006ED6EE /* more_delete_clicked.png in Resources */,
 				06B8CA101B0A21BB006ED6EE /* autologin@2x.png in Resources */,
@@ -20819,6 +20884,7 @@
 				06CAA4DC1BC0142C00853612 /* liveview_info.png in Resources */,
 				06CAA4DD1BC0142C00853612 /* RecordFileView.xib in Resources */,
 				06CAA4DE1BC0142C00853612 /* more_changech_clicked.png in Resources */,
+				06F55B941C0EA1F800E66DFB /* YUV420Shader.fsh in Resources */,
 				06CAA74B1BC0173C00853612 /* myup1@2x.png in Resources */,
 				06CAA4DF1BC0142C00853612 /* login_pw_bk.png in Resources */,
 				06CAA4E01BC0142C00853612 /* login_bk.png in Resources */,
@@ -21071,6 +21137,7 @@
 				06CAA5CC1BC0142C00853612 /* add_lsearch_clicked@2x.png in Resources */,
 				06CAA5CD1BC0142C00853612 /* login.png in Resources */,
 				06CAA7391BC016D200853612 /* easyn.strings in Resources */,
+				06F55B951C0EA1F800E66DFB /* YUV420Shader.vsh in Resources */,
 				06CAA5CE1BC0142C00853612 /* drop_refresh.png in Resources */,
 				06CAA5CF1BC0142C00853612 /* more_event_disable.png in Resources */,
 				06CAA5D01BC0142C00853612 /* ceo_rcplay_line.png in Resources */,
@@ -21367,6 +21434,7 @@
 				06D3F8F91B78E7C1006AF177 /* moreset_list1@2x.png in Resources */,
 				06D3F8FA1B78E7C1006AF177 /* onlinebar.png in Resources */,
 				06D3FAA61B78EF6F006AF177 /* myleft@2x.png in Resources */,
+				06F55B931C0EA1F800E66DFB /* YUV420Shader.vsh in Resources */,
 				06D3F8FD1B78E7C1006AF177 /* leo_speaker_off_disable.png in Resources */,
 				06D3F8FE1B78E7C1006AF177 /* camera@2x.png in Resources */,
 				06D3F8FF1B78E7C1006AF177 /* leo_emode_disable.png in Resources */,
@@ -21391,6 +21459,7 @@
 				06D3F9101B78E7C1006AF177 /* CheckSSIDView.xib in Resources */,
 				06D3FAF61B796BF1006AF177 /* psd_contrast@2x.png in Resources */,
 				06D3F9111B78E7C1006AF177 /* tips_elec@2x.png in Resources */,
+				06F55B921C0EA1F800E66DFB /* YUV420Shader.fsh in Resources */,
 				06D3F9121B78E7C1006AF177 /* info.png in Resources */,
 				06D3F9131B78E7C1006AF177 /* refresh.png in Resources */,
 				06D3F9141B78E7C1006AF177 /* ceo_pause_h.png in Resources */,
@@ -22015,6 +22084,7 @@
 				065AB43C1BC03882007C24D5 /* add_local.png in Resources */,
 				065AB53B1BC03882007C24D5 /* refresh@2x.png in Resources */,
 				065AB4FF1BC03882007C24D5 /* ceo_rcplay_line.png in Resources */,
+				06F55B961C0EA1F900E66DFB /* YUV420Shader.fsh in Resources */,
 				06D7968A1BC0355E00B1E986 /* CameraMultiLiveView.xib in Resources */,
 				065AB4BA1BC03882007C24D5 /* more_delete.png in Resources */,
 				065AB4C21BC03882007C24D5 /* more_event_clicked@2x.png in Resources */,
@@ -22048,6 +22118,7 @@
 				065AB4D21BC03882007C24D5 /* morefunction_clicked.png in Resources */,
 				065AB4751BC03882007C24D5 /* drop_refresh_clicked@2x.png in Resources */,
 				065AB5081BC03882007C24D5 /* ceo_record_clicked@2x.png in Resources */,
+				06F55B971C0EA1F900E66DFB /* YUV420Shader.vsh in Resources */,
 				065AB4F31BC03882007C24D5 /* ceo_rcplay.png in Resources */,
 				065AB4B61BC03882007C24D5 /* more_changech_clicked@2x.png in Resources */,
 				065AB46F1BC03882007C24D5 /* ceo_set_clicked@2x.png in Resources */,
@@ -22194,6 +22265,7 @@
 				06F76EBD1AB720A100901EBA /* add_camwifibk@2x.png in Resources */,
 				0684EEF01ADE968B006BD75A /* page3_en@2x.jpg in Resources */,
 				06F76EBE1AB720A100901EBA /* AddCamera.xib in Resources */,
+				06F55B831C0EA1F400E66DFB /* YUV420Shader.vsh in Resources */,
 				06F76EBF1AB720A100901EBA /* add_wifi4@2x.png in Resources */,
 				069D50431B3845AC00B2E083 /* more_delete~ipad.png in Resources */,
 				06F76EC01AB720A100901EBA /* more_event_clicked.png in Resources */,
@@ -22250,6 +22322,7 @@
 				06F76EEB1AB720A100901EBA /* event.png in Resources */,
 				06F76EEC1AB720A100901EBA /* ceo_rcplay_back_click_h@2x.png in Resources */,
 				06F76EED1AB720A100901EBA /* drop_link.png in Resources */,
+				06F55B821C0EA1F400E66DFB /* YUV420Shader.fsh in Resources */,
 				06F76EEE1AB720A100901EBA /* moreset_list2_clicked.png in Resources */,
 				06F76EF01AB720A100901EBA /* add_wifinext_clicked.png in Resources */,
 				06F76EF11AB720A100901EBA /* event@2x.png in Resources */,
@@ -22800,6 +22873,7 @@
 				7A553D7D194EB73D00F5AA11 /* leo_speaker_off_clicked.png in Resources */,
 				0632864B1AB71A8C0033ABD0 /* mydown@2x.png in Resources */,
 				7A553D30194EB73C00F5AA11 /* add_web_clicked.png in Resources */,
+				06F55B801C0EA1F400E66DFB /* YUV420Shader.fsh in Resources */,
 				7A553D67194EB73D00F5AA11 /* leo_emode_clicked.png in Resources */,
 				7A0B1C7419A466950071E5CF /* leo_mirror_rl_disable.png in Resources */,
 				7A553DA0194EB73D00F5AA11 /* more_changech_clicked@2x.png in Resources */,
@@ -23024,6 +23098,7 @@
 				7A553D3A194EB73C00F5AA11 /* add_wifi4.png in Resources */,
 				7A553D80194EB73D00F5AA11 /* leo_speaker_on@2x.png in Resources */,
 				7A553D7C194EB73D00F5AA11 /* leo_speaker_off@2x.png in Resources */,
+				06F55B811C0EA1F400E66DFB /* YUV420Shader.vsh in Resources */,
 				7A553D0B194EB73C00F5AA11 /* add_camwifibk.png in Resources */,
 				0684EF081ADE98C2006BD75A /* page1_zt.jpg in Resources */,
 				7A553DCB194EB73D00F5AA11 /* offline.png in Resources */,
@@ -23178,6 +23253,7 @@
 				0617387B1C0C8E270028DCB8 /* IQToolbar.m in Sources */,
 				0617387C1C0C8E270028DCB8 /* DDBadgeViewCell.m in Sources */,
 				0617387D1C0C8E270028DCB8 /* UIBarButtonItem+BarButtonItem.m in Sources */,
+				06F55B7F1C0EA1D400E66DFB /* APLEAGLView.m in Sources */,
 				0617387E1C0C8E270028DCB8 /* CameraMultiLiveViewController.mm in Sources */,
 				0617387F1C0C8E270028DCB8 /* MyCamera.m in Sources */,
 				061738801C0C8E270028DCB8 /* IQTitleBarButtonItem.m in Sources */,
@@ -23457,6 +23533,7 @@
 				06603FB21B23133300FB6F32 /* Reachability.m in Sources */,
 				06603FB31B23133300FB6F32 /* AudioPickerContentController.m in Sources */,
 				06603FB41B23133300FB6F32 /* DDBadgeViewCell.m in Sources */,
+				06F55B771C0EA1CF00E66DFB /* APLEAGLView.m in Sources */,
 				06603FB51B23133300FB6F32 /* UIBarButtonItem+BarButtonItem.m in Sources */,
 				06603FB61B23133300FB6F32 /* CameraMultiLiveViewController.mm in Sources */,
 				06603FB81B23133300FB6F32 /* MyCamera.m in Sources */,
@@ -23583,6 +23660,7 @@
 				066C78A61BDA5C2400419134 /* IQToolbar.m in Sources */,
 				066C78A71BDA5C2400419134 /* DDBadgeViewCell.m in Sources */,
 				066C78A81BDA5C2400419134 /* UIBarButtonItem+BarButtonItem.m in Sources */,
+				06F55B7D1C0EA1D200E66DFB /* APLEAGLView.m in Sources */,
 				066C78A91BDA5C2400419134 /* CameraMultiLiveViewController.mm in Sources */,
 				066C78AA1BDA5C2400419134 /* MyCamera.m in Sources */,
 				066C78AB1BDA5C2400419134 /* IQTitleBarButtonItem.m in Sources */,
@@ -23613,6 +23691,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				066D9E3D1B037E7C00408AF2 /* main.m in Sources */,
+				06F55B731C0EA1CD00E66DFB /* APLEAGLView.m in Sources */,
 				066D9E3E1B037E7C00408AF2 /* AppDelegate.m in Sources */,
 				066D9E3F1B037E7C00408AF2 /* CameraListForLiveViewController.mm in Sources */,
 				066D9E401B037E7C00408AF2 /* UIImage+ResizeImage.m in Sources */,
@@ -23808,6 +23887,7 @@
 				0682DE4E1B08CCF30019BD70 /* ChannelPickerContentController.m in Sources */,
 				068373101BF6DFDA00B9CE08 /* UIMyWebView.m in Sources */,
 				0682DE4F1B08CCF30019BD70 /* UIButton+Button.m in Sources */,
+				06F55B741C0EA1CE00E66DFB /* APLEAGLView.m in Sources */,
 				0682DE501B08CCF30019BD70 /* UIImageView+ImageView.m in Sources */,
 				0682DE511B08CCF30019BD70 /* MKHorizMenu.m in Sources */,
 				0682DE521B08CCF30019BD70 /* UIBarButtonItem+WEPopover.m in Sources */,
@@ -23961,6 +24041,7 @@
 				0692A7701B5FC55400D28D06 /* IQToolbar.m in Sources */,
 				0692A7711B5FC55400D28D06 /* DDBadgeViewCell.m in Sources */,
 				0692A7721B5FC55400D28D06 /* UIBarButtonItem+BarButtonItem.m in Sources */,
+				06F55B781C0EA1CF00E66DFB /* APLEAGLView.m in Sources */,
 				0692A7731B5FC55400D28D06 /* CameraMultiLiveViewController.mm in Sources */,
 				0692A7751B5FC55400D28D06 /* MyCamera.m in Sources */,
 				0692A7761B5FC55400D28D06 /* IQTitleBarButtonItem.m in Sources */,
@@ -24087,6 +24168,7 @@
 				069DCE541BEDD43700A87F65 /* IQToolbar.m in Sources */,
 				069DCE551BEDD43700A87F65 /* DDBadgeViewCell.m in Sources */,
 				069DCE561BEDD43700A87F65 /* UIBarButtonItem+BarButtonItem.m in Sources */,
+				06F55B7E1C0EA1D300E66DFB /* APLEAGLView.m in Sources */,
 				069DCE571BEDD43700A87F65 /* CameraMultiLiveViewController.mm in Sources */,
 				069DCE581BEDD43700A87F65 /* MyCamera.m in Sources */,
 				069DCE591BEDD43700A87F65 /* IQTitleBarButtonItem.m in Sources */,
@@ -24213,6 +24295,7 @@
 				069EF9671B1207D00024CB5A /* Reachability.m in Sources */,
 				069EF9681B1207D00024CB5A /* AudioPickerContentController.m in Sources */,
 				069EF9691B1207D00024CB5A /* DDBadgeViewCell.m in Sources */,
+				06F55B761C0EA1CE00E66DFB /* APLEAGLView.m in Sources */,
 				069EF96A1B1207D00024CB5A /* UIBarButtonItem+BarButtonItem.m in Sources */,
 				069EF96B1B1207D00024CB5A /* CameraMultiLiveViewController.mm in Sources */,
 				069EF96D1B1207D00024CB5A /* MyCamera.m in Sources */,
@@ -24339,6 +24422,7 @@
 				06AA8CAC1B5FE8960050A6E7 /* IQToolbar.m in Sources */,
 				06AA8CAD1B5FE8960050A6E7 /* DDBadgeViewCell.m in Sources */,
 				06AA8CAE1B5FE8960050A6E7 /* UIBarButtonItem+BarButtonItem.m in Sources */,
+				06F55B791C0EA1D000E66DFB /* APLEAGLView.m in Sources */,
 				06AA8CAF1B5FE8960050A6E7 /* CameraMultiLiveViewController.mm in Sources */,
 				06AA8CB11B5FE8960050A6E7 /* MyCamera.m in Sources */,
 				06AA8CB21B5FE8960050A6E7 /* IQTitleBarButtonItem.m in Sources */,
@@ -24435,6 +24519,7 @@
 				06B8C8F91B0A21BB006ED6EE /* ChannelPickerContentController.m in Sources */,
 				068373111BF6DFDB00B9CE08 /* UIMyWebView.m in Sources */,
 				06B8C8FA1B0A21BB006ED6EE /* UIButton+Button.m in Sources */,
+				06F55B751C0EA1CE00E66DFB /* APLEAGLView.m in Sources */,
 				06B8C8FB1B0A21BB006ED6EE /* UIImageView+ImageView.m in Sources */,
 				06B8C8FC1B0A21BB006ED6EE /* MKHorizMenu.m in Sources */,
 				06B8C8FD1B0A21BB006ED6EE /* UIBarButtonItem+WEPopover.m in Sources */,
@@ -24588,6 +24673,7 @@
 				06CAA4C11BC0142C00853612 /* IQToolbar.m in Sources */,
 				06CAA4C21BC0142C00853612 /* DDBadgeViewCell.m in Sources */,
 				06CAA4C31BC0142C00853612 /* UIBarButtonItem+BarButtonItem.m in Sources */,
+				06F55B7B1C0EA1D100E66DFB /* APLEAGLView.m in Sources */,
 				06CAA4C41BC0142C00853612 /* CameraMultiLiveViewController.mm in Sources */,
 				06CAA4C61BC0142C00853612 /* MyCamera.m in Sources */,
 				06CAA4C71BC0142C00853612 /* IQTitleBarButtonItem.m in Sources */,
@@ -24714,6 +24800,7 @@
 				06D3F8891B78E7C1006AF177 /* AudioPickerContentController.m in Sources */,
 				06D3F88A1B78E7C1006AF177 /* DDBadgeViewCell.m in Sources */,
 				06D3F88B1B78E7C1006AF177 /* UIBarButtonItem+BarButtonItem.m in Sources */,
+				06F55B7A1C0EA1D100E66DFB /* APLEAGLView.m in Sources */,
 				06D3F88C1B78E7C1006AF177 /* CameraMultiLiveViewController.mm in Sources */,
 				06D3F88E1B78E7C1006AF177 /* MyCamera.m in Sources */,
 				06D3F88F1B78E7C1006AF177 /* PullRefreshTableViewController.m in Sources */,
@@ -24840,6 +24927,7 @@
 				06D7953F1BC0355E00B1E986 /* IQToolbar.m in Sources */,
 				06D795401BC0355E00B1E986 /* DDBadgeViewCell.m in Sources */,
 				06D795411BC0355E00B1E986 /* UIBarButtonItem+BarButtonItem.m in Sources */,
+				06F55B7C1C0EA1D200E66DFB /* APLEAGLView.m in Sources */,
 				06D795421BC0355E00B1E986 /* CameraMultiLiveViewController.mm in Sources */,
 				06D795431BC0355E00B1E986 /* MyCamera.m in Sources */,
 				06D795441BC0355E00B1E986 /* IQTitleBarButtonItem.m in Sources */,
@@ -24966,6 +25054,7 @@
 				06335C2E1AC19E7F003DCD0A /* IQToolbar.m in Sources */,
 				06F76E861AB720A100901EBA /* DDBadgeViewCell.m in Sources */,
 				06F76E871AB720A100901EBA /* UIBarButtonItem+BarButtonItem.m in Sources */,
+				06F55B721C0EA1CD00E66DFB /* APLEAGLView.m in Sources */,
 				06F76E881AB720A100901EBA /* CameraMultiLiveViewController.mm in Sources */,
 				06F76E8A1AB720A100901EBA /* MyCamera.m in Sources */,
 				06335C2C1AC19E7F003DCD0A /* IQTitleBarButtonItem.m in Sources */,
@@ -25062,6 +25151,7 @@
 				610DBA1C169AF0BF00292CF9 /* ChannelPickerContentController.m in Sources */,
 				0683730E1BF6DFD900B9CE08 /* UIMyWebView.m in Sources */,
 				7A1C0187193339F70032A77E /* UIButton+Button.m in Sources */,
+				06F55B711C0EA1CC00E66DFB /* APLEAGLView.m in Sources */,
 				7A1C0190193339F70032A77E /* UIImageView+ImageView.m in Sources */,
 				7AAF3B081928EC09000D7FAF /* MKHorizMenu.m in Sources */,
 				610DBA1D169AF0BF00292CF9 /* UIBarButtonItem+WEPopover.m in Sources */,
@@ -26299,7 +26389,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.ipcamp.IDHDCONTROL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "70cdb723-46dc-4784-a8c4-3a626971f55c";
+				PROVISIONING_PROFILE = "b25446dc-7e95-4d77-aa93-e43bf1e35816";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -26348,7 +26438,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.ipcamp.IDHDCONTROL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "70cdb723-46dc-4784-a8c4-3a626971f55c";
+				PROVISIONING_PROFILE = "b25446dc-7e95-4d77-aa93-e43bf1e35816";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -26396,7 +26486,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.ipcamp.IDHDCONTROL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "70cdb723-46dc-4784-a8c4-3a626971f55c";
+				PROVISIONING_PROFILE = "b25446dc-7e95-4d77-aa93-e43bf1e35816";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;

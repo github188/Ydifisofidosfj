@@ -33,6 +33,7 @@
 #import "ChannelPickerContentController.h"
 #import "AudioPickerContentController.h"
 #import "CameraShowGLView.h"
+#import "APLEAGLView.h"
 #import "MKHorizMenu.h"
 #import "Categories.h"
 #import "EditCameraDefaultController.h"
@@ -145,7 +146,9 @@ extern NSString *deviceTokenString;
     VideoGenerator* videoGenerator;
     BOOL isRecording;
     NSString *recordFileName;
-	CGSize msizeOrgVideoResolution;	// During local recording cannot change this , and also cannot do listen / talk function    
+	CGSize msizeOrgVideoResolution;	// During local recording cannot change this , and also cannot do listen / talk function
+    
+    BOOL bIsChangeChannnel;
     
     BOOL isMyRationed;
     
@@ -288,6 +291,7 @@ extern NSString *deviceTokenString;
 @property (retain, nonatomic) IBOutlet UIButton *preBtn4;
 - (IBAction)preAction:(UIButton *)sender;
 @property (retain, nonatomic) IBOutlet UIView *preNumView;
+@property (retain, nonatomic) IBOutlet UIView *test;
 
 
 @end

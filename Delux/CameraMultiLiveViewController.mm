@@ -275,7 +275,7 @@ extern unsigned int _getTickCount() ;
                 [camera_list addObject:tempCamera];
                 [tempCamera release];
                 
-                /*SMsgAVIoctrlSetStreamCtrlReq *ss = (SMsgAVIoctrlSetStreamCtrlReq *)malloc(sizeof(SMsgAVIoctrlSetStreamCtrlReq));
+                SMsgAVIoctrlSetStreamCtrlReq *ss = (SMsgAVIoctrlSetStreamCtrlReq *)malloc(sizeof(SMsgAVIoctrlSetStreamCtrlReq));
                 memset(ss, 0, sizeof(SMsgAVIoctrlSetStreamCtrlReq));
                 
                 ss->channel = 0;
@@ -284,7 +284,7 @@ extern unsigned int _getTickCount() ;
                                            Type:IOTYPE_USER_IPCAM_SETSTREAMCTRL_REQ
                                            Data:(char *)ss
                                        DataSize:sizeof(SMsgAVIoctrlSetStreamCtrlReq)];
-                free(ss);*/
+                free(ss);
             }
             [self checkStatus];
             [self viewWillAppear:YES];
@@ -343,7 +343,7 @@ extern unsigned int _getTickCount() ;
 #if defined(Aztech)
 #else
             
-            /*SMsgAVIoctrlSetStreamCtrlReq *ss = (SMsgAVIoctrlSetStreamCtrlReq *)malloc(sizeof(SMsgAVIoctrlSetStreamCtrlReq));
+            SMsgAVIoctrlSetStreamCtrlReq *ss = (SMsgAVIoctrlSetStreamCtrlReq *)malloc(sizeof(SMsgAVIoctrlSetStreamCtrlReq));
             memset(ss, 0, sizeof(SMsgAVIoctrlSetStreamCtrlReq));
             
             ss->channel = 0;
@@ -352,7 +352,7 @@ extern unsigned int _getTickCount() ;
                                    Type:IOTYPE_USER_IPCAM_SETSTREAMCTRL_REQ
                                    Data:(char *)ss
                                DataSize:sizeof(SMsgAVIoctrlSetStreamCtrlReq)];
-            free(ss);*/
+            free(ss);
 #endif
         }
         

@@ -33,7 +33,7 @@ extern unsigned int _getTickCount() {
 	if (gettimeofday(&tv, NULL) != 0)
         return 0;
     
-	return (tv.tv_sec * 1000 + tv.tv_usec / 1000);
+    return (unsigned int)(tv.tv_sec * 1000 + tv.tv_usec / 1000);
 }
 
 @implementation CameraLiveViewController
@@ -285,7 +285,7 @@ extern unsigned int _getTickCount() {
     }
 }
 
-- (CGRect)zoomRectForScrollView:(UIScrollView *)_scrollView withScale:(float)scale withCenter:(CGPoint)center {
+- (CGRect)zoomRectForScrollView:(UIScrollView *)_scrollView withScale:(CGFloat)scale withCenter:(CGPoint)center {
     
     CGRect zoomRect;
     
@@ -981,6 +981,7 @@ extern unsigned int _getTickCount() {
 		}
 		[self.scrollViewLandscape addSubview:glView];
 		self.scrollViewLandscape.zoomScale = 1.0;
+        [self.scrollViewLandscape setContentSize:self.glView.frame.size];
 		
 		if( mCodecId == MEDIA_CODEC_VIDEO_MJPEG ) {
 			[self.scrollViewLandscape bringSubviewToFront:monitorLandscape/*self.glView*/];
@@ -1057,12 +1058,19 @@ extern unsigned int _getTickCount() {
 		}
 		[self.scrollViewPortrait addSubview:glView];
 		self.scrollViewPortrait.zoomScale = 1.0;
+        [self.scrollViewPortrait setContentSize:self.glView.frame.size];
 		
 		if( mCodecId == MEDIA_CODEC_VIDEO_MJPEG ) {
 			[self.scrollViewPortrait bringSubviewToFront:monitorPortrait/*self.glView*/];
 		}
 		else {
-			[self.scrollViewPortrait bringSubviewToFront:/*monitorPortrait*/self.glView];
+#ifndef DEF_Using_APLEAGLView
+            [self.scrollViewPortrait bringSubviewToFront:/*monitorPortrait*/self.glView];
+            
+            [[self test] setHidden:TRUE];
+#else
+            [self.scrollViewPortrait bringSubviewToFront:[self test]];
+#endif
 		}
 
         [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
@@ -1200,6 +1208,7 @@ extern unsigned int _getTickCount() {
     [_preBtn3 release];
     [_preBtn4 release];
     [_preNumView release];
+    [_test release];
     [super dealloc];
 }
 
@@ -1529,6 +1538,11 @@ extern unsigned int _getTickCount() {
     [self changeOrientation:self.interfaceOrientation];
     [self getEMode];
     
+    camera.isChangeChannel = YES;
+#ifdef DEF_Using_APLEAGLView
+    [[self test] setupGL];
+#endif
+    
     [self getAppDelegate].allowRotation=YES;
 }
 
@@ -1648,7 +1662,7 @@ extern unsigned int _getTickCount() {
 #else
         if(![MyCamera getCameraLoadQVGA:camera.uid]) {
             //[self loadCameraQVGAStatus];
-            [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(setCameraQVGAFPS) userInfo:nil repeats:NO];
+            [NSTimer scheduledTimerWithTimeInterval:4.0f target:self selector:@selector(setCameraQVGAFPS) userInfo:nil repeats:NO];
         }
 #endif
         
@@ -2090,8 +2104,8 @@ extern unsigned int _getTickCount() {
 		[self waitStopShowCompleted:DEF_WAIT4STOPSHOW_TIME];
 		[camera stopSoundToDevice:selectedChannel];
 		[camera stopSoundToPhone:selectedChannel];
-        [camera stop:selectedChannel];
-        [camera disconnect];
+        //[camera stop:selectedChannel];
+        //[camera disconnect];
 		
 		[self unactiveAudioSession];
 		
@@ -2121,8 +2135,25 @@ extern unsigned int _getTickCount() {
         [streamButton release];
         [negativeSpacer release];
         
+        bIsChangeChannnel = YES;
+        camera.isChangeChannel = YES;
+        
 		[NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(cameraStartShow:) userInfo:nil repeats:NO];
 	}
+}
+
+- (void) cameraReStartShow {
+    [camera startShow:selectedChannel ScreenObject:self];
+    
+    [loadingViewLandscape setHidden:NO];
+    [loadingViewPortrait setHidden:NO];
+    [loadingViewPortrait startAnimating];
+    [loadingViewLandscape startAnimating];
+    
+    [self activeAudioSession];
+    
+    if (selectedAudioMode == AUDIO_MODE_SPEAKER) [camera startSoundToPhone:selectedChannel];
+    if (selectedAudioMode == AUDIO_MODE_MICROPHONE) [camera startSoundToDevice:selectedChannel];
 }
 
 #pragma mark - WEPopoverControllerDelegate implementation
@@ -2152,7 +2183,7 @@ extern unsigned int _getTickCount() {
 
 - (void)scrollViewDidEndZooming:(UIScrollView *)scrollView 
                        withView:(UIView *)view 
-                        atScale:(float)scale 
+                        atScale:(CGFloat)scale
 {
 	if( glView ) {
 		glView.frame = CGRectMake( 0, 0, scrollView.frame.size.width*scale, scrollView.frame.size.height*scale );
@@ -2340,7 +2371,7 @@ extern unsigned int _getTickCount() {
         screenRect.size.height =screenWidth ;
         screenRect.size.width = screenHeight;
         self.scrollViewLandscape.frame = screenRect;
-        self.scrollViewLandscape.contentSize=self.scrollViewLandscape.frame.size;
+        //self.scrollViewLandscape.contentSize=self.scrollViewLandscape.frame.size;
         self.monitorLandscape.frame = screenRect;
         
         viewMonitor = self.scrollViewLandscape;
@@ -2360,7 +2391,7 @@ extern unsigned int _getTickCount() {
 		viewMonitor = self.scrollViewPortrait;
 		viewCanvas = self.monitorPortrait;
 	}
-    self.scrollViewPortrait.contentSize=self.scrollViewPortrait.frame.size;
+    //self.scrollViewPortrait.contentSize=self.scrollViewPortrait.frame.size;
 	fRatioMonitor = viewMonitor.frame.size.width/viewMonitor.frame.size.height;
 		
     if(self.interfaceOrientation == UIInterfaceOrientationLandscapeLeft ||
@@ -2421,13 +2452,26 @@ extern unsigned int _getTickCount() {
 //
 - (void)glFrameSize:(NSArray*)param
 {
-	CGSize* pglFrameSize_Original = (CGSize*)[(NSValue*)[param objectAtIndex:0] pointerValue];
-	CGSize* pglFrameSize_Scaling = (CGSize*)[(NSValue*)[param objectAtIndex:1] pointerValue];
-	
-	[self recalcMonitorRect:*pglFrameSize_Original];
-	self.glView.maxZoom = CGSizeMake( (pglFrameSize_Original->width*2.0 > 1920)?1920:pglFrameSize_Original->width*2.0, (pglFrameSize_Original->height*2.0 > 1080)?1080:pglFrameSize_Original->height*2.0 );
-	
-	*pglFrameSize_Scaling = self.glView.frame.size;
+    CGSize* pglFrameSize_Original = (CGSize*)[(NSValue*)[param objectAtIndex:0] pointerValue];
+    CGSize* pglFrameSize_Scaling = (CGSize*)[(NSValue*)[param objectAtIndex:1] pointerValue];
+    
+    [self recalcMonitorRect:*pglFrameSize_Original];
+    
+    self.glView.maxZoom = CGSizeMake( (pglFrameSize_Original->width*2.0 > 1920)?1920:pglFrameSize_Original->width*2.0, (pglFrameSize_Original->height*2.0 > 1080)?1080:pglFrameSize_Original->height*2.0 );
+    
+    CGSize size = self.glView.frame.size;
+    CGFloat fScale  = [[UIScreen mainScreen] scale];
+    size.height *= fScale;
+    size.width *= fScale;
+    *pglFrameSize_Scaling = size ;
+    
+    static CGFloat s_nLastFrameWidth = 0;
+    static CGFloat s_nLastFrameHeight = 0;
+    if( s_nLastFrameWidth != size.width || s_nLastFrameHeight != size.height ) {
+        
+        s_nLastFrameWidth = size.width;
+        s_nLastFrameHeight = size.height;
+    }
     
     //公版
 //    CGSize size = self.glView.frame.size;
