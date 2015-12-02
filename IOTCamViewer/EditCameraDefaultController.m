@@ -47,10 +47,10 @@
 - (IBAction)back:(id)sender 
 {
     
-    if(isPressReconnButton) {
+    /*if(isPressReconnButton) {
         NSLog( @"ignore!!!" );
         return;
-    }
+    }*/
     
     NSString *cameraName = nil;
     NSString *cameraPassword = nil;
