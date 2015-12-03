@@ -1662,7 +1662,7 @@ extern unsigned int _getTickCount() {
 #else
         if(![MyCamera getCameraLoadQVGA:camera.uid]) {
             //[self loadCameraQVGAStatus];
-            [NSTimer scheduledTimerWithTimeInterval:4.0f target:self selector:@selector(setCameraQVGAFPS) userInfo:nil repeats:NO];
+//            [NSTimer scheduledTimerWithTimeInterval:4.0f target:self selector:@selector(setCameraQVGAFPS) userInfo:nil repeats:NO];
         }
 #endif
         
@@ -1673,10 +1673,10 @@ extern unsigned int _getTickCount() {
 #if defined(Aztech)
 #else
     if(self.isCanSendSetCameraCMD){
-        [MyCamera loadCameraQVGA:camera];
+//        [MyCamera loadCameraQVGA:camera];
     }
     else{
-        [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(setCameraQVGAFPS) userInfo:nil repeats:NO];
+//        [NSTimer scheduledTimerWithTimeInterval:3.0f target:self selector:@selector(setCameraQVGAFPS) userInfo:nil repeats:NO];
     }
 #endif
 }
@@ -1923,7 +1923,7 @@ extern unsigned int _getTickCount() {
         SMsgAVIoctrlGetStreamCtrlResp* pResult=(SMsgAVIoctrlGetStreamCtrlResp*)data;
         [self initQVGAMode:pResult->quality];
         if(pResult->quality!=[MyCamera getCameraQVGA:camera]){
-            [MyCamera loadCameraQVGA:camera];
+//            [MyCamera loadCameraQVGA:camera];
         }
     }
     
@@ -1934,6 +1934,8 @@ extern unsigned int _getTickCount() {
         [self initQVGAMode:[MyCamera getCameraQVGA:camera]];
         [MyCamera setcameraLoadAVGA:camera.uid withIsLoad:YES];
         if (camera_==camera) {
+            [loadingViewPortrait startAnimating];
+            [loadingViewLandscape startAnimating];
 			[camera reStartShow:selectedChannel withCompleteBlock:^(void){
 				
 				// UI need to forbiden User invoke reStartShow again before program runs to here!
@@ -1944,14 +1946,14 @@ extern unsigned int _getTickCount() {
 				
 			}];
 
-            //[loadingViewPortrait startAnimating];
-            //[loadingViewLandscape startAnimating];
+
         }
     } else if (type == (int)IOTYPE_USER_IPCAM_SET_ENVIRONMENT_RESP) {
         SMsgAVIoctrlSetEnvironmentResp* pResult=(SMsgAVIoctrlSetEnvironmentResp*)data;
         NSLog(@"IOTYPE_USER_IPCAM_SET_ENVIRONMENT_RESP result=%d",pResult->result);
         if (camera_==camera) {
-			
+            [loadingViewPortrait startAnimating];
+            [loadingViewLandscape startAnimating];
 			[camera reStartShow:selectedChannel withCompleteBlock:^(void){
 				
 				// UI need to forbiden User invoke reStartShow again before program runs to here!
@@ -1961,8 +1963,7 @@ extern unsigned int _getTickCount() {
 				
 			}];
             
-            //[loadingViewPortrait startAnimating];
-            //[loadingViewLandscape startAnimating];
+
         }
 
     }
