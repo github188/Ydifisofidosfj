@@ -239,17 +239,26 @@
             
         case OLDPASSWORD_ROW_INDEX:
             textField.secureTextEntry = YES;
+#if defined(IDHDCONTROL)
+#else
             textField.placeholder = NSLocalizedString(@"Old Password", @"");
+#endif
             break;
             
         case NEWPASSWORD_ROW_INDEX:
             textField.secureTextEntry = YES;
+#if defined(IDHDCONTROL)
+#else
             textField.placeholder = NSLocalizedString(@"New Password", @"");
+#endif
             break;
             
         case CONFIRMPASSWORD_ROW_INDEX:
 			textField.secureTextEntry = YES;
+#if defined(IDHDCONTROL)
+#else
             textField.placeholder = NSLocalizedString(@"Confirm Password", @"");
+#endif
             break;
             
         default:

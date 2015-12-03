@@ -6,7 +6,7 @@
 "AddApWifiNextStep"="Suivant";
 "AddApWifiStep2Tips"="Veuillez connecter l'adaptateur à la caméra. La caméra va bouger sur elle-même puis émettre un Ding-Dong, puis appuyer sur \"Suivant\".";
 "AddApWifiStep2NeedWifiTips"="Veuillez vous assurer que votre téléphone est bien connecté à votre réseau wifi.";
-"AddApWifiStep3SettingBtnTitle"="Paramètres";
+"AddApWifiStep3SettingBtnTitle"="Accéder";
 "AddApWifiSSIDTips"="SSID ne peut être vide";
 "AddApWifiPsdTips"="Le mot de passe ne peut être vide";
 "AddApWifiAudioTips"="Un son Ding-Dong est t'il joué par votre caméra ?";

@@ -51,7 +51,11 @@ static HttpTool *httpTools;
              success:(void(^)(id responseObject)) successed
              failure:(void(^)(NSError *error)) failured
 {
-    [manager GET:url parameters:parameters
+    NSDictionary *dic=@{@"lan":[[NSLocale currentLocale] objectForKey:NSLocaleLanguageCode]};
+    NSMutableDictionary *p=[NSMutableDictionary dictionaryWithDictionary:parameters];
+    [p addEntriesFromDictionary:dic];
+    
+    [manager GET:url parameters:p
          success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         NSDictionary *dic=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
@@ -67,7 +71,10 @@ static HttpTool *httpTools;
               success:(void(^)(id responseObject)) successed
               failure:(void(^)(NSError *error)) failured
 {
-    [manager POST:url parameters:parameters
+    NSDictionary *dic=@{@"lan":[[NSLocale currentLocale] objectForKey:NSLocaleLanguageCode]};
+    NSMutableDictionary *p=[NSMutableDictionary dictionaryWithDictionary:parameters];
+    [p addEntriesFromDictionary:dic];
+    [manager POST:url parameters:p
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
               
               NSDictionary *dic=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:nil];
