@@ -1453,7 +1453,7 @@ extern unsigned int _getTickCount() {
 
 	camera.delegate2 = self;
     
-    [self initQVGAMode:[MyCamera getCameraQVGA:self.camera]];
+//    [self initQVGAMode:[MyCamera getCameraQVGA:self.camera]];
     
     
 #if defined(SVIPCLOUD)
