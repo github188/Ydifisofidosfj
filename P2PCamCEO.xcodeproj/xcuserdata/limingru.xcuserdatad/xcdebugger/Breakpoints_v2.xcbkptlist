@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Delux/CameraMultiLiveViewController.mm"
-            timestampString = "470757450.872777"
+            timestampString = "470981572.698198"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1704"
-            endingLineNumber = "1704"
+            startingLineNumber = "1724"
+            endingLineNumber = "1724"
             landmarkName = "-didEnterForeground:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Delux/CameraMultiLiveViewController.mm"
-            timestampString = "470757450.872777"
+            timestampString = "470981572.698198"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "2217"
-            endingLineNumber = "2217"
+            startingLineNumber = "2237"
+            endingLineNumber = "2237"
             landmarkName = "-deleteSnapshotRecords:"
             landmarkType = "5">
          </BreakpointContent>

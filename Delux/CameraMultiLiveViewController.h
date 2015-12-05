@@ -34,6 +34,7 @@
 #if defined(IDHDCONTROL)
 #import "AccountInfo.h"
 #import "HttpTool.h"
+#import "MyAccountViewController.h"
 #endif
 
 extern NSMutableArray *camera_list;

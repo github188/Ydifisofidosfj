@@ -1216,6 +1216,18 @@ extern unsigned int _getTickCount() ;
     
     [logInOut setTitle:NSLocalizedString(@"用户手册", @"") forState:UIControlStateNormal];
     
+#if defined(IDHDCONTROL)
+    UIButton *myAccountBtn=[[UIButton alloc]initWithFrame:CGRectMake(0, 102, 120, 34)];
+    [myAccountBtn setBackgroundImage:[UIImage imageNamed:@"moreset_list1.png"] forState:UIControlStateNormal];
+    [myAccountBtn setBackgroundImage:[UIImage imageNamed:@"moreset_list1_clicked.png"] forState:UIControlStateHighlighted];
+    [myAccountBtn setTitle:NSLocalizedStringFromTable(@"My Account", @"login", nil) forState:UIControlStateNormal];
+    myAccountBtn.font=[UIFont systemFontOfSize:13.0f];
+    [myAccountBtn addTarget:self action:@selector(myAccountAction:) forControlEvents:UIControlEventTouchUpInside];
+    [moreSet addSubview:myAccountBtn];
+    [myAccountBtn release];
+#endif
+    
+    
 #if defined(SVIPCLOUD)
     //3d3c3c
     [dropboxRec setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
@@ -1288,6 +1300,14 @@ extern unsigned int _getTickCount() ;
     [super viewDidLoad];
 
 	GLog( tUI, (@"MultiView: -viewDidLoad") );
+}
+
+-(void)myAccountAction:(id)sender{
+#if defined(IDHDCONTROL)
+    MyAccountViewController *vc=[[MyAccountViewController alloc]initWithNibName:@"MyAccountViewController" bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
+    [vc release];
+#endif
 }
 
 - (void)viewDidUnload
