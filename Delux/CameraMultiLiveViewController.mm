@@ -285,7 +285,61 @@ extern unsigned int _getTickCount() ;
 //                                           Data:(char *)ss
 //                                       DataSize:sizeof(SMsgAVIoctrlSetStreamCtrlReq)];
 //                free(ss);
+                if (database != NULL) {
+                    FMResultSet *rs=[database executeQuery:@"select dev_uid from device where dev_uid=?",uid];
+                    if(![rs next])
+                    {
+                        [database executeUpdate:@"INSERT INTO device(dev_uid, dev_nickname, dev_name, dev_pwd, view_acc, view_pwd, channel, sync, isFromCloud) VALUES(?,?,?,?,?,?,?,?,?)",
+                         uid, name, name, view_pwd, view_acc, view_pwd, [NSNumber numberWithInt:0], [NSNumber numberWithBool:isSync], [NSNumber numberWithBool:isFromCloud]];
+                    }
+                }
+                //regging_map
+                // register to apns server
+                dispatch_queue_t queue = dispatch_queue_create("apns-reg_client", NULL);
+                dispatch_async(queue, ^{
+                    if (deviceTokenString != nil) {
+                        NSError *error = nil;
+                        NSString *appidString = [[NSBundle mainBundle] bundleIdentifier];
+                        
+                        NSString *argsString = @"%@?cmd=reg_mapping&token=%@&uid=%@&appid=%@&udid=%@&os=ios";
+                        NSString *getURLString = [NSString stringWithFormat:argsString, g_tpnsHostString, deviceTokenString, uid, appidString , uuid];
+#ifdef DEF_APNSTest
+                        NSLog( @"==============================================");
+                        NSLog( @"stringWithContentsOfURL ==> %@", getURLString );
+                        NSLog( @"==============================================");
+#endif
+                        NSString* registerResult = [NSString stringWithContentsOfURL:[NSURL URLWithString:getURLString] encoding:NSUTF8StringEncoding error:&error];
+#ifdef DEF_APNSTest
+                        NSLog( @"==============================================");
+                        NSLog( @">>> %@", registerResult);
+                        NSLog( @"==============================================");
+#endif
+                    }
+                });
             }
+#if defined(IDHDCONTROL)
+            NSDictionary *userInfo=((AppDelegate *)([[UIApplication sharedApplication] delegate])).apnsUserInfo;
+            if(userInfo){
+                NSString *uid = [[userInfo objectForKey:@"aps"] objectForKey:@"uid"];
+                
+                for(MyCamera *camera in camera_list) {
+                    
+                    if ([camera.uid isEqualToString:uid]) {
+                        GLog( tUI, (@"+++CameraMultiLiveViewController - goEventList: [%d]", [moreFunctionTag intValue]));
+                        isGoPlayEvent=YES;
+                        [self camStopShow:-1];
+                        
+                        EventListController *controller = [[EventListController alloc] initWithStyle:UITableViewStylePlain];
+                        controller.camera = camera;
+                        [self.navigationController pushViewController:controller animated:YES];
+                        [controller release];
+                        
+                        [self hideMoreFunctionView:nil];
+                        break;
+                    }
+                }
+            }
+#endif
             [self checkStatus];
             [self viewWillAppear:YES];
         }
