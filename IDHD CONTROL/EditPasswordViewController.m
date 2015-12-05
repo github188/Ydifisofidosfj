@@ -73,7 +73,6 @@
     [_reNewPasswordField release];
     [_submitBtn release];
     [_resetBtn release];
-    [_newPasswordField release];
     [super dealloc];
 }
 -(void)alertInfo:(NSString *)message{
