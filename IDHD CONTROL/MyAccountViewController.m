@@ -7,6 +7,8 @@
 //
 
 #import "MyAccountViewController.h"
+#import "AppDelegate.h"
+#import "LoginViewController.h"
 
 @interface MyAccountViewController ()
 
@@ -129,5 +131,30 @@
     
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.row==1){
+        MBProgressHUD *hud1 = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+        [self.navigationController.view addSubview:hud1];
+        [hud1 showAnimated:YES whileExecutingBlock:^{
+            for (MyCamera *ca in camera_list) {
+                [ca stop:0];
+                [ca disconnect];
+            }
+            [camera_list removeAllObjects];
+        } completionBlock:^{
+            UIViewController *rootViewController = [[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil] autorelease];
+            UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];
+            [navigationController setNavigationBarHidden:YES];
+            [((AppDelegate *)([[UIApplication sharedApplication]delegate])).window setRootViewController:navigationController];
+        }];
+        [hud1 release];
+    }
+    else if (indexPath.row==2){
+        EditPasswordViewController *pass=[[EditPasswordViewController alloc]initWithNibName:@"EditPasswordViewController" bundle:nil];
+        [self.navigationController pushViewController:pass animated:YES];
+        [pass release];
+    }
 }
 @end

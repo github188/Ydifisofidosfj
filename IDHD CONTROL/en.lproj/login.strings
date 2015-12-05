@@ -33,3 +33,9 @@
 "Account Management"="Account Management";
 "Switch Account"="Switch Account";
 "Modify Password"="Modify Password";
+"Alpha/number/symbol(any cobination of not less than six)"="Alpha/number/symbol(any cobination of not less than six)";
+"Old password"="Old password";
+"New password"="New password";
+"Confirm password"="Confirm password";
+"Submit"="Submit";
+"Reset"="Reset";

@@ -28,3 +28,14 @@
 "请输入至少6位长度的帐号"="Veuillez insérer votre nom de compte (6 charactères minimum)";
 "请输入长度为6-16位的密码"="Veuillez insérer votre mot de passe (6 à 16 charactères maximum)";
 "两次密码输入不一致"="Echec de la confirmation du mot de passe";
+
+"My Account"="Mon Compte";
+"Account Management"="Gestion de compte";
+"Switch Account"="Changer de compte";
+"Modify Password"="Modifier mot de passe";
+"Alpha/number/symbol(any cobination of not less than six)"="Lettre / Chiffre / Signes (Combinaison d'au moins 6 éléments)";
+"Old password"="Ancien mot de passe";
+"New password"="Nouveau mot de passe";
+"Confirm password"="Confirmer mit de passe";
+"Submit"="Envoyer";
+"Reset"="Réinitialiser";
