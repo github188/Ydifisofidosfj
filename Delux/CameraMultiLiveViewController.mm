@@ -304,7 +304,7 @@ extern unsigned int _getTickCount() ;
                         NSString *argsString = @"%@?cmd=reg_mapping&token=%@&uid=%@&appid=%@&udid=%@&os=ios";
                         NSString *getURLString = [NSString stringWithFormat:argsString, g_tpnsHostString, deviceTokenString, uid, appidString , uuid];
 #ifdef DEF_APNSTest
-                        NSLog( @"==============================================");
+                        NSLog( @"==============================================");                                                                            
                         NSLog( @"stringWithContentsOfURL ==> %@", getURLString );
                         NSLog( @"==============================================");
 #endif
