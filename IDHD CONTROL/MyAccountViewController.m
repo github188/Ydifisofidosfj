@@ -139,6 +139,9 @@
         [self.navigationController.view addSubview:hud1];
         [hud1 showAnimated:YES whileExecutingBlock:^{
             for (MyCamera *ca in camera_list) {
+                ca.delegate=nil;
+                ca.delegate2=nil;
+                [ca stopShow:0];
                 [ca stop:0];
                 [ca disconnect];
             }
