@@ -141,10 +141,54 @@
             for (MyCamera *ca in camera_list) {
                 ca.delegate=nil;
                 ca.delegate2=nil;
-                [ca stopShow:0];
-                [ca stop:0];
-                [NSThread sleepForTimeInterval:0.88];
-                [ca disconnect];
+                if(ca.sessionState == CONNECTION_STATE_CONNECTED){
+                    [ca stop:0];
+                    [ca disconnect];
+                }
+                NSString *uid=ca.uid;
+                //unmap
+                // unregister from apns server
+                dispatch_queue_t queue = dispatch_queue_create("apns-reg_client", NULL);
+                dispatch_async(queue, ^{
+                    if (true) {
+                        NSString *uuid = [[[ UIDevice currentDevice] identifierForVendor] UUIDString];
+                        NSError *error = nil;
+                        NSString *appidString = [[NSBundle mainBundle] bundleIdentifier];
+                        
+                        NSString *argsString = @"%@?cmd=unreg_mapping&uid=%@&appid=%@&udid=%@&os=ios";
+                        NSString *getURLString = [NSString stringWithFormat:argsString, g_tpnsHostString, uid, appidString, uuid];
+#ifdef DEF_APNSTest
+                        NSLog( @"==============================================");
+                        NSLog( @"stringWithContentsOfURL ==> %@", getURLString );
+                        NSLog( @"==============================================");
+#endif
+                        NSString *unregisterResult = [NSString stringWithContentsOfURL:[NSURL URLWithString:getURLString] encoding:NSUTF8StringEncoding error:&error];
+                        
+#ifdef DEF_APNSTest
+                        NSLog( @"==============================================");
+                        NSLog( @">>> %@", unregisterResult );
+                        NSLog( @"==============================================");
+#endif
+                        if (error != NULL) {
+                            NSLog(@"%@",[error localizedDescription]);
+                            
+                            if (database != NULL) {
+                                [database executeUpdate:@"INSERT INTO apnsremovelst(dev_uid) VALUES(?)",uid];
+                            }
+                        }
+                        
+#ifdef DEF_APNSTest
+                        NSLog( @"==============================================");
+                        NSLog( @">>> %@", unregisterResult );
+                        NSLog( @"==============================================");
+                        if (error != NULL) {
+                            NSLog(@"%@",[error localizedDescription]);
+                        }
+#endif
+                    }
+                });
+                
+                dispatch_release(queue);
             }
             [camera_list removeAllObjects];
         } completionBlock:^{
