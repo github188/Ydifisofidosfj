@@ -143,6 +143,7 @@
                 ca.delegate2=nil;
                 [ca stopShow:0];
                 [ca stop:0];
+                [NSThread sleepForTimeInterval:0.88];
                 [ca disconnect];
             }
             [camera_list removeAllObjects];
