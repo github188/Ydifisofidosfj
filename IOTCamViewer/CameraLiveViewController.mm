@@ -1658,6 +1658,8 @@ extern unsigned int _getTickCount() {
         [loadingViewPortrait startAnimating];
         [loadingViewLandscape startAnimating];
         
+        [NSTimer scheduledTimerWithTimeInterval:1.5f target:self selector:@selector(loadCameraQVGAStatus) userInfo:nil repeats:NO];
+        
 #if defined(Aztech)
 #else
         if(![MyCamera getCameraLoadQVGA:camera.uid]) {
@@ -1922,9 +1924,9 @@ extern unsigned int _getTickCount() {
     if(type==(int)IOTYPE_USER_IPCAM_GETSTREAMCTRL_RESP){
         SMsgAVIoctrlGetStreamCtrlResp* pResult=(SMsgAVIoctrlGetStreamCtrlResp*)data;
         [self initQVGAMode:pResult->quality];
-        if(pResult->quality!=[MyCamera getCameraQVGA:camera]){
-//            [MyCamera loadCameraQVGA:camera];
-        }
+//        if(pResult->quality!=[MyCamera getCameraQVGA:camera]){
+////            [MyCamera loadCameraQVGA:camera];
+//        }
     }
     
     if (type == (int)IOTYPE_USER_IPCAM_SETSTREAMCTRL_RESP) {
