@@ -11,6 +11,7 @@
 #import "CameraPlaybackController.h"
 #import "iToast.h"
 #import "DDBadgeViewCell.h"
+#import "AppDelegate.h"
 
 @implementation EventListController
 
@@ -182,6 +183,8 @@
         camera.delegate2 = self;
     
     self.navigationController.toolbarHidden = NO;
+    
+    ((AppDelegate *)([[UIApplication sharedApplication] delegate])).apnsUserInfo=nil;
 
     [super viewWillAppear:animated];
 }

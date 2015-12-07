@@ -14,6 +14,7 @@
 #import <IOTCamera/GLog.h>
 #import <IOTCamera/GLogZone.h>
 #import <SystemConfiguration/CaptiveNetwork.h>
+#import "EventListController.h"
 #import "IQKeyboardManager.h"
 #if defined(BayitCam)
 #import "BayitCamViewController.h"
@@ -212,6 +213,34 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
 //			break;
 //			
 //	}
+    
+    if(self.apnsUserInfo){
+        UIViewController *topVC=[self getCurrentVisibleViewController];
+        if([topVC isKindOfClass:[LoginViewController class]])
+        {
+            
+        }
+        else{
+#if defined(IDHDCONTROL)
+            if(self.apnsUserInfo){
+                NSString *uid = [[self.apnsUserInfo objectForKey:@"aps"] objectForKey:@"uid"];
+                
+                for(MyCamera *camera in camera_list) {
+                    
+                    if ([camera.uid isEqualToString:uid]) {
+                        GLog( tUI, (@"+++CameraMultiLiveViewController - goEventList: [%d]", [moreFunctionTag intValue]));
+                        
+                        EventListController *controller = [[EventListController alloc] initWithStyle:UITableViewStylePlain];
+                        controller.camera = camera;
+                        [topVC.navigationController pushViewController:controller animated:YES];
+                        [controller release];
+                        break;
+                    }
+                }
+            }
+#endif
+        }
+    }
 
 }
 
@@ -854,9 +883,21 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     
     NSLog(@"Failed to register, error: %@", error);
 }
-
+//获取当前可视的ViewControllter
+-(UIViewController *)getCurrentVisibleViewController{
+    UIViewController *naviViewController=self.window.rootViewController;
+    if([naviViewController isKindOfClass:[UINavigationController class]]){
+        NSArray *list=((UINavigationController*)naviViewController).viewControllers;
+        NSInteger count=[list count];
+        if(count==0) return nil;
+        return [list objectAtIndex:count-1];
+    }
+    return nil;
+}
 - (void)application:(UIApplication *)application 
-didReceiveRemoteNotification:(NSDictionary *)userInfo {    
+didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    
+    self.apnsUserInfo=userInfo;
     
     [[[[_rootViewController tabBar] items] objectAtIndex:1] setBadgeValue:@"!"];
     
