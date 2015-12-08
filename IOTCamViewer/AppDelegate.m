@@ -877,7 +877,9 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
     
     dispatch_release(queue);
 }
-
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
+    [application registerForRemoteNotifications];
+}
 - (void)application:(UIApplication *)application
 didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     
