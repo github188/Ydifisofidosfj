@@ -213,7 +213,7 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
 //			break;
 //			
 //	}
-    
+#if defined(IDHDCONTROL)
     if(self.apnsUserInfo){
         UIViewController *topVC=[self getCurrentVisibleViewController];
         if([topVC isKindOfClass:[LoginViewController class]])
@@ -221,7 +221,6 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
             
         }
         else{
-#if defined(IDHDCONTROL)
             if(self.apnsUserInfo){
                 NSString *uid = [[self.apnsUserInfo objectForKey:@"aps"] objectForKey:@"uid"];
                 
@@ -238,9 +237,9 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
                     }
                 }
             }
-#endif
         }
     }
+#endif    
 
 }
 

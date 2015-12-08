@@ -434,7 +434,6 @@ extern unsigned int _getTickCount() ;
             NSNumber *tempChannel = [channelArray objectAtIndex:i];
             
             if (testCamera.sessionState == CONNECTION_STATE_CONNECTED && [testCamera getConnectionStateOfChannel:0] == CONNECTION_STATE_CONNECTED) {
-                testCamera.isShowInMultiView=NO;
                 [testCamera stopShow:[tempChannel intValue]];
             }
         }
@@ -458,14 +457,33 @@ extern unsigned int _getTickCount() ;
             NSNumber *tempChannel = [channelArray objectAtIndex:i];
             
             if (tempCamera.sessionState == CONNECTION_STATE_CONNECTED && [tempCamera getConnectionStateOfChannel:0] == CONNECTION_STATE_CONNECTED) {
-                if(!isGoPlayEvent){
-                    tempCamera.isShowInMultiView = YES;
-                    [tempCamera startShow:[tempChannel integerValue] ScreenObject:self];
-                }
+                tempCamera.isShowInMultiView = YES;
+                [tempCamera startShow:[tempChannel intValue] ScreenObject:self];
             }
         }
     }
 }
+
+//- (void)connectAndShow {
+//    for (int i=0;i<DEF_SplitViewNum;i++){
+//        
+//        MyCamera *tempCamera = [cameraArray objectAtIndex:i];
+//        
+//        if (tempCamera.uid != nil && ![tempCamera.uid isEqualToString:@"(null)"]){
+//            
+//            NSNumber *tempChannel = [channelArray objectAtIndex:i];
+//            
+//            if (tempCamera.sessionState != CONNECTION_STATE_CONNECTED && [tempCamera getConnectionStateOfChannel:0] != CONNECTION_STATE_CONNECTED) {
+//                [tempCamera connect:tempCamera.uid];
+//                [tempCamera start:[tempChannel intValue]];
+//            }
+//            
+//            tempCamera.isShowInMultiView = YES;
+////            [tempCamera startShow:[tempChannel intValue] ScreenObject:self];
+//            tempCamera.delegate2 = self;
+//        }
+//    }
+//}
 
 - (void)reConnectAndShow {
     for (int i=0;i<DEF_SplitViewNum;i++){
@@ -482,10 +500,8 @@ extern unsigned int _getTickCount() ;
             [tempCamera connect:tempCamera.uid];
             [tempCamera start:0];
             
-	if(!isGoPlayEvent){
             tempCamera.isShowInMultiView = YES;
-            //[tempCamera startShow:0 ScreenObject:self];
-	}
+            //[tempCamera startShow:[tempChannel intValue] ScreenObject:self];
             tempCamera.delegate2 = self;
         }
     }
@@ -1232,9 +1248,6 @@ extern unsigned int _getTickCount() ;
 }
 
 - (void)viewDidLoad {
-    
-    [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationPortrait];
-    
     GLog( tUI, (@"MultiView: +viewDidLoad") );
 	
 	marrBtn_Default = [[NSMutableArray alloc] initWithObjects:defaultButton1, defaultButton2, defaultButton3, defaultButton4, nil];
@@ -1587,9 +1600,7 @@ extern unsigned int _getTickCount() ;
             NSNumber *chNum = [channelArray objectAtIndex:i];
 			int ch = [chNum intValue];
             GLog( tUI|tReStartShow, (@"\t{applicationDidBecomeActive}\tch:%d", ch) );
-            if(!isGoPlayEvent){
-                [testCamera startShow:ch ScreenObject:self];
-            }
+			[testCamera startShow:ch ScreenObject:self];
             if (selectedAudioMode == AUDIO_MODE_MICROPHONE)
 				[testCamera startSoundToDevice:ch];
             if (selectedAudioMode == AUDIO_MODE_SPEAKER)
@@ -2008,6 +2019,7 @@ extern unsigned int _getTickCount() ;
 			}	break;
 		}
 		
+		return;
 	}
 	
 	
@@ -2122,9 +2134,7 @@ extern unsigned int _getTickCount() ;
 			if( tempCamera.sessionState == CONNECTION_STATE_CONNECTED && [tempCamera getConnectionStateOfChannel:0] == CONNECTION_STATE_CONNECTED ) {
 				//[tempCamera connect:tempCamera.uid];
 				//[tempCamera start:[tempChannel intValue]];
-if(!isGoPlayEvent){
 				[tempCamera startShow:[tempChannel intValue] ScreenObject:self];
-}
 				tempCamera.delegate2 = self;
 				
 				[self camera:tempCamera _didChangeSessionStatus:CONNECTION_STATE_CONNECTED];
@@ -2142,9 +2152,8 @@ if(!isGoPlayEvent){
     NSNumber *tempChannel = 0;
     
     [self checkStatus];
-    if(!isGoPlayEvent){
-    	[tempCamera startShow:[tempChannel intValue] ScreenObject:self];
-    }
+    
+    [tempCamera startShow:[tempChannel intValue] ScreenObject:self];
     
     tempCamera.delegate2 = self;
     
@@ -2478,9 +2487,7 @@ if(!isGoPlayEvent){
         [changedCamera connect:changedCamera.uid];
         [changedCamera start:0];
     }
-if(!isGoPlayEvent){
     [changedCamera startShow:[tempChannel intValue] ScreenObject:self];
-}
     changedCamera.delegate2 = self;
     
     SMsgAVIoctrlGetAudioOutFormatReq *s = (SMsgAVIoctrlGetAudioOutFormatReq *)malloc(sizeof(SMsgAVIoctrlGetAudioOutFormatReq));
@@ -2495,7 +2502,7 @@ if(!isGoPlayEvent){
     SMsgAVIoctrlTimeZone s3={0};
     s3.cbSize = sizeof(s3);
     [changedCamera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];
-    //[MyCamera loadCameraQVGA:changedCamera];
+    
     [self checkStatus];
 }
 
