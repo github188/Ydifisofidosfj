@@ -31,6 +31,63 @@
     self.userNameField.text=[AccountInfo getUserName];
     self.passwordField.text=[AccountInfo getPassword];
     
+    
+    
+    if (database != NULL) {
+        FMResultSet *rs = [database executeQuery:@"SELECT * FROM device"];
+        while([rs next]) {
+            NSString *uid = [rs stringForColumn:@"dev_uid"];
+            [self unMapping:uid];
+        }
+    }
+    
+    
+    
+}
+
+-(void)unMapping:(NSString *)uid{
+    // unregister from apns server
+    dispatch_queue_t queue = dispatch_queue_create("apns-reg_client", NULL);
+    dispatch_async(queue, ^{
+        if (true) {
+            NSString *uuid = [[[ UIDevice currentDevice] identifierForVendor] UUIDString];
+            NSError *error = nil;
+            NSString *appidString = [[NSBundle mainBundle] bundleIdentifier];
+            
+            NSString *argsString = @"%@?cmd=unreg_mapping&uid=%@&appid=%@&udid=%@&os=ios";
+            NSString *getURLString = [NSString stringWithFormat:argsString, g_tpnsHostString, uid, appidString, uuid];
+#ifdef DEF_APNSTest
+            NSLog( @"==============================================");
+            NSLog( @"stringWithContentsOfURL ==> %@", getURLString );
+            NSLog( @"==============================================");
+#endif
+            NSString *unregisterResult = [NSString stringWithContentsOfURL:[NSURL URLWithString:getURLString] encoding:NSUTF8StringEncoding error:&error];
+            
+#ifdef DEF_APNSTest
+            NSLog( @"==============================================");
+            NSLog( @">>> %@", unregisterResult );
+            NSLog( @"==============================================");
+#endif
+            if (error != NULL) {
+                NSLog(@"%@",[error localizedDescription]);
+                
+                if (database != NULL) {
+                    [database executeUpdate:@"INSERT INTO apnsremovelst(dev_uid) VALUES(?)",uid];
+                }
+            }
+            
+#ifdef DEF_APNSTest
+            NSLog( @"==============================================");
+            NSLog( @">>> %@", unregisterResult );
+            NSLog( @"==============================================");
+            if (error != NULL) {
+                NSLog(@"%@",[error localizedDescription]);
+            }
+#endif
+        }
+    });
+    
+    dispatch_release(queue);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -87,13 +144,18 @@
             NSDictionary *dic=responseObject[@"list"];
             NSInteger id=[dic[@"id"]integerValue];
             [AccountInfo SignIn:id withUserName:user withPassword:psd withIsRemember:self.rememberBtn.selected];
-            
-            CameraMultiLiveViewController *vc=[[[CameraMultiLiveViewController alloc] initWithNibName:@"CameraMultiLiveView" bundle:nil] autorelease];
-            AppDelegate *delegate=(AppDelegate *)([[UIApplication sharedApplication] delegate]);
-            
-            UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:vc] autorelease];
-            [navigationController setNavigationBarHidden:YES];
-            [delegate.window setRootViewController:navigationController];
+            if(!self.isReLogin){
+                CameraMultiLiveViewController *vc=[[[CameraMultiLiveViewController alloc] initWithNibName:@"CameraMultiLiveView" bundle:nil] autorelease];
+                AppDelegate *delegate=(AppDelegate *)([[UIApplication sharedApplication] delegate]);
+                
+                UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:vc] autorelease];
+                [navigationController setNavigationBarHidden:YES];
+                [delegate.window setRootViewController:navigationController];
+            }
+            else{
+                self.navigationController.viewControllers[0].view=nil;
+                [self.navigationController popToRootViewControllerAnimated:YES];
+            }
         }
         
     } failure:^(NSError *error) {

@@ -819,6 +819,9 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
     		if (database != NULL) {
 			FMResultSet *rs = [database executeQuery:@"SELECT * FROM device"];
 			int cnt = 0;
+#if defined(IDHDCONTROL)
+                cnt=999999;
+#endif
 			while([rs next] && cnt++ < MAX_CAMERA_LIMIT) {
 				
 				NSString *uid = [rs stringForColumn:@"dev_uid"];

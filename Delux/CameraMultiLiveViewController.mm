@@ -341,7 +341,34 @@ extern unsigned int _getTickCount() ;
             }
 #endif
             [self checkStatus];
-            [self viewWillAppear:YES];
+            
+            GLog( tUI, (@"MultiView: +viewWillAppear") );
+            if( 0<= mnViewTag && mnViewTag < DEF_SplitViewNum) {
+                MyCamera* tempCamera = [cameraArray objectAtIndex:mnViewTag];
+                NSNumber* tempChannel = [channelArray objectAtIndex:mnViewTag];
+                if( tempCamera.sessionState == CONNECTION_STATE_CONNECTED && [tempCamera getConnectionStateOfChannel:0] == CONNECTION_STATE_CONNECTED ) {
+                    //[tempCamera connect:tempCamera.uid];
+                    //[tempCamera start:[tempChannel intValue]];
+                    [tempCamera startShow:[tempChannel intValue] ScreenObject:self];
+                    tempCamera.delegate2 = self;
+                    
+                    [self camera:tempCamera _didChangeSessionStatus:CONNECTION_STATE_CONNECTED];
+                }
+            }
+            if (isCamStopShow) {
+                [self reStartShow];
+            }
+            if (cameraArray!=nil){
+                for ( MyCamera *tempCamera in cameraArray){
+                    tempCamera.delegate2 = self;
+                }
+            }
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            // Re try connection mechanism
+            //
+            memset( mnLastReTryTickArray, 0, sizeof(mnLastReTryTickArray) );
+            memset( mnReTryTimesArray, 0, sizeof(mnReTryTimesArray) );
+            mTimerStartShowRevoke = [NSTimer scheduledTimerWithTimeInterval:3.6 target:self selector:@selector(onTimerStartShowRevoke:) userInfo:nil repeats:YES];
         }
     } failure:^(NSError *error) {
         [MBProgressHUD hideAllHUDsForView: self.view animated:YES];

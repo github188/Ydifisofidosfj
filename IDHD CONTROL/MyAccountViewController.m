@@ -194,11 +194,20 @@
                 dispatch_release(queue);
             }
             [camera_list removeAllObjects];
+            //删除数据库里所有
+            if(database){
+                [database executeUpdate:@"DELETE FROM device"];
+            }
+            
         } completionBlock:^{
-            UIViewController *rootViewController = [[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil] autorelease];
-            UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];
-            [navigationController setNavigationBarHidden:YES];
-            [((AppDelegate *)([[UIApplication sharedApplication]delegate])).window setRootViewController:navigationController];
+//            UIViewController *rootViewController = [[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil] autorelease];
+//            UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];
+//            [navigationController setNavigationBarHidden:YES];
+//            [((AppDelegate *)([[UIApplication sharedApplication]delegate])).window setRootViewController:navigationController];
+            LoginViewController *loginVC = [[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil] autorelease];
+            [self.navigationController setNavigationBarHidden:YES];
+            loginVC.isReLogin=YES;
+            [self.navigationController pushViewController:loginVC animated:NO];
         }];
         [hud1 release];
     }

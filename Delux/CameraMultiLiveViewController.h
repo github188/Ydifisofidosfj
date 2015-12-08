@@ -182,4 +182,8 @@ extern NSString *deviceTokenString;
 @property (retain, nonatomic) IBOutlet UIButton *setupVideoBtn;
 - (IBAction)goAttention:(id)sender;
 
+#if defined(IDHDCONTROL)
+@property(nonatomic) BOOL isReLogin;
+#endif
+
 @end

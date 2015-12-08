@@ -32,4 +32,6 @@
 
 @property (retain, nonatomic) IBOutlet UITextField *userNameField;
 @property (retain, nonatomic) IBOutlet UITextField *passwordField;
+
+@property(nonatomic) BOOL isReLogin;
 @end
