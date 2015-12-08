@@ -59,7 +59,7 @@
         [self alertInfo:NSLocalizedStringFromTable(@"请输入有效的Email", @"login", nil) withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
         return;
     }
-    if(user.length<6){
+    if(user.length<=0){
         [self alertInfo:NSLocalizedStringFromTable(@"请输入至少6位长度的帐号", @"login", nil) withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
         return;
     }
