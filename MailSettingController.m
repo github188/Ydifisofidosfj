@@ -193,7 +193,7 @@
         
         
         if (row==0) {
-            textFieldSender=[[UITextField alloc]initWithFrame:CGRectMake(115,11,180,25)];
+            textFieldSender=[[UITextField alloc]initWithFrame:CGRectMake(125,11,170,25)];
             textFieldSender.placeholder=NSLocalizedString(@"MailSenderHint", @"");
             textFieldSender.clearsOnBeginEditing=NO;
             textFieldSender.clearButtonMode=UITextFieldViewModeWhileEditing;
@@ -202,7 +202,7 @@
             [cell.contentView addSubview:textFieldSender];
             cell.textLabel.text=NSLocalizedString(@"MailSender", @"");
         }else if(row==1){
-            textFieldSmtpServer=[[UITextField alloc]initWithFrame:CGRectMake(115,11,180,25)];
+            textFieldSmtpServer=[[UITextField alloc]initWithFrame:CGRectMake(125,11,170,25)];
             textFieldSmtpServer.placeholder=NSLocalizedString(@"MailServerHint", @"");
             textFieldSmtpServer.clearsOnBeginEditing=NO;
             textFieldSmtpServer.clearButtonMode=UITextFieldViewModeWhileEditing;
@@ -212,7 +212,7 @@
             [cell.contentView addSubview:textFieldSmtpServer];
             cell.textLabel.text=NSLocalizedString(@"MailServer", @"");
         }else if(row==2){
-            textFieldPort=[[UITextField alloc]initWithFrame:CGRectMake(115,11,180,25)];
+            textFieldPort=[[UITextField alloc]initWithFrame:CGRectMake(125,11,170,25)];
             textFieldPort.placeholder=NSLocalizedString(@"Port", @"");
             textFieldPort.clearsOnBeginEditing=NO;
             textFieldPort.clearButtonMode=UITextFieldViewModeWhileEditing;
@@ -225,7 +225,7 @@
             [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
             [cell setSelectionStyle:UITableViewCellSelectionStyleBlue];
         }else if(row==4){
-            textFieldAccount=[[UITextField alloc]initWithFrame:CGRectMake(115,11,180,25)];
+            textFieldAccount=[[UITextField alloc]initWithFrame:CGRectMake(125,11,170,25)];
             textFieldAccount.placeholder=NSLocalizedString(@"Account", @"");
             textFieldAccount.clearsOnBeginEditing=NO;
             textFieldAccount.clearButtonMode=UITextFieldViewModeWhileEditing;
@@ -234,7 +234,7 @@
             [cell.contentView addSubview:textFieldAccount];
             cell.textLabel.text=NSLocalizedString(@"Account", @"");
         }else if(row==5){
-            textFieldPasswd=[[UITextField alloc]initWithFrame:CGRectMake(115,11,180,25)];
+            textFieldPasswd=[[UITextField alloc]initWithFrame:CGRectMake(125,11,170,25)];
             textFieldPasswd.placeholder=NSLocalizedString(@"Password", @"");
             textFieldPasswd.clearsOnBeginEditing=NO;
             textFieldPasswd.secureTextEntry = YES;
@@ -244,7 +244,7 @@
             [cell.contentView addSubview:textFieldPasswd];
             cell.textLabel.text=NSLocalizedString(@"Password", @"");
         }else if(row==6){
-            textFieldReceiver=[[UITextField alloc]initWithFrame:CGRectMake(115,11,180,25)];
+            textFieldReceiver=[[UITextField alloc]initWithFrame:CGRectMake(125,11,170,25)];
             textFieldReceiver.placeholder=NSLocalizedString(@"MailReceiverHint", @"");
             textFieldReceiver.clearsOnBeginEditing=NO;
             textFieldReceiver.clearButtonMode=UITextFieldViewModeWhileEditing;

@@ -174,7 +174,7 @@
 				 initWithStyle:UITableViewCellStyleDefault
 				 reuseIdentifier:SecurityCodeCellIdentifier] autorelease];
         
-        UILabel *label = [[UILabel alloc] initWithFrame: CGRectMake(10, 10, 125, 25)];
+        UILabel *label = [[UILabel alloc] initWithFrame: CGRectMake(10, 10, 145, 25)];
         label.textAlignment = UITextAlignmentRight;
         label.tag = LABEL_TAG;
         label.font = [UIFont boldSystemFontOfSize:[UIFont labelFontSize]];
@@ -187,7 +187,7 @@
         UITextField *textField = nil;
         if (row == OLDPASSWORD_ROW_INDEX) {
             
-            textField =[[UITextField alloc] initWithFrame: CGRectMake(140, 12, 150, 25)];
+            textField =[[UITextField alloc] initWithFrame: CGRectMake(160, 12, 130, 25)];
             self.textFieldOrigPassword = textField;
             self.textFieldOrigPassword.clearsOnBeginEditing = NO;
             [self.textFieldOrigPassword setDelegate:self];
@@ -197,7 +197,7 @@
             [textField release];
         }
         else if (row == NEWPASSWORD_ROW_INDEX) {
-            textField =[[UITextField alloc] initWithFrame: CGRectMake(140, 12, 150, 25)];
+            textField =[[UITextField alloc] initWithFrame: CGRectMake(160, 12, 130, 25)];
             self.textFieldNewPassword = textField;
             self.textFieldNewPassword.clearsOnBeginEditing = NO;
             [self.textFieldNewPassword setDelegate:self];
@@ -208,7 +208,7 @@
         }
         else if (row == CONFIRMPASSWORD_ROW_INDEX) {
         
-            textField =[[UITextField alloc] initWithFrame: CGRectMake(140, 12, 150, 25)];
+            textField =[[UITextField alloc] initWithFrame: CGRectMake(160, 12, 130, 25)];
             self.textFieldConfirmPassword =textField;
             self.textFieldConfirmPassword.clearsOnBeginEditing = NO;
             [self.textFieldConfirmPassword setDelegate:self];
