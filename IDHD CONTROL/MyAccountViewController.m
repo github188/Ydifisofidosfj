@@ -135,6 +135,9 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if(indexPath.row==1){
+        
+        ((AppDelegate *)([[UIApplication sharedApplication] delegate])).apnsUserInfo=nil;
+        
         MBProgressHUD *hud1 = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
         [self.navigationController.view addSubview:hud1];
         [hud1 showAnimated:YES whileExecutingBlock:^{
