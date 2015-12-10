@@ -1115,6 +1115,12 @@ extern unsigned int _getTickCount() ;
     [self.navigationController setNavigationBarHidden:NO];
     self.navigationController.navigationBar.translucent = YES;
     
+#if defined(IDHDCONTROL)
+    self.navigationController.navigationBar.translucent = NO;
+    [self.navigationController.navigationBar setBackgroundColor:[UIColor colorWithRed:1 green:1 blue:1 alpha:1]];
+    moreSet.frame=CGRectMake(0, 0, moreSet.frame.size.width, moreSet.frame.size.height);
+#endif
+    
     UIImage *navigationbarBG = [UIImage imageNamed:@"title_logo"];
     [self.navigationController.navigationBar setBackgroundImage:navigationbarBG forBarMetrics:UIBarMetricsDefault];
     
