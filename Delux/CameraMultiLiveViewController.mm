@@ -1454,6 +1454,8 @@ extern unsigned int _getTickCount() ;
     UIImage *navigationbarBG = [UIImage imageNamed:@"title_bk"];
     [self.navigationController.navigationBar setBackgroundImage:navigationbarBG forBarMetrics:UIBarMetricsDefault];
     
+    self.navigationController.navigationBar.translucent = YES;
+    
     [self.navigationItem setPrompt:nil];
 	
 	if( isMoreSetOpen ) {
