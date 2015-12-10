@@ -1029,6 +1029,10 @@ extern unsigned int _getTickCount() ;
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    NSInteger offsetCount=0;
+#if defined(IDHDCONTROL)
+    offsetCount=-50;
+#endif
 //设置功能键位置
     //居中
     moreFunctionView.size=CGSizeMake(self.view.frame.size.width, self.view.frame.size.width*110/320);
@@ -1053,7 +1057,7 @@ extern unsigned int _getTickCount() ;
     CGFloat itemAllShowW=self.view.frame.size.width;
     CGFloat itemAllShowH=(itemH+itemStatusH)*2;
     
-    self.vdo1.frame=CGRectMake(0, self.view.frame.size.height/2-itemAllShowH/2+self.view.frame.origin.y, itemW, itemH);
+    self.vdo1.frame=CGRectMake(0, self.view.frame.size.height/2-itemAllShowH/2+self.view.frame.origin.y+offsetCount, itemW, itemH);
     statusBar1.frame=CGRectMake(0, self.vdo1.frame.origin.y+self.vdo1.frame.size.height, itemW, itemStatusH);
     self.vdo2.frame=CGRectMake(self.vdo1.frame.origin.x+itemMarginW+itemW, self.vdo1.frame.origin.y, itemW, itemH);
     statusBar2.frame=CGRectMake(statusBar1.frame.origin.x+itemW+itemMarginW, statusBar1.frame.origin.y, itemW, itemStatusH);
