@@ -309,6 +309,10 @@
     self.bayitTipsLbl.text=NSLocalizedStringFromTable(@"Make sure your phone is connected to the WiFi network you want to setup the camera with.", @"bayitcam", nil);
     self.bayitNoCameraTipsLbl.text=NSLocalizedStringFromTable(@"No cameras added. Please add a camera", @"bayitcam", nil);
 #endif
+#if defined(IDHDCONTROL)
+    self.bayitNoCameraTipsLbl.frame=CGRectMake(0,0-self.bayitNoCameraTipsLbl.frame.size.height,self.bayitNoCameraTipsLbl.frame.size.width,self.bayitNoCameraTipsLbl.frame.size.height);
+    self.bayitNoCameraTipsLbl.text=NSLocalizedStringFromTable(@"No cameras added. Please add a camera", @"", nil);
+#endif
     
     [super viewDidLoad];
 }
@@ -375,6 +379,9 @@
     self.bayitTipsLbl.hidden=[camera_list count]>0;
     self.bayitNoCameraTipsLbl.hidden=self.bayitTipsLbl.hidden;
 #endif
+#if defined(IDHDCONTROL)
+    self.bayitNoCameraTipsLbl.hidden=[camera_list count]>0;
+#endif
 	AppDelegate* currentAppDelegate = (AppDelegate*)[UIApplication sharedApplication].delegate;
 	if( currentAppDelegate.mOpenUrlCmdStore.cmd == emShowLiveViewByUID ) {
 		NSIndexPath *nip = [NSIndexPath indexPathForRow:currentAppDelegate.mOpenUrlCmdStore.tabIdx inSection:0];
@@ -436,6 +443,9 @@
 #if defined(BayitCam)
     self.bayitTipsLbl.hidden=[camera_list count]>0;
     self.bayitNoCameraTipsLbl.hidden=self.bayitTipsLbl.hidden;
+#endif
+#if defined(IDHDCONTROL)
+    self.bayitNoCameraTipsLbl.hidden=[camera_list count]>0;
 #endif
     return [searchedData count];
 }
