@@ -52,6 +52,12 @@
 #endif
     
 }
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+#if defined(IDHDCONTROL)
+        self.wifiNextBtn.frame=CGRectMake(self.wifiNextBtn.frame.origin.x, self.wifiNextBtn.frame.origin.y-30, self.wifiNextBtn.frame.size.width, self.wifiNextBtn.frame.size.height);
+#endif
+}
 -(void)back:(id)sender{
     [self.navigationController popViewControllerAnimated:YES];
 }

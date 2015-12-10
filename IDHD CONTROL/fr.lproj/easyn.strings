@@ -1,8 +1,8 @@
 
-"WIFI一键设置"="Ajouter Caméra";
+"WIFI一键设置"="Ajouter une Caméra";
 "AddApWifiTips"="1. Wi-Fi SmartConfig";
-"AddApWifiTips2"="Pour une connexion de votre caméra sans câble ethernet.";
-"AddApWifiOtherTips"="2.Connexion de votre caméra via un câble ethernet ou reliée à un routeur sans fil";
+"AddApWifiTips2"="";
+"AddApWifiOtherTips"="2.Connexion via QR Code ou recherche Wi-Fi";
 "AddApWifiNextStep"="Suivant";
 "AddApWifiStep2Tips"="Veuillez connecter le câble d’alimentation à la caméra. Une fois que celle ci tourne et émet une sonnerie merci d’appuyer sur la touche suivant.";
 "AddApWifiStep2NeedWifiTips"="Veuillez vous assurer que votre téléphone est bien connecté à votre réseau wifi.";
