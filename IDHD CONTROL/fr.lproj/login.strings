@@ -22,15 +22,15 @@
 "EmailTips"="Email";
 "Submit"="Envoyer";
 
-"firstPasswordTips"="De 6 à 16 charactères";
+"firstPasswordTips"="De 6 à 16 caractères";
 "secondPasswordTips"="Confirmer le mot de passe";
 
 "请输入至少6位长度的帐号"="Veuillez insérer votre";
-"请输入长度为6-16位的密码"="Veuillez insérer votre mot de passe (6 à 16 charactères maximum)";
+"请输入长度为6-16位的密码"="Veuillez insérer votre mot de passe (6 à 16 caractères maximum)";
 "两次密码输入不一致"="Echec de la confirmation du mot de passe";
 
 "My Account"="Mon Compte";
-"Account Management"="Gestion de compte";
+"Account Management"="Mon Compte";
 "Switch Account"="Changer de compte";
 "Modify Password"="Modifier mot de passe";
 "Alpha/number/symbol(any cobination of not less than six)"="Lettre / Chiffre / Signe (Combinaison d'au moins 6 éléments)";
