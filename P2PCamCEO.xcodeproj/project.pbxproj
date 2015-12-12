@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0600E0101C1C629E00268FFF /* moreset_clicked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0600E00E1C1C629E00268FFF /* moreset_clicked@2x.png */; };
+		0600E0111C1C629E00268FFF /* moreset@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0600E00F1C1C629E00268FFF /* moreset@2x.png */; };
 		060AF4291AC43BD700D8828D /* libHISmartWifi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0688795B1ABEAE230017A41A /* libHISmartWifi.a */; };
 		060D2ADD1BF8285D00572575 /* ceo_presetting_clicked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 060D2AD21BF8285D00572575 /* ceo_presetting_clicked@2x.png */; };
 		060D2ADE1BF8285D00572575 /* ceo_presetting_enable_disable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 060D2AD31BF8285D00572575 /* ceo_presetting_enable_disable@2x.png */; };
@@ -9593,6 +9595,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0600E00E1C1C629E00268FFF /* moreset_clicked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "moreset_clicked@2x.png"; path = "IDHD CONTROL/moreset_clicked@2x.png"; sourceTree = "<group>"; };
+		0600E00F1C1C629E00268FFF /* moreset@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "moreset@2x.png"; path = "IDHD CONTROL/moreset@2x.png"; sourceTree = "<group>"; };
 		0609569D1AD4208E00F00FE0 /* ko */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ko; path = ko.lproj/title_logo.png; sourceTree = "<group>"; };
 		0609569E1AD4208E00F00FE0 /* ko */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ko; path = "ko.lproj/title_logo@2x.png"; sourceTree = "<group>"; };
 		0609569F1AD4208F00F00FE0 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/easyn.strings; sourceTree = "<group>"; };
@@ -12850,6 +12854,8 @@
 		063735A31BE241A600F767A8 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				0600E00E1C1C629E00268FFF /* moreset_clicked@2x.png */,
+				0600E00F1C1C629E00268FFF /* moreset@2x.png */,
 				06C519D21C19D5E000C2AEAF /* moreset.png */,
 				06C519D31C19D5E000C2AEAF /* moreset_clicked.png */,
 				06E65DF81C12B1B900BAD92C /* btn_click@2x.png */,
@@ -16530,6 +16536,7 @@
 				063734131BE2406200F767A8 /* camera@2x.png in Resources */,
 				063734141BE2406200F767A8 /* leo_emode_disable.png in Resources */,
 				063734151BE2406200F767A8 /* event.png in Resources */,
+				0600E0111C1C629E00268FFF /* moreset@2x.png in Resources */,
 				06B165971BFB5A4E00931E99 /* clear@3x.png in Resources */,
 				063734161BE2406200F767A8 /* ceo_rcplay_back_click_h@2x.png in Resources */,
 				063734171BE2406200F767A8 /* drop_link.png in Resources */,
@@ -16717,6 +16724,7 @@
 				063734B51BE2406200F767A8 /* add_wifi2.png in Resources */,
 				063734B61BE2406200F767A8 /* speaker.png in Resources */,
 				063734B71BE2406200F767A8 /* speaker@2X.png in Resources */,
+				0600E0101C1C629E00268FFF /* moreset_clicked@2x.png in Resources */,
 				063734B81BE2406200F767A8 /* ceo_pause_click_h.png in Resources */,
 				063734B91BE2406200F767A8 /* gallery.png in Resources */,
 				063734BA1BE2406200F767A8 /* moreset_list2.png in Resources */,

@@ -1012,7 +1012,7 @@ extern unsigned int _getTickCount() {
         [self checkBTN];
         
         //动态布局
-        self.scrollViewPortrait.frame=CGRectMake(0, self.scrollViewPortrait.frame.origin.y+3, self.view.frame.size.width, self.view.frame.size.width/4*3);
+        self.scrollViewPortrait.frame=CGRectMake(0, self.scrollViewPortrait.frame.origin.y+5, self.view.frame.size.width, self.view.frame.size.width/4*3);
         self.scrollViewPortrait.contentSize=self.scrollViewPortrait.frame.size;
         self.monitorPortrait.frame=CGRectMake(0, 0, self.scrollViewPortrait.frame.size.width, self.scrollViewPortrait.frame.size.height);
         statusBar.frame=CGRectMake(0, 0, self.view.frame.size.width, statusBar.frame.size.height);
@@ -1289,6 +1289,12 @@ extern unsigned int _getTickCount() {
     [_longBtn50HZ setTitle:[NSString stringWithFormat:@"%@(50HZ)",NSLocalizedString(@"Night Mode", @"")] forState:UIControlStateNormal];
     [set60Hz setTitle:[NSString stringWithFormat:@"%@(%@)",NSLocalizedString(@"Outdoor Mode", @""),NSLocalizedString(@"60HZ", @"")] forState:UIControlStateNormal];
     [_longBtn60HZ setTitle:[NSString stringWithFormat:@"%@(%@)",NSLocalizedString(@"Outdoor Mode", @""),NSLocalizedString(@"60HZ", @"")] forState:UIControlStateNormal];
+#endif
+#if defined(IDHDCONTROL)
+    [set50Hz setTitle:[NSString stringWithFormat:@"%@ 50Hz",NSLocalizedString(@"Night Mode", @"")] forState:UIControlStateNormal];
+    [_longBtn50HZ setTitle:[NSString stringWithFormat:@"%@ 50Hz",NSLocalizedString(@"Night Mode", @"")] forState:UIControlStateNormal];
+    [set60Hz setTitle:[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Outdoor Mode", @""),NSLocalizedString(@"60Hz", @"")] forState:UIControlStateNormal];
+    [_longBtn60HZ setTitle:[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"Outdoor Mode", @""),NSLocalizedString(@"60Hz", @"")] forState:UIControlStateNormal];
 #endif
     
     

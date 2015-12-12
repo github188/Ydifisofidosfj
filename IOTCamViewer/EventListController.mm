@@ -162,6 +162,9 @@
 //        self.navigationItem.prompt = camera.name;        
 //#endif
         camera.delegate2=self;
+        
+        [self refresh];
+        
         // get TimeZone
         SMsgAVIoctrlTimeZoneExt s3={0};
         s3.cbSize = sizeof(s3);
@@ -387,7 +390,7 @@
     if(type == IOTYPE_USER_IPCAM_GET_TIMEZONE_RESP_EXT) {
         SMsgAVIoctrlTimeZoneExt *s = (SMsgAVIoctrlTimeZoneExt *)data;
         timeZoneNumber = s->nGMTDiff;
-        [self refresh];
+        [self.tableView reloadData];
     }
     if (type == IOTYPE_USER_IPCAM_LISTEVENT_RESP) {
         
