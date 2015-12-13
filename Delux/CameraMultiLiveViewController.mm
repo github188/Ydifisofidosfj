@@ -461,6 +461,7 @@ extern unsigned int _getTickCount() ;
             NSNumber *tempChannel = [channelArray objectAtIndex:i];
             
             if (testCamera.sessionState == CONNECTION_STATE_CONNECTED && [testCamera getConnectionStateOfChannel:0] == CONNECTION_STATE_CONNECTED) {
+                testCamera.isShowInMultiView=NO;
                 [testCamera stopShow:[tempChannel intValue]];
             }
         }
@@ -484,8 +485,10 @@ extern unsigned int _getTickCount() ;
             NSNumber *tempChannel = [channelArray objectAtIndex:i];
             
             if (tempCamera.sessionState == CONNECTION_STATE_CONNECTED && [tempCamera getConnectionStateOfChannel:0] == CONNECTION_STATE_CONNECTED) {
-                tempCamera.isShowInMultiView = YES;
-                [tempCamera startShow:[tempChannel intValue] ScreenObject:self];
+                if(!isGoPlayEvent){
+                    tempCamera.isShowInMultiView = YES;
+                    [tempCamera startShow:[tempChannel integerValue] ScreenObject:self];
+                }
             }
         }
     }
@@ -527,8 +530,10 @@ extern unsigned int _getTickCount() ;
             [tempCamera connect:tempCamera.uid];
             [tempCamera start:0];
             
-            tempCamera.isShowInMultiView = YES;
-            //[tempCamera startShow:[tempChannel intValue] ScreenObject:self];
+            if(!isGoPlayEvent){
+                tempCamera.isShowInMultiView = YES;
+                //[tempCamera startShow:0 ScreenObject:self];
+            }
             tempCamera.delegate2 = self;
         }
     }
@@ -1628,7 +1633,9 @@ extern unsigned int _getTickCount() ;
             NSNumber *chNum = [channelArray objectAtIndex:i];
 			int ch = [chNum intValue];
             GLog( tUI|tReStartShow, (@"\t{applicationDidBecomeActive}\tch:%d", ch) );
-			[testCamera startShow:ch ScreenObject:self];
+            if(!isGoPlayEvent){
+                [testCamera startShow:ch ScreenObject:self];
+            }
             if (selectedAudioMode == AUDIO_MODE_MICROPHONE)
 				[testCamera startSoundToDevice:ch];
             if (selectedAudioMode == AUDIO_MODE_SPEAKER)
@@ -2162,7 +2169,9 @@ extern unsigned int _getTickCount() ;
 			if( tempCamera.sessionState == CONNECTION_STATE_CONNECTED && [tempCamera getConnectionStateOfChannel:0] == CONNECTION_STATE_CONNECTED ) {
 				//[tempCamera connect:tempCamera.uid];
 				//[tempCamera start:[tempChannel intValue]];
-				[tempCamera startShow:[tempChannel intValue] ScreenObject:self];
+                if(!isGoPlayEvent){
+                    [tempCamera startShow:[tempChannel intValue] ScreenObject:self];
+                }
 				tempCamera.delegate2 = self;
 				
 				[self camera:tempCamera _didChangeSessionStatus:CONNECTION_STATE_CONNECTED];
@@ -2181,7 +2190,9 @@ extern unsigned int _getTickCount() ;
     
     [self checkStatus];
     
-    [tempCamera startShow:[tempChannel intValue] ScreenObject:self];
+    if(!isGoPlayEvent){
+        [tempCamera startShow:[tempChannel intValue] ScreenObject:self];
+    }
     
     tempCamera.delegate2 = self;
     
@@ -2515,7 +2526,9 @@ extern unsigned int _getTickCount() ;
         [changedCamera connect:changedCamera.uid];
         [changedCamera start:0];
     }
-    [changedCamera startShow:[tempChannel intValue] ScreenObject:self];
+    if(!isGoPlayEvent){
+        [changedCamera startShow:[tempChannel intValue] ScreenObject:self];
+    }
     changedCamera.delegate2 = self;
     
     SMsgAVIoctrlGetAudioOutFormatReq *s = (SMsgAVIoctrlGetAudioOutFormatReq *)malloc(sizeof(SMsgAVIoctrlGetAudioOutFormatReq));
