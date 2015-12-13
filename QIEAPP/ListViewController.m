@@ -103,4 +103,69 @@
         [rs close];
     }
 }
+#pragma mark - AddCameraDelegate Methods
+- (void)camera:(NSString *)UID didAddwithName:(NSString *)name password:(NSString *)password syncOnCloud:(BOOL)isSync addToCloud:(BOOL)isAdd addFromCloud:(BOOL)isFromCloud {
+    
+    
+    
+    MyCamera *camera_ = [[MyCamera alloc] initWithName:name viewAccount:@"admin" viewPassword:password];
+    [camera_ connect:UID];
+    [camera_ start:0];
+    
+    SMsgAVIoctrlGetAudioOutFormatReq *s = (SMsgAVIoctrlGetAudioOutFormatReq *)malloc(sizeof(SMsgAVIoctrlGetAudioOutFormatReq));
+    s->channel = 0;
+    [camera_ sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GETAUDIOOUTFORMAT_REQ Data:(char *)s DataSize:sizeof(SMsgAVIoctrlGetAudioOutFormatReq)];
+    free(s);
+    
+    SMsgAVIoctrlGetSupportStreamReq *s2 = (SMsgAVIoctrlGetSupportStreamReq *)malloc(sizeof(SMsgAVIoctrlGetSupportStreamReq));
+    [camera_ sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GETSUPPORTSTREAM_REQ Data:(char *)s2 DataSize:sizeof(SMsgAVIoctrlGetSupportStreamReq)];
+    free(s2);
+    
+    if ( [camera_ getTimeZoneSupportOfChannel:0] ){
+        SMsgAVIoctrlTimeZone s3={0};
+        s3.cbSize = sizeof(s3);
+        [camera_ sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];
+    }
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [camera_ setSync:[[NSNumber numberWithBool:isSync] intValue]];
+    [camera_ setCloud:[[NSNumber numberWithBool:isFromCloud] intValue]];
+    [camera_list addObject:camera_];
+    
+    if (database != NULL) {
+        [database executeUpdate:@"INSERT INTO device(dev_uid, dev_nickname, dev_name, dev_pwd, view_acc, view_pwd, channel, sync, isFromCloud) VALUES(?,?,?,?,?,?,?,?,?)",
+         camera_.uid, name, name, password, @"admin", password, [NSNumber numberWithInt:0], [NSNumber numberWithBool:isSync], [NSNumber numberWithBool:isFromCloud]];
+    }
+    
+    NSString *uuid = [[[ UIDevice currentDevice] identifierForVendor] UUIDString];
+    
+    // register to apns server
+    dispatch_queue_t queue = dispatch_queue_create("apns-reg_client", NULL);
+    dispatch_async(queue, ^{
+        if (deviceTokenString != nil) {
+            NSError *error = nil;
+            NSString *appidString = [[NSBundle mainBundle] bundleIdentifier];
+            
+            NSString *argsString = @"%@?cmd=reg_mapping&token=%@&uid=%@&appid=%@&udid=%@&os=ios";
+            NSString *getURLString = [NSString stringWithFormat:argsString, g_tpnsHostString, deviceTokenString, UID, appidString , uuid];
+#ifdef DEF_APNSTest
+            NSLog( @"==============================================");
+            NSLog( @"stringWithContentsOfURL ==> %@", getURLString );
+            NSLog( @"==============================================");
+#endif
+            NSString* registerResult = [NSString stringWithContentsOfURL:[NSURL URLWithString:getURLString] encoding:NSUTF8StringEncoding error:&error];
+#ifdef DEF_APNSTest
+            NSLog( @"==============================================");
+            NSLog( @">>> %@", registerResult);
+            NSLog( @"==============================================");
+#endif
+        }
+    });
+    
+    [userDefaults synchronize];
+    
+    [camera_ release];
+    
+    [self.myTableView reloadData];
+}
 @end

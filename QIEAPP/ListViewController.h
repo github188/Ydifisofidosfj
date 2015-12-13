@@ -15,12 +15,13 @@
 #import "MyCamera.h"
 #import "FMDatabase.h"
 #import "MBProgressHUD.h"
+#import "AddCameraDelegate.h"
 
 extern NSMutableArray *camera_list;
 extern FMDatabase *database;
 extern NSString *deviceTokenString;
 
-@interface ListViewController : UIViewController
+@interface ListViewController : UIViewController<AddCameraDelegate>
 
 
 @property (retain, nonatomic) IBOutlet UILabel *noCameraTipLbl;
