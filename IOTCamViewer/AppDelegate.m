@@ -23,6 +23,11 @@
 #import "LoginViewController.h"
 #import "AccountInfo.h"
 #endif
+
+#if defined(QIEAPP)
+#include "ListViewController.h"
+#endif
+
 #if defined(EasynPTarget)
 //NSString *g_tpnsHostString = @"http://push1.ipcam.hk/apns/apns.php";
 #else
@@ -407,6 +412,10 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
     [navigationController setNavigationBarHidden:YES];
     [_window setRootViewController:navigationController];
     
+#elif defined(QIEAPP)
+    rootViewController=[[[ListViewController alloc]initWithNibName:@"ListViewController" bundle:nil] autorelease];
+    UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];
+    [_window setRootViewController:navigationController];
 #else
     rootViewController = [[[CameraMultiLiveViewController alloc] initWithNibName:@"CameraMultiLiveView" bundle:nil] autorelease];
     UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];
