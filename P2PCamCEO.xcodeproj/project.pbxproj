@@ -2280,6 +2280,70 @@
 		066B41141C0072CC0050D493 /* easyn.strings in Resources */ = {isa = PBXBuildFile; fileRef = 066B41101C0072CC0050D493 /* easyn.strings */; };
 		066B41151C0072CC0050D493 /* zxingLangString.strings in Resources */ = {isa = PBXBuildFile; fileRef = 066B41121C0072CC0050D493 /* zxingLangString.strings */; };
 		066B411A1C007A130050D493 /* login.strings in Resources */ = {isa = PBXBuildFile; fileRef = 066B411C1C007A130050D493 /* login.strings */; };
+		066BC8F51C1EE03000B85755 /* NSString+TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8ED1C1EE03000B85755 /* NSString+TextSize.m */; };
+		066BC8F61C1EE03000B85755 /* NSString+TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8ED1C1EE03000B85755 /* NSString+TextSize.m */; };
+		066BC8F71C1EE03000B85755 /* NSString+TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8ED1C1EE03000B85755 /* NSString+TextSize.m */; };
+		066BC8F81C1EE03000B85755 /* NSString+TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8ED1C1EE03000B85755 /* NSString+TextSize.m */; };
+		066BC8F91C1EE03000B85755 /* NSString+TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8ED1C1EE03000B85755 /* NSString+TextSize.m */; };
+		066BC8FA1C1EE03000B85755 /* NSString+TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8ED1C1EE03000B85755 /* NSString+TextSize.m */; };
+		066BC8FB1C1EE03000B85755 /* NSString+TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8ED1C1EE03000B85755 /* NSString+TextSize.m */; };
+		066BC8FC1C1EE03000B85755 /* NSString+TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8ED1C1EE03000B85755 /* NSString+TextSize.m */; };
+		066BC8FD1C1EE03000B85755 /* NSString+TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8ED1C1EE03000B85755 /* NSString+TextSize.m */; };
+		066BC8FE1C1EE03000B85755 /* NSString+TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8ED1C1EE03000B85755 /* NSString+TextSize.m */; };
+		066BC8FF1C1EE03000B85755 /* NSString+TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8ED1C1EE03000B85755 /* NSString+TextSize.m */; };
+		066BC9001C1EE03000B85755 /* NSString+TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8ED1C1EE03000B85755 /* NSString+TextSize.m */; };
+		066BC9011C1EE03000B85755 /* NSString+TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8ED1C1EE03000B85755 /* NSString+TextSize.m */; };
+		066BC9021C1EE03000B85755 /* NSString+TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8ED1C1EE03000B85755 /* NSString+TextSize.m */; };
+		066BC9031C1EE03000B85755 /* NSString+TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8ED1C1EE03000B85755 /* NSString+TextSize.m */; };
+		066BC9041C1EE03000B85755 /* NSString+TextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8ED1C1EE03000B85755 /* NSString+TextSize.m */; };
+		066BC9051C1EE03000B85755 /* UIFont+CustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8EF1C1EE03000B85755 /* UIFont+CustomFont.m */; };
+		066BC9061C1EE03000B85755 /* UIFont+CustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8EF1C1EE03000B85755 /* UIFont+CustomFont.m */; };
+		066BC9071C1EE03000B85755 /* UIFont+CustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8EF1C1EE03000B85755 /* UIFont+CustomFont.m */; };
+		066BC9081C1EE03000B85755 /* UIFont+CustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8EF1C1EE03000B85755 /* UIFont+CustomFont.m */; };
+		066BC9091C1EE03000B85755 /* UIFont+CustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8EF1C1EE03000B85755 /* UIFont+CustomFont.m */; };
+		066BC90A1C1EE03000B85755 /* UIFont+CustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8EF1C1EE03000B85755 /* UIFont+CustomFont.m */; };
+		066BC90B1C1EE03000B85755 /* UIFont+CustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8EF1C1EE03000B85755 /* UIFont+CustomFont.m */; };
+		066BC90C1C1EE03000B85755 /* UIFont+CustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8EF1C1EE03000B85755 /* UIFont+CustomFont.m */; };
+		066BC90D1C1EE03000B85755 /* UIFont+CustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8EF1C1EE03000B85755 /* UIFont+CustomFont.m */; };
+		066BC90E1C1EE03000B85755 /* UIFont+CustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8EF1C1EE03000B85755 /* UIFont+CustomFont.m */; };
+		066BC90F1C1EE03000B85755 /* UIFont+CustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8EF1C1EE03000B85755 /* UIFont+CustomFont.m */; };
+		066BC9101C1EE03000B85755 /* UIFont+CustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8EF1C1EE03000B85755 /* UIFont+CustomFont.m */; };
+		066BC9111C1EE03000B85755 /* UIFont+CustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8EF1C1EE03000B85755 /* UIFont+CustomFont.m */; };
+		066BC9121C1EE03000B85755 /* UIFont+CustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8EF1C1EE03000B85755 /* UIFont+CustomFont.m */; };
+		066BC9131C1EE03000B85755 /* UIFont+CustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8EF1C1EE03000B85755 /* UIFont+CustomFont.m */; };
+		066BC9141C1EE03000B85755 /* UIFont+CustomFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8EF1C1EE03000B85755 /* UIFont+CustomFont.m */; };
+		066BC9151C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F11C1EE03000B85755 /* UILabel+VerticalAlignment.m */; };
+		066BC9161C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F11C1EE03000B85755 /* UILabel+VerticalAlignment.m */; };
+		066BC9171C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F11C1EE03000B85755 /* UILabel+VerticalAlignment.m */; };
+		066BC9181C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F11C1EE03000B85755 /* UILabel+VerticalAlignment.m */; };
+		066BC9191C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F11C1EE03000B85755 /* UILabel+VerticalAlignment.m */; };
+		066BC91A1C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F11C1EE03000B85755 /* UILabel+VerticalAlignment.m */; };
+		066BC91B1C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F11C1EE03000B85755 /* UILabel+VerticalAlignment.m */; };
+		066BC91C1C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F11C1EE03000B85755 /* UILabel+VerticalAlignment.m */; };
+		066BC91D1C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F11C1EE03000B85755 /* UILabel+VerticalAlignment.m */; };
+		066BC91E1C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F11C1EE03000B85755 /* UILabel+VerticalAlignment.m */; };
+		066BC91F1C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F11C1EE03000B85755 /* UILabel+VerticalAlignment.m */; };
+		066BC9201C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F11C1EE03000B85755 /* UILabel+VerticalAlignment.m */; };
+		066BC9211C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F11C1EE03000B85755 /* UILabel+VerticalAlignment.m */; };
+		066BC9221C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F11C1EE03000B85755 /* UILabel+VerticalAlignment.m */; };
+		066BC9231C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F11C1EE03000B85755 /* UILabel+VerticalAlignment.m */; };
+		066BC9241C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F11C1EE03000B85755 /* UILabel+VerticalAlignment.m */; };
+		066BC9251C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F41C1EE03000B85755 /* UINavigationController+YRBackGesture.m */; };
+		066BC9261C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F41C1EE03000B85755 /* UINavigationController+YRBackGesture.m */; };
+		066BC9271C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F41C1EE03000B85755 /* UINavigationController+YRBackGesture.m */; };
+		066BC9281C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F41C1EE03000B85755 /* UINavigationController+YRBackGesture.m */; };
+		066BC9291C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F41C1EE03000B85755 /* UINavigationController+YRBackGesture.m */; };
+		066BC92A1C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F41C1EE03000B85755 /* UINavigationController+YRBackGesture.m */; };
+		066BC92B1C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F41C1EE03000B85755 /* UINavigationController+YRBackGesture.m */; };
+		066BC92C1C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F41C1EE03000B85755 /* UINavigationController+YRBackGesture.m */; };
+		066BC92D1C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F41C1EE03000B85755 /* UINavigationController+YRBackGesture.m */; };
+		066BC92E1C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F41C1EE03000B85755 /* UINavigationController+YRBackGesture.m */; };
+		066BC92F1C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F41C1EE03000B85755 /* UINavigationController+YRBackGesture.m */; };
+		066BC9301C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F41C1EE03000B85755 /* UINavigationController+YRBackGesture.m */; };
+		066BC9311C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F41C1EE03000B85755 /* UINavigationController+YRBackGesture.m */; };
+		066BC9321C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F41C1EE03000B85755 /* UINavigationController+YRBackGesture.m */; };
+		066BC9331C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F41C1EE03000B85755 /* UINavigationController+YRBackGesture.m */; };
+		066BC9341C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 066BC8F41C1EE03000B85755 /* UINavigationController+YRBackGesture.m */; };
 		066C78491BDA5C2400419134 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AC3148C5342007705B6 /* main.m */; };
 		066C784A1BDA5C2400419134 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AC7148C5343007705B6 /* AppDelegate.m */; };
 		066C784B1BDA5C2400419134 /* CameraListForLiveViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AE3148C657B007705B6 /* CameraListForLiveViewController.mm */; };
@@ -10308,6 +10372,14 @@
 		066B41171C0072E20050D493 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = "IDHD CONTROL/fr.lproj/zxingLangString.strings"; sourceTree = "<group>"; };
 		066B411B1C007A130050D493 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/login.strings; sourceTree = "<group>"; };
 		066B411D1C007A180050D493 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/login.strings; sourceTree = "<group>"; };
+		066BC8EC1C1EE03000B85755 /* NSString+TextSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TextSize.h"; sourceTree = "<group>"; };
+		066BC8ED1C1EE03000B85755 /* NSString+TextSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TextSize.m"; sourceTree = "<group>"; };
+		066BC8EE1C1EE03000B85755 /* UIFont+CustomFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+CustomFont.h"; sourceTree = "<group>"; };
+		066BC8EF1C1EE03000B85755 /* UIFont+CustomFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+CustomFont.m"; sourceTree = "<group>"; };
+		066BC8F01C1EE03000B85755 /* UILabel+VerticalAlignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+VerticalAlignment.h"; sourceTree = "<group>"; };
+		066BC8F11C1EE03000B85755 /* UILabel+VerticalAlignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+VerticalAlignment.m"; sourceTree = "<group>"; };
+		066BC8F31C1EE03000B85755 /* UINavigationController+YRBackGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+YRBackGesture.h"; sourceTree = "<group>"; };
+		066BC8F41C1EE03000B85755 /* UINavigationController+YRBackGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+YRBackGesture.m"; sourceTree = "<group>"; };
 		066C7AA11BDA5C2400419134 /* Bluefieldipc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bluefieldipc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		066C7AA41BDA5D5D00419134 /* Bluefieldipc-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Bluefieldipc-Info.plist"; path = "Bluefieldipc/Bluefieldipc-Info.plist"; sourceTree = "<group>"; };
 		066C7AA81BDA5D9A00419134 /* mydown1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mydown1@2x.png"; sourceTree = "<group>"; };
@@ -13611,6 +13683,37 @@
 			name = images;
 			sourceTree = "<group>";
 		};
+		066BC8EA1C1EE03000B85755 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				066BC8EB1C1EE03000B85755 /* Categories */,
+				066BC8F21C1EE03000B85755 /* YRBackGesture */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		066BC8EB1C1EE03000B85755 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				066BC8EC1C1EE03000B85755 /* NSString+TextSize.h */,
+				066BC8ED1C1EE03000B85755 /* NSString+TextSize.m */,
+				066BC8EE1C1EE03000B85755 /* UIFont+CustomFont.h */,
+				066BC8EF1C1EE03000B85755 /* UIFont+CustomFont.m */,
+				066BC8F01C1EE03000B85755 /* UILabel+VerticalAlignment.h */,
+				066BC8F11C1EE03000B85755 /* UILabel+VerticalAlignment.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		066BC8F21C1EE03000B85755 /* YRBackGesture */ = {
+			isa = PBXGroup;
+			children = (
+				066BC8F31C1EE03000B85755 /* UINavigationController+YRBackGesture.h */,
+				066BC8F41C1EE03000B85755 /* UINavigationController+YRBackGesture.m */,
+			);
+			path = YRBackGesture;
+			sourceTree = "<group>";
+		};
 		066C7AA31BDA5D2E00419134 /* Bluefieldipc */ = {
 			isa = PBXGroup;
 			children = (
@@ -15655,6 +15758,7 @@
 		D8F71AA8148C5342007705B6 = {
 			isa = PBXGroup;
 			children = (
+				066BC8EA1C1EE03000B85755 /* Utility */,
 				06173A7F1C0C8FDC0028DCB8 /* QIEAPP */,
 				06DE27801BFCC539005A068F /* AFNetworking */,
 				069DD0551BEDD6FB00A87F65 /* gdkjb */,
@@ -23476,6 +23580,7 @@
 				061738411C0C8E270028DCB8 /* NSObject+MKBlockAdditions.m in Sources */,
 				061738421C0C8E270028DCB8 /* NSString+String.m in Sources */,
 				061738431C0C8E270028DCB8 /* UIToolbar+Toolbar.m in Sources */,
+				066BC9341C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */,
 				061738441C0C8E270028DCB8 /* UIButton+Bootstrap.m in Sources */,
 				061738451C0C8E270028DCB8 /* UIScrollView+ScrollView.m in Sources */,
 				061738461C0C8E270028DCB8 /* WiFiNetworkController.m in Sources */,
@@ -23501,6 +23606,7 @@
 				0617385A1C0C8E270028DCB8 /* NSURL+URL.m in Sources */,
 				0617385B1C0C8E270028DCB8 /* iToast.m in Sources */,
 				0617385C1C0C8E270028DCB8 /* FormatSDCardController.m in Sources */,
+				066BC9241C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				0617385D1C0C8E270028DCB8 /* UIApplication+KeyView.m in Sources */,
 				0617385E1C0C8E270028DCB8 /* SnapshotViewController.m in Sources */,
 				0617385F1C0C8E270028DCB8 /* AppInfoController.m in Sources */,
@@ -23510,6 +23616,7 @@
 				061738631C0C8E270028DCB8 /* MKHorizMenu.m in Sources */,
 				061738641C0C8E270028DCB8 /* UIBarButtonItem+WEPopover.m in Sources */,
 				061738651C0C8E270028DCB8 /* WEPopoverContainerView.m in Sources */,
+				066BC9041C1EE03000B85755 /* NSString+TextSize.m in Sources */,
 				061738661C0C8E270028DCB8 /* UIImage+Resize.m in Sources */,
 				061738671C0C8E270028DCB8 /* WEPopoverController.m in Sources */,
 				061738681C0C8E270028DCB8 /* AddWithApCamera2Controller.m in Sources */,
@@ -23557,6 +23664,7 @@
 				061738901C0C8E270028DCB8 /* UITextView+TextView.m in Sources */,
 				061738911C0C8E270028DCB8 /* UIImage+DrawImage.m in Sources */,
 				061738921C0C8E270028DCB8 /* TimeZoneListController.m in Sources */,
+				066BC9141C1EE03000B85755 /* UIFont+CustomFont.m in Sources */,
 				061738931C0C8E270028DCB8 /* cCustomNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -23618,6 +23726,7 @@
 				0637336B1BE2406200F767A8 /* CameraListForEventsController.mm in Sources */,
 				0637336C1BE2406200F767A8 /* EventListController.mm in Sources */,
 				06DE27B21BFCC53A005A068F /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				066BC9021C1EE03000B85755 /* NSString+TextSize.m in Sources */,
 				0637336D1BE2406200F767A8 /* NSDictionary+Dictionary.m in Sources */,
 				0637336E1BE2406200F767A8 /* Event.m in Sources */,
 				06DE27AF1BFCC53A005A068F /* AFURLResponseSerialization.m in Sources */,
@@ -23643,6 +23752,7 @@
 				0637337F1BE2406200F767A8 /* UIColor+Colors.m in Sources */,
 				063733801BE2406200F767A8 /* NSURL+URL.m in Sources */,
 				061096DC1BF5747700C4B64C /* MailSettingController.m in Sources */,
+				066BC9221C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				063733811BE2406200F767A8 /* iToast.m in Sources */,
 				063733821BE2406200F767A8 /* FormatSDCardController.m in Sources */,
 				063733831BE2406200F767A8 /* SnapshotViewController.m in Sources */,
@@ -23660,6 +23770,7 @@
 				0637338C1BE2406200F767A8 /* UIImage+Resize.m in Sources */,
 				0637338D1BE2406200F767A8 /* WEPopoverController.m in Sources */,
 				0637338E1BE2406200F767A8 /* UISearchBar+SearchBar.m in Sources */,
+				066BC9321C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */,
 				0637338F1BE2406200F767A8 /* UIWindow+Hierarchy.m in Sources */,
 				063733901BE2406200F767A8 /* UIDevice+Version.m in Sources */,
 				063733911BE2406200F767A8 /* UIButton+GradientColorButton.m in Sources */,
@@ -23670,6 +23781,7 @@
 				063733941BE2406200F767A8 /* IQSegmentedNextPrevious.m in Sources */,
 				063733951BE2406200F767A8 /* IQTitleBarButtonItem.m in Sources */,
 				063733961BE2406200F767A8 /* MBProgressHUD.m in Sources */,
+				066BC9121C1EE03000B85755 /* UIFont+CustomFont.m in Sources */,
 				063733971BE2406200F767A8 /* WETouchableView.m in Sources */,
 				06DE27A91BFCC539005A068F /* AFHTTPRequestOperationManager.m in Sources */,
 				063733981BE2406200F767A8 /* FMDatabase.m in Sources */,
@@ -23728,6 +23840,7 @@
 				06603F5E1B23133300FB6F32 /* CheckSSIDViewController.m in Sources */,
 				06603F5F1B23133300FB6F32 /* AddCameraController.mm in Sources */,
 				06603F601B23133300FB6F32 /* UITabBarController+TabBar.m in Sources */,
+				066BC91B1C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				06603F611B23133300FB6F32 /* UIView+View.m in Sources */,
 				06603F621B23133300FB6F32 /* AddCameraDetailController.mm in Sources */,
 				061AA76E1B25D5B000DD34D0 /* AddWithApCamera2Controller.m in Sources */,
@@ -23758,6 +23871,7 @@
 				06603F7B1B23133300FB6F32 /* UIButton+Bootstrap.m in Sources */,
 				06603F7C1B23133300FB6F32 /* UIScrollView+ScrollView.m in Sources */,
 				06603F7D1B23133300FB6F32 /* WiFiNetworkController.m in Sources */,
+				066BC90B1C1EE03000B85755 /* UIFont+CustomFont.m in Sources */,
 				06603F7E1B23133300FB6F32 /* ChooseViewController.m in Sources */,
 				06603F7F1B23133300FB6F32 /* EditWiFiPasswordController.m in Sources */,
 				06603F801B23133300FB6F32 /* CameraListForEventsController.mm in Sources */,
@@ -23771,6 +23885,7 @@
 				06603F871B23133300FB6F32 /* UIView+Hierarchy.m in Sources */,
 				06603F881B23133300FB6F32 /* IQKeyboardManager.m in Sources */,
 				06603F891B23133300FB6F32 /* IQToolbar.m in Sources */,
+				066BC92B1C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */,
 				061AA76A1B25D5B000DD34D0 /* AddWithApCameraController.m in Sources */,
 				06603F8A1B23133300FB6F32 /* MoreVC.m in Sources */,
 				06603F8B1B23133300FB6F32 /* CameraPlaybackController.mm in Sources */,
@@ -23820,6 +23935,7 @@
 				06F55B771C0EA1CF00E66DFB /* APLEAGLView.m in Sources */,
 				06603FB51B23133300FB6F32 /* UIBarButtonItem+BarButtonItem.m in Sources */,
 				06603FB61B23133300FB6F32 /* CameraMultiLiveViewController.mm in Sources */,
+				066BC8FB1C1EE03000B85755 /* NSString+TextSize.m in Sources */,
 				06603FB81B23133300FB6F32 /* MyCamera.m in Sources */,
 				06603FB91B23133300FB6F32 /* PullRefreshTableViewController.m in Sources */,
 				06603FBA1B23133300FB6F32 /* CustomGridTableViewCellStyle1.m in Sources */,
@@ -23855,6 +23971,7 @@
 				066C784E1BDA5C2400419134 /* CheckSSIDViewController.m in Sources */,
 				066C784F1BDA5C2400419134 /* AddCameraController.mm in Sources */,
 				066C78501BDA5C2400419134 /* UITabBarController+TabBar.m in Sources */,
+				066BC9211C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				066C78511BDA5C2400419134 /* UIView+View.m in Sources */,
 				066C78521BDA5C2400419134 /* AddCameraDetailController.mm in Sources */,
 				066C78531BDA5C2400419134 /* UITableView+TableView.m in Sources */,
@@ -23885,6 +24002,7 @@
 				066C786C1BDA5C2400419134 /* SecurityCodeController.m in Sources */,
 				066C786D1BDA5C2400419134 /* NSObject+MKBlockAdditions.m in Sources */,
 				066C786E1BDA5C2400419134 /* NSString+String.m in Sources */,
+				066BC9111C1EE03000B85755 /* UIFont+CustomFont.m in Sources */,
 				066C786F1BDA5C2400419134 /* UIToolbar+Toolbar.m in Sources */,
 				066C78701BDA5C2400419134 /* UIButton+Bootstrap.m in Sources */,
 				066C78711BDA5C2400419134 /* UIScrollView+ScrollView.m in Sources */,
@@ -23898,6 +24016,7 @@
 				066C78781BDA5C2400419134 /* Event.m in Sources */,
 				066C78791BDA5C2400419134 /* DeviceListOnCloudViewController.m in Sources */,
 				066C787A1BDA5C2400419134 /* UIActionSheet+MKBlockAdditions.m in Sources */,
+				066BC9311C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */,
 				066C787B1BDA5C2400419134 /* NSArray+URLHandle.m in Sources */,
 				066C787C1BDA5C2400419134 /* MoreVC.m in Sources */,
 				066C787D1BDA5C2400419134 /* CameraPlaybackController.mm in Sources */,
@@ -23947,6 +24066,7 @@
 				06F55B7D1C0EA1D200E66DFB /* APLEAGLView.m in Sources */,
 				066C78A91BDA5C2400419134 /* CameraMultiLiveViewController.mm in Sources */,
 				066C78AA1BDA5C2400419134 /* MyCamera.m in Sources */,
+				066BC9011C1EE03000B85755 /* NSString+TextSize.m in Sources */,
 				066C78AB1BDA5C2400419134 /* IQTitleBarButtonItem.m in Sources */,
 				066C78AC1BDA5C2400419134 /* PullRefreshTableViewController.m in Sources */,
 				066C78AD1BDA5C2400419134 /* CustomGridTableViewCellStyle1.m in Sources */,
@@ -23980,6 +24100,7 @@
 				066D9E3F1B037E7C00408AF2 /* CameraListForLiveViewController.mm in Sources */,
 				066D9E401B037E7C00408AF2 /* UIImage+ResizeImage.m in Sources */,
 				066D9E411B037E7C00408AF2 /* CameraLiveViewController.mm in Sources */,
+				066BC9271C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */,
 				066D9E421B037E7C00408AF2 /* CheckSSIDViewController.m in Sources */,
 				066D9E431B037E7C00408AF2 /* AddCameraController.mm in Sources */,
 				066D9E441B037E7C00408AF2 /* UITabBarController+TabBar.m in Sources */,
@@ -24042,6 +24163,7 @@
 				066D9E791B037E7C00408AF2 /* FormatSDCardController.m in Sources */,
 				066D9E7A1B037E7C00408AF2 /* UIApplication+KeyView.m in Sources */,
 				068931141BE9089A00B958FC /* AddWithApCamera2Controller.m in Sources */,
+				066BC9171C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				066D9E7B1B037E7C00408AF2 /* AppInfoController.m in Sources */,
 				066D9E7C1B037E7C00408AF2 /* ChannelPickerContentController.m in Sources */,
 				066D9E7D1B037E7C00408AF2 /* UIButton+Button.m in Sources */,
@@ -24071,6 +24193,7 @@
 				066D9E951B037E7C00408AF2 /* CheckNetwork.m in Sources */,
 				066D9E961B037E7C00408AF2 /* Reachability.m in Sources */,
 				066D9E971B037E7C00408AF2 /* AudioPickerContentController.m in Sources */,
+				066BC8F71C1EE03000B85755 /* NSString+TextSize.m in Sources */,
 				066D9E981B037E7C00408AF2 /* DDBadgeViewCell.m in Sources */,
 				066D9E991B037E7C00408AF2 /* UIBarButtonItem+BarButtonItem.m in Sources */,
 				066D9E9A1B037E7C00408AF2 /* CameraMultiLiveViewController.mm in Sources */,
@@ -24079,6 +24202,7 @@
 				066D9E9E1B037E7C00408AF2 /* CustomGridTableViewCellStyle1.m in Sources */,
 				066D9E9F1B037E7C00408AF2 /* CustomGridTableViewCellStyle2.m in Sources */,
 				066D9EA01B037E7C00408AF2 /* CustomTableViewCellStyle1.m in Sources */,
+				066BC9071C1EE03000B85755 /* UIFont+CustomFont.m in Sources */,
 				066D9EA11B037E7C00408AF2 /* PhotoTableViewController.m in Sources */,
 				066D9EA21B037E7C00408AF2 /* CheckViewController.m in Sources */,
 				066D9EA31B037E7C00408AF2 /* PhotoViewerViewController.m in Sources */,
@@ -24129,6 +24253,7 @@
 				0682DE241B08CCF30019BD70 /* VideoQualityController.m in Sources */,
 				0682DE251B08CCF30019BD70 /* UIScreen+WinSize.m in Sources */,
 				0682DE261B08CCF30019BD70 /* UILabel+Label.m in Sources */,
+				066BC8F81C1EE03000B85755 /* NSString+TextSize.m in Sources */,
 				0682DE271B08CCF30019BD70 /* EditCameraAdvancedController.m in Sources */,
 				0682DE281B08CCF30019BD70 /* UIWebView+WebView.m in Sources */,
 				0682DE291B08CCF30019BD70 /* AboutDeviceController.m in Sources */,
@@ -24189,6 +24314,8 @@
 				0682DE5E1B08CCF30019BD70 /* MBProgressHUD.m in Sources */,
 				0682DE5F1B08CCF30019BD70 /* WETouchableView.m in Sources */,
 				0682DE601B08CCF30019BD70 /* FMDatabase.m in Sources */,
+				066BC9281C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */,
+				066BC9081C1EE03000B85755 /* UIFont+CustomFont.m in Sources */,
 				0682DE611B08CCF30019BD70 /* UIView+IQKeyboardToolbar.m in Sources */,
 				0682DE621B08CCF30019BD70 /* FMDatabaseAdditions.m in Sources */,
 				0682DE631B08CCF30019BD70 /* FMDatabasePool.m in Sources */,
@@ -24206,6 +24333,7 @@
 				0682DE701B08CCF30019BD70 /* CustomGridTableViewCellStyle1.m in Sources */,
 				0682DE711B08CCF30019BD70 /* CustomGridTableViewCellStyle2.m in Sources */,
 				0682DE721B08CCF30019BD70 /* CustomTableViewCellStyle1.m in Sources */,
+				066BC9181C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				0682DE731B08CCF30019BD70 /* PhotoTableViewController.m in Sources */,
 				0682DE741B08CCF30019BD70 /* CheckViewController.m in Sources */,
 				0682DE751B08CCF30019BD70 /* PhotoViewerViewController.m in Sources */,
@@ -24236,6 +24364,7 @@
 				0692A7191B5FC55400D28D06 /* CheckSSIDViewController.m in Sources */,
 				0692A71A1B5FC55400D28D06 /* AddCameraController.mm in Sources */,
 				0692A71B1B5FC55400D28D06 /* UITabBarController+TabBar.m in Sources */,
+				066BC91C1C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				0692A71C1B5FC55400D28D06 /* UIView+View.m in Sources */,
 				0692A71D1B5FC55400D28D06 /* AddCameraDetailController.mm in Sources */,
 				0692A71E1B5FC55400D28D06 /* UITableView+TableView.m in Sources */,
@@ -24266,6 +24395,7 @@
 				0692A7371B5FC55400D28D06 /* SecurityCodeController.m in Sources */,
 				0692A7381B5FC55400D28D06 /* NSObject+MKBlockAdditions.m in Sources */,
 				0692A7391B5FC55400D28D06 /* NSString+String.m in Sources */,
+				066BC90C1C1EE03000B85755 /* UIFont+CustomFont.m in Sources */,
 				0692A73A1B5FC55400D28D06 /* UIToolbar+Toolbar.m in Sources */,
 				0692A73B1B5FC55400D28D06 /* UIButton+Bootstrap.m in Sources */,
 				0692A73C1B5FC55400D28D06 /* UIScrollView+ScrollView.m in Sources */,
@@ -24279,6 +24409,7 @@
 				0692A7431B5FC55400D28D06 /* Event.m in Sources */,
 				0692A7441B5FC55400D28D06 /* DeviceListOnCloudViewController.m in Sources */,
 				0692A7451B5FC55400D28D06 /* UIActionSheet+MKBlockAdditions.m in Sources */,
+				066BC92C1C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */,
 				0692A7461B5FC55400D28D06 /* NSArray+URLHandle.m in Sources */,
 				0692A7471B5FC55400D28D06 /* MoreVC.m in Sources */,
 				0692A7481B5FC55400D28D06 /* CameraPlaybackController.mm in Sources */,
@@ -24328,6 +24459,7 @@
 				06F55B781C0EA1CF00E66DFB /* APLEAGLView.m in Sources */,
 				0692A7731B5FC55400D28D06 /* CameraMultiLiveViewController.mm in Sources */,
 				0692A7751B5FC55400D28D06 /* MyCamera.m in Sources */,
+				066BC8FC1C1EE03000B85755 /* NSString+TextSize.m in Sources */,
 				0692A7761B5FC55400D28D06 /* IQTitleBarButtonItem.m in Sources */,
 				0692A7771B5FC55400D28D06 /* PullRefreshTableViewController.m in Sources */,
 				0692A7781B5FC55400D28D06 /* CustomGridTableViewCellStyle1.m in Sources */,
@@ -24363,6 +24495,7 @@
 				069DCDFC1BEDD43700A87F65 /* CheckSSIDViewController.m in Sources */,
 				069DCDFD1BEDD43700A87F65 /* AddCameraController.mm in Sources */,
 				069DCDFE1BEDD43700A87F65 /* UITabBarController+TabBar.m in Sources */,
+				066BC9231C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				069DCDFF1BEDD43700A87F65 /* UIView+View.m in Sources */,
 				069DCE001BEDD43700A87F65 /* AddCameraDetailController.mm in Sources */,
 				069DCE011BEDD43700A87F65 /* UITableView+TableView.m in Sources */,
@@ -24393,6 +24526,7 @@
 				069DCE1A1BEDD43700A87F65 /* SecurityCodeController.m in Sources */,
 				069DCE1B1BEDD43700A87F65 /* NSObject+MKBlockAdditions.m in Sources */,
 				069DCE1C1BEDD43700A87F65 /* NSString+String.m in Sources */,
+				066BC9131C1EE03000B85755 /* UIFont+CustomFont.m in Sources */,
 				069DCE1D1BEDD43700A87F65 /* UIToolbar+Toolbar.m in Sources */,
 				069DCE1E1BEDD43700A87F65 /* UIButton+Bootstrap.m in Sources */,
 				069DCE1F1BEDD43700A87F65 /* UIScrollView+ScrollView.m in Sources */,
@@ -24406,6 +24540,7 @@
 				069DCE261BEDD43700A87F65 /* Event.m in Sources */,
 				069DCE271BEDD43700A87F65 /* DeviceListOnCloudViewController.m in Sources */,
 				069DCE281BEDD43700A87F65 /* UIActionSheet+MKBlockAdditions.m in Sources */,
+				066BC9331C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */,
 				069DCE291BEDD43700A87F65 /* NSArray+URLHandle.m in Sources */,
 				069DCE2A1BEDD43700A87F65 /* MoreVC.m in Sources */,
 				069DCE2B1BEDD43700A87F65 /* CameraPlaybackController.mm in Sources */,
@@ -24455,6 +24590,7 @@
 				06F55B7E1C0EA1D300E66DFB /* APLEAGLView.m in Sources */,
 				069DCE571BEDD43700A87F65 /* CameraMultiLiveViewController.mm in Sources */,
 				069DCE581BEDD43700A87F65 /* MyCamera.m in Sources */,
+				066BC9031C1EE03000B85755 /* NSString+TextSize.m in Sources */,
 				069DCE591BEDD43700A87F65 /* IQTitleBarButtonItem.m in Sources */,
 				069DCE5A1BEDD43700A87F65 /* PullRefreshTableViewController.m in Sources */,
 				069DCE5B1BEDD43700A87F65 /* CustomGridTableViewCellStyle1.m in Sources */,
@@ -24490,6 +24626,7 @@
 				069EF9131B1207D00024CB5A /* CheckSSIDViewController.m in Sources */,
 				069EF9141B1207D00024CB5A /* AddCameraController.mm in Sources */,
 				069EF9151B1207D00024CB5A /* UITabBarController+TabBar.m in Sources */,
+				066BC91A1C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				069EF9161B1207D00024CB5A /* UIView+View.m in Sources */,
 				069EF9171B1207D00024CB5A /* AddCameraDetailController.mm in Sources */,
 				069B731C1B3FB088007CDA60 /* AddWithApCamera2Controller.m in Sources */,
@@ -24520,6 +24657,7 @@
 				069EF9301B1207D00024CB5A /* UIButton+Bootstrap.m in Sources */,
 				069EF9311B1207D00024CB5A /* UIScrollView+ScrollView.m in Sources */,
 				069EF9321B1207D00024CB5A /* WiFiNetworkController.m in Sources */,
+				066BC90A1C1EE03000B85755 /* UIFont+CustomFont.m in Sources */,
 				069EF9331B1207D00024CB5A /* ChooseViewController.m in Sources */,
 				069EF9341B1207D00024CB5A /* EditWiFiPasswordController.m in Sources */,
 				069EF9351B1207D00024CB5A /* CameraListForEventsController.mm in Sources */,
@@ -24533,6 +24671,7 @@
 				069EF93C1B1207D00024CB5A /* UIView+Hierarchy.m in Sources */,
 				069EF93D1B1207D00024CB5A /* IQKeyboardManager.m in Sources */,
 				069EF93E1B1207D00024CB5A /* IQToolbar.m in Sources */,
+				066BC92A1C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */,
 				069B73121B3FAF12007CDA60 /* AddWithApCameraController.m in Sources */,
 				069EF93F1B1207D00024CB5A /* MoreVC.m in Sources */,
 				069EF9401B1207D00024CB5A /* CameraPlaybackController.mm in Sources */,
@@ -24582,6 +24721,7 @@
 				06F55B761C0EA1CE00E66DFB /* APLEAGLView.m in Sources */,
 				069EF96A1B1207D00024CB5A /* UIBarButtonItem+BarButtonItem.m in Sources */,
 				069EF96B1B1207D00024CB5A /* CameraMultiLiveViewController.mm in Sources */,
+				066BC8FA1C1EE03000B85755 /* NSString+TextSize.m in Sources */,
 				069EF96D1B1207D00024CB5A /* MyCamera.m in Sources */,
 				069EF96E1B1207D00024CB5A /* PullRefreshTableViewController.m in Sources */,
 				069EF96F1B1207D00024CB5A /* CustomGridTableViewCellStyle1.m in Sources */,
@@ -24617,6 +24757,7 @@
 				06AA8C551B5FE8960050A6E7 /* CheckSSIDViewController.m in Sources */,
 				06AA8C561B5FE8960050A6E7 /* AddCameraController.mm in Sources */,
 				06AA8C571B5FE8960050A6E7 /* UITabBarController+TabBar.m in Sources */,
+				066BC91D1C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				06AA8C581B5FE8960050A6E7 /* UIView+View.m in Sources */,
 				06AA8C591B5FE8960050A6E7 /* AddCameraDetailController.mm in Sources */,
 				06AA8C5A1B5FE8960050A6E7 /* UITableView+TableView.m in Sources */,
@@ -24647,6 +24788,7 @@
 				06AA8C731B5FE8960050A6E7 /* SecurityCodeController.m in Sources */,
 				06AA8C741B5FE8960050A6E7 /* NSObject+MKBlockAdditions.m in Sources */,
 				06AA8C751B5FE8960050A6E7 /* NSString+String.m in Sources */,
+				066BC90D1C1EE03000B85755 /* UIFont+CustomFont.m in Sources */,
 				06AA8C761B5FE8960050A6E7 /* UIToolbar+Toolbar.m in Sources */,
 				06AA8C771B5FE8960050A6E7 /* UIButton+Bootstrap.m in Sources */,
 				06AA8C781B5FE8960050A6E7 /* UIScrollView+ScrollView.m in Sources */,
@@ -24660,6 +24802,7 @@
 				06AA8C7F1B5FE8960050A6E7 /* Event.m in Sources */,
 				06AA8C801B5FE8960050A6E7 /* DeviceListOnCloudViewController.m in Sources */,
 				06AA8C811B5FE8960050A6E7 /* UIActionSheet+MKBlockAdditions.m in Sources */,
+				066BC92D1C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */,
 				06AA8C821B5FE8960050A6E7 /* NSArray+URLHandle.m in Sources */,
 				06AA8C831B5FE8960050A6E7 /* MoreVC.m in Sources */,
 				06AA8C841B5FE8960050A6E7 /* CameraPlaybackController.mm in Sources */,
@@ -24709,6 +24852,7 @@
 				06F55B791C0EA1D000E66DFB /* APLEAGLView.m in Sources */,
 				06AA8CAF1B5FE8960050A6E7 /* CameraMultiLiveViewController.mm in Sources */,
 				06AA8CB11B5FE8960050A6E7 /* MyCamera.m in Sources */,
+				066BC8FD1C1EE03000B85755 /* NSString+TextSize.m in Sources */,
 				06AA8CB21B5FE8960050A6E7 /* IQTitleBarButtonItem.m in Sources */,
 				06AA8CB31B5FE8960050A6E7 /* PullRefreshTableViewController.m in Sources */,
 				06AA8CB41B5FE8960050A6E7 /* CustomGridTableViewCellStyle1.m in Sources */,
@@ -24761,6 +24905,7 @@
 				06B8C8CF1B0A21BB006ED6EE /* VideoQualityController.m in Sources */,
 				06B8C8D01B0A21BB006ED6EE /* UIScreen+WinSize.m in Sources */,
 				06B8C8D11B0A21BB006ED6EE /* UILabel+Label.m in Sources */,
+				066BC8F91C1EE03000B85755 /* NSString+TextSize.m in Sources */,
 				06B8C8D21B0A21BB006ED6EE /* EditCameraAdvancedController.m in Sources */,
 				06B8C8D31B0A21BB006ED6EE /* UIWebView+WebView.m in Sources */,
 				06B8C8D41B0A21BB006ED6EE /* AboutDeviceController.m in Sources */,
@@ -24821,6 +24966,8 @@
 				06B8C9091B0A21BB006ED6EE /* MBProgressHUD.m in Sources */,
 				06B8C90A1B0A21BB006ED6EE /* WETouchableView.m in Sources */,
 				06B8C90B1B0A21BB006ED6EE /* FMDatabase.m in Sources */,
+				066BC9291C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */,
+				066BC9091C1EE03000B85755 /* UIFont+CustomFont.m in Sources */,
 				06B8C90C1B0A21BB006ED6EE /* UIView+IQKeyboardToolbar.m in Sources */,
 				06B8C90D1B0A21BB006ED6EE /* FMDatabaseAdditions.m in Sources */,
 				06B8C90E1B0A21BB006ED6EE /* FMDatabasePool.m in Sources */,
@@ -24838,6 +24985,7 @@
 				06B8C91B1B0A21BB006ED6EE /* CustomGridTableViewCellStyle1.m in Sources */,
 				06B8C91C1B0A21BB006ED6EE /* CustomGridTableViewCellStyle2.m in Sources */,
 				06B8C91D1B0A21BB006ED6EE /* CustomTableViewCellStyle1.m in Sources */,
+				066BC9191C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				06B8C91E1B0A21BB006ED6EE /* PhotoTableViewController.m in Sources */,
 				06B8C91F1B0A21BB006ED6EE /* CheckViewController.m in Sources */,
 				06B8C9201B0A21BB006ED6EE /* PhotoViewerViewController.m in Sources */,
@@ -24868,6 +25016,7 @@
 				06CAA46A1BC0142C00853612 /* CheckSSIDViewController.m in Sources */,
 				06CAA46B1BC0142C00853612 /* AddCameraController.mm in Sources */,
 				06CAA46C1BC0142C00853612 /* UITabBarController+TabBar.m in Sources */,
+				066BC91F1C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				06CAA46D1BC0142C00853612 /* UIView+View.m in Sources */,
 				06CAA46E1BC0142C00853612 /* AddCameraDetailController.mm in Sources */,
 				06CAA46F1BC0142C00853612 /* UITableView+TableView.m in Sources */,
@@ -24898,6 +25047,7 @@
 				06CAA4881BC0142C00853612 /* SecurityCodeController.m in Sources */,
 				06CAA4891BC0142C00853612 /* NSObject+MKBlockAdditions.m in Sources */,
 				06CAA48A1BC0142C00853612 /* NSString+String.m in Sources */,
+				066BC90F1C1EE03000B85755 /* UIFont+CustomFont.m in Sources */,
 				06CAA48B1BC0142C00853612 /* UIToolbar+Toolbar.m in Sources */,
 				06CAA48C1BC0142C00853612 /* UIButton+Bootstrap.m in Sources */,
 				06CAA48D1BC0142C00853612 /* UIScrollView+ScrollView.m in Sources */,
@@ -24911,6 +25061,7 @@
 				06CAA4941BC0142C00853612 /* Event.m in Sources */,
 				06CAA4951BC0142C00853612 /* DeviceListOnCloudViewController.m in Sources */,
 				06CAA4961BC0142C00853612 /* UIActionSheet+MKBlockAdditions.m in Sources */,
+				066BC92F1C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */,
 				06CAA4971BC0142C00853612 /* NSArray+URLHandle.m in Sources */,
 				06CAA4981BC0142C00853612 /* MoreVC.m in Sources */,
 				06CAA4991BC0142C00853612 /* CameraPlaybackController.mm in Sources */,
@@ -24960,6 +25111,7 @@
 				06F55B7B1C0EA1D100E66DFB /* APLEAGLView.m in Sources */,
 				06CAA4C41BC0142C00853612 /* CameraMultiLiveViewController.mm in Sources */,
 				06CAA4C61BC0142C00853612 /* MyCamera.m in Sources */,
+				066BC8FF1C1EE03000B85755 /* NSString+TextSize.m in Sources */,
 				06CAA4C71BC0142C00853612 /* IQTitleBarButtonItem.m in Sources */,
 				06CAA4C81BC0142C00853612 /* PullRefreshTableViewController.m in Sources */,
 				06CAA4C91BC0142C00853612 /* CustomGridTableViewCellStyle1.m in Sources */,
@@ -24995,6 +25147,7 @@
 				06D3F8311B78E7C1006AF177 /* CheckSSIDViewController.m in Sources */,
 				06D3F8321B78E7C1006AF177 /* AddCameraController.mm in Sources */,
 				06D3F8331B78E7C1006AF177 /* UITabBarController+TabBar.m in Sources */,
+				066BC91E1C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				06D3F8341B78E7C1006AF177 /* UIView+View.m in Sources */,
 				06D3F8351B78E7C1006AF177 /* AddCameraDetailController.mm in Sources */,
 				06D3F8371B78E7C1006AF177 /* UITableView+TableView.m in Sources */,
@@ -25025,6 +25178,7 @@
 				06D3F8501B78E7C1006AF177 /* UIScrollView+ScrollView.m in Sources */,
 				06D3F8511B78E7C1006AF177 /* WiFiNetworkController.m in Sources */,
 				06D3F8521B78E7C1006AF177 /* ChooseViewController.m in Sources */,
+				066BC90E1C1EE03000B85755 /* UIFont+CustomFont.m in Sources */,
 				06D3F8531B78E7C1006AF177 /* EditWiFiPasswordController.m in Sources */,
 				06D3F8541B78E7C1006AF177 /* CameraListForEventsController.mm in Sources */,
 				06D3F8551B78E7C1006AF177 /* EventListController.mm in Sources */,
@@ -25038,6 +25192,7 @@
 				06D3F85C1B78E7C1006AF177 /* IQKeyboardManager.m in Sources */,
 				06D3F85D1B78E7C1006AF177 /* IQToolbar.m in Sources */,
 				06D3F85F1B78E7C1006AF177 /* MoreVC.m in Sources */,
+				066BC92E1C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */,
 				06D3F8601B78E7C1006AF177 /* CameraPlaybackController.mm in Sources */,
 				06D3F8611B78E7C1006AF177 /* VideoFlipController.m in Sources */,
 				06D3F8621B78E7C1006AF177 /* EnvironmentModeController.m in Sources */,
@@ -25087,6 +25242,7 @@
 				06F55B7A1C0EA1D100E66DFB /* APLEAGLView.m in Sources */,
 				06D3F88C1B78E7C1006AF177 /* CameraMultiLiveViewController.mm in Sources */,
 				06D3F88E1B78E7C1006AF177 /* MyCamera.m in Sources */,
+				066BC8FE1C1EE03000B85755 /* NSString+TextSize.m in Sources */,
 				06D3F88F1B78E7C1006AF177 /* PullRefreshTableViewController.m in Sources */,
 				06D3F8901B78E7C1006AF177 /* CustomGridTableViewCellStyle1.m in Sources */,
 				06D3F8911B78E7C1006AF177 /* CustomGridTableViewCellStyle2.m in Sources */,
@@ -25122,6 +25278,7 @@
 				06D794E81BC0355E00B1E986 /* CheckSSIDViewController.m in Sources */,
 				06D794E91BC0355E00B1E986 /* AddCameraController.mm in Sources */,
 				06D794EA1BC0355E00B1E986 /* UITabBarController+TabBar.m in Sources */,
+				066BC9201C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				06D794EB1BC0355E00B1E986 /* UIView+View.m in Sources */,
 				06D794EC1BC0355E00B1E986 /* AddCameraDetailController.mm in Sources */,
 				06D794ED1BC0355E00B1E986 /* UITableView+TableView.m in Sources */,
@@ -25152,6 +25309,7 @@
 				06D795061BC0355E00B1E986 /* SecurityCodeController.m in Sources */,
 				06D795071BC0355E00B1E986 /* NSObject+MKBlockAdditions.m in Sources */,
 				06D795081BC0355E00B1E986 /* NSString+String.m in Sources */,
+				066BC9101C1EE03000B85755 /* UIFont+CustomFont.m in Sources */,
 				06D795091BC0355E00B1E986 /* UIToolbar+Toolbar.m in Sources */,
 				06D7950A1BC0355E00B1E986 /* UIButton+Bootstrap.m in Sources */,
 				06D7950B1BC0355E00B1E986 /* UIScrollView+ScrollView.m in Sources */,
@@ -25165,6 +25323,7 @@
 				06D795121BC0355E00B1E986 /* Event.m in Sources */,
 				06D795131BC0355E00B1E986 /* DeviceListOnCloudViewController.m in Sources */,
 				06D795141BC0355E00B1E986 /* UIActionSheet+MKBlockAdditions.m in Sources */,
+				066BC9301C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */,
 				06D795151BC0355E00B1E986 /* NSArray+URLHandle.m in Sources */,
 				06D795161BC0355E00B1E986 /* MoreVC.m in Sources */,
 				06D795171BC0355E00B1E986 /* CameraPlaybackController.mm in Sources */,
@@ -25214,6 +25373,7 @@
 				06F55B7C1C0EA1D200E66DFB /* APLEAGLView.m in Sources */,
 				06D795421BC0355E00B1E986 /* CameraMultiLiveViewController.mm in Sources */,
 				06D795431BC0355E00B1E986 /* MyCamera.m in Sources */,
+				066BC9001C1EE03000B85755 /* NSString+TextSize.m in Sources */,
 				06D795441BC0355E00B1E986 /* IQTitleBarButtonItem.m in Sources */,
 				06D795451BC0355E00B1E986 /* PullRefreshTableViewController.m in Sources */,
 				06D795461BC0355E00B1E986 /* CustomGridTableViewCellStyle1.m in Sources */,
@@ -25249,6 +25409,7 @@
 				06F76E381AB720A100901EBA /* CheckSSIDViewController.m in Sources */,
 				06F76E391AB720A100901EBA /* AddCameraController.mm in Sources */,
 				06F76E3A1AB720A100901EBA /* UITabBarController+TabBar.m in Sources */,
+				066BC9161C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				06F76E3B1AB720A100901EBA /* UIView+View.m in Sources */,
 				06F76E3C1AB720A100901EBA /* AddCameraDetailController.mm in Sources */,
 				06F76E3D1AB720A100901EBA /* UITableView+TableView.m in Sources */,
@@ -25279,6 +25440,7 @@
 				06F76E511AB720A100901EBA /* SecurityCodeController.m in Sources */,
 				06F76E521AB720A100901EBA /* NSObject+MKBlockAdditions.m in Sources */,
 				06F76E531AB720A100901EBA /* NSString+String.m in Sources */,
+				066BC9061C1EE03000B85755 /* UIFont+CustomFont.m in Sources */,
 				06F76E541AB720A100901EBA /* UIToolbar+Toolbar.m in Sources */,
 				06F76E551AB720A100901EBA /* UIButton+Bootstrap.m in Sources */,
 				06F76E561AB720A100901EBA /* UIScrollView+ScrollView.m in Sources */,
@@ -25292,6 +25454,7 @@
 				06F76E5C1AB720A100901EBA /* Event.m in Sources */,
 				06F76E5D1AB720A100901EBA /* DeviceListOnCloudViewController.m in Sources */,
 				06F76E5E1AB720A100901EBA /* UIActionSheet+MKBlockAdditions.m in Sources */,
+				066BC9261C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */,
 				06F76E5F1AB720A100901EBA /* NSArray+URLHandle.m in Sources */,
 				06F76E601AB720A100901EBA /* MoreVC.m in Sources */,
 				06F76E611AB720A100901EBA /* CameraPlaybackController.mm in Sources */,
@@ -25341,6 +25504,7 @@
 				06F55B721C0EA1CD00E66DFB /* APLEAGLView.m in Sources */,
 				06F76E881AB720A100901EBA /* CameraMultiLiveViewController.mm in Sources */,
 				06F76E8A1AB720A100901EBA /* MyCamera.m in Sources */,
+				066BC8F61C1EE03000B85755 /* NSString+TextSize.m in Sources */,
 				06335C2C1AC19E7F003DCD0A /* IQTitleBarButtonItem.m in Sources */,
 				06F76E8B1AB720A100901EBA /* PullRefreshTableViewController.m in Sources */,
 				06F76E8C1AB720A100901EBA /* CustomGridTableViewCellStyle1.m in Sources */,
@@ -25393,6 +25557,7 @@
 				610DBA0B169AF0BF00292CF9 /* VideoQualityController.m in Sources */,
 				7A1C0193193339F70032A77E /* UIScreen+WinSize.m in Sources */,
 				7A1C0191193339F70032A77E /* UILabel+Label.m in Sources */,
+				066BC8F51C1EE03000B85755 /* NSString+TextSize.m in Sources */,
 				610DBA0C169AF0BF00292CF9 /* EditCameraAdvancedController.m in Sources */,
 				7A1C019B193339F70032A77E /* UIWebView+WebView.m in Sources */,
 				610DBA0D169AF0BF00292CF9 /* AboutDeviceController.m in Sources */,
@@ -25453,6 +25618,8 @@
 				7A0B1C8119A4CF540071E5CF /* MBProgressHUD.m in Sources */,
 				610DBA20169AF0BF00292CF9 /* WETouchableView.m in Sources */,
 				610DBA21169AF0BF00292CF9 /* FMDatabase.m in Sources */,
+				066BC9251C1EE03000B85755 /* UINavigationController+YRBackGesture.m in Sources */,
+				066BC9051C1EE03000B85755 /* UIFont+CustomFont.m in Sources */,
 				06335C331AC19E7F003DCD0A /* UIView+IQKeyboardToolbar.m in Sources */,
 				610DBA22169AF0BF00292CF9 /* FMDatabaseAdditions.m in Sources */,
 				610DBA23169AF0BF00292CF9 /* FMDatabasePool.m in Sources */,
@@ -25470,6 +25637,7 @@
 				610DBA2D169AF0BF00292CF9 /* CustomGridTableViewCellStyle1.m in Sources */,
 				610DBA2E169AF0BF00292CF9 /* CustomGridTableViewCellStyle2.m in Sources */,
 				610DBA2F169AF0BF00292CF9 /* CustomTableViewCellStyle1.m in Sources */,
+				066BC9151C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				610DBA30169AF0BF00292CF9 /* PhotoTableViewController.m in Sources */,
 				7AAF3AF619220CFF000D7FAF /* CheckViewController.m in Sources */,
 				610DBA31169AF0BF00292CF9 /* PhotoViewerViewController.m in Sources */,

@@ -27,6 +27,7 @@
 #import <IOTCamera/Monitor.h>
 #import <IOTCamera/AVIOCTRLDEFs.h>
 #import <AssetsLibrary/AssetsLibrary.h>
+#import "NSString+TextSize.h"
 #import "MyCamera.h"
 #import "FMDatabase.h"
 #import "WEPopoverController.h"

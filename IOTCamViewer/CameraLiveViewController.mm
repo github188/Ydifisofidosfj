@@ -1676,6 +1676,16 @@ extern unsigned int _getTickCount() {
         
         [self activeAudioSession];
     }
+    
+    //界面动态布局
+    CGSize emodeSize=[EModeTitle.titleLabel.text textSize:EModeTitle.font];
+    if(EModeTitle.frame.size.width<emodeSize.width){
+        EModeTitle.frame=CGRectMake(emodeView.frame.size.width/2-emodeSize.width/2, EModeTitle.frame.origin.y, emodeSize.width, EModeTitle.frame.size.height);
+    }
+    if(longEModeTitle.frame.size.width<emodeSize.width){
+        longEModeTitle.frame=CGRectMake(longEModeView.frame.size.width/2-emodeSize.width/2, longEModeTitle.frame.origin.y, emodeSize.width, longEModeTitle.frame.size.height);
+    }
+    
 }
 -(void)setCameraQVGAFPS{
 #if defined(Aztech)
