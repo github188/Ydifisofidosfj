@@ -370,6 +370,7 @@ extern unsigned int _getTickCount() {
     
     if(!self.isTalkButtonAction)
     {
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         SMsgAVIoctrlGetAudioOutFormatReq *s = (SMsgAVIoctrlGetAudioOutFormatReq *)malloc(sizeof(SMsgAVIoctrlGetAudioOutFormatReq));
         s->channel = 0;
         [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GETAUDIOOUTFORMAT_REQ Data:(char *)s DataSize:sizeof(SMsgAVIoctrlGetAudioOutFormatReq)];
@@ -947,7 +948,7 @@ extern unsigned int _getTickCount() {
         //动态布局
         NSString *audioTitleStr=longAudioTitle.titleLabel.text;
         CGSize audioTitleStrSize=[audioTitleStr sizeWithFont:longAudioTitle.titleLabel.font];
-        longTalkButton.frame=CGRectMake(self.view.frame.size.width-audioTitleStrSize.width-self.longTalkButtonBtn.frame.size.width-15, self.view.frame.size.height-self.longHorizMenu.frame.size.height-longTalkButton.frame.size.height, audioTitleStrSize.width+self.longTalkButtonBtn.frame.size.width, longTalkButton.frame.size.height);
+        longTalkButton.frame=CGRectMake(self.view.frame.size.width-audioTitleStrSize.width-self.longTalkButtonBtn.frame.size.width-25, self.view.frame.size.height-self.longHorizMenu.frame.size.height-longTalkButton.frame.size.height, audioTitleStrSize.width+self.longTalkButtonBtn.frame.size.width, longTalkButton.frame.size.height);
         longAudioTitle.frame=CGRectMake(0, longTalkButton.frame.size.height-audioTitleStrSize.height, audioTitleStrSize.width+25, audioTitleStrSize.height);
         [longAudioTitle setContentHorizontalAlignment:UIControlContentHorizontalAlignmentCenter];
         self.longTalkButtonBtn.frame=CGRectMake(longAudioTitle.frame.origin.x+longAudioTitle.frame.size.width, longTalkButton.frame.size.height-self.longTalkButtonBtn.frame.size.height, self.longTalkButtonBtn.frame.size.width, self.longTalkButtonBtn.frame.size.height);
@@ -1019,7 +1020,7 @@ extern unsigned int _getTickCount() {
         
         NSString *audioTitleStr=AudioTitle.titleLabel.text;
         CGSize audioTitleStrSize=[audioTitleStr sizeWithFont:AudioTitle.titleLabel.font];
-        talkButton.frame=CGRectMake(self.view.frame.size.width-audioTitleStrSize.width-self.talkButtonBtn.frame.size.width-15, self.view.frame.size.height-self.horizMenu.frame.size.height-talkButton.frame.size.height, audioTitleStrSize.width+self.talkButtonBtn.frame.size.width, talkButton.frame.size.height);
+        talkButton.frame=CGRectMake(self.view.frame.size.width-audioTitleStrSize.width-self.talkButtonBtn.frame.size.width-25, self.view.frame.size.height-self.horizMenu.frame.size.height-talkButton.frame.size.height, audioTitleStrSize.width+self.talkButtonBtn.frame.size.width, talkButton.frame.size.height);
         AudioTitle.frame=CGRectMake(0, talkButton.frame.size.height-audioTitleStrSize.height, audioTitleStrSize.width+20, audioTitleStrSize.height);
         [AudioTitle setContentHorizontalAlignment:UIControlContentHorizontalAlignmentCenter];
 
@@ -1680,10 +1681,10 @@ extern unsigned int _getTickCount() {
     //界面动态布局
     CGSize emodeSize=[EModeTitle.titleLabel.text textSize:EModeTitle.font];
     if(EModeTitle.frame.size.width<emodeSize.width){
-        EModeTitle.frame=CGRectMake(emodeView.frame.size.width/2-emodeSize.width/2, EModeTitle.frame.origin.y, emodeSize.width, EModeTitle.frame.size.height);
+        EModeTitle.frame=CGRectMake(emodeView.frame.size.width/2-(emodeSize.width+15)/2, EModeTitle.frame.origin.y, emodeSize.width+15, EModeTitle.frame.size.height);
     }
     if(longEModeTitle.frame.size.width<emodeSize.width){
-        longEModeTitle.frame=CGRectMake(longEModeView.frame.size.width/2-emodeSize.width/2, longEModeTitle.frame.origin.y, emodeSize.width, longEModeTitle.frame.size.height);
+        longEModeTitle.frame=CGRectMake(longEModeView.frame.size.width/2-(emodeSize.width+15)/2, longEModeTitle.frame.origin.y, emodeSize.width+15, longEModeTitle.frame.size.height);
     }
     
 }
@@ -1943,6 +1944,10 @@ extern unsigned int _getTickCount() {
 //        if(pResult->quality!=[MyCamera getCameraQVGA:camera]){
 ////            [MyCamera loadCameraQVGA:camera];
 //        }
+    }
+    
+    if (type == (int)IOTYPE_USER_IPCAM_GETSUPPORTSTREAM_RESP) {
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
     }
     
     if (type == (int)IOTYPE_USER_IPCAM_SETSTREAMCTRL_RESP) {
