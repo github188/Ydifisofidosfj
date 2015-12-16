@@ -155,38 +155,6 @@
             endingLineNumber = "107"
             landmarkName = "-back:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[EditCameraDefaultController back:]"
-                  moduleName = "IDHD CONTROL"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/limingru/Downloads/P2PCamCEO_iOS_1.1.5/iOS/P2PCamCEOforST&amp;T/IOTCamViewer/EditCameraDefaultController.m"
-                  timestampString = "471962527.097416"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "107"
-                  endingLineNumber = "107"
-                  offsetFromSymbolStart = "2196">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__36-[EditCameraDefaultController back:]_block_invoke"
-                  moduleName = "IDHD CONTROL"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/limingru/Downloads/P2PCamCEO_iOS_1.1.5/iOS/P2PCamCEOforST&amp;T/IOTCamViewer/EditCameraDefaultController.m"
-                  timestampString = "471962527.09776"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "109"
-                  endingLineNumber = "109"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
