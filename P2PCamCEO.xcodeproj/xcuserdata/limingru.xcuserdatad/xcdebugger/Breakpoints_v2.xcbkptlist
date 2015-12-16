@@ -141,5 +141,53 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IOTCamViewer/EditCameraDefaultController.m"
+            timestampString = "471928593.75156"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "-back:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[EditCameraDefaultController back:]"
+                  moduleName = "IDHD CONTROL"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/limingru/Documents/SourceCode/LMR/EASYNP/IOTCamViewer/EditCameraDefaultController.m"
+                  timestampString = "471929403.521327"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "2196">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__36-[EditCameraDefaultController back:]_block_invoke"
+                  moduleName = "IDHD CONTROL"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/limingru/Documents/SourceCode/LMR/EASYNP/IOTCamViewer/EditCameraDefaultController.m"
+                  timestampString = "471929403.521567"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
