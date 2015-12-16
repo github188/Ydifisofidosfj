@@ -1311,8 +1311,8 @@ extern unsigned int _getTickCount() {
 #if defined(EasynPTarget)
     [set50Hz setTitle:NSLocalizedString(@"Indoor Mode(50Hz)", @"") forState:UIControlStateNormal];
     [_longBtn50HZ setTitle:NSLocalizedString(@"Indoor Mode(50Hz)", @"") forState:UIControlStateNormal];
-    [set60Hz setTitle:[NSString stringWithFormat:@"%@%@",NSLocalizedString(@"Outdoor Mode", @""),NSLocalizedString(@"60HZ", @"")] forState:UIControlStateNormal];
-    [_longBtn60HZ setTitle:[NSString stringWithFormat:@"%@%@",NSLocalizedString(@"Outdoor Mode", @""),NSLocalizedString(@"60HZ", @"")] forState:UIControlStateNormal];
+    [set60Hz setTitle:[NSString stringWithFormat:@"%@(%@)",NSLocalizedString(@"Outdoor Mode", @""),NSLocalizedString(@"60HZ", @"")] forState:UIControlStateNormal];
+    [_longBtn60HZ setTitle:[NSString stringWithFormat:@"%@(%@)",NSLocalizedString(@"Outdoor Mode", @""),NSLocalizedString(@"60HZ", @"")] forState:UIControlStateNormal];
 #else
     [set50Hz setTitle:[NSString stringWithFormat:@"%@(50HZ)",NSLocalizedString(@"Night Mode", @"")] forState:UIControlStateNormal];
     [_longBtn50HZ setTitle:[NSString stringWithFormat:@"%@(50HZ)",NSLocalizedString(@"Night Mode", @"")] forState:UIControlStateNormal];
