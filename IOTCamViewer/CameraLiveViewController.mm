@@ -921,6 +921,34 @@ extern unsigned int _getTickCount() {
         btn.frame=CGRectMake(leftW+i*24+i*marginW, btn.frame.origin.y, btn.frame.size.width, btn.frame.size.height);
         i++;
     }
+    
+    //修复语音的位置
+    /***横屏*/
+    if (self.interfaceOrientation == UIInterfaceOrientationLandscapeLeft ||
+        self.interfaceOrientation == UIInterfaceOrientationLandscapeRight){
+        NSString *audioTitleStr=longAudioTitle.titleLabel.text;
+        CGSize audioTitleStrSize=[audioTitleStr sizeWithFont:longAudioTitle.titleLabel.font];
+        
+        CGFloat offsetW=25;
+        CGFloat viewW=audioTitleStrSize.width+self.longTalkButtonBtn.frame.size.width+offsetW;
+        
+        longTalkButton.frame=CGRectMake(self.view.frame.size.width-viewW, self.view.frame.size.height-self.longHorizMenu.frame.size.height-longTalkButton.frame.size.height, viewW, longTalkButton.frame.size.height);
+        longAudioTitle.frame=CGRectMake(0, longTalkButton.frame.size.height-audioTitleStrSize.height, audioTitleStrSize.width+offsetW, audioTitleStrSize.height);
+        [longAudioTitle setContentHorizontalAlignment:UIControlContentHorizontalAlignmentCenter];
+        self.longTalkButtonBtn.frame=CGRectMake(longAudioTitle.frame.origin.x+longAudioTitle.frame.size.width, longTalkButton.frame.size.height-self.longTalkButtonBtn.frame.size.height, self.longTalkButtonBtn.frame.size.width, self.longTalkButtonBtn.frame.size.height);
+    }
+    else{ /**竖屏**/
+        NSString *audioTitleStr=AudioTitle.titleLabel.text;
+        CGSize audioTitleStrSize=[audioTitleStr sizeWithFont:AudioTitle.titleLabel.font];
+        
+        CGFloat offsetW=25;
+        CGFloat viewW=audioTitleStrSize.width+self.talkButtonBtn.frame.size.width+offsetW;
+        
+        talkButton.frame=CGRectMake(self.view.frame.size.width-viewW, self.view.frame.size.height-self.horizMenu.frame.size.height-talkButton.frame.size.height, viewW, talkButton.frame.size.height);
+        AudioTitle.frame=CGRectMake(0, talkButton.frame.size.height-audioTitleStrSize.height, audioTitleStrSize.width+offsetW, audioTitleStrSize.height);
+        [AudioTitle setContentHorizontalAlignment:UIControlContentHorizontalAlignmentCenter];
+        self.talkButtonBtn.frame=CGRectMake(AudioTitle.frame.origin.x+AudioTitle.frame.size.width, talkButton.frame.size.height-self.talkButtonBtn.frame.size.height, self.talkButtonBtn.frame.size.width, self.talkButtonBtn.frame.size.height);
+    }
 }
 
 - (void)changeOrientation:(UIInterfaceOrientation)orientation {
@@ -946,12 +974,12 @@ extern unsigned int _getTickCount() {
 		NSLog( @"video frame {%d,%d}%dx%d", (int)self.monitorLandscape.frame.origin.x, (int)self.monitorLandscape.frame.origin.y, (int)self.monitorLandscape.frame.size.width, (int)self.monitorLandscape.frame.size.height);
         
         //动态布局
-        NSString *audioTitleStr=longAudioTitle.titleLabel.text;
-        CGSize audioTitleStrSize=[audioTitleStr sizeWithFont:longAudioTitle.titleLabel.font];
-        longTalkButton.frame=CGRectMake(self.view.frame.size.width-audioTitleStrSize.width-self.longTalkButtonBtn.frame.size.width-25, self.view.frame.size.height-self.longHorizMenu.frame.size.height-longTalkButton.frame.size.height, audioTitleStrSize.width+self.longTalkButtonBtn.frame.size.width, longTalkButton.frame.size.height);
-        longAudioTitle.frame=CGRectMake(0, longTalkButton.frame.size.height-audioTitleStrSize.height, audioTitleStrSize.width+25, audioTitleStrSize.height);
-        [longAudioTitle setContentHorizontalAlignment:UIControlContentHorizontalAlignmentCenter];
-        self.longTalkButtonBtn.frame=CGRectMake(longAudioTitle.frame.origin.x+longAudioTitle.frame.size.width, longTalkButton.frame.size.height-self.longTalkButtonBtn.frame.size.height, self.longTalkButtonBtn.frame.size.width, self.longTalkButtonBtn.frame.size.height);
+//        NSString *audioTitleStr=longAudioTitle.titleLabel.text;
+//        CGSize audioTitleStrSize=[audioTitleStr sizeWithFont:longAudioTitle.titleLabel.font];
+//        longTalkButton.frame=CGRectMake(self.view.frame.size.width-audioTitleStrSize.width-self.longTalkButtonBtn.frame.size.width-25, self.view.frame.size.height-self.longHorizMenu.frame.size.height-longTalkButton.frame.size.height, audioTitleStrSize.width+self.longTalkButtonBtn.frame.size.width, longTalkButton.frame.size.height);
+//        longAudioTitle.frame=CGRectMake(0, longTalkButton.frame.size.height-audioTitleStrSize.height, audioTitleStrSize.width+25, audioTitleStrSize.height);
+//        [longAudioTitle setContentHorizontalAlignment:UIControlContentHorizontalAlignmentCenter];
+//        self.longTalkButtonBtn.frame=CGRectMake(longAudioTitle.frame.origin.x+longAudioTitle.frame.size.width, longTalkButton.frame.size.height-self.longTalkButtonBtn.frame.size.height, self.longTalkButtonBtn.frame.size.width, self.longTalkButtonBtn.frame.size.height);
         
         
         longQVGAView.frame=CGRectMake(self.view.frame.size.width/2-longQVGAView.frame.size.width/2, self.view.frame.size.height-self.longHorizMenu.frame.size.height-longQVGAView.frame.size.height-15, longQVGAView.frame.size.width, longQVGAView.frame.size.height);
@@ -1018,11 +1046,11 @@ extern unsigned int _getTickCount() {
         self.monitorPortrait.frame=CGRectMake(0, 0, self.scrollViewPortrait.frame.size.width, self.scrollViewPortrait.frame.size.height);
         statusBar.frame=CGRectMake(0, 0, self.view.frame.size.width, statusBar.frame.size.height);
         
-        NSString *audioTitleStr=AudioTitle.titleLabel.text;
-        CGSize audioTitleStrSize=[audioTitleStr sizeWithFont:AudioTitle.titleLabel.font];
-        talkButton.frame=CGRectMake(self.view.frame.size.width-audioTitleStrSize.width-self.talkButtonBtn.frame.size.width-25, self.view.frame.size.height-self.horizMenu.frame.size.height-talkButton.frame.size.height, audioTitleStrSize.width+self.talkButtonBtn.frame.size.width, talkButton.frame.size.height);
-        AudioTitle.frame=CGRectMake(0, talkButton.frame.size.height-audioTitleStrSize.height, audioTitleStrSize.width+20, audioTitleStrSize.height);
-        [AudioTitle setContentHorizontalAlignment:UIControlContentHorizontalAlignmentCenter];
+//        NSString *audioTitleStr=AudioTitle.titleLabel.text;
+//        CGSize audioTitleStrSize=[audioTitleStr sizeWithFont:AudioTitle.titleLabel.font];
+//        talkButton.frame=CGRectMake(self.view.frame.size.width-audioTitleStrSize.width-self.talkButtonBtn.frame.size.width-25, self.view.frame.size.height-self.horizMenu.frame.size.height-talkButton.frame.size.height, audioTitleStrSize.width+self.talkButtonBtn.frame.size.width, talkButton.frame.size.height);
+//        AudioTitle.frame=CGRectMake(0, talkButton.frame.size.height-audioTitleStrSize.height, audioTitleStrSize.width+20, audioTitleStrSize.height);
+//        [AudioTitle setContentHorizontalAlignment:UIControlContentHorizontalAlignmentCenter];
 
         self.talkButtonBtn.frame=CGRectMake(AudioTitle.frame.origin.x+AudioTitle.frame.size.width, talkButton.frame.size.height-self.talkButtonBtn.frame.size.height, self.talkButtonBtn.frame.size.width, self.talkButtonBtn.frame.size.height);
         
