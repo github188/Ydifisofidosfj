@@ -312,6 +312,7 @@
 #if defined(IDHDCONTROL)
     self.bayitNoCameraTipsLbl.frame=CGRectMake(0,0-self.bayitNoCameraTipsLbl.frame.size.height,self.bayitNoCameraTipsLbl.frame.size.width,self.bayitNoCameraTipsLbl.frame.size.height);
     self.bayitNoCameraTipsLbl.text=NSLocalizedStringFromTable(@"No cameras added. Please add a camera", @"", nil);
+    self.bayitNoCameraTipsLbl.textColor=[UIColor whiteColor];
 #endif
     
     [super viewDidLoad];
