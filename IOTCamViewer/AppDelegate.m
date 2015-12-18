@@ -22,6 +22,7 @@
 #if defined(IDHDCONTROL)
 #import "LoginViewController.h"
 #import "AccountInfo.h"
+#import <KSCrash/KSCrashInstallationStandard.h>
 #endif
 
 #if defined(QIEAPP)
@@ -427,6 +428,14 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
          
     
     [[IQKeyboardManager sharedManager] setEnable:YES];
+    
+    
+#if defined(IDHDCONTROL)
+    KSCrashInstallationStandard* installation = [KSCrashInstallationStandard sharedInstance];
+    installation.url = [NSURL URLWithString:@"https://collector.bughd.com/kscrash?key=db9e4437ebae179a00161509671d32a1"];
+    [installation install];
+    [installation sendAllReportsWithCompletion:nil];
+#endif
     
     return YES;
 }

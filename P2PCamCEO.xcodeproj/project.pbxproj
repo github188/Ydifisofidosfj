@@ -4100,6 +4100,9 @@
 		068931181BE9094900B958FC /* remeberpsd2.png in Resources */ = {isa = PBXBuildFile; fileRef = 06B219821ADD4D51005E3A2B /* remeberpsd2.png */; };
 		068931191BE9094B00B958FC /* remeberpsd1.png in Resources */ = {isa = PBXBuildFile; fileRef = 06B219811ADD4D51005E3A2B /* remeberpsd1.png */; };
 		068BC6CC1C1FE69D008DB7FD /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 068BC6CB1C1FE69D008DB7FD /* logo@3x.png */; };
+		068E2B321C24481800E67C42 /* KSCrash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 068E2B311C24481800E67C42 /* KSCrash.framework */; };
+		068E2B341C2448A200E67C42 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 068E2B331C2448A200E67C42 /* libc++.tbd */; };
+		068E2B361C2448AB00E67C42 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 068E2B351C2448AB00E67C42 /* libz.tbd */; };
 		0692A7141B5FC55400D28D06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AC3148C5342007705B6 /* main.m */; };
 		0692A7151B5FC55400D28D06 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AC7148C5343007705B6 /* AppDelegate.m */; };
 		0692A7161B5FC55400D28D06 /* CameraListForLiveViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D8F71AE3148C657B007705B6 /* CameraListForLiveViewController.mm */; };
@@ -10591,6 +10594,9 @@
 		0688C39A1B6118AC00079BB5 /* ko */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ko; path = "Toc View/images/ko.lproj/title_logo@2x.png"; sourceTree = "<group>"; };
 		0688C39B1B6118BA00079BB5 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = "Toc View/ko.lproj/easyn.strings"; sourceTree = "<group>"; };
 		068BC6CB1C1FE69D008DB7FD /* logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo@3x.png"; path = "IDHD CONTROL/images/login/logo@3x.png"; sourceTree = "<group>"; };
+		068E2B311C24481800E67C42 /* KSCrash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KSCrash.framework; sourceTree = "<group>"; };
+		068E2B331C2448A200E67C42 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		068E2B351C2448AB00E67C42 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		0692A9711B5FC55400D28D06 /* EasyN P copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EasyN P copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0692A9741B5FC66D00D28D06 /* MKC Eye-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "MKC Eye-Info.plist"; path = "MKC Eye/MKC Eye-Info.plist"; sourceTree = "<group>"; };
 		0692A9781B5FC6FF00D28D06 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = "MKC Eye/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -12273,6 +12279,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0637357E1BE2406200F767A8 /* SystemConfiguration.framework in Frameworks */,
+				068E2B361C2448AB00E67C42 /* libz.tbd in Frameworks */,
+				068E2B341C2448A200E67C42 /* libc++.tbd in Frameworks */,
 				06DE27BC1BFCC796005A068F /* CFNetwork.framework in Frameworks */,
 				06DE27BA1BFCC78D005A068F /* MobileCoreServices.framework in Frameworks */,
 				063735731BE2406200F767A8 /* Accelerate.framework in Frameworks */,
@@ -12286,7 +12295,6 @@
 				0637357B1BE2406200F767A8 /* libbz2.1.0.dylib in Frameworks */,
 				0637357C1BE2406200F767A8 /* MessageUI.framework in Frameworks */,
 				0637357D1BE2406200F767A8 /* Foundation.framework in Frameworks */,
-				0637357E1BE2406200F767A8 /* SystemConfiguration.framework in Frameworks */,
 				0637357F1BE2406200F767A8 /* OpenAL.framework in Frameworks */,
 				063735801BE2406200F767A8 /* AddressBookUI.framework in Frameworks */,
 				063735811BE2406200F767A8 /* AudioToolbox.framework in Frameworks */,
@@ -12297,6 +12305,7 @@
 				063735861BE2406200F767A8 /* OpenGLES.framework in Frameworks */,
 				063735871BE2406200F767A8 /* QuartzCore.framework in Frameworks */,
 				063735881BE2406200F767A8 /* CoreGraphics.framework in Frameworks */,
+				068E2B321C24481800E67C42 /* KSCrash.framework in Frameworks */,
 				063735891BE2406200F767A8 /* CoreData.framework in Frameworks */,
 				0637358A1BE2406200F767A8 /* AddressBook.framework in Frameworks */,
 				0637358B1BE2406200F767A8 /* CoreMedia.framework in Frameworks */,
@@ -15449,6 +15458,8 @@
 		8649B9501791443A000C621D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				068E2B351C2448AB00E67C42 /* libz.tbd */,
+				068E2B331C2448A200E67C42 /* libc++.tbd */,
 				06DE27BB1BFCC796005A068F /* CFNetwork.framework */,
 				06DE27B91BFCC78D005A068F /* MobileCoreServices.framework */,
 				06E376D71B5A0BA2003A378F /* Accelerate.framework */,
@@ -15730,6 +15741,7 @@
 		D8F71AA8148C5342007705B6 = {
 			isa = PBXGroup;
 			children = (
+				068E2B311C24481800E67C42 /* KSCrash.framework */,
 				066BC8EA1C1EE03000B85755 /* Utility */,
 				06173A7F1C0C8FDC0028DCB8 /* QIEAPP */,
 				06DE27801BFCC539005A068F /* AFNetworking */,
