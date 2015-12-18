@@ -2028,27 +2028,7 @@ extern unsigned int _getTickCount() ;
 		switch(status) {
 			case CONNECTION_STATE_CONNECTED: {
 				GLogREL( tUI|tStartShow, (@"Connected! UID:%@", camera_.uid) );
-//				for( int i=0 ; i<DEF_SplitViewNum ; i++ ) {
-//					MyCamera* cam = [cameraArray objectAtIndex:i];
-//					NSNumber* numChannel = [channelArray objectAtIndex:i];
-//					
-//					if( [cam.uid isEqualToString:camera_.uid] ) {
-//						GLogREL( tUI, (@"--> invoke camera start: ch:%d", [numChannel intValue]) );
-//						[cam start:[numChannel intValue]];
-//					}
-//				}
-				
 			}
-//			case CONNECTION_STATE_TIMEOUT: {
-//				dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-//					
-//					[camera_ stop:channel];
-//					
-//					usleep(500 * 1000);
-//					
-//					[camera_ disconnect];
-//				});
-//			}	break;
 			default: {
 				
 			}	break;
