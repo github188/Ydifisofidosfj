@@ -398,7 +398,6 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
     if(isSkip){
         rootViewController = [[[CameraMultiLiveViewController alloc] initWithNibName:@"CameraMultiLiveView" bundle:nil] autorelease];
         UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];
-        [navigationController setEnableBackGesture:YES];
         [navigationController setNavigationBarHidden:YES];
         [_window setRootViewController:navigationController];
     }
@@ -410,19 +409,16 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
 #if defined(IDHDCONTROL)
     rootViewController = [[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil] autorelease];
     UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];
-    [navigationController setEnableBackGesture:YES];
     [navigationController setNavigationBarHidden:YES];
     [_window setRootViewController:navigationController];
     
 #elif defined(QIEAPP)
     rootViewController=[[[ListViewController alloc]initWithNibName:@"ListViewController" bundle:nil] autorelease];
     UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];
-    [navigationController setEnableBackGesture:YES];
     [_window setRootViewController:navigationController];
 #else
     rootViewController = [[[CameraMultiLiveViewController alloc] initWithNibName:@"CameraMultiLiveView" bundle:nil] autorelease];
     UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:rootViewController] autorelease];
-    [navigationController setEnableBackGesture:YES];
     [navigationController setNavigationBarHidden:YES];
     [_window setRootViewController:navigationController];
 #endif

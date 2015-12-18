@@ -97,7 +97,6 @@
     AppDelegate *delegate=(AppDelegate *)([[UIApplication sharedApplication] delegate]);
     
     UINavigationController *navigationController = [[[UINavigationController alloc] initWithRootViewController:vc] autorelease];
-    [navigationController setEnableBackGesture:YES];
     [navigationController setNavigationBarHidden:YES];
     [delegate.window setRootViewController:navigationController];
 }
