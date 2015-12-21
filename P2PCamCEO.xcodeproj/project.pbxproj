@@ -28894,7 +28894,7 @@
 				PROVISIONING_PROFILE = "531d0d01-3a9c-4dbc-8385-97f65e21ba4f";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -28942,7 +28942,7 @@
 				PROVISIONING_PROFILE = "531d0d01-3a9c-4dbc-8385-97f65e21ba4f";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -28990,7 +28990,7 @@
 				PROVISIONING_PROFILE = "531d0d01-3a9c-4dbc-8385-97f65e21ba4f";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
@@ -29037,7 +29037,7 @@
 				PROVISIONING_PROFILE = "531d0d01-3a9c-4dbc-8385-97f65e21ba4f";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
