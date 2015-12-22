@@ -142,6 +142,7 @@
     negativeSpacer.width = -16;
     
     self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:negativeSpacer, backButton, nil];
+    [negativeSpacer release];
     [backButton release];
     
     searchButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Search", nil) style:UIBarButtonItemStyleDone target:self action:@selector(search:)];
