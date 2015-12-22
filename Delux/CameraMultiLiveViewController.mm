@@ -564,6 +564,7 @@ extern unsigned int _getTickCount() ;
                                        target:nil action:nil];
     negativeSpacer.width = -16;
     self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:negativeSpacer, moreSetButton, nil];
+    [negativeSpacer release];
     [moreSetButton release];
     
 }
@@ -604,6 +605,7 @@ extern unsigned int _getTickCount() ;
                                        target:nil action:nil];
     negativeSpacer.width = -16;
     self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:negativeSpacer, moreSetButton, nil];
+    [negativeSpacer release];
     [moreSetButton release];
     
 }
@@ -1369,7 +1371,7 @@ extern unsigned int _getTickCount() ;
     negativeSpacer.width = -16;
     
     self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:negativeSpacer, moreSetButton, nil];
-    
+    [negativeSpacer release];
     [moreSetButton release];
     
             
@@ -2394,7 +2396,7 @@ extern unsigned int _getTickCount() ;
     [self.view addSubview:HUD];
     HUD.delegate=self;
     HUD.labelText=text;
-    HUD.customView=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Checkmark.png"]];
+    HUD.customView=[[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Checkmark.png"]] autorelease];
     HUD.mode=done?MBProgressHUDModeCustomView:MBProgressHUDModeIndeterminate;
     HUD.removeFromSuperViewOnHide=YES;
     [HUD show:NO];

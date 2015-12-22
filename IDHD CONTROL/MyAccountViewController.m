@@ -144,7 +144,9 @@
             for (MyCamera *ca in camera_list) {
                 ca.delegate=nil;
                 ca.delegate2=nil;
+                ca.viewPwd=@"111";
                 if(ca.sessionState == CONNECTION_STATE_CONNECTED){
+                    [ca stopShow:0];
                     [ca stop:0];
                     [ca disconnect];
                 }
@@ -207,6 +209,7 @@
             LoginViewController *loginVC = [[[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil] autorelease];
             [self.navigationController setNavigationBarHidden:YES];
             loginVC.isReLogin=YES;
+            self.navigationController.viewControllers[0].view=nil;
             [self.navigationController pushViewController:loginVC animated:NO];
         }];
         [hud1 release];
