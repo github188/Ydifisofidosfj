@@ -245,9 +245,12 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
                 }
             }
         }
-        self.apnsUserInfo=nil;
+        //self.apnsUserInfo=nil;
     }
-#endif    
+#endif   
+    
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 1;
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
 
 }
 
@@ -371,6 +374,9 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
         [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound|UIRemoteNotificationTypeBadge];
         application.applicationIconBadgeNumber = 0;
     }
+    
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 1;
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
 		 
     camera_list = [[NSMutableArray alloc] init];
 		 

@@ -337,7 +337,7 @@ extern unsigned int _getTickCount() ;
                         break;
                     }
                 }
-             ((AppDelegate *)([[UIApplication sharedApplication] delegate])).apnsUserInfo=nil;
+             //((AppDelegate *)([[UIApplication sharedApplication] delegate])).apnsUserInfo=nil;
             }
 #endif
             [self checkStatus];
