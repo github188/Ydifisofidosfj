@@ -21,10 +21,11 @@ extern NSMutableArray *camera_list;
 extern FMDatabase *database;
 extern NSString *deviceTokenString;
 
-@interface ListViewController : UIViewController<AddCameraDelegate>
+@interface ListViewController : UIViewController<AddCameraDelegate,UITableViewDataSource,UITableViewDelegate,MyCameraDelegate>
 
 
 @property (retain, nonatomic) IBOutlet UILabel *noCameraTipLbl;
 @property (retain, nonatomic) IBOutlet UITableView *myTableView;
 - (IBAction)add:(id)sender;
+@property (nonatomic, retain) IBOutlet UITableViewCell *tableViewCell;
 @end

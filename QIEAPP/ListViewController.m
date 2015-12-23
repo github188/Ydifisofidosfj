@@ -9,6 +9,10 @@
 #import "ListViewController.h"
 #import "AddWithApCameraController.h"
 #import "AppDelegate.h"
+#define CAMERA_NAME_TAG 1
+#define CAMERA_STATUS_TAG 2
+#define CAMERA_UID_TAG 3
+#define CAMERA_SNAPSHOT_TAG 4
 
 @interface ListViewController ()
 
@@ -27,7 +31,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO];
-    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.navigationBar.translucent = NO;
     UIImage *navigationbarBG = [UIImage imageNamed:@"title_logo"];
     [self.navigationController.navigationBar setBackgroundImage:navigationbarBG forBarMetrics:UIBarMetricsDefault];
 }
@@ -59,6 +63,7 @@
 - (void)dealloc {
     [_myTableView release];
     [_noCameraTipLbl release];
+    [_tableViewCell release];
     [super dealloc];
 }
 - (void)loadDeviceFromDatabase {
@@ -93,10 +98,290 @@
             s3.cbSize = sizeof(s3);
             [tempCamera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];
             [camera_list addObject:tempCamera];
+            tempCamera.delegate2=self;
             [tempCamera release];
         }
         [rs close];
     }
+}
+- (NSString *) pathForDocumentsResource:(NSString *) relativePath {
+    
+    static NSString* documentsPath = nil;
+    
+    if (nil == documentsPath) {
+        
+        NSArray* dirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        documentsPath = [[[dirs objectAtIndex:0] stringByAppendingPathComponent:NOTBACKUPDIR] retain];
+    }
+    
+    return [documentsPath stringByAppendingPathComponent:relativePath];
+}
+- (void)unRegMapping:(NSString *)uid {
+    
+    NSString *uuid = [[[ UIDevice currentDevice] identifierForVendor] UUIDString];
+    
+    // unregister from apns server
+    dispatch_queue_t queue = dispatch_queue_create("apns-unreg_client", NULL);
+    dispatch_async(queue, ^{
+        if (true) {
+            NSError *error = nil;
+            NSString *appidString = [[NSBundle mainBundle] bundleIdentifier];
+#ifndef DEF_APNSTest
+            NSString *hostString = g_tpnsHostString;
+#else
+            NSString *hostString = g_tpnsHostString; //測試Host
+#endif
+            NSString *argsString = @"%@?cmd=unreg_mapping&uid=%@&appid=%@&udid=%@&os=ios";
+            NSString *getURLString = [NSString stringWithFormat:argsString, hostString, uid, appidString, uuid];
+#ifdef DEF_APNSTest
+            NSLog( @"==============================================");
+            NSLog( @"stringWithContentsOfURL ==> %@", getURLString );
+            NSLog( @"==============================================");
+#endif
+            NSString *unregisterResult = [NSString stringWithContentsOfURL:[NSURL URLWithString:getURLString] encoding:NSUTF8StringEncoding error:&error];
+            
+            NSLog( @"==============================================");
+            NSLog( @">>> %@", unregisterResult );
+            NSLog( @"==============================================");
+            if (error != NULL) {
+                NSLog(@"%@",[error localizedDescription]);
+                
+                if (database != NULL) {
+                    [database executeUpdate:@"INSERT INTO apnsremovelst(dev_uid) VALUES(?)",uid];
+                }
+            }
+        }
+    });
+    dispatch_release(queue);
+}
+
+- (void)doMapping:(NSString *)uid{
+    NSString *uuid = [[[ UIDevice currentDevice] identifierForVendor] UUIDString];
+    
+    dispatch_queue_t queue = dispatch_queue_create("apns-reg_mapping", NULL);
+    dispatch_async(queue, ^{
+        if (deviceTokenString != nil) {
+            NSError *error = nil;
+            NSString *appidString = [[NSBundle mainBundle] bundleIdentifier];
+#ifndef DEF_APNSTest
+            NSString *hostString = g_tpnsHostString;
+#else
+            NSString *hostString = g_tpnsHostString; //測試Host
+#endif
+            NSString *argsString = @"%@?cmd=reg_mapping&token=%@&uid=%@&appid=%@&udid=%@&os=ios";
+            NSString *getURLString = [NSString stringWithFormat:argsString, hostString, deviceTokenString, uid, appidString , uuid];
+            
+            NSLog( @"==============================================");
+            NSLog( @"stringWithContentsOfURL ==> %@", getURLString );
+            NSLog( @"==============================================");
+            
+            NSString *registerResult = [NSString stringWithContentsOfURL:[NSURL URLWithString:getURLString] encoding:NSUTF8StringEncoding error:&error];
+            
+            NSLog( @"==============================================");
+            NSLog( @">>> %@", registerResult );
+            NSLog( @"==============================================");
+        }
+    });
+    
+    dispatch_release(queue);
+    
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate->passwordChanged = NO;
+}
+#pragma mark --UITableViewDelegate
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [camera_list count];
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 74;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CameraListCellIdentifier = @"CameraListCellIdentifier";
+    
+    UITableViewCell *cell = [self.myTableView dequeueReusableCellWithIdentifier:CameraListCellIdentifier];
+    
+    if (cell == nil) {
+        
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CameraListCell" owner:self options:nil];
+        
+        if ([nib count] > 0)
+            cell = self.tableViewCell;
+    }
+    
+    NSUInteger row = [indexPath row];
+    {
+        Camera *camera = [camera_list objectAtIndex:row];
+        
+        /* load camera name */
+        UILabel *cameraNameLabel = (UILabel *)[cell viewWithTag:CAMERA_NAME_TAG];
+        if (cameraNameLabel != nil)
+        {
+            cameraNameLabel.text = camera.name;
+        }
+        /* load camera status */
+        UILabel *cameraStatusLabel = (UILabel *)[cell viewWithTag:CAMERA_STATUS_TAG];
+        
+        if (camera.sessionState == CONNECTION_STATE_CONNECTING) {
+            if( g_bDiagnostic ) {
+                cameraStatusLabel.text = [NSString stringWithFormat:@"%@ A.%ld(%ldL)", NSLocalizedString(@"Connecting...", @""), (long)camera.connTimes, (long)camera.connFailErrCode];
+            }
+            else {
+                cameraStatusLabel.text = NSLocalizedString(@"Connecting...", @"");
+            }
+            NSLog(@"%@ connecting", camera.uid);
+        }
+        else if (camera.sessionState == CONNECTION_STATE_DISCONNECTED) {
+            if( g_bDiagnostic ) {
+                cameraStatusLabel.text = [NSString stringWithFormat:@"%@ A.%ld(%ldL)", NSLocalizedString(@"Off line", @""), (long)camera.connTimes, (long)camera.connFailErrCode];
+            }
+            else {
+                cameraStatusLabel.text = NSLocalizedString(@"Off line", @"");
+            }
+            NSLog(@"%@ off line", camera.uid);
+        }
+        else if (camera.sessionState == CONNECTION_STATE_UNKNOWN_DEVICE) {
+            if( g_bDiagnostic ) {
+                cameraStatusLabel.text = [NSString stringWithFormat:@"%@ A.%ld(%ldL)", NSLocalizedString(@"Unknown Device", @""), (long)camera.connTimes, (long)camera.connFailErrCode];
+            }
+            else {
+                cameraStatusLabel.text = NSLocalizedString(@"Unknown Device", @"");
+            }
+            NSLog(@"%@ unknown device", camera.uid);
+        }
+        else if (camera.sessionState == CONNECTION_STATE_TIMEOUT) {
+            if( g_bDiagnostic ) {
+                cameraStatusLabel.text = [NSString stringWithFormat:@"%@ A.%ld(%ldL)", NSLocalizedString(@"Timeout", @""), (long)camera.connTimes, (long)camera.connFailErrCode];
+            }
+            else {
+                cameraStatusLabel.text = NSLocalizedString(@"Timeout", @"");
+            }
+            NSLog(@"%@ timeout", camera.uid);
+        }
+        else if (camera.sessionState == CONNECTION_STATE_UNSUPPORTED) {
+            if( g_bDiagnostic ) {
+                cameraStatusLabel.text = [NSString stringWithFormat:@"%@ A.%ld(%ldL)", NSLocalizedString(@"Unsupported", @""), (long)camera.connTimes, (long)camera.connFailErrCode];
+            }
+            else {
+                cameraStatusLabel.text = NSLocalizedString(@"Unsupported", @"");
+            }
+            NSLog(@"%@ unsupported", camera.uid);
+        }
+        else if (camera.sessionState == CONNECTION_STATE_CONNECT_FAILED) {
+            if( g_bDiagnostic ) {
+                cameraStatusLabel.text = [NSString stringWithFormat:@"%@ A.%ld(%ldL)", NSLocalizedString(@"Connect Failed", @""), (long)camera.connTimes, (long)camera.connFailErrCode];
+            }
+            else {
+                cameraStatusLabel.text = NSLocalizedString(@"Connect Failed", @"");
+            }
+            NSLog(@"%@ connected failed", camera.uid);
+        }
+        
+        else if (camera.sessionState == CONNECTION_STATE_CONNECTED && [camera getConnectionStateOfChannel:0] == CONNECTION_STATE_CONNECTED) {
+            if( g_bDiagnostic ) {
+                
+                cameraStatusLabel.text = [NSString stringWithFormat:@"%@ [%@]%ld,C:%ld,D:%ld,r%d", NSLocalizedString(@"Online", @""), [MyCamera getConnModeString:camera.sessionMode], (long)camera.connTimes, (long)camera.natC, (long)camera.natD, camera.nAvResend ];
+            }
+            else {
+                cameraStatusLabel.text = NSLocalizedString(@"Online", @"");
+            }
+            NSLog(@"%@ online", camera.uid);
+            
+            AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+            
+            if (appDelegate->passwordChanged==YES){
+                [self doMapping:camera.uid];
+            }
+            
+        }
+        else if (camera.sessionState == CONNECTION_STATE_CONNECTED && [camera getConnectionStateOfChannel:0] == CONNECTION_STATE_CONNECTING) {
+            if( g_bDiagnostic ) {
+                cameraStatusLabel.text = [NSString stringWithFormat:@"%@ B.%ld(CONNECTION_STATE_CONNECTING)", NSLocalizedString(@"Connecting...", @""), (long)camera.connTimes];
+            }
+            else {
+                cameraStatusLabel.text = NSLocalizedString(@"Connecting...", @"");
+            }
+            NSLog(@"%@ connecting", camera.uid);
+        }
+        else if (camera.sessionState == CONNECTION_STATE_CONNECTED && [camera getConnectionStateOfChannel:0] == CONNECTION_STATE_DISCONNECTED)
+        {
+            if( g_bDiagnostic ) {
+                cameraStatusLabel.text = [NSString stringWithFormat:@"%@ B.%ld(CONNECTION_STATE_DISCONNECTED)", NSLocalizedString(@"Off line", @""), (long)camera.connTimes];
+            }
+            else {
+                cameraStatusLabel.text = NSLocalizedString(@"Off line", @"");
+            }
+            NSLog(@"%@ off line", camera.uid);
+        }
+        else if (camera.sessionState == CONNECTION_STATE_CONNECTED && [camera getConnectionStateOfChannel:0] == CONNECTION_STATE_UNKNOWN_DEVICE) {
+            if( g_bDiagnostic ) {
+                cameraStatusLabel.text = [NSString stringWithFormat:@"%@ B.%ld(CONNECTION_STATE_UNKNOWN_DEVICE)", NSLocalizedString(@"Unknown Device", @""), (long)camera.connTimes];
+            }
+            else {
+                cameraStatusLabel.text = NSLocalizedString(@"Unknown Device", @"");
+            }
+            NSLog(@"%@ unknown device", camera.uid);
+        }
+        else if (camera.sessionState == CONNECTION_STATE_CONNECTED && [camera getConnectionStateOfChannel:0] == CONNECTION_STATE_WRONG_PASSWORD) {
+            if( g_bDiagnostic ) {
+                cameraStatusLabel.text = [NSString stringWithFormat:@"%@ B.%ld(CONNECTION_STATE_WRONG_PASSWORD)", NSLocalizedString(@"Wrong Password", @""), (long)camera.connTimes];
+            }
+            else {
+                cameraStatusLabel.text = NSLocalizedString(@"Wrong Password", @"");
+            }
+            NSLog(@"%@ wrong password", camera.uid);
+            
+            //Un-mapping
+            [self unRegMapping:camera.uid];
+        }
+        else if (camera.sessionState == CONNECTION_STATE_CONNECTED && [camera getConnectionStateOfChannel:0] == CONNECTION_STATE_TIMEOUT) {
+            if( g_bDiagnostic ) {
+                cameraStatusLabel.text = [NSString stringWithFormat:@"%@ B.%ld(CONNECTION_STATE_TIMEOUT)", NSLocalizedString(@"Timeout", @""), (long)camera.connTimes];
+            }
+            else {
+                cameraStatusLabel.text = NSLocalizedString(@"Timeout", @"");
+            }
+            NSLog(@"%@ timeout", camera.uid);
+        }
+        else if (camera.sessionState == CONNECTION_STATE_CONNECTED && [camera getConnectionStateOfChannel:0] == CONNECTION_STATE_UNSUPPORTED) {
+            if( g_bDiagnostic ) {
+                cameraStatusLabel.text = [NSString stringWithFormat:@"%@ B.%ld(CONNECTION_STATE_UNSUPPORTED)", NSLocalizedString(@"Unsupported", @""), (long)camera.connTimes];
+            }
+            else {
+                cameraStatusLabel.text = NSLocalizedString(@"Unsupported", @"");
+            }
+            NSLog(@"%@ unsupported", camera.uid);
+        }
+        else if (camera.sessionState == CONNECTION_STATE_CONNECTED && [camera getConnectionStateOfChannel:0] == CONNECTION_STATE_NONE) {
+            if( g_bDiagnostic ) {
+                cameraStatusLabel.text = [NSString stringWithFormat:@"%@ B.%ld(CONNECTION_STATE_NONE)", NSLocalizedString(@"Connecting...", @""), (long)camera.connTimes];
+            }
+            else {
+                cameraStatusLabel.text = NSLocalizedString(@"Connecting...", @"");
+            }
+            NSLog(@"%@ wait for connecting", camera.uid);
+        }
+        
+        /* load camera UID */
+        UILabel *cameraUIDLabel = (UILabel *)[cell viewWithTag:CAMERA_UID_TAG];
+        if (cameraUIDLabel != nil)
+        {
+            cameraUIDLabel.text = camera.uid;
+        }
+        /* load camera snapshot */
+        UIImageView *cameraSnapshotImageView = (UIImageView *)[cell viewWithTag:CAMERA_SNAPSHOT_TAG];
+        if (cameraSnapshotImageView != nil) {
+            NSString *imgFullName = [self pathForDocumentsResource:[NSString stringWithFormat:@"%@.jpg", camera.uid]];
+            
+            BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:imgFullName];
+            
+            cameraSnapshotImageView.image = fileExists ? [UIImage imageWithContentsOfFile:imgFullName] : [UIImage imageNamed:@"videoClip.png"];
+        }
+    }
+    cell.backgroundColor = [UIColor whiteColor];
+    return cell;
 }
 #pragma mark - AddCameraDelegate Methods
 - (void)camera:(NSString *)UID didAddwithName:(NSString *)name password:(NSString *)password syncOnCloud:(BOOL)isSync addToCloud:(BOOL)isAdd addFromCloud:(BOOL)isFromCloud {
@@ -106,6 +391,7 @@
     MyCamera *camera_ = [[MyCamera alloc] initWithName:name viewAccount:@"admin" viewPassword:password];
     [camera_ connect:UID];
     [camera_ start:0];
+    camera_.delegate2=self;
     
     SMsgAVIoctrlGetAudioOutFormatReq *s = (SMsgAVIoctrlGetAudioOutFormatReq *)malloc(sizeof(SMsgAVIoctrlGetAudioOutFormatReq));
     s->channel = 0;
@@ -143,17 +429,13 @@
             
             NSString *argsString = @"%@?cmd=reg_mapping&token=%@&uid=%@&appid=%@&udid=%@&os=ios";
             NSString *getURLString = [NSString stringWithFormat:argsString, g_tpnsHostString, deviceTokenString, UID, appidString , uuid];
-#ifdef DEF_APNSTest
             NSLog( @"==============================================");
             NSLog( @"stringWithContentsOfURL ==> %@", getURLString );
             NSLog( @"==============================================");
-#endif
             NSString* registerResult = [NSString stringWithContentsOfURL:[NSURL URLWithString:getURLString] encoding:NSUTF8StringEncoding error:&error];
-#ifdef DEF_APNSTest
             NSLog( @"==============================================");
             NSLog( @">>> %@", registerResult);
             NSLog( @"==============================================");
-#endif
         }
     });
     
@@ -163,4 +445,34 @@
     
     [self.myTableView reloadData];
 }
+#pragma mark - MyCameraDelegate Methods
+- (void)camera:(MyCamera *)camera _didChangeSessionStatus:(NSInteger)status
+{
+    if (camera.sessionState == CONNECTION_STATE_TIMEOUT) {
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+            
+            [camera disconnect];
+            
+        });
+    }
+        [self.myTableView reloadData];
+}
+
+- (void)camera:(MyCamera *)camera _didChangeChannelStatus:(NSInteger)channel ChannelStatus:(NSInteger)status
+{
+    if (status == CONNECTION_STATE_TIMEOUT) {
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+            
+            [camera stop:channel];
+            
+            usleep(500 * 1000);
+            
+            [camera disconnect];
+        });
+    }
+        [self.myTableView reloadData];
+}
+
 @end
