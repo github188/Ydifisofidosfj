@@ -234,7 +234,7 @@
             [cell.contentView addSubview:textFieldAccount];
             cell.textLabel.text=NSLocalizedString(@"Account", @"");
         }else if(row==5){
-            textFieldPasswd=[[UITextField alloc]initWithFrame:CGRectMake(135,11,160,25)];
+            textFieldPasswd=[[UITextField alloc]initWithFrame:CGRectMake(150,11,145,25)];
             textFieldPasswd.placeholder=NSLocalizedString(@"Password", @"");
             textFieldPasswd.clearsOnBeginEditing=NO;
             textFieldPasswd.secureTextEntry = YES;
@@ -244,7 +244,7 @@
             [cell.contentView addSubview:textFieldPasswd];
             cell.textLabel.text=NSLocalizedString(@"Password", @"");
         }else if(row==6){
-            textFieldReceiver=[[UITextField alloc]initWithFrame:CGRectMake(135,11,160,25)];
+            textFieldReceiver=[[UITextField alloc]initWithFrame:CGRectMake(160,11,135,25)];
             textFieldReceiver.placeholder=NSLocalizedString(@"MailReceiverHint", @"");
             textFieldReceiver.clearsOnBeginEditing=NO;
             textFieldReceiver.clearButtonMode=UITextFieldViewModeWhileEditing;
