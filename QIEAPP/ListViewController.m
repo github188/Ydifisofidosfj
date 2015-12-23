@@ -63,12 +63,8 @@
 }
 - (void)loadDeviceFromDatabase {
     if (database != NULL) {
-        
         FMResultSet *rs = [database executeQuery:@"SELECT * FROM device"];
-        int cnt = 0;
-        
-        while([rs next] && cnt++ < MAX_CAMERA_LIMIT) {
-            
+        while([rs next]) {
             NSString *uid = [rs stringForColumn:@"dev_uid"];
             NSString *name = [rs stringForColumn:@"dev_nickname"];
             NSString *view_acc = [rs stringForColumn:@"view_acc"];
@@ -77,7 +73,6 @@
             NSInteger isSync = [rs intForColumn:@"sync"];
             NSInteger isFromCloud = [rs intForColumn:@"isFromCloud"];
             NSLog(@"Load Camera(%@, %@, %@, %@, %d, ch:%d)", name, uid, view_acc, view_pwd, (int)isFromCloud, (int)channel);
-            
             MyCamera *tempCamera = [[MyCamera alloc] initWithName:name viewAccount:view_acc viewPassword:view_pwd];
             [tempCamera setLastChannel:channel];
             [tempCamera connect:uid];
