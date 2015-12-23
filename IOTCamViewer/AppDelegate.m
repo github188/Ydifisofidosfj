@@ -174,6 +174,38 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
 //#endif
 //    
 //    NSLog(@"***** %s", __func__);
+#if defined(IDHDCONTROL)
+    if(self.apnsUserInfo){
+        UIViewController *topVC=[self getCurrentVisibleViewController];
+        if([topVC isKindOfClass:[LoginViewController class]])
+        {
+            
+        }
+        else{
+            if(self.apnsUserInfo){
+                NSString *uid = [[self.apnsUserInfo objectForKey:@"aps"] objectForKey:@"uid"];
+                
+                for(MyCamera *camera in camera_list) {
+                    
+                    if ([camera.uid isEqualToString:uid]) {
+                        GLog( tUI, (@"+++CameraMultiLiveViewController - goEventList: [%d]", [moreFunctionTag intValue]));
+                        
+                        EventListController *controller = [[EventListController alloc] initWithStyle:UITableViewStylePlain];
+                        controller.camera = camera;
+                        [topVC.navigationController pushViewController:controller animated:YES];
+                        [controller release];
+                        
+                        break;
+                    }
+                }
+            }
+        }
+        //self.apnsUserInfo=nil;
+    }
+#endif
+    
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 1;
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
@@ -219,38 +251,6 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
 //			break;
 //			
 //	}
-#if defined(IDHDCONTROL)
-    if(self.apnsUserInfo){
-        UIViewController *topVC=[self getCurrentVisibleViewController];
-        if([topVC isKindOfClass:[LoginViewController class]])
-        {
-            
-        }
-        else{
-            if(self.apnsUserInfo){
-                NSString *uid = [[self.apnsUserInfo objectForKey:@"aps"] objectForKey:@"uid"];
-                
-                for(MyCamera *camera in camera_list) {
-                    
-                    if ([camera.uid isEqualToString:uid]) {
-                        GLog( tUI, (@"+++CameraMultiLiveViewController - goEventList: [%d]", [moreFunctionTag intValue]));
-                        
-                        EventListController *controller = [[EventListController alloc] initWithStyle:UITableViewStylePlain];
-                        controller.camera = camera;
-                        [topVC.navigationController pushViewController:controller animated:YES];
-                        [controller release];
-                        
-                        break;
-                    }
-                }
-            }
-        }
-        //self.apnsUserInfo=nil;
-    }
-#endif   
-    
-    [UIApplication sharedApplication].applicationIconBadgeNumber = 1;
-    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
 
 }
 
