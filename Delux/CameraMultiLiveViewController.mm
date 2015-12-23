@@ -334,10 +334,13 @@ extern unsigned int _getTickCount() ;
                         [self.navigationController pushViewController:controller animated:YES];
                         [controller release];
                         
+                        
+                        
                         [self hideMoreFunctionView:nil];
                         break;
                     }
                 }
+             ((AppDelegate *)([[UIApplication sharedApplication] delegate])).apnsUserInfo=nil;
             }
 #endif
             [self checkStatus];

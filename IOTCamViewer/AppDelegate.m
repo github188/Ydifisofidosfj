@@ -239,11 +239,13 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
                         controller.camera = camera;
                         [topVC.navigationController pushViewController:controller animated:YES];
                         [controller release];
+                        
                         break;
                     }
                 }
             }
         }
+        self.apnsUserInfo=nil;
     }
 #endif    
 
