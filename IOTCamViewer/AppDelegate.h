@@ -65,6 +65,7 @@ typedef struct tagOpenUrlCmdStore
 @property (nonatomic, retain) NSString *ssid;
 @property (nonatomic) BOOL allowRotation;
 @property (nonatomic,retain) NSDictionary *apnsUserInfo;
+@property(nonatomic) BOOL isbackgrounded;
 
 + (NSString *) pathForDocumentsResource:(NSString *) relativePath;
 - (void) urlCommandDone;
