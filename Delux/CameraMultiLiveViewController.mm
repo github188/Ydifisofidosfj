@@ -248,15 +248,21 @@ extern unsigned int _getTickCount() ;
                 NSInteger isFromCloud = NO;
                 NSLog(@"Load Camera(%@, %@, %@, %@, %d, ch:%d)", name, uid, view_acc, view_pwd, (int)isFromCloud, (int)channel);
                 
+                BOOL isCaExists=NO;
+                for (MyCamera *ca  in camera_list) {
+                    if([ca.uid isEqualToString:uid]){
+                        isCaExists=YES;
+                        break;
+                    }
+                }
+                if(isCaExists) continue;
+                
                 MyCamera *tempCamera = [[MyCamera alloc] initWithName:name viewAccount:view_acc viewPassword:view_pwd];
                 [tempCamera setLastChannel:channel];
                 [tempCamera connect:uid];
                 [tempCamera setSync:isSync];
                 [tempCamera setCloud:isFromCloud];
                 [tempCamera start:0];
-                
-                
-                //[tempCamera startShow:channel ScreenObject:self];
                 
                 SMsgAVIoctrlGetAudioOutFormatReq *s = (SMsgAVIoctrlGetAudioOutFormatReq *)malloc(sizeof(SMsgAVIoctrlGetAudioOutFormatReq));
                 s->channel = 0;
@@ -275,16 +281,7 @@ extern unsigned int _getTickCount() ;
                 [camera_list addObject:tempCamera];
                 [tempCamera release];
                 
-//                SMsgAVIoctrlSetStreamCtrlReq *ss = (SMsgAVIoctrlSetStreamCtrlReq *)malloc(sizeof(SMsgAVIoctrlSetStreamCtrlReq));
-//                memset(ss, 0, sizeof(SMsgAVIoctrlSetStreamCtrlReq));
-//                
-//                ss->channel = 0;
-//                ss->quality = AVIOCTRL_QUALITY_MIN;
-//                [tempCamera sendIOCtrlToChannel:0
-//                                           Type:IOTYPE_USER_IPCAM_SETSTREAMCTRL_REQ
-//                                           Data:(char *)ss
-//                                       DataSize:sizeof(SMsgAVIoctrlSetStreamCtrlReq)];
-//                free(ss);
+
                 if (database != NULL) {
                     FMResultSet *rs=[database executeQuery:@"select dev_uid from device where dev_uid=?",uid];
                     if(![rs next])

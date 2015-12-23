@@ -92,6 +92,17 @@
         [self.camera setViewPwd:cameraPassword];
         
         [self.delegate didChangeSetting:self.camera];
+        
+#if defined(IDHDCONTROL)
+        HttpTool *httpToos=[HttpTool shareInstance];
+        NSString *s=[MyCamera boxUUID:self.camera];
+        NSDictionary *dic=@{@"id":[NSString stringWithFormat:@"%ld",(long)[AccountInfo getUserId]],@"uuid":s};
+        [httpToos JsonPostRequst:@"/index.php?ctrl=app&act=saveUuid" parameters:dic success:^(id responseObject) {
+            
+        } failure:^(NSError *error) {
+            
+        }];
+#endif
     }
     
     if (database != NULL) {
@@ -100,16 +111,7 @@
         }
     }
     
-#if defined(IDHDCONTROL)
-    HttpTool *httpToos=[HttpTool shareInstance];
-    NSString *s=[MyCamera boxUUID:self.camera];
-    NSDictionary *dic=@{@"id":[NSString stringWithFormat:@"%ld",(long)[AccountInfo getUserId]],@"uuid":s};
-    [httpToos JsonPostRequst:@"/index.php?ctrl=app&act=saveUuid" parameters:dic success:^(id responseObject) {
-        
-    } failure:^(NSError *error) {
-        
-    }];
-#endif
+
     
     [self.navigationController popViewControllerAnimated:YES];
 }
