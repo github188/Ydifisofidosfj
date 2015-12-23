@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOTCamViewer/EditCameraDefaultController.m"
-            timestampString = "472557211.096213"
+            timestampString = "472573474.223022"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
             landmarkName = "-doMapping:"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,22 +138,6 @@
             startingLineNumber = "1100"
             endingLineNumber = "1100"
             landmarkName = "-viewWillAppear:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "IOTCamViewer/AppDelegate.m"
-            timestampString = "472571604.866724"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
-            landmarkName = "-applicationDidBecomeActive:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

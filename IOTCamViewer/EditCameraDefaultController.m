@@ -87,35 +87,73 @@
         ![cameraName isEqualToString:self.camera.name] ||
         ![cameraPassword isEqualToString:self.camera.viewPwd]) {
         
+
+        
+#if defined(IDHDCONTROL)
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        HttpTool *httpToos=[HttpTool shareInstance];
+        NSString *s=[NSString stringWithFormat:@"%@/%@/%d-%@",self.camera.uid,cameraPassword,1,cameraName];
+        NSDictionary *dic=@{@"id":[NSString stringWithFormat:@"%ld",(long)[AccountInfo getUserId]],@"uuid":s};
+        [httpToos JsonPostRequst:@"/index.php?ctrl=app&act=saveUuid" parameters:dic success:^(id responseObject) {
+            [MBProgressHUD hideAllHUDsForView: self.view animated:YES];
+            NSInteger code=[responseObject[@"code"]integerValue];
+            NSString *msg=responseObject[@"msg"];
+            if(code==1){
+                [self alertInfo:msg withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
+            }
+            [self.camera setName:cameraName];
+            [self.camera setViewAcc:@"admin"];
+            [self.camera setViewPwd:cameraPassword];
+            
+            [self.delegate didChangeSetting:self.camera];
+            
+            if (database != NULL) {
+                if (![database executeUpdate:@"UPDATE device SET dev_nickname=?, view_pwd=? WHERE dev_uid=?", cameraName, cameraPassword, camera.uid]) {
+                    NSLog(@"Fail to update device to database.");
+                }
+            }
+            [self.navigationController popViewControllerAnimated:YES];
+            
+        } failure:^(NSError *error) {
+            [MBProgressHUD hideAllHUDsForView: self.view animated:YES];
+            [self alertInfo:error.localizedDescription withTitle:NSLocalizedStringFromTable(@"提示", @"login", nil)];
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
+#else
         [self.camera setName:cameraName];
         [self.camera setViewAcc:@"admin"];
         [self.camera setViewPwd:cameraPassword];
         
         [self.delegate didChangeSetting:self.camera];
-        
+#endif
+    }
+    else{
 #if defined(IDHDCONTROL)
-        HttpTool *httpToos=[HttpTool shareInstance];
-        NSString *s=[MyCamera boxUUID:self.camera];
-        NSDictionary *dic=@{@"id":[NSString stringWithFormat:@"%ld",(long)[AccountInfo getUserId]],@"uuid":s};
-        [httpToos JsonPostRequst:@"/index.php?ctrl=app&act=saveUuid" parameters:dic success:^(id responseObject) {
-            
-        } failure:^(NSError *error) {
-            
-        }];
+        if (database != NULL) {
+            if (![database executeUpdate:@"UPDATE device SET dev_nickname=?, view_pwd=? WHERE dev_uid=?", cameraName, cameraPassword, camera.uid]) {
+                NSLog(@"Fail to update device to database.");
+            }
+        }
+        [self.navigationController popViewControllerAnimated:YES];
+#else
 #endif
     }
     
+#if defined(IDHDCONTROL)
+#else
     if (database != NULL) {
         if (![database executeUpdate:@"UPDATE device SET dev_nickname=?, view_pwd=? WHERE dev_uid=?", cameraName, cameraPassword, camera.uid]) {
             NSLog(@"Fail to update device to database.");
         }
     }
-    
-
-    
     [self.navigationController popViewControllerAnimated:YES];
+#endif
 }
-
+-(void)alertInfo:(NSString *)message withTitle:(NSString *)title{
+    UIAlertView *alert=[[UIAlertView alloc]initWithTitle:title message:message delegate:nil cancelButtonTitle:nil otherButtonTitles:NSLocalizedString(@"OK", @""), nil];
+    [alert show];
+    [alert release];
+}
 - (IBAction)textFieldDone:(id)sender
 {
     [sender resignFirstResponder];
