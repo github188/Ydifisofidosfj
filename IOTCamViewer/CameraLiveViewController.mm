@@ -1105,6 +1105,20 @@ extern unsigned int _getTickCount() {
         [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
         
         [self.navigationController setNavigationBarHidden:NO animated:NO];
+        
+#if defined(QIEAPP)
+        self.myPtzView.hidden=YES;
+        self.horizMenu.hidden=YES;
+        self.statusLabel.hidden=YES;
+        statusBar.hidden=YES;
+        frameInfoLabel.hidden=YES;
+        videoInfoLabel.hidden=YES;
+        _qualityLabel.hidden=YES;
+        self.scrollViewPortrait.frame=CGRectMake(0, 0, self.scrollViewPortrait.frame.size.width, self.scrollViewPortrait.frame.size.height);
+        self.loadingViewPortrait.frame=CGRectMake(self.scrollViewPortrait.frame.size.width/2-self.loadingViewPortrait.frame.size.width/2, self.scrollViewPortrait.frame.origin.y+self.scrollViewPortrait.frame.size.height/2-self.loadingViewPortrait.frame.size.height/2, self.loadingViewPortrait.frame.size.width, self.loadingViewPortrait.frame.size.height);
+        self.view.backgroundColor=HexRGB(0xe1e1e1);
+#endif
+        
     }
 }
 
@@ -1244,9 +1258,23 @@ extern unsigned int _getTickCount() {
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
     NSLog(@"SCROLL!");
 }
-
+-(void)swipCamera:(UIButton *)btn{
+    
+}
 - (void)viewDidLoad {
     
+#if defined(QIEAPP)
+    UIButton *listButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    listButton.frame = CGRectMake(20, 0, 44, 44);
+    [listButton setBackgroundImage:[UIImage imageNamed:@"list-btn.png"] forState:UIControlStateNormal];
+    [listButton setBackgroundImage:[UIImage imageNamed:@"list-btn-click.png"] forState:UIControlStateHighlighted];
+    [listButton addTarget:self action:@selector(swipCamera:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *listButtonItem = [[UIBarButtonItem alloc] initWithCustomView:listButton];
+    
+    self.navigationItem.rightBarButtonItem=listButtonItem;
+    [listButtonItem release];
+#endif
     
     //button长按事件
     UILongPressGestureRecognizer *longPress1 = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(preBtnLongTouch1:)];
@@ -1648,7 +1676,7 @@ extern unsigned int _getTickCount() {
             
         } else {
             self.navigationItem.title = camera.name;
-            self.navigationItem.rightBarButtonItem = nil;
+            //self.navigationItem.rightBarButtonItem = nil;
         }
         
         [self verifyConnectionStatus];
