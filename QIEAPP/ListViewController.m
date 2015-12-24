@@ -9,6 +9,9 @@
 #import "ListViewController.h"
 #import "AddWithApCameraController.h"
 #import "AppDelegate.h"
+#import "EventListController.h"
+#import "PhotoTableViewController.h"
+#import "cCustomNavigationController.h"
 #define CAMERA_NAME_TAG 1
 #define CAMERA_STATUS_TAG 2
 #define CAMERA_UID_TAG 3
@@ -25,9 +28,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self loadDeviceFromDatabase];
-    BOOL isHasCamera=[camera_list count]>0;
-    self.myTableView.hidden=!isHasCamera;
-    self.noCameraTipLbl.hidden=isHasCamera;
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -36,6 +36,9 @@
     UIImage *navigationbarBG = [UIImage imageNamed:@"title_logo"];
     [self.navigationController.navigationBar setBackgroundImage:navigationbarBG forBarMetrics:UIBarMetricsDefault];
     [self initPopView];
+    for (MyCamera *ca in camera_list) {
+        ca.delegate2=self;
+    }
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
@@ -194,6 +197,9 @@
 #pragma mark --UITableViewDelegate
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    BOOL isHasCamera=[camera_list count]>0;
+    self.myTableView.hidden=!isHasCamera;
+    self.noCameraTipLbl.hidden=isHasCamera;
     return [camera_list count];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -228,6 +234,7 @@
         UILabel *cameraStatusLabel = (UILabel *)[cell viewWithTag:CAMERA_STATUS_TAG];
         UIButton *moreSettingBtn=(UIButton *)[cell viewWithTag:CAMERA_MORESET_TAG];
         moreSettingBtn.hidden=NO;
+        moreSettingBtn.tag=row;
         [moreSettingBtn addTarget:self action:@selector(openPop:) forControlEvents:UIControlEventTouchUpInside];
         
         if (camera.sessionState == CONNECTION_STATE_CONNECTING) {
@@ -544,8 +551,18 @@
     }
     lastView=nil;
 }
+- (NSString *)directoryPath {
+    
+    if (!directoryPath) {
+        NSArray* dirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        directoryPath = [[dirs objectAtIndex:0] retain];
+    }
+    
+    return [directoryPath stringByAppendingPathComponent:NOTBACKUPDIR];
+}
 #pragma mark --弹窗的相关事件
 -(void)closePop:(id)sender{
+    popSelectCamera=nil;
     [UIView beginAnimations:@"imageViewSmall" context:nil];
     [UIView setAnimationDuration:0.2];
     [popView setAlpha:0.0];
@@ -588,7 +605,10 @@
     
     [self performSelector:@selector(bigAnimation2) withObject:nil afterDelay:0.2];
 }
--(void)openPop:(id)sender{
+-(void)openPop:(UIButton *)sender{
+    
+    popSelectCamera=[camera_list objectAtIndex:sender.tag];
+    
     [popView setHidden:NO];
     CGAffineTransform newTransform = CGAffineTransformScale(popView.transform, 0.1, 0.1);
     [popView setTransform:newTransform];
@@ -598,16 +618,42 @@
     
 }
 -(void)eventCamera:(id)sender{
-    
+    EventListController *controller = [[EventListController alloc] initWithStyle:UITableViewStylePlain];
+    controller.camera = popSelectCamera;
+    [self.navigationController pushViewController:controller animated:YES];
+    [controller release];
+    [self closePop:nil];
 }
 -(void)photoCamera:(id)sender{
     
+    PhotoTableViewController *photoTable = [[PhotoTableViewController alloc] init];
+    photoTable.title = NSLocalizedString(@"Snapshot", @"");
+    photoTable.camera = popSelectCamera;
+    photoTable.directoryPath = self.directoryPath;
+    [photoTable filterImage:0];
+    photoTable.hidesBottomBarWhenPushed = YES;
+    
+    UINavigationController *customNavController = [[cCustomNavigationController alloc] init];
+    [self presentViewController:customNavController animated:YES completion:nil];
+    [customNavController pushViewController:photoTable animated:YES];
+    [photoTable release];
+    [customNavController release];
+    
+    [self closePop:nil];
 }
 -(void)setttingCamera:(id)sender{
     
+    EditCameraDefaultController *controller = [[EditCameraDefaultController alloc] initWithStyle:UITableViewStyleGrouped];
+    controller.camera = popSelectCamera;
+    controller.delegate = self;
+    [self.navigationController pushViewController:controller animated:YES];
+    [controller release];
+    [self closePop:sender];
 }
 -(void)deleteCamera:(id)sender{
-    
+    [self deleteCameraActual:popSelectCamera.uid];
+    [self.myTableView reloadData];
+    [self closePop:sender];
 }
 -(void)popClicked:(UIButton *)btn{
     NSInteger index=btn.tag;
@@ -631,5 +677,122 @@
             break;
     }
 }
+#pragma mark - EditCameraDefaultDelegate Methods
+- (void)didRemoveDevice:(MyCamera *)removedCamera {
+    NSString *uid = removedCamera.uid;
+    [removedCamera stop:0];
+    [removedCamera disconnect];
+    [camera_list removeObject:removedCamera];
+    [self.myTableView reloadData];
+    
+    if (uid != nil && ![uid isEqualToString:@"(null)"]) {
+        
+        NSString *uuid = [[[ UIDevice currentDevice] identifierForVendor] UUIDString];
+        
+        // delete camera & snapshot file in db
+        [self deleteCameraActual:uid];
+        [self deleteSnapshotRecords:uid];
+        
+        // unregister from apns server
+        dispatch_queue_t queue = dispatch_queue_create("apns-reg_client", NULL);
+        dispatch_async(queue, ^{
+            if (true) {
+                NSError *error = nil;
+                NSString *appidString = [[NSBundle mainBundle] bundleIdentifier];
+                
+                NSString *argsString = @"%@?cmd=unreg_mapping&uid=%@&appid=%@&udid=%@&os=ios";
+                NSString *getURLString = [NSString stringWithFormat:argsString, g_tpnsHostString, uid, appidString, uuid];
+#ifdef DEF_APNSTest
+                NSLog( @"==============================================");
+                NSLog( @"stringWithContentsOfURL ==> %@", getURLString );
+                NSLog( @"==============================================");
+#endif
+                NSString *unregisterResult = [NSString stringWithContentsOfURL:[NSURL URLWithString:getURLString] encoding:NSUTF8StringEncoding error:&error];
+                
+#ifdef DEF_APNSTest
+                NSLog( @"==============================================");
+                NSLog( @">>> %@", unregisterResult );
+                NSLog( @"==============================================");
+#endif
+                if (error != NULL) {
+                    NSLog(@"%@",[error localizedDescription]);
+                    
+                    if (database != NULL) {
+                        [database executeUpdate:@"INSERT INTO apnsremovelst(dev_uid) VALUES(?)",uid];
+                    }
+                }
+                
+#ifdef DEF_APNSTest
+                NSLog( @"==============================================");
+                NSLog( @">>> %@", unregisterResult );
+                NSLog( @"==============================================");
+                if (error != NULL) {
+                    NSLog(@"%@",[error localizedDescription]);
+                }
+#endif
+            }
+        });
+        
+        dispatch_release(queue);
+    }
+}
 
+-(void) didChangeSetting:(MyCamera *)changedCamera {
+    
+    if( changedCamera.sessionState == CONNECTION_STATE_DISCONNECTED ) {
+        [changedCamera stop:0];
+        [changedCamera disconnect];
+        
+        [changedCamera connect:changedCamera.uid];
+        [changedCamera start:0];
+    }
+    changedCamera.delegate2 = self;
+    
+    SMsgAVIoctrlGetAudioOutFormatReq *s = (SMsgAVIoctrlGetAudioOutFormatReq *)malloc(sizeof(SMsgAVIoctrlGetAudioOutFormatReq));
+    s->channel = 0;
+    [changedCamera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GETAUDIOOUTFORMAT_REQ Data:(char *)s DataSize:sizeof(SMsgAVIoctrlGetAudioOutFormatReq)];
+    free(s);
+    
+    SMsgAVIoctrlGetSupportStreamReq *s2 = (SMsgAVIoctrlGetSupportStreamReq *)malloc(sizeof(SMsgAVIoctrlGetSupportStreamReq));
+    [changedCamera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GETSUPPORTSTREAM_REQ Data:(char *)s2 DataSize:sizeof(SMsgAVIoctrlGetSupportStreamReq)];
+    free(s2);
+    
+    SMsgAVIoctrlTimeZone s3={0};
+    s3.cbSize = sizeof(s3);
+    [changedCamera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];
+}
+-(void)deleteCameraActual:(NSString *)uid {
+    
+    /* delete camera lastframe snapshot file */
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSString *imgName = [NSString stringWithFormat:@"%@.jpg", uid];
+    [fileManager removeItemAtPath:[self pathForDocumentsResource: imgName] error:NULL];
+    
+    if (database != NULL) {
+        
+        if (![database executeUpdate:@"DELETE FROM device where dev_uid=?", uid]) {
+            NSLog(@"Fail to remove device from database.");
+        }
+    }
+}
+
+- (void)deleteSnapshotRecords:(NSString *)uid {
+    
+    if (database != NULL) {
+        
+        FMResultSet *rs = [database executeQuery:@"SELECT * FROM snapshot WHERE dev_uid=?", uid];
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        
+        while([rs next]) {
+            
+            NSString *filePath = [rs stringForColumn:@"file_path"];
+            [fileManager removeItemAtPath:[self pathForDocumentsResource: filePath] error:NULL];
+            NSLog(@"camera(%@) snapshot removed", filePath);
+        }
+        
+        [rs close];
+        
+        [database executeUpdate:@"DELETE FROM snapshot WHERE dev_uid=?", uid];
+    }
+}
 @end
