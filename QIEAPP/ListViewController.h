@@ -16,13 +16,16 @@
 #import "FMDatabase.h"
 #import "MBProgressHUD.h"
 #import "AddCameraDelegate.h"
+#import "Masonry.h"
 
 extern NSMutableArray *camera_list;
 extern FMDatabase *database;
 extern NSString *deviceTokenString;
 
 @interface ListViewController : UIViewController<AddCameraDelegate,UITableViewDataSource,UITableViewDelegate,MyCameraDelegate>
-
+{
+    UIView *popView;
+}
 
 @property (retain, nonatomic) IBOutlet UILabel *noCameraTipLbl;
 @property (retain, nonatomic) IBOutlet UITableView *myTableView;
