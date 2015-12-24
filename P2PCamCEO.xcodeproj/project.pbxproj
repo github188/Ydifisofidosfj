@@ -707,8 +707,8 @@
 		062CE01C1C1D456D00023794 /* list-btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 062CDFE91C1D456D00023794 /* list-btn@2x.png */; };
 		062CE01D1C1D456D00023794 /* microphone-click@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 062CDFEA1C1D456D00023794 /* microphone-click@2x.png */; };
 		062CE01E1C1D456D00023794 /* microphone-click@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 062CDFEB1C1D456D00023794 /* microphone-click@3x.png */; };
-		062CE01F1C1D456D00023794 /* microphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 062CDFEC1C1D456D00023794 /* microphone@2x.png */; };
-		062CE0201C1D456D00023794 /* microphone@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 062CDFED1C1D456D00023794 /* microphone@3x.png */; };
+		062CE01F1C1D456D00023794 /* microphone1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 062CDFEC1C1D456D00023794 /* microphone1@2x.png */; };
+		062CE0201C1D456D00023794 /* microphone1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 062CDFED1C1D456D00023794 /* microphone1@3x.png */; };
 		062CE0211C1D456D00023794 /* monitor-click@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 062CDFEE1C1D456D00023794 /* monitor-click@2x.png */; };
 		062CE0221C1D456D00023794 /* monitor-click@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 062CDFEF1C1D456D00023794 /* monitor-click@3x.png */; };
 		062CE0231C1D456D00023794 /* monitor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 062CDFF01C1D456D00023794 /* monitor@2x.png */; };
@@ -9832,8 +9832,8 @@
 		062CDFE91C1D456D00023794 /* list-btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list-btn@2x.png"; sourceTree = "<group>"; };
 		062CDFEA1C1D456D00023794 /* microphone-click@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "microphone-click@2x.png"; sourceTree = "<group>"; };
 		062CDFEB1C1D456D00023794 /* microphone-click@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "microphone-click@3x.png"; sourceTree = "<group>"; };
-		062CDFEC1C1D456D00023794 /* microphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "microphone@2x.png"; sourceTree = "<group>"; };
-		062CDFED1C1D456D00023794 /* microphone@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "microphone@3x.png"; sourceTree = "<group>"; };
+		062CDFEC1C1D456D00023794 /* microphone1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "microphone1@2x.png"; sourceTree = "<group>"; };
+		062CDFED1C1D456D00023794 /* microphone1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "microphone1@3x.png"; sourceTree = "<group>"; };
 		062CDFEE1C1D456D00023794 /* monitor-click@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "monitor-click@2x.png"; sourceTree = "<group>"; };
 		062CDFEF1C1D456D00023794 /* monitor-click@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "monitor-click@3x.png"; sourceTree = "<group>"; };
 		062CDFF01C1D456D00023794 /* monitor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "monitor@2x.png"; sourceTree = "<group>"; };
@@ -12952,8 +12952,8 @@
 				062CDFE91C1D456D00023794 /* list-btn@2x.png */,
 				062CDFEA1C1D456D00023794 /* microphone-click@2x.png */,
 				062CDFEB1C1D456D00023794 /* microphone-click@3x.png */,
-				062CDFEC1C1D456D00023794 /* microphone@2x.png */,
-				062CDFED1C1D456D00023794 /* microphone@3x.png */,
+				062CDFEC1C1D456D00023794 /* microphone1@2x.png */,
+				062CDFED1C1D456D00023794 /* microphone1@3x.png */,
 				062CDFEE1C1D456D00023794 /* monitor-click@2x.png */,
 				062CDFEF1C1D456D00023794 /* monitor-click@3x.png */,
 				062CDFF01C1D456D00023794 /* monitor@2x.png */,
@@ -16214,6 +16214,9 @@
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = TUTK;
 				TargetAttributes = {
+					0617381B1C0C8E270028DCB8 = {
+						DevelopmentTeam = DTB56U7YWU;
+					};
 					063733411BE2406200F767A8 = {
 						DevelopmentTeam = Q6B84LV5ND;
 					};
@@ -16332,7 +16335,7 @@
 				061738A81C0C8E270028DCB8 /* DirectDisplayShader.vsh in Resources */,
 				061738A91C0C8E270028DCB8 /* add_wifi_1.png in Resources */,
 				061738AA1C0C8E270028DCB8 /* ceo_rcplay_back_click.png in Resources */,
-				062CE01F1C1D456D00023794 /* microphone@2x.png in Resources */,
+				062CE01F1C1D456D00023794 /* microphone1@2x.png in Resources */,
 				061738AB1C0C8E270028DCB8 /* add_qrcode@2x.png in Resources */,
 				061738AC1C0C8E270028DCB8 /* leo_speaker_on_disable.png in Resources */,
 				061738AD1C0C8E270028DCB8 /* add_local@2x.png in Resources */,
@@ -16441,7 +16444,7 @@
 				0617390A1C0C8E270028DCB8 /* ceo_rcplay_back_click_h.png in Resources */,
 				0617390B1C0C8E270028DCB8 /* add_qrcode_clicked@2x.png in Resources */,
 				0617390C1C0C8E270028DCB8 /* call_on.png in Resources */,
-				062CE0201C1D456D00023794 /* microphone@3x.png in Resources */,
+				062CE0201C1D456D00023794 /* microphone1@3x.png in Resources */,
 				0617390D1C0C8E270028DCB8 /* all_bk.png in Resources */,
 				0617390F1C0C8E270028DCB8 /* add_btnbk_clicked@2x.png in Resources */,
 				061739101C0C8E270028DCB8 /* ceo_record_play.png in Resources */,
@@ -26621,6 +26624,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -26671,6 +26675,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -26722,6 +26727,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -26773,6 +26779,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (

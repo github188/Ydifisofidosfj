@@ -81,6 +81,13 @@
                 <outlet property="prePositionTipsLbl" destination="FUd-X7-8UB" id="5AG-lS-lch"/>
                 <outlet property="prePositionTitleLbl" destination="6Pz-WF-kpc" id="ElT-KB-44Q"/>
                 <outlet property="prePositionView" destination="wbg-Jy-8i1" id="nPB-QO-tRU"/>
+                <outlet property="qieActionView" destination="BI2-jt-ALu" id="zF4-2Z-UXD"/>
+                <outlet property="qieHuaZhiBtn" destination="lt9-PD-mVs" id="6o4-GE-EhE"/>
+                <outlet property="qieMonitorBtn" destination="POa-2c-nmB" id="hbd-p8-yEh"/>
+                <outlet property="qiePhoneBtn" destination="9kH-3V-cNf" id="K2N-US-AuW"/>
+                <outlet property="qieSnapshotBtn" destination="YR5-d3-Bwq" id="Hgu-J9-tG9"/>
+                <outlet property="qieVideoBtn" destination="5xw-Sr-ZSN" id="3Gh-as-fF4"/>
+                <outlet property="qieWenduBtn" destination="SPw-Av-BF7" id="EqR-lU-I8G"/>
                 <outlet property="qualityLabel" destination="168" id="169"/>
                 <outlet property="qvgaView" destination="lYp-XW-N5L" id="nM1-kC-NjI"/>
                 <outlet property="scrollEModeView" destination="xTV-bb-XdJ" id="QVr-7G-RUs"/>
@@ -715,6 +722,73 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
+                <view hidden="YES" contentMode="scaleToFill" id="BI2-jt-ALu">
+                    <rect key="frame" x="0.0" y="213" width="320" height="142"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YR5-d3-Bwq">
+                            <rect key="frame" x="113" y="8" width="94" height="72"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="Photograph.png"/>
+                            <state key="selected" backgroundImage="Photograph-click.png"/>
+                            <state key="highlighted" backgroundImage="Photograph-click.png"/>
+                            <connections>
+                                <action selector="qieSnapshot:" destination="-1" eventType="touchUpInside" id="8gh-v8-uKh"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="POa-2c-nmB">
+                            <rect key="frame" x="17" y="19" width="52" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="monitor.png"/>
+                            <state key="selected" backgroundImage="monitor-click.png"/>
+                            <state key="highlighted" backgroundImage="monitor-click.png"/>
+                            <connections>
+                                <action selector="qiemonito:" destination="-1" eventType="touchUpInside" id="E4t-5V-azk"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SPw-Av-BF7">
+                            <rect key="frame" x="62" y="76" width="52" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="temperature.png"/>
+                            <state key="selected" backgroundImage="temperature-click.png"/>
+                            <state key="highlighted" backgroundImage="temperature-click.png"/>
+                            <connections>
+                                <action selector="qieWendu:" destination="-1" eventType="touchUpInside" id="Qx8-jH-340"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5xw-Sr-ZSN">
+                            <rect key="frame" x="147" y="94" width="52" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="video.png"/>
+                            <state key="selected" backgroundImage="video-click.png"/>
+                            <state key="highlighted" backgroundImage="video-click.png"/>
+                            <connections>
+                                <action selector="qieVideo:" destination="-1" eventType="touchUpInside" id="Itu-5L-Weg"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lt9-PD-mVs">
+                            <rect key="frame" x="242" y="76" width="52" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="qvga.png"/>
+                            <state key="selected" backgroundImage="qvga-click.png"/>
+                            <state key="highlighted" backgroundImage="qvga-click.png"/>
+                            <connections>
+                                <action selector="qieHuaZhi:" destination="-1" eventType="touchUpInside" id="aN6-Wv-LSf"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9kH-3V-cNf">
+                            <rect key="frame" x="242" y="19" width="52" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="microphone1.png"/>
+                            <state key="selected" backgroundImage="microphone-click.png"/>
+                            <state key="highlighted" backgroundImage="microphone-click.png"/>
+                            <connections>
+                                <action selector="qiePhone:" destination="-1" eventType="touchUpInside" id="7zc-Er-2UE"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
@@ -1153,6 +1227,8 @@
     </objects>
     <resources>
         <image name="Pause.png" width="30" height="30"/>
+        <image name="Photograph-click.png" width="94" height="72"/>
+        <image name="Photograph.png" width="94" height="72"/>
         <image name="Play_clicked.png" width="30" height="30"/>
         <image name="call_on.png" width="94" height="94"/>
         <image name="call_on_clicked.png" width="94" height="94"/>
@@ -1160,6 +1236,10 @@
         <image name="cam_back_clicked.png" width="48" height="48"/>
         <image name="leo_micinfo.png" width="128" height="21"/>
         <image name="liveview_info.png" width="320" height="57"/>
+        <image name="microphone-click.png" width="52" height="40"/>
+        <image name="microphone1.png" width="52" height="40"/>
+        <image name="monitor-click.png" width="52" height="40"/>
+        <image name="monitor.png" width="52" height="40"/>
         <image name="mydown.png" width="40" height="40"/>
         <image name="mydown1.png" width="40" height="40"/>
         <image name="myleft.png" width="40" height="40"/>
@@ -1178,6 +1258,12 @@
         <image name="position_04_click.png" width="48" height="48"/>
         <image name="qualitylist.png" width="206" height="30"/>
         <image name="qualitylist_clicked.png" width="206" height="30"/>
+        <image name="qvga-click.png" width="52" height="40"/>
+        <image name="qvga.png" width="52" height="40"/>
+        <image name="temperature-click.png" width="52" height="40"/>
+        <image name="temperature.png" width="52" height="40"/>
         <image name="toolinfo_bk.png" width="121" height="23"/>
+        <image name="video-click.png" width="52" height="40"/>
+        <image name="video.png" width="52" height="40"/>
     </resources>
 </document>

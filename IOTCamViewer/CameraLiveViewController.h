@@ -293,6 +293,20 @@ extern NSString *deviceTokenString;
 - (IBAction)preAction:(UIButton *)sender;
 @property (retain, nonatomic) IBOutlet UIView *preNumView;
 @property (retain, nonatomic) IBOutlet UIView *test;
+//企鹅版操作
+@property (retain, nonatomic) IBOutlet UIView *qieActionView;
+@property (retain, nonatomic) IBOutlet UIButton *qieSnapshotBtn;
+- (IBAction)qieSnapshot:(id)sender;
+@property (retain, nonatomic) IBOutlet UIButton *qieMonitorBtn;
+- (IBAction)qiemonito:(id)sender;
+@property (retain, nonatomic) IBOutlet UIButton *qieWenduBtn;
+- (IBAction)qieWendu:(id)sender;
+@property (retain, nonatomic) IBOutlet UIButton *qieVideoBtn;
+- (IBAction)qieVideo:(id)sender;
+@property (retain, nonatomic) IBOutlet UIButton *qieHuaZhiBtn;
+- (IBAction)qieHuaZhi:(id)sender;
+@property (retain, nonatomic) IBOutlet UIButton *qiePhoneBtn;
+- (IBAction)qiePhone:(id)sender;
 
 
 @end

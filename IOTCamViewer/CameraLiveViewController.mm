@@ -1117,6 +1117,8 @@ extern unsigned int _getTickCount() {
         self.scrollViewPortrait.frame=CGRectMake(0, 0, self.scrollViewPortrait.frame.size.width, self.scrollViewPortrait.frame.size.height);
         self.loadingViewPortrait.frame=CGRectMake(self.scrollViewPortrait.frame.size.width/2-self.loadingViewPortrait.frame.size.width/2, self.scrollViewPortrait.frame.origin.y+self.scrollViewPortrait.frame.size.height/2-self.loadingViewPortrait.frame.size.height/2, self.loadingViewPortrait.frame.size.width, self.loadingViewPortrait.frame.size.height);
         self.view.backgroundColor=HexRGB(0xe1e1e1);
+        self.qieActionView.hidden=NO;
+        self.qieActionView.frame=CGRectMake(0, self.view.frame.size.height-self.qieActionView.frame.size.height, self.qieActionView.frame.size.width, self.qieActionView.frame.size.height);
 #endif
         
     }
@@ -1252,6 +1254,13 @@ extern unsigned int _getTickCount() {
     [_preBtn4 release];
     [_preNumView release];
     [_test release];
+    [_qieActionView release];
+    [_qieSnapshotBtn release];
+    [_qieMonitorBtn release];
+    [_qieWenduBtn release];
+    [_qieVideoBtn release];
+    [_qieHuaZhiBtn release];
+    [_qiePhoneBtn release];
     [super dealloc];
 }
 
@@ -3389,6 +3398,89 @@ extern unsigned int _getTickCount() {
             btn.selected=YES;
         }
     }*/
+}
+- (IBAction)qieSnapshot:(id)sender {
+    [self snapshot:sender];
+}
+- (IBAction)qiemonito:(id)sender {
+    if(isTalking){
+        [camera stopSoundToDevice:selectedChannel];
+        isTalking = NO;
+    }
+    if (isListening==NO && isTalking==NO){
+        
+        isQVGAView = NO;
+        isEModeView = NO;
+        self.isCanSendSetCameraCMD=NO;
+        
+        selectedAudioMode = AUDIO_MODE_SPEAKER;
+        [self activeAudioSession];
+        [camera startSoundToPhone:selectedChannel];
+        
+        
+        isListening = YES;
+        
+        self.qieMonitorBtn.selected=YES;
+        self.qiePhoneBtn.selected=NO;
+        
+    } else if (isListening==YES && isTalking==NO){
+        
+        selectedAudioMode = AUDIO_MODE_OFF;
+        [camera stopSoundToPhone:selectedChannel];
+        [self unactiveAudioSession];
+        
+        isListening = NO;
+        isActive = NO;
+        
+        self.isCanSendSetCameraCMD=YES;
+        self.qieMonitorBtn.selected=NO;
+        
+    }
+}
+- (IBAction)qieWendu:(id)sender {
+}
+- (IBAction)qieVideo:(id)sender {
+}
+- (IBAction)qieHuaZhi:(id)sender {
+}
+- (IBAction)qiePhone:(id)sender {
+    if(!isTalking){
+        if(!self.isTalkButtonAction)
+        {
+            [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            SMsgAVIoctrlGetAudioOutFormatReq *s = (SMsgAVIoctrlGetAudioOutFormatReq *)malloc(sizeof(SMsgAVIoctrlGetAudioOutFormatReq));
+            s->channel = 0;
+            [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GETAUDIOOUTFORMAT_REQ Data:(char *)s DataSize:sizeof(SMsgAVIoctrlGetAudioOutFormatReq)];
+            free(s);
+            
+            SMsgAVIoctrlGetSupportStreamReq *s2 = (SMsgAVIoctrlGetSupportStreamReq *)malloc(sizeof(SMsgAVIoctrlGetSupportStreamReq));
+            [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GETSUPPORTSTREAM_REQ Data:(char *)s2 DataSize:sizeof(SMsgAVIoctrlGetSupportStreamReq)];
+            free(s2);
+            
+            SMsgAVIoctrlTimeZone s3={0};
+            s3.cbSize = sizeof(s3);
+            [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];
+            self.isTalkButtonAction=YES;
+        }
+        
+        isTalking = YES;
+        isListening=NO;
+        selectedAudioMode = AUDIO_MODE_MICROPHONE;
+        [camera stopSoundToPhone:selectedChannel];
+        [self unactiveAudioSession];
+        [self activeAudioSession];
+        [camera startSoundToDevice:selectedChannel];
+        self.qieMonitorBtn.selected=NO;
+        self.qiePhoneBtn.selected=YES;
+    }
+    else{
+        [camera stopSoundToDevice:selectedChannel];
+        isTalking = NO;
+        
+        selectedAudioMode = AUDIO_MODE_SPEAKER;
+        [self unactiveAudioSession];
+        self.qiePhoneBtn.selected=NO;
+    }
 }
 @end
 
