@@ -87,6 +87,7 @@
                 <outlet property="qiePhoneBtn" destination="9kH-3V-cNf" id="K2N-US-AuW"/>
                 <outlet property="qieSnapshotBtn" destination="YR5-d3-Bwq" id="Hgu-J9-tG9"/>
                 <outlet property="qieVideoBtn" destination="5xw-Sr-ZSN" id="3Gh-as-fF4"/>
+                <outlet property="qieWenDuLbl" destination="0Su-YY-Zna" id="fmm-xm-tG9"/>
                 <outlet property="qieWenduBtn" destination="SPw-Av-BF7" id="EqR-lU-I8G"/>
                 <outlet property="qualityLabel" destination="168" id="169"/>
                 <outlet property="qvgaView" destination="lYp-XW-N5L" id="nM1-kC-NjI"/>
@@ -181,6 +182,13 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Su-YY-Zna">
+                            <rect key="frame" x="0.0" y="110" width="320" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <connections>
                         <outlet property="delegate" destination="-1" id="159"/>

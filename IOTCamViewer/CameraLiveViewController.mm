@@ -1135,6 +1135,9 @@ extern unsigned int _getTickCount() {
         self.view.backgroundColor=HexRGB(0xe1e1e1);
         self.qieActionView.hidden=NO;
         self.qieActionView.frame=CGRectMake(0, self.view.frame.size.height-self.qieActionView.frame.size.height, self.qieActionView.frame.size.width, self.qieActionView.frame.size.height);
+        self.qieWenDuLbl.hidden=NO;
+        self.qieWenDuLbl.frame=CGRectMake(0, self.scrollViewPortrait.frame.size.height-self.qieWenDuLbl.frame.size.height, self.qieWenDuLbl.frame.size.width, self.qieWenDuLbl.frame.size.height);
+        self.qieWenDuLbl.backgroundColor=[UIColor clearColor];
 #endif
         
     }
@@ -1277,6 +1280,7 @@ extern unsigned int _getTickCount() {
     [_qieVideoBtn release];
     [_qieHuaZhiBtn release];
     [_qiePhoneBtn release];
+    [_qieWenDuLbl release];
     [super dealloc];
 }
 
@@ -2022,6 +2026,16 @@ extern unsigned int _getTickCount() {
 
 - (void)camera:(MyCamera *)camera_ _didReceiveIOCtrlWithType:(NSInteger)type Data:(const char*)data DataSize:(NSInteger)size
 {
+    if (type == IOTYPE_USER_IPCAM_GET_EnParam_RESP) {
+        /* do something you want */
+        SMsgAVIoctrlGetEnParamResp *resp=(SMsgAVIoctrlGetEnParamResp *)data;
+        memcpy(resp, data, size);
+        NSLog(@"%d",resp->channel);
+        
+        self.qieWenDuLbl.hidden=NO;
+        self.qieWenDuLbl.text=[NSString stringWithFormat:@"%@%d℃ %@%d%@",NSLocalizedString(@"WenDu", nil),resp->tempreture,NSLocalizedString(@"ShiDu", nil),resp->humidity,@"%"];
+        [self.scrollViewPortrait bringSubviewToFront:self.qieWenDuLbl];
+    }
     if(type==(int)IOTYPE_USER_IPCAM_GETSTREAMCTRL_RESP){
         SMsgAVIoctrlGetStreamCtrlResp* pResult=(SMsgAVIoctrlGetStreamCtrlResp*)data;
         [self initQVGAMode:pResult->quality];
@@ -3454,6 +3468,10 @@ extern unsigned int _getTickCount() {
     }
 }
 - (IBAction)qieWendu:(id)sender {
+    SMsgAVIoctrlGetEnParamReq *s2 = (SMsgAVIoctrlGetEnParamReq *)malloc(sizeof(SMsgAVIoctrlGetEnParamReq));
+    s2->channel=0;
+    [self.camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_EnParam_REQ Data:(char *)s2 DataSize:sizeof(SMsgAVIoctrlGetEnParamReq)];
+    free(s2);
 }
 - (IBAction)qieVideo:(id)sender {
     isQVGAView = NO;
@@ -3468,6 +3486,23 @@ extern unsigned int _getTickCount() {
     [self onBtnRecording];
 }
 - (IBAction)qieHuaZhi:(id)sender {
+    UIActionSheet *sheet=[[UIActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel",nil) destructiveButtonTitle:NSLocalizedString(@"高清",nil)  otherButtonTitles:NSLocalizedString(@"标清",nil),NSLocalizedString(@"流畅",nil)  , nil];
+    [sheet showInView:self.view];
+    [sheet release];
+}
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSInteger i=buttonIndex;
+    if(buttonIndex==0){
+        i=1;
+    }
+    else if(buttonIndex==1)
+    {
+        i=3;
+    }
+    else{
+        i=5;
+    }
+    [self onBtnSetQVGA1:i];
 }
 - (IBAction)qiePhone:(id)sender {
     if(!isTalking){

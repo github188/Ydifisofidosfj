@@ -47,7 +47,7 @@ extern NSString *deviceTokenString;
 @protocol CameraLiveViewDelegate;
 
 @interface CameraLiveViewController : UIViewController 
-<MyCameraDelegate, MonitorTouchDelegate, EditCameraDefaultDelegate, UIScrollViewDelegate, ChannelPickerDelegate, WEPopoverControllerDelegate, UIPopoverControllerDelegate, UIActionSheetDelegate, UIAlertViewDelegate> {
+<MyCameraDelegate, MonitorTouchDelegate, EditCameraDefaultDelegate, UIScrollViewDelegate, ChannelPickerDelegate, WEPopoverControllerDelegate, UIPopoverControllerDelegate, UIActionSheetDelegate, UIAlertViewDelegate,UIActionSheetDelegate> {
     
 	unsigned short mCodecId;
 	CameraShowGLView *glView;
@@ -308,6 +308,7 @@ extern NSString *deviceTokenString;
 @property (retain, nonatomic) IBOutlet UIButton *qiePhoneBtn;
 - (IBAction)qiePhone:(id)sender;
 
+@property (retain, nonatomic) IBOutlet UILabel *qieWenDuLbl;
 
 @end
 

@@ -157,7 +157,9 @@ typedef enum {
     IOTYPE_USER_IPCAM_SETPRESET_REQ				= 0x440,
     IOTYPE_USER_IPCAM_SETPRESET_RESP			= 0x441,
     IOTYPE_USER_IPCAM_GETPRESET_REQ				= 0x442,
-    IOTYPE_USER_IPCAM_GETPRESET_RESP			= 0x443
+    IOTYPE_USER_IPCAM_GETPRESET_RESP			= 0x443,
+    IOTYPE_USER_IPCAM_GET_EnParam_REQ           = 0x804,
+    IOTYPE_USER_IPCAM_GET_EnParam_RESP = 0x805
 }ENUM_AVIOCTRL_MSGTYPEOwnExt;
 //录像设置
 /* IOTYPE_USER_IPCAM_GET_REC_REQ		        = 0x2211,   */
@@ -295,5 +297,15 @@ typedef struct
     
 }SMsgAVIoctrlGetSoundResp,SMsgAVIoctrlSetSoundReq;
 
+typedef struct{
+    unsigned int channel;
+    unsigned char reserved[4];
+}SMsgAVIoctrlGetEnParamReq;
+typedef struct {
+    unsigned int channel;
+    unsigned int tempreture;
+    unsigned int humidity;
+    unsigned char reserved[4];
+}SMsgAVIoctrlGetEnParamResp;
 
 #endif
