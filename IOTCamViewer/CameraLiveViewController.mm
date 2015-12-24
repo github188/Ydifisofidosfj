@@ -3543,6 +3543,8 @@ extern unsigned int _getTickCount() {
         self.qiePhoneBtn.selected=NO;
     }
 }
+#pragma mark --构建切换界面
+
 @end
 
 @implementation UINavigationController (autorotation)
