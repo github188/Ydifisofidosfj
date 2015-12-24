@@ -698,6 +698,14 @@ extern unsigned int _getTickCount() {
             [self.longHorizMenu reloadData];
             
         }
+#if defined(QIEAPP)
+        [self.qieVideoBtn setBackgroundImage:[UIImage imageNamed:@"video-stop.png"] forState:UIControlStateNormal];
+        self.qieWenduBtn.enabled=NO;
+        self.qieMonitorBtn.enabled=NO;
+        self.qieHuaZhiBtn.enabled=NO;
+        self.qiePhoneBtn.enabled=NO;
+        self.qieSnapshotBtn.enabled=NO;
+#endif
     }
     else {
         NSLog(@"Ignore local REC function... due to the msizeOrgVideoResolution value invalid!!!");
@@ -758,6 +766,14 @@ extern unsigned int _getTickCount() {
 #if defined(BayitCam)
                 self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot",@"ceo_presetting_enable.png", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",nil];
                 self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked",@"ceo_presetting_clicked.png", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",nil];
+#endif
+#if defined(QIEAPP)
+                [self.qieVideoBtn setBackgroundImage:[UIImage imageNamed:@"video.png"] forState:UIControlStateNormal];
+                self.qieWenduBtn.enabled=YES;
+                self.qieMonitorBtn.enabled=YES;
+                self.qieHuaZhiBtn.enabled=YES;
+                self.qiePhoneBtn.enabled=YES;
+                self.qieSnapshotBtn.enabled=YES;
 #endif
                 
                 [self.horizMenu reloadData];
@@ -3440,6 +3456,16 @@ extern unsigned int _getTickCount() {
 - (IBAction)qieWendu:(id)sender {
 }
 - (IBAction)qieVideo:(id)sender {
+    isQVGAView = NO;
+    isEModeView = NO;
+    isActive = NO;
+    
+    isListening = NO;
+    selectedAudioMode = AUDIO_MODE_OFF;
+    [camera stopSoundToPhone:selectedChannel];
+    [self unactiveAudioSession];
+    
+    [self onBtnRecording];
 }
 - (IBAction)qieHuaZhi:(id)sender {
 }
