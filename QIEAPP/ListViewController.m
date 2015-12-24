@@ -13,6 +13,7 @@
 #define CAMERA_STATUS_TAG 2
 #define CAMERA_UID_TAG 3
 #define CAMERA_SNAPSHOT_TAG 4
+#define CAMERA_MORESET_TAG 6
 
 @interface ListViewController ()
 
@@ -225,6 +226,9 @@
         }
         /* load camera status */
         UILabel *cameraStatusLabel = (UILabel *)[cell viewWithTag:CAMERA_STATUS_TAG];
+        UIButton *moreSettingBtn=(UIButton *)[cell viewWithTag:CAMERA_MORESET_TAG];
+        moreSettingBtn.hidden=NO;
+        [moreSettingBtn addTarget:self action:@selector(openPop:) forControlEvents:UIControlEventTouchUpInside];
         
         if (camera.sessionState == CONNECTION_STATE_CONNECTING) {
             if( g_bDiagnostic ) {
