@@ -12,6 +12,7 @@
 #import "EventListController.h"
 #import "PhotoTableViewController.h"
 #import "cCustomNavigationController.h"
+
 #define CAMERA_NAME_TAG 1
 #define CAMERA_STATUS_TAG 2
 #define CAMERA_UID_TAG 3
@@ -28,6 +29,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self loadDeviceFromDatabase];
+    self.myTableView.sectionIndexBackgroundColor=[UIColor clearColor];
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -394,7 +396,26 @@
         }
     }
     cell.backgroundColor = [UIColor whiteColor];
+    cell.selectionStyle=UITableViewCellSelectionStyleNone;
     return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [self closePop:nil];
+    
+    MyCamera *ca=[camera_list objectAtIndex:indexPath.row];
+    
+    CameraLiveViewController *controller = [[CameraLiveViewController alloc] initWithNibName:@"CameraLiveView" bundle:nil];
+    controller.camera = ca;
+    controller.delegate = self;
+    controller.selectedChannel = 0;
+    
+    UINavigationController *customNavController = [[cCustomNavigationController alloc] init];
+    [self presentViewController:customNavController animated:YES completion:nil];
+    [customNavController pushViewController:controller animated:YES];
+    
+    [controller release];
+    [customNavController release];
 }
 #pragma mark - AddCameraDelegate Methods
 - (void)camera:(NSString *)UID didAddwithName:(NSString *)name password:(NSString *)password syncOnCloud:(BOOL)isSync addToCloud:(BOOL)isAdd addFromCloud:(BOOL)isFromCloud {
@@ -651,7 +672,7 @@
     [self closePop:sender];
 }
 -(void)deleteCamera:(id)sender{
-    [self deleteCameraActual:popSelectCamera.uid];
+    [self didRemoveDevice:popSelectCamera];
     [self.myTableView reloadData];
     [self closePop:sender];
 }
@@ -794,5 +815,8 @@
         
         [database executeUpdate:@"DELETE FROM snapshot WHERE dev_uid=?", uid];
     }
+}
+#pragma mark - CameraLive Delegate
+- (void)didReStartCamera:(MyCamera *)tempCamera_ cameraChannel:(NSNumber *)channel withView:(NSNumber *)tag{
 }
 @end

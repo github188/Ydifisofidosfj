@@ -1579,6 +1579,9 @@ extern unsigned int _getTickCount() {
 #endif
     
     [self getAppDelegate].allowRotation=YES;
+#if defined(QIEAPP)
+    [self getAppDelegate].allowRotation=NO;
+#endif
 }
 
 - (void)viewWillDisappear:(BOOL)animated

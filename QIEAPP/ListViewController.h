@@ -18,12 +18,13 @@
 #import "AddCameraDelegate.h"
 #import "Masonry.h"
 #import "EditCameraDefaultController.h"
+#import "CameraLiveViewController.h"
 
 extern NSMutableArray *camera_list;
 extern FMDatabase *database;
 extern NSString *deviceTokenString;
 
-@interface ListViewController : UIViewController<AddCameraDelegate,UITableViewDataSource,UITableViewDelegate,MyCameraDelegate,EditCameraDefaultDelegate>
+@interface ListViewController : UIViewController<AddCameraDelegate,UITableViewDataSource,UITableViewDelegate,MyCameraDelegate,EditCameraDefaultDelegate,CameraLiveViewDelegate>
 {
     UIView *popView;
     MyCamera *popSelectCamera;

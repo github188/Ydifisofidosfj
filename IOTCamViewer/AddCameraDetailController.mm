@@ -134,7 +134,10 @@
 }
 
 - (IBAction)cancel:(id)sender {
-    
+#if defined(QIEAPP)
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    return;
+#endif
     //[self.navigationController popViewControllerAnimated:YES];
     [self.navigationController popToViewController:[[self.navigationController viewControllers] objectAtIndex:1] animated:YES];
 }
