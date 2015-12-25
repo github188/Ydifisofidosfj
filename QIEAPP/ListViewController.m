@@ -116,6 +116,8 @@
             [tempCamera start:0];
             tempCamera.orderValue=[rs stringForColumn:@"orderValue"];
             
+            [self doMapping:tempCamera.uid];
+            
             SMsgAVIoctrlGetAudioOutFormatReq *s = (SMsgAVIoctrlGetAudioOutFormatReq *)malloc(sizeof(SMsgAVIoctrlGetAudioOutFormatReq));
             s->channel = 0;
             [tempCamera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GETAUDIOOUTFORMAT_REQ Data:(char *)s DataSize:sizeof(SMsgAVIoctrlGetAudioOutFormatReq)];

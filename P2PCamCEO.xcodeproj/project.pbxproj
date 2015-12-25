@@ -16215,7 +16215,7 @@
 				ORGANIZATIONNAME = TUTK;
 				TargetAttributes = {
 					0617381B1C0C8E270028DCB8 = {
-						DevelopmentTeam = DTB56U7YWU;
+						DevelopmentTeam = Q2PV74KQN7;
 					};
 					063733411BE2406200F767A8 = {
 						DevelopmentTeam = Q6B84LV5ND;
@@ -26623,8 +26623,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ling jin (KZT2ZB6VWB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ling jin (KZT2ZB6VWB)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -26658,9 +26658,9 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tocview.qieapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tocview.qieapp.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "7477b1e0-48d1-4bc8-b6cf-ea6a2477db33";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -26674,8 +26674,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ling jin (Q2PV74KQN7)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -26710,9 +26710,9 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tocview.qieapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tocview.qieapp.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "7f8aad2d-4876-4623-ba6a-08eeb3c5d27c";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -26726,8 +26726,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ling jin (Q2PV74KQN7)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -26762,9 +26762,9 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tocview.qieapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tocview.qieapp.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "7f8aad2d-4876-4623-ba6a-08eeb3c5d27c";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -26778,8 +26778,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ling jin (Q2PV74KQN7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ling jin (Q2PV74KQN7)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -26813,9 +26813,9 @@
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"-DP2PCAMLIVE",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tocview.qieapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tocview.qieapp.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "7f8aad2d-4876-4623-ba6a-08eeb3c5d27c";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
