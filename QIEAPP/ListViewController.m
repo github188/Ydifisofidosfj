@@ -41,6 +41,7 @@
     for (MyCamera *ca in camera_list) {
         ca.delegate2=self;
     }
+    [self.myTableView reloadData];
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
@@ -229,12 +230,26 @@
         
         /* load camera name */
         UILabel *cameraNameLabel = (UILabel *)[cell viewWithTag:CAMERA_NAME_TAG];
+        UILabel *cameraStatusLabel = (UILabel *)[cell viewWithTag:CAMERA_STATUS_TAG];
+        UILabel *cameraUIDLabel = (UILabel *)[cell viewWithTag:CAMERA_UID_TAG];
+        
+        static BOOL isFirstLoaded;
+        if(!isFirstLoaded){
+            CGFloat uidY=cameraUIDLabel.frame.origin.y;
+            CGFloat statusY=cameraStatusLabel.frame.origin.y;
+            cameraStatusLabel.frame=CGRectMake(cameraStatusLabel.frame.origin.x, uidY, cameraStatusLabel.frame.size.width, cameraStatusLabel.frame.size.height);
+            cameraStatusLabel.textColor=[UIColor grayColor];
+            cameraUIDLabel.frame=CGRectMake(cameraUIDLabel.frame.origin.x, statusY, cameraUIDLabel.frame.size.width, cameraUIDLabel.frame.size.height);
+            isFirstLoaded=YES;
+        }
+        
         if (cameraNameLabel != nil)
         {
             cameraNameLabel.text = camera.name;
+            cameraNameLabel.textColor=HexRGB(0x07dde1);
         }
         /* load camera status */
-        UILabel *cameraStatusLabel = (UILabel *)[cell viewWithTag:CAMERA_STATUS_TAG];
+        
         UIButton *moreSettingBtn=(UIButton *)[cell viewWithTag:CAMERA_MORESET_TAG];
         moreSettingBtn.hidden=NO;
         moreSettingBtn.tag=row;
@@ -381,10 +396,11 @@
         }
         
         /* load camera UID */
-        UILabel *cameraUIDLabel = (UILabel *)[cell viewWithTag:CAMERA_UID_TAG];
+        
         if (cameraUIDLabel != nil)
         {
             cameraUIDLabel.text = camera.uid;
+            cameraUIDLabel.textColor=HexRGB(0x414141);
         }
         /* load camera snapshot */
         UIImageView *cameraSnapshotImageView = (UIImageView *)[cell viewWithTag:CAMERA_SNAPSHOT_TAG];
@@ -395,6 +411,11 @@
             
             cameraSnapshotImageView.image = fileExists ? [UIImage imageWithContentsOfFile:imgFullName] : [UIImage imageNamed:@"videoClip.png"];
         }
+        
+        UIImageView *playView=[[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"play.png"]] autorelease];
+        [cameraSnapshotImageView addSubview:playView];
+        playView.frame=CGRectMake(cameraSnapshotImageView.frame.size.width/2-12, cameraSnapshotImageView.frame.size.height/2-12, 24, 24);
+
     }
     cell.backgroundColor = [UIColor whiteColor];
     cell.selectionStyle=UITableViewCellSelectionStyleNone;
