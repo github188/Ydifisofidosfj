@@ -3544,7 +3544,9 @@ extern unsigned int _getTickCount() {
     }
 }
 #pragma mark --构建切换界面
-
+-(void)initSwipView{
+    
+}
 @end
 
 @implementation UINavigationController (autorotation)
