@@ -432,10 +432,12 @@ typedef struct
 	
     if ([camera getWiFiSettingSupportOfChannel:0])
         row++;
-    
+#if defined(QIEAPP)
+        row++;
+#else
     if ([camera getMotionDetectionSettingSupportOfChannel:0])
         row++;
-    
+#endif
     if (([camera getRecordSettingSupportOfChannel:0] ||
         [camera getFormatSDCardSupportOfChannel:0])&&isHasSDCard)
         row++;
@@ -813,7 +815,16 @@ typedef struct
     else if (section == [self getEventSettingSectionIndex]) {
         
         NSString *text = nil;
-        
+#if defined(QIEAPP)
+        cell.textLabel.text = [NSString stringWithString:NSLocalizedString(@"人体红外感应", @"")];
+        UISwitch *switchView = [[UISwitch alloc] initWithFrame:CGRectZero];
+        switchView.tag = 99993;
+        cell.accessoryView = switchView;
+        [switchView setOn:isOpenHongWai];
+        [switchView addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
+        [switchView release];
+        cell.selectionStyle=UITableViewCellSelectionStyleNone;
+#else
         if ([camera getMotionDetectionSettingSupportOfChannel:0]) {
          
             if (motionDetection < 0) {                  
@@ -855,7 +866,7 @@ typedef struct
         cell.detailTextLabel.text = text;
         
         detailFrame=cell.detailTextLabel.frame;
-        
+#endif
         if (text)
             [text release];
     }
@@ -1038,6 +1049,21 @@ typedef struct
             [self onTimeZoneChanged:timeZoneString tzGMTDiff_In_Mins:timeZoneValue];
         }
     }
+    if(check.tag==99993){
+        isOpenHongWai=check.on;
+        SMsgAVIoctrlSetMotionDetectReq *structSetMotionDetection = malloc(sizeof(SMsgAVIoctrlSetMotionDetectReq));
+        memset(structSetMotionDetection, 0, sizeof(SMsgAVIoctrlSetMotionDetectReq));
+        
+        structSetMotionDetection->channel = 0;
+        structSetMotionDetection->sensitivity = check.on?75:0;
+        
+        [camera sendIOCtrlToChannel:0
+                               Type:IOTYPE_USER_IPCAM_SETMOTIONDETECT_REQ
+                               Data:(char *)structSetMotionDetection
+                           DataSize:sizeof(SMsgAVIoctrlSetMotionDetectReq)];
+        
+        free(structSetMotionDetection);
+    }
     return;
     
     if ( check.isOn ) {
@@ -1212,7 +1238,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
         }
     }
     else if (section == [self getEventSettingSectionIndex]) {
-        
+#if defined(QIEAPP)
+#else
         if (row == [self getMotionDetectionSettingRowIndex]) {
 			if( ![self readyToPushNextVC] ) {
 				[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -1226,7 +1253,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
             [self.navigationController pushViewController:controller animated:YES];
             [controller release];            
         }
-        
+#endif
     }
     else if (section == [self getRecordSettingSectionIndex]) {
         
@@ -1412,6 +1439,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
             
             SMsgAVIoctrlGetMotionDetectResp *s = (SMsgAVIoctrlGetMotionDetectResp*)data;
             motionDetection = s->sensitivity;
+            
+            isOpenHongWai=s->sensitivity>0;
             
             [self.tableView reloadData];
         }

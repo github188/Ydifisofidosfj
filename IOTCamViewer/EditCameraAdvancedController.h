@@ -91,6 +91,7 @@ extern FMDatabase *database;
         
         CGRect detailFrame;
         
+        BOOL isOpenHongWai;
 }
 
 @property (nonatomic, retain) NSTimer* timerListWifiApResp;
