@@ -3551,7 +3551,7 @@ extern unsigned int _getTickCount() {
     [self onBtnRecording];
 }
 - (IBAction)qieHuaZhi:(id)sender {
-    UIActionSheet *sheet=[[UIActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel",nil) destructiveButtonTitle:NSLocalizedString(@"高清",nil)  otherButtonTitles:NSLocalizedString(@"标清",nil),NSLocalizedString(@"流畅",nil)  , nil];
+    UIActionSheet *sheet=[[UIActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel",nil) destructiveButtonTitle:nil  otherButtonTitles:NSLocalizedString(@"高清",nil),NSLocalizedString(@"标清",nil),NSLocalizedString(@"流畅",nil)  , nil];
     [sheet showInView:self.view];
     [sheet release];
 }
