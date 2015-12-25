@@ -638,6 +638,9 @@
 }
 -(void)topCamera:(id)sender{
     popSelectCamera.orderValue=[NSString stringWithFormat:@"%f",[NSDate date].timeIntervalSince1970];
+    if (![database executeUpdate:@"UPDATE device SET orderValue=? WHERE dev_uid=?", popSelectCamera.orderValue, popSelectCamera.uid]) {
+        NSLog(@"Fail to update device to database.");
+    }
     [self closePop:nil];
     //排序数组
     NSArray *orderArr=[camera_list sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
@@ -647,7 +650,6 @@
     [camera_list removeAllObjects];
     [camera_list addObjectsFromArray:orderArr];
     [orderArr release];
-    
     [self.myTableView reloadData];
 }
 -(void)eventCamera:(id)sender{
