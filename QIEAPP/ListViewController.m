@@ -12,6 +12,7 @@
 #import "EventListController.h"
 #import "PhotoTableViewController.h"
 #import "cCustomNavigationController.h"
+#import "DefineExtension.h"
 
 #define CAMERA_NAME_TAG 1
 #define CAMERA_STATUS_TAG 2
@@ -88,6 +89,7 @@
             NSInteger isFromCloud = [rs intForColumn:@"isFromCloud"];
             NSLog(@"Load Camera(%@, %@, %@, %@, %d, ch:%d)", name, uid, view_acc, view_pwd, (int)isFromCloud, (int)channel);
             MyCamera *tempCamera = [[MyCamera alloc] initWithName:name viewAccount:view_acc viewPassword:view_pwd];
+            tempCamera.delegate2=self;
             [tempCamera setLastChannel:channel];
             [tempCamera connect:uid];
             [tempCamera setSync:isSync];
@@ -108,10 +110,23 @@
             s3.cbSize = sizeof(s3);
             [tempCamera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];
             [camera_list addObject:tempCamera];
-            tempCamera.delegate2=self;
+            
+            //增加声音报警
+            SMsgAVIoctrlSetSoundDetectReq *audioAlarm = (SMsgAVIoctrlSetSoundDetectReq *)malloc(sizeof(SMsgAVIoctrlSetSoundDetectReq));
+            audioAlarm->channel=0;
+            audioAlarm->sensitivity=100;
+            [tempCamera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_SETSOUNDDETECT_REQ Data:(char *)audioAlarm DataSize:sizeof(SMsgAVIoctrlSetSoundDetectReq)];
+            free(audioAlarm);
+            
             [tempCamera release];
         }
         [rs close];
+    }
+}
+-(void)camera:(MyCamera *)camera _didReceiveIOCtrlWithType:(NSInteger)type Data:(const char *)data DataSize:(NSInteger)size{
+    if(type==IOTYPE_USER_IPCAM_SETSOUNDDETECT_RESP){
+        SMsgAVIoctrlSetSoundDetectResp *resp=(SMsgAVIoctrlSetSoundDetectResp*)data;
+        NSLog(@"result:%d",resp->result);
     }
 }
 - (NSString *) pathForDocumentsResource:(NSString *) relativePath {
