@@ -3558,7 +3558,7 @@ extern unsigned int _getTickCount() {
     
     //120*27
     NSInteger marginW=10;
-    swipCameraPopView.frame=CGRectMake(self.view.frame.size.width-(120+marginW*2)-13, 0, 120+marginW*2, marginW*2+[camera_list count]*27);
+    swipCameraPopView.frame=CGRectMake(self.view.frame.size.width-(120+marginW*2), 0, 120+marginW*2, marginW*2+[camera_list count]*27+10);
     UIImageView *bgImagevIew=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"icon-box.png"]];
     [swipCameraPopView addSubview:bgImagevIew];
     [bgImagevIew release];
