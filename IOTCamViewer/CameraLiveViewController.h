@@ -299,17 +299,24 @@ extern NSString *deviceTokenString;
 @property (retain, nonatomic) IBOutlet UIView *test;
 //企鹅版操作
 @property (retain, nonatomic) IBOutlet UIView *qieActionView;
+@property (retain, nonatomic) IBOutlet UIView *qieLandActionView;
 @property (retain, nonatomic) IBOutlet UIButton *qieSnapshotBtn;
+@property (retain, nonatomic) IBOutlet UIButton *qieLandSnapshotBtn;
 - (IBAction)qieSnapshot:(id)sender;
 @property (retain, nonatomic) IBOutlet UIButton *qieMonitorBtn;
+@property (retain, nonatomic) IBOutlet UIButton *qieLandMonitorBtn;
 - (IBAction)qiemonito:(id)sender;
 @property (retain, nonatomic) IBOutlet UIButton *qieWenduBtn;
+@property (retain, nonatomic) IBOutlet UIButton *qieLandWenduBtn;
 - (IBAction)qieWendu:(id)sender;
 @property (retain, nonatomic) IBOutlet UIButton *qieVideoBtn;
+@property (retain, nonatomic) IBOutlet UIButton *qieLandVideoBtn;
 - (IBAction)qieVideo:(id)sender;
 @property (retain, nonatomic) IBOutlet UIButton *qieHuaZhiBtn;
+@property (retain, nonatomic) IBOutlet UIButton *qieLandHuaZhiBtn;
 - (IBAction)qieHuaZhi:(id)sender;
 @property (retain, nonatomic) IBOutlet UIButton *qiePhoneBtn;
+@property (retain, nonatomic) IBOutlet UIButton *qieLandPhoneBtn;
 - (IBAction)qiePhone:(id)sender;
 
 @property (retain, nonatomic) IBOutlet UILabel *qieWenDuLbl;

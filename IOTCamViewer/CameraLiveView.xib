@@ -83,6 +83,13 @@
                 <outlet property="prePositionView" destination="wbg-Jy-8i1" id="nPB-QO-tRU"/>
                 <outlet property="qieActionView" destination="BI2-jt-ALu" id="zF4-2Z-UXD"/>
                 <outlet property="qieHuaZhiBtn" destination="lt9-PD-mVs" id="6o4-GE-EhE"/>
+                <outlet property="qieLandActionView" destination="h0l-9X-Qmd" id="fZt-5C-NKr"/>
+                <outlet property="qieLandHuaZhiBtn" destination="N8E-mb-ZcU" id="Hrq-vy-VIc"/>
+                <outlet property="qieLandMonitorBtn" destination="GX2-Q8-Zyd" id="WIN-mB-rNr"/>
+                <outlet property="qieLandPhoneBtn" destination="94q-aF-irf" id="5v4-zu-h0E"/>
+                <outlet property="qieLandSnapshotBtn" destination="bHq-bm-TXj" id="c8N-tp-yWd"/>
+                <outlet property="qieLandVideoBtn" destination="4Kv-bZ-fyL" id="hO5-tm-off"/>
+                <outlet property="qieLandWenduBtn" destination="fBw-xP-Tb3" id="hTD-dZ-WaK"/>
                 <outlet property="qieMonitorBtn" destination="POa-2c-nmB" id="hbd-p8-yEh"/>
                 <outlet property="qiePhoneBtn" destination="9kH-3V-cNf" id="K2N-US-AuW"/>
                 <outlet property="qieSnapshotBtn" destination="YR5-d3-Bwq" id="Hgu-J9-tG9"/>
@@ -1226,6 +1233,73 @@
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" id="h0l-9X-Qmd">
+                    <rect key="frame" x="0.0" y="132" width="568" height="56"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GX2-Q8-Zyd">
+                            <rect key="frame" x="28" y="8" width="52" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="monitor.png"/>
+                            <state key="selected" backgroundImage="monitor-click.png"/>
+                            <state key="highlighted" backgroundImage="monitor-click.png"/>
+                            <connections>
+                                <action selector="qiemonito:" destination="-1" eventType="touchUpInside" id="Qhj-gP-7xT"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fBw-xP-Tb3">
+                            <rect key="frame" x="115" y="8" width="52" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="temperature.png"/>
+                            <state key="selected" backgroundImage="temperature-click.png"/>
+                            <state key="highlighted" backgroundImage="temperature-click.png"/>
+                            <connections>
+                                <action selector="qieWendu:" destination="-1" eventType="touchUpInside" id="3sC-U9-lOT"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4Kv-bZ-fyL">
+                            <rect key="frame" x="209" y="8" width="52" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="video.png"/>
+                            <state key="selected" backgroundImage="video-click.png"/>
+                            <state key="highlighted" backgroundImage="video-click.png"/>
+                            <connections>
+                                <action selector="qieVideo:" destination="-1" eventType="touchUpInside" id="pDa-AW-9bt"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bHq-bm-TXj">
+                            <rect key="frame" x="297" y="8" width="52" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="Photograph.png"/>
+                            <state key="selected" backgroundImage="Photograph-click.png"/>
+                            <state key="highlighted" backgroundImage="Photograph-click.png"/>
+                            <connections>
+                                <action selector="qieSnapshot:" destination="-1" eventType="touchUpInside" id="CWB-e4-h75"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="94q-aF-irf">
+                            <rect key="frame" x="489" y="8" width="52" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="microphone1.png"/>
+                            <state key="selected" backgroundImage="microphone-click.png"/>
+                            <state key="highlighted" backgroundImage="microphone-click.png"/>
+                            <connections>
+                                <action selector="qiePhone:" destination="-1" eventType="touchUpInside" id="6CW-s5-Fal"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="N8E-mb-ZcU">
+                            <rect key="frame" x="394" y="8" width="52" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="qvga.png"/>
+                            <state key="selected" backgroundImage="qvga-click.png"/>
+                            <state key="highlighted" backgroundImage="qvga-click.png"/>
+                            <connections>
+                                <action selector="qieHuaZhi:" destination="-1" eventType="touchUpInside" id="hOQ-1U-MBO"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="0.0" colorSpace="calibratedRGB"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

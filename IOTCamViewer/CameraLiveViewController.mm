@@ -705,6 +705,13 @@ extern unsigned int _getTickCount() {
         self.qieHuaZhiBtn.enabled=NO;
         self.qiePhoneBtn.enabled=NO;
         self.qieSnapshotBtn.enabled=NO;
+        
+        [self.qieLandVideoBtn setBackgroundImage:[UIImage imageNamed:@"video-stop.png"] forState:UIControlStateNormal];
+        self.qieLandWenduBtn.enabled=NO;
+        self.qieLandMonitorBtn.enabled=NO;
+        self.qieLandHuaZhiBtn.enabled=NO;
+        self.qieLandPhoneBtn.enabled=NO;
+        self.qieLandSnapshotBtn.enabled=NO;
 #endif
     }
     else {
@@ -774,6 +781,13 @@ extern unsigned int _getTickCount() {
                 self.qieHuaZhiBtn.enabled=YES;
                 self.qiePhoneBtn.enabled=YES;
                 self.qieSnapshotBtn.enabled=YES;
+                
+                [self.qieLandVideoBtn setBackgroundImage:[UIImage imageNamed:@"video.png"] forState:UIControlStateNormal];
+                self.qieLandWenduBtn.enabled=YES;
+                self.qieLandMonitorBtn.enabled=YES;
+                self.qieLandHuaZhiBtn.enabled=YES;
+                self.qieLandPhoneBtn.enabled=YES;
+                self.qieLandSnapshotBtn.enabled=YES;
 #endif
                 
                 [self.horizMenu reloadData];
@@ -984,9 +998,11 @@ extern unsigned int _getTickCount() {
         
         [self.longHorizMenu reloadData];
         [self checkLongBTN];
-        
-        
-        
+#if defined(QIEAPP)
+        if(![[self.view subviews]containsObject:swipCameraPopView]){
+            [self.view addSubview:swipCameraPopView];
+        }
+#endif
 		NSLog( @"video frame {%d,%d}%dx%d", (int)self.monitorLandscape.frame.origin.x, (int)self.monitorLandscape.frame.origin.y, (int)self.monitorLandscape.frame.size.width, (int)self.monitorLandscape.frame.size.height);
         
         //动态布局
@@ -1042,6 +1058,19 @@ extern unsigned int _getTickCount() {
         }
         
         [self.navigationController setNavigationBarHidden:isHiddenTopNav animated:NO];
+        
+#if defined(QIEAPP)
+        self.longHorizMenu.hidden=YES;
+        self.qieLandActionView.hidden=YES;
+        [self.view bringSubviewToFront:self.qieLandActionView];
+        self.qieLandActionView.frame=CGRectMake(0, self.view.frame.size.height-self.qieLandActionView.frame.size.height, self.qieLandActionView.frame.size.width, self.qieLandActionView.frame.size.height);
+        if(![[self.view subviews] containsObject:self.qieWenDuLbl]){
+            [self.view addSubview:self.qieWenDuLbl];
+            self.qieWenDuLbl.frame=CGRectMake(0, self.view.frame.size.height-self.qieLandActionView.frame.size.height-self.qieWenDuLbl.frame.size.height, self.qieWenDuLbl.frame.size.width, self.qieWenDuLbl.frame.size.height);
+            self.qieWenDuLbl.hidden=NO;
+        }
+#endif
+        
     }
     else {
         
@@ -1055,6 +1084,12 @@ extern unsigned int _getTickCount() {
         
         [self.horizMenu reloadData];
         [self checkBTN];
+        
+#if defined(QIEAPP)
+        if(![[self.view subviews]containsObject:swipCameraPopView]){
+            [self.view addSubview:swipCameraPopView];
+        }
+#endif
         
         //动态布局
         self.scrollViewPortrait.frame=CGRectMake(0, self.scrollViewPortrait.frame.origin.y+5, self.view.frame.size.width, self.view.frame.size.width/4*3);
@@ -1138,6 +1173,9 @@ extern unsigned int _getTickCount() {
         self.qieWenDuLbl.hidden=NO;
         self.qieWenDuLbl.frame=CGRectMake(0, self.scrollViewPortrait.frame.size.height-self.qieWenDuLbl.frame.size.height, self.qieWenDuLbl.frame.size.width, self.qieWenDuLbl.frame.size.height);
         self.qieWenDuLbl.backgroundColor=[UIColor clearColor];
+        if(![[self.view subviews] containsObject:self.qieWenDuLbl]){
+            [self.view addSubview:self.qieWenDuLbl];
+        }
 #endif
         
     }
@@ -1283,6 +1321,13 @@ extern unsigned int _getTickCount() {
     [_qieWenDuLbl release];
     [swipCameraPopView release];
     [swipCameraBtns release];
+    [_qieLandActionView release];
+    [_qieLandMonitorBtn release];
+    [_qieLandWenduBtn release];
+    [_qieLandVideoBtn release];
+    [_qieLandSnapshotBtn release];
+    [_qieLandHuaZhiBtn release];
+    [_qieLandPhoneBtn release];
     [super dealloc];
 }
 
@@ -1290,6 +1335,7 @@ extern unsigned int _getTickCount() {
     NSLog(@"SCROLL!");
 }
 -(void)swipCamera:(UIButton *)btn{
+    swipCameraPopView.frame=CGRectMake(self.view.frame.size.width-swipCameraPopView.frame.size.width, 0, swipCameraPopView.frame.size.width, swipCameraPopView.frame.size.height);
     swipCameraPopView.hidden=!swipCameraPopView.hidden;
     [self.view bringSubviewToFront:swipCameraPopView];
 }
@@ -1306,6 +1352,8 @@ extern unsigned int _getTickCount() {
     
     self.navigationItem.rightBarButtonItem=listButtonItem;
     [listButtonItem release];
+    
+    self.qieLandActionView.backgroundColor= [UIColor colorWithPatternImage:[UIImage imageNamed:@"toolbar_bk"]];
 #endif
     
     //button长按事件
@@ -1640,7 +1688,6 @@ extern unsigned int _getTickCount() {
     
     [self getAppDelegate].allowRotation=YES;
 #if defined(QIEAPP)
-    [self getAppDelegate].allowRotation=NO;
     [self initSwipView];
 #endif
 }
@@ -3243,6 +3290,12 @@ extern unsigned int _getTickCount() {
         
         [self.longHorizMenu setHidden:!hidden];
         
+#if defined(QIEAPP)
+        hidden=self.qieLandActionView.hidden;
+        self.qieLandActionView.hidden=!hidden;
+        isHiddenTopNav=!hidden;
+#endif
+        
         [[UIApplication sharedApplication] setStatusBarHidden:isHiddenTopNav withAnimation:UIStatusBarAnimationNone];
         [self.navigationController setNavigationBarHidden:isHiddenTopNav animated:YES];
         
@@ -3250,6 +3303,9 @@ extern unsigned int _getTickCount() {
             self.hideToolBarTimer = [self setupHideToolBarTimer];
         }
     }
+#if defined(QIEAPP)
+    self.longHorizMenu.hidden=YES;
+#endif
 }
 
 #define HIDE_TOOL_BAR_TIME_OUT	5
@@ -3262,6 +3318,7 @@ extern unsigned int _getTickCount() {
 	if (self.longHorizMenu.hidden == NO && isActive == NO) {
         [self.longHorizMenu setHidden:YES];
         isHiddenTopNav=YES;
+        self.qieLandActionView.hidden=YES;
         [[UIApplication sharedApplication] setStatusBarHidden:isHiddenTopNav withAnimation:UIStatusBarAnimationNone];
         [self.navigationController setNavigationBarHidden:isHiddenTopNav animated:YES];
 	}
@@ -3457,6 +3514,9 @@ extern unsigned int _getTickCount() {
         self.qieMonitorBtn.selected=YES;
         self.qiePhoneBtn.selected=NO;
         
+        self.qieLandMonitorBtn.selected=YES;
+        self.qieLandPhoneBtn.selected=NO;
+        
     } else if (isListening==YES && isTalking==NO){
         
         selectedAudioMode = AUDIO_MODE_OFF;
@@ -3468,6 +3528,7 @@ extern unsigned int _getTickCount() {
         
         self.isCanSendSetCameraCMD=YES;
         self.qieMonitorBtn.selected=NO;
+        self.qieLandMonitorBtn.selected=NO;
         
     }
 }
@@ -3503,8 +3564,11 @@ extern unsigned int _getTickCount() {
     {
         i=3;
     }
-    else{
+    else if(buttonIndex==2){
         i=5;
+    }
+    else{
+        return;
     }
     [self onBtnSetQVGA1:i];
 }
@@ -3537,6 +3601,9 @@ extern unsigned int _getTickCount() {
         [camera startSoundToDevice:selectedChannel];
         self.qieMonitorBtn.selected=NO;
         self.qiePhoneBtn.selected=YES;
+        
+        self.qieLandMonitorBtn.selected=NO;
+        self.qieLandPhoneBtn.selected=YES;
     }
     else{
         [camera stopSoundToDevice:selectedChannel];
@@ -3545,6 +3612,7 @@ extern unsigned int _getTickCount() {
         selectedAudioMode = AUDIO_MODE_SPEAKER;
         [self unactiveAudioSession];
         self.qiePhoneBtn.selected=NO;
+        self.qieLandPhoneBtn.selected=NO;
     }
 }
 #pragma mark --构建切换界面
@@ -3592,6 +3660,9 @@ extern unsigned int _getTickCount() {
     lastBtn=nil;
 }
 -(void)selectCameraAction:(UIButton *)btn{
+    
+    swipCameraPopView.hidden=YES;
+    
     MyCamera *ca=[camera_list objectAtIndex:btn.tag];
     for (UIButton *b in swipCameraBtns) {
         b.selected=NO;
@@ -3601,7 +3672,7 @@ extern unsigned int _getTickCount() {
     }
     if([self.camera.uid isEqualToString:ca.uid]) return;
     
-    swipCameraPopView.hidden=YES;
+    
     
     self.camera.delegate2=nil;
     [self.camera stopShow_block:0];
