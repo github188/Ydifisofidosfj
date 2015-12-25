@@ -164,6 +164,10 @@ extern NSString *deviceTokenString;
     BOOL isPrePosition;
     
     NSArray *preBtnArr;
+    
+    UIView *swipCameraPopView;
+    
+    NSMutableArray *swipCameraBtns;
 }
 
 //for Recording

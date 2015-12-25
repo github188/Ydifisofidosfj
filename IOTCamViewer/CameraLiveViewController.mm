@@ -1281,6 +1281,8 @@ extern unsigned int _getTickCount() {
     [_qieHuaZhiBtn release];
     [_qiePhoneBtn release];
     [_qieWenDuLbl release];
+    [swipCameraPopView release];
+    [swipCameraBtns release];
     [super dealloc];
 }
 
@@ -1288,7 +1290,8 @@ extern unsigned int _getTickCount() {
     NSLog(@"SCROLL!");
 }
 -(void)swipCamera:(UIButton *)btn{
-    
+    swipCameraPopView.hidden=!swipCameraPopView.hidden;
+    [self.view bringSubviewToFront:swipCameraPopView];
 }
 - (void)viewDidLoad {
     
@@ -1638,6 +1641,7 @@ extern unsigned int _getTickCount() {
     [self getAppDelegate].allowRotation=YES;
 #if defined(QIEAPP)
     [self getAppDelegate].allowRotation=NO;
+    [self initSwipView];
 #endif
 }
 
@@ -3545,7 +3549,56 @@ extern unsigned int _getTickCount() {
 }
 #pragma mark --构建切换界面
 -(void)initSwipView{
+    if(swipCameraPopView) return;
+    swipCameraBtns=[[NSMutableArray alloc]init];
     
+    swipCameraPopView=[[UIView alloc]init];
+    swipCameraPopView.hidden=YES;
+    [self.view addSubview:swipCameraPopView];
+    
+    //120*27
+    NSInteger marginW=10;
+    swipCameraPopView.frame=CGRectMake(self.view.frame.size.width-(120+marginW*2)-13, 0, 120+marginW*2, marginW*2+[camera_list count]*27);
+    UIImageView *bgImagevIew=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"icon-box.png"]];
+    [swipCameraPopView addSubview:bgImagevIew];
+    [bgImagevIew release];
+    bgImagevIew.frame=swipCameraPopView.bounds;
+    
+    UIButton *lastBtn=nil;
+    NSInteger i=0;
+    for (MyCamera *ca in camera_list) {
+        UIButton *btn=[[UIButton alloc]init];
+        [swipCameraPopView addSubview:btn];
+        [swipCameraBtns addObject:btn];
+        [btn release];
+        if(lastBtn){
+            btn.frame=CGRectMake(marginW, lastBtn.frame.origin.y+27+marginW, 120, 27);
+        }
+        else{
+            btn.frame=CGRectMake(marginW, marginW, 120, 27);
+        }
+        btn.tag=i;
+        i++;
+        [btn addTarget:self action:@selector(selectCameraAction:) forControlEvents:UIControlEventTouchUpInside];
+        [btn setBackgroundImage:[UIImage imageNamed:@"camera_list_background.png"] forState:UIControlStateSelected];
+        [btn setBackgroundImage:[UIImage imageNamed:@"camera_list_background.png"] forState:UIControlStateHighlighted];
+        [btn setTitle:ca.name forState:UIControlStateNormal];
+        [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        if([ca.uid isEqualToString:self.camera.uid]){
+            btn.selected=YES;
+        }
+        lastBtn=btn;
+    }
+    lastBtn=nil;
+}
+-(void)selectCameraAction:(UIButton *)btn{
+    MyCamera *ca=[camera_list objectAtIndex:btn.tag];
+    for (UIButton *b in swipCameraBtns) {
+        b.selected=NO;
+        if(b.tag==btn.tag){
+            b.selected=YES;
+        }
+    }
 }
 @end
 
