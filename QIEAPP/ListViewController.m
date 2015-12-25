@@ -76,7 +76,7 @@
 }
 - (void)loadDeviceFromDatabase {
     if (database != NULL) {
-        FMResultSet *rs = [database executeQuery:@"SELECT * FROM device"];
+        FMResultSet *rs = [database executeQuery:@"SELECT * FROM device order by orderValue desc"];
         while([rs next]) {
             NSString *uid = [rs stringForColumn:@"dev_uid"];
             NSString *name = [rs stringForColumn:@"dev_nickname"];
@@ -92,6 +92,7 @@
             [tempCamera setSync:isSync];
             [tempCamera setCloud:isFromCloud];
             [tempCamera start:0];
+            tempCamera.orderValue=[rs stringForColumn:@"orderValue"];
             
             SMsgAVIoctrlGetAudioOutFormatReq *s = (SMsgAVIoctrlGetAudioOutFormatReq *)malloc(sizeof(SMsgAVIoctrlGetAudioOutFormatReq));
             s->channel = 0;
@@ -448,8 +449,8 @@
     [camera_list addObject:camera_];
     
     if (database != NULL) {
-        [database executeUpdate:@"INSERT INTO device(dev_uid, dev_nickname, dev_name, dev_pwd, view_acc, view_pwd, channel, sync, isFromCloud) VALUES(?,?,?,?,?,?,?,?,?)",
-         camera_.uid, name, name, password, @"admin", password, [NSNumber numberWithInt:0], [NSNumber numberWithBool:isSync], [NSNumber numberWithBool:isFromCloud]];
+        [database executeUpdate:@"INSERT INTO device(dev_uid, dev_nickname, dev_name, dev_pwd, view_acc, view_pwd, channel, sync, isFromCloud,orderValue) VALUES(?,?,?,?,?,?,?,?,?,?)",
+         camera_.uid, name, name, password, @"admin", password, [NSNumber numberWithInt:0], [NSNumber numberWithBool:isSync], [NSNumber numberWithBool:isFromCloud],@""];
     }
     
     NSString *uuid = [[[ UIDevice currentDevice] identifierForVendor] UUIDString];
@@ -636,7 +637,18 @@
     [self performSelector:@selector(bigAnimation)];
 }
 -(void)topCamera:(id)sender{
+    popSelectCamera.orderValue=[NSString stringWithFormat:@"%f",[NSDate date].timeIntervalSince1970];
+    [self closePop:nil];
+    //排序数组
+    NSArray *orderArr=[camera_list sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        return [((MyCamera *)obj2).orderValue compare:((MyCamera *)obj1).orderValue];
+    }];
+    [orderArr retain];
+    [camera_list removeAllObjects];
+    [camera_list addObjectsFromArray:orderArr];
+    [orderArr release];
     
+    [self.myTableView reloadData];
 }
 -(void)eventCamera:(id)sender{
     EventListController *controller = [[EventListController alloc] initWithStyle:UITableViewStylePlain];

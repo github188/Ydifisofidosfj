@@ -197,6 +197,7 @@ BOOL g_bDiagnostic = FALSE;
     [arrayStreamChannel release];
 	[strTimeZone release];
     self.delegate2 = nil;
+    self.orderValue=nil;
     [super dealloc];
 }
 

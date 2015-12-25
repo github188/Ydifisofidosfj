@@ -42,6 +42,8 @@
 @property (assign) BOOL isSupportDropbox;
 @property (assign) BOOL isLinkDropbox;
 
+@property(nonatomic,retain) NSString *orderValue;
+
 - (id)initWithName:(NSString *)name viewAccount:(NSString *)viewAcc viewPassword:(NSString *)viewPwd;
 - (void)start:(NSInteger)channel;
 - (void)start4EventPlayback:(NSInteger)channel;

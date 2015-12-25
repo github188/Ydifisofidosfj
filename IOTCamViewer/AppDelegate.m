@@ -627,7 +627,9 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
 		if (![database executeUpdate:SQLCMD_CREATE_TABLE_REMOVELST]) NSLog(@"Can not create table removelist");
         
         /* Edit here while table columns been modified */
-        //if (![database columnExists:@"device" columnName:@""]) [database executeUpdate:@"ALTER TABLE device ADD COLUMN column-name column-type"];        
+#if defined(QIEAPP)
+        if (![database columnExists:@"device" columnName:@"orderValue"]) [database executeUpdate:@"ALTER TABLE device ADD COLUMN orderValue text DEFAULT('')"];
+#endif
     }
 }
 
