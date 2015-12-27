@@ -1066,9 +1066,9 @@ extern unsigned int _getTickCount() {
         self.qieLandActionView.frame=CGRectMake(0, self.view.frame.size.height-self.qieLandActionView.frame.size.height, self.qieLandActionView.frame.size.width, self.qieLandActionView.frame.size.height);
         if(![[self.view subviews] containsObject:self.qieWenDuLbl]){
             [self.view addSubview:self.qieWenDuLbl];
-            self.qieWenDuLbl.frame=CGRectMake(0, self.view.frame.size.height-self.qieLandActionView.frame.size.height-self.qieWenDuLbl.frame.size.height, self.qieWenDuLbl.frame.size.width, self.qieWenDuLbl.frame.size.height);
-            self.qieWenDuLbl.hidden=NO;
+            self.qieWenDuLbl.frame=CGRectMake(0, self.qieLandActionView.frame.origin.y-self.qieWenDuLbl.frame.size.height, self.qieWenDuLbl.frame.size.width, self.qieWenDuLbl.frame.size.height);
         }
+        self.qieWenDuLbl.hidden=YES;
 #endif
         
     }
@@ -3293,6 +3293,7 @@ extern unsigned int _getTickCount() {
 #if defined(QIEAPP)
         hidden=self.qieLandActionView.hidden;
         self.qieLandActionView.hidden=!hidden;
+        self.qieWenDuLbl.hidden=!hidden;
         isHiddenTopNav=!hidden;
 #endif
         
@@ -3319,6 +3320,7 @@ extern unsigned int _getTickCount() {
         [self.longHorizMenu setHidden:YES];
         isHiddenTopNav=YES;
         self.qieLandActionView.hidden=YES;
+        self.qieWenDuLbl.hidden=YES;
         [[UIApplication sharedApplication] setStatusBarHidden:isHiddenTopNav withAnimation:UIStatusBarAnimationNone];
         [self.navigationController setNavigationBarHidden:isHiddenTopNav animated:YES];
 	}
