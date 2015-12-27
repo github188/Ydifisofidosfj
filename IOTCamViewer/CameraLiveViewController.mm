@@ -996,12 +996,14 @@ extern unsigned int _getTickCount() {
 		[self removeGLView:FALSE];
         self.view = self.landscapeView;
         
+        
         [self.longHorizMenu reloadData];
         [self checkLongBTN];
 #if defined(QIEAPP)
         if(![[self.view subviews]containsObject:swipCameraPopView]){
             [self.view addSubview:swipCameraPopView];
         }
+        self.navigationItem.rightBarButtonItem=nil;
 #endif
 		NSLog( @"video frame {%d,%d}%dx%d", (int)self.monitorLandscape.frame.origin.x, (int)self.monitorLandscape.frame.origin.y, (int)self.monitorLandscape.frame.size.width, (int)self.monitorLandscape.frame.size.height);
         
@@ -1089,6 +1091,7 @@ extern unsigned int _getTickCount() {
         if(![[self.view subviews]containsObject:swipCameraPopView]){
             [self.view addSubview:swipCameraPopView];
         }
+        self.navigationItem.rightBarButtonItem=listButtonItem;
 #endif
         
         //动态布局
@@ -1328,6 +1331,7 @@ extern unsigned int _getTickCount() {
     [_qieLandSnapshotBtn release];
     [_qieLandHuaZhiBtn release];
     [_qieLandPhoneBtn release];
+    [listButtonItem release];
     [super dealloc];
 }
 
@@ -1348,10 +1352,9 @@ extern unsigned int _getTickCount() {
     [listButton setBackgroundImage:[UIImage imageNamed:@"list-btn-click.png"] forState:UIControlStateHighlighted];
     [listButton addTarget:self action:@selector(swipCamera:) forControlEvents:UIControlEventTouchUpInside];
     
-    UIBarButtonItem *listButtonItem = [[UIBarButtonItem alloc] initWithCustomView:listButton];
+    listButtonItem = [[UIBarButtonItem alloc] initWithCustomView:listButton];
     
     self.navigationItem.rightBarButtonItem=listButtonItem;
-    [listButtonItem release];
     
     self.qieLandActionView.backgroundColor= [UIColor colorWithPatternImage:[UIImage imageNamed:@"toolbar_bk"]];
 #endif
@@ -3652,7 +3655,7 @@ extern unsigned int _getTickCount() {
         [btn addTarget:self action:@selector(selectCameraAction:) forControlEvents:UIControlEventTouchUpInside];
         [btn setBackgroundImage:[UIImage imageNamed:@"camera_list_background.png"] forState:UIControlStateSelected];
         [btn setBackgroundImage:[UIImage imageNamed:@"camera_list_background.png"] forState:UIControlStateHighlighted];
-        [btn setTitle:ca.name forState:UIControlStateNormal];
+        [btn setTitle:ca.uid forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         if([ca.uid isEqualToString:self.camera.uid]){
             btn.selected=YES;

@@ -168,6 +168,8 @@ extern NSString *deviceTokenString;
     UIView *swipCameraPopView;
     
     NSMutableArray *swipCameraBtns;
+    
+    UIBarButtonItem *listButtonItem;
 }
 
 //for Recording
