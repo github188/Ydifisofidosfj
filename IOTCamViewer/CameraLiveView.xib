@@ -1239,7 +1239,7 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GX2-Q8-Zyd">
-                            <rect key="frame" x="28" y="8" width="52" height="40"/>
+                            <rect key="frame" x="34" y="8" width="52" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" backgroundImage="monitor.png"/>
                             <state key="selected" backgroundImage="monitor-click.png"/>
@@ -1249,7 +1249,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fBw-xP-Tb3">
-                            <rect key="frame" x="115" y="8" width="52" height="40"/>
+                            <rect key="frame" x="482" y="8" width="52" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" backgroundImage="temperature.png"/>
                             <state key="selected" backgroundImage="temperature-click.png"/>
@@ -1259,7 +1259,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4Kv-bZ-fyL">
-                            <rect key="frame" x="209" y="8" width="52" height="40"/>
+                            <rect key="frame" x="300" y="8" width="52" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" backgroundImage="video.png"/>
                             <state key="selected" backgroundImage="video-click.png"/>
@@ -1268,18 +1268,8 @@
                                 <action selector="qieVideo:" destination="-1" eventType="touchUpInside" id="pDa-AW-9bt"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bHq-bm-TXj">
-                            <rect key="frame" x="297" y="8" width="52" height="40"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" backgroundImage="Photograph.png"/>
-                            <state key="selected" backgroundImage="Photograph-click.png"/>
-                            <state key="highlighted" backgroundImage="Photograph-click.png"/>
-                            <connections>
-                                <action selector="qieSnapshot:" destination="-1" eventType="touchUpInside" id="CWB-e4-h75"/>
-                            </connections>
-                        </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="94q-aF-irf">
-                            <rect key="frame" x="489" y="8" width="52" height="40"/>
+                            <rect key="frame" x="120" y="8" width="52" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" backgroundImage="microphone1.png"/>
                             <state key="selected" backgroundImage="microphone-click.png"/>
@@ -1289,13 +1279,23 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="N8E-mb-ZcU">
-                            <rect key="frame" x="394" y="8" width="52" height="40"/>
+                            <rect key="frame" x="393" y="8" width="52" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" backgroundImage="qvga.png"/>
                             <state key="selected" backgroundImage="qvga-click.png"/>
                             <state key="highlighted" backgroundImage="qvga-click.png"/>
                             <connections>
                                 <action selector="qieHuaZhi:" destination="-1" eventType="touchUpInside" id="hOQ-1U-MBO"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bHq-bm-TXj">
+                            <rect key="frame" x="214" y="8" width="52" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="Photograph.png"/>
+                            <state key="selected" backgroundImage="Photograph-click.png"/>
+                            <state key="highlighted" backgroundImage="Photograph-click.png"/>
+                            <connections>
+                                <action selector="qieSnapshot:" destination="-1" eventType="touchUpInside" id="CWB-e4-h75"/>
                             </connections>
                         </button>
                     </subviews>
