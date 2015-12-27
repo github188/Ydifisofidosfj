@@ -2223,6 +2223,7 @@ extern unsigned int _getTickCount() {
 #endif
         }
     }
+    self.cameraQVGANumber=tg;
 }
 
 -(void)initSettingFiveStatus:(NSInteger)tg withpView:(UIView *)pview{
@@ -3579,7 +3580,28 @@ extern unsigned int _getTickCount() {
 }
 - (IBAction)qieHuaZhi:(id)sender {
     self.qieWenDuLbl.hidden=YES;
-    UIActionSheet *sheet=[[UIActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel",nil) destructiveButtonTitle:nil  otherButtonTitles:NSLocalizedString(@"高清",nil),NSLocalizedString(@"标清",nil),NSLocalizedString(@"流畅",nil)  , nil];
+    UIActionSheet *sheet=[[UIActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel",nil) destructiveButtonTitle:NSLocalizedString(@"高清",nil)  otherButtonTitles:NSLocalizedString(@"标清",nil),NSLocalizedString(@"流畅",nil)  , nil];
+    
+    
+    NSInteger i=self.cameraQVGANumber;
+    
+    if(self.cameraQVGANumber>0){
+        if(self.cameraQVGANumber%2==0){
+            i=self.cameraQVGANumber-1;
+        }
+    }
+    
+    if(i==1){
+        sheet.destructiveButtonIndex=0;
+    }
+    else if(i==3)
+    {
+        sheet.destructiveButtonIndex=1;
+    }
+    else if(i==5){
+        sheet.destructiveButtonIndex=2;
+    }
+    
     [sheet showInView:self.view];
     [sheet release];
 }
@@ -3599,6 +3621,7 @@ extern unsigned int _getTickCount() {
         return;
     }
     [self onBtnSetQVGA1:i];
+    self.cameraQVGANumber=i;
 }
 - (IBAction)qiePhone:(id)sender {
     self.qieWenDuLbl.hidden=YES;

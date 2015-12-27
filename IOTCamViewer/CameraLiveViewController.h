@@ -176,6 +176,8 @@ extern NSString *deviceTokenString;
 
 //for Recording
 
+@property(nonatomic) NSInteger cameraQVGANumber;
+
 @property (retain, nonatomic) VideoGenerator* videoGenerator;
 
 @property (nonatomic, retain) NSNumber *viewTag;
