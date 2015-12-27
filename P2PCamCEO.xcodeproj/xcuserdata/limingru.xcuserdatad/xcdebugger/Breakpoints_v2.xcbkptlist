@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "IOTCamViewer/EditCameraAdvancedController.m"
-            timestampString = "470153256.38331"
+            timestampString = "472915745.341468"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1560"
-            endingLineNumber = "1560"
-            landmarkName = "-timeOutGetListWifiAPResp:"
+            startingLineNumber = "1606"
+            endingLineNumber = "1606"
+            landmarkName = "-onTimeZoneChanged:tzGMTDiff_In_Mins:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -90,6 +90,22 @@
             startingLineNumber = "1100"
             endingLineNumber = "1100"
             landmarkName = "-viewWillAppear:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "IOTCamViewer/EditCameraAdvancedController.m"
+            timestampString = "472915766.998388"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1389"
+            endingLineNumber = "1389"
+            landmarkName = "-camera:_didReceiveIOCtrlWithType:Data:DataSize:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

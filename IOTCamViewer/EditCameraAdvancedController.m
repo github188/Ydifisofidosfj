@@ -479,7 +479,11 @@ typedef struct
         return 1;
     } else if (section == [self getEventSettingSectionIndex]) {
         int row = 0;
+#if defined(QIEAPP)
+        row=2;
+#else
         if ([camera getMotionDetectionSettingSupportOfChannel:0]) row++;
+#endif
         return row;
     } else if (section == [self getRecordSettingSectionIndex]) {
         int row = 0;
@@ -816,14 +820,37 @@ typedef struct
         
         NSString *text = nil;
 #if defined(QIEAPP)
-        cell.textLabel.text = [NSString stringWithString:NSLocalizedString(@"人体红外感应", @"")];
-        UISwitch *switchView = [[UISwitch alloc] initWithFrame:CGRectZero];
-        switchView.tag = 99993;
-        cell.accessoryView = switchView;
-        [switchView setOn:isOpenHongWai];
-        [switchView addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
-        [switchView release];
-        cell.selectionStyle=UITableViewCellSelectionStyleNone;
+        if(indexPath.row==0){
+            if (soundDetection == 0)
+                text = [[NSString alloc] initWithString:NSLocalizedString(@"Off", @"")];
+            else if (soundDetection > 0 && soundDetection <= 25)
+                text = [[NSString alloc] initWithString:NSLocalizedString(@"Low", @"")];
+            else if (soundDetection > 25 && soundDetection <= 50)
+                text = [[NSString alloc] initWithString:NSLocalizedString(@"Medium", @"")];
+            else if (soundDetection > 50 && soundDetection <= 75)
+                text = [[NSString alloc] initWithString:NSLocalizedString(@"High", @"")];
+            else if (soundDetection == 100)
+                text = [[NSString alloc] initWithString:NSLocalizedString(@"Max", @"")];
+            else
+                text = nil;
+            
+            [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+            [cell setSelectionStyle:UITableViewCellSelectionStyleBlue];
+            
+            
+            cell.textLabel.text = [NSString stringWithString:NSLocalizedString(@"声音报警", @"")];
+            cell.detailTextLabel.text=text;
+        }
+        else{
+            cell.textLabel.text = [NSString stringWithString:NSLocalizedString(@"人体红外感应", @"")];
+            UISwitch *switchView = [[UISwitch alloc] initWithFrame:CGRectZero];
+            switchView.tag = 99993;
+            cell.accessoryView = switchView;
+            [switchView setOn:isOpenHongWai];
+            [switchView addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
+            [switchView release];
+            cell.selectionStyle=UITableViewCellSelectionStyleNone;
+        }
 #else
         if ([camera getMotionDetectionSettingSupportOfChannel:0]) {
          
@@ -1239,6 +1266,15 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     }
     else if (section == [self getEventSettingSectionIndex]) {
 #if defined(QIEAPP)
+        if(row==0){
+            MotionDetectionController *controller = [[MotionDetectionController alloc] initWithStyle:UITableViewStyleGrouped delgate:self];
+            controller.camera = self.camera;
+            controller.origValue = soundDetection;
+            controller.monitorType=1;
+            
+            [self.navigationController pushViewController:controller animated:YES];
+            [controller release];
+        }
 #else
         if (row == [self getMotionDetectionSettingRowIndex]) {
 			if( ![self readyToPushNextVC] ) {
@@ -1249,6 +1285,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
             MotionDetectionController *controller = [[MotionDetectionController alloc] initWithStyle:UITableViewStyleGrouped delgate:self];
             controller.camera = self.camera;
             controller.origValue = motionDetection;
+            controller.monitorType=0;
             
             [self.navigationController pushViewController:controller animated:YES];
             [controller release];            
@@ -1347,6 +1384,11 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 				break;
 			}
 		}
+        if(type==IOTYPE_USER_IPCAM_GETSOUNDDETECT_RESP){
+            SMsgAVIoctrlGetSoundDetectResp *res=(SMsgAVIoctrlGetSoundDetectResp*)data;
+            soundDetection=res->sensitivity;
+            [self.tableView reloadData];
+        }
         if(type == IOTYPE_USER_IPCAM_GET_TIMEZONE_RESP_EXT) {
             NSLog( @">>>> IOTYPE_USER_IPCAM_GET_TIMEZONE_RESP_EXT" );
             SMsgAVIoctrlTimeZoneExt *s = (SMsgAVIoctrlTimeZoneExt *)data;
@@ -1490,9 +1532,13 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 }
 
 #pragma mark - MotionDetectionDelegate Methods
-- (void)didSetMotionDetection:(NSInteger)value {
-    
-    motionDetection = value;
+- (void)didSetMotionDetection:(NSInteger)value withType:(NSInteger)type {
+    if(type==0){
+        motionDetection = value;
+    }
+    else{
+        soundDetection=value;
+    }
     [self.tableView reloadData];
 }
 
@@ -1738,6 +1784,16 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
                            Data:(char *)s
                        DataSize:sizeof(SMsgAVIoctrlDeviceInfoReq)];
     free(s);
+#endif
+    
+#if defined(QIEAPP)
+    //增加声音报警
+    SMsgAVIoctrlGetSoundDetectReq *audioAlarm = (SMsgAVIoctrlGetSoundDetectReq *)malloc(sizeof(SMsgAVIoctrlGetSoundDetectReq));
+    memset(audioAlarm, 0, sizeof(SMsgAVIoctrlGetSoundDetectReq));
+    
+    audioAlarm->channel=0;
+    [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GETSOUNDDETECT_REQ Data:(char *)audioAlarm DataSize:sizeof(SMsgAVIoctrlGetSoundDetectReq)];
+    free(audioAlarm);
 #endif
 }
 

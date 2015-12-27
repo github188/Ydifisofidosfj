@@ -92,6 +92,8 @@ extern FMDatabase *database;
         CGRect detailFrame;
         
         BOOL isOpenHongWai;
+        
+        NSInteger soundDetection;
 }
 
 @property (nonatomic, retain) NSTimer* timerListWifiApResp;

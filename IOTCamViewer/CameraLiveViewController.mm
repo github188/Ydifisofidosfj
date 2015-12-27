@@ -1173,7 +1173,7 @@ extern unsigned int _getTickCount() {
         self.view.backgroundColor=HexRGB(0xe1e1e1);
         self.qieActionView.hidden=NO;
         self.qieActionView.frame=CGRectMake(0, self.view.frame.size.height-self.qieActionView.frame.size.height, self.qieActionView.frame.size.width, self.qieActionView.frame.size.height);
-        self.qieWenDuLbl.hidden=NO;
+        //self.qieWenDuLbl.hidden=NO;
         self.qieWenDuLbl.frame=CGRectMake(0, self.scrollViewPortrait.frame.size.height-self.qieWenDuLbl.frame.size.height, self.qieWenDuLbl.frame.size.width, self.qieWenDuLbl.frame.size.height);
         self.qieWenDuLbl.backgroundColor=[UIColor clearColor];
         if(![[self.view subviews] containsObject:self.qieWenDuLbl]){

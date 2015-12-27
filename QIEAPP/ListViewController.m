@@ -132,12 +132,7 @@
             [tempCamera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];
             [camera_list addObject:tempCamera];
             
-            //增加声音报警
-            SMsgAVIoctrlSetSoundDetectReq *audioAlarm = (SMsgAVIoctrlSetSoundDetectReq *)malloc(sizeof(SMsgAVIoctrlSetSoundDetectReq));
-            audioAlarm->channel=0;
-            audioAlarm->sensitivity=100;
-            [tempCamera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_SETSOUNDDETECT_REQ Data:(char *)audioAlarm DataSize:sizeof(SMsgAVIoctrlSetSoundDetectReq)];
-            free(audioAlarm);
+
             
             [tempCamera release];
         }
