@@ -170,6 +170,8 @@ extern NSString *deviceTokenString;
     NSMutableArray *swipCameraBtns;
     
     UIBarButtonItem *listButtonItem;
+    
+    NSTimer *wenDuLblTimer;
 }
 
 //for Recording

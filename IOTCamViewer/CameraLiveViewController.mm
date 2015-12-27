@@ -1068,7 +1068,7 @@ extern unsigned int _getTickCount() {
         self.qieLandActionView.frame=CGRectMake(0, self.view.frame.size.height-self.qieLandActionView.frame.size.height, self.qieLandActionView.frame.size.width, self.qieLandActionView.frame.size.height);
         if(![[self.view subviews] containsObject:self.qieWenDuLbl]){
             [self.view addSubview:self.qieWenDuLbl];
-            self.qieWenDuLbl.frame=CGRectMake(0, self.qieLandActionView.frame.origin.y-self.qieWenDuLbl.frame.size.height, self.qieWenDuLbl.frame.size.width, self.qieWenDuLbl.frame.size.height);
+            self.qieWenDuLbl.frame=CGRectMake(0, self.qieLandActionView.frame.origin.y-self.qieWenDuLbl.frame.size.height-self.navigationController.navigationBar.frame.size.height-20, self.qieWenDuLbl.frame.size.width, self.qieWenDuLbl.frame.size.height);
         }
         self.qieWenDuLbl.hidden=YES;
 #endif
@@ -1332,6 +1332,13 @@ extern unsigned int _getTickCount() {
     [_qieLandHuaZhiBtn release];
     [_qieLandPhoneBtn release];
     [listButtonItem release];
+    if(wenDuLblTimer){
+        if([wenDuLblTimer isValid]){
+            [wenDuLblTimer invalidate];
+        }
+        [wenDuLblTimer release];
+        wenDuLblTimer  =nil;
+    }
     [super dealloc];
 }
 
@@ -3496,9 +3503,11 @@ extern unsigned int _getTickCount() {
     }*/
 }
 - (IBAction)qieSnapshot:(id)sender {
+    self.qieWenDuLbl.hidden=YES;
     [self snapshot:sender];
 }
 - (IBAction)qiemonito:(id)sender {
+    self.qieWenDuLbl.hidden=YES;
     if(isTalking){
         [camera stopSoundToDevice:selectedChannel];
         isTalking = NO;
@@ -3542,8 +3551,21 @@ extern unsigned int _getTickCount() {
     s2->channel=0;
     [self.camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_EnParam_REQ Data:(char *)s2 DataSize:sizeof(SMsgAVIoctrlGetEnParamReq)];
     free(s2);
+    if(wenDuLblTimer){
+        if([wenDuLblTimer isValid]){
+            [wenDuLblTimer invalidate];
+        }
+        [wenDuLblTimer release];
+        wenDuLblTimer  =nil;
+    }
+    wenDuLblTimer = [NSTimer scheduledTimerWithTimeInterval:10.0f target:self selector:@selector(hiddenWenDuLabl) userInfo:nil repeats:NO];
+    [wenDuLblTimer retain];
+}
+-(void)hiddenWenDuLabl{
+    self.qieWenDuLbl.hidden=YES;
 }
 - (IBAction)qieVideo:(id)sender {
+    self.qieWenDuLbl.hidden=YES;
     isQVGAView = NO;
     isEModeView = NO;
     isActive = NO;
@@ -3556,6 +3578,7 @@ extern unsigned int _getTickCount() {
     [self onBtnRecording];
 }
 - (IBAction)qieHuaZhi:(id)sender {
+    self.qieWenDuLbl.hidden=YES;
     UIActionSheet *sheet=[[UIActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel",nil) destructiveButtonTitle:nil  otherButtonTitles:NSLocalizedString(@"高清",nil),NSLocalizedString(@"标清",nil),NSLocalizedString(@"流畅",nil)  , nil];
     [sheet showInView:self.view];
     [sheet release];
@@ -3578,6 +3601,7 @@ extern unsigned int _getTickCount() {
     [self onBtnSetQVGA1:i];
 }
 - (IBAction)qiePhone:(id)sender {
+    self.qieWenDuLbl.hidden=YES;
     if(!isTalking){
         if(!self.isTalkButtonAction)
         {
