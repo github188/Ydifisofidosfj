@@ -1363,7 +1363,7 @@ extern unsigned int _getTickCount() {
     
     self.navigationItem.rightBarButtonItem=listButtonItem;
     
-    self.qieLandActionView.backgroundColor= [UIColor colorWithPatternImage:[UIImage imageNamed:@"toolbar_bk"]];
+    self.qieLandActionView.backgroundColor= [UIColor colorWithPatternImage:[UIImage imageNamed:@"title_bk"]];
 #endif
     
     //button长按事件
