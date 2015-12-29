@@ -16227,7 +16227,7 @@
 						DevelopmentTeam = G795A5K2W9;
 					};
 					066D9E3B1B037E7C00408AF2 = {
-						DevelopmentTeam = Y93RM4F8S2;
+						DevelopmentTeam = 87WV2TC9J7;
 					};
 					0682DE0D1B08CCF30019BD70 = {
 						DevelopmentTeam = Q2PV74KQN7;
@@ -27423,7 +27423,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Bayit Home Automation Corp. (Y93RM4F8S2)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen EasyN Technology Co. Ltd";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -27459,9 +27459,9 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bayit.p2pcam;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bayit.p2pcam.test;
 				PRODUCT_NAME = "Bayit Cam";
-				PROVISIONING_PROFILE = "95461a7a-3823-4b47-aa3b-820ac3de60a6";
+				PROVISIONING_PROFILE = "d0ec15c2-830f-466b-b379-12aca309d3b6";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -27475,7 +27475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Bayit Home Automation Corp. (Y93RM4F8S2)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen EasyN Technology Co. Ltd";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -27512,9 +27512,9 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bayit.p2pcam;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bayit.p2pcam.test;
 				PRODUCT_NAME = "Bayit Cam";
-				PROVISIONING_PROFILE = "95461a7a-3823-4b47-aa3b-820ac3de60a6";
+				PROVISIONING_PROFILE = "d0ec15c2-830f-466b-b379-12aca309d3b6";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -27528,7 +27528,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Bayit Home Automation Corp. (Y93RM4F8S2)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen EasyN Technology Co. Ltd";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -27565,9 +27565,9 @@
 					"-DP2PCAMLIVE",
 					"-DSUPPORT_DROPBOX",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bayit.p2pcam;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bayit.p2pcam.test;
 				PRODUCT_NAME = "Bayit Cam";
-				PROVISIONING_PROFILE = "95461a7a-3823-4b47-aa3b-820ac3de60a6";
+				PROVISIONING_PROFILE = "d0ec15c2-830f-466b-b379-12aca309d3b6";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -27581,7 +27581,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Bayit Home Automation Corp. (Y93RM4F8S2)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen EasyN Technology Co. Ltd";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -27617,9 +27617,9 @@
 					"-DNS_BLOCK_ASSERTIONS=1",
 					"-DP2PCAMLIVE",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bayit.p2pcam;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bayit.p2pcam.test;
 				PRODUCT_NAME = "Bayit Cam";
-				PROVISIONING_PROFILE = "95461a7a-3823-4b47-aa3b-820ac3de60a6";
+				PROVISIONING_PROFILE = "d0ec15c2-830f-466b-b379-12aca309d3b6";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
