@@ -31,6 +31,7 @@
     // Do any additional setup after loading the view from its nib.
     [self loadDeviceFromDatabase];
     self.myTableView.sectionIndexBackgroundColor=[UIColor clearColor];
+    self.noCameraTipLbl.text=NSLocalizedString(@"设备列表暂无摄像机,请点击屏幕下方的添加按钮新增摄像机", nil);
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];

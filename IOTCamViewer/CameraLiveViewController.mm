@@ -1093,9 +1093,12 @@ extern unsigned int _getTickCount() {
         }
         self.navigationItem.rightBarButtonItem=listButtonItem;
 #endif
-        
+        static CGFloat py=-1;
+        if(py==-1){
+            py=self.scrollViewPortrait.frame.origin.y;
+        }
         //动态布局
-        self.scrollViewPortrait.frame=CGRectMake(0, self.scrollViewPortrait.frame.origin.y+5, self.view.frame.size.width, self.view.frame.size.width/4*3);
+        self.scrollViewPortrait.frame=CGRectMake(0, py+5, self.view.frame.size.width, self.view.frame.size.width/4*3);
         self.scrollViewPortrait.contentSize=self.scrollViewPortrait.frame.size;
         self.monitorPortrait.frame=CGRectMake(0, 0, self.scrollViewPortrait.frame.size.width, self.scrollViewPortrait.frame.size.height);
         statusBar.frame=CGRectMake(0, 0, self.view.frame.size.width, statusBar.frame.size.height);
@@ -1163,12 +1166,12 @@ extern unsigned int _getTickCount() {
 #if defined(QIEAPP)
         self.myPtzView.hidden=YES;
         self.horizMenu.hidden=YES;
-        self.statusLabel.hidden=YES;
-        statusBar.hidden=YES;
-        frameInfoLabel.hidden=YES;
-        videoInfoLabel.hidden=YES;
-        _qualityLabel.hidden=YES;
-        self.scrollViewPortrait.frame=CGRectMake(0, 0, self.scrollViewPortrait.frame.size.width, self.scrollViewPortrait.frame.size.height);
+        //self.statusLabel.hidden=YES;
+        //statusBar.hidden=YES;
+        //frameInfoLabel.hidden=YES;
+        //videoInfoLabel.hidden=YES;
+        //_qualityLabel.hidden=YES;
+        self.scrollViewPortrait.frame=CGRectMake(0, self.scrollViewPortrait.frame.origin.y, self.scrollViewPortrait.frame.size.width, self.scrollViewPortrait.frame.size.height);
         self.loadingViewPortrait.frame=CGRectMake(self.scrollViewPortrait.frame.size.width/2-self.loadingViewPortrait.frame.size.width/2, self.scrollViewPortrait.frame.origin.y+self.scrollViewPortrait.frame.size.height/2-self.loadingViewPortrait.frame.size.height/2, self.loadingViewPortrait.frame.size.width, self.loadingViewPortrait.frame.size.height);
         self.view.backgroundColor=HexRGB(0xe1e1e1);
         self.qieActionView.hidden=NO;
