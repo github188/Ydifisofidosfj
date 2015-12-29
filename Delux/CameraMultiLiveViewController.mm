@@ -1846,6 +1846,7 @@ extern unsigned int _getTickCount() ;
 
 - (void)onTimerStartShowRevoke:(NSTimer*)aTimer {
 	GLog( tStartShow|tUI, (@"+++CameraMultiLiveViewController - onTimerStartShowRevoke:@%p", aTimer) );
+    if(isGoPlayEvent) return;
 	
 	int idx = 0;
 	for( MyCamera* theCamera in cameraArray ) {
