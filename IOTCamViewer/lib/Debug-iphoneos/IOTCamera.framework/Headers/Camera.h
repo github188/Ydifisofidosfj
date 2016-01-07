@@ -123,7 +123,9 @@ typedef struct SUB_STREAM SubStream_t;
 - (void)startSoundToDevice:(NSInteger)channel;
 - (void)startSoundToDevice:(NSInteger)channel observer:(id<SoundToDeviceObserver>)aSoundToDeviceObserver;
 - (void)stopSoundToDevice:(NSInteger)channel;
+
 - (void)sendIOCtrlToChannel:(NSInteger)channel Type:(NSInteger)type Data:(char *)buff DataSize:(NSInteger)size;
+
 - (unsigned int)getChannel:(NSInteger)channel Snapshot:(char *)imgData dataSize:(unsigned int)size WithImageWidth:(unsigned int *)width ImageHeight:(unsigned int *)height;
 - (unsigned int)getChannel:(NSInteger)channel Snapshot:(char *)imgData DataSize:(unsigned int)size ImageType:(unsigned int*)codec_id WithImageWidth:(unsigned int *)width ImageHeight:(unsigned int *)height;
 - (NSString *)getViewAccountOfChannel:(NSInteger)channel;

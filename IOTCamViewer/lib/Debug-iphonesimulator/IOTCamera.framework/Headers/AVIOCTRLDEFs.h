@@ -488,7 +488,7 @@ typedef struct
 
 /*
 IOTYPE_USER_IPCAM_SETMOTIONDETECT_RESP	= 0x0325,
-** @struct SMsgAVIoctrlSetMotionDetectResp
+** @struct SMsgAVIoctrlSetMotionDetectRes;
 */
 typedef struct
 {

@@ -19,8 +19,13 @@
 #import "FMDatabase.h"
 #import "DeviceListOnCloud.h"
 #import "ChooseViewController.h"
-#if defined(CameraMailSetting)
+#if defined(CameraMailSetting)|| defined(CamLineProTarget)
 #import "MailSettingController.h"
+#import "FTPSettingController.h"
+#endif
+
+#ifdef CamLineProTarget
+#import "RecordingSettingController.h"
 #endif
 
 #define SECURITYCODE_SECTION_INDEX 0
@@ -29,13 +34,19 @@
 #define EVENT_SECTION_INDEX 3
 #define RECORD_SECTION_INDEX 4
 #define ABOUTDEVICE_SECTION_INDEX 5
+//for CamLineProTarget
+#define CamLineProTarget_SECTION_INDEX 3
+#define ALARM_SETTING_ROW 0
+#define FTP_SETTING_ROW 1
+#define MAIL_SETTING_ROW 2
+#define SD_CARD_REC_SETTING_ROW 3
 
 extern FMDatabase *database;
 
 @protocol EditCameraAdvancedDelegate;
-#if defined(CameraMailSetting)
+#if defined(CameraMailSetting) || defined(CamLineProTarget)
 @interface EditCameraAdvancedController : UITableViewController 
-<MyCameraDelegate, RecordingModeDelegate, MotionDetectionDelegate, VideoQualityDelegate, VideoFlipDelegate, EnvironmentModeDelegate, SecurityCodeDelegate, WiFiNetworkDelegate, TimeZoneChangedDelegate, DeviceOnCloudDelegate,ChooseDelegate,MailSettingDelegate> {
+<MyCameraDelegate, RecordingModeDelegate, MotionDetectionDelegate, VideoQualityDelegate, VideoFlipDelegate, EnvironmentModeDelegate, SecurityCodeDelegate, WiFiNetworkDelegate, TimeZoneChangedDelegate, DeviceOnCloudDelegate,ChooseDelegate,MailSettingDelegate,FTPSettingDelegate> {
 #else
 @interface EditCameraAdvancedController : UITableViewController
     <MyCameraDelegate, RecordingModeDelegate, MotionDetectionDelegate, VideoQualityDelegate, VideoFlipDelegate, EnvironmentModeDelegate, SecurityCodeDelegate, WiFiNetworkDelegate, TimeZoneChangedDelegate, DeviceOnCloudDelegate,ChooseDelegate> {

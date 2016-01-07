@@ -7,9 +7,10 @@
 */
 
 /* No comment provided by engineer. */
-"Place a barcode inside the viewfinder rectangle to scan it." = "Place a barcode inside the viewfinder rectangle to scan it.";
+"Place a barcode inside the viewfinder rectangle to scan it." = "請將二維條碼對準於方框內";
 
-"Cancel" = "Cancel";
+"Cancel" = "取消";
 
-"Light" = "Light";
+"Light" = "閃燈";
+
 

@@ -15,6 +15,7 @@
 #define ADVANCED_SECTION_INDEX 1
 #define RECONNECT_SECTION_INDEX 2
 #define DELETE_SECTION_INDEX 3
+#define REBOOT_SECTION_INDEX 4
 
 #define NAME_ROW_INDEX 0
 // #define UID_ROW_INDEX 0
@@ -25,6 +26,8 @@
 #define RECONNECT_ROW_INDEX 0
 
 #define DELETE_ROW_INDEX 0
+
+#define REBOOT_ROW_INDEX 0
 
 #import <UIKit/UIKit.h>
 #import "MyCamera.h"

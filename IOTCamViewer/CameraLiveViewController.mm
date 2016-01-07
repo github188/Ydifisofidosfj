@@ -601,6 +601,48 @@ extern unsigned int _getTickCount() {
     free(s);
 }
 
+//获取设备的contrast
+-(void)getContrast{
+    SMsgAVIoctrlGetContrastReq *s = (SMsgAVIoctrlGetContrastReq *)malloc(sizeof(SMsgAVIoctrlGetContrastReq));
+    memset(s, 0, sizeof(SMsgAVIoctrlGetContrastReq));
+    
+    s->channel = 0;
+    
+    [camera sendIOCtrlToChannel:0
+                           Type:IOTYPE_HICHIP_GETCONTRAST_REQ 
+                           Data:(char *)s
+                       DataSize:sizeof(SMsgAVIoctrlGetContrastReq)];
+    
+    free(s);
+}
+
+//获取设备的亮度
+-(void)getBright{
+    SMsgAVIoctrlGetBrightReq *s = (SMsgAVIoctrlGetBrightReq *)malloc(sizeof(SMsgAVIoctrlGetBrightReq));
+    memset(s, 0, sizeof(SMsgAVIoctrlGetBrightReq));
+    
+    s->channel = 0;
+    
+    [camera sendIOCtrlToChannel:0
+                           Type:IOTYPE_HICHIP_GETBRIGHT_REQ
+                           Data:(char *)s
+                       DataSize:sizeof(SMsgAVIoctrlGetBrightReq)];
+    
+    free(s);
+}
+//获取设备的红外开关状态
+-(void)getLEDLight{
+    SMsgAVIoctrlExGetLEDReq *s = (SMsgAVIoctrlExGetLEDReq *)malloc(sizeof(SMsgAVIoctrlExGetLEDReq));
+    memset(s, 0, sizeof(SMsgAVIoctrlExGetLEDReq));
+    
+    [camera sendIOCtrlToChannel:0
+                           Type:IOTYPE_USEREX_IPCAM_GET_LED_REQ
+                           Data:(char *)s
+                       DataSize:sizeof(SMsgAVIoctrlExGetLEDReq)];
+    
+    free(s);
+}
+
 - (void)onBtnSetCamera {
     EditCameraDefaultController *controller = [[EditCameraDefaultController alloc] initWithStyle:UITableViewStyleGrouped];
     controller.camera = camera;
@@ -950,7 +992,7 @@ extern unsigned int _getTickCount() {
         self.talkButtonBtn.frame=CGRectMake(AudioTitle.frame.origin.x+AudioTitle.frame.size.width, talkButton.frame.size.height-self.talkButtonBtn.frame.size.height, self.talkButtonBtn.frame.size.width, self.talkButtonBtn.frame.size.height);
     }
 }
-
+#pragma mark - 转屏时调用 (attach相机；刷新界面，重载水平按钮)
 - (void)changeOrientation:(UIInterfaceOrientation)orientation {
     
     if (orientation == UIInterfaceOrientationLandscapeLeft ||
@@ -962,10 +1004,15 @@ extern unsigned int _getTickCount() {
         
         [monitorPortrait deattachCamera];
         [monitorLandscape attachCamera:camera];
-        
+    
 		[self removeGLView:FALSE];
         self.view = self.landscapeView;
+#if defined(CamLineProTarget) //2015 -12 -27 jay
+        self.items = nil;
         
+        self.items = [NSMutableArray arrayWithObjects:@"psd_contrast",@"psd_bright",@"infrared",@"restore",nil];
+        self.selectItems = [NSMutableArray arrayWithObjects: @"psd_contrast_clicked",@"psd_bright_clicked",@"infrared_click",@"restore_click",nil];
+#endif
         [self.longHorizMenu reloadData];
         [self checkLongBTN];
         
@@ -981,11 +1028,12 @@ extern unsigned int _getTickCount() {
 //        [longAudioTitle setContentHorizontalAlignment:UIControlContentHorizontalAlignmentCenter];
 //        self.longTalkButtonBtn.frame=CGRectMake(longAudioTitle.frame.origin.x+longAudioTitle.frame.size.width, longTalkButton.frame.size.height-self.longTalkButtonBtn.frame.size.height, self.longTalkButtonBtn.frame.size.width, self.longTalkButtonBtn.frame.size.height);
         
+        //15 ->30jay
+        longQVGAView.frame=CGRectMake(self.view.frame.size.width/2-longQVGAView.frame.size.width/2, self.view.frame.size.height-self.longHorizMenu.frame.size.height-longQVGAView.frame.size.height-30, longQVGAView.frame.size.width, longQVGAView.frame.size.height);
         
-        longQVGAView.frame=CGRectMake(self.view.frame.size.width/2-longQVGAView.frame.size.width/2, self.view.frame.size.height-self.longHorizMenu.frame.size.height-longQVGAView.frame.size.height-15, longQVGAView.frame.size.width, longQVGAView.frame.size.height);
-        
-        self.landBrightView.frame=CGRectMake(self.view.frame.size.width/2-self.landBrightView.frame.size.width/2, self.view.frame.size.height-self.longHorizMenu.frame.size.height-self.landBrightView.frame.size.height-15, self.landBrightView.frame.size.width, self.landBrightView.frame.size.height);
-        self.landConstrastView.frame=CGRectMake(self.view.frame.size.width/2-self.landConstrastView.frame.size.width/2, self.view.frame.size.height-self.longHorizMenu.frame.size.height-self.landConstrastView.frame.size.height-15, self.landConstrastView.frame.size.width, self.landConstrastView.frame.size.height);
+        self.landBrightView.frame=CGRectMake(self.view.frame.size.width/2-self.landBrightView.frame.size.width/2, self.view.frame.size.height-self.longHorizMenu.frame.size.height-self.landBrightView.frame.size.height-30, self.landBrightView.frame.size.width, self.landBrightView.frame.size.height);
+        NSLog(@"y值为：%f",self.landBrightView.frame.origin.y);
+        self.landConstrastView.frame=CGRectMake(self.view.frame.size.width/2-self.landConstrastView.frame.size.width/2, self.view.frame.size.height-self.longHorizMenu.frame.size.height-self.landConstrastView.frame.size.height-30, self.landConstrastView.frame.size.width, self.landConstrastView.frame.size.height);
         
         longEModeView.frame=CGRectMake(self.view.frame.size.width/2-longEModeView.frame.size.width/2, self.view.frame.size.height-self.longHorizMenu.frame.size.height-longEModeView.frame.size.height, longEModeView.frame.size.width, longEModeView.frame.size.height);
         self.loadingViewLandscape.frame=CGRectMake(self.view.frame.size.width/2-self.loadingViewLandscape.frame.size.width/2, self.view.frame.size.height/2-self.loadingViewLandscape.frame.size.height/2, self.loadingViewLandscape.frame.size.width, self.loadingViewLandscape.frame.size.height);
@@ -1036,6 +1084,12 @@ extern unsigned int _getTickCount() {
         
 		[self removeGLView:TRUE];
         self.view = self.portraitView;
+#if defined(CamLineProTarget) //2015 -12 -27 jay
+        self.items = nil;
+        
+        self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot",@"ceo_presetting_enable.png", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",nil];
+        self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked",@"ceo_presetting_clicked.png", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click",nil];
+#endif
         
         [self.horizMenu reloadData];
         [self checkBTN];
@@ -1112,9 +1166,10 @@ extern unsigned int _getTickCount() {
 {
     return self.navigationController.navigationBarHidden;
 }
-
+#pragma mark  屏幕旋转2
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration 
 {
+    //2
     [self changeOrientation:toInterfaceOrientation];
 }
 
@@ -1238,6 +1293,11 @@ extern unsigned int _getTickCount() {
     [_preBtn4 release];
     [_preNumView release];
     [_test release];
+    [_longInfraredView release];
+    [_longInfraredOpen release];
+    [_longInfraredClose release];
+    [_longInfraredAuto release];
+    [_longInfraredTitle release];
     [super dealloc];
 }
 
@@ -1265,7 +1325,7 @@ extern unsigned int _getTickCount() {
     [longPress2 release];
     [longPress3 release];
     [longPress4 release];
-    
+#pragma mark 初始化ui
     self.prePositionTitleLbl.text=NSLocalizedString(@"Preset", @"");
     self.prePositionTipsLbl.text=NSLocalizedString(@"Click to move preset, Longpress to save", @"");
     
@@ -1354,7 +1414,7 @@ extern unsigned int _getTickCount() {
     [self.portaitContrastMiddle setTitle:NSLocalizedString(@"Medium", @"") forState:UIControlStateNormal];
     [self.portaitContrastLow setTitle:NSLocalizedString(@"Low", @"") forState:UIControlStateNormal];
     [self.portaitContrastLowest setTitle:NSLocalizedString(@"Lowest", @"") forState:UIControlStateNormal];
-    
+    //横屏对比度亮度
     [self.landBrightHighest setTitle:NSLocalizedString(@"Highest", @"") forState:UIControlStateNormal];
     [self.landBrightHigh setTitle:NSLocalizedString(@"High", @"") forState:UIControlStateNormal];
     [self.landBrightMiddle setTitle:NSLocalizedString(@"Medium", @"") forState:UIControlStateNormal];
@@ -1380,48 +1440,8 @@ extern unsigned int _getTickCount() {
     }
     
     self.navigationController.navigationBar.translucent = NO;
-#if defined(MAJESTICIPCAMP)
-    self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"psd_bright",@"psd_contrast",nil];
-    self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked", @"psd_bright_clicked",@"psd_contrast_clicked",nil];
-#else
-    self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot",@"ceo_presetting_enable.png", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",nil];
-    self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked",@"ceo_presetting_clicked.png", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click",nil];
-#endif
-#if defined(BayitCam)
-    self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot",@"ceo_presetting_enable.png", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",nil];
-    self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked",@"ceo_presetting_clicked.png", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",nil];
-#endif
-    [scrollQVGAView setContentSize:qvgaView.frame.size];
-    [scrollQVGAView setClipsToBounds:YES];
-    scrollQVGAView.delegate = self;
     
-    [scrollEModeView setContentSize:emodeView.frame.size];
-    [scrollEModeView setClipsToBounds:YES];
-    scrollEModeView.delegate = self;
     
-    [self.portraitConstrastScrollView setContentSize:self.portraitContrastView.frame.size];
-    [self.portraitConstrastScrollView setClipsToBounds:YES];
-    self.portraitConstrastScrollView.delegate=self;
-    
-    [self.portraitBrightScrollView setContentSize:self.portraitBrightView.frame.size];
-    [self.portraitBrightScrollView setClipsToBounds:YES];
-    self.portraitBrightScrollView.delegate=self;
-    
-    UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
-    [self.scrollViewLandscape addGestureRecognizer:singleFingerTap];
-    [singleFingerTap release];
-    
-    isListening = NO;
-    isTalking = NO;
-    isQVGAView = NO;
-    isVerticalFlip = NO;
-    isHorizontalFlip = NO;
-    isEModeView = NO;
-    isActive = NO;
-    [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(recordingStarted:) name: kNOTF_RECORDING_STARTED object: nil];
-    [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(recordingStopped:) name: kNOTF_RECORDING_STOPPED object: nil];
-    [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(cameraStopShowCompleted:) name: @"CameraStopShowCompleted" object: nil];
-	
 #ifndef MacGulp
     self.navigationItem.title = NSLocalizedString(@"Live View", @"");
 #else
@@ -1469,28 +1489,26 @@ extern unsigned int _getTickCount() {
     self.loadingViewLandscape.hidesWhenStopped = YES;
     self.loadingViewPortrait.hidesWhenStopped = YES;
     
-    popoverClass = [WEPopoverController class];
+    [scrollQVGAView setContentSize:qvgaView.frame.size];
+    [scrollQVGAView setClipsToBounds:YES];
+    scrollQVGAView.delegate = self;
     
-    //selectedChannel = 0;
-    wrongPwdRetryTime = 0;
+    [scrollEModeView setContentSize:emodeView.frame.size];
+    [scrollEModeView setClipsToBounds:YES];
+    scrollEModeView.delegate = self;
     
-    //self.library = [[ALAssetsLibrary alloc] init];
+    [self.portraitConstrastScrollView setContentSize:self.portraitContrastView.frame.size];
+    [self.portraitConstrastScrollView setClipsToBounds:YES];
+    self.portraitConstrastScrollView.delegate=self;
     
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(applicationWillResignActive:)
-                                                 name:UIApplicationWillResignActiveNotification
-                                               object:nil];
+    [self.portraitBrightScrollView setContentSize:self.portraitBrightView.frame.size];
+    [self.portraitBrightScrollView setClipsToBounds:YES];
+    self.portraitBrightScrollView.delegate=self;
     
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(applicationDidBecomeActive:)
-                                                 name:UIApplicationDidBecomeActiveNotification
-                                               object:nil];
+    UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
+    [self.scrollViewLandscape addGestureRecognizer:singleFingerTap];
+    [singleFingerTap release];
 
-	camera.delegate2 = self;
-    
-//    [self initQVGAMode:[MyCamera getCameraQVGA:self.camera]];
-    
-    
 #if defined(SVIPCLOUD)
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:HexRGB(0x3d3c3c),NSForegroundColorAttributeName,nil]];
     statusLabel.textColor=HexRGB(0x3d3c3c);
@@ -1524,6 +1542,66 @@ extern unsigned int _getTickCount() {
     [longSetNight setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
     [longEModeTitle setTitleColor:HexRGB(0x3d3c3c) forState:UIControlStateNormal];
 #endif
+//addjay 2015 12 28
+    /*** 红外开关 ****/
+#ifdef CamLineProTarget
+    [self.longInfraredTitle setTitle:NSLocalizedString(@"Led Light", @"") forState:UIControlStateNormal];
+    [self.longInfraredOpen setTitle:NSLocalizedString(@"Open", @"") forState:UIControlStateNormal];
+    [self.longInfraredClose setTitle:NSLocalizedString(@"Close", @"") forState:UIControlStateNormal];
+    [self.longInfraredAuto setTitle:NSLocalizedString(@"Auto", @"") forState:UIControlStateNormal];
+#endif
+    
+#pragma mark 初始化数据
+    
+#if defined(MAJESTICIPCAMP)
+    self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"psd_bright",@"psd_contrast",nil];
+    self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked", @"psd_bright_clicked",@"psd_contrast_clicked",nil];
+#else
+    self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot",@"ceo_presetting_enable.png", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",@"f+Btn", @"f-Btn",nil];
+    self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_recordstop", @"leo_snapshot_clicked",@"ceo_presetting_clicked.png", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",@"f+Btn_Click", @"f-Btn_Click",nil];
+#endif
+#if defined(BayitCam)
+    self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot",@"ceo_presetting_enable.png", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",nil];
+    self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked",@"ceo_presetting_clicked.png", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",nil];
+#endif
+    
+    isListening = NO;
+    isTalking = NO;
+    isQVGAView = NO;
+    isVerticalFlip = NO;
+    isHorizontalFlip = NO;
+    isEModeView = NO;
+    isActive = NO;
+    
+#pragma mark 增加对应通知
+   
+    [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(recordingStarted:) name: kNOTF_RECORDING_STARTED object: nil];
+    [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(recordingStopped:) name: kNOTF_RECORDING_STOPPED object: nil];
+    [[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(cameraStopShowCompleted:) name: @"CameraStopShowCompleted" object: nil];
+	
+    
+    popoverClass = [WEPopoverController class];
+    
+    //selectedChannel = 0;
+    wrongPwdRetryTime = 0;
+    
+    //self.library = [[ALAssetsLibrary alloc] init];
+    //设置app状态通知
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(applicationWillResignActive:)
+                                                 name:UIApplicationWillResignActiveNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(applicationDidBecomeActive:)
+                                                 name:UIApplicationDidBecomeActiveNotification
+                                               object:nil];
+
+	camera.delegate2 = self;
+    
+//    [self initQVGAMode:[MyCamera getCameraQVGA:self.camera]];
+    
+    
     
     [super viewDidLoad];
 }
@@ -1571,7 +1649,7 @@ extern unsigned int _getTickCount() {
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
     [self changeOrientation:self.interfaceOrientation];
-    [self getEMode];
+    //[self getEMode]; //modif by jay
     
     camera.isChangeChannel = YES;
 #ifdef DEF_Using_APLEAGLView
@@ -1649,10 +1727,15 @@ extern unsigned int _getTickCount() {
         }
         
         [self verifyConnectionStatus];
-        
-        if (camera.sessionState != CONNECTION_STATE_CONNECTED)
+        if (camera.sessionState == CONNECTION_STATE_CONNECTED) {
+            //add by jay
+            [self getEMode];
+            [self getContrast];
+            [self getBright];
+            [self getLEDLight];
+        }else if(camera.sessionState != CONNECTION_STATE_CONNECTED)
             [camera connect:camera.uid];
-        
+       
         if ([camera getConnectionStateOfChannel:0] != CONNECTION_STATE_CONNECTED) {
             [camera start:0];
             
@@ -1784,8 +1867,15 @@ extern unsigned int _getTickCount() {
             
             if (selectedAudioMode == AUDIO_MODE_SPEAKER) [camera startSoundToPhone:selectedChannel];
             if (selectedAudioMode == AUDIO_MODE_MICROPHONE) [camera startSoundToDevice:selectedChannel];
-            
         }
+//        }else if (status == CONNECTION_STATE_CONNECTED)
+//            {
+//                //add by jay
+//                [self getEMode];
+//                [self getContrast];
+//                [self getBright];
+//                [self getLEDLight];
+//            }
     }
 }
 
@@ -1815,7 +1905,12 @@ extern unsigned int _getTickCount() {
             } else if (status == CONNECTION_STATE_CONNECTED) {
                 
                 // self.statusLabel.text = NSLocalizedString(@"Connected", nil);
-                
+                //add by jay
+                [self getEMode];
+                [self getContrast];
+                [self getBright];
+                [self getLEDLight];
+                //
             } else if (status == CONNECTION_STATE_CONNECTING) {
                 
                 // self.statusLabel.text = NSLocalizedString(@"Connecting...", nil);
@@ -2039,11 +2134,50 @@ extern unsigned int _getTickCount() {
             NSLog(@"ERROR");
         }
     }
-    else if(type==0x224F){
+    else if(type==0x224F){//IOTYPE_USER_IPCAM_SET_SOUND_VOLUME_RESP		= 0x224F,
         SMsgAVIoctrlSetSoundResp *d=(SMsgAVIoctrlSetSoundResp*)data;
         //NSLog(@"%@",d);
     }
+#pragma mark - 接收参数jays TODO：
+    else if (type == (int) IOTYPE_HICHIP_GETCONTRAST_RESP)
+        {
+            SMgAVIoctrlGetContrastResp * d = (SMgAVIoctrlGetContrastResp *)data;
+            [self initSettingFiveStatus:NSInteger(d->contrast) withpView:self.landConstrastView];
+             NSLog(@"****++=:%ld",NSInteger(d->contrast));//5 4 3 
+        }else if (type == (int) IOTYPE_HICHIP_GETBRIGHT_RESP)
+            {
+                SMgAVIoctrlGetBrightResp * d = (SMgAVIoctrlGetBrightResp *)data;
+                
+                [self initSettingFiveStatus:NSInteger(d->bright) withpView:self.landBrightView];
+                NSLog(@"****++=:%ld",NSInteger(d->bright)); //5 4 3
+            }else if (type == (int)IOTYPE_USEREX_IPCAM_SET_LED_RESP)//16401
+                {
+                    [loadingViewLandscape stopAnimating];
+                SMsgAVIoctrlExSetLEDResp *ledRespond = (SMsgAVIoctrlExSetLEDResp *)data;
+//                NSLog(@"LED 设置result:%d隐藏HUd个数%ld",ledRespond->result,(long)cout);
+//                if (ledRespond->result == 0) {
+//                    [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+//                }
+                }else if (type == (int)IOTYPE_USEREX_IPCAM_GET_LED_RESP)
+                    {
+                        SMsgAVIoctrlExGetLEDResp * d = (SMsgAVIoctrlExGetLEDResp *)data;
+                        [self initSettingFiveStatus:NSInteger(d->sSwitch) withpView:self.longInfraredView];
+                    }
+
+    
+            else if (type == (int)IOTYPE_USER_IPCAM_SET_IMAGE_PARAM_RESP)//复位 32769
+            {
+
+                SMsgAVIoctrlSetImageParamResp * respond = (SMsgAVIoctrlSetImageParamResp *)data;
+                NSLog(@"复位处理结果：%d",respond->result); // 0: success; otherwise: failed.
+                if (respond -> result == 0) {
+                    [self initSettingFiveStatus:3 withpView:self.landBrightView];
+                     [self initSettingFiveStatus:3 withpView:self.landConstrastView];
+                    
+                }
+            }
 }
+#pragma mark - 初始化ViewEmode选中状态
 -(void)initViewEmode{
     if(emode==0){
         
@@ -2067,6 +2201,7 @@ extern unsigned int _getTickCount() {
         [_longBtn50HZ setTitleColor:[UIColor colorWithRed:0 green:122/255.0 blue:255.0/255.0 alpha:1.0f] forState:UIControlStateNormal];
     }
 }
+#pragma mark - 初始化ViewEmode选中状态
 -(void)initQVGAMode:(NSInteger)tg{
     for (UIButton *b in [longQVGAView subviews]) {
         if(b.tag==0) continue;
@@ -2093,10 +2228,13 @@ extern unsigned int _getTickCount() {
         }
     }
 }
-
+#pragma mark - 设置对应按钮字体颜色（对比度，亮度，红外开关）
 -(void)initSettingFiveStatus:(NSInteger)tg withpView:(UIView *)pview{
     for (UIButton *b in [pview subviews]) {
-        if(b.tag==0) continue;
+#ifndef CamLineProTarget
+        if(b.tag==0 ) continue;
+#endif
+        if (b.tag == 99) continue; //just for Camline Pro  add jay
         if(b.tag==tg){
             [b setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         }
@@ -2685,7 +2823,7 @@ extern unsigned int _getTickCount() {
 #if defined(MoveDF)
     return [self.items count]-2;
 #endif
-#if defined(EasynPTarget) || defined(IPCAMP) || defined(QTAIDT) || defined(MAJESTICIPCAMP)
+#if defined(EasynPTarget) || defined(IPCAMP) || defined(QTAIDT) || defined(MAJESTICIPCAMP) || defined(CamLineProTarget)
     return [self.items count];
 #else
     return [self.items count]-2;
@@ -2701,6 +2839,25 @@ extern unsigned int _getTickCount() {
 #pragma mark HorizMenu Delegate
 -(void) horizMenu:(MKHorizMenu *)horizMenu itemTouchDownAtIndex:(NSUInteger)index{
     NSInteger offsetCount=0;
+    
+#if defined(CamLineProTarget) //jay add
+    if (isLandscape) {
+        index += LANDSCAPE_GAP  ;
+    }
+     if (index == RESTRORE) //15
+    {
+        NSLog(@"复位！！！！");
+        //发送复位命令
+        SMsgAVIoctrlSetImageParamReq *s = (SMsgAVIoctrlSetImageParamReq *)malloc(sizeof(SMsgAVIoctrlSetImageParamReq));
+        memset(s , 0, sizeof(SMsgAVIoctrlSetImageParamReq));
+        s->todefault = 1 ;/*value : if set !0 ,image to default value*/
+        [camera sendIOCtrlToChannel:0
+                               Type:IOTYPE_USER_IPCAM_SET_IMAGE_PARAM_REQ
+                               Data:(char *)s
+                           DataSize:sizeof(SMsgAVIoctrlSetImageParamReq)];
+    }
+#endif
+    
 #if defined(MAJESTICIPCAMP)
 #else
     if(index==8-offsetCount){
@@ -2723,7 +2880,14 @@ extern unsigned int _getTickCount() {
 }
 -(void) horizMenu:(MKHorizMenu *)horizMenu itemSelectedAtIndex:(NSUInteger)index
 {
-    
+    selectIdex = index ;
+#if defined(CamLineProTarget)//jay add
+    if (isLandscape) {
+        index += LANDSCAPE_GAP + 1 ;
+    }
+#endif
+    NSLog(@"按了第%ld按钮",index);
+    //1.隐藏其他按钮
     self.prePositionView.hidden=YES;
     self.myPtzView.hidden=NO;
     
@@ -2736,11 +2900,11 @@ extern unsigned int _getTickCount() {
     self.portraitConstrastScrollView.hidden=YES;
     self.landBrightView.hidden=YES;
     self.landConstrastView.hidden=YES;
-    
+    self.longInfraredView.hidden = YES; //add for camline pro
     longTalkButton.hidden = YES;
     longQVGAView.hidden = YES;
     longEModeView.hidden = YES;
-    
+    //
     isActive = YES;
     
 #if defined(BayitCam)
@@ -3079,8 +3243,82 @@ extern unsigned int _getTickCount() {
             }
         }
     }
-}
+#pragma mark add for Camline Pro landscape
+    /***** add by jay ******/
+   else if (index == CONTRAST) //12 landscape
+        {
+#if defined(CamLineProTarget)
+            if(isContrast){
+                isContrast=NO;
+                isActive=NO;
+            }
+            else{
+               // self.portraitConstrastScrollView.hidden=NO; //modif by jay
+                self.landConstrastView.hidden=NO;
+                //[self.horizMenu setUnselectedIndex:8 animated:YES];
+                //[self.longHorizMenu setUnselectedIndex:8 animated:YES];
+                isContrast=YES;
+                isBright=NO;
+                isInfrared = NO ;
+                isQVGAView=NO;
+                isEModeView=NO;
+            }
+#endif
+        
+        }else if (index == BRIGHT) //13
+            {
+#if defined(CamLineProTarget)
+                if(isBright){
+                    isBright=NO;
+                    isActive=NO;
+                }
+                else{
+                    //self.portraitBrightScrollView.hidden=NO;
+                    self.landBrightView.hidden=NO;
+                    //[self.horizMenu setUnselectedIndex:7 animated:YES];
+                    //[self.longHorizMenu setUnselectedIndex:7 animated:YES];
+                    isBright=YES;
+                    
+                    isContrast=NO;
+                    isInfrared = NO ;
+                    isQVGAView=NO;
+                    isEModeView=NO;
+                }
+#endif
+            }else if (index == INFRARED) //14
+                {
+#if defined(CamLineProTarget)
+                    
+                    if(isInfrared){
+                        isInfrared=NO;
+                        isActive=NO;
+                    }
+                    else{
+                        //self.portraitBrightScrollView.hidden=NO;
+                        self.longInfraredView.hidden=NO;
+                        //[self.horizMenu setUnselectedIndex:7 animated:YES];
+                        //[self.longHorizMenu setUnselectedIndex:7 animated:YES];
+                        isInfrared=YES;
+                        
+                        isContrast=NO;
+                        isBright = NO;
+                        isQVGAView=NO;
+                        isEModeView=NO;
+                    }
+#endif
 
+        
+                }else if (index == RESTRORE)
+                {
+                    isContrast = NO;
+                    isBright = NO ;
+                    isInfrared = NO ;
+                    [self.longHorizMenu setUnselectedIndex: 3 animated:YES];
+                }
+
+
+}
+#pragma mark - 转到竖屏时设置按钮的状态
 - (void)checkBTN {
     if (isListening) {
         [self.horizMenu setSelectedIndex:SOUND_CONTROL animated:YES];
@@ -3099,8 +3337,10 @@ extern unsigned int _getTickCount() {
     } else {
         [self.horizMenu setUnselectedIndex:EMODE animated:YES];
     }
+    //
+   
 }
-
+#pragma mark - 转到横屏时设置按钮的状态
 - (void)checkLongBTN {
     if (isListening) {
         [self.longHorizMenu setSelectedIndex:SOUND_CONTROL animated:YES];
@@ -3119,14 +3359,33 @@ extern unsigned int _getTickCount() {
     } else {
         [self.longHorizMenu setUnselectedIndex:EMODE animated:YES];
     }
+    if (!isContrast) {
+        [self.longHorizMenu setUnselectedIndex:0 animated:YES];
+    }
+    if (!isBright) {
+        [self.longHorizMenu setUnselectedIndex:1 animated:YES];
+    }
+    if (isInfrared == NO) {
+        [self.longHorizMenu setUnselectedIndex:2 animated:YES];
+    }
 }
 
-#pragma mark Rotate Delegate
+#pragma mark Rotate Delegate 屏幕旋转2
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-    
+#ifdef CamLineProTarget
+//    isListening = NO;
+//    isTalking = NO ;
+    isEModeView = NO;
+    isQVGAView = NO;
+    isRecording = NO;
+    isContrast = NO;
+    isBright= NO ;
+    isInfrared = NO ;
+#endif
     if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation)) {
         //畫面傾置
         isLandscape = YES;
+#ifndef CamLineProTarget
         if (isActive == NO) {
             self.longHorizMenu.hidden = YES;
             [self checkLongBTN];
@@ -3135,12 +3394,29 @@ extern unsigned int _getTickCount() {
             self.longHorizMenu.hidden = NO;
             [self checkLongBTN];
         }
+#else
+        isActive = NO;
+        //talkButton.hidden = YES;
+        longTalkButton.hidden = YES;
+        longQVGAView.hidden = YES;
+        longEModeView.hidden = YES;
+        self.landConstrastView.hidden = YES;
+        self.landBrightView.hidden = YES;
+        self.prePositionView.hidden=YES;
+        
+        self.longInfraredView.hidden = YES;
+         //self.portraitView.hidden = YES;
+        self.longHorizMenu.hidden = YES;
+        [self checkLongBTN];
+
+#endif
     }
     
     if (UIInterfaceOrientationIsPortrait(toInterfaceOrientation)) {
         //畫面直立
         isLandscape = NO;
         self.longHorizMenu.hidden = YES;
+        //self.portraitView.hidden = NO ; //add jay
         [self checkBTN];
     }
 }
@@ -3235,7 +3511,7 @@ extern unsigned int _getTickCount() {
 
 - (IBAction)landBackAction:(id)sender {
 }
-
+#pragma mark - 发送对比度
 - (IBAction)onContrastClicked:(id)sender {
     SMsgAVIoctrlSetContrastReq *s = (SMsgAVIoctrlSetContrastReq *)malloc(sizeof(SMsgAVIoctrlSetContrastReq));
     memset(s, 0, sizeof(SMsgAVIoctrlSetContrastReq));
@@ -3258,13 +3534,14 @@ extern unsigned int _getTickCount() {
     [self.horizMenu reloadData];
     [self.longHorizMenu reloadData];
     
-    
+    //
     [self initSettingFiveStatus:s->contrast withpView:self.portraitContrastView];
     [self initSettingFiveStatus:s->contrast withpView:self.landConstrastView];
     
     free(s);
     
 }
+#pragma mark - 设置ptz亮度
 - (IBAction)onBrightClicked:(id)sender {
     SMsgAVIoctrlSetBrightReq *s = (SMsgAVIoctrlSetBrightReq *)malloc(sizeof(SMsgAVIoctrlSetBrightReq));
     memset(s, 0, sizeof(SMsgAVIoctrlSetBrightReq));
@@ -3283,14 +3560,38 @@ extern unsigned int _getTickCount() {
     self.portraitBrightScrollView.hidden=YES;
     
     isBright=NO;
-    [self.horizMenu reloadData];
+    //[self.horizMenu reloadData];
     [self.longHorizMenu reloadData];
-    
+//设置对应按钮字体颜色
     [self initSettingFiveStatus:s->bright withpView:self.landBrightView];
     [self initSettingFiveStatus:s->bright withpView:self.portraitBrightView];
     
     free(s);
 }
+#pragma mark - 设置ptz红外开关
+- (IBAction)onlongInfraredClicked:(id)sender {
+    //1.发送命令
+    SMsgAVIoctrlExSetLEDReq *s = (SMsgAVIoctrlExSetLEDReq *)malloc(sizeof(SMsgAVIoctrlExSetLEDReq));
+    memset(s , 0, sizeof(SMsgAVIoctrlExSetLEDReq));
+    s->sSwitch = int([(UIView *)sender tag]);/*0:auto 1:open  2:close*/
+    [camera sendIOCtrlToChannel:0
+                           Type:IOTYPE_USEREX_IPCAM_SET_LED_REQ
+                           Data:(char *)s
+                       DataSize:sizeof(SMsgAVIoctrlExSetLEDReq)];
+    
+    
+    //2.设置对应的UI
+    self.longInfraredView.hidden = YES;
+    isInfrared = NO;
+    [self.horizMenu reloadData];
+    [self.longHorizMenu reloadData];
+    //设置对应按钮字体颜色
+    [self initSettingFiveStatus:[(UIView*)sender tag] withpView:self.longInfraredView];
+    
+    free(s);
+    
+}
+
 - (IBAction)preAction:(UIButton *)sender {
     NSInteger index=sender.tag;
     SMsgAVIoctrlGetPresetReq *s = (SMsgAVIoctrlGetPresetReq *)malloc(sizeof(SMsgAVIoctrlGetPresetReq));
@@ -3359,6 +3660,7 @@ extern unsigned int _getTickCount() {
         }
     }*/
 }
+
 @end
 
 @implementation UINavigationController (autorotation)

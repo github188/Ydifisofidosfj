@@ -13,6 +13,9 @@
 #import "iToast.h"
 #import "CameraMultiLiveViewController.h"
 
+#import "DefineExtension.h"
+#import "MBProgressHUD+MJ.h"
+#define REBOOT_ALTER_VIEW_TAG 100
 @implementation EditCameraDefaultController
 
 @synthesize fieldLabels;
@@ -326,6 +329,9 @@
 #pragma mark - Table DataSoruce Methods 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView 
 {
+#ifdef CamLineProTarget
+    return 5;
+#endif
 #if defined(MAJESTICIPCAMP)
     return 2;
 #endif
@@ -344,6 +350,10 @@
         return 1;
     else if (section == DELETE_SECTION_INDEX)
         return 1;
+#endif
+#ifdef CamLineProTarget
+    else if (section == REBOOT_SECTION_INDEX)
+        return 1 ;
 #endif
     else
         return 0;
@@ -460,6 +470,14 @@
             
             if (row == DELETE_ROW_INDEX) {
                 
+                cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:SectionTableIdentifier] autorelease];
+            }
+        }
+#endif
+#ifdef CamLineProTarget
+        else if (section == REBOOT_SECTION_INDEX) {
+            
+            if (row == REBOOT_ROW_INDEX) {
                 cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:SectionTableIdentifier] autorelease];
             }
         }
@@ -690,7 +708,14 @@
             cell.textLabel.text = NSLocalizedString(@"Remove this device", @"");
         }
     }
-    
+#ifdef CamLineProTarget
+    else if (section == REBOOT_SECTION_INDEX) {
+        
+        if (row == RECONNECT_ROW_INDEX) {
+            cell.textLabel.text = NSLocalizedString(@"Reboot this device", @"");
+        }
+    }
+#endif
 #if defined(SVIPCLOUD)
     cell.textLabel.textColor=HexRGB(0x3d3c3c);
 #endif
@@ -750,6 +775,7 @@
                 [alert show];
                 [alert release];
                 
+                
                 return;
             }
             
@@ -807,14 +833,40 @@
             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:caution message:msg delegate:self cancelButtonTitle:no otherButtonTitles:yes, nil];
             [alert show];
             [alert release];
+            
         }
     }
+#ifdef CamLineProTarget
+        else if (section == REBOOT_SECTION_INDEX)
+        {
+            if (row == REBOOT_ROW_INDEX) {
+
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Sure to reboot?", @"") message:NSLocalizedString(@"", @"") delegate:self cancelButtonTitle:NSLocalizedString(@"NO", @"") otherButtonTitles:NSLocalizedString(@"YES", @""),nil];
+                alert.tag = REBOOT_ALTER_VIEW_TAG;
+                [alert show];
+                [alert release];
+
+                
+            }
+        
+        }
+#endif
 }
 
 #pragma mark - UIAlertViewDelegate implementation
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex == 1 ) {
-
+    
+    if (alertView.tag == REBOOT_ALTER_VIEW_TAG) {
+        if (buttonIndex == 1) {
+            //发送重启命令
+            SMsgAVIoctrlSetRebootReq *s = (SMsgAVIoctrlSetRebootReq *)malloc(sizeof(SMsgAVIoctrlSetRebootReq));
+            
+            [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_SETREBOOT_REQ Data:(char *)s DataSize:sizeof(SMsgAVIoctrlSetRebootReq)];
+            free(s);
+            [MBProgressHUD showMessage:NSLocalizedString(@"Rebooting...", @"")];
+        }
+    }else if (buttonIndex == 1 ) {
+        
         camera.delegate2 = nil;
         
         [self.navigationController popViewControllerAnimated:NO];
@@ -915,5 +967,25 @@ replacementString:(NSString *)string {
     
     //NSLog(@"didChangeChannel:%d Status:%d", channel, status);
 }
+
+- (void)camera:(MyCamera *)camera_ _didReceiveIOCtrlWithType:(NSInteger)type Data:(const char *)data DataSize:(NSInteger)size
+    {
+        if (camera_ == camera) {
+            if (type == IOTYPE_USER_IPCAM_SETREBOOT_RESP) {
+                [MBProgressHUD hideHUD];
+                SMsgAVIoctrlSetRebootResp *s = (SMsgAVIoctrlSetRebootResp *)data ;
+                if (s->result == 0) {// 0: success; otherwise: failed.
+                    [MBProgressHUD showSuccess:NSLocalizedString(@"Success!!", @"")];
+                    
+                }else{
+                
+                [MBProgressHUD showSuccess:NSLocalizedString(@"Failure!", @"")];
+                }
+
+            
+            }
+        }
+    }
+
 
 @end

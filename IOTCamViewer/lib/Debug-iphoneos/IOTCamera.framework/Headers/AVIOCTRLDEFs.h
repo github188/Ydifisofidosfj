@@ -813,7 +813,7 @@ typedef struct
 	unsigned char limit;	// no use in APP so far. 
 	unsigned char aux;		// no use in APP so far. auxiliary switch, for RS485 PT
 	unsigned char channel;	// camera index
-	unsigned char reserve[2];
+	unsigned char reserve[2]; //扩展参数reserve[1] == 10 设备端云台控制模式为连续模式，reserve[1] == 0为默认的单步模式
 } SMsgAVIoctrlPtzCmd;
 
 /*

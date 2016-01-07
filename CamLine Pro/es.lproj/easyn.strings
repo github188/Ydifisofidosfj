@@ -1,0 +1,16 @@
+
+"WIFI一键设置"="AÑADIR CÁMARA";
+"AddApWifiTips"="1.CONFIGURACIÓN WIFI SMART";
+"AddApWifiTips2"="PRIMERA CONEXIÓN SIN CABLE DE RED, SOLO SON COMPATIBLES EN ALGUNOS MODELOS";
+"AddApWifiOtherTips"="2.CONECTADO CON CABLE O WIFI";
+"AddApWifiNextStep"="SIGUIENTE";
+"AddApWifiStep2Tips"="Ponga el cargador y al terminar de chequear,la cámara pita, luego pulsa siguiente.\"";
+"AddApWifiStep2NeedWifiTips"="Asegúrese de que el móvil esté conectado al wifi";
+"AddApWifiStep3SettingBtnTitle"="Configuración";
+"AddApWifiSSIDTips"="No admite blanco en SSID";
+"AddApWifiPsdTips"="No admite blanco en Clave";
+"AddApWifiAudioTips"="Si la cámara suena o pita?";
+"AddApWifiResetTips"="Pulse el boton ¨reset¨por debajo de la cámara para resetearla.";
+"AddApWifiWaitingTips"="Configurando wifi, espere";
+"AddApWifiErrorTips"="Conexión wifi fallada, compruebe la clave de nuevo";
+"ViewPsdLbl"="Enseñar clave";

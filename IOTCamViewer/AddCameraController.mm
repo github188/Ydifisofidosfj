@@ -217,7 +217,7 @@ static int bLocalSearch = 0;
     return interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown;
 }
 
-#pragma mark - Zxing Delegate Methods
+#pragma mark - Zxing Delegate Methods 扫描二维码代理
 - (void)zxingController:(ZXingWidgetController *)controller_ 
           didScanResult:(NSString *)result 
 {            

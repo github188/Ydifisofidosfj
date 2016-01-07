@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D9A8BEDEA0784DAC3557AB6D58631048508138D2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D9A8BEDEA0784DAC3557AB6D58631048508138D2" : 0,
+    "D24972C8CE646C617263EEF401908775ABD6C8BA" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2E0FAB97-E4D0-455B-9C7E-186CDD8994F2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D9A8BEDEA0784DAC3557AB6D58631048508138D2" : "EASNYP\/",
+    "D24972C8CE646C617263EEF401908775ABD6C8BA" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "P2PCamCEO",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "P2PCamCEO.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:tenine.limingru\/EASNYP.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D24972C8CE646C617263EEF401908775ABD6C8BA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/git.oschina.net\/tenine.limingru\/EASNYP",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D9A8BEDEA0784DAC3557AB6D58631048508138D2"
+    }
+  ]
+}

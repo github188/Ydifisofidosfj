@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddWithApCamera1Controller">
@@ -19,7 +19,6 @@
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请将电源适配器接上摄像机，摄像机自检转动，发出叮咚的声音。" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atH-Fy-rsA">
                     <rect key="frame" x="30" y="202" width="539" height="124"/>
-                    <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="124" id="h9v-Lq-6VA"/>
                     </constraints>
@@ -29,7 +28,6 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esf-sN-3u8">
                     <rect key="frame" x="30" y="329" width="539" height="39"/>
-                    <animations/>
                     <constraints>
                         <constraint firstAttribute="height" constant="39" id="nvc-WN-WOr"/>
                     </constraints>
@@ -46,14 +44,12 @@
                 </button>
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="tips_elec.png" translatesAutoresizingMaskIntoConstraints="NO" id="iZy-tM-a67">
                     <rect key="frame" x="225" y="29" width="150" height="150"/>
-                    <animations/>
                     <constraints>
                         <constraint firstAttribute="width" constant="150" id="2JJ-Gf-ao7"/>
                         <constraint firstAttribute="height" constant="150" id="JrE-VE-wh0"/>
                     </constraints>
                 </imageView>
             </subviews>
-            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="atH-Fy-rsA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="3Xs-nl-hou"/>
@@ -70,7 +66,7 @@
     </objects>
     <resources>
         <image name="button_bg.png" width="105" height="31"/>
-        <image name="button_click.png" width="159" height="40"/>
+        <image name="button_click.png" width="156" height="34"/>
         <image name="tips_elec.png" width="300" height="300"/>
     </resources>
 </document>

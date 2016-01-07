@@ -32,6 +32,9 @@ extern NSString *deviceTokenString;
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
 
 - (IBAction)addCameraByTypingPressed:(id)sender;
+/**
+ *二维码扫描
+ */
 - (IBAction)addCameraByScanPressed:(id)sender;
 - (IBAction)searchCameraPressed:(id)sender;
 

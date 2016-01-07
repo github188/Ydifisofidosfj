@@ -874,6 +874,7 @@ extern unsigned int _getTickCount() ;
     [self hideMoreFunctionView:nil];
 }
 
+#pragma mark  进入设置界面
 - (IBAction)goSetting:(id)sender {
 	GLog( tUI, (@"+++CameraMultiLiveViewController - goSetting: [%d]", [moreFunctionTag intValue]));
 	[self camStopShow:-1];
@@ -1036,6 +1037,21 @@ extern unsigned int _getTickCount() ;
 
 - (void)viewWillAppear:(BOOL)animated
 {
+#ifdef CamLineProTarget
+    [changeView setBackgroundImage:[UIImage imageNamed:@"more_changech 2"] forState:UIControlStateNormal];
+    [changeView setBackgroundImage:[UIImage imageNamed:@"more_changech_clicked 2"] forState:UIControlStateHighlighted];
+    [cameraEvent setBackgroundImage:[UIImage imageNamed:@"more_event 2"] forState:UIControlStateNormal];
+    [cameraEvent setBackgroundImage:[UIImage imageNamed:@"more_event_clicked 2"] forState:UIControlStateHighlighted];
+    [cameraSnapshot setBackgroundImage:[UIImage imageNamed:@"more_photo 2"] forState:UIControlStateNormal];
+     [cameraSnapshot setBackgroundImage:[UIImage imageNamed:@"more_photo_clicked 2"] forState:UIControlStateHighlighted];
+    [cameraSetting setBackgroundImage:[UIImage imageNamed:@"more_set 2"] forState:UIControlStateNormal];
+    [cameraSetting setBackgroundImage:[UIImage imageNamed:@"more_set_clicked 2"] forState:UIControlStateHighlighted];
+    [deleteView setBackgroundImage:[UIImage imageNamed:@"more_delete 2"] forState:UIControlStateNormal];
+    [deleteView setBackgroundImage:[UIImage imageNamed:@"more_delete_clicked 2"] forState:UIControlStateHighlighted];
+    
+   
+    
+#endif
 //设置功能键位置
     //居中
     moreFunctionView.size=CGSizeMake(self.view.frame.size.width, self.view.frame.size.width*110/320);

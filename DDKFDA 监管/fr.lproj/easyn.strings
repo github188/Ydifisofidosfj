@@ -1,0 +1,16 @@
+
+"WIFI一键设置"="Ajouter Caméra";
+"AddApWifiTips"="1.Wi-Fi SmartConfig";
+"AddApWifiTips2"="Pour une connexion de votre caméra sans câble ethernet.";
+"AddApWifiOtherTips"="2.Connexion de votre caméra via un câble ethernet ou reliée à un routeur sans fil";
+"AddApWifiNextStep"="Suivant";
+"AddApWifiStep2Tips"="Veuillez connecter l'adaptateur à la caméra. La caméra va bouger sur elle-même puis émèttre un Ding-Dong, puis appuyer sur \"Suivant\".";
+"AddApWifiStep2NeedWifiTips"="Veuillez vous assurer que votre téléphone est bien connecté à votre réseau wifi.";
+"AddApWifiStep3SettingBtnTitle"="Paramètres";
+"AddApWifiSSIDTips"="SSID ne peut être vide";
+"AddApWifiPsdTips"="Le mot de passe ne peut être vide";
+"AddApWifiAudioTips"="Un son Ding-Dong est t'il joué par votre caméra ?";
+"AddApWifiResetTips"="Appuyer sur le boutton \"Redémarrer\" sur le bas de la caméra pour la redémarrer.";
+"AddApWifiWaitingTips"="Le Wi-Fi est en configuration veuillez attendre quelques instants.";
+"AddApWifiErrorTips"="La connexion Wi-Fi a échouer, veuillez confirmer le mot de passe Wi-Fi";
+"ViewPsdLbl"="Afficher le mot de passe";

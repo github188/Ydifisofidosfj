@@ -12,6 +12,9 @@
 #import "AboutDeviceController.h"
 #import "FormatSDCardController.h"
 
+#import "AlarmTableViewController.h"
+
+
 typedef struct
 {
     int cbSize;							// the following package size in bytes, should be sizeof(SMsgAVIoctrlTimeZone)
@@ -206,6 +209,9 @@ typedef struct
 
 - (int)getEventSettingSectionIndex
 {
+#ifdef CamLineProTarget
+    return -1;
+#endif
     int idx = 5;
     
     if ([self getVideoSettingSectionIndex] < 0)
@@ -227,6 +233,9 @@ typedef struct
 
 - (int)getRecordSettingSectionIndex
 {
+#ifdef CamLineProTarget
+    return -1;
+#endif
     int idx = 6;
     
     if ([self getVideoSettingSectionIndex] < 0)
@@ -251,6 +260,9 @@ typedef struct
 
 - (int)getDeviceInfoSectionIndex
 {
+#ifdef CamLineProTarget
+    return -1;
+#endif
     int idx = 7;
     
     if ([self getVideoSettingSectionIndex] < 0)
@@ -420,6 +432,7 @@ typedef struct
 #pragma mark - TableView DataSource Methods
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView 
 {
+#ifndef CamLineProTarget
     int row = 1;
     
     if ([camera getVideoQualitySettingSupportOfChannel:0] ||
@@ -449,13 +462,18 @@ typedef struct
     //for SyncSetting
     row++;
     
-	NSLog( @"numberOfSectionsInTableView : %d", row );
-	
+    NSLog( @"numberOfSectionsInTableView : %d", row );
+    
     return row;
+#else
+    return 4;  // CamLineProTarget 设置4 section
+#endif
+	
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
 {
+#ifndef CamLineProTarget
     if (section == SECURITYCODE_SECTION_INDEX) {
         return 1;
     } else if (section == [self getVideoSettingSectionIndex]) {
@@ -497,9 +515,15 @@ typedef struct
     } else {
         return 0;
     }
+#else
+    if (section == 3) {
+        return 4;
+      }else return 1;
+    
+#endif
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	NSInteger cellIndicator_X = self.tableView.frame.size.width - 50;
 	NSInteger cellIndicator_Y = 23;
@@ -533,7 +557,7 @@ typedef struct
 #endif
         }
     }
-    
+    // strat jay
     if (section == SECURITYCODE_SECTION_INDEX) {        
         cell.textLabel.text = NSLocalizedString(@"Security Code", @"");
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -809,7 +833,7 @@ typedef struct
         [cell setAccessoryView:syncSwitch];
         [syncSwitch release];
     }
-    
+#pragma mark - TODO:
     else if (section == [self getEventSettingSectionIndex]) {
         
         NSString *text = nil;
@@ -826,7 +850,7 @@ typedef struct
                 [motionIndicator removeFromSuperview];
             }     
                         
-            if (motionDetection == 0) 
+            if (motionDetection == 0)
                 text = [[NSString alloc] initWithString:NSLocalizedString(@"Off", @"")];
             else if (motionDetection > 0 && motionDetection <= 25)
                 text = [[NSString alloc] initWithString:NSLocalizedString(@"Low", @"")];
@@ -996,7 +1020,18 @@ typedef struct
     cell.textLabel.textColor=HexRGB(0x3d3c3c);
     cell.detailTextLabel.textColor=HexRGB(0x3d3c3c);
 #endif
-    
+// add by jay for CamlinePro
+#ifdef CamLineProTarget
+    else if (section == CamLineProTarget_SECTION_INDEX) {
+        if (row == ALARM_SETTING_ROW) cell.textLabel.text = NSLocalizedString(@"Alarm", @"");
+            else if (row == FTP_SETTING_ROW ) cell.textLabel.text = NSLocalizedString(@"FTP", @"");
+                else if (row == MAIL_SETTING_ROW ) cell.textLabel.text = NSLocalizedString(@"Mail", @"");
+                    else if (row == SD_CARD_REC_SETTING_ROW ) cell.textLabel.text = NSLocalizedString(@"SDCard REC", @"");
+       
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.detailTextLabel.text = @"";
+    }
+#endif
     return cell;
 }
 
@@ -1168,7 +1203,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 				[viewController setCurrentTimeZone:camera.strTimeZone tzGMTDiff_In_Mins:camera.nGMTDiff];
 				[self.navigationController pushViewController:viewController animated:YES];
 				[viewController release];*/
-                self.navigationItem.title = NSLocalizedString(@"Cancel", @"");
+               // self.navigationItem.title = NSLocalizedString(@"Cancel", @""); // dele by jayzhou 15-12-30
                 int nSelIndex = [self getSelIdxIn:arrTimeZoneTable compareString:camera.strTimeZone];
                 
                 if( nSelIndex == -1 ) {
@@ -1276,7 +1311,42 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
         [self.navigationController pushViewController:controller animated:YES];
         [controller release];
     }
+#pragma mark - TODO:
+    //add by jayzhou 15-12-30
+#ifdef CamLineProTarget
+   else if (section == CamLineProTarget_SECTION_INDEX)
+   {
+       if (row == ALARM_SETTING_ROW) {
+           AlarmTableViewController *alarmController = [[AlarmTableViewController alloc] initWithStyle:UITableViewStylePlain];
+           alarmController.tableView.tableFooterView = [[UIView alloc] init];
+           alarmController.camera = self.camera;
+           [self.navigationController pushViewController:alarmController animated:YES];
+           NSLog(@"报警");
+       }else if (row == FTP_SETTING_ROW){
+                NSLog(@"FTP_SETTING_ROW报警");
+                FTPSettingController * ftpController = [[FTPSettingController alloc] initWithStyle:UITableViewStyleGrouped delgate:self];
+                ftpController.camera = self.camera;
+           
+                [self.navigationController pushViewController:ftpController animated:YES];
+           
+                }else if (row == MAIL_SETTING_ROW){
+                    MailSettingController*  controller = [[MailSettingController alloc] initWithStyle:UITableViewStyleGrouped delgate:self];
+                    controller.camera = self.camera;
+                    [self.navigationController pushViewController:controller animated:YES];
+                    [controller release];
+                 NSLog(@"MAIL_SETTING_ROW报警");
+                        }else if (row == SD_CARD_REC_SETTING_ROW){
+                            RecordingSettingController * rec = [[RecordingSettingController alloc] initWithStyle:UITableViewStyleGrouped];
+                            rec.navigationItem.title = [NSString stringWithFormat:NSLocalizedString(@"SDCard REC", @"")];
+                            rec.camera = self.camera;
+                            [self.navigationController pushViewController:rec animated:YES];
+                            
+                        NSLog(@"SD_CARD_REC_SETTING_ROW报警");
+                        }
 
+   }
+    
+#endif
 	nLastSelSection = section;
 	nLastSelRow = row;
 }

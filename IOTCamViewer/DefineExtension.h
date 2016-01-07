@@ -40,6 +40,8 @@ typedef struct {
     unsigned char reserved[4];
 } SMsgAVIoctrlExGetSmtpReq;
 
+
+
 typedef struct {
     unsigned int channel;       // Camera Index
     char sender[64];        /*邮件的发送者                                      */
@@ -146,19 +148,56 @@ typedef enum {
     IOTYPE_USER_IPCAM_SET_REC_REQ		        = 0x2213,
     IOTYPE_USER_IPCAM_SET_REC_RESP		        = 0x2214,
     //抓拍
-    IOTYPE_USER_IPCAM_GET_SNAP_REQ		    = 0x2215,
-    IOTYPE_USER_IPCAM_GET_SNAP_RESP		    = 0x2216,
-    IOTYPE_USER_IPCAM_SET_SNAP_REQ		    = 0x2217,
-    IOTYPE_USER_IPCAM_SET_SNAP_RESP		    = 0x2218,
+    IOTYPE_USER_IPCAM_GET_SNAP_REQ              = 0x2215,
+    IOTYPE_USER_IPCAM_GET_SNAP_RESP             = 0x2216,
+    IOTYPE_USER_IPCAM_SET_SNAP_REQ              = 0x2217,
+    IOTYPE_USER_IPCAM_SET_SNAP_RESP             = 0x2218,
     //图片预览
-    IOTYPE_USEREX_IPCAM_GET_PREVIEW_REQ				=0x5001,
-    IOTYPE_USEREX_IPCAM_GET_PREVIEW_RESP				=0x5002,
+    IOTYPE_USEREX_IPCAM_GET_PREVIEW_REQ			=0x5001,
+    IOTYPE_USEREX_IPCAM_GET_PREVIEW_RESP		=0x5002,
     //预置位
     IOTYPE_USER_IPCAM_SETPRESET_REQ				= 0x440,
     IOTYPE_USER_IPCAM_SETPRESET_RESP			= 0x441,
     IOTYPE_USER_IPCAM_GETPRESET_REQ				= 0x442,
-    IOTYPE_USER_IPCAM_GETPRESET_RESP			= 0x443
+    IOTYPE_USER_IPCAM_GETPRESET_RESP			= 0x443,
+    //红外开关
+    IOTYPE_USEREX_IPCAM_GET_LED_REQ             =0x400E,
+    IOTYPE_USEREX_IPCAM_GET_LED_RESP            =0x400F,
+    IOTYPE_USEREX_IPCAM_SET_LED_REQ             =0x4010,
+    IOTYPE_USEREX_IPCAM_SET_LED_RESP            = 0x4011,
+    //(图片参数#37)复位
+    IOTYPE_USER_IPCAM_SET_IMAGE_PARAM_REQ		=0x8000,
+    IOTYPE_USER_IPCAM_SET_IMAGE_PARAM_RESP		=0x8001,
+    IOTYPE_USER_IPCAM_GET_IMAGE_PARAM_REQ		=0x8002,
+    IOTYPE_USER_IPCAM_GET_IMAGE_PARAM_RESP		=0x8003,
+    
+    //重启设备
+    IOTYPE_USER_IPCAM_SETREBOOT_REQ				= 0x8004,
+    IOTYPE_USER_IPCAM_SETREBOOT_RESP			= 0x8005,
+    
+    //FTP
+    IOTYPE_USER_IPCAM_SET_FTP_REQ				=0x055A,
+    IOTYPE_USER_IPCAM_SET_FTP_RESP				= 0x055B,
+    IOTYPE_USER_IPCAM_GET_FTP_REQ				= 0x055C,
+    IOTYPE_USER_IPCAM_GET_FTP_RESP				= 0x055D,
+
+    //alarm
+    IOTYPE_USER_IPCAM_GETGUARD_REQ				= 0x420,
+    IOTYPE_USER_IPCAM_GETGUARD_RESP             = 0x421,
+    IOTYPE_USER_IPCAM_SETGUARD_REQ				= 0x422,
+    IOTYPE_USER_IPCAM_SETGUARD_RESP             = 0x423,
+    
+    //录像扩展设置 ①录像参数设置：
+
+    //录像扩展设置 ②录像、抓拍计划设置：
+    IOTYPE_USER_IPCAM_GET_SCHEDULE_REQ		  = 0x2219,
+    IOTYPE_USER_IPCAM_GET_SCHEDULE_RESP		  = 0x221A,
+    IOTYPE_USER_IPCAM_SET_SCHEDULE_REQ		  = 0x221B,
+    IOTYPE_USER_IPCAM_SET_SCHEDULE_RESP		  = 0x221C,
+    
+    
 }ENUM_AVIOCTRL_MSGTYPEOwnExt;
+
 //录像设置
 /* IOTYPE_USER_IPCAM_GET_REC_REQ		        = 0x2211,   */
 typedef struct
@@ -218,7 +257,7 @@ typedef struct
 typedef struct
 {
     unsigned int size; /*each real package size, max 1000 bytes*/
-    unsigned char buf [1000];	/*picture content*/
+    unsigned char buf[1000];	/*picture content*/
 }PicInfo;
 typedef struct
 {
@@ -294,6 +333,173 @@ typedef struct
     unsigned char reserved[8];
     
 }SMsgAVIoctrlGetSoundResp,SMsgAVIoctrlSetSoundReq;
+
+
+
+//LED light
+//#define IOTYPE_USEREX_IPCAM_SET_LED_REQ 0x4010
+//Data: SMsgAVIoctrlExSetLEDReq
+
+typedef struct
+{
+    unsigned int 	sSwitch;		/*0:auto 1:open  2:close*/
+    unsigned char reserved[4];
+} SMsgAVIoctrlExGetLEDResp, SMsgAVIoctrlExSetLEDReq;
+//#define IOTYPE_USEREX_IPCAM_SET_LED_RESP 0x4011
+//Data: SMsgAVIoctrlExSetLEDResp
+typedef struct
+{
+    int result;	// 0: success; otherwise: failed.
+    unsigned char reserved[4];
+}SMsgAVIoctrlExSetLEDResp;
+
+
+//#define IOTYPE_USEREX_IPCAM_GET_LED_REQ 0x400E
+//Data: SMsgAVIoctrlExGetLEDReq
+typedef struct
+{
+    unsigned char reserved[4];
+}SMsgAVIoctrlExGetLEDReq;
+
+
+//(图片参数#37)复位
+/*
+ IOTYPE_USER_IPCAM_SET_IMAGE_PARAM_REQ
+ IOTYPE_USER_IPCAM_GET_IMAGE_PARAM_RESP
+ */
+typedef struct
+{
+    unsigned int channel;		//Camera Index
+    unsigned int brightness;	/*value: 1-100*/
+    unsigned int saturation;   /*value: 1-100*/
+    unsigned int contrast;	/*value: 1-100*/
+    unsigned int todefault;		/*value : if set !0 ,image to default value*/
+    unsigned char reserved[16];
+}SMsgAVIoctrlSetImageParamReq,SMsgAVIoctrlGetImageParamResp;
+/*IOTYPE_USER_IPCAM_GET_IMAGE_PARAM_REQ*/
+typedef struct
+{
+    unsigned int channel;   // Camera Index
+    unsigned char reserved[8];
+}SMsgAVIoctrlGetImageParamReq;
+
+/*IOTYPE_USER_IPCAM_SET_IMAGE_PARAM_RESP*/
+typedef struct
+{
+    unsigned int  result;	// 0: success; otherwise: failed.
+    unsigned char reserved[8];
+}SMsgAVIoctrlSetImageParamResp;
+
+//重启
+
+/* IOTYPE_USER_IPCAM_SETREBOOT_REQ  */
+typedef struct
+{
+    unsigned int  result;	// 0: success; otherwise: failed.
+    unsigned char reserved[8];
+}SMsgAVIoctrlSetRebootResp;
+
+/*  IOTYPE_USER_IPCAM_SETREBOOT_RESP */
+typedef struct
+{
+    unsigned char reserved[8];
+}SMsgAVIoctrlSetRebootReq;
+
+
+//FTP
+
+typedef struct
+{
+    unsigned int channel;       // Camera Index
+    unsigned char ftpServer[68] ; // 10.1.1.1
+    int ftpPort;                   // 21
+    unsigned char userName[20];
+    unsigned char password[20];
+    unsigned char path[256];
+    int  passiveMode;// 0 - off, 1 - on
+}SMsgAVIoctrlSetFtpReq, SMsgAVIoctrlGetFtpResp;
+
+typedef struct
+{
+    unsigned int channel; 		// Camera Index
+    int result; //0: ok ; 1: failed
+    unsigned char reserved[4];
+}SMsgAVIoctrlSetFtpResp;
+
+typedef struct
+{
+    unsigned int channel; 		// Camera Index
+    unsigned char reserved[4];
+}SMsgAVIoctrlGetFtpReq;
+
+
+//报警
+
+/* IOTYPE_USER_IPCAM_GETGUARD_REQ				= 0x420
+ */
+typedef struct
+{
+    unsigned int channel;       // AvServer Index
+    unsigned char reserved[4];
+} SMsgAVIoctrlGetGuardReqEn;
+
+/* IOTYPE_USER_IPCAM_GETGUARD_RESP				= 0x421
+ * IOTYPE_USER_IPCAM_SETGUARD_REQ				= 0x422
+ */
+typedef struct
+{
+    unsigned int channel;       // AvServer Index
+    unsigned char alarm_motion_armed;        // 移动侦测开关	ON=1, OFF=0
+    unsigned char alarm_motion_sensitivity; // 1(MIN) ~ 100(MAX)   参考TUTK的SMsgAVIoctrlSetMotionDetectReq的sensitivity 值定义做。
+    unsigned char alarm_preset;  /*报警联动预置位 0：关闭，1～4：选择联动预值位*/
+    unsigned char alarm_mail;   /*报警时邮件通知 0：禁止；1：允许                   */
+    unsigned int   alarm_ftp; /*ftp 报警图片上传 0：禁止；1：允许*/
+} SMsgAVIoctrlGetGuardRespEn, SMsgAVIoctrlSetGuardReqEn;
+
+/* IOTYPE_USER_IPCAM_SETGUARD_RESP				= 0x423
+ */
+typedef struct
+{
+    int result;	// 回傳值	0: success; otherwise: failed.
+    unsigned char reserved[4];
+    
+} SMsgAVIoctrlSetGuardRespEn;
+
+//录像扩展设置 ①录像参数设置 上面已有
+
+//②录像、抓拍计划设置
+/* IOTYPE_USER_IPCAM_GET_SCHEDULE_REQ			= 0x2219,   */
+typedef enum
+{
+    AVIOTC_SCHEDULETYPE_ALARM		= 0x00,
+    AVIOTC_SCHEDULETYPE_PLAN		= 0x01,
+    AVIOTC_SCHEDULETYPE_SNAP		= 0x02,
+    AVIOTC_SCHEDULETYPE_BUTT
+}ENUM_SCHEDULE_TYPE;
+
+typedef struct
+{
+    unsigned int  u32Type; //refer to ENUM_SCHEDULE_TYPE
+    unsigned char reserved[8];
+}SMsgAVIoctrlGetScheduleReq;
+
+/* IOTYPE_USER_IPCAM_GET_SCHEDULE_RESP		= 0x221A,   */
+/* IOTYPE_USER_IPCAM_SET_SCHEDULE_REQ			= 0x221B,   */
+typedef struct
+{
+    unsigned int  u32ScheduleType;		//refer to ENUM_SCHEDULE_TYPE
+    char          sDayData[7][48+1];	//P:yes, N:no
+    unsigned char reserved1[1];
+    unsigned char reserved2[8];
+} SMsgAVIoctrlGetScheduleResp, SMsgAVIoctrlSetScheduleReq;
+
+
+/* IOTYPE_USER_IPCAM_SET_SCHEDULE_RESP		= 0x221C,   */
+typedef struct
+{
+    unsigned int  result;	// 0: success; otherwise: failed.
+    unsigned char reserved[8];
+}SMsgAVIoctrlSetScheduleResp;
 
 
 #endif

@@ -333,8 +333,14 @@ NSString *const kApplicationDidEnterForeground = @"Application_Did_Enter_Foregro
     
     [navigation setBackgroundImage:navigationbarBG forBarMetrics:UIBarMetricsDefault];
     [navigation setBackgroundImage:navigationbarBGWithPrompt forBarMetrics:UIBarMetricsDefaultPrompt];
+#ifdef CamLineProTarget
+    [navigation setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor whiteColor]}];
+    [navigation setTintColor:[UIColor whiteColor]];
+#else
     [navigation setTitleTextAttributes:@{UITextAttributeTextColor: [UIColor colorWithRed:255.0/255.0f green:255.0/255.0f blue:255.0/255.0f alpha:1.0f]}];
     [navigation setTintColor:[UIColor colorWithRed:177.0/255.0f green:0/255.0f blue:0/255.0f alpha:1.0f]];
+#endif
+    
     
     UIToolbar *toolbar = [UIToolbar appearance];
     [toolbar setBackgroundImage:[UIImage imageNamed:@"function_bar"] forToolbarPosition:UIToolbarPositionBottom barMetrics:UIBarMetricsDefault];

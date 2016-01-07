@@ -21,6 +21,12 @@
 //#define GO_CAMERA_SET 4
 #define QVGA 5
 #define EMODE 6
+//jay add for Camline Pro
+#define LANDSCAPE_GAP 12
+#define CONTRAST 12
+#define BRIGHT  13
+#define INFRARED 14 //红外
+#define RESTRORE 15
 
 #import <UIKit/UIKit.h>
 #import <IOTCamera/Camera.h>
@@ -95,7 +101,7 @@ extern NSString *deviceTokenString;
     BOOL isListening;
     BOOL isTalking;
     IBOutlet UIView *talkButton;
-    IBOutlet UIView *longTalkButton;
+    IBOutlet UIView *longTalkButton;//2
     IBOutlet UIButton *AudioTitle;
     IBOutlet UIButton *longAudioTitle;
     
@@ -105,7 +111,7 @@ extern NSString *deviceTokenString;
     BOOL isQVGAView;
     IBOutlet UIScrollView *scrollQVGAView;
     IBOutlet UIView *qvgaView;
-    IBOutlet UIView *longQVGAView;
+    IBOutlet UIView *longQVGAView; //1
     IBOutlet UIButton *setHighest;
     IBOutlet UIButton *setHigh;
     IBOutlet UIButton *setMedium;
@@ -122,7 +128,7 @@ extern NSString *deviceTokenString;
     BOOL isEModeView;
     IBOutlet UIScrollView *scrollEModeView;
     IBOutlet UIView *emodeView;
-    IBOutlet UIView *longEModeView;
+    IBOutlet UIView *longEModeView;//3
     IBOutlet UIButton *set50Hz;
     IBOutlet UIButton *set60Hz;
     IBOutlet UIButton *setOutDoor;
@@ -134,6 +140,9 @@ extern NSString *deviceTokenString;
     
     BOOL isLandscape;
     NSTimer *hideToolBarTimer;
+    /**
+     * 菜单是否为激活状态
+     */
     BOOL isActive;
     
     IBOutlet UIButton *zoomDigital;
@@ -161,9 +170,12 @@ extern NSString *deviceTokenString;
     BOOL isBright;
     BOOL isContrast;
     
+    BOOL isInfrared;//add by jay;
     BOOL isPrePosition;
     
     NSArray *preBtnArr;
+    //jay add
+    NSInteger selectIdex;
 }
 
 //for Recording
@@ -216,11 +228,17 @@ extern NSString *deviceTokenString;
 - (IBAction)onPlaySwitcher:(id)sender;
 - (IBAction)talkOn:(id)sender;
 - (IBAction)talkOff:(id)sender;
+/**
+ * 设置qvga 模式
+ */
 - (IBAction)onBtnSetQVGA:(id)sender;
 - (IBAction)onBtnSetEMode:(id)sender;
 //- (IBAction)onBtnSetCamera:(id)sender;
 
 //云台转动方向键
+/**
+ * 控制相机转动方向 view
+ */
 @property (retain, nonatomic) IBOutlet UIView *myPtzView;
 @property (retain, nonatomic) IBOutlet UIButton *myPTZDownBtn;
 - (IBAction)myPtzDownAction:(id)sender;
@@ -260,7 +278,9 @@ extern NSString *deviceTokenString;
 
 
 
-
+/**
+ * 设置对比度
+ */
 - (IBAction)onContrastClicked:(id)sender;
 //亮度
 @property (retain, nonatomic) IBOutlet UIScrollView *portraitBrightScrollView;
@@ -293,7 +313,15 @@ extern NSString *deviceTokenString;
 - (IBAction)preAction:(UIButton *)sender;
 @property (retain, nonatomic) IBOutlet UIView *preNumView;
 @property (retain, nonatomic) IBOutlet UIView *test;
+//红外开关
+@property (retain, nonatomic) IBOutlet UIView *longInfraredView;
+@property (retain, nonatomic) IBOutlet UIButton *longInfraredTitle;
 
+@property (retain, nonatomic) IBOutlet UIButton *longInfraredOpen;
+@property (retain, nonatomic) IBOutlet UIButton *longInfraredClose;
+@property (retain, nonatomic) IBOutlet UIButton *longInfraredAuto;
+
+- (IBAction)onlongInfraredClicked:(id)sender;
 
 @end
 
