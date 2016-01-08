@@ -416,10 +416,15 @@
                     autorelease];
             
             cell.textLabel.text = [fieldLabels objectAtIndex:row];
+            
+            NSInteger offsetRowW=0;
+#if defined(MAJESTICIPCAMP)
+            offsetRowW=30;
+#endif
 
             if (row == NAME_ROW_INDEX) {
                 
-                textFieldName = [[UITextField alloc] initWithFrame: CGRectMake(145, 11, 150, 25)];
+                textFieldName = [[UITextField alloc] initWithFrame: CGRectMake(145+offsetRowW, 11, 150-offsetRowW, 25)];
                 textFieldName.clearsOnBeginEditing = NO;
                 textFieldName.clearButtonMode = UITextFieldViewModeWhileEditing;
                 [textFieldName setDelegate:self];
@@ -428,7 +433,7 @@
             }         
             else if (row == PASSWORD_ROW_INDEX) {
             
-                textFieldPassword = [[UITextField alloc] initWithFrame: CGRectMake(145, 11, 150, 25)];
+                textFieldPassword = [[UITextField alloc] initWithFrame: CGRectMake(145+offsetRowW, 11, 150-offsetRowW, 25)];
                 textFieldPassword.clearsOnBeginEditing = NO;
                 textFieldPassword.clearButtonMode = UITextFieldViewModeWhileEditing;
                 textFieldPassword.secureTextEntry = YES;

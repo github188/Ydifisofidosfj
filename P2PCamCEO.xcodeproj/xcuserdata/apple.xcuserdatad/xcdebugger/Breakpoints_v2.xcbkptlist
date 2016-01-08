@@ -299,38 +299,6 @@
             endingLineNumber = "283"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[DetailRECSettingController tableView:didSelectRowAtIndexPath:]"
-                  moduleName = "CamLine Pro"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/jay/Work/team/EASNYP/CamLine%20Pro/Clasess/SDcardREC/DetailRECSettingController.m"
-                  timestampString = "473849953.584315"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "283"
-                  endingLineNumber = "283"
-                  offsetFromSymbolStart = "1196">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[DetailRECSettingController tableView:didSelectRowAtIndexPath:]"
-                  moduleName = "CamLine Pro"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/jay/Work/team/EASNYP/CamLine%20Pro/Clasess/SDcardREC/DetailRECSettingController.m"
-                  timestampString = "473849953.584576"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "283"
-                  endingLineNumber = "283"
-                  offsetFromSymbolStart = "1198">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -347,38 +315,6 @@
             endingLineNumber = "155"
             landmarkName = "-save:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[DetailRECSettingController save:]"
-                  moduleName = "CamLine Pro"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/jay/Work/team/EASNYP/CamLine%20Pro/Clasess/SDcardREC/DetailRECSettingController.m"
-                  timestampString = "473849953.5858"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "155"
-                  endingLineNumber = "155"
-                  offsetFromSymbolStart = "250">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[DetailRECSettingController save:]"
-                  moduleName = "CamLine Pro"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/jay/Work/team/EASNYP/CamLine%20Pro/Clasess/SDcardREC/DetailRECSettingController.m"
-                  timestampString = "473849953.585991"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "155"
-                  endingLineNumber = "155"
-                  offsetFromSymbolStart = "274">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

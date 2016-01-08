@@ -542,6 +542,7 @@ extern unsigned int _getTickCount();
                                                object:nil];
 	
 	isBack = NO;
+    
     [super viewDidLoad];
 }
 

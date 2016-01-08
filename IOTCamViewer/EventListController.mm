@@ -163,15 +163,10 @@
 //        self.navigationItem.prompt = camera.name;        
 //#endif
         camera.delegate2=self;
-        if(self.camera.nGMTDiff>=60){
-            timeZoneNumber=self.camera.nGMTDiff/60;
-        }
-        else{
-            // get TimeZone
-            SMsgAVIoctrlTimeZoneExt s3={0};
-            s3.cbSize = sizeof(s3);
-            [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ_EXT Data:(char *)&s3 DataSize:sizeof(s3)];
-        }
+        // get TimeZone
+        SMsgAVIoctrlTimeZoneExt s3={0};
+        s3.cbSize = sizeof(s3);
+        [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ_EXT Data:(char *)&s3 DataSize:sizeof(s3)];
         [self refresh];
     }    
 }

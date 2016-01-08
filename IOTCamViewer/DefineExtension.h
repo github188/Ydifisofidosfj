@@ -160,6 +160,7 @@ typedef enum {
     IOTYPE_USER_IPCAM_SETPRESET_RESP			= 0x441,
     IOTYPE_USER_IPCAM_GETPRESET_REQ				= 0x442,
     IOTYPE_USER_IPCAM_GETPRESET_RESP			= 0x443,
+<<<<<<< HEAD
     //红外开关
     IOTYPE_USEREX_IPCAM_GET_LED_REQ             =0x400E,
     IOTYPE_USEREX_IPCAM_GET_LED_RESP            =0x400F,
@@ -196,6 +197,14 @@ typedef enum {
     IOTYPE_USER_IPCAM_SET_SCHEDULE_RESP		  = 0x221C,
     
     
+=======
+    IOTYPE_USER_IPCAM_GET_EnParam_REQ           = 0x804,
+    IOTYPE_USER_IPCAM_GET_EnParam_RESP = 0x805,
+    IOTYPE_USER_IPCAM_SETSOUNDDETECT_REQ		= 0x03B2,
+    IOTYPE_USER_IPCAM_SETSOUNDDETECT_RESP		= 0x03B3,
+    IOTYPE_USER_IPCAM_GETSOUNDDETECT_REQ		= 0x03B4,
+    IOTYPE_USER_IPCAM_GETSOUNDDETECT_RESP		= 0x03B5
+>>>>>>> 5d317abc7f51115e806da5ad5442697d0702c42a
 }ENUM_AVIOCTRL_MSGTYPEOwnExt;
 
 //录像设置
@@ -334,6 +343,36 @@ typedef struct
     
 }SMsgAVIoctrlGetSoundResp,SMsgAVIoctrlSetSoundReq;
 
+typedef struct{
+    unsigned int channel;
+    unsigned char reserved[4];
+}SMsgAVIoctrlGetEnParamReq;
+typedef struct {
+    unsigned int channel;
+    unsigned int tempreture;
+    unsigned int humidity;
+    unsigned char reserved[4];
+}SMsgAVIoctrlGetEnParamResp;
+
+
+
+typedef struct
+{
+    unsigned int channel; 	// Camera Index
+    unsigned char reserved[4];
+}SMsgAVIoctrlGetSoundDetectReq, SMsgAVIoctrlGetDectectDurationReq;
+
+typedef struct
+{
+    unsigned int channel; 		// Camera Index
+    int sensitivity; 	// 0(Disabled) ~ 100(MAX)
+}SMsgAVIoctrlSetSoundDetectReq, SMsgAVIoctrlGetSoundDetectResp;
+
+typedef struct
+{
+    int result;	// 0: success; otherwise: failed.
+    unsigned char reserved[4];
+}SMsgAVIoctrlSetSoundDetectResp, SMsgAVIoctrlSetDectectDurationResp;
 
 
 //LED light

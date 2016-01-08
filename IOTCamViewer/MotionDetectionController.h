@@ -21,6 +21,7 @@
 }
 
 @property (nonatomic, retain) MyCamera *camera;
+@property(nonatomic) NSInteger monitorType;
 @property (nonatomic, retain) NSArray *labelItems;
 @property (nonatomic) NSInteger origValue;
 @property (nonatomic) NSInteger newValue;
@@ -32,7 +33,7 @@
 @end
 
 @protocol MotionDetectionDelegate
-
-- (void)didSetMotionDetection:(NSInteger)value;
+//type:0,default 1:声音报警
+- (void)didSetMotionDetection:(NSInteger)value withType:(NSInteger)type;
 
 @end

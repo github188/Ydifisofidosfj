@@ -53,7 +53,7 @@ extern NSString *deviceTokenString;
 @protocol CameraLiveViewDelegate;
 
 @interface CameraLiveViewController : UIViewController 
-<MyCameraDelegate, MonitorTouchDelegate, EditCameraDefaultDelegate, UIScrollViewDelegate, ChannelPickerDelegate, WEPopoverControllerDelegate, UIPopoverControllerDelegate, UIActionSheetDelegate, UIAlertViewDelegate> {
+<MyCameraDelegate, MonitorTouchDelegate, EditCameraDefaultDelegate, UIScrollViewDelegate, ChannelPickerDelegate, WEPopoverControllerDelegate, UIPopoverControllerDelegate, UIActionSheetDelegate, UIAlertViewDelegate,UIActionSheetDelegate> {
     
 	unsigned short mCodecId;
 	CameraShowGLView *glView;
@@ -174,11 +174,24 @@ extern NSString *deviceTokenString;
     BOOL isPrePosition;
     
     NSArray *preBtnArr;
+<<<<<<< HEAD
     //jay add
     NSInteger selectIdex;
+=======
+    
+    UIView *swipCameraPopView;
+    
+    NSMutableArray *swipCameraBtns;
+    
+    UIBarButtonItem *listButtonItem;
+    
+    NSTimer *wenDuLblTimer;
+>>>>>>> 5d317abc7f51115e806da5ad5442697d0702c42a
 }
 
 //for Recording
+
+@property(nonatomic) NSInteger cameraQVGANumber;
 
 @property (retain, nonatomic) VideoGenerator* videoGenerator;
 
@@ -313,6 +326,7 @@ extern NSString *deviceTokenString;
 - (IBAction)preAction:(UIButton *)sender;
 @property (retain, nonatomic) IBOutlet UIView *preNumView;
 @property (retain, nonatomic) IBOutlet UIView *test;
+<<<<<<< HEAD
 //红外开关
 @property (retain, nonatomic) IBOutlet UIView *longInfraredView;
 @property (retain, nonatomic) IBOutlet UIButton *longInfraredTitle;
@@ -322,6 +336,31 @@ extern NSString *deviceTokenString;
 @property (retain, nonatomic) IBOutlet UIButton *longInfraredAuto;
 
 - (IBAction)onlongInfraredClicked:(id)sender;
+=======
+//企鹅版操作
+@property (retain, nonatomic) IBOutlet UIView *qieActionView;
+@property (retain, nonatomic) IBOutlet UIView *qieLandActionView;
+@property (retain, nonatomic) IBOutlet UIButton *qieSnapshotBtn;
+@property (retain, nonatomic) IBOutlet UIButton *qieLandSnapshotBtn;
+- (IBAction)qieSnapshot:(id)sender;
+@property (retain, nonatomic) IBOutlet UIButton *qieMonitorBtn;
+@property (retain, nonatomic) IBOutlet UIButton *qieLandMonitorBtn;
+- (IBAction)qiemonito:(id)sender;
+@property (retain, nonatomic) IBOutlet UIButton *qieWenduBtn;
+@property (retain, nonatomic) IBOutlet UIButton *qieLandWenduBtn;
+- (IBAction)qieWendu:(id)sender;
+@property (retain, nonatomic) IBOutlet UIButton *qieVideoBtn;
+@property (retain, nonatomic) IBOutlet UIButton *qieLandVideoBtn;
+- (IBAction)qieVideo:(id)sender;
+@property (retain, nonatomic) IBOutlet UIButton *qieHuaZhiBtn;
+@property (retain, nonatomic) IBOutlet UIButton *qieLandHuaZhiBtn;
+- (IBAction)qieHuaZhi:(id)sender;
+@property (retain, nonatomic) IBOutlet UIButton *qiePhoneBtn;
+@property (retain, nonatomic) IBOutlet UIButton *qieLandPhoneBtn;
+- (IBAction)qiePhone:(id)sender;
+
+@property (retain, nonatomic) IBOutlet UILabel *qieWenDuLbl;
+>>>>>>> 5d317abc7f51115e806da5ad5442697d0702c42a
 
 @end
 

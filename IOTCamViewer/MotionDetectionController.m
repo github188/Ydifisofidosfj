@@ -32,21 +32,29 @@
 - (IBAction)back:(id)sender {
  
     if (newValue != -1 && origValue != newValue) {
-        
-        SMsgAVIoctrlSetMotionDetectReq *structSetMotionDetection = malloc(sizeof(SMsgAVIoctrlSetMotionDetectReq));
-        memset(structSetMotionDetection, 0, sizeof(SMsgAVIoctrlSetMotionDetectReq));
-        
-        structSetMotionDetection->channel = 0;
-        structSetMotionDetection->sensitivity = newValue;
-        
-        [camera sendIOCtrlToChannel:0 
-                               Type:IOTYPE_USER_IPCAM_SETMOTIONDETECT_REQ 
-                               Data:(char *)structSetMotionDetection 
-                           DataSize:sizeof(SMsgAVIoctrlSetMotionDetectReq)];
-        
-        free(structSetMotionDetection);
-        
-        if (self.delegate) [self.delegate didSetMotionDetection:newValue];
+        if(self.monitorType==0){
+            SMsgAVIoctrlSetMotionDetectReq *structSetMotionDetection = malloc(sizeof(SMsgAVIoctrlSetMotionDetectReq));
+            memset(structSetMotionDetection, 0, sizeof(SMsgAVIoctrlSetMotionDetectReq));
+            
+            structSetMotionDetection->channel = 0;
+            structSetMotionDetection->sensitivity = newValue;
+            
+            [camera sendIOCtrlToChannel:0
+                                   Type:IOTYPE_USER_IPCAM_SETMOTIONDETECT_REQ
+                                   Data:(char *)structSetMotionDetection
+                               DataSize:sizeof(SMsgAVIoctrlSetMotionDetectReq)];
+            
+            free(structSetMotionDetection);
+        }
+        else{
+            //增加声音报警
+            SMsgAVIoctrlSetSoundDetectReq *audioAlarm = (SMsgAVIoctrlSetSoundDetectReq *)malloc(sizeof(SMsgAVIoctrlSetSoundDetectReq));
+            audioAlarm->channel=0;
+            audioAlarm->sensitivity=newValue;
+            [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_SETSOUNDDETECT_REQ Data:(char *)audioAlarm DataSize:sizeof(SMsgAVIoctrlSetSoundDetectReq)];
+            free(audioAlarm);
+        }
+        if (self.delegate) [self.delegate didSetMotionDetection:newValue withType:_monitorType];
     }
     
     [self.navigationController popViewControllerAnimated:YES];  
@@ -193,7 +201,12 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
         self.origValue = s->sensitivity;            
         
         [self.tableView reloadData];
-    } 
+    }
+    
+    if(type==IOTYPE_USER_IPCAM_SETSOUNDDETECT_RESP){
+        SMsgAVIoctrlSetSoundDetectResp *resp=(SMsgAVIoctrlSetSoundDetectResp*)data;
+        NSLog(@"result:%d",resp->result);
+    }
 }
 
 @end

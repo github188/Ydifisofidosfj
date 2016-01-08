@@ -740,6 +740,21 @@ extern unsigned int _getTickCount() {
             [self.longHorizMenu reloadData];
             
         }
+#if defined(QIEAPP)
+        [self.qieVideoBtn setBackgroundImage:[UIImage imageNamed:@"video-stop.png"] forState:UIControlStateNormal];
+        self.qieWenduBtn.enabled=NO;
+        self.qieMonitorBtn.enabled=NO;
+        self.qieHuaZhiBtn.enabled=NO;
+        self.qiePhoneBtn.enabled=NO;
+        self.qieSnapshotBtn.enabled=NO;
+        
+        [self.qieLandVideoBtn setBackgroundImage:[UIImage imageNamed:@"video-stop.png"] forState:UIControlStateNormal];
+        self.qieLandWenduBtn.enabled=NO;
+        self.qieLandMonitorBtn.enabled=NO;
+        self.qieLandHuaZhiBtn.enabled=NO;
+        self.qieLandPhoneBtn.enabled=NO;
+        self.qieLandSnapshotBtn.enabled=NO;
+#endif
     }
     else {
         NSLog(@"Ignore local REC function... due to the msizeOrgVideoResolution value invalid!!!");
@@ -800,6 +815,21 @@ extern unsigned int _getTickCount() {
 #if defined(BayitCam)
                 self.items = [NSMutableArray arrayWithObjects:@"leo_speaker_off", @"ceo_record", @"leo_snapshot",@"ceo_presetting_enable.png", @"leo_mirror_ud", @"leo_mirror_rl", @"leo_qvga", @"leo_emode",nil];
                 self.selectItems = [NSMutableArray arrayWithObjects:@"leo_speaker_on_clicked", @"ceo_record", @"leo_snapshot_clicked",@"ceo_presetting_clicked.png", @"leo_mirror_ud_clicked", @"leo_mirror_rl_clicked", @"leo_qvga_clicked", @"leo_emode_clicked",nil];
+#endif
+#if defined(QIEAPP)
+                [self.qieVideoBtn setBackgroundImage:[UIImage imageNamed:@"video.png"] forState:UIControlStateNormal];
+                self.qieWenduBtn.enabled=YES;
+                self.qieMonitorBtn.enabled=YES;
+                self.qieHuaZhiBtn.enabled=YES;
+                self.qiePhoneBtn.enabled=YES;
+                self.qieSnapshotBtn.enabled=YES;
+                
+                [self.qieLandVideoBtn setBackgroundImage:[UIImage imageNamed:@"video.png"] forState:UIControlStateNormal];
+                self.qieLandWenduBtn.enabled=YES;
+                self.qieLandMonitorBtn.enabled=YES;
+                self.qieLandHuaZhiBtn.enabled=YES;
+                self.qieLandPhoneBtn.enabled=YES;
+                self.qieLandSnapshotBtn.enabled=YES;
 #endif
                 
                 [self.horizMenu reloadData];
@@ -1010,14 +1040,21 @@ extern unsigned int _getTickCount() {
 #if defined(CamLineProTarget) //2015 -12 -27 jay
         self.items = nil;
         
+<<<<<<< HEAD
         self.items = [NSMutableArray arrayWithObjects:@"psd_contrast",@"psd_bright",@"infrared",@"restore",nil];
         self.selectItems = [NSMutableArray arrayWithObjects: @"psd_contrast_clicked",@"psd_bright_clicked",@"infrared_click",@"restore_click",nil];
 #endif
+=======
+        
+>>>>>>> 5d317abc7f51115e806da5ad5442697d0702c42a
         [self.longHorizMenu reloadData];
         [self checkLongBTN];
-        
-        
-        
+#if defined(QIEAPP)
+        if(![[self.view subviews]containsObject:swipCameraPopView]){
+            [self.view addSubview:swipCameraPopView];
+        }
+        self.navigationItem.rightBarButtonItem=nil;
+#endif
 		NSLog( @"video frame {%d,%d}%dx%d", (int)self.monitorLandscape.frame.origin.x, (int)self.monitorLandscape.frame.origin.y, (int)self.monitorLandscape.frame.size.width, (int)self.monitorLandscape.frame.size.height);
         
         //动态布局
@@ -1074,6 +1111,19 @@ extern unsigned int _getTickCount() {
         }
         
         [self.navigationController setNavigationBarHidden:isHiddenTopNav animated:NO];
+        
+#if defined(QIEAPP)
+        self.longHorizMenu.hidden=YES;
+        self.qieLandActionView.hidden=YES;
+        [self.view bringSubviewToFront:self.qieLandActionView];
+        self.qieLandActionView.frame=CGRectMake(0, self.view.frame.size.height-self.qieLandActionView.frame.size.height, self.qieLandActionView.frame.size.width, self.qieLandActionView.frame.size.height);
+        if(![[self.view subviews] containsObject:self.qieWenDuLbl]){
+            [self.view addSubview:self.qieWenDuLbl];
+            self.qieWenDuLbl.frame=CGRectMake(0, self.qieLandActionView.frame.origin.y-self.qieWenDuLbl.frame.size.height-self.navigationController.navigationBar.frame.size.height-20, self.qieWenDuLbl.frame.size.width, self.qieWenDuLbl.frame.size.height);
+        }
+        self.qieWenDuLbl.hidden=YES;
+#endif
+        
     }
     else {
         
@@ -1094,8 +1144,18 @@ extern unsigned int _getTickCount() {
         [self.horizMenu reloadData];
         [self checkBTN];
         
+#if defined(QIEAPP)
+        if(![[self.view subviews]containsObject:swipCameraPopView]){
+            [self.view addSubview:swipCameraPopView];
+        }
+        self.navigationItem.rightBarButtonItem=listButtonItem;
+#endif
+        static CGFloat py=-1;
+        if(py==-1){
+            py=self.scrollViewPortrait.frame.origin.y;
+        }
         //动态布局
-        self.scrollViewPortrait.frame=CGRectMake(0, self.scrollViewPortrait.frame.origin.y+5, self.view.frame.size.width, self.view.frame.size.width/4*3);
+        self.scrollViewPortrait.frame=CGRectMake(0, py+5, self.view.frame.size.width, self.view.frame.size.width/4*3);
         self.scrollViewPortrait.contentSize=self.scrollViewPortrait.frame.size;
         self.monitorPortrait.frame=CGRectMake(0, 0, self.scrollViewPortrait.frame.size.width, self.scrollViewPortrait.frame.size.height);
         statusBar.frame=CGRectMake(0, 0, self.view.frame.size.width, statusBar.frame.size.height);
@@ -1159,6 +1219,28 @@ extern unsigned int _getTickCount() {
         [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
         
         [self.navigationController setNavigationBarHidden:NO animated:NO];
+        
+#if defined(QIEAPP)
+        self.myPtzView.hidden=YES;
+        self.horizMenu.hidden=YES;
+        //self.statusLabel.hidden=YES;
+        //statusBar.hidden=YES;
+        //frameInfoLabel.hidden=YES;
+        //videoInfoLabel.hidden=YES;
+        //_qualityLabel.hidden=YES;
+        self.scrollViewPortrait.frame=CGRectMake(0, self.scrollViewPortrait.frame.origin.y, self.scrollViewPortrait.frame.size.width, self.scrollViewPortrait.frame.size.height);
+        self.loadingViewPortrait.frame=CGRectMake(self.scrollViewPortrait.frame.size.width/2-self.loadingViewPortrait.frame.size.width/2, self.scrollViewPortrait.frame.origin.y+self.scrollViewPortrait.frame.size.height/2-self.loadingViewPortrait.frame.size.height/2, self.loadingViewPortrait.frame.size.width, self.loadingViewPortrait.frame.size.height);
+        self.view.backgroundColor=HexRGB(0xe1e1e1);
+        self.qieActionView.hidden=NO;
+        self.qieActionView.frame=CGRectMake(0, self.view.frame.size.height-self.qieActionView.frame.size.height, self.qieActionView.frame.size.width, self.qieActionView.frame.size.height);
+        //self.qieWenDuLbl.hidden=NO;
+        self.qieWenDuLbl.frame=CGRectMake(0, self.scrollViewPortrait.frame.size.height-self.qieWenDuLbl.frame.size.height, self.qieWenDuLbl.frame.size.width, self.qieWenDuLbl.frame.size.height);
+        self.qieWenDuLbl.backgroundColor=[UIColor clearColor];
+        if(![[self.view subviews] containsObject:self.qieWenDuLbl]){
+            [self.view addSubview:self.qieWenDuLbl];
+        }
+#endif
+        
     }
 }
 
@@ -1293,20 +1375,65 @@ extern unsigned int _getTickCount() {
     [_preBtn4 release];
     [_preNumView release];
     [_test release];
+<<<<<<< HEAD
     [_longInfraredView release];
     [_longInfraredOpen release];
     [_longInfraredClose release];
     [_longInfraredAuto release];
     [_longInfraredTitle release];
+=======
+    [_qieActionView release];
+    [_qieSnapshotBtn release];
+    [_qieMonitorBtn release];
+    [_qieWenduBtn release];
+    [_qieVideoBtn release];
+    [_qieHuaZhiBtn release];
+    [_qiePhoneBtn release];
+    [_qieWenDuLbl release];
+    [swipCameraPopView release];
+    [swipCameraBtns release];
+    [_qieLandActionView release];
+    [_qieLandMonitorBtn release];
+    [_qieLandWenduBtn release];
+    [_qieLandVideoBtn release];
+    [_qieLandSnapshotBtn release];
+    [_qieLandHuaZhiBtn release];
+    [_qieLandPhoneBtn release];
+    [listButtonItem release];
+    if(wenDuLblTimer){
+        if([wenDuLblTimer isValid]){
+            [wenDuLblTimer invalidate];
+        }
+        [wenDuLblTimer release];
+        wenDuLblTimer  =nil;
+    }
+>>>>>>> 5d317abc7f51115e806da5ad5442697d0702c42a
     [super dealloc];
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
     NSLog(@"SCROLL!");
 }
-
+-(void)swipCamera:(UIButton *)btn{
+    swipCameraPopView.frame=CGRectMake(self.view.frame.size.width-swipCameraPopView.frame.size.width, 0, swipCameraPopView.frame.size.width, swipCameraPopView.frame.size.height);
+    swipCameraPopView.hidden=!swipCameraPopView.hidden;
+    [self.view bringSubviewToFront:swipCameraPopView];
+}
 - (void)viewDidLoad {
     
+#if defined(QIEAPP)
+    UIButton *listButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    listButton.frame = CGRectMake(20, 0, 44, 44);
+    [listButton setBackgroundImage:[UIImage imageNamed:@"list-btn.png"] forState:UIControlStateNormal];
+    [listButton setBackgroundImage:[UIImage imageNamed:@"list-btn-click.png"] forState:UIControlStateHighlighted];
+    [listButton addTarget:self action:@selector(swipCamera:) forControlEvents:UIControlEventTouchUpInside];
+    
+    listButtonItem = [[UIBarButtonItem alloc] initWithCustomView:listButton];
+    
+    self.navigationItem.rightBarButtonItem=listButtonItem;
+    
+    self.qieLandActionView.backgroundColor= [UIColor colorWithPatternImage:[UIImage imageNamed:@"title_bk"]];
+#endif
     
     //button长按事件
     UILongPressGestureRecognizer *longPress1 = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(preBtnLongTouch1:)];
@@ -1657,6 +1784,9 @@ extern unsigned int _getTickCount() {
 #endif
     
     [self getAppDelegate].allowRotation=YES;
+#if defined(QIEAPP)
+    [self initSwipView];
+#endif
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -1723,7 +1853,7 @@ extern unsigned int _getTickCount() {
             
         } else {
             self.navigationItem.title = camera.name;
-            self.navigationItem.rightBarButtonItem = nil;
+            //self.navigationItem.rightBarButtonItem = nil;
         }
         
         [self verifyConnectionStatus];
@@ -2061,6 +2191,16 @@ extern unsigned int _getTickCount() {
 
 - (void)camera:(MyCamera *)camera_ _didReceiveIOCtrlWithType:(NSInteger)type Data:(const char*)data DataSize:(NSInteger)size
 {
+    if (type == IOTYPE_USER_IPCAM_GET_EnParam_RESP) {
+        /* do something you want */
+        SMsgAVIoctrlGetEnParamResp *resp=(SMsgAVIoctrlGetEnParamResp *)data;
+        memcpy(resp, data, size);
+        NSLog(@"%d",resp->channel);
+        
+        self.qieWenDuLbl.hidden=NO;
+        self.qieWenDuLbl.text=[NSString stringWithFormat:@"%@%d℃ %@%d%@",NSLocalizedString(@"WenDu", nil),resp->tempreture,NSLocalizedString(@"ShiDu", nil),resp->humidity,@"%"];
+        [self.scrollViewPortrait bringSubviewToFront:self.qieWenDuLbl];
+    }
     if(type==(int)IOTYPE_USER_IPCAM_GETSTREAMCTRL_RESP){
         SMsgAVIoctrlGetStreamCtrlResp* pResult=(SMsgAVIoctrlGetStreamCtrlResp*)data;
         [self initQVGAMode:pResult->quality];
@@ -2227,6 +2367,7 @@ extern unsigned int _getTickCount() {
 #endif
         }
     }
+    self.cameraQVGANumber=tg;
 }
 #pragma mark - 设置对应按钮字体颜色（对比度，亮度，红外开关）
 -(void)initSettingFiveStatus:(NSInteger)tg withpView:(UIView *)pview{
@@ -3445,6 +3586,13 @@ extern unsigned int _getTickCount() {
         
         [self.longHorizMenu setHidden:!hidden];
         
+#if defined(QIEAPP)
+        hidden=self.qieLandActionView.hidden;
+        self.qieLandActionView.hidden=!hidden;
+        self.qieWenDuLbl.hidden=!hidden;
+        isHiddenTopNav=!hidden;
+#endif
+        
         [[UIApplication sharedApplication] setStatusBarHidden:isHiddenTopNav withAnimation:UIStatusBarAnimationNone];
         [self.navigationController setNavigationBarHidden:isHiddenTopNav animated:YES];
         
@@ -3452,6 +3600,9 @@ extern unsigned int _getTickCount() {
             self.hideToolBarTimer = [self setupHideToolBarTimer];
         }
     }
+#if defined(QIEAPP)
+    self.longHorizMenu.hidden=YES;
+#endif
 }
 
 #define HIDE_TOOL_BAR_TIME_OUT	5
@@ -3464,6 +3615,8 @@ extern unsigned int _getTickCount() {
 	if (self.longHorizMenu.hidden == NO && isActive == NO) {
         [self.longHorizMenu setHidden:YES];
         isHiddenTopNav=YES;
+        self.qieLandActionView.hidden=YES;
+        self.qieWenDuLbl.hidden=YES;
         [[UIApplication sharedApplication] setStatusBarHidden:isHiddenTopNav withAnimation:UIStatusBarAnimationNone];
         [self.navigationController setNavigationBarHidden:isHiddenTopNav animated:YES];
 	}
@@ -3660,7 +3813,290 @@ extern unsigned int _getTickCount() {
         }
     }*/
 }
+<<<<<<< HEAD
 
+=======
+- (IBAction)qieSnapshot:(id)sender {
+    self.qieWenDuLbl.hidden=YES;
+    [self snapshot:sender];
+}
+- (IBAction)qiemonito:(id)sender {
+    self.qieWenDuLbl.hidden=YES;
+    if(isTalking){
+        [camera stopSoundToDevice:selectedChannel];
+        isTalking = NO;
+    }
+    if (isListening==NO && isTalking==NO){
+        
+        isQVGAView = NO;
+        isEModeView = NO;
+        self.isCanSendSetCameraCMD=NO;
+        
+        selectedAudioMode = AUDIO_MODE_SPEAKER;
+        [self activeAudioSession];
+        [camera startSoundToPhone:selectedChannel];
+        
+        
+        isListening = YES;
+        
+        self.qieMonitorBtn.selected=YES;
+        self.qiePhoneBtn.selected=NO;
+        
+        self.qieLandMonitorBtn.selected=YES;
+        self.qieLandPhoneBtn.selected=NO;
+        
+    } else if (isListening==YES && isTalking==NO){
+        
+        selectedAudioMode = AUDIO_MODE_OFF;
+        [camera stopSoundToPhone:selectedChannel];
+        [self unactiveAudioSession];
+        
+        isListening = NO;
+        isActive = NO;
+        
+        self.isCanSendSetCameraCMD=YES;
+        self.qieMonitorBtn.selected=NO;
+        self.qieLandMonitorBtn.selected=NO;
+        
+    }
+}
+- (IBAction)qieWendu:(id)sender {
+    SMsgAVIoctrlGetEnParamReq *s2 = (SMsgAVIoctrlGetEnParamReq *)malloc(sizeof(SMsgAVIoctrlGetEnParamReq));
+    s2->channel=0;
+    [self.camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_EnParam_REQ Data:(char *)s2 DataSize:sizeof(SMsgAVIoctrlGetEnParamReq)];
+    free(s2);
+    if(wenDuLblTimer){
+        if([wenDuLblTimer isValid]){
+            [wenDuLblTimer invalidate];
+        }
+        [wenDuLblTimer release];
+        wenDuLblTimer  =nil;
+    }
+    wenDuLblTimer = [NSTimer scheduledTimerWithTimeInterval:10.0f target:self selector:@selector(hiddenWenDuLabl) userInfo:nil repeats:NO];
+    [wenDuLblTimer retain];
+}
+-(void)hiddenWenDuLabl{
+    self.qieWenDuLbl.hidden=YES;
+}
+- (IBAction)qieVideo:(id)sender {
+    self.qieWenDuLbl.hidden=YES;
+    isQVGAView = NO;
+    isEModeView = NO;
+    isActive = NO;
+    
+    isListening = NO;
+    selectedAudioMode = AUDIO_MODE_OFF;
+    [camera stopSoundToPhone:selectedChannel];
+    [self unactiveAudioSession];
+    
+    [self onBtnRecording];
+}
+- (IBAction)qieHuaZhi:(id)sender {
+    self.qieWenDuLbl.hidden=YES;
+    UIActionSheet *sheet=[[UIActionSheet alloc]initWithTitle:nil delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel",nil) destructiveButtonTitle:NSLocalizedString(@"高清",nil)  otherButtonTitles:NSLocalizedString(@"标清",nil),NSLocalizedString(@"流畅",nil)  , nil];
+    
+    
+    NSInteger i=self.cameraQVGANumber;
+    
+    if(self.cameraQVGANumber>0){
+        if(self.cameraQVGANumber%2==0){
+            i=self.cameraQVGANumber-1;
+        }
+    }
+    
+    if(i==1){
+        sheet.destructiveButtonIndex=0;
+    }
+    else if(i==3)
+    {
+        sheet.destructiveButtonIndex=1;
+    }
+    else if(i==5){
+        sheet.destructiveButtonIndex=2;
+    }
+    
+    [sheet showInView:self.view];
+    [sheet release];
+}
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSInteger i=buttonIndex;
+    if(buttonIndex==0){
+        i=1;
+    }
+    else if(buttonIndex==1)
+    {
+        i=3;
+    }
+    else if(buttonIndex==2){
+        i=5;
+    }
+    else{
+        return;
+    }
+    [self onBtnSetQVGA1:i];
+    self.cameraQVGANumber=i;
+}
+- (IBAction)qiePhone:(id)sender {
+    self.qieWenDuLbl.hidden=YES;
+    if(!isTalking){
+        if(!self.isTalkButtonAction)
+        {
+            [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            SMsgAVIoctrlGetAudioOutFormatReq *s = (SMsgAVIoctrlGetAudioOutFormatReq *)malloc(sizeof(SMsgAVIoctrlGetAudioOutFormatReq));
+            s->channel = 0;
+            [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GETAUDIOOUTFORMAT_REQ Data:(char *)s DataSize:sizeof(SMsgAVIoctrlGetAudioOutFormatReq)];
+            free(s);
+            
+            SMsgAVIoctrlGetSupportStreamReq *s2 = (SMsgAVIoctrlGetSupportStreamReq *)malloc(sizeof(SMsgAVIoctrlGetSupportStreamReq));
+            [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GETSUPPORTSTREAM_REQ Data:(char *)s2 DataSize:sizeof(SMsgAVIoctrlGetSupportStreamReq)];
+            free(s2);
+            
+            SMsgAVIoctrlTimeZone s3={0};
+            s3.cbSize = sizeof(s3);
+            [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];
+            self.isTalkButtonAction=YES;
+        }
+        
+        isTalking = YES;
+        isListening=NO;
+        selectedAudioMode = AUDIO_MODE_MICROPHONE;
+        [camera stopSoundToPhone:selectedChannel];
+        [self unactiveAudioSession];
+        [self activeAudioSession];
+        [camera startSoundToDevice:selectedChannel];
+        self.qieMonitorBtn.selected=NO;
+        self.qiePhoneBtn.selected=YES;
+        
+        self.qieLandMonitorBtn.selected=NO;
+        self.qieLandPhoneBtn.selected=YES;
+    }
+    else{
+        [camera stopSoundToDevice:selectedChannel];
+        isTalking = NO;
+        
+        selectedAudioMode = AUDIO_MODE_SPEAKER;
+        [self unactiveAudioSession];
+        self.qiePhoneBtn.selected=NO;
+        self.qieLandPhoneBtn.selected=NO;
+    }
+}
+#pragma mark --构建切换界面
+-(void)initSwipView{
+    if(swipCameraPopView) return;
+    swipCameraBtns=[[NSMutableArray alloc]init];
+    
+    swipCameraPopView=[[UIView alloc]init];
+    swipCameraPopView.hidden=YES;
+    [self.view addSubview:swipCameraPopView];
+    
+    //120*27
+    NSInteger marginW=10;
+    swipCameraPopView.frame=CGRectMake(self.view.frame.size.width-(120+marginW*2), 0, 120+marginW*2, marginW*2+[camera_list count]*27+10);
+    UIImageView *bgImagevIew=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"icon-box.png"]];
+    [swipCameraPopView addSubview:bgImagevIew];
+    [bgImagevIew release];
+    bgImagevIew.frame=swipCameraPopView.bounds;
+    
+    UIButton *lastBtn=nil;
+    NSInteger i=0;
+    for (MyCamera *ca in camera_list) {
+        UIButton *btn=[[UIButton alloc]init];
+        [swipCameraPopView addSubview:btn];
+        [swipCameraBtns addObject:btn];
+        [btn release];
+        if(lastBtn){
+            btn.frame=CGRectMake(marginW, lastBtn.frame.origin.y+27+marginW, 120, 27);
+        }
+        else{
+            btn.frame=CGRectMake(marginW, marginW, 120, 27);
+        }
+        btn.tag=i;
+        i++;
+        [btn addTarget:self action:@selector(selectCameraAction:) forControlEvents:UIControlEventTouchUpInside];
+        [btn setBackgroundImage:[UIImage imageNamed:@"camera_list_background.png"] forState:UIControlStateSelected];
+        [btn setBackgroundImage:[UIImage imageNamed:@"camera_list_background.png"] forState:UIControlStateHighlighted];
+        [btn setTitle:ca.uid forState:UIControlStateNormal];
+        [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        if([ca.uid isEqualToString:self.camera.uid]){
+            btn.selected=YES;
+        }
+        lastBtn=btn;
+    }
+    lastBtn=nil;
+}
+-(void)selectCameraAction:(UIButton *)btn{
+    
+    swipCameraPopView.hidden=YES;
+    
+    MyCamera *ca=[camera_list objectAtIndex:btn.tag];
+    for (UIButton *b in swipCameraBtns) {
+        b.selected=NO;
+        if(b.tag==btn.tag){
+            b.selected=YES;
+        }
+    }
+    if([self.camera.uid isEqualToString:ca.uid]) return;
+    
+    
+    
+    self.camera.delegate2=nil;
+    [self.camera stopShow_block:0];
+    [self.camera stopSoundToDevice:0];
+    [self.camera stopSoundToPhone:0];
+    [self.camera release];
+    
+    self.camera=ca;
+    //开始
+    if (camera != nil) {
+        
+        
+        camera.delegate2 = self;
+        
+        if (camera.sessionState != CONNECTION_STATE_CONNECTED)
+            [camera connect:camera.uid];
+        
+        if ([camera getConnectionStateOfChannel:0] != CONNECTION_STATE_CONNECTED) {
+            [camera start:0];
+            
+            SMsgAVIoctrlGetAudioOutFormatReq *s = (SMsgAVIoctrlGetAudioOutFormatReq *)malloc(sizeof(SMsgAVIoctrlGetAudioOutFormatReq));
+            s->channel = 0;
+            [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GETAUDIOOUTFORMAT_REQ Data:(char *)s DataSize:sizeof(SMsgAVIoctrlGetAudioOutFormatReq)];
+            free(s);
+            
+            SMsgAVIoctrlGetSupportStreamReq *s2 = (SMsgAVIoctrlGetSupportStreamReq *)malloc(sizeof(SMsgAVIoctrlGetSupportStreamReq));
+            [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GETSUPPORTSTREAM_REQ Data:(char *)s2 DataSize:sizeof(SMsgAVIoctrlGetSupportStreamReq)];
+            free(s2);
+            
+            SMsgAVIoctrlTimeZone s3={0};
+            s3.cbSize = sizeof(s3);
+            [camera sendIOCtrlToChannel:0 Type:IOTYPE_USER_IPCAM_GET_TIMEZONE_REQ Data:(char *)&s3 DataSize:sizeof(s3)];
+        }
+        
+        if ( selectedChannel != 0 && [camera getConnectionStateOfChannel:selectedChannel] != CONNECTION_STATE_CONNECTED) {
+            [camera start:selectedChannel];
+        }
+        
+        [camera startShow:selectedChannel ScreenObject:self];
+        
+        SMsgAVIoctrlSetSoundReq *quality = (SMsgAVIoctrlSetSoundReq*)malloc(sizeof(SMsgAVIoctrlSetSoundReq));
+        memset(quality, 0, sizeof(SMsgAVIoctrlSetSoundReq));
+        quality->SoundIn=95;
+        quality->SoundOut=95;
+        [camera sendIOCtrlToChannel:0
+                               Type:0x224E
+                               Data:(char *)quality
+                           DataSize:sizeof(SMsgAVIoctrlSetSoundReq)];
+        
+        free(quality);
+        [loadingViewLandscape setHidden:NO];
+        [loadingViewPortrait setHidden:NO];
+        [loadingViewPortrait startAnimating];
+        [loadingViewLandscape startAnimating];
+        [NSTimer scheduledTimerWithTimeInterval:1.5f target:self selector:@selector(loadCameraQVGAStatus) userInfo:nil repeats:NO];
+        [self activeAudioSession];
+    }
+}
+>>>>>>> 5d317abc7f51115e806da5ad5442697d0702c42a
 @end
 
 @implementation UINavigationController (autorotation)
