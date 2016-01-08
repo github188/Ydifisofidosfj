@@ -174,10 +174,10 @@ extern NSString *deviceTokenString;
     BOOL isPrePosition;
     
     NSArray *preBtnArr;
-<<<<<<< HEAD
+
     //jay add
     NSInteger selectIdex;
-=======
+
     
     UIView *swipCameraPopView;
     
@@ -186,7 +186,7 @@ extern NSString *deviceTokenString;
     UIBarButtonItem *listButtonItem;
     
     NSTimer *wenDuLblTimer;
->>>>>>> 5d317abc7f51115e806da5ad5442697d0702c42a
+
 }
 
 //for Recording
@@ -326,7 +326,7 @@ extern NSString *deviceTokenString;
 - (IBAction)preAction:(UIButton *)sender;
 @property (retain, nonatomic) IBOutlet UIView *preNumView;
 @property (retain, nonatomic) IBOutlet UIView *test;
-<<<<<<< HEAD
+
 //红外开关
 @property (retain, nonatomic) IBOutlet UIView *longInfraredView;
 @property (retain, nonatomic) IBOutlet UIButton *longInfraredTitle;
@@ -336,7 +336,7 @@ extern NSString *deviceTokenString;
 @property (retain, nonatomic) IBOutlet UIButton *longInfraredAuto;
 
 - (IBAction)onlongInfraredClicked:(id)sender;
-=======
+
 //企鹅版操作
 @property (retain, nonatomic) IBOutlet UIView *qieActionView;
 @property (retain, nonatomic) IBOutlet UIView *qieLandActionView;
@@ -360,7 +360,7 @@ extern NSString *deviceTokenString;
 - (IBAction)qiePhone:(id)sender;
 
 @property (retain, nonatomic) IBOutlet UILabel *qieWenDuLbl;
->>>>>>> 5d317abc7f51115e806da5ad5442697d0702c42a
+
 
 @end
 

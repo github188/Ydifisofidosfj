@@ -8970,6 +8970,63 @@
 		06FF92531B04F42B00DD5803 /* BayitCamAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FF92511B04F42B00DD5803 /* BayitCamAddViewController.m */; };
 		06FF92541B04F42B00DD5803 /* BayitCamAddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06FF92521B04F42B00DD5803 /* BayitCamAddViewController.xib */; };
 		06FF92571B055ABE00DD5803 /* bayitcam.strings in Resources */ = {isa = PBXBuildFile; fileRef = 06FF92591B055ABE00DD5803 /* bayitcam.strings */; };
+		1800729E1C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729A1C3F906500375D57 /* MBProgressHUD+MJ.m */; };
+		1800729F1C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729A1C3F906500375D57 /* MBProgressHUD+MJ.m */; };
+		180072A01C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729A1C3F906500375D57 /* MBProgressHUD+MJ.m */; };
+		180072A11C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729A1C3F906500375D57 /* MBProgressHUD+MJ.m */; };
+		180072A21C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729A1C3F906500375D57 /* MBProgressHUD+MJ.m */; };
+		180072A31C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729A1C3F906500375D57 /* MBProgressHUD+MJ.m */; };
+		180072A41C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729A1C3F906500375D57 /* MBProgressHUD+MJ.m */; };
+		180072A51C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729A1C3F906500375D57 /* MBProgressHUD+MJ.m */; };
+		180072A61C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729A1C3F906500375D57 /* MBProgressHUD+MJ.m */; };
+		180072A71C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729A1C3F906500375D57 /* MBProgressHUD+MJ.m */; };
+		180072A81C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729A1C3F906500375D57 /* MBProgressHUD+MJ.m */; };
+		180072A91C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729A1C3F906500375D57 /* MBProgressHUD+MJ.m */; };
+		180072AA1C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729A1C3F906500375D57 /* MBProgressHUD+MJ.m */; };
+		180072AB1C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729A1C3F906500375D57 /* MBProgressHUD+MJ.m */; };
+		180072AC1C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729A1C3F906500375D57 /* MBProgressHUD+MJ.m */; };
+		180072AD1C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729A1C3F906500375D57 /* MBProgressHUD+MJ.m */; };
+		180072AE1C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729A1C3F906500375D57 /* MBProgressHUD+MJ.m */; };
+		180072AF1C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729A1C3F906500375D57 /* MBProgressHUD+MJ.m */; };
+		180072B01C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729A1C3F906500375D57 /* MBProgressHUD+MJ.m */; };
+		180072B11C3F906500375D57 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1800729B1C3F906500375D57 /* MBProgressHUD.bundle */; };
+		180072B21C3F906500375D57 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1800729B1C3F906500375D57 /* MBProgressHUD.bundle */; };
+		180072B31C3F906500375D57 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1800729B1C3F906500375D57 /* MBProgressHUD.bundle */; };
+		180072B41C3F906500375D57 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1800729B1C3F906500375D57 /* MBProgressHUD.bundle */; };
+		180072B51C3F906500375D57 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1800729B1C3F906500375D57 /* MBProgressHUD.bundle */; };
+		180072B61C3F906500375D57 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1800729B1C3F906500375D57 /* MBProgressHUD.bundle */; };
+		180072B71C3F906500375D57 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1800729B1C3F906500375D57 /* MBProgressHUD.bundle */; };
+		180072B81C3F906500375D57 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1800729B1C3F906500375D57 /* MBProgressHUD.bundle */; };
+		180072B91C3F906500375D57 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1800729B1C3F906500375D57 /* MBProgressHUD.bundle */; };
+		180072BA1C3F906500375D57 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1800729B1C3F906500375D57 /* MBProgressHUD.bundle */; };
+		180072BB1C3F906500375D57 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1800729B1C3F906500375D57 /* MBProgressHUD.bundle */; };
+		180072BC1C3F906500375D57 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1800729B1C3F906500375D57 /* MBProgressHUD.bundle */; };
+		180072BD1C3F906500375D57 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1800729B1C3F906500375D57 /* MBProgressHUD.bundle */; };
+		180072BE1C3F906500375D57 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1800729B1C3F906500375D57 /* MBProgressHUD.bundle */; };
+		180072BF1C3F906500375D57 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1800729B1C3F906500375D57 /* MBProgressHUD.bundle */; };
+		180072C01C3F906500375D57 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1800729B1C3F906500375D57 /* MBProgressHUD.bundle */; };
+		180072C11C3F906500375D57 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1800729B1C3F906500375D57 /* MBProgressHUD.bundle */; };
+		180072C21C3F906500375D57 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1800729B1C3F906500375D57 /* MBProgressHUD.bundle */; };
+		180072C31C3F906500375D57 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1800729B1C3F906500375D57 /* MBProgressHUD.bundle */; };
+		180072C41C3F906500375D57 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729D1C3F906500375D57 /* MBProgressHUD.m */; };
+		180072C51C3F906500375D57 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729D1C3F906500375D57 /* MBProgressHUD.m */; };
+		180072C61C3F906500375D57 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729D1C3F906500375D57 /* MBProgressHUD.m */; };
+		180072C71C3F906500375D57 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729D1C3F906500375D57 /* MBProgressHUD.m */; };
+		180072C81C3F906500375D57 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729D1C3F906500375D57 /* MBProgressHUD.m */; };
+		180072C91C3F906500375D57 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729D1C3F906500375D57 /* MBProgressHUD.m */; };
+		180072CA1C3F906500375D57 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729D1C3F906500375D57 /* MBProgressHUD.m */; };
+		180072CB1C3F906500375D57 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729D1C3F906500375D57 /* MBProgressHUD.m */; };
+		180072CC1C3F906500375D57 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729D1C3F906500375D57 /* MBProgressHUD.m */; };
+		180072CD1C3F906500375D57 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729D1C3F906500375D57 /* MBProgressHUD.m */; };
+		180072CE1C3F906500375D57 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729D1C3F906500375D57 /* MBProgressHUD.m */; };
+		180072CF1C3F906500375D57 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729D1C3F906500375D57 /* MBProgressHUD.m */; };
+		180072D01C3F906500375D57 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729D1C3F906500375D57 /* MBProgressHUD.m */; };
+		180072D11C3F906500375D57 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729D1C3F906500375D57 /* MBProgressHUD.m */; };
+		180072D21C3F906500375D57 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729D1C3F906500375D57 /* MBProgressHUD.m */; };
+		180072D31C3F906500375D57 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729D1C3F906500375D57 /* MBProgressHUD.m */; };
+		180072D41C3F906500375D57 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729D1C3F906500375D57 /* MBProgressHUD.m */; };
+		180072D51C3F906500375D57 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729D1C3F906500375D57 /* MBProgressHUD.m */; };
+		180072D61C3F906500375D57 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1800729D1C3F906500375D57 /* MBProgressHUD.m */; };
 		18176F8C1C2C41BD00C76CF0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18176F8B1C2C41BD00C76CF0 /* InfoPlist.strings */; };
 		18176F961C2C47BB00C76CF0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18176F981C2C47BB00C76CF0 /* Localizable.strings */; };
 		18176F9F1C2C541F00C76CF0 /* easyn.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18176FA11C2C541F00C76CF0 /* easyn.strings */; };
@@ -10898,7 +10955,6 @@
 		18E87C461C326B4C00A0B097 /* remeberpsd2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E87C1E1C326B4C00A0B097 /* remeberpsd2.png */; };
 		18E87C471C326B4C00A0B097 /* tips_elec@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E87C201C326B4C00A0B097 /* tips_elec@2x.png */; };
 		18E87C531C33B28F00A0B097 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E87C4F1C33B28F00A0B097 /* MBProgressHUD+MJ.m */; };
-		18E87C541C33B28F00A0B097 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E87C4F1C33B28F00A0B097 /* MBProgressHUD+MJ.m */; };
 		18E87C551C33B28F00A0B097 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E87C4F1C33B28F00A0B097 /* MBProgressHUD+MJ.m */; };
 		18E87C561C33B28F00A0B097 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E87C4F1C33B28F00A0B097 /* MBProgressHUD+MJ.m */; };
 		18E87C571C33B28F00A0B097 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E87C4F1C33B28F00A0B097 /* MBProgressHUD+MJ.m */; };
@@ -10914,10 +10970,8 @@
 		18E87C611C33B28F00A0B097 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E87C4F1C33B28F00A0B097 /* MBProgressHUD+MJ.m */; };
 		18E87C621C33B28F00A0B097 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E87C4F1C33B28F00A0B097 /* MBProgressHUD+MJ.m */; };
 		18E87C631C33B28F00A0B097 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E87C4F1C33B28F00A0B097 /* MBProgressHUD+MJ.m */; };
-		18E87C641C33B28F00A0B097 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E87C4F1C33B28F00A0B097 /* MBProgressHUD+MJ.m */; };
 		18E87C651C33B28F00A0B097 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E87C4F1C33B28F00A0B097 /* MBProgressHUD+MJ.m */; };
 		18E87C661C33B28F00A0B097 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18E87C501C33B28F00A0B097 /* MBProgressHUD.bundle */; };
-		18E87C671C33B28F00A0B097 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18E87C501C33B28F00A0B097 /* MBProgressHUD.bundle */; };
 		18E87C681C33B28F00A0B097 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18E87C501C33B28F00A0B097 /* MBProgressHUD.bundle */; };
 		18E87C691C33B28F00A0B097 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18E87C501C33B28F00A0B097 /* MBProgressHUD.bundle */; };
 		18E87C6A1C33B28F00A0B097 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18E87C501C33B28F00A0B097 /* MBProgressHUD.bundle */; };
@@ -10933,10 +10987,8 @@
 		18E87C741C33B28F00A0B097 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18E87C501C33B28F00A0B097 /* MBProgressHUD.bundle */; };
 		18E87C751C33B28F00A0B097 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18E87C501C33B28F00A0B097 /* MBProgressHUD.bundle */; };
 		18E87C761C33B28F00A0B097 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18E87C501C33B28F00A0B097 /* MBProgressHUD.bundle */; };
-		18E87C771C33B28F00A0B097 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18E87C501C33B28F00A0B097 /* MBProgressHUD.bundle */; };
 		18E87C781C33B28F00A0B097 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18E87C501C33B28F00A0B097 /* MBProgressHUD.bundle */; };
 		18E87C791C33B28F00A0B097 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E87C521C33B28F00A0B097 /* MBProgressHUD.m */; };
-		18E87C7A1C33B28F00A0B097 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E87C521C33B28F00A0B097 /* MBProgressHUD.m */; };
 		18E87C7B1C33B28F00A0B097 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E87C521C33B28F00A0B097 /* MBProgressHUD.m */; };
 		18E87C7C1C33B28F00A0B097 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E87C521C33B28F00A0B097 /* MBProgressHUD.m */; };
 		18E87C7D1C33B28F00A0B097 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E87C521C33B28F00A0B097 /* MBProgressHUD.m */; };
@@ -10952,7 +11004,6 @@
 		18E87C871C33B28F00A0B097 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E87C521C33B28F00A0B097 /* MBProgressHUD.m */; };
 		18E87C881C33B28F00A0B097 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E87C521C33B28F00A0B097 /* MBProgressHUD.m */; };
 		18E87C891C33B28F00A0B097 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E87C521C33B28F00A0B097 /* MBProgressHUD.m */; };
-		18E87C8A1C33B28F00A0B097 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E87C521C33B28F00A0B097 /* MBProgressHUD.m */; };
 		18E87C8B1C33B28F00A0B097 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E87C521C33B28F00A0B097 /* MBProgressHUD.m */; };
 		18E87C991C33E9E400A0B097 /* smtpServers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18E87C981C33E9E400A0B097 /* smtpServers.plist */; };
 		55AA60E618C6FAE500338DBD /* UIDevice+Version.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AA60E518C6FAE500338DBD /* UIDevice+Version.m */; };
@@ -13264,6 +13315,11 @@
 		06FF92511B04F42B00DD5803 /* BayitCamAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BayitCamAddViewController.m; sourceTree = "<group>"; };
 		06FF92521B04F42B00DD5803 /* BayitCamAddViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BayitCamAddViewController.xib; sourceTree = "<group>"; };
 		06FF92581B055ABE00DD5803 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/bayitcam.strings; sourceTree = "<group>"; };
+		180072991C3F906500375D57 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
+		1800729A1C3F906500375D57 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		1800729B1C3F906500375D57 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		1800729C1C3F906500375D57 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		1800729D1C3F906500375D57 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		18176F8B1C2C41BD00C76CF0 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		18176F971C2C47BB00C76CF0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		18176F991C2C47BD00C76CF0 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -13624,10 +13680,8 @@
 		18E87C481C326BBD00A0B097 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		18E87C491C326BCC00A0B097 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/zxingLangString.strings; sourceTree = "<group>"; };
 		18E87C4A1C326BD400A0B097 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/easyn.strings; sourceTree = "<group>"; };
-		18E87C4E1C33B28F00A0B097 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		18E87C4F1C33B28F00A0B097 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
 		18E87C501C33B28F00A0B097 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
-		18E87C511C33B28F00A0B097 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		18E87C521C33B28F00A0B097 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		18E87C981C33E9E400A0B097 /* smtpServers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = smtpServers.plist; sourceTree = "<group>"; };
 		3E923CA415DDD7DA00B95C86 /* NoPhotoAvailable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NoPhotoAvailable.png; path = images/NoPhotoAvailable.png; sourceTree = "<group>"; };
@@ -15067,8 +15121,6 @@
 		06173A841C0C90310028DCB8 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				068478171C2BEC710069668A /* morefunction_clicked@2x.png */,
-				068478181C2BEC710069668A /* morefunction_clicked@3x.png */,
 				062CDFD91C1D456D00023794 /* add-btn-click@2x.png */,
 				062CDFDA1C1D456D00023794 /* add-btn-click@3x.png */,
 				062CDFDB1C1D456D00023794 /* add-btn@2x.png */,
@@ -15766,7 +15818,7 @@
 		066BC8EA1C1EE03000B85755 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-
+				180072961C3F906500375D57 /* Other */,
 				066BC8EB1C1EE03000B85755 /* Categories */,
 			);
 			path = Utility;
@@ -16010,39 +16062,6 @@
 				0682E08D1B08D08F0019BD70 /* iTunesArtwork@2x.png */,
 			);
 			name = images;
-			sourceTree = "<group>";
-		};
-		0684774C1C2B9D0E0069668A /* Masonry */ = {
-			isa = PBXGroup;
-			children = (
-				0684774D1C2B9D0E0069668A /* Info.plist */,
-				0684774E1C2B9D0E0069668A /* MASCompositeConstraint.h */,
-				0684774F1C2B9D0E0069668A /* MASCompositeConstraint.m */,
-				068477501C2B9D0E0069668A /* MASConstraint+Private.h */,
-				068477511C2B9D0E0069668A /* MASConstraint.h */,
-				068477521C2B9D0E0069668A /* MASConstraint.m */,
-				068477531C2B9D0E0069668A /* MASConstraintMaker.h */,
-				068477541C2B9D0E0069668A /* MASConstraintMaker.m */,
-				068477551C2B9D0E0069668A /* MASLayoutConstraint.h */,
-				068477561C2B9D0E0069668A /* MASLayoutConstraint.m */,
-				068477571C2B9D0E0069668A /* Masonry.h */,
-				068477581C2B9D0E0069668A /* MASUtilities.h */,
-				068477591C2B9D0E0069668A /* MASViewAttribute.h */,
-				0684775A1C2B9D0E0069668A /* MASViewAttribute.m */,
-				0684775B1C2B9D0E0069668A /* MASViewConstraint.h */,
-				0684775C1C2B9D0E0069668A /* MASViewConstraint.m */,
-				0684775D1C2B9D0E0069668A /* NSArray+MASAdditions.h */,
-				0684775E1C2B9D0E0069668A /* NSArray+MASAdditions.m */,
-				0684775F1C2B9D0E0069668A /* NSArray+MASShorthandAdditions.h */,
-				068477601C2B9D0E0069668A /* NSLayoutConstraint+MASDebugAdditions.h */,
-				068477611C2B9D0E0069668A /* NSLayoutConstraint+MASDebugAdditions.m */,
-				068477621C2B9D0E0069668A /* View+MASAdditions.h */,
-				068477631C2B9D0E0069668A /* View+MASAdditions.m */,
-				068477641C2B9D0E0069668A /* View+MASShorthandAdditions.h */,
-				068477651C2B9D0E0069668A /* ViewController+MASAdditions.h */,
-				068477661C2B9D0E0069668A /* ViewController+MASAdditions.m */,
-			);
-			path = Masonry;
 			sourceTree = "<group>";
 		};
 		068879571ABEAE230017A41A /* HiSmartWifi */ = {
@@ -16992,6 +17011,34 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		180072961C3F906500375D57 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				180072971C3F906500375D57 /* Lib */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		180072971C3F906500375D57 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				180072981C3F906500375D57 /* MBProgressHUD */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		180072981C3F906500375D57 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				180072991C3F906500375D57 /* MBProgressHUD+MJ.h */,
+				1800729A1C3F906500375D57 /* MBProgressHUD+MJ.m */,
+				1800729B1C3F906500375D57 /* MBProgressHUD.bundle */,
+				1800729C1C3F906500375D57 /* MBProgressHUD.h */,
+				1800729D1C3F906500375D57 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		181771AD1C2C5E0500C76CF0 /* aztechjt */ = {
 			isa = PBXGroup;
 			children = (
@@ -17527,35 +17574,6 @@
 				18E87C201C326B4C00A0B097 /* tips_elec@2x.png */,
 			);
 			path = images;
-			sourceTree = "<group>";
-		};
-		18E87C4B1C33B28F00A0B097 /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				18E87C4C1C33B28F00A0B097 /* Lib */,
-			);
-			name = Other;
-			path = ../Other;
-			sourceTree = "<group>";
-		};
-		18E87C4C1C33B28F00A0B097 /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-				18E87C4D1C33B28F00A0B097 /* MBProgressHUD */,
-			);
-			path = Lib;
-			sourceTree = "<group>";
-		};
-		18E87C4D1C33B28F00A0B097 /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				18E87C4E1C33B28F00A0B097 /* MBProgressHUD+MJ.h */,
-				18E87C4F1C33B28F00A0B097 /* MBProgressHUD+MJ.m */,
-				18E87C501C33B28F00A0B097 /* MBProgressHUD.bundle */,
-				18E87C511C33B28F00A0B097 /* MBProgressHUD.h */,
-				18E87C521C33B28F00A0B097 /* MBProgressHUD.m */,
-			);
-			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		610DBA95169AF0FE00292CF9 /* Aztech */ = {
@@ -19126,7 +19144,6 @@
 				061739121C0C8E270028DCB8 /* add_list.png in Resources */,
 				061739131C0C8E270028DCB8 /* leo_speaker_off_disable@2x.png in Resources */,
 				061739141C0C8E270028DCB8 /* ceo_record_tab_r@2x.png in Resources */,
-				068478191C2BEC710069668A /* morefunction_clicked@2x.png in Resources */,
 				061739151C0C8E270028DCB8 /* leo_snapshot_disable.png in Resources */,
 				061739161C0C8E270028DCB8 /* ChannelPicker.xib in Resources */,
 				061739171C0C8E270028DCB8 /* ceo_rcplay_back.png in Resources */,
@@ -19158,9 +19175,9 @@
 				061739311C0C8E270028DCB8 /* more_set~ipad.png in Resources */,
 				061739321C0C8E270028DCB8 /* cam_back.png in Resources */,
 				061739331C0C8E270028DCB8 /* popoverBgSimple.png in Resources */,
+				180072C01C3F906500375D57 /* MBProgressHUD.bundle in Resources */,
 				061739351C0C8E270028DCB8 /* popoverArrowDown.png in Resources */,
 				06173AC51C0C90310028DCB8 /* button_click@2x.png in Resources */,
-				0684781A1C2BEC710069668A /* morefunction_clicked@3x.png in Resources */,
 				061739361C0C8E270028DCB8 /* ceo_rcplay_forward.png in Resources */,
 				06173ACE1C0C90310028DCB8 /* page1_cn@2x.jpg in Resources */,
 				061739371C0C8E270028DCB8 /* ceo_rcplay_back_click@2x.png in Resources */,
@@ -19244,7 +19261,6 @@
 				061739811C0C8E270028DCB8 /* autologin@2x.png in Resources */,
 				062CE03E1C1D456D00023794 /* video@3x.png in Resources */,
 				061739821C0C8E270028DCB8 /* qualitylist_clicked.png in Resources */,
-				068477761C2B9D0E0069668A /* Info.plist in Resources */,
 				061739841C0C8E270028DCB8 /* add_lsearch_clicked@2x.png in Resources */,
 				061739851C0C8E270028DCB8 /* login.png in Resources */,
 				061739861C0C8E270028DCB8 /* drop_refresh.png in Resources */,
@@ -19750,6 +19766,7 @@
 				063734B41BE2406200F767A8 /* snapshot@2X.png in Resources */,
 				06B165991BFB5A4E00931E99 /* email@3x.png in Resources */,
 				063734B51BE2406200F767A8 /* add_wifi2.png in Resources */,
+				180072BE1C3F906500375D57 /* MBProgressHUD.bundle in Resources */,
 				063734B61BE2406200F767A8 /* speaker.png in Resources */,
 				063734B71BE2406200F767A8 /* speaker@2X.png in Resources */,
 				0600E0101C1C629E00268FFF /* moreset_clicked@2x.png in Resources */,
@@ -20010,6 +20027,7 @@
 				066040031B23133300FB6F32 /* WiFiPassword.xib in Resources */,
 				066040041B23133300FB6F32 /* leo_mirror_ud@2x.png in Resources */,
 				066040051B23133300FB6F32 /* add_infobk@2x.png in Resources */,
+				180072B71C3F906500375D57 /* MBProgressHUD.bundle in Resources */,
 				066040061B23133300FB6F32 /* ceo_recordstop.png in Resources */,
 				066040071B23133300FB6F32 /* ceo_pause_h@2x.png in Resources */,
 				066040081B23133300FB6F32 /* onlinebar@2x.png in Resources */,
@@ -20795,6 +20813,7 @@
 				066C7A611BDA5C2400419134 /* more_set_clicked.png in Resources */,
 				066C7AC31BDA5E0F00419134 /* Localizable.strings in Resources */,
 				066C7A621BDA5C2400419134 /* login@2x.png in Resources */,
+				180072BD1C3F906500375D57 /* MBProgressHUD.bundle in Resources */,
 				066C7A631BDA5C2400419134 /* more_cancel.png in Resources */,
 				066C7A641BDA5C2400419134 /* refresh_27_07.png in Resources */,
 				066C7A651BDA5C2400419134 /* leo_mirror_rl.png in Resources */,
@@ -21189,6 +21208,7 @@
 				06118ED41B08E0B500BB45FB /* page3_ko.jpg in Resources */,
 				066DA0A31B03878300408AF2 /* myup1@2x.png in Resources */,
 				066D9FF91B037E7C00408AF2 /* add_okbtn_clicked.png in Resources */,
+				180072B31C3F906500375D57 /* MBProgressHUD.bundle in Resources */,
 				066D9FFA1B037E7C00408AF2 /* moreset_listm.png in Resources */,
 				06D1DE881BEB4D2F00F5E475 /* position_03.png in Resources */,
 				18E87C681C33B28F00A0B097 /* MBProgressHUD.bundle in Resources */,
@@ -21618,6 +21638,7 @@
 				0682DFC81B08CCF30019BD70 /* leo_mirror_rl@2x.png in Resources */,
 				0682DFC91B08CCF30019BD70 /* ceo_rcplay_click.png in Resources */,
 				0682DFCA1B08CCF30019BD70 /* add_devicessid@2x.png in Resources */,
+				180072B41C3F906500375D57 /* MBProgressHUD.bundle in Resources */,
 				0682DFCB1B08CCF30019BD70 /* login_btn_clicked@2x.png in Resources */,
 				0682DFCC1B08CCF30019BD70 /* more_event_disable@2x.png in Resources */,
 				0682DFCD1B08CCF30019BD70 /* ceo_rcplay_back_h.png in Resources */,
@@ -22024,6 +22045,7 @@
 				06C236691B65148600CC8D5E /* add_infobk.png in Resources */,
 				06C2355A1B65146700CC8D5E /* toolinfo_bk@2x.png in Resources */,
 				06C237041B6514B600CC8D5E /* ceo_rcplay_click_h@2x.png in Resources */,
+				180072B81C3F906500375D57 /* MBProgressHUD.bundle in Resources */,
 				06C2357B1B65146700CC8D5E /* more_set_clicked@2x.png in Resources */,
 				0692A9D91B5FCFA300D28D06 /* page4_i@2x.jpg in Resources */,
 				06C236521B65148600CC8D5E /* more_delete_clicked@2x.png in Resources */,
@@ -22568,6 +22590,7 @@
 				069DD0131BEDD43700A87F65 /* more_set_clicked.png in Resources */,
 				069DD0141BEDD43700A87F65 /* login@2x.png in Resources */,
 				069DD0151BEDD43700A87F65 /* more_cancel.png in Resources */,
+				180072BF1C3F906500375D57 /* MBProgressHUD.bundle in Resources */,
 				069DD0161BEDD43700A87F65 /* refresh_27_07.png in Resources */,
 				069DD0171BEDD43700A87F65 /* leo_mirror_rl.png in Resources */,
 				069DD0181BEDD43700A87F65 /* add_wifinext_clicked@2x.png in Resources */,
@@ -22794,6 +22817,7 @@
 				069EFA391B1207D00024CB5A /* moreset_list1_clicked.png in Resources */,
 				069EFA3A1B1207D00024CB5A /* toolinfo_bk.png in Resources */,
 				06F3E2171BDFAAB000D6698D /* page3_sp@2x.jpg in Resources */,
+				180072B61C3F906500375D57 /* MBProgressHUD.bundle in Resources */,
 				069EFA3B1B1207D00024CB5A /* popoverArrowRight@2x.png in Resources */,
 				069EFA3C1B1207D00024CB5A /* qualitylist.png in Resources */,
 				069B73131B3FAF2E007CDA60 /* AddWithApCameraController.xib in Resources */,
@@ -23373,6 +23397,7 @@
 				0688C3881B61180600079BB5 /* button_bg@2x.png in Resources */,
 				06AA8E0C1B5FE8960050A6E7 /* add_uidpw.png in Resources */,
 				06AA8E0D1B5FE8960050A6E7 /* leo_mirror_rl@2x.png in Resources */,
+				180072B91C3F906500375D57 /* MBProgressHUD.bundle in Resources */,
 				06AA8E0E1B5FE8960050A6E7 /* ceo_rcplay_click.png in Resources */,
 				06AA8E0F1B5FE8960050A6E7 /* add_devicessid@2x.png in Resources */,
 				06AA8E101B5FE8960050A6E7 /* login_btn_clicked@2x.png in Resources */,
@@ -23849,6 +23874,7 @@
 				06B8CA8B1B0A21BB006ED6EE /* NoPhotoAvailable.png in Resources */,
 				06B8CA8C1B0A21BB006ED6EE /* login_btn.png in Resources */,
 				06B8CB2F1B0A2332006ED6EE /* page3_ko.jpg in Resources */,
+				180072B51C3F906500375D57 /* MBProgressHUD.bundle in Resources */,
 				06B8CA8D1B0A21BB006ED6EE /* leo_qvga.png in Resources */,
 				06B8CA8E1B0A21BB006ED6EE /* ceo_rcplay_line_full@2x.png in Resources */,
 				06B8CA8F1B0A21BB006ED6EE /* add_lsearch.png in Resources */,
@@ -24303,6 +24329,7 @@
 				06CAA6521BC0142C00853612 /* leo_qvga.png in Resources */,
 				06CAA6531BC0142C00853612 /* moreset_bk~ipad.png in Resources */,
 				06CAA7451BC0173C00853612 /* mydown1@2x.png in Resources */,
+				180072BB1C3F906500375D57 /* MBProgressHUD.bundle in Resources */,
 				06CAA7501BC01D3300853612 /* title_logo.png in Resources */,
 				06CAA6541BC0142C00853612 /* ceo_rcplay_line_full@2x.png in Resources */,
 				06CAA7481BC0173C00853612 /* myright@2x.png in Resources */,
@@ -24416,6 +24443,7 @@
 				06D3F8C11B78E7C1006AF177 /* add_local@2x.png in Resources */,
 				06D3F8C21B78E7C1006AF177 /* add_okbtn.png in Resources */,
 				06D3F8C31B78E7C1006AF177 /* add_qrcode.png in Resources */,
+				180072BA1C3F906500375D57 /* MBProgressHUD.bundle in Resources */,
 				06D3F8C41B78E7C1006AF177 /* mainWindow.xib in Resources */,
 				06D3F8C51B78E7C1006AF177 /* CameraLiveView.xib in Resources */,
 				06D3FAAA1B78EF6F006AF177 /* myup@2x.png in Resources */,
@@ -25128,6 +25156,7 @@
 				065AB5211BC03882007C24D5 /* ceo_pause_click_h@2x.png in Resources */,
 				065AB44A1BC03882007C24D5 /* add_qrcode_clicked.png in Resources */,
 				065ABA8D1BC03A80007C24D5 /* page1_ru.png in Resources */,
+				180072BC1C3F906500375D57 /* MBProgressHUD.bundle in Resources */,
 				06D796A01BC0355E00B1E986 /* moreset_clicked.png in Resources */,
 				06D796A11BC0355E00B1E986 /* PhotoViewerViewController.xib in Resources */,
 				06D796A31BC0355E00B1E986 /* thumbnailCheckMark.png in Resources */,
@@ -25569,6 +25598,7 @@
 				06F76FBB1AB720A100901EBA /* leo_mirror_ud.png in Resources */,
 				06F76FBC1AB720A100901EBA /* CustomTableViewCellStyle1.xib in Resources */,
 				06F76FBD1AB720A100901EBA /* CheckView.xib in Resources */,
+				180072B21C3F906500375D57 /* MBProgressHUD.bundle in Resources */,
 				06F76FBE1AB720A100901EBA /* ceo_record@2x.png in Resources */,
 				06F76FC01AB720A100901EBA /* ceo_record_tab_r.png in Resources */,
 				06F76FC11AB720A100901EBA /* leo_qvga_clicked.png in Resources */,
@@ -25592,7 +25622,6 @@
 				06F76FD01AB720A100901EBA /* more_event_disable@2x.png in Resources */,
 				18E87AEA1C325CEB00A0B097 /* page4_ru@2x.jpg in Resources */,
 				06F76FD11AB720A100901EBA /* ceo_rcplay_back_h.png in Resources */,
-				18E87C671C33B28F00A0B097 /* MBProgressHUD.bundle in Resources */,
 				18E87AE21C325CEB00A0B097 /* page3_ko@2x.jpg in Resources */,
 				06F76FD31AB720A100901EBA /* ceo_rcplay_forward@2x.png in Resources */,
 				06F76FD51AB720A100901EBA /* add_wifi2.png in Resources */,
@@ -25917,6 +25946,7 @@
 				18720AF31C325A5000584645 /* qualitylist.png in Resources */,
 				18720AF41C325A5000584645 /* AddWithApCamera2Controller.xib in Resources */,
 				18720AF61C325A5000584645 /* add_wifi3@2x.png in Resources */,
+				180072C31C3F906500375D57 /* MBProgressHUD.bundle in Resources */,
 				18720AF71C325A5000584645 /* login_btn@2x.png in Resources */,
 				18720AF81C325A5000584645 /* add_wifi3_bk.png in Resources */,
 				18720AF91C325A5000584645 /* more_set.png in Resources */,
@@ -26383,6 +26413,7 @@
 				187775EB1C2BFBD200A1E49B /* liveview@2x.png in Resources */,
 				187775EC1C2BFBD200A1E49B /* title_bk.png in Resources */,
 				187775ED1C2BFBD200A1E49B /* drop_refresh@2x.png in Resources */,
+				180072C11C3F906500375D57 /* MBProgressHUD.bundle in Resources */,
 				181771FD1C2C5E0500C76CF0 /* ceo_presetting_enable_disable@2x.png in Resources */,
 				187775EE1C2BFBD200A1E49B /* ceo_rcplay_forward_click_h.png in Resources */,
 				187775EF1C2BFBD200A1E49B /* leo_mirror_rl_disable@2x.png in Resources */,
@@ -26661,7 +26692,6 @@
 				18CE7BE21C2E2F550022585D /* more_changech~ipad 2.png in Resources */,
 				18CE78D81C2E25740022585D /* mainWindow.xib in Resources */,
 				18CE78D91C2E25740022585D /* CameraLiveView.xib in Resources */,
-				18E87C771C33B28F00A0B097 /* MBProgressHUD.bundle in Resources */,
 				18CE78DA1C2E25740022585D /* leo_emode@2x.png in Resources */,
 				18CE78DB1C2E25740022585D /* CameraList.xib in Resources */,
 				18CE78DC1C2E25740022585D /* add_camwifibk@2x.png in Resources */,
@@ -26833,6 +26863,7 @@
 				18CE7B961C2E28960022585D /* myup1@2x.png in Resources */,
 				18CE79751C2E25740022585D /* more_changech_clicked@2x.png in Resources */,
 				18CE79761C2E25740022585D /* call_on@2x.png in Resources */,
+				180072C21C3F906500375D57 /* MBProgressHUD.bundle in Resources */,
 				18CE79771C2E25740022585D /* popoverArrowLeft.png in Resources */,
 				18CE79781C2E25740022585D /* ceo_rcplay_forward_click_h@2x.png in Resources */,
 				18CE79791C2E25740022585D /* popoverArrowLeft@2x.png in Resources */,
@@ -27382,6 +27413,7 @@
 				7A49912419ADFD7700B19CD4 /* ceo_pause_click_h.png in Resources */,
 				610DBA61169AF0BF00292CF9 /* gallery.png in Resources */,
 				7A553DC3194EB73D00F5AA11 /* moreset_list2.png in Resources */,
+				180072B11C3F906500375D57 /* MBProgressHUD.bundle in Resources */,
 				7A553D54194EB73C00F5AA11 /* cam_back_clicked@2x.png in Resources */,
 				7A49904719AB305600B19CD4 /* ceo_pause.png in Resources */,
 				7A553DBC194EB73D00F5AA11 /* moreset_bk@2x.png in Resources */,
@@ -27598,13 +27630,13 @@
 				061738251C0C8E270028DCB8 /* UIView+View.m in Sources */,
 				061738261C0C8E270028DCB8 /* AddCameraDetailController.mm in Sources */,
 				061738271C0C8E270028DCB8 /* UITableView+TableView.m in Sources */,
-				068477F61C2B9D0E0069668A /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				061738281C0C8E270028DCB8 /* AddWithApCamera1Controller.m in Sources */,
 				18E87C881C33B28F00A0B097 /* MBProgressHUD.m in Sources */,
 				061738291C0C8E270028DCB8 /* UIDevice+Device.m in Sources */,
 				0617382A1C0C8E270028DCB8 /* LANSearchController.m in Sources */,
 				0617382B1C0C8E270028DCB8 /* LANSearchDevice.m in Sources */,
 				0617382C1C0C8E270028DCB8 /* NSArray+AroundArray.m in Sources */,
+				180072AD1C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */,
 				0617382D1C0C8E270028DCB8 /* ALAssetsLibrary+SaveAsset.m in Sources */,
 				0617382E1C0C8E270028DCB8 /* IQSegmentedNextPrevious.m in Sources */,
 				0617382F1C0C8E270028DCB8 /* UIImage+Extras.m in Sources */,
@@ -27628,7 +27660,6 @@
 				061738411C0C8E270028DCB8 /* NSObject+MKBlockAdditions.m in Sources */,
 				061738421C0C8E270028DCB8 /* NSString+String.m in Sources */,
 				061738431C0C8E270028DCB8 /* UIToolbar+Toolbar.m in Sources */,
-				068477861C2B9D0E0069668A /* MASCompositeConstraint.m in Sources */,
 				061738441C0C8E270028DCB8 /* UIButton+Bootstrap.m in Sources */,
 				061738451C0C8E270028DCB8 /* UIScrollView+ScrollView.m in Sources */,
 				061738461C0C8E270028DCB8 /* WiFiNetworkController.m in Sources */,
@@ -27639,16 +27670,13 @@
 				0617384B1C0C8E270028DCB8 /* UIMyWebView.m in Sources */,
 				0617384C1C0C8E270028DCB8 /* NSDictionary+Dictionary.m in Sources */,
 				0617384D1C0C8E270028DCB8 /* Event.m in Sources */,
-				068477E61C2B9D0E0069668A /* NSArray+MASAdditions.m in Sources */,
 				0617384E1C0C8E270028DCB8 /* DeviceListOnCloudViewController.m in Sources */,
 				0617384F1C0C8E270028DCB8 /* UIActionSheet+MKBlockAdditions.m in Sources */,
-				068477B61C2B9D0E0069668A /* MASLayoutConstraint.m in Sources */,
 				061738501C0C8E270028DCB8 /* NSArray+URLHandle.m in Sources */,
 				061738511C0C8E270028DCB8 /* MoreVC.m in Sources */,
 				061738521C0C8E270028DCB8 /* CameraPlaybackController.mm in Sources */,
 				061738531C0C8E270028DCB8 /* VideoFlipController.m in Sources */,
 				061738541C0C8E270028DCB8 /* EnvironmentModeController.m in Sources */,
-				068478161C2B9D0E0069668A /* ViewController+MASAdditions.m in Sources */,
 				061738551C0C8E270028DCB8 /* AppGuidViewController.m in Sources */,
 				061738561C0C8E270028DCB8 /* NSNumber+Mathematica.m in Sources */,
 				061738571C0C8E270028DCB8 /* UIAlertView+MKBlockAdditions.m in Sources */,
@@ -27656,7 +27684,6 @@
 				061738591C0C8E270028DCB8 /* UIColor+Colors.m in Sources */,
 				0617385A1C0C8E270028DCB8 /* NSURL+URL.m in Sources */,
 				0617385B1C0C8E270028DCB8 /* iToast.m in Sources */,
-				068477D61C2B9D0E0069668A /* MASViewConstraint.m in Sources */,
 				0617385C1C0C8E270028DCB8 /* FormatSDCardController.m in Sources */,
 				066BC9241C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				0617385D1C0C8E270028DCB8 /* UIApplication+KeyView.m in Sources */,
@@ -27665,7 +27692,6 @@
 				061738601C0C8E270028DCB8 /* ChannelPickerContentController.m in Sources */,
 				061738611C0C8E270028DCB8 /* UIButton+Button.m in Sources */,
 				061738621C0C8E270028DCB8 /* UIImageView+ImageView.m in Sources */,
-				068478061C2B9D0E0069668A /* View+MASAdditions.m in Sources */,
 				061738631C0C8E270028DCB8 /* MKHorizMenu.m in Sources */,
 				061738641C0C8E270028DCB8 /* UIBarButtonItem+WEPopover.m in Sources */,
 				061738651C0C8E270028DCB8 /* WEPopoverContainerView.m in Sources */,
@@ -27680,6 +27706,7 @@
 				0617386D1C0C8E270028DCB8 /* NSObject+PerformBlock.m in Sources */,
 				0617386E1C0C8E270028DCB8 /* NSDate+Date.m in Sources */,
 				061738701C0C8E270028DCB8 /* WETouchableView.m in Sources */,
+				180072D31C3F906500375D57 /* MBProgressHUD.m in Sources */,
 				061738711C0C8E270028DCB8 /* FMDatabase.m in Sources */,
 				061738721C0C8E270028DCB8 /* FMDatabaseAdditions.m in Sources */,
 				061738731C0C8E270028DCB8 /* FMDatabasePool.m in Sources */,
@@ -27698,14 +27725,11 @@
 				0617387F1C0C8E270028DCB8 /* MyCamera.m in Sources */,
 				061738801C0C8E270028DCB8 /* IQTitleBarButtonItem.m in Sources */,
 				061738811C0C8E270028DCB8 /* PullRefreshTableViewController.m in Sources */,
-				068477A61C2B9D0E0069668A /* MASConstraintMaker.m in Sources */,
-				068477C61C2B9D0E0069668A /* MASViewAttribute.m in Sources */,
 				061738821C0C8E270028DCB8 /* CustomGridTableViewCellStyle1.m in Sources */,
 				061738831C0C8E270028DCB8 /* CustomGridTableViewCellStyle2.m in Sources */,
 				061738841C0C8E270028DCB8 /* IQTextView.m in Sources */,
 				061738851C0C8E270028DCB8 /* CustomTableViewCellStyle1.m in Sources */,
 				061738861C0C8E270028DCB8 /* PhotoTableViewController.m in Sources */,
-				068477961C2B9D0E0069668A /* MASConstraint.m in Sources */,
 				061738871C0C8E270028DCB8 /* CheckViewController.m in Sources */,
 				061738881C0C8E270028DCB8 /* UIView+Hierarchy.m in Sources */,
 				061738891C0C8E270028DCB8 /* PhotoViewerViewController.m in Sources */,
@@ -27853,6 +27877,7 @@
 				063733A11BE2406200F767A8 /* AudioPickerContentController.m in Sources */,
 				063733A21BE2406200F767A8 /* DDBadgeViewCell.m in Sources */,
 				063733A31BE2406200F767A8 /* UIBarButtonItem+BarButtonItem.m in Sources */,
+				180072D11C3F906500375D57 /* MBProgressHUD.m in Sources */,
 				063733A41BE2406200F767A8 /* CameraMultiLiveViewController.mm in Sources */,
 				063733A51BE2406200F767A8 /* MyCamera.m in Sources */,
 				06B165B11BFB5A8800931E99 /* LoginViewController.m in Sources */,
@@ -27872,6 +27897,7 @@
 				06E002481C0DF3840051BBF9 /* APLEAGLView.m in Sources */,
 				063733B21BE2406200F767A8 /* UIImage+Image.m in Sources */,
 				063733B31BE2406200F767A8 /* UITextView+TextView.m in Sources */,
+				180072AB1C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */,
 				061096DB1BF5747100C4B64C /* MailSmtpController.m in Sources */,
 				063733B41BE2406200F767A8 /* UIImage+DrawImage.m in Sources */,
 				063733B51BE2406200F767A8 /* NSArray+Sort.m in Sources */,
@@ -27893,12 +27919,14 @@
 				06603F5C1B23133300FB6F32 /* UIImage+ResizeImage.m in Sources */,
 				06603F5D1B23133300FB6F32 /* CameraLiveViewController.mm in Sources */,
 				06603F5E1B23133300FB6F32 /* CheckSSIDViewController.m in Sources */,
+				180072A41C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */,
 				06603F5F1B23133300FB6F32 /* AddCameraController.mm in Sources */,
 				06603F601B23133300FB6F32 /* UITabBarController+TabBar.m in Sources */,
 				066BC91B1C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				06603F611B23133300FB6F32 /* UIView+View.m in Sources */,
 				06603F621B23133300FB6F32 /* AddCameraDetailController.mm in Sources */,
 				061AA76E1B25D5B000DD34D0 /* AddWithApCamera2Controller.m in Sources */,
+				180072CA1C3F906500375D57 /* MBProgressHUD.m in Sources */,
 				06603F631B23133300FB6F32 /* UITableView+TableView.m in Sources */,
 				06603F641B23133300FB6F32 /* UIDevice+Device.m in Sources */,
 				06603F651B23133300FB6F32 /* LANSearchController.m in Sources */,
@@ -28024,12 +28052,14 @@
 				066C784C1BDA5C2400419134 /* UIImage+ResizeImage.m in Sources */,
 				066C784D1BDA5C2400419134 /* CameraLiveViewController.mm in Sources */,
 				066C784E1BDA5C2400419134 /* CheckSSIDViewController.m in Sources */,
+				180072AA1C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */,
 				066C784F1BDA5C2400419134 /* AddCameraController.mm in Sources */,
 				066C78501BDA5C2400419134 /* UITabBarController+TabBar.m in Sources */,
 				066BC9211C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				066C78511BDA5C2400419134 /* UIView+View.m in Sources */,
 				066C78521BDA5C2400419134 /* AddCameraDetailController.mm in Sources */,
 				066C78531BDA5C2400419134 /* UITableView+TableView.m in Sources */,
+				180072D01C3F906500375D57 /* MBProgressHUD.m in Sources */,
 				066C78541BDA5C2400419134 /* AddWithApCamera1Controller.m in Sources */,
 				066C78551BDA5C2400419134 /* UIDevice+Device.m in Sources */,
 				066C78561BDA5C2400419134 /* LANSearchController.m in Sources */,
@@ -28201,6 +28231,7 @@
 				066D9E6A1B037E7C00408AF2 /* NSArray+URLHandle.m in Sources */,
 				18E87C551C33B28F00A0B097 /* MBProgressHUD+MJ.m in Sources */,
 				066D9E6B1B037E7C00408AF2 /* UIView+Hierarchy.m in Sources */,
+				180072A01C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */,
 				066D9E6C1B037E7C00408AF2 /* IQKeyboardManager.m in Sources */,
 				066D9E6D1B037E7C00408AF2 /* IQToolbar.m in Sources */,
 				066D9E6E1B037E7C00408AF2 /* MoreVC.m in Sources */,
@@ -28221,6 +28252,7 @@
 				066BC9171C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				066D9E7B1B037E7C00408AF2 /* AppInfoController.m in Sources */,
 				066D9E7C1B037E7C00408AF2 /* ChannelPickerContentController.m in Sources */,
+				180072C61C3F906500375D57 /* MBProgressHUD.m in Sources */,
 				066D9E7D1B037E7C00408AF2 /* UIButton+Button.m in Sources */,
 				066D9E7E1B037E7C00408AF2 /* UIImageView+ImageView.m in Sources */,
 				066D9E7F1B037E7C00408AF2 /* MKHorizMenu.m in Sources */,
@@ -28339,6 +28371,7 @@
 				0682DE411B08CCF30019BD70 /* CameraPlaybackController.mm in Sources */,
 				0682DE421B08CCF30019BD70 /* VideoFlipController.m in Sources */,
 				0682DE431B08CCF30019BD70 /* EnvironmentModeController.m in Sources */,
+				180072A11C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */,
 				0682DE441B08CCF30019BD70 /* AppGuidViewController.m in Sources */,
 				0682DE451B08CCF30019BD70 /* NSNumber+Mathematica.m in Sources */,
 				0682DE461B08CCF30019BD70 /* UIAlertView+MKBlockAdditions.m in Sources */,
@@ -28400,6 +28433,7 @@
 				0682DE7C1B08CCF30019BD70 /* UIImage+Image.m in Sources */,
 				0682DE7D1B08CCF30019BD70 /* UITextView+TextView.m in Sources */,
 				0682DE7E1B08CCF30019BD70 /* UIImage+DrawImage.m in Sources */,
+				180072C71C3F906500375D57 /* MBProgressHUD.m in Sources */,
 				0682DE7F1B08CCF30019BD70 /* NSArray+Sort.m in Sources */,
 				0682DE801B08CCF30019BD70 /* TimeZoneListController.m in Sources */,
 				0682DE811B08CCF30019BD70 /* cCustomNavigationController.m in Sources */,
@@ -28417,12 +28451,14 @@
 				0692A7171B5FC55400D28D06 /* UIImage+ResizeImage.m in Sources */,
 				0692A7181B5FC55400D28D06 /* CameraLiveViewController.mm in Sources */,
 				0692A7191B5FC55400D28D06 /* CheckSSIDViewController.m in Sources */,
+				180072A51C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */,
 				0692A71A1B5FC55400D28D06 /* AddCameraController.mm in Sources */,
 				0692A71B1B5FC55400D28D06 /* UITabBarController+TabBar.m in Sources */,
 				066BC91C1C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				0692A71C1B5FC55400D28D06 /* UIView+View.m in Sources */,
 				0692A71D1B5FC55400D28D06 /* AddCameraDetailController.mm in Sources */,
 				0692A71E1B5FC55400D28D06 /* UITableView+TableView.m in Sources */,
+				180072CB1C3F906500375D57 /* MBProgressHUD.m in Sources */,
 				0692A71F1B5FC55400D28D06 /* AddWithApCamera1Controller.m in Sources */,
 				0692A7201B5FC55400D28D06 /* UIDevice+Device.m in Sources */,
 				0692A7211B5FC55400D28D06 /* LANSearchController.m in Sources */,
@@ -28548,12 +28584,14 @@
 				069DCDFA1BEDD43700A87F65 /* UIImage+ResizeImage.m in Sources */,
 				069DCDFB1BEDD43700A87F65 /* CameraLiveViewController.mm in Sources */,
 				069DCDFC1BEDD43700A87F65 /* CheckSSIDViewController.m in Sources */,
+				180072AC1C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */,
 				069DCDFD1BEDD43700A87F65 /* AddCameraController.mm in Sources */,
 				069DCDFE1BEDD43700A87F65 /* UITabBarController+TabBar.m in Sources */,
 				066BC9231C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				069DCDFF1BEDD43700A87F65 /* UIView+View.m in Sources */,
 				069DCE001BEDD43700A87F65 /* AddCameraDetailController.mm in Sources */,
 				069DCE011BEDD43700A87F65 /* UITableView+TableView.m in Sources */,
+				180072D21C3F906500375D57 /* MBProgressHUD.m in Sources */,
 				069DCE021BEDD43700A87F65 /* AddWithApCamera1Controller.m in Sources */,
 				069DCE031BEDD43700A87F65 /* UIDevice+Device.m in Sources */,
 				069DCE041BEDD43700A87F65 /* LANSearchController.m in Sources */,
@@ -28679,12 +28717,14 @@
 				069EF9111B1207D00024CB5A /* UIImage+ResizeImage.m in Sources */,
 				069EF9121B1207D00024CB5A /* CameraLiveViewController.mm in Sources */,
 				069EF9131B1207D00024CB5A /* CheckSSIDViewController.m in Sources */,
+				180072A31C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */,
 				069EF9141B1207D00024CB5A /* AddCameraController.mm in Sources */,
 				069EF9151B1207D00024CB5A /* UITabBarController+TabBar.m in Sources */,
 				066BC91A1C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				069EF9161B1207D00024CB5A /* UIView+View.m in Sources */,
 				069EF9171B1207D00024CB5A /* AddCameraDetailController.mm in Sources */,
 				069B731C1B3FB088007CDA60 /* AddWithApCamera2Controller.m in Sources */,
+				180072C91C3F906500375D57 /* MBProgressHUD.m in Sources */,
 				069EF9181B1207D00024CB5A /* UITableView+TableView.m in Sources */,
 				069EF9191B1207D00024CB5A /* UIDevice+Device.m in Sources */,
 				069EF91A1B1207D00024CB5A /* LANSearchController.m in Sources */,
@@ -28810,12 +28850,14 @@
 				06AA8C531B5FE8960050A6E7 /* UIImage+ResizeImage.m in Sources */,
 				06AA8C541B5FE8960050A6E7 /* CameraLiveViewController.mm in Sources */,
 				06AA8C551B5FE8960050A6E7 /* CheckSSIDViewController.m in Sources */,
+				180072A61C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */,
 				06AA8C561B5FE8960050A6E7 /* AddCameraController.mm in Sources */,
 				06AA8C571B5FE8960050A6E7 /* UITabBarController+TabBar.m in Sources */,
 				066BC91D1C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				06AA8C581B5FE8960050A6E7 /* UIView+View.m in Sources */,
 				06AA8C591B5FE8960050A6E7 /* AddCameraDetailController.mm in Sources */,
 				06AA8C5A1B5FE8960050A6E7 /* UITableView+TableView.m in Sources */,
+				180072CC1C3F906500375D57 /* MBProgressHUD.m in Sources */,
 				06AA8C5B1B5FE8960050A6E7 /* AddWithApCamera1Controller.m in Sources */,
 				06AA8C5C1B5FE8960050A6E7 /* UIDevice+Device.m in Sources */,
 				06AA8C5D1B5FE8960050A6E7 /* LANSearchController.m in Sources */,
@@ -28991,6 +29033,7 @@
 				06B8C8EC1B0A21BB006ED6EE /* CameraPlaybackController.mm in Sources */,
 				06B8C8ED1B0A21BB006ED6EE /* VideoFlipController.m in Sources */,
 				06B8C8EE1B0A21BB006ED6EE /* EnvironmentModeController.m in Sources */,
+				180072A21C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */,
 				06B8C8EF1B0A21BB006ED6EE /* AppGuidViewController.m in Sources */,
 				06B8C8F01B0A21BB006ED6EE /* NSNumber+Mathematica.m in Sources */,
 				06B8C8F11B0A21BB006ED6EE /* UIAlertView+MKBlockAdditions.m in Sources */,
@@ -29052,6 +29095,7 @@
 				06B8C9261B0A21BB006ED6EE /* UIImage+Image.m in Sources */,
 				06B8C9271B0A21BB006ED6EE /* UITextView+TextView.m in Sources */,
 				06B8C9281B0A21BB006ED6EE /* UIImage+DrawImage.m in Sources */,
+				180072C81C3F906500375D57 /* MBProgressHUD.m in Sources */,
 				06B8C9291B0A21BB006ED6EE /* NSArray+Sort.m in Sources */,
 				06B8C92A1B0A21BB006ED6EE /* TimeZoneListController.m in Sources */,
 				06B8C92B1B0A21BB006ED6EE /* cCustomNavigationController.m in Sources */,
@@ -29069,12 +29113,14 @@
 				06CAA4681BC0142C00853612 /* UIImage+ResizeImage.m in Sources */,
 				06CAA4691BC0142C00853612 /* CameraLiveViewController.mm in Sources */,
 				06CAA46A1BC0142C00853612 /* CheckSSIDViewController.m in Sources */,
+				180072A81C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */,
 				06CAA46B1BC0142C00853612 /* AddCameraController.mm in Sources */,
 				06CAA46C1BC0142C00853612 /* UITabBarController+TabBar.m in Sources */,
 				066BC91F1C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				06CAA46D1BC0142C00853612 /* UIView+View.m in Sources */,
 				06CAA46E1BC0142C00853612 /* AddCameraDetailController.mm in Sources */,
 				06CAA46F1BC0142C00853612 /* UITableView+TableView.m in Sources */,
+				180072CE1C3F906500375D57 /* MBProgressHUD.m in Sources */,
 				06CAA4701BC0142C00853612 /* AddWithApCamera1Controller.m in Sources */,
 				06CAA4711BC0142C00853612 /* UIDevice+Device.m in Sources */,
 				06CAA4721BC0142C00853612 /* LANSearchController.m in Sources */,
@@ -29200,12 +29246,14 @@
 				06D3F82F1B78E7C1006AF177 /* UIImage+ResizeImage.m in Sources */,
 				06D3F8301B78E7C1006AF177 /* CameraLiveViewController.mm in Sources */,
 				06D3F8311B78E7C1006AF177 /* CheckSSIDViewController.m in Sources */,
+				180072A71C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */,
 				06D3F8321B78E7C1006AF177 /* AddCameraController.mm in Sources */,
 				06D3F8331B78E7C1006AF177 /* UITabBarController+TabBar.m in Sources */,
 				066BC91E1C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				06D3F8341B78E7C1006AF177 /* UIView+View.m in Sources */,
 				06D3F8351B78E7C1006AF177 /* AddCameraDetailController.mm in Sources */,
 				06D3F8371B78E7C1006AF177 /* UITableView+TableView.m in Sources */,
+				180072CD1C3F906500375D57 /* MBProgressHUD.m in Sources */,
 				06D3F8381B78E7C1006AF177 /* UIDevice+Device.m in Sources */,
 				06D3F8391B78E7C1006AF177 /* LANSearchController.m in Sources */,
 				06D3F83A1B78E7C1006AF177 /* LANSearchDevice.m in Sources */,
@@ -29331,12 +29379,14 @@
 				06D794E61BC0355E00B1E986 /* UIImage+ResizeImage.m in Sources */,
 				06D794E71BC0355E00B1E986 /* CameraLiveViewController.mm in Sources */,
 				06D794E81BC0355E00B1E986 /* CheckSSIDViewController.m in Sources */,
+				180072A91C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */,
 				06D794E91BC0355E00B1E986 /* AddCameraController.mm in Sources */,
 				06D794EA1BC0355E00B1E986 /* UITabBarController+TabBar.m in Sources */,
 				066BC9201C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				06D794EB1BC0355E00B1E986 /* UIView+View.m in Sources */,
 				06D794EC1BC0355E00B1E986 /* AddCameraDetailController.mm in Sources */,
 				06D794ED1BC0355E00B1E986 /* UITableView+TableView.m in Sources */,
+				180072CF1C3F906500375D57 /* MBProgressHUD.m in Sources */,
 				06D794EE1BC0355E00B1E986 /* AddWithApCamera1Controller.m in Sources */,
 				06D794EF1BC0355E00B1E986 /* UIDevice+Device.m in Sources */,
 				06D794F01BC0355E00B1E986 /* LANSearchController.m in Sources */,
@@ -29462,12 +29512,14 @@
 				06F76E361AB720A100901EBA /* UIImage+ResizeImage.m in Sources */,
 				06F76E371AB720A100901EBA /* CameraLiveViewController.mm in Sources */,
 				06F76E381AB720A100901EBA /* CheckSSIDViewController.m in Sources */,
+				1800729F1C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */,
 				06F76E391AB720A100901EBA /* AddCameraController.mm in Sources */,
 				06F76E3A1AB720A100901EBA /* UITabBarController+TabBar.m in Sources */,
 				066BC9161C1EE03000B85755 /* UILabel+VerticalAlignment.m in Sources */,
 				06F76E3B1AB720A100901EBA /* UIView+View.m in Sources */,
 				06F76E3C1AB720A100901EBA /* AddCameraDetailController.mm in Sources */,
 				06F76E3D1AB720A100901EBA /* UITableView+TableView.m in Sources */,
+				180072C51C3F906500375D57 /* MBProgressHUD.m in Sources */,
 				0688793F1ABE204E0017A41A /* AddWithApCamera1Controller.m in Sources */,
 				06F76E3E1AB720A100901EBA /* UIDevice+Device.m in Sources */,
 				06F76E3F1AB720A100901EBA /* LANSearchController.m in Sources */,
@@ -29488,7 +29540,6 @@
 				06335C341AC19E7F003DCD0A /* UIView+IQKeyboardToolbar.m in Sources */,
 				06F76E4B1AB720A100901EBA /* EditCameraAdvancedController.m in Sources */,
 				06F76E4C1AB720A100901EBA /* UIWebView+WebView.m in Sources */,
-				18E87C541C33B28F00A0B097 /* MBProgressHUD+MJ.m in Sources */,
 				06F76E4D1AB720A100901EBA /* AboutDeviceController.m in Sources */,
 				06F76E4E1AB720A100901EBA /* RecordFileViewController.m in Sources */,
 				06F76E4F1AB720A100901EBA /* RecordingModeController.m in Sources */,
@@ -29523,7 +29574,6 @@
 				06F76E691AB720A100901EBA /* NSURL+URL.m in Sources */,
 				06F76E6A1AB720A100901EBA /* iToast.m in Sources */,
 				06F76E6B1AB720A100901EBA /* FormatSDCardController.m in Sources */,
-				18E87C7A1C33B28F00A0B097 /* MBProgressHUD.m in Sources */,
 				06F76E6C1AB720A100901EBA /* UIApplication+KeyView.m in Sources */,
 				BB8241A01BCE2A740067B3CF /* SnapshotViewController.m in Sources */,
 				06F76E6D1AB720A100901EBA /* AppInfoController.m in Sources */,
@@ -29593,12 +29643,14 @@
 				187209AB1C325A5000584645 /* UIImage+ResizeImage.m in Sources */,
 				187209AC1C325A5000584645 /* CameraLiveViewController.mm in Sources */,
 				187209AD1C325A5000584645 /* CheckSSIDViewController.m in Sources */,
+				180072B01C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */,
 				187209AE1C325A5000584645 /* AddCameraController.mm in Sources */,
 				187209AF1C325A5000584645 /* UITabBarController+TabBar.m in Sources */,
 				187209B01C325A5000584645 /* UILabel+VerticalAlignment.m in Sources */,
 				187209B11C325A5000584645 /* UIView+View.m in Sources */,
 				187209B21C325A5000584645 /* AddCameraDetailController.mm in Sources */,
 				187209B31C325A5000584645 /* UITableView+TableView.m in Sources */,
+				180072D61C3F906500375D57 /* MBProgressHUD.m in Sources */,
 				187209B41C325A5000584645 /* AddWithApCamera1Controller.m in Sources */,
 				187209B51C325A5000584645 /* UIDevice+Device.m in Sources */,
 				187209B61C325A5000584645 /* LANSearchController.m in Sources */,
@@ -29724,12 +29776,14 @@
 				187774981C2BFBD200A1E49B /* UIImage+ResizeImage.m in Sources */,
 				187774991C2BFBD200A1E49B /* CameraLiveViewController.mm in Sources */,
 				1877749A1C2BFBD200A1E49B /* CheckSSIDViewController.m in Sources */,
+				180072AE1C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */,
 				1877749B1C2BFBD200A1E49B /* AddCameraController.mm in Sources */,
 				1877749C1C2BFBD200A1E49B /* UITabBarController+TabBar.m in Sources */,
 				1877749D1C2BFBD200A1E49B /* UILabel+VerticalAlignment.m in Sources */,
 				1877749E1C2BFBD200A1E49B /* UIView+View.m in Sources */,
 				1877749F1C2BFBD200A1E49B /* AddCameraDetailController.mm in Sources */,
 				187774A01C2BFBD200A1E49B /* UITableView+TableView.m in Sources */,
+				180072D41C3F906500375D57 /* MBProgressHUD.m in Sources */,
 				187774A11C2BFBD200A1E49B /* AddWithApCamera1Controller.m in Sources */,
 				187774A21C2BFBD200A1E49B /* UIDevice+Device.m in Sources */,
 				187774A31C2BFBD200A1E49B /* LANSearchController.m in Sources */,
@@ -29883,7 +29937,6 @@
 				18CE78581C2E25740022585D /* UIView+IQKeyboardToolbar.m in Sources */,
 				18CE78591C2E25740022585D /* EditCameraAdvancedController.m in Sources */,
 				18CE785A1C2E25740022585D /* UIWebView+WebView.m in Sources */,
-				18E87C641C33B28F00A0B097 /* MBProgressHUD+MJ.m in Sources */,
 				18CE785B1C2E25740022585D /* AboutDeviceController.m in Sources */,
 				18CE785C1C2E25740022585D /* RecordFileViewController.m in Sources */,
 				18CE785D1C2E25740022585D /* RecordingModeController.m in Sources */,
@@ -29897,6 +29950,7 @@
 				18CE78641C2E25740022585D /* UIButton+Bootstrap.m in Sources */,
 				18CE78651C2E25740022585D /* UIScrollView+ScrollView.m in Sources */,
 				18CE78661C2E25740022585D /* WiFiNetworkController.m in Sources */,
+				180072AF1C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */,
 				18CE78671C2E25740022585D /* ChooseViewController.m in Sources */,
 				18CE78681C2E25740022585D /* EditWiFiPasswordController.m in Sources */,
 				18CE78691C2E25740022585D /* CameraListForEventsController.mm in Sources */,
@@ -29915,12 +29969,12 @@
 				18CE78751C2E25740022585D /* AppGuidViewController.m in Sources */,
 				18CE78761C2E25740022585D /* NSNumber+Mathematica.m in Sources */,
 				18CE78771C2E25740022585D /* UIAlertView+MKBlockAdditions.m in Sources */,
+				180072D51C3F906500375D57 /* MBProgressHUD.m in Sources */,
 				18CE78781C2E25740022585D /* UINavigationController+Navigation.m in Sources */,
 				18CE78791C2E25740022585D /* UIColor+Colors.m in Sources */,
 				18CE787A1C2E25740022585D /* NSURL+URL.m in Sources */,
 				18CE787B1C2E25740022585D /* iToast.m in Sources */,
 				18CE787C1C2E25740022585D /* FormatSDCardController.m in Sources */,
-				18E87C8A1C33B28F00A0B097 /* MBProgressHUD.m in Sources */,
 				18CE787D1C2E25740022585D /* UIApplication+KeyView.m in Sources */,
 				18CE787E1C2E25740022585D /* SnapshotViewController.m in Sources */,
 				18CE787F1C2E25740022585D /* AppInfoController.m in Sources */,
@@ -30045,6 +30099,7 @@
 				610DBA16169AF0BF00292CF9 /* CameraPlaybackController.mm in Sources */,
 				610DBA17169AF0BF00292CF9 /* VideoFlipController.m in Sources */,
 				610DBA18169AF0BF00292CF9 /* EnvironmentModeController.m in Sources */,
+				1800729E1C3F906500375D57 /* MBProgressHUD+MJ.m in Sources */,
 				06F425F71AA9FB6500427383 /* AppGuidViewController.m in Sources */,
 				7A1C0180193339F70032A77E /* NSNumber+Mathematica.m in Sources */,
 				7A0B1C8C19A4CFBC0071E5CF /* UIAlertView+MKBlockAdditions.m in Sources */,
@@ -30106,6 +30161,7 @@
 				7A1C018D193339F70032A77E /* UIImage+Image.m in Sources */,
 				7A1C0198193339F70032A77E /* UITextView+TextView.m in Sources */,
 				7A1C018C193339F70032A77E /* UIImage+DrawImage.m in Sources */,
+				180072C41C3F906500375D57 /* MBProgressHUD.m in Sources */,
 				06335C2F1AC19E7F003DCD0A /* NSArray+Sort.m in Sources */,
 				86244ABB1769A09D00C2564B /* TimeZoneListController.m in Sources */,
 				7A3C7388196AAF370068D3C9 /* cCustomNavigationController.m in Sources */,
@@ -31446,7 +31502,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.ipcamp.IDHDCONTROL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -31496,7 +31551,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.ipcamp.IDHDCONTROL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -31545,7 +31599,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.ipcamp.IDHDCONTROL;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -34461,8 +34514,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen EasyN Technology Co. Ltd";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen EasyN Technology Co. Ltd";
+				CODE_SIGN_IDENTITY = "iPhone Developer: sheng Liu (Y26PS9MWB7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: sheng Liu (Y26PS9MWB7)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -34498,7 +34551,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.easyn.CamLinePro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6a29b30b-5cc3-4d3d-b683-f0b0384e52da";
+				PROVISIONING_PROFILE = "d5bfa31a-ac27-4a58-a3a4-005fd1a17474";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -34511,8 +34564,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen EasyN Technology Co. Ltd";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen EasyN Technology Co. Ltd";
+				CODE_SIGN_IDENTITY = "iPhone Developer: sheng Liu (Y26PS9MWB7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: sheng Liu (Y26PS9MWB7)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -34549,7 +34602,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.easyn.CamLinePro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6a29b30b-5cc3-4d3d-b683-f0b0384e52da";
+				PROVISIONING_PROFILE = "d5bfa31a-ac27-4a58-a3a4-005fd1a17474";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -34562,8 +34615,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen EasyN Technology Co. Ltd";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen EasyN Technology Co. Ltd";
+				CODE_SIGN_IDENTITY = "iPhone Developer: sheng Liu (Y26PS9MWB7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: sheng Liu (Y26PS9MWB7)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -34600,7 +34653,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.easyn.CamLinePro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6a29b30b-5cc3-4d3d-b683-f0b0384e52da";
+				PROVISIONING_PROFILE = "d5bfa31a-ac27-4a58-a3a4-005fd1a17474";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";
@@ -34613,8 +34666,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shenzhen EasyN Technology Co. Ltd";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shenzhen EasyN Technology Co. Ltd";
+				CODE_SIGN_IDENTITY = "iPhone Developer: sheng Liu (Y26PS9MWB7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: sheng Liu (Y26PS9MWB7)";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -34650,7 +34703,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.easyn.CamLinePro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6a29b30b-5cc3-4d3d-b683-f0b0384e52da";
+				PROVISIONING_PROFILE = "d5bfa31a-ac27-4a58-a3a4-005fd1a17474";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALID_ARCHS = "armv7 armv7s arm64";

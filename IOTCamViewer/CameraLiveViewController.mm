@@ -1040,13 +1040,11 @@ extern unsigned int _getTickCount() {
 #if defined(CamLineProTarget) //2015 -12 -27 jay
         self.items = nil;
         
-<<<<<<< HEAD
+
         self.items = [NSMutableArray arrayWithObjects:@"psd_contrast",@"psd_bright",@"infrared",@"restore",nil];
         self.selectItems = [NSMutableArray arrayWithObjects: @"psd_contrast_clicked",@"psd_bright_clicked",@"infrared_click",@"restore_click",nil];
 #endif
-=======
-        
->>>>>>> 5d317abc7f51115e806da5ad5442697d0702c42a
+
         [self.longHorizMenu reloadData];
         [self checkLongBTN];
 #if defined(QIEAPP)
@@ -1375,13 +1373,13 @@ extern unsigned int _getTickCount() {
     [_preBtn4 release];
     [_preNumView release];
     [_test release];
-<<<<<<< HEAD
+
     [_longInfraredView release];
     [_longInfraredOpen release];
     [_longInfraredClose release];
     [_longInfraredAuto release];
     [_longInfraredTitle release];
-=======
+
     [_qieActionView release];
     [_qieSnapshotBtn release];
     [_qieMonitorBtn release];
@@ -1407,7 +1405,7 @@ extern unsigned int _getTickCount() {
         [wenDuLblTimer release];
         wenDuLblTimer  =nil;
     }
->>>>>>> 5d317abc7f51115e806da5ad5442697d0702c42a
+
     [super dealloc];
 }
 
@@ -3813,9 +3811,7 @@ extern unsigned int _getTickCount() {
         }
     }*/
 }
-<<<<<<< HEAD
 
-=======
 - (IBAction)qieSnapshot:(id)sender {
     self.qieWenDuLbl.hidden=YES;
     [self snapshot:sender];
@@ -4096,7 +4092,7 @@ extern unsigned int _getTickCount() {
         [self activeAudioSession];
     }
 }
->>>>>>> 5d317abc7f51115e806da5ad5442697d0702c42a
+
 @end
 
 @implementation UINavigationController (autorotation)
